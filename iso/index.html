@@ -159,12 +159,21 @@
 
         @media (max-width: 768px) {
             .botones {
-                position: sticky;
+                position: fixed;
                 bottom: 0;
-                padding: 12px 0;
+                left: 0;
+                right: 0;
+                width: 100%;
+                padding: 12px 10px;
                 background-color: #1a1a1a;
                 border-top: 1px solid #2a2a2a;
-                margin-top: auto;
+                margin-top: 0;
+                box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+            }
+            
+            /* Agregar padding al contenedor principal para que no se tape con los botones fijos */
+            .contenedor {
+                padding-bottom: 80px;
             }
         }
 
