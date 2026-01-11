@@ -77,6 +77,13 @@
             flex-direction: column;
         }
 
+        @media (max-width: 768px) {
+            .pregunta-contenedor {
+                min-height: auto;
+                margin: 15px 0;
+            }
+        }
+
         .pregunta-numero {
             color: #00d4ff;
             font-weight: bold;
@@ -146,6 +153,13 @@
             bottom: 0;
             background-color: #1a1a1a;
             padding: 15px 0 10px 0;
+        }
+
+        @media (max-width: 768px) {
+            .botones {
+                position: relative;
+                padding: 15px 0;
+            }
         }
 
         button {
@@ -518,6 +532,13 @@
             font-family: monospace;
             font-size: 11px;
             color: #e0e0e0;
+        }
+
+        /* Ocultar atajos en dispositivos táctiles o pantallas pequeñas */
+        @media (max-width: 768px), (pointer: coarse) {
+            .atajos-teclado {
+                display: none;
+            }
         }
     </style>
 </head>
