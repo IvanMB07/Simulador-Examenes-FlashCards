@@ -453,8 +453,13 @@
                 // Autoguardar notas
                 this.notasEl.addEventListener('input', () => this.guardarNotas());
                 
-                // Atajos de teclado
+                // Atajos de teclado (solo si no está escribiendo en notas)
                 document.addEventListener('keydown', (e) => {
+                    // No procesar si el foco está en el textarea de notas
+                    if (document.activeElement === this.notasEl) {
+                        return;
+                    }
+                    
                     if (e.key === 'ArrowLeft') this.anteriorTarjeta();
                     if (e.key === 'ArrowRight') this.siguienteTarjeta();
                     if (e.key === ' ' || e.key === 'ArrowUp' || e.key === 'ArrowDown') {
