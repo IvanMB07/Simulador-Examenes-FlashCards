@@ -507,6 +507,7 @@
             cursor: pointer;
             transition: all 0.2s;
             border: 2px solid #3a3a3a;
+            min-width: 0; /* Permite que se reduzca */
         }
 
         .tema-checkbox:hover {
@@ -520,17 +521,100 @@
             height: 18px;
             cursor: pointer;
             accent-color: #00d4ff;
+            flex-shrink: 0; /* No se reduce el checkbox */
         }
 
         .tema-checkbox span {
             font-size: 13px;
             color: #e0e0e0;
             user-select: none;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .tema-checkbox input[type="checkbox"]:checked + span {
             color: #00d4ff;
             font-weight: 600;
+        }
+
+        /* Selector de perfil de usuario */
+        .perfil-selector {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #2a2a2a;
+            border-radius: 8px;
+            border: 2px solid #3a3a3a;
+        }
+
+        .perfil-selector-title {
+            font-size: 14px;
+            color: #00d4ff;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .perfil-selector-content {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .perfil-select {
+            flex: 1;
+            min-width: 150px;
+            padding: 10px;
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+            border: 2px solid #3a3a3a;
+            border-radius: 6px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .perfil-select:hover,
+        .perfil-select:focus {
+            border-color: #00d4ff;
+            outline: none;
+        }
+
+        .btn-perfil {
+            padding: 10px 15px;
+            background-color: #00d4ff;
+            color: #0a0a0a;
+            border: none;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+
+        .btn-perfil:hover {
+            background-color: #00b8e6;
+            transform: translateY(-1px);
+        }
+
+        .btn-perfil.danger {
+            background-color: #ef4444;
+        }
+
+        .btn-perfil.danger:hover {
+            background-color: #dc2626;
+        }
+
+        .perfil-stats {
+            margin-top: 10px;
+            padding: 8px;
+            background-color: #1a1a1a;
+            border-radius: 4px;
+            font-size: 12px;
+            color: #888;
         }
 
         .atajos-teclado {
@@ -591,13 +675,28 @@
                     <strong>Test de Fallos</strong>: Repasa únicamente las preguntas que has fallado anteriormente.
                 </div>
                 
+                <!-- Selector de perfil de usuario -->
+                <div class="perfil-selector">
+                    <div class="perfil-selector-title">👤 Perfil de Usuario</div>
+                    <div class="perfil-selector-content">
+                        <select id="perfilSelect" class="perfil-select" onchange="cambiarPerfil()">
+                            <option value="default">Usuario Principal</option>
+                        </select>
+                        <button class="btn-perfil" onclick="crearNuevoPerfil()">+ Nuevo</button>
+                        <button class="btn-perfil danger" onclick="eliminarPerfilActual()" id="btnEliminar">Eliminar</button>
+                    </div>
+                    <div class="perfil-stats" id="perfilStats">
+                        Cargando estadísticas...
+                    </div>
+                </div>
+
                 <div class="config-section">
                     <div class="config-title">📚 Seleccionar Temas (solo Modo Práctica)</div>
                     <div class="config-description" style="margin-bottom: 10px; color: #888;">
                         50 preguntas distribuidas proporcionalmente entre los temas seleccionados
                     </div>
                     <div id="infoDistribucion" style="margin-bottom: 15px; padding: 10px; background: #1a1a1a; border-radius: 6px; font-size: 13px; color: #00d4ff;"></div>
-                    <div style="display: grid; grid-template-columns: repeat(3, minmax(140px, auto)); gap: 10px; justify-content: center;">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; max-width: 100%; overflow: hidden;">
                         <label class="tema-checkbox">
                             <input type="checkbox" value="1" checked onchange="toggleTema(1)">
                             <span>Tema 1 (L1, L11, L12)</span>
@@ -635,6 +734,16 @@
                         <div class="stat-label">Preguntas falladas guardadas</div>
                         <div class="stat-valor" id="contadorFallos">0</div>
                     </div>
+                  <div class="config-option" style="margin-top: 10px;">
+                    <div style="flex: 1;">
+                      <div class="config-label">Importar / Exportar fallos</div>
+                      <div class="config-description">Sincroniza fallos entre móvil y PC en JSON</div>
+                      <div style="margin-top: 8px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
+                        <input id="importFallosFile" type="file" accept="application/json" style="color:#e0e0e0;" onchange="importarFallosDesdeArchivo(event)">
+                        <button class="btn-anterior" onclick="exportarFallos()">Exportar JSON</button>
+                      </div>
+                    </div>
+                  </div>
                     <button class="btn-anterior" id="btnLimpiarFallos" onclick="limpiarFallos()" style="width: 100%; margin-top: 10px;">
                         🗑️ Limpiar preguntas falladas
                     </button>
@@ -12978,7 +13087,7 @@
 
             cargarFallos() {
                 try {
-                    const data = localStorage.getItem('preguntasFalladas');
+              const data = localStorage.getItem(this.getStorageKey());
                     this.fallos = data ? JSON.parse(data) : [];
                 } catch (e) {
                     this.fallos = [];
@@ -12987,11 +13096,20 @@
 
             guardarFallos() {
                 try {
-                    localStorage.setItem('preguntasFalladas', JSON.stringify(this.fallos));
+              localStorage.setItem(this.getStorageKey(), JSON.stringify(this.fallos));
                 } catch (e) {
                     console.error('Error al guardar fallos:', e);
                 }
             }
+
+          getStorageKey() {
+            const perfilActual = (typeof configuracion !== 'undefined' && configuracion.get('perfilActual')) || 'default';
+            return `preguntasFalladas:perfil:${perfilActual}`;
+          }
+
+          cambiarUsuario() {
+            this.cargarFallos();
+          }
 
             agregarFallo(pregunta, respuestaUsuario, respuestaCorrecta) {
                 // Evitar duplicados
@@ -13004,6 +13122,11 @@
                         fecha: new Date().toISOString()
                     });
                     this.guardarFallos();
+                    
+                    // Actualizar estadísticas del perfil si la función existe
+                    if (typeof actualizarEstadisticasPerfil === 'function') {
+                        actualizarEstadisticasPerfil();
+                    }
                 }
             }
 
@@ -13033,13 +13156,20 @@
                 try {
                     const data = localStorage.getItem('configApp');
                     this.config = data ? JSON.parse(data) : {
-                        ordenarPorTema: false,
-                        temasSeleccionados: [1, 2, 3, 4, 5]
+                      ordenarPorTema: false,
+                      temasSeleccionados: [1, 2, 3, 4, 5],
+                      perfilActual: 'default',
+                      perfiles: {}
                     };
+                    // Asegurar que existan las nuevas propiedades
+                    if (!this.config.perfilActual) this.config.perfilActual = 'default';
+                    if (!this.config.perfiles) this.config.perfiles = {};
                 } catch (e) {
                     this.config = {
-                        ordenarPorTema: false,
-                        temasSeleccionados: [1, 2, 3, 4, 5]
+                      ordenarPorTema: false,
+                      temasSeleccionados: [1, 2, 3, 4, 5],
+                      perfilActual: 'default',
+                      perfiles: {}
                     };
                 }
             }
@@ -13695,6 +13825,75 @@
             actualizarConfigUI();
         }
 
+        // Importar/Exportar fallos
+        function exportarFallos() {
+          try {
+            const perfilActual = configuracion.get('perfilActual') || 'default';
+            const perfiles = configuracion.get('perfiles') || {};
+            const nombrePerfil = perfilActual === 'default' ? 'Principal' : (perfiles[perfilActual]?.nombre || perfilActual);
+            
+            const datosExportar = {
+              perfil: perfilActual,
+              nombrePerfil: nombrePerfil,
+              fallos: gestorFallos.obtenerFallos(),
+              fecha: new Date().toISOString()
+            };
+            
+            const datos = JSON.stringify(datosExportar, null, 2);
+            const blob = new Blob([datos], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `fallos_${nombrePerfil}_${Date.now()}.json`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            alert(`Fallos exportados correctamente (Perfil: ${nombrePerfil})`);
+          } catch (e) {
+            alert('No se pudo exportar los fallos');
+          }
+        }
+
+        function importarFallosDesdeArchivo(event) {
+          const file = event?.target?.files?.[0];
+          if (!file) return;
+          const reader = new FileReader();
+          reader.onload = () => {
+            try {
+              const datos = JSON.parse(reader.result);
+              
+              // Verificar formato nuevo (con perfil)
+              if (datos.fallos && Array.isArray(datos.fallos)) {
+                const mensaje = `¿Importar ${datos.fallos.length} fallos del perfil "${datos.nombrePerfil || 'Desconocido'}"?\n\nEsto reemplazará los fallos actuales del perfil activo.`;
+                if (!confirm(mensaje)) return;
+                
+                gestorFallos.fallos = datos.fallos;
+                gestorFallos.guardarFallos();
+                actualizarContadorFallos();
+                actualizarEstadisticasPerfil();
+                alert('Fallos importados correctamente');
+              } 
+              // Formato antiguo (array directo)
+              else if (Array.isArray(datos)) {
+                if (!confirm(`¿Importar ${datos.length} fallos?\nEsto reemplazará los fallos actuales del perfil activo.`)) return;
+                
+                gestorFallos.fallos = datos;
+                gestorFallos.guardarFallos();
+                actualizarContadorFallos();
+                actualizarEstadisticasPerfil();
+                alert('Fallos importados correctamente');
+              } 
+              else {
+                throw new Error('Formato inválido');
+              }
+            } catch (e) {
+              alert('Error al importar JSON de fallos: ' + e.message);
+            }
+          };
+          reader.readAsText(file);
+        }
+
         function toggleTema(numeroTema) {
             let temasSeleccionados = configuracion.get('temasSeleccionados') || [1, 2, 3, 4, 5];
             
@@ -13773,6 +13972,120 @@
             app = new SimuladorExamen(modo);
         }
 
+        // ========== GESTIÓN DE PERFILES DE USUARIO ==========
+        
+        function cargarPerfiles() {
+            const select = document.getElementById('perfilSelect');
+            if (!select) return;
+            
+            const perfilActual = configuracion.get('perfilActual') || 'default';
+            const perfiles = configuracion.get('perfiles') || {};
+            
+            // Limpiar opciones
+            select.innerHTML = '<option value="default">Usuario Principal</option>';
+            
+            // Agregar perfiles personalizados
+            Object.keys(perfiles).forEach(id => {
+                if (id !== 'default') {
+                    const option = document.createElement('option');
+                    option.value = id;
+                    option.textContent = perfiles[id].nombre || id;
+                    select.appendChild(option);
+                }
+            });
+            
+            // Seleccionar el perfil actual
+            select.value = perfilActual;
+            
+            // Actualizar botón de eliminar
+            const btnEliminar = document.getElementById('btnEliminar');
+            if (btnEliminar) {
+                btnEliminar.disabled = perfilActual === 'default';
+                btnEliminar.style.opacity = perfilActual === 'default' ? '0.5' : '1';
+            }
+            
+            actualizarEstadisticasPerfil();
+        }
+        
+        function crearNuevoPerfil() {
+            const nombre = prompt('Nombre del nuevo perfil:');
+            if (!nombre || !nombre.trim()) return;
+            
+            const id = 'perfil_' + Date.now();
+            const perfiles = configuracion.get('perfiles') || {};
+            
+            perfiles[id] = {
+                nombre: nombre.trim(),
+                fallos: [],
+                fechaCreacion: new Date().toISOString()
+            };
+            
+            configuracion.set('perfiles', perfiles);
+            configuracion.set('perfilActual', id);
+            
+            // Cambiar al nuevo perfil
+            gestorFallos.cambiarUsuario();
+            cargarPerfiles();
+            actualizarContadorFallos();
+        }
+        
+        function cambiarPerfil() {
+            const select = document.getElementById('perfilSelect');
+            if (!select) return;
+            
+            const nuevoPerfil = select.value;
+            configuracion.set('perfilActual', nuevoPerfil);
+            
+            // Recargar los fallos del nuevo perfil
+            gestorFallos.cambiarUsuario();
+            cargarPerfiles();
+            actualizarContadorFallos();
+        }
+        
+        function eliminarPerfilActual() {
+            const perfilActual = configuracion.get('perfilActual');
+            if (perfilActual === 'default') {
+                alert('No puedes eliminar el perfil principal');
+                return;
+            }
+            
+            const perfiles = configuracion.get('perfiles') || {};
+            const nombrePerfil = perfiles[perfilActual]?.nombre || perfilActual;
+            
+            if (!confirm(`¿Estás seguro de eliminar el perfil "${nombrePerfil}"?\nEsto borrará todos los fallos registrados en este perfil.`)) {
+                return;
+            }
+            
+            // Eliminar el perfil
+            delete perfiles[perfilActual];
+            configuracion.set('perfiles', perfiles);
+            
+            // Volver al perfil default
+            configuracion.set('perfilActual', 'default');
+            gestorFallos.cambiarUsuario();
+            cargarPerfiles();
+            actualizarContadorFallos();
+        }
+        
+        function actualizarEstadisticasPerfil() {
+            const statsDiv = document.getElementById('perfilStats');
+            if (!statsDiv) return;
+            
+            const perfilActual = configuracion.get('perfilActual');
+            const perfiles = configuracion.get('perfiles') || {};
+            const totalFallos = gestorFallos.obtenerFallos().length;
+            
+            let texto = `📊 Fallos registrados: ${totalFallos}`;
+            
+            if (perfilActual !== 'default' && perfiles[perfilActual]) {
+                const perfil = perfiles[perfilActual];
+                const fecha = new Date(perfil.fechaCreacion).toLocaleDateString();
+                texto += ` | Creado: ${fecha}`;
+            }
+            
+            statsDiv.textContent = texto;
+        }
+
         window.addEventListener('DOMContentLoaded', () => {
             document.getElementById('examen').classList.add('oculto');
             document.getElementById('resultados').classList.add('oculto');
@@ -13780,6 +14093,7 @@
             document.getElementById('modoActual').textContent = '-';
             document.getElementById('tiempoTranscurrido').textContent = 'Tiempo: 0:00';
             
+            cargarPerfiles();
             actualizarContadorFallos();
             actualizarConfigUI();
             actualizarTemasUI();
