@@ -1533,13 +1533,10 @@
         // Mostrar total de preguntas en el encabezado
         function mostrarTotalPreguntas() {
             const totalElement = document.getElementById('totalPreguntasInfo');
-            if (totalElement && typeof PREGUNTAS_COMPLETAS !== 'undefined') {
+            if (totalElement && PREGUNTAS_COMPLETAS.length > 0) {
                 totalElement.textContent = `Base: ${PREGUNTAS_COMPLETAS.length} ✓`;
             }
         }
-
-        // Ejecutar cuando el DOM esté listo
-        document.addEventListener('DOMContentLoaded', mostrarTotalPreguntas);
 
         function actualizarContadorFallos() {
             const contador = gestorFallos.contarFallos();
@@ -1864,6 +1861,7 @@
             document.getElementById('modoActual').textContent = '-';
             document.getElementById('tiempoTranscurrido').textContent = 'Tiempo: 0:00';
             
+            mostrarTotalPreguntas();
             cargarPerfiles();
             actualizarContadorFallos();
             actualizarConfigUI();
