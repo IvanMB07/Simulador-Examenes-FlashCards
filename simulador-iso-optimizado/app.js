@@ -277,6 +277,8 @@ const app = {
                     
                     this.fallos[pregunta.cuestion] = true;
                 }
+            } else {
+                this.fallos[pregunta.cuestion] = true;
             }
         });
         
@@ -569,6 +571,56 @@ const app = {
         };
         
         document.addEventListener('keydown', this.keyboardHandler);
+    },
+
+    mostrarDetalleErrores(errores) {
+        const contenedor = document.getElementById('erroresDetalle');
+        if (!contenedor) return;
+        
+        contenedor.innerHTML = '';
+        contenedor.classList.remove('oculto');
+        
+        if (errores.length === 0) {
+            contenedor.innerHTML = '<p style="color: #4ade80; font-weight: bold;">¡Todas las respuestas son correctas! 🎉</p>';
+            return;
+        }
+        
+        const titulo = document.createElement('h3');
+        titulo.textContent = `Detalles de respuestas incorrectas (${errores.length})`;
+        titulo.style.color = '#f87171';
+        titulo.style.marginTop = '20px';
+        contenedor.appendChild(titulo);
+        
+        errores.forEach((error, idx) => {
+            const div = document.createElement('div');
+            div.style.marginBottom = '15px';
+            div.style.padding = '10px';
+            div.style.border = '1px solid #ef4444';
+            div.style.borderRadius = '5px';
+            
+            const numPregunta = document.createElement('p');
+            numPregunta.textContent = `Pregunta ${idx + 1}: ${error.pregunta}`;
+            numPregunta.style.color = '#fbbf24';
+            numPregunta.style.marginBottom = '5px';
+            
+            const respuesta = document.createElement('p');
+            respuesta.innerHTML = `<span style="color: #f87171;">Tu respuesta:</span> ${error.respuestaUsuario}`;
+            respuesta.style.marginBottom = '5px';
+            
+            const correcta = document.createElement('p');
+            correcta.innerHTML = `<span style="color: #4ade80;">Respuesta correcta:</span> ${error.respuestaCorrecta}`;
+            
+            div.appendChild(numPregunta);
+            div.appendChild(respuesta);
+            div.appendChild(correcta);
+            contenedor.appendChild(div);
+        });
+    },
+
+    obtenerIndiceCorrecto(pregunta) {
+        const letraSolucion = pregunta.solucion;
+        const mapeo = { 'A': 0, 'B': 1, 'C': 2, 'D': 3 };
+        return mapeo[letraSolucion] || 0;
     }
 };
 
