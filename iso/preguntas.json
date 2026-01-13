@@ -3587,7 +3587,7 @@
       "C. Pruebas para ver la funcionalidad de la interfaz gráfica.",
       "D. Aquellas pruebas que consisten en, cuando hacemos un cambio en el sistema, ejecutar de nuevo las pruebas esenciales de lo implementado anteriormente, más las que necesitemos para probar lo nuevo."
     ],
-    "solucion": "B"
+    "solucion": "D"
   },
   {
     "cuestion": "C04-L4-Q11- Pregunta: Hacer debug o depurar un código ¿en qué nivel de prueba entra?",
@@ -5297,7 +5297,7 @@
       "C. Cobertura de sentencia.",
       "D. Cobertura múltiple de condiciones."
     ],
-    "solucion": "C"
+    "solucion": "B"
   },
   {
     "cuestion": "BC01-L41-Q25- Pregunta: En la metodología TDD, ¿cuál es el primer paso del ciclo del desarrollo?",
@@ -12518,5 +12518,995 @@
       "D. Agrupar uno o más casos de prueba que comparten objetivo o datos."
     ],
     "solucion": "D"
+  },
+  {
+    "cuestion": "BC3-L41-Q19- Pregunta: En el contexto de pruebas, ¿qué son los \"valores límite\"?:",
+    "opciones": [
+      "A. Valores situados en los límites de las clases de equivalencia.",
+      "B. Valores aleatorios seleccionados para pruebas de rendimiento.",
+      "C. Valores que se utilizan únicamente para pruebas de seguridad.",
+      "D. Valores que siempre producen errores en el sistema."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "3C7-L21-Q16- Pregunta: ¿Qué NO aportan las herramientas de gestión de versiones?",
+    "opciones": [
+      "A. Registro del historial de cambios.",
+      "B. Soporte al proyecto.",
+      "C. Gestión de incidencias.",
+      "D. Gestión de almacenamiento."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "B03-L31-Q021- Pregunta: ¿En qué cuatro responsabilidades clave se basa la mejora del proceso?:",
+    "opciones": [
+      "A. Diseñar el producto, probar el producto, entregar el producto y mantener el producto.",
+      "B. Asignar recursos, capacitar al personal, comunicar resultados y archivar informes.",
+      "C. Definir el proceso, medir el proceso, controlar el proceso y mejorar el proceso.",
+      "D. Planificar el proceso, auditar el proceso, documentar el proceso y eliminar el proceso."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "3B7-L2-Q06- Pregunta: ¿Qué documento define los elementos necesarios para ejercer las actividades de Gestión de la Configuración?",
+    "opciones": [
+      "A. Plan de Gestión de la Configuración.",
+      "B. Plan de Proyecto.",
+      "C. Documento de Control de Cambios.",
+      "D. Informe de Evaluación del Sistema."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "BC06-L21-Q11- Pregunta: ¿Qué actividad básica se encarga de ensamblar los componentes del programa?",
+    "opciones": [
+      "A. Construcción del sistema",
+      "B. Gestión del cambio",
+      "C. Gestión de Liberaciones",
+      "D. Gestión de versiones"
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "3B7-L12-Q14- Pregunta: ¿Qué se obtiene como resultado de la fase de Transición en el PUD?",
+    "opciones": [
+      "A. El código fuente inicial y pruebas unitarias básicas.",
+      "B. Una línea base estable de arquitectura.",
+      "C. Un modelo de casos de uso simplificado.",
+      "D. Una versión beta del producto, con actividades de integración final, formación y corrección de defectos."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "BC3-L31-Q19- Pregunta: ¿Qué significa el término cobertura en las pruebas de software?:",
+    "opciones": [
+      "A. El grado en que se detectan los defectos del sistema.",
+      "B. La cantidad de casos de prueba ejecutados con éxito.",
+      "C. El grado en el que ciertas partes del sistema han sido probadas.",
+      "D. La verificación de los requerimientos funcionales del sistema."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "BC06-L41-Q28- Pregunta: ¿Cuál de las siguientes opciones es una desventaja de las pruebas de mutación?",
+    "opciones": [
+      "A. Mejora los conjuntos de casos de prueba.",
+      "B. Descubre ambigüedades en el código fuente.",
+      "C. Usa un gran número de mutaciones.",
+      "D. Conduce a mayores niveles de cobertura."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "B03-L41-Q06- Pregunta: ¿Cuál es la diferencia entre un error y un fallo en el contexto de testing?:",
+    "opciones": [
+      "A. Un error es una equivocación realizada por una persona, mientras que un fallo es una equivocación realizada por una máquina.",
+      "B. No hay diferencia, fallo y error son sinónimos.",
+      "C. Los fallos son desvíos respecto al comportamiento del sistema, mientras que los errores son equivocaciones por parte de una persona.",
+      "D. Los fallos son errores por parte del programador, y los errores son las excepciones que saltan en el sistema."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "BC06-L41-Q16- Pregunta: ¿Qué persigue la función MINIMAX en la planificación de pruebas?",
+    "opciones": [
+      "A. Maximizar el número de defectos encontrados con el mínimo número de casos de prueba y tiempo invertido.",
+      "B. Ejecutar todas las combinaciones posibles de datos de prueba.",
+      "C. Minimizar el número de desarrolladores implicados en las pruebas.",
+      "D. Garantizar que no existan errores en el sistema."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "3C7-L4-Q24- Pregunta: En un sistema medianamante complejo, el número de casos de prueba...",
+    "opciones": [
+      "A. es normalmente bajo, por lo que es asequible probar todo el sistema en profundidad.",
+      "B. ninguna es correcta.",
+      "C. es constante e independiente de la complejidad del sistema.",
+      "D. asciende a millones de combinaciones, por lo que es preferible acotar dichos casos de prueba."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "B03-L41-Q08- Pregunta: ¿Las pruebas de caja negra son opuestas a las pruebas de caja blanca?:",
+    "opciones": [
+      "A. No, pues conocemos la estructura interna de ambas.",
+      "B. No, pues no tienen relación alguna.",
+      "C. Sí, son opuestas en cuanto a que conocemos la estructura interna de una pero no de la otra.",
+      "D. Sí, son opuestos ya que son blanco y negro."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "BC05-L31-Q20- Pregunta: ¿Cuál es el objetivo principal de la mejora de procesos?:",
+    "opciones": [
+      "A. Aumentar el número de entregas.",
+      "B. Hacer más tareas en menos tiempo.",
+      "C. Reducir el coste del personal.",
+      "D. Definir, medir, controlar y mejorar los procesos para obtener mejores resultados."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "B03-L31-Q06- Pregunta: ¿Qué parte de la gestión de calidad está orientada al aumento de las capacidades de la organización para cumplir los requisitos de calidad?:",
+    "opciones": [
+      "A. Ninguna de las otras respuestas.",
+      "B. Aseguramiento de la calidad.",
+      "C. Control de la calidad.",
+      "D. Mejora de la calidad."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "B02-L41-Q27- Pregunta: ¿Qué caracteriza a la técnica pairwise en la combinación de valores de prueba?",
+    "opciones": [
+      "A. Requiere la ejecución de casos de prueba aleatorios sin restricciones.",
+      "B. Selecciona únicamente valores límite y sus adyacentes.",
+      "C. Garantiza recorrer todas las combinaciones posibles de los parámetros.",
+      "D. Asegura visitar al menos una vez todos los pares de valores entre parámetros."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "3B7-L41-Q22- Pregunta: Según el modelo en V del testing, ¿qué nivel de prueba valida que el software cumple con los requisitos funcionales acordados con el cliente?",
+    "opciones": [
+      "A. Pruebas de aceptación.",
+      "B. Pruebas de sistema.",
+      "C. Pruebas unitarias.",
+      "D. Pruebas de integración."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "3C1-L21-Q04- Pregunta: Según el estándar IEEE 828, ¿qué protege la Gestión de la Configuración a lo largo del ciclo de vida del software?",
+    "opciones": [
+      "A. Los intereses comerciales",
+      "B. La integridad del producto",
+      "C. La velocidad de desarrollo",
+      "D. La rentabilidad del proyecto"
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "BC4-L12-Q16- Pregunta: En la fase de Transición del PUD, ¿qué actividad clave acompaña a la entrega del producto?:",
+    "opciones": [
+      "A. Priorización de los requisitos funcionales.",
+      "B. Construcción de la arquitectura inicial.",
+      "C. Desarrollo de nuevos casos de uso.",
+      "D. Formación al cliente y soporte post-entrega."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "3B7-L2-Q20- Pregunta: ¿Cuál de las siguientes definiciones corresponde al proceso de \"Construcción del sistema\" según las transparencias?",
+    "opciones": [
+      "A. Registro de relaciones entre elementos de configuración.",
+      "B. Seguimiento de las peticiones de cambio y su aprobación.",
+      "C. Proceso de ensamblar componentes, compilar y vincular para crear un sistema ejecutable.",
+      "D. Planificar qué funcionalidades irán en cada release."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "BC06-L31-Q09- Pregunta: En Gestión de la Calidad, qué es una \"no conformidad\"",
+    "opciones": [
+      "A. Una versión preliminar del software.",
+      "B. Una mejora propuesta para el proceso.",
+      "C. El incumplimiento de un requisito.",
+      "D. Un requisito adicional aceptado por el cliente."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "B02-L32-Q10- Pregunta: ¿Qué significa “calidad” según la ISO 9000?",
+    "opciones": [
+      "A. Ser el más barato.",
+      "B. Cumplir con los plazos de entrega.",
+      "C. Tener muchas funciones.",
+      "D. Grado en que un conjunto de características cumple con los requisitos."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "BC06-L12-Q23- Pregunta: ¿Cuál de las siguientes opciones describe mejor el concepto de “artefacto” en un ciclo de vida?",
+    "opciones": [
+      "A. Un rol asignado a un miembro del equipo.",
+      "B. Una acción que transforma unas entradas en salidas.",
+      "C. Una herramienta CASE utilizada en el desarrollo.",
+      "D. Un producto utilizado como entrada o generado como salida."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "B05-L3-Q08- Pregunta: ¿Cuál de las siguientes afirmaciones no es falsa sobre el concepto de calidad?",
+    "opciones": [
+      "A. Que un producto tenga una calidad perfecta en todos los ámbitos es posible.",
+      "B. La calidad de un producto la determina sus grandes proezas técnicas.",
+      "C. Todas las otras respuestas son falsas.",
+      "D. La adecuación al uso determina de mejor manera la calidad que el desempeño técnico."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "B03-L21-Q16- Pregunta: ¿Qué es un Elemento de Configuración (Configuration Item, CI) ?:",
+    "opciones": [
+      "A. Únicamente el código fuente del proyecto.",
+      "B. Solo los documentos de requisitos.",
+      "C. Agregación de productos de trabajo designados para estar bajo control de configuración y tratados como una entidad única.",
+      "D. Cualquier archivo temporal generado durante la compilación."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "B02-L32-Q23- Pregunta: En el modelo de madurez ISO 33000, ¿qué caracteriza el nivel “Innovada”? :",
+    "opciones": [
+      "A. Se gestionan cuantitativamente los procesos mediante indicadores.",
+      "B. Los procesos se mejoran continuamente para alinearse con objetivos de negocio.",
+      "C. La organización implementa procesos básicos que cumplen sus objetivos.",
+      "D. La organización controla productos y procesos de forma estable."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "BC4-L2-Q06- Pregunta: De acuerdo con la norma ISO 12207, ¿qué objetivo persigue el proceso de Gestión de la Configuración?",
+    "opciones": [
+      "A. Automatizar el proceso de construcción del sistema a partir de sus componentes.",
+      "B. Facilitar la instalación del software en el entorno de producción.",
+      "C. Gestionar y mantener la coherencia entre un producto y su definición de configuración asociada.",
+      "D. Controlar los cambios en el producto final tras su entrega al cliente."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "3C7-L4-Q12- Pregunta: El objetivo de la función MINIMAX en las pruebas es lograr la máxima eficacia de las pruebas y, a la vez, ¿qué más?",
+    "opciones": [
+      "A. Máximo tiempo invertido.",
+      "B. Máxima cobertura de condiciones.",
+      "C. Mínimo tiempo invertido en las pruebas",
+      "D. Máximo número de casos de prueba"
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "3B7-L2-Q21- Pregunta: ¿Cuáles son las actividades básicas de gestión de la configuración?",
+    "opciones": [
+      "A. Gestión del cambio, construcción de versiones, construcción del sistema, gestión de librerías.",
+      "B. Gestión del cambio, gestión de versiones, construcción del sistema, gestión de librerías.",
+      "C. Gestión del camibo, gestión de versiones, gestión de librerías.",
+      "D. Gestión del cambio, gestión de versiones, gestión del sistema, gestión de librerías."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "3C1-L31-Q01- Pregunta: Concepto de Calidad según Juran:",
+    "opciones": [
+      "A. Grado en que un producto cumple los requisitos del fabricante.",
+      "B. Ausencia total de defectos.",
+      "C. Adecuación del producto al uso.",
+      "D. Grado en que un conjunto de características cumple las necesidades del usuario."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "B02-L11-Q15- Pregunta: ¿Cuál de las siguientes NO es una ventaja del modelo en cascada?",
+    "opciones": [
+      "A. Flexibilidad ante cambios frecuentes de requisitos.",
+      "B. Útil cuando los requisitos están bien definidos desde el inicio.",
+      "C. Facilita la migración de software desde entornos obsoletos.",
+      "D. Impone una estructura clara de gestión de proyectos."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "B03-L41-Q13- Pregunta: ¿Qué tipo de prueba se realiza para comprobar la correcta integración entre unidades que ya pasaron pruebas unitarias?:",
+    "opciones": [
+      "A. Pruebas de sistema.",
+      "B. Pruebas unitarias.",
+      "C. Pruebas de aceptación.",
+      "D. Pruebas de integración."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "BC3-L31-Q20- Pregunta: ¿Qué indican los criterios de cobertura en las pruebas de software?:",
+    "opciones": [
+      "A. La forma en que se combinan los valores de prueba para cada parámetro en los casos de prueba.",
+      "B. El número de defectos encontrados en cada iteración.",
+      "C. El porcentaje de requerimientos implementados correctamente.",
+      "D. La cantidad de pruebas ejecutadas de manera automatizada."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "B02-L22-Q28- Pregunta: ¿Cuál es la función del Configuration Control dentro de la Gestión de Configuración?:",
+    "opciones": [
+      "A. Controlar los cambios a los elementos después de su identificación formal.",
+      "B. Evaluar el rendimiento del software tras cada release.",
+      "C. Estimar los costes de mantenimiento del sistema.",
+      "D. Documentar los requisitos funcionales del software."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "B03-L21-Q26- Pregunta: ¿Qué es el Branching (Ramificación)?:",
+    "opciones": [
+      "A. La eliminación de versiones anteriores para evitar conflictos en el desarrollo.",
+      "B. La creación de una nueva línea base a partir de una versión existente. La nueva línea base y la existente pueden desarrollarse de manera independiente.",
+      "C. El proceso de compilar el software para su distribución.",
+      "D. La fusión de todas las versiones en una única línea de desarrollo."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "3B7-L31-Q12- Pregunta: ¿Qué se entiende por calidad según Deming?",
+    "opciones": [
+      "A. Adecuación del producto al uso.",
+      "B. Cero defectos.",
+      "C. Grado en el que un conjunto de características inherentes cumple con los requisitos.",
+      "D. Conformidad con requisitos y confiabilidad en funcionamiento."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "BC06-L31-Q14- Pregunta: En la evaluación de la calidad de un producto software, ¿en qué etapa se aplica la especificación de la evaluación?",
+    "opciones": [
+      "A. En la tercera sección",
+      "B. En la cuarta sección",
+      "C. En el primera sección",
+      "D. En la segunda sección"
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "3C7-L11-Q13- Pregunta: ¿Qué se entiende por artefacto en el proceso de desarrollo del software?",
+    "opciones": [
+      "A. Una herramienta CASE para generar código automáticamente.",
+      "B. Un test unitario para comprobar funciones.",
+      "C. El servidor donde se despliega la aplicación.",
+      "D. Un producto utilizado como entrada o generado como salida en una tarea."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "3C7-L21-Q01- Pregunta: ¿Cómo se les llama a los productos de trabajo que se pueden introducir en el Configuration Management (CM), como el código, los diagramas, los requisitos, etc?",
+    "opciones": [
+      "A. Release",
+      "B. Codeline",
+      "C. Mínimum Viable Product (MVP)",
+      "D. Configuration Item"
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "BC4-L2-Q10- Pregunta: ¿Qué herramienta o concepto se utiliza en la Gestión de la Configuración para registrar el estado de los atributos de los elementos de configuración y sus relaciones a lo largo del ciclo de vida?",
+    "opciones": [
+      "A. Configuration Management Database (CMDB).",
+      "B. Build System Repository (BSR).",
+      "C. Change Request Register (CRR).",
+      "D. Configuration Control Board (CCB)."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "3C7-L4-Q08- Pregunta: En la técnica de valores límite, se seleccionan:",
+    "opciones": [
+      "A. Valores situados en los límites de las clases de equivalencia.",
+      "B. Valores aleatorios de cada parámetro.",
+      "C. Solamente valores negativos.",
+      "D. Todos los valores posibles de entrada."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "BC05-L12-Q27- Pregunta: ¿Qué disciplina del PUD se encarga de describir qué debe hacer el sistema y poner de acuerdo a desarrolladores y clientes?:",
+    "opciones": [
+      "A. Requisitos.",
+      "B. Implementación.",
+      "C. Modelado del negocio.",
+      "D. Pruebas."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "B02-L11-Q04- Pregunta: ¿Qué característica distingue al modelo en espiral de otros modelos?",
+    "opciones": [
+      "A. La eliminación del análisis de requisitos.",
+      "B. El uso de iteraciones y gestión de riesgos.",
+      "C. Que nunca se adapta a otros modelos.",
+      "D. La ausencia de revisiones intermedias."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "B05-L21-Q17- Pregunta: ¿Qué propósito tiene la auditoría de configuración dentro del proceso de Gestión de la Configuración?",
+    "opciones": [
+      "A. Verificar que los elementos de configuración y sus versiones cumplen con los estándares y procedimientos establecidos.",
+      "B. Sustituir la gestión de versiones en el control del proyecto.",
+      "C. Automatizar la documentación del sistema.",
+      "D. Detectar errores de programación antes de la compilación."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "3C7-L3-Q24- Pregunta: Según la definición de ISO 9000, la calidad es...",
+    "opciones": [
+      "A. Conformidad con requisitos y confiabilidad en funcionamiento.",
+      "B. Cero defectos.",
+      "C. Grado en el que un conjunto de características inherentes cumple con los requisitos.",
+      "D. Adecuación (del producto) al uso."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "BC3-L31-Q06- Pregunta: ¿Cuál es el objetivo del ciclo de mejora continua (PDCA)?:",
+    "opciones": [
+      "A. Documentar cada error sin modificar el proceso.",
+      "B. Definir nuevos productos en cada iteración del proyecto.",
+      "C. Controlar y optimizar los procesos mediante revisión y ajuste constante.",
+      "D. Repetir las actividades sin cambios para mantener la estabilidad."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "B05-L3-Q07- Pregunta: ¿Cuándo se mejora un proceso, que se hace a continuación?",
+    "opciones": [
+      "A. No se hace nada.",
+      "B. Utilizar el proceso.",
+      "C. Medir el proceso.",
+      "D. Redefinirlo."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "BC05-L31-Q18- Pregunta: ¿Cuál es el nivel más bajo en los modelos de madurez de procesos?:",
+    "opciones": [
+      "A. Inmaduro.",
+      "B. Establecido.",
+      "C. Básico.",
+      "D. Gestionado."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "BC3-L12-Q12- Pregunta: ¿Cuál es el objetivo principal del Modelado del Negocio en el Proceso Unificado de Desarrollo?:",
+    "opciones": [
+      "A. Visualizar los aspectos básicos del dominio de aplicación.",
+      "B. Definir el cronograma del proyecto.",
+      "C. Desarrollar el código y la arquitectura del sistema propuesto.",
+      "D. Realizar pruebas de integración."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "BC05-L31-Q19- Pregunta: ¿Qué característica define un proceso en nivel “Gestionado”?:",
+    "opciones": [
+      "A. Solo se mide al final del proyecto.",
+      "B. Depende de la improvisación del equipo.",
+      "C. Se ejecuta sin control ni planificación.",
+      "D. Se gestiona y sus productos se controlan y mantienen."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "B05-L3-Q18- Pregunta: ¿Qué se entiende por “Capacidad de Uso” en el modelo ISO 25010?",
+    "opciones": [
+      "A. El nivel de tolerancia a fallos que muestra el sistema.",
+      "B. La facilidad con la que un usuario puede reconocer si el software es adecuado para su propósito.",
+      "C. La capacidad del software para impedir su uso ante una no conformidad.",
+      "D. La facilidad de migrar el software entre diferentes plataformas de hardware."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "BC06-L12-Q12- Pregunta: ¿Cuál de estos inconvenientes no es característico del modelo en cascada?",
+    "opciones": [
+      "A. El modelo es poco flexible.",
+      "B. Es fácil estimar el coste total del proyecto desde el principio.",
+      "C. No se tienen resultados hasta el final.",
+      "D. Se tarda mucho tiempo en pasar por todo el ciclo."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "BC06-L21-Q29- Pregunta: ¿Qué identifica el concepto de “Tag” dentro de la gestión de versiones?",
+    "opciones": [
+      "A. Un registro de cambios aplicados a una línea de código",
+      "B. Un identificador inmutable que permite localizar una versión exacta del software",
+      "C. Una rama destinada a pruebas de integración",
+      "D. Una versión temporal del sistema antes de liberarse"
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "3B7-L41-Q12- Pregunta: ¿Qué es la cobertura en la ingeniería de software?",
+    "opciones": [
+      "A. Grado en el que todas las partes del sistema han sido aprobadas.",
+      "B. Grado en el que una de las parte del sistema ha sido aprobada.",
+      "C. Grado en el que ciertas partes del sistema han sido aprobadas.",
+      "D. Grado en el que ninguna de las partes del sistema han sido aprobadas."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "3C1-L11-Q05- Pregunta: ¿Qué metodología estructurada corresponde a un enfoque mixto?",
+    "opciones": [
+      "A. Gane y Sarson.",
+      "B. Métrica.",
+      "C. OMT.",
+      "D. De Marco."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "B02-L41-Q16- Pregunta: ¿Qué técnica se usa para seleccionar datos representativos reduciendo el número total de pruebas necesarias?",
+    "opciones": [
+      "A. Pruebas de integración incremental.",
+      "B. Partición en clases de equivalencia.",
+      "C. Pruebas de mutación.",
+      "D. Test Driven Development."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "BC05-L4-Q01- Pregunta: En la actualidad, ¿Cuál de las siguientes metodologías basadas en pruebas son más usadas por empresas?",
+    "opciones": [
+      "A. BDD.",
+      "B. TDD.",
+      "C. Todas son usadas por igual.",
+      "D. B. TDD."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "BC06-L32-Q28- Pregunta: Según el modelo ISO/IEC 25010, ¿cuál de las siguientes es una subcaracterística de la característica de “Seguridad” del producto software?",
+    "opciones": [
+      "A. Confidencialidad.",
+      "B. Modularidad.",
+      "C. Capacidad para ser probado.",
+      "D. Adaptabilidad."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "B03-L12-Q15- Pregunta: ¿Cuál es una característica del Proceso Unificado de Desarrollo (PUD)?:",
+    "opciones": [
+      "A. No utiliza modelos UML para el diseño.",
+      "B. Se basa en ciclo de vida en cascada.",
+      "C. Cada ciclo concluye con una versión del producto para los clientes.",
+      "D. No permite iteraciones dentro de las fases."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "BC06-L21-Q22- Pregunta: ¿Qué papel desempeña el Configuration Control Board (CCB)?",
+    "opciones": [
+      "A. Evaluar, aprobar o rechazar las peticiones de cambio y garantizar su correcta implementación",
+      "B. Generar las versiones finales del producto y etiquetarlas",
+      "C. Supervisar la construcción automática del sistema",
+      "D. Elaborar los informes de auditoría de configuración"
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "3B7-L12-Q17- Pregunta: ¿Cuál de los siguientes artefactos se obtiene como línea base de la arquitectura durante la fase de Elaboración?",
+    "opciones": [
+      "A. Product Backlog.",
+      "B. Informe de marketing.",
+      "C. Documento de arquitectura del software.",
+      "D. Manual de usuario."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "BC06-L21-Q03- Pregunta: ¿Qué significa \"línea base\" (baseline) en el contexto de la Gestión de Configuración?",
+    "opciones": [
+      "A. La versión final de un producto que no cambia.",
+      "B. El primer commit en un sistema de control de versiones.",
+      "C. La rama principal en un sistema de control de versiones.",
+      "D. Es una colección de versiones de componentes que construyen un sistema."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "B02-L21-Q08- Pregunta: Según el versionado semántico, ¿qué ocurre al incrementar la versión mayor?:",
+    "opciones": [
+      "A. Se actualiza la documentación del código sin modificar el software.",
+      "B. Se introducen cambios que rompen la compatibilidad con versiones anteriores.",
+      "C. Se añaden nuevas funcionalidades compatibles con la versión anterior.",
+      "D. Se corrigen errores menores sin afectar la compatibilidad."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "B02-L11-Q17- Pregunta: ¿Qué es un artefacto en el contexto del ciclo de vida del software?",
+    "opciones": [
+      "A. Un conjunto de tareas que forman una actividad.",
+      "B. Un modelo que organiza las fases de desarrollo.",
+      "C. Una acción que transforma entradas en salidas.",
+      "D. Un producto utilizado como entrada o generado como salida."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "BC06-L41-Q17- Pregunta: ¿Qué es un conjunto de prueba (test suite)?",
+    "opciones": [
+      "A. Un único caso de prueba que se ejecuta repetidamente.",
+      "B. Un informe con el resumen de todos los defectos encontrados.",
+      "C. Uno o más casos de prueba con un propósito y base de datos comunes que se ejecutan en conjunto.",
+      "D. La documentación de requisitos funcionales del sistema."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "3C1-L31-Q09- Pregunta: Según las definiciones de calidad, ¿qué afirma Crosby?",
+    "opciones": [
+      "A. La calidad es el grado en que un producto satisface necesidades implícitas.",
+      "B. La calidad es adecuación al uso.",
+      "C. La calidad es conformidad con requisitos y confiabilidad.",
+      "D. La calidad consiste en cero defectos."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "B03-L21-Q28- Pregunta: ¿Cúales son las 4 actividades básicas de la gestión de la configuración?:",
+    "opciones": [
+      "A. Gestión del cambio, gestión de versiones, construcción del sistema, gestión de liberaciones/Entregas.",
+      "B. Diseño gráfico, codificación, pruebas unitarias, documentación.",
+      "C. Planificación de recursos, análisis de mercado, gestión de clientes, soporte técnico.",
+      "D. Revisión de código, integración continua, despliegue, mantenimiento."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "B02-L32-Q03- Pregunta: En el Ciclo de Mejora Continua PDCA, la fase de Check consiste en :",
+    "opciones": [
+      "A. Medir y verificar los resultados obtenidos.",
+      "B. Incorporar las mejoras.",
+      "C. Llevar a cabo la planificación realizada.",
+      "D. Definir los objetivos y recursos de calidad."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "3C1-L11-Q24- Pregunta: Una diferencia entre metodologías estructuradas y orientadas a objetos es que:",
+    "opciones": [
+      "A. Las orientadas a objetos no permiten reutilización.",
+      "B. Las estructuradas separan datos y procesos, mientras que las orientadas a objetos los tratan de forma conjunta.",
+      "C. Las orientadas a objetos eliminan la fase de diseño.",
+      "D. Las estructuradas integran datos y procesos, mientras que las orientadas a objetos los separan."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "3C7-L4-Q23- Pregunta: Las pruebas de sistema...",
+    "opciones": [
+      "A. se ejecutan en el entorno de preproducción.",
+      "B. se ejecutan en el entorno de producción.",
+      "C. se ejecutan en local, del lado del desarrollador.",
+      "D. se ejecutan en local, del lado del cliente."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "BC06-L41-Q27- Pregunta: ¿Qué tipo de prueba se caracteriza por conocer sus entradas y salidas?",
+    "opciones": [
+      "A. Integración.",
+      "B. Caja blanca.",
+      "C. Caja Negra o funcionales.",
+      "D. Mutación."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "BC06-L41-Q22- Pregunta: ¿Qué tipo de pruebas se centran en la estructura interna del programa, teniendo en cuenta las partes que se van ejecutando?",
+    "opciones": [
+      "A. Pruebas de caja Negra o Funcionales.",
+      "B. Pruebas de Sistema.",
+      "C. Pruebas de caja Blanca o Estructurales.",
+      "D. Pruebas de Aceptación."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "B03-L31-Q027- Pregunta: ¿Cuál de estos no pertenece al ciclo de mejora continua PDCA?:",
+    "opciones": [
+      "A. Control.",
+      "B. Act.",
+      "C. Plan.",
+      "D. Do."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "3C1-L03-Q11- Pregunta: Según ISO 33000, ¿qué caracteriza al nivel 3 (Establecida)?",
+    "opciones": [
+      "A. Se mejora continuamente en función de objetivos de negocio.",
+      "B. La organización no tiene procesos definidos.",
+      "C. La organización utiliza procesos definidos basados en estándares.",
+      "D. Los procesos se gestionan cuantitativamente."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "B02-L11-Q21- Pregunta: Según ISO 12207, ¿qué relación existe entre proceso, actividad y tarea?",
+    "opciones": [
+      "A. Un proceso está compuesto por actividades y estas por tareas.",
+      "B. Son sinónimos que se usan indistintamente.",
+      "C. Una tarea se compone de varias actividades y procesos.",
+      "D. Las actividades no forman parte de los procesos."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "B02-L41-Q03- Pregunta: ¿Para que sirven las pruebas de integración?:",
+    "opciones": [
+      "A. Verificar que el código cumple con los requisitos sin necesidad de probar el sistema completo.",
+      "B. Comprobar que el sistema se comporta correctamente con su entorno.",
+      "C. Comprobar que las unidades de prueba funcionan correctamente cuando se integran junto a otras clases.",
+      "D. Aceptar el software producido o rechazar el software y demandar correcciones o mejoras."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "B03-L21-Q13- Pregunta: ¿Quién es responsable de evaluar y aprobar los cambios propuestos a los elementos de configuración?:",
+    "opciones": [
+      "A. El Consejo de Control de Configuración (CCB).",
+      "B. El cliente principal.",
+      "C. El equipo de pruebas.",
+      "D. El jefe de proyecto."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "B03-L41-Q17- Pregunta: ¿Cuál de las siguientes afirmaciones sobre la cobertura es correcta?:",
+    "opciones": [
+      "A. Una cobertura alta garantiza que el software está completamente libre de fallos.",
+      "B. La cobertura indica qué partes del sistema han sido ejercitadas por las pruebas.",
+      "C. La cobertura solo es útil en pruebas de caja negra.",
+      "D. La cobertura sustituye a la necesidad de diseñar casos de prueba."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "BC4-L21-Q16- Pregunta: ¿Qué describe mejor el concepto de Change Request?",
+    "opciones": [
+      "A. Petición formal para modificar una línea base, que debe ser aprobada por el CCB.",
+      "B. B. Solicitud para crear una nueva rama en el repositorio de desarrollo.",
+      "C. Documento técnico generado automáticamente por la herramienta de control de versiones.",
+      "D. Requisito de cliente que aún no ha sido implementado."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "3C1-L21-Q15- Pregunta: De acuerdo con Semantic Versioning (T.02.01.03), ¿qué acción requiere incrementar la versión \"Patch\" (M.m.p)?",
+    "opciones": [
+      "A. Introducir cambios que rompen la compatibilidad.",
+      "B. Introducir nueva funcionalidad compatible con la versión anterior.",
+      "C. Introducir arreglos de fallos que no cambian la interfaz y son compatibles.",
+      "D. Adjuntar metadatos de construcción."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "B02-L41-Q24- Pregunta: ¿Qué se verifica mediante la cobertura de sentencias?",
+    "opciones": [
+      "A. Que cada condición se evalúe como verdadera y falsa.",
+      "B. Que todas las ramas se ejecuten al menos una vez.",
+      "C. Que las pruebas se repitan hasta obtener cero fallos.",
+      "D. Que todas las sentencias del programa sean recorridas."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "B02-L21-Q14- Pregunta: ¿Qué se entiende por línea base (baseline) en la gestión de configuración?:",
+    "opciones": [
+      "A. Conjunto de versiones de componentes que pueden cambiar libremente durante el desarrollo.",
+      "B. Rama temporal para pruebas de integración entre módulos.",
+      "C. Versión preliminar del software antes de su liberación oficial.",
+      "D. Especificación o producto formalmente revisado que sirve como base para desarrollos futuros."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "BC06-L31-Q06- Pregunta: ¿Cómo se define la calidad de un producto de software?",
+    "opciones": [
+      "A. El tiempo que tardó en desarrollarse.",
+      "B. El precio al que se vende.",
+      "C. El grado en que el producto cumple los requisitos, expectativas y necesidades del usuario.",
+      "D. El número de pruebas automatizadas que tiene."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "BC06-L21-Q23- Pregunta: ¿Qué ventaja ofrecen las herramientas de gestión de versiones al almacenar solo los “deltas” o incrementos?",
+    "opciones": [
+      "A. Permitir la integración continua en paralelo",
+      "B. Optimizar el espacio de almacenamiento al guardar solo los cambios respecto a versiones anteriores",
+      "C. Reducir el tiempo de compilación del sistema",
+      "D. Acelerar la ejecución de pruebas automáticas"
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "BC05-L11-Q17- Pregunta: Indica cual es una característica propia del ciclo de vida en cascada:",
+    "opciones": [
+      "A. Se adapta bien a proyectos con requisitos cambiantes.",
+      "B. Permite obtener resultados desde las primeras fases.",
+      "C. Refleja fielmente cómo se desarrolla el software en la práctica.",
+      "D. Es útil para equipos inexpertos al proponer una estructura ordenada."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "B05-L4-Q26- Pregunta: ¿Qué caracteriza a las pruebas de caja blanca?",
+    "opciones": [
+      "A. Se aplican únicamente en pruebas de sistema",
+      "B. No requieren conocer la estructura interna del programa",
+      "C. Evalúan qué partes del código se ejecutan durante la prueba",
+      "D. Se centran únicamente en los requisitos del usuario"
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "B05-L3-Q19- Pregunta: En el contexto de la mejora de procesos, ¿cuál es el primer paso fundamental según el Tema 3.2?",
+    "opciones": [
+      "A. Rediseñar el proceso desde cero.",
+      "B. Gestionar los riesgos del proceso.",
+      "C. Definir correctamente el proceso.",
+      "D. Validar los productos resultantes."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "3C1-L31-Q22- Pregunta: ¿Cuál de los siguientes conceptos describe una acción para hacer aceptable un producto no conforme?",
+    "opciones": [
+      "A. Desecho.",
+      "B. Corrección.",
+      "C. Medición.",
+      "D. Reparación."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "B05-L11-Q07- Pregunta: El modelo de ciclo de vida en cascada:",
+    "opciones": [
+      "A. Refleja perfectamente el proceso del desarrollo del software.",
+      "B. No refleja realmente el proceso de desarrollo de software.",
+      "C. Permite al usuario involucrarse mucho más en el modelo.",
+      "D. No es recomendable para realizar una migración de software de un entorno a otro."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "3B7-L11-Q06- Pregunta: ¿Cuál de las siguientes fases forma parte para el desarrollo del Software?",
+    "opciones": [
+      "A. Venta del producto.",
+      "B. Marketing digital.",
+      "C. Análisis de requisitos.",
+      "D. Fabricación del hardware."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "3C7-L4-Q29- Pregunta: ¿Qué tipo de prueba se realiza para comprobar que cambios en el sistema no han roto funcionalidades ya existentes?",
+    "opciones": [
+      "A. Pruebas de aceptación",
+      "B. Pruebas de regresión",
+      "C. Pruebas alfa",
+      "D. Pruebas de integración"
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "3B7-L31-Q04- Pregunta: ¿Cuál de las siguientes características del modelo ISO 25010 evalúa la facilidad con la que el usuario aprende y usa el software?",
+    "opciones": [
+      "A. Usabilidad.",
+      "B. Eficiencia de desempeño.",
+      "C. Mantenibilidad.",
+      "D. Compatibilidad."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "B05-L4-Q17- Pregunta: ¿Qué elemento permite determinar automáticamente si la salida de un programa es la correcta para un caso de prueba?",
+    "opciones": [
+      "A. Mutante.",
+      "B. Valor límite.",
+      "C. Oráculo.",
+      "D. Test suite."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "B03-L21-Q15- Pregunta: ¿Cuál es el objetivo principal del proceso de ramificación (branching)?:",
+    "opciones": [
+      "A. Eliminar líneas base obsoletas de la configuración.",
+      "B. Aumentar el rendimiento del compilador.",
+      "C. Permitir el desarrollo simultáneo sin conflictos entre programadores.",
+      "D. Reducir el tamaño del repositorio de versiones."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "3C7-L21-Q07- Pregunta: ¿Cuál de las siguientes afirmaciones es falsa sobre la versión patch?",
+    "opciones": [
+      "A. Debe resetearse a 0 cuando se incrementa la versión major.",
+      "B. Se representa con la letra Z.",
+      "C. Es la versión definitiva de una aplicación.",
+      "D. Debe incrementarse cuando se introducen arreglos compatibles con la versión anterior."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "BC06-L31-Q26- Pregunta: Según el tema 03.01, ¿qué elementos son susceptibles de tener calidad en el contexto del software?",
+    "opciones": [
+      "A. Tanto los productos software como los procesos que los generan.",
+      "B. Solo los servicios de soporte asociados al producto.",
+      "C. Únicamente los productos software desarrollados.",
+      "D. Únicamente los procesos seguidos durante el desarrollo."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "B05-L3-Q12- Pregunta: ¿Es necesario que el proceso software sea mejorado en función de los objetivos de negocio?",
+    "opciones": [
+      "A. No, pero sí es recomendable para poder definir el proceso correctamente.",
+      "B. Los objetivos de negocio no están relacionados con la calidad del software.",
+      "C. No, aunque no se mejore el proceso se puede producir un software perfecto para el cliente.",
+      "D. Sí, es necesario para así garantizar la calidad de un producto software en función de su proceso de producción."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "BC06-L41-Q19- Pregunta: ¿En qué consiste la técnica de conjetura de errores (error-guessing)?",
+    "opciones": [
+      "A. En elegir valores de forma completamente aleatoria.",
+      "B. En proponer valores que el ingeniero de pruebas intuye que pueden provocar comportamientos erróneos.",
+      "C. En construir automáticamente todos los pares posibles de valores de entrada.",
+      "D. En seleccionar datos de prueba solo a partir de las clases de equivalencia."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "B05-L12-Q02- Pregunta: ¿En qué fase del PUD se desarrollan los casos de uso más críticos identificados en la fase de inicio?",
+    "opciones": [
+      "A. En la fase de construcción.",
+      "B. En la propia fase de inicio.",
+      "C. En la fase de transición.",
+      "D. En la fase de elaboración."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "BC06-L32-Q29- Pregunta: En los conceptos relacionados con la calidad, ¿qué se entiende por “medida”?",
+    "opciones": [
+      "A. El resultado de comparar un producto con la competencia.",
+      "B. La acción y efecto de obtener un valor que representa una característica de calidad.",
+      "C. La acción de corregir desviaciones respecto a los requisitos.",
+      "D. El documento en el que se registran las no conformidades detectadas."
+    ],
+    "solucion": "B"
   }
 ]
