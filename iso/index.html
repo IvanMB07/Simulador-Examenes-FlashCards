@@ -968,6 +968,7 @@
                 this.preguntas = [];
                 this.preguntaActual = 0;
                 this.respuestas = {};
+                this.sinResponder = new Set(); // Para marcar preguntas sin responder
                 this.tiempoInicio = Date.now();
                 this.tiempoLimiteMs = this.modo === 'examen' ? 50 * 60 * 1000 : null;
                 this.timerId = null;
@@ -1002,6 +1003,7 @@
                     this.preguntas = this.seleccionarPreguntasPractica(temasSeleccionados, ordenarPorTema);
                 }
                 this.respuestas = {};
+                this.sinResponder = new Set();
                 this.preguntaActual = 0;
                 this.tiempoInicio = Date.now();
                 this.mostrarPregunta();
@@ -1103,7 +1105,7 @@
                     return;
                 }
 
-                // En modo práctica, no permitir cambiar si ya está respondida
+                // En modo práctica: no permitir cambiar si ya está respondida
                 const yaRespondida = this.respuestas.hasOwnProperty(this.preguntaActual);
                 if (this.modo === 'practica' && yaRespondida) {
                     return;
@@ -1265,8 +1267,9 @@
                     const bloque = Math.floor(this.preguntaActual / 10) + 1;
                     const totalBloques = Math.ceil(this.preguntas.length / 10);
                     const enBloque = (this.preguntaActual % 10) + 1;
+                    const indicadorNoResponder = !this.respuestas.hasOwnProperty(this.preguntaActual) ? ' ⭕' : '';
                     document.getElementById('preguntaNumero').textContent =
-                        `Bloque ${bloque}/${totalBloques} — Pregunta ${enBloque}/10 (global ${this.preguntaActual + 1}/${this.preguntas.length})`;
+                        `Bloque ${bloque}/${totalBloques} — Pregunta ${enBloque}/10 (global ${this.preguntaActual + 1}/${this.preguntas.length})${indicadorNoResponder}`;
                 } else {
                     document.getElementById('preguntaNumero').textContent =
                         `Pregunta ${this.preguntaActual + 1} de ${this.preguntas.length}`;
@@ -1313,10 +1316,13 @@
 
                 const btnAnterior = document.getElementById('btnAnterior');
                 const btnSiguiente = document.getElementById('btnSiguiente');
+                const btnNoResponder = document.getElementById('btnNoResponder');
 
                 if (this.modo === 'examen') {
-                    btnAnterior.disabled = true;
-                    btnAnterior.classList.add('oculto');
+                    // En modo examen: permitir volver atrás dentro del bloque (cada 10 preguntas)
+                    const inicioBloque = Math.floor(this.preguntaActual / 10) * 10;
+                    btnAnterior.classList.remove('oculto');
+                    btnAnterior.disabled = this.preguntaActual === inicioBloque;
                 } else {
                     btnAnterior.classList.remove('oculto');
                     btnAnterior.disabled = this.preguntaActual === 0;
@@ -1356,7 +1362,19 @@
             }
 
             responderPregunta(indice) {
-                this.respuestas[this.preguntaActual] = indice;
+                if (this.modo === 'practica') {
+                    // En práctica: seleccionar y bloquear (como antes)
+                    this.respuestas[this.preguntaActual] = indice;
+                } else {
+                    // En examen: toggle (puedo desseleccionar y cambiar)
+                    if (this.respuestas[this.preguntaActual] === indice) {
+                        // Si ya está seleccionada, deseleccionar
+                        delete this.respuestas[this.preguntaActual];
+                    } else {
+                        // Seleccionar opción
+                        this.respuestas[this.preguntaActual] = indice;
+                    }
+                }
                 this.mostrarPregunta();
             }
 
@@ -1369,11 +1387,17 @@
 
             anterior() {
                 if (this.modo === 'examen') {
-                    return;
-                }
-                if (this.preguntaActual > 0) {
-                    this.preguntaActual--;
-                    this.mostrarPregunta();
+                    // Permitir ir atrás dentro del bloque (cada 10 preguntas)
+                    const inicioBloque = Math.floor(this.preguntaActual / 10) * 10;
+                    if (this.preguntaActual > inicioBloque) {
+                        this.preguntaActual--;
+                        this.mostrarPregunta();
+                    }
+                } else {
+                    if (this.preguntaActual > 0) {
+                        this.preguntaActual--;
+                        this.mostrarPregunta();
+                    }
                 }
             }
 
@@ -1424,6 +1448,14 @@
                                 pregunta.opciones[indiceCorrecto]
                             );
                         }
+                    } else {
+                        // Todas las preguntas no respondidas se agregan al test de fallos
+                        const indiceCorrecto = this.obtenerIndiceCorrecto(pregunta);
+                        gestorFallos.agregarFallo(
+                            pregunta,
+                            '(No respondida)',
+                            pregunta.opciones[indiceCorrecto]
+                        );
                     }
                 });
 
@@ -1432,8 +1464,12 @@
                 
                 // Fórmula (examen real): (Correctas - Incorrectas/3) / Total de preguntas × 10
                 // 3 preguntas mal restan 1 bien.
+                // IMPORTANTE: Solo contar las preguntas respondidas para el cálculo de puntuación
+                const preguntasContadas = Object.keys(this.respuestas).length;
                 const puntuacionRaw = correctas - (incorrectas / 3);
-                const puntuacionFinal = Math.max(0, Math.min(10, (puntuacionRaw / this.preguntas.length) * 10));
+                const puntuacionFinal = preguntasContadas > 0 
+                    ? Math.max(0, Math.min(10, (puntuacionRaw / preguntasContadas) * 10))
+                    : 0;
 
                 document.getElementById('respuestasCorrectas').textContent = correctas;
                 document.getElementById('respuestasIncorrectas').textContent = incorrectas;
@@ -1450,27 +1486,63 @@
             mostrarDetalleErrores() {
                 const contenedor = document.getElementById('erroresDetalle');
                 
-                if (this.erroresDelTest.length === 0) {
+                // Recopilar preguntas no respondidas (todas las que no tienen respuesta)
+                const preguntasNoRespondidas = [];
+                this.preguntas.forEach((pregunta, indice) => {
+                    if (!this.respuestas.hasOwnProperty(indice)) {
+                        preguntasNoRespondidas.push({
+                            pregunta: pregunta.cuestion,
+                            indice: indice
+                        });
+                    }
+                });
+                
+                if (this.erroresDelTest.length === 0 && preguntasNoRespondidas.length === 0) {
                     contenedor.classList.add('oculto');
                     return;
                 }
 
                 contenedor.classList.remove('oculto');
-                let html = '<h3 style="color: #ef4444; margin-bottom: 15px;">📋 Preguntas Falladas</h3>';
+                let html = '';
                 
-                this.erroresDelTest.forEach((error, index) => {
-                    html += `
-                        <div class="error-item">
-                            <div class="error-pregunta">${index + 1}. ${error.pregunta}</div>
-                            <div class="error-respuesta respuesta-tu">
-                                ❌ Tu respuesta: ${error.respuestaUsuario}
+                // Mostrar preguntas falladas
+                if (this.erroresDelTest.length > 0) {
+                    html += '<h3 style="color: #ef4444; margin-bottom: 15px;">📋 Preguntas Falladas</h3>';
+                    this.erroresDelTest.forEach((error, index) => {
+                        html += `
+                            <div class="error-item">
+                                <div class="error-pregunta">${index + 1}. ${error.pregunta}</div>
+                                <div class="error-respuesta respuesta-tu">
+                                    ❌ Tu respuesta: ${error.respuestaUsuario}
+                                </div>
+                                <div class="error-respuesta respuesta-correcta">
+                                    ✓ Respuesta correcta: ${error.respuestaCorrecta}
+                                </div>
                             </div>
-                            <div class="error-respuesta respuesta-correcta">
-                                ✓ Respuesta correcta: ${error.respuestaCorrecta}
+                        `;
+                    });
+                }
+                
+                // Mostrar preguntas no respondidas
+                if (preguntasNoRespondidas.length > 0) {
+                    if (this.erroresDelTest.length > 0) {
+                        html += '<hr style="border: none; border-top: 1px solid #3a3a3a; margin: 20px 0;">';
+                    }
+                    html += '<h3 style="color: #8b5cf6; margin-bottom: 15px; margin-top: 20px;">⭕ Preguntas No Respondidas</h3>';
+                    html += '<div style="font-size: 12px; color: #888; margin-bottom: 15px;">Se han agregado al test de fallos para que las repases</div>';
+                    
+                    preguntasNoRespondidas.forEach((item, index) => {
+                        const respuestaCorrecta = this.preguntas[item.indice].opciones[this.obtenerIndiceCorrecto(this.preguntas[item.indice])];
+                        html += `
+                            <div class="error-item" style="border-left-color: #8b5cf6;">
+                                <div class="error-pregunta">⭕ ${index + 1}. ${item.pregunta}</div>
+                                <div class="error-respuesta respuesta-correcta">
+                                    ✓ Respuesta correcta: ${respuestaCorrecta}
+                                </div>
                             </div>
-                        </div>
-                    `;
-                });
+                        `;
+                    });
+                }
                 
                 contenedor.innerHTML = html;
             }
