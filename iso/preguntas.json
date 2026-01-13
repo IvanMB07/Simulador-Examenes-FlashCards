@@ -12258,5 +12258,265 @@
       "D. ISO/IEC 25010."
     ],
     "solucion": "C"
+  },
+  {
+    "cuestion": "B05-L12-Q018- Pregunta: ¿Cuál es el resultado principal de la fase de Inicio en el Proceso Unificado de Desarrollo?",
+    "opciones": [
+      "A. Un plan detallado de despliegue en el entorno del cliente.",
+      "B. El modelo de casos de uso simplificado y la identificación de riesgos.",
+      "C. La capacidad operacional inicial del sistema.",
+      "D. La entrega de un producto beta al cliente."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "BC06-L31-Q03- Pregunta: ¿Cuál de las siguientes responsabilidades forma parte de la mejora del proceso según el modelo de calidad de procesos?",
+    "opciones": [
+      "A. Definir, medir, controlar y mejorar el proceso.",
+      "B. Documentar, auditar y validar el proceso.",
+      "C. Probar, verificar y mantener el proceso.",
+      "D. Planificar, ejecutar y certificar el proceso."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "3C7-L21-Q14- Pregunta: ¿Qué representa un Tag en la Gestión de la Configuración?",
+    "opciones": [
+      "A. Una etiqueta inmutable que identifica de forma única una versión exacta del software en cada repositorio.",
+      "B. Un conjunto de herramientas que permiten automatizar la construcción del sistema.",
+      "C. Un identificador temporal que cambia cada vez que se modifica el código fuente.",
+      "D. Un documento donde se registran todas las peticiones de cambio pendientes."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "BC05-L31-Q23- Pregunta: ¿Qué evalúa la familia de normas ISO 33000?:",
+    "opciones": [
+      "A. El tiempo de respuesta de las aplicaciones.",
+      "B. Solo el rendimiento del producto final.",
+      "C. La evaluación de la capacidad y madurez de los procesos.",
+      "D. La calidad estética del software."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "B02-L32-Q15- Pregunta: ¿Cuál de los siguientes elementos se considera un Modelo de Evaluación?",
+    "opciones": [
+      "A. MMIS 2.0.",
+      "B. ISO/IEC 12207.",
+      "C. ISO/IEC 33000.",
+      "D. CMMI-SVC."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "B03-L41-Q09- Pregunta: ¿En cuantos niveles se puede decir que se separa el modelo en V del testing?:",
+    "opciones": [
+      "A. 6, los 6 niveles de testing que hay.",
+      "B. 4, los niveles de diseño y sus correspondientes tests además del coding.",
+      "C. 2, diseño y testing.",
+      "D. Todo los tests están al mismo nivel."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "3C7-L3-Q23- Pregunta: ¿Cuál de los siguientes modelos de evaluación de procesos está orientado específicamente a PYMEs y pequeños grupos de desarrollo?",
+    "opciones": [
+      "A. MMIS 2.0 AENOR-AQCLab.",
+      "B. ISO/IEC 33000.",
+      "C. ISO/IEC 25040.",
+      "D. CMMI-DEV."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "B05-L11-Q05- Pregunta: ¿Qué es un proceso dentro de un ciclo de vida?",
+    "opciones": [
+      "A. Producto utilizado como entrada o generado como salida.",
+      "B. Una instancia en ejecución de un programa.",
+      "C. Un conjunto de actividades que se suceden siguiendo una ordenación temporal.",
+      "D. Una acción que transforma entradas en salidas."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "BC3-L41-Q15- Pregunta: ¿Qué nivel de prueba se centra en probar clases o métodos de forma aislada?:",
+    "opciones": [
+      "A. Pruebas Unitarias.",
+      "B. Pruebas de Integración.",
+      "C. Pruebas de Aceptación.",
+      "D. Pruebas de Sistema."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "BC05-L31-Q28- Pregunta: ¿Qué diferencia principal hay entre evaluar por capacidad y por madurez?:",
+    "opciones": [
+      "A. La primera analiza procesos individuales; la segunda, el conjunto de la organización.",
+      "B. No hay diferencias entre ambas.",
+      "C. La evaluación por madurez se centra en el producto.",
+      "D. La evaluación por capacidad ignora los resultados."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "3C1-L12-Q10- Pregunta: ¿Qué factores deben tenerse en cuenta para determinar la prioridad de las historias de usuario?",
+    "opciones": [
+      "A. Pérdida y Coherencia.",
+      "B. Valor y Estimación.",
+      "C. Tiempo real y Objetivos.",
+      "D. Valor y Riesgos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "BC3-L41-Q17- Pregunta: ¿Cuál es el objetivo principal de las pruebas de mutación?:",
+    "opciones": [
+      "A. Garantizar que el sistema cumple los requisitos funcionales.",
+      "B. Encontrar errores de rendimiento.",
+      "C. Evaluar la calidad del conjunto de pruebas creado.",
+      "D. Reducir la cantidad de casos de prueba."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "3C1-L11-Q19- Pregunta: ¿Cuál es el objetivo principal de un modelo de referencia de procesos como ISO 12207 o IEEE 1074?",
+    "opciones": [
+      "A. Sustituir todos los modelos de ciclo de vida existentes.",
+      "B. Evitar cualquier tipo de documentación en los proyectos.",
+      "C. Generar automáticamente el código del sistema.",
+      "D. Servir como catálogo de buenas prácticas y guías de mejora."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "3C7-L21-Q10- Pregunta: ¿Qué es un Producto Mínimo Viable (MVP)?",
+    "opciones": [
+      "A. Es la versión definitiva del producto que se lanza tras la fase Beta.",
+      "B. Es una versión del producto con las características mínimas necesarias para comprobar que satisface los requisitos más importantes de los clientes.",
+      "C. Ninguna de las otras respuestas.",
+      "D. Es una versión preliminar del software creada solo para realizar pruebas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "B05-L3-Q16- Pregunta: ¿Cuál de los siguientes elementos NO forma parte de los artefactos necesarios para mejorar un proceso según el Tema 3.2?",
+    "opciones": [
+      "A. Modelos de referencia de procesos.",
+      "B. Modelos de mejora de procesos.",
+      "C. Diagramas UML de casos de uso.",
+      "D. Modelos de evaluación."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "BC05-L11-Q12- Pregunta: ¿Cuál de estas opciones NO son fases genéricas en el ciclo de vida del Software?",
+    "opciones": [
+      "A. Definición.",
+      "B. Implementación.",
+      "C. Despliegue y mantenimiento.",
+      "D. Desarrollo."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "3B7-L41-Q18- Pregunta: ¿Qué se entiende por “tarea destructiva” en la actividad de testing?:",
+    "opciones": [
+      "A. Intento de romper el código fuente deliberadamente.",
+      "B. Proceso de depuración interna del software.",
+      "C. Actividad centrada en encontrar fallos y no en confirmar que el sistema funciona bien.",
+      "D. Eliminación de test cases redundantes."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "BC3-L31-Q15- Pregunta: ¿Cuál es la diferencia principal entre Aseguramiento de la Calidad (QA) y Control de la Calidad (QC)?:",
+    "opciones": [
+      "A. QA se enfoca en el producto final y QC en el proceso.",
+      "B. QA es reactivo y QC es proactivo.",
+      "C. QA se realiza al final del proyecto y QC al inicio.",
+      "D. QA se orienta a proporcionar confianza en que se cumplirán los requisitos y QC se orienta al cumplimiento de los requisitos."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "B05-L3-Q21- Pregunta: ¿Cuál de las siguientes características pertenece a la dimensión de “Fiabilidad” según ISO 25010?",
+    "opciones": [
+      "A. Disponibilidad",
+      "B. Accesibilidad",
+      "C. Coexistencia",
+      "D. Modularidad"
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "BC3-L31-Q16- Pregunta: ¿Qué característica de calidad incluye sub-características como la modularidad, reusabilidad y la capacidad para ser probado?:",
+    "opciones": [
+      "A. Fiabilidad.",
+      "B. Portabilidad.",
+      "C. Mantenibilidad.",
+      "D. Adecuación Funcional."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "B02-L41-Q22- Pregunta: ¿Qué elemento determina si un programa se comporta adecuadamente para un conjunto de datos dado?",
+    "opciones": [
+      "A. El test suite.",
+      "B. El modelo en V.",
+      "C. El mutante.",
+      "D. El oráculo."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "BC05-L11-Q04- Pregunta: ¿Cuál NO es una característica deseable de una metodología?",
+    "opciones": [
+      "A. Existencia de reglas predefinidas.",
+      "B. Aplicación única.",
+      "C. Fácil formación.",
+      "D. Herramientas CASE."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "BC06-L21-Q05- Pregunta: ¿Qué significa el concepto de \"Semantic Versioning\" (X.Y.Z)?",
+    "opciones": [
+      "A. Es un sistema de control de versiones que solo tiene tres componentes: major, minor y patch.",
+      "B. Es un estándar que define la manera en que se etiquetan los elementos dentro del proceso de construcción.",
+      "C. Es una forma de nombrar las versiones que solo tiene en cuenta las fechas de lanzamiento.",
+      "D. Es un sistema para agrupar las versiones del software en 4 categorías."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "B02-L12-Q16- Pregunta: ¿Cuál de las siguientes es una tarea propia de la fase de construcción?:",
+    "opciones": [
+      "A. Realizar pruebas iniciales de viabilidad del proyecto.",
+      "B. Documentar los requisitos y especificaciones del producto.",
+      "C. Formar a los usuarios y corregir incidencias finales.",
+      "D. Crear versiones del producto final."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "3C1-L31-Q011- Pregunta: ¿Cuál de las siguientes opciones corresponde a una característica del concepto de calidad?",
+    "opciones": [
+      "A. La calidad depende solo de las especificaciones técnicas del fabricante.",
+      "B. Los criterios de calidad son completamente independientes entre sí.",
+      "C. La calidad es independiente de los criterios del usuario.",
+      "D. La calidad implica compromisos aceptables entre distintas dimensiones."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "3C1-L04-Q22- Pregunta: ¿Cuál es el propósito de un test suite?",
+    "opciones": [
+      "A. Generar automáticamente mutantes del código.",
+      "B. Organizar los requisitos del cliente.",
+      "C. Comprobar exclusivamente la interfaz gráfica.",
+      "D. Agrupar uno o más casos de prueba que comparten objetivo o datos."
+    ],
+    "solucion": "D"
   }
 ]
