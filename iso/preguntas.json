@@ -10140,7 +10140,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "3BC7-L11-Q14- Pregunta: A. Se adapta bien a proyectos donde los requisitos cambian constantemente.",
+    "cuestion": "3BC7-L11-Q14- Pregunta: ¿Cuál es una ventaja del Modelo en Cascada?:",
     "opciones": [
       "A. Se adapta bien a proyectos donde los requisitos cambian constantemente.",
       "B. Es útil en migraciones de software desde entornos tecnológicos obsoletos.",
@@ -10150,7 +10150,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "3BC7-L11-Q15- Pregunta: A. Requiere gestores especializados.",
+    "cuestion": "3BC7-L11-Q15- Pregunta: ¿Cuál es un inconveniente del Modelo Incremental?:",
     "opciones": [
       "A. Requiere gestores especializados.",
       "B. No permite entregar resultados parciales.",
@@ -10160,7 +10160,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "3BC7-L11-Q16- Pregunta: A. Obliga a definir todos los requisitos al inicio.",
+    "cuestion": "3BC7-L11-Q16- Pregunta: ¿Qué característica tiene la clave del Modelo en Espiral?:",
     "opciones": [
       "A. Obliga a definir todos los requisitos al inicio.",
       "B. Incorpora la evaluación de riesgos en cada ciclo.",
@@ -10170,7 +10170,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "3BC7-L11-Q17- Pregunta: A. Conjunto de metodologías que se suceden para dar resultado a un proceso global.",
+    "cuestion": "3BC7-L11-Q17- Pregunta: ¿Qué es un proceso?:",
     "opciones": [
       "A. Conjunto de metodologías que se suceden para dar resultado a un proceso global.",
       "B. Conjunto de actividades que se suceden siguiendo una ordenación temporal determinada.",
@@ -11900,7 +11900,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "B05-L4-Q16- Pregunta: A. Asignar exclusivamente valores dentro del rango de la clase de equivalencia.",
+    "cuestion": "B05-L4-Q16- Pregunta: A la hora de seleccionar valores para una clase de equivalencia, deberíamos buscar:",
     "opciones": [
       "A. Asignar exclusivamente valores dentro del rango de la clase de equivalencia.",
       "B. No asignar valores no esperados, pues podría fallar nuestro programa.",
@@ -11910,7 +11910,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "B05-L21-Q02- Pregunta: A. Release.",
+    "cuestion": "B05-L21-Q02- Pregunta: Al conjunto de software publicado de una aplicación, el cual puede contener únicamente una parte de la misma se le conoce como:",
     "opciones": [
       "A. Release.",
       "B. Branch.",
@@ -11920,7 +11920,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "B05-L21-Q04- Pregunta: A. Verdadera.",
+    "cuestion": "B05-L21-Q04- Pregunta: La afirmación \"GitHub es una de las herramientas de gestión de versiones más utilizadas y aceptadas hoy en día.\" es...:",
     "opciones": [
       "A. Verdadera.",
       "B. Falsa, la herramienta de gestión de versiones por excelencia es Maven.",
@@ -11930,7 +11930,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "B05-L21-Q06- Pregunta: A. Rama master.",
+    "cuestion": "B05-L21-Q06- Pregunta: En el proceso de ramificación, la rama principal con la revisión en desarrollo o mantenimiento se llama:",
     "opciones": [
       "A. Rama master.",
       "B. Rama de características.",
@@ -11940,7 +11940,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "B05-L21-Q07- Pregunta: A. Configuration Management Plan.",
+    "cuestion": "B05-L21-Q07- Pregunta: El documento que establece los elementos necesarios para ejercer la gestión de configuración lo llamamos:",
     "opciones": [
       "A. Configuration Management Plan.",
       "B. Codeline.",
