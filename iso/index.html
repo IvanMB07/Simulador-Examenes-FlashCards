@@ -908,6 +908,71 @@
 
         const gestorFallos = new GestorFallos();
 
+        // Sistema de historial de preguntas recientes
+        class GestorHistorial {
+            constructor() {
+                this.maxHistorial = 150; // Guardar las últimas 150 preguntas vistas
+                this.cargarHistorial();
+            }
+
+            cargarHistorial() {
+                try {
+                    const data = localStorage.getItem(this.getStorageKey());
+                    this.historial = data ? JSON.parse(data) : [];
+                } catch (e) {
+                    this.historial = [];
+                }
+            }
+
+            guardarHistorial() {
+                try {
+                    localStorage.setItem(this.getStorageKey(), JSON.stringify(this.historial));
+                } catch (e) {
+                    console.error('Error al guardar historial:', e);
+                }
+            }
+
+            getStorageKey() {
+                const perfilActual = (typeof configuracion !== 'undefined' && configuracion.get('perfilActual')) || 'default';
+                return `historialPreguntas:perfil:${perfilActual}`;
+            }
+
+            cambiarUsuario() {
+                this.cargarHistorial();
+            }
+
+            registrarPreguntas(preguntas) {
+                // Agregar nuevas preguntas al historial
+                const cuestiones = preguntas.map(p => p.cuestion);
+                this.historial.push(...cuestiones);
+                
+                // Mantener solo las últimas N preguntas
+                if (this.historial.length > this.maxHistorial) {
+                    this.historial = this.historial.slice(-this.maxHistorial);
+                }
+                
+                this.guardarHistorial();
+            }
+
+            estáEnHistorial(pregunta) {
+                return this.historial.includes(pregunta.cuestion);
+            }
+
+            obtenerPrioridad(pregunta) {
+                // Retorna un valor de prioridad (0 = más reciente, mayor = más antigua)
+                const indice = this.historial.lastIndexOf(pregunta.cuestion);
+                if (indice === -1) return Infinity; // No está en historial = máxima prioridad
+                return this.historial.length - indice; // Cuanto mayor, más tiempo sin ver
+            }
+
+            limpiarHistorial() {
+                this.historial = [];
+                this.guardarHistorial();
+            }
+        }
+
+        const gestorHistorial = new GestorHistorial();
+
         // Sistema de configuración
         class ConfiguracionApp {
             constructor() {
@@ -984,6 +1049,11 @@
                 this.detenerTiempo();
                 this.bloqueadoPorTiempo = false;
                 this.erroresDelTest = [];
+                
+                // Registrar preguntas del test anterior en el historial (si había)
+                if (this.preguntas && this.preguntas.length > 0) {
+                    gestorHistorial.registrarPreguntas(this.preguntas);
+                }
 
                 if (this.modo === 'examen') {
                     // Modo examen: siempre 50 preguntas, 10 de cada uno de los 5 temas
@@ -1217,7 +1287,54 @@
             }
 
             sample(array, n) {
-                return this.barajar(array).slice(0, n);
+                if (array.length <= n) {
+                    return this.barajar(array);
+                }
+
+                // Dividir preguntas en 3 grupos según historial
+                const noVistas = [];
+                const vistasAntiguas = [];
+                const vistasRecientes = [];
+                
+                const umbralReciente = 50; // Últimas 50 preguntas se consideran "recientes"
+                
+                for (const pregunta of array) {
+                    const prioridad = gestorHistorial.obtenerPrioridad(pregunta);
+                    
+                    if (prioridad === Infinity) {
+                        noVistas.push(pregunta);
+                    } else if (prioridad > umbralReciente) {
+                        vistasAntiguas.push(pregunta);
+                    } else {
+                        vistasRecientes.push(pregunta);
+                    }
+                }
+                
+                // Estrategia de selección: priorizar no vistas, luego antiguas, luego recientes
+                const seleccion = [];
+                
+                // 1. Tomar de no vistas
+                const deNoVistas = Math.min(noVistas.length, n);
+                seleccion.push(...this.barajar(noVistas).slice(0, deNoVistas));
+                
+                // 2. Si faltan, tomar de antiguas
+                if (seleccion.length < n && vistasAntiguas.length > 0) {
+                    const faltan = n - seleccion.length;
+                    const deAntiguas = Math.min(vistasAntiguas.length, faltan);
+                    seleccion.push(...this.barajar(vistasAntiguas).slice(0, deAntiguas));
+                }
+                
+                // 3. Si aún faltan, tomar de recientes (pero las menos recientes primero)
+                if (seleccion.length < n && vistasRecientes.length > 0) {
+                    const faltan = n - seleccion.length;
+                    // Ordenar por prioridad descendente (menos recientes primero)
+                    vistasRecientes.sort((a, b) => 
+                        gestorHistorial.obtenerPrioridad(b) - gestorHistorial.obtenerPrioridad(a)
+                    );
+                    seleccion.push(...vistasRecientes.slice(0, faltan));
+                }
+                
+                return this.barajar(seleccion).slice(0, n);
             }
 
             seleccionarPreguntasExamen() {
@@ -1856,6 +1973,7 @@
             
             // Cambiar al nuevo perfil
             gestorFallos.cambiarUsuario();
+            gestorHistorial.cambiarUsuario();
             cargarPerfiles();
             actualizarContadorFallos();
         }
@@ -1869,6 +1987,7 @@
             
             // Recargar los fallos del nuevo perfil
             gestorFallos.cambiarUsuario();
+            gestorHistorial.cambiarUsuario();
             cargarPerfiles();
             actualizarContadorFallos();
         }
@@ -1894,6 +2013,7 @@
             // Volver al perfil default
             configuracion.set('perfilActual', 'default');
             gestorFallos.cambiarUsuario();
+            gestorHistorial.cambiarUsuario();
             cargarPerfiles();
             actualizarContadorFallos();
         }
