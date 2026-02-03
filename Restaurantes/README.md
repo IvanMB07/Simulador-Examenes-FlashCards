@@ -14,7 +14,6 @@ Una aplicación web minimalista para llevar un registro completo de los restaura
 ### Campos Disponibles
 - **Nombre**: Nombre del restaurante (campo obligatorio)
 - **Ubicación**: Dirección o ubicación del local
-- **Fotos**: Subir imágenes del restaurante
 - **Tipo**: Buffet, Restaurante, Cafetería/Pastelería, Comida Rápida, To Good to go, o personalizado
 - **Subtipo**: Sushi/Japo, Español, Desayuno, Merienda, Tailandés, Cena, Hamburguesa, Pizza, Italiano, Mexicano, Comida, o personalizado
 

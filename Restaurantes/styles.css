@@ -283,22 +283,6 @@ textarea:focus {
     font-size: 1.5em;
 }
 
-/* FOTOS */
-.photo-preview {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-top: 10px;
-}
-
-.photo-preview img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 10px;
-    border: 2px solid var(--turquoise);
-}
-
 /* BOTONES */
 .form-actions {
     display: flex;

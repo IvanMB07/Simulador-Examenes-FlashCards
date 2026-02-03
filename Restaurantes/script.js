@@ -63,7 +63,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     setupStarRatings();
     setupCustomSelects();
     setupForm();
-    setupPhotoUpload();
     listenFirebaseUpdates();
 });
 
@@ -211,7 +210,6 @@ function saveRestaurant() {
         id: editingId || Date.now(),
         name: document.getElementById('name').value,
         location: document.getElementById('location').value,
-        photos: [], // Las fotos se manejarían con más complejidad en producción
         type: typeSelect.value === 'custom' ? typeCustom.value : typeSelect.value,
         subtype: subtypeSelect.value === 'custom' ? subtypeCustom.value : subtypeSelect.value,
         quality: parseFloat(document.getElementById('quality').value) || 0,
@@ -439,24 +437,3 @@ function deleteRestaurant(id) {
 document.getElementById('search').addEventListener('input', (e) => {
     renderRestaurants(e.target.value);
 });
-
-// MANEJO DE FOTOS (básico)
-function setupPhotoUpload() {
-    const photoInput = document.getElementById('photos');
-    const photoPreview = document.getElementById('photo-preview');
-    
-    photoInput.addEventListener('change', (e) => {
-        photoPreview.innerHTML = '';
-        const files = Array.from(e.target.files);
-        
-        files.forEach(file => {
-            const reader = new FileReader();
-            reader.onload = (event) => {
-                const img = document.createElement('img');
-                img.src = event.target.result;
-                photoPreview.appendChild(img);
-            };
-            reader.readAsDataURL(file);
-        });
-    });
-}
