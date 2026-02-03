@@ -1,0 +1,549 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --orange: #FF8C42;
+    --dark-orange: #FF6B35;
+    --turquoise: #4ECDC4;
+    --dark-turquoise: #44A6A0;
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #2d2d2d;
+    --bg-tertiary: #3d3d3d;
+    --white: #FFFFFF;
+    --text-dark: #e0e0e0;
+    --text-light: #a0a0a0;
+    --shadow: rgba(0, 0, 0, 0.4);
+    --border-color: #4a4a4a;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+    color: var(--text-dark);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(135deg, var(--orange) 0%, var(--dark-orange) 100%);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px var(--shadow);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: var(--white);
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+/* TABS */
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tab {
+    background: var(--bg-secondary);
+    border: 2px solid var(--turquoise);
+    padding: 15px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--turquoise);
+    transition: all 0.3s ease;
+}
+
+.tab:hover {
+    background: linear-gradient(135deg, var(--bg-tertiary) 0%, #2a2a2a 100%);
+    color: var(--turquoise);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px var(--shadow);
+}
+
+.tab.active {
+    background: linear-gradient(135deg, var(--turquoise) 0%, #3a9d96 100%);
+    color: var(--white);
+    box-shadow: 0 0 20px rgba(78, 205, 196, 0.4);
+}
+
+/* SECTIONS */
+.section {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.section.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* FORMULARIO */
+#restaurant-form {
+    background: var(--bg-secondary);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px var(--shadow);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 1em;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    background: var(--bg-tertiary);
+    color: var(--text-dark);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--turquoise);
+    background: var(--bg-secondary);
+}
+
+.custom-input {
+    margin-top: 10px;
+}
+
+/* ESTRELLAS */
+.ratings-section {
+    background: linear-gradient(135deg, var(--bg-tertiary) 0%, #1a1a1a 100%);
+    padding: 25px;
+    border-radius: 15px;
+    margin: 30px 0;
+}
+
+.ratings-section h3 {
+    color: var(--orange);
+    margin-bottom: 20px;
+    font-size: 1.4em;
+}
+
+.rating-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: var(--bg-secondary);
+    border-radius: 10px;
+}
+
+.rating-group label {
+    margin: 0;
+    min-width: 120px;
+}
+
+.stars {
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.star {
+    font-size: 2em;
+    color: #555;
+    transition: all 0.2s ease;
+    user-select: none;
+    position: relative;
+}
+
+.star.half {
+    background: linear-gradient(90deg, var(--orange) 50%, #555 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.star.active {
+    color: var(--orange);
+}
+
+.star:hover {
+    transform: scale(1.1);
+}
+
+.stars.large .star {
+    font-size: 3em;
+}
+
+/* PUNTUACIÓN TOTAL */
+.total-score-section {
+    background: linear-gradient(135deg, var(--turquoise) 0%, var(--dark-turquoise) 100%);
+    padding: 30px;
+    border-radius: 15px;
+    margin: 30px 0;
+    box-shadow: 0 8px 20px rgba(78, 205, 196, 0.4);
+}
+
+.total-score-section h3 {
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.6em;
+}
+
+.total-score-section .rating-group {
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.total-score-section .star {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.total-score-section .star.half {
+    background: linear-gradient(90deg, var(--orange) 50%, rgba(255, 255, 255, 0.3) 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.total-score-section .star.active {
+    color: var(--orange);
+}
+
+.total-score-section .star:hover {
+    color: var(--orange);
+}
+
+/* VOLVER */
+.return-options {
+    display: flex;
+    gap: 20px;
+}
+
+.return-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: var(--bg-tertiary);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.return-option:hover {
+    background: linear-gradient(135deg, var(--turquoise) 0%, #3a9d96 100%);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(78, 205, 196, 0.3);
+}
+
+.return-option input[type="radio"] {
+    width: auto;
+}
+
+.emoji {
+    font-size: 1.5em;
+}
+
+/* FOTOS */
+.photo-preview {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.photo-preview img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid var(--turquoise);
+}
+
+/* BOTONES */
+.form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn {
+    flex: 1;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--turquoise) 0%, var(--dark-turquoise) 100%);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(78, 205, 196, 0.5);
+}
+
+.btn-secondary {
+    background: var(--bg-tertiary);
+    color: var(--text-dark);
+    display: none;
+    border: 2px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, #1a1a1a 100%);
+    border-color: var(--turquoise);
+    box-shadow: 0 4px 10px rgba(78, 205, 196, 0.2);
+}
+
+/* LISTA DE RESTAURANTES */
+.search-bar {
+    margin-bottom: 30px;
+}
+
+#search {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 1.1em;
+    border: 2px solid var(--turquoise);
+    border-radius: 50px;
+    background: var(--bg-secondary);
+    color: var(--text-dark);
+}
+
+.restaurants-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 25px;
+}
+
+.restaurant-card {
+    background: var(--bg-secondary);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 4px 15px var(--shadow);
+    transition: all 0.3s ease;
+    position: relative;
+    border: 1px solid var(--border-color);
+}
+
+.restaurant-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px var(--shadow);
+}
+
+.restaurant-card h3 {
+    color: var(--orange);
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.restaurant-card .location {
+    color: var(--text-light);
+    margin-bottom: 10px;
+}
+
+.restaurant-card .type-badges {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.badge {
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.badge-type {
+    background: linear-gradient(135deg, var(--turquoise) 0%, var(--dark-turquoise) 100%);
+    color: var(--white);
+}
+
+.badge-subtype {
+    background: linear-gradient(135deg, var(--orange) 0%, var(--dark-orange) 100%);
+    color: var(--white);
+}
+
+.restaurant-card .ratings {
+    margin: 15px 0;
+    padding: 15px;
+    background: var(--bg-tertiary);
+    border-radius: 10px;
+}
+
+.rating-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 0.9em;
+}
+
+.rating-item .stars-display {
+    color: var(--orange);
+}
+
+.total-rating {
+    background: linear-gradient(135deg, var(--orange) 0%, var(--dark-orange) 100%);
+    color: var(--white);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 15px 0;
+    font-size: 1.2em;
+}
+
+.total-rating .stars-display {
+    color: var(--white);
+    font-size: 1.5em;
+}
+
+.restaurant-card .info-item {
+    margin: 10px 0;
+    font-size: 0.9em;
+}
+
+.restaurant-card .notes {
+    background: var(--bg-tertiary);
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px 0;
+    font-style: italic;
+    color: var(--text-light);
+    border-left: 3px solid var(--orange);
+}
+
+.card-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn-edit,
+.btn-delete {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-edit {
+    background: var(--turquoise);
+    color: var(--white);
+}
+
+.btn-edit:hover {
+    background: linear-gradient(135deg, var(--turquoise) 0%, #3a9d96 100%);
+    box-shadow: 0 4px 15px rgba(78, 205, 196, 0.4);
+}
+
+.btn-delete {
+    background: #E74C3C;
+    color: var(--white);
+}
+
+.btn-delete:hover {
+    background: #C0392B;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-light);
+}
+
+.empty-state h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .restaurants-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #restaurant-form {
+        padding: 20px;
+    }
+
+    .stars .star {
+        font-size: 1.5em;
+    }
+
+    .stars.large .star {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .tab {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    .return-options {
+        flex-direction: column;
+    }
+}

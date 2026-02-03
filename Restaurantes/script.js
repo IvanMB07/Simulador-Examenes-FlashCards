@@ -1,0 +1,462 @@
+// Base de datos de restaurantes
+let restaurants = [];
+let editingId = null;
+let useFirebase = false;
+
+function initStorage() {
+    useFirebase = Boolean(window.firebaseDB && window.firebaseRef);
+}
+
+async function loadRestaurants() {
+    if (useFirebase) {
+        try {
+            const dbRef = window.firebaseRef(window.firebaseDB, 'restaurants');
+            const snapshot = await window.firebaseGet(dbRef);
+            if (snapshot.exists()) {
+                const data = snapshot.val();
+                restaurants = Object.values(data);
+            } else {
+                restaurants = [];
+            }
+        } catch (error) {
+            console.warn('Firebase no disponible, usando localStorage');
+            restaurants = JSON.parse(localStorage.getItem('restaurants')) || [];
+        }
+    } else {
+        restaurants = JSON.parse(localStorage.getItem('restaurants')) || [];
+    }
+    renderRestaurants();
+}
+
+async function saveRestaurantsToStorage() {
+    if (useFirebase) {
+        const dbRef = window.firebaseRef(window.firebaseDB, 'restaurants');
+        const data = {};
+        restaurants.forEach(r => {
+            data[r.id] = r;
+        });
+        await window.firebaseSet(dbRef, data);
+    } else {
+        localStorage.setItem('restaurants', JSON.stringify(restaurants));
+    }
+}
+
+function listenFirebaseUpdates() {
+    if (!useFirebase) return;
+    const dbRef = window.firebaseRef(window.firebaseDB, 'restaurants');
+    window.firebaseOnValue(dbRef, (snapshot) => {
+        if (snapshot.exists()) {
+            const data = snapshot.val();
+            restaurants = Object.values(data);
+        } else {
+            restaurants = [];
+        }
+        renderRestaurants();
+    });
+}
+
+// Inicializar la aplicación
+document.addEventListener('DOMContentLoaded', async () => {
+    initStorage();
+    await loadRestaurants();
+    setupTabs();
+    setupStarRatings();
+    setupCustomSelects();
+    setupForm();
+    setupPhotoUpload();
+    listenFirebaseUpdates();
+});
+
+// TABS
+function setupTabs() {
+    const tabs = document.querySelectorAll('.tab');
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const targetTab = tab.dataset.tab;
+            
+            // Cambiar tab activa
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            
+            // Cambiar sección activa
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(`${targetTab}-section`).classList.add('active');
+        });
+    });
+}
+
+// SISTEMA DE ESTRELLAS
+function setupStarRatings() {
+    const starContainers = document.querySelectorAll('.stars');
+    
+    starContainers.forEach(container => {
+        const stars = container.querySelectorAll('.star');
+        const ratingName = container.dataset.rating;
+        const hiddenInput = document.getElementById(ratingName);
+        
+        stars.forEach((star, index) => {
+            star.addEventListener('click', (e) => {
+                const rect = star.getBoundingClientRect();
+                const clickX = e.clientX - rect.left;
+                const starWidth = rect.width;
+                
+                // Detectar si el click es en la mitad izquierda o derecha
+                let value;
+                if (clickX < starWidth / 2) {
+                    // Mitad izquierda - dar medio punto
+                    value = index + 0.5;
+                } else {
+                    // Mitad derecha - dar punto completo
+                    value = index + 1;
+                }
+                
+                hiddenInput.value = value;
+                updateStarDisplay(stars, value);
+            });
+            
+            star.addEventListener('mousemove', (e) => {
+                const rect = star.getBoundingClientRect();
+                const clickX = e.clientX - rect.left;
+                const starWidth = rect.width;
+                
+                let value;
+                if (clickX < starWidth / 2) {
+                    value = index + 0.5;
+                } else {
+                    value = index + 1;
+                }
+                
+                updateStarDisplay(stars, value);
+            });
+        });
+        
+        container.addEventListener('mouseleave', () => {
+            const currentValue = parseFloat(hiddenInput.value) || 0;
+            updateStarDisplay(stars, currentValue);
+        });
+    });
+}
+
+// Actualizar visualización de estrellas (soporta medias estrellas)
+function updateStarDisplay(stars, value) {
+    stars.forEach((star, index) => {
+        const fullValue = index + 1;
+        const halfValue = index + 0.5;
+        
+        star.classList.remove('active', 'half');
+        
+        if (value >= fullValue) {
+            star.classList.add('active');
+        } else if (value >= halfValue) {
+            star.classList.add('half');
+        }
+    });
+}
+
+// SELECTORES PERSONALIZADOS
+function setupCustomSelects() {
+    const typeSelect = document.getElementById('type');
+    const typeCustom = document.getElementById('type-custom');
+    const subtypeSelect = document.getElementById('subtype');
+    const subtypeCustom = document.getElementById('subtype-custom');
+    
+    typeSelect.addEventListener('change', () => {
+        if (typeSelect.value === 'custom') {
+            typeCustom.style.display = 'block';
+            typeCustom.required = true;
+        } else {
+            typeCustom.style.display = 'none';
+            typeCustom.required = false;
+            typeCustom.value = '';
+        }
+    });
+    
+    subtypeSelect.addEventListener('change', () => {
+        if (subtypeSelect.value === 'custom') {
+            subtypeCustom.style.display = 'block';
+            subtypeCustom.required = true;
+        } else {
+            subtypeCustom.style.display = 'none';
+            subtypeCustom.required = false;
+            subtypeCustom.value = '';
+        }
+    });
+}
+
+// FORMULARIO
+function setupForm() {
+    const form = document.getElementById('restaurant-form');
+    const cancelBtn = document.getElementById('cancel-edit');
+    
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        saveRestaurant();
+    });
+    
+    cancelBtn.addEventListener('click', () => {
+        resetForm();
+    });
+}
+
+// GUARDAR RESTAURANTE
+function saveRestaurant() {
+    const typeSelect = document.getElementById('type');
+    const typeCustom = document.getElementById('type-custom');
+    const subtypeSelect = document.getElementById('subtype');
+    const subtypeCustom = document.getElementById('subtype-custom');
+    
+    const restaurant = {
+        id: editingId || Date.now(),
+        name: document.getElementById('name').value,
+        location: document.getElementById('location').value,
+        photos: [], // Las fotos se manejarían con más complejidad en producción
+        type: typeSelect.value === 'custom' ? typeCustom.value : typeSelect.value,
+        subtype: subtypeSelect.value === 'custom' ? subtypeCustom.value : subtypeSelect.value,
+        quality: parseFloat(document.getElementById('quality').value) || 0,
+        quantity: parseFloat(document.getElementById('quantity').value) || 0,
+        variety: parseFloat(document.getElementById('variety').value) || 0,
+        aesthetics: parseFloat(document.getElementById('aesthetics').value) || 0,
+        service: parseFloat(document.getElementById('service').value) || 0,
+        qualityPrice: parseFloat(document.getElementById('quality-price').value) || 0,
+        returnVisit: document.querySelector('input[name="return"]:checked')?.value || '',
+        timesVisited: parseInt(document.getElementById('times-visited').value) || 0,
+        totalScore: parseFloat(document.getElementById('total-score').value) || 0,
+        notes: document.getElementById('notes').value,
+        reservation: document.getElementById('reservation').value
+    };
+    
+    if (editingId) {
+        // Editar restaurante existente
+        const index = restaurants.findIndex(r => r.id === editingId);
+        restaurants[index] = restaurant;
+    } else {
+        // Agregar nuevo restaurante
+        restaurants.push(restaurant);
+    }
+    
+    // Guardar en Firebase o localStorage
+    saveRestaurantsToStorage();
+    
+    // Resetear formulario y mostrar lista
+    resetForm();
+    document.querySelector('[data-tab="list"]').click();
+    renderRestaurants();
+}
+
+// RESETEAR FORMULARIO
+function resetForm() {
+    document.getElementById('restaurant-form').reset();
+    document.getElementById('edit-id').value = '';
+    editingId = null;
+    
+    // Resetear estrellas
+    document.querySelectorAll('.star').forEach(star => {
+        star.classList.remove('active', 'half');
+    });
+    document.querySelectorAll('.stars + input[type="hidden"]').forEach(input => {
+        input.value = '0';
+    });
+    
+    // Ocultar campos custom
+    document.getElementById('type-custom').style.display = 'none';
+    document.getElementById('subtype-custom').style.display = 'none';
+    
+    // Ocultar botón cancelar
+    document.getElementById('cancel-edit').style.display = 'none';
+}
+
+// RENDERIZAR RESTAURANTES
+function renderRestaurants(filter = '') {
+    const container = document.getElementById('restaurants-list');
+    const filteredRestaurants = restaurants.filter(r => 
+        r.name.toLowerCase().includes(filter.toLowerCase())
+    );
+    
+    if (filteredRestaurants.length === 0) {
+        container.innerHTML = `
+            <div class="empty-state">
+                <h3>🍽️</h3>
+                <p>No hay restaurantes registrados aún.</p>
+                <p>¡Añade tu primer restaurante!</p>
+            </div>
+        `;
+        return;
+    }
+    
+    container.innerHTML = filteredRestaurants.map(restaurant => `
+        <div class="restaurant-card">
+            <h3>${restaurant.name}</h3>
+            ${restaurant.location ? `<p class="location">📍 ${restaurant.location}</p>` : ''}
+            
+            <div class="type-badges">
+                ${restaurant.type ? `<span class="badge badge-type">${restaurant.type}</span>` : ''}
+                ${restaurant.subtype ? `<span class="badge badge-subtype">${restaurant.subtype}</span>` : ''}
+            </div>
+            
+            <div class="total-rating">
+                <div>Puntuación Total</div>
+                <div class="stars-display">${renderStars(restaurant.totalScore)}</div>
+            </div>
+            
+            <div class="ratings">
+                ${renderRatingItem('Calidad', restaurant.quality)}
+                ${renderRatingItem('Cantidad', restaurant.quantity)}
+                ${renderRatingItem('Variedad', restaurant.variety)}
+                ${renderRatingItem('Estética', restaurant.aesthetics)}
+                ${renderRatingItem('Servicio', restaurant.service)}
+                ${renderRatingItem('Calidad/Precio', restaurant.qualityPrice)}
+            </div>
+            
+            <div class="info-item">
+                <strong>¿Volveríamos?</strong> 
+                ${restaurant.returnVisit === 'yes' ? '✅ Sí' : restaurant.returnVisit === 'no' ? '❌ No' : '-'}
+            </div>
+            
+            <div class="info-item">
+                <strong>Veces visitado:</strong> ${restaurant.timesVisited}
+            </div>
+            
+            ${restaurant.notes ? `<div class="notes">💭 ${restaurant.notes}</div>` : ''}
+            
+            ${restaurant.reservation ? `<div class="info-item">📞 ${restaurant.reservation}</div>` : ''}
+            
+            <div class="card-actions">
+                <button class="btn-edit" onclick="editRestaurant(${restaurant.id})">✏️ Editar</button>
+                <button class="btn-delete" onclick="deleteRestaurant(${restaurant.id})">🗑️ Eliminar</button>
+            </div>
+        </div>
+    `).join('');
+}
+
+// RENDERIZAR ESTRELLAS
+function renderStars(rating) {
+    let stars = '';
+    const fullStars = Math.floor(rating);
+    const hasHalfStar = (rating % 1) >= 0.5;
+    
+    for (let i = 1; i <= 5; i++) {
+        if (i <= fullStars) {
+            stars += '★'; // Estrella llena
+        } else if (i === fullStars + 1 && hasHalfStar) {
+            stars += '½★'; // Media estrella
+        } else {
+            stars += '☆'; // Estrella vacía
+        }
+    }
+    return stars;
+}
+
+// RENDERIZAR ITEM DE VALORACIÓN
+function renderRatingItem(label, value) {
+    if (value === 0) return '';
+    return `
+        <div class="rating-item">
+            <span>${label}</span>
+            <span class="stars-display">${renderStars(value)}</span>
+        </div>
+    `;
+}
+
+// EDITAR RESTAURANTE
+function editRestaurant(id) {
+    const restaurant = restaurants.find(r => r.id === id);
+    if (!restaurant) return;
+    
+    editingId = id;
+    
+    // Llenar formulario
+    document.getElementById('name').value = restaurant.name;
+    document.getElementById('location').value = restaurant.location || '';
+    
+    // Tipo y Subtipo
+    const typeSelect = document.getElementById('type');
+    const typeOptions = Array.from(typeSelect.options).map(o => o.value);
+    if (typeOptions.includes(restaurant.type)) {
+        typeSelect.value = restaurant.type;
+    } else if (restaurant.type) {
+        typeSelect.value = 'custom';
+        document.getElementById('type-custom').style.display = 'block';
+        document.getElementById('type-custom').value = restaurant.type;
+    }
+    
+    const subtypeSelect = document.getElementById('subtype');
+    const subtypeOptions = Array.from(subtypeSelect.options).map(o => o.value);
+    if (subtypeOptions.includes(restaurant.subtype)) {
+        subtypeSelect.value = restaurant.subtype;
+    } else if (restaurant.subtype) {
+        subtypeSelect.value = 'custom';
+        document.getElementById('subtype-custom').style.display = 'block';
+        document.getElementById('subtype-custom').value = restaurant.subtype;
+    }
+    
+    // Valoraciones
+    setStarRating('quality', restaurant.quality);
+    setStarRating('quantity', restaurant.quantity);
+    setStarRating('variety', restaurant.variety);
+    setStarRating('aesthetics', restaurant.aesthetics);
+    setStarRating('service', restaurant.service);
+    setStarRating('quality-price', restaurant.qualityPrice);
+    setStarRating('total-score', restaurant.totalScore);
+    
+    // Volver
+    if (restaurant.returnVisit) {
+        document.querySelector(`input[name="return"][value="${restaurant.returnVisit}"]`).checked = true;
+    }
+    
+    document.getElementById('times-visited').value = restaurant.timesVisited;
+    document.getElementById('notes').value = restaurant.notes || '';
+    document.getElementById('reservation').value = restaurant.reservation || '';
+    
+    // Mostrar botón cancelar
+    document.getElementById('cancel-edit').style.display = 'block';
+    
+    // Cambiar a tab de formulario
+    document.querySelector('[data-tab="form"]').click();
+}
+
+// ESTABLECER VALORACIÓN DE ESTRELLAS
+function setStarRating(ratingName, value) {
+    const input = document.getElementById(ratingName);
+    input.value = value;
+    
+    const container = document.querySelector(`[data-rating="${ratingName}"]`);
+    const stars = container.querySelectorAll('.star');
+    updateStarDisplay(stars, value);
+}
+
+// ELIMINAR RESTAURANTE
+function deleteRestaurant(id) {
+    if (!confirm('¿Estás seguro de que quieres eliminar este restaurante?')) return;
+    
+    restaurants = restaurants.filter(r => r.id !== id);
+    saveRestaurantsToStorage();
+    renderRestaurants();
+}
+
+// BÚSQUEDA
+document.getElementById('search').addEventListener('input', (e) => {
+    renderRestaurants(e.target.value);
+});
+
+// MANEJO DE FOTOS (básico)
+function setupPhotoUpload() {
+    const photoInput = document.getElementById('photos');
+    const photoPreview = document.getElementById('photo-preview');
+    
+    photoInput.addEventListener('change', (e) => {
+        photoPreview.innerHTML = '';
+        const files = Array.from(e.target.files);
+        
+        files.forEach(file => {
+            const reader = new FileReader();
+            reader.onload = (event) => {
+                const img = document.createElement('img');
+                img.src = event.target.result;
+                photoPreview.appendChild(img);
+            };
+            reader.readAsDataURL(file);
+        });
+    });
+}
