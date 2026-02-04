@@ -101,9 +101,14 @@ function setupStarRatings() {
         const ratingName = container.dataset.rating;
         const hiddenInput = document.getElementById(ratingName);
         
+        // Si no es un input de formulario (es decir, solo visualización), saltar listeners
+        if (!hiddenInput) return;
+
         stars.forEach((star, index) => {
             star.addEventListener('click', (e) => {
-                const rect = star.getBoundingClientRect();
+                // En SVG el click target puede ser path o svg, aseguramos obtener el SVG
+                const svgEl = star.closest('svg');
+                const rect = svgEl.getBoundingClientRect();
                 const clickX = e.clientX - rect.left;
                 const starWidth = rect.width;
                 
@@ -122,7 +127,8 @@ function setupStarRatings() {
             });
             
             star.addEventListener('mousemove', (e) => {
-                const rect = star.getBoundingClientRect();
+                const svgEl = star.closest('svg');
+                const rect = svgEl.getBoundingClientRect();
                 const clickX = e.clientX - rect.left;
                 const starWidth = rect.width;
                 
@@ -320,7 +326,7 @@ function renderRestaurants(filter = '') {
                 </div>
                 <div class="total-rating">
                     <div>Puntuación Total</div>
-                    <div class="stars-display">${renderStars(restaurant.totalScore)}</div>
+                    <div>${renderStars(restaurant.totalScore)}</div>
                 </div>
                 <div class="ratings">
                     ${renderRatingItem('Calidad', restaurant.quality)}
@@ -370,7 +376,7 @@ window.toggleOrder = function(id) {
     }
 };
 
-// RENDERIZAR ESTRELLAS
+// RENDERIZAR ESTRELLAS - Versión SVG
 function renderStars(rating) {
     let html = '';
     for (let i = 1; i <= 5; i++) {
@@ -383,9 +389,13 @@ function renderStars(rating) {
             starClass = 'half';
         }
         
-        html += `<span class="star ${starClass}">★</span>`;
+        // Usamos un icono SVG de estrella en lugar de un carácter de texto
+        html += `
+        <svg class="star ${starClass}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+        </svg>`;
     }
-    return html;
+    return `<div class="stars">${html}</div>`;
 }
 
 // RENDERIZAR ITEM DE VALORACIÓN
@@ -394,7 +404,7 @@ function renderRatingItem(label, value) {
     return `
         <div class="rating-item">
             <span>${label}</span>
-            <span class="stars-display">${renderStars(value)}</span>
+            ${renderStars(value)}
         </div>
     `;
 }

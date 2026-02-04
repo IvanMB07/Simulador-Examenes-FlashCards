@@ -17,6 +17,7 @@
     --text-light: #a0a0a0;
     --shadow: rgba(0, 0, 0, 0.4);
     --border-color: #4a4a4a;
+    --star-inactive: #c7c7c7; /* Color para las estrellas apagadas SVG */
 }
 
 body {
@@ -151,19 +152,7 @@ textarea:focus {
     margin-top: 10px;
 }
 
-/* ESTRELLAS */
-.ratings-section {
-    background: linear-gradient(135deg, var(--bg-tertiary) 0%, #1a1a1a 100%);
-    padding: 25px;
-    border-radius: 15px;
-    margin: 30px 0;
-}
-
-.ratings-section h3 {
-    color: var(--orange);
-    margin-bottom: 20px;
-    font-size: 1.4em;
-}
+/* ============ SISTEMA DE ESTRELLAS SVG (NUEVO Y DEFINITIVO) ============ */
 
 .rating-group {
     display: flex;
@@ -180,62 +169,59 @@ textarea:focus {
     min-width: 120px;
 }
 
+.ratings-section {
+    background: linear-gradient(135deg, var(--bg-tertiary) 0%, #1a1a1a 100%);
+    padding: 25px;
+    border-radius: 15px;
+    margin: 30px 0;
+}
+
+.ratings-section h3 {
+    color: var(--orange);
+    margin-bottom: 20px;
+    font-size: 1.4em;
+}
+
+/* Contenedor de la fila de estrellas */
 .stars {
     display: flex;
-    gap: 5px;
-    cursor: pointer;
-    --star-full: var(--orange);
-    --star-empty: #555;
-}
-
-/* Estrellas del formulario (Calidad/Cantidad/etc): tamaño uniforme + medias estrellas tipo "Puntuación Total" */
-.stars .star {
-    font-size: 2em;
-    color: var(--star-empty);
-    transition: filter 0.2s ease;
-    user-select: none;
-    position: relative;
-    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    width: 1em;
-    height: 1em;
-    line-height: 1;
+    gap: 4px; /* Espacio estándar entre estrellas */
 }
 
-.stars .star.half {
-    color: var(--star-empty);
+/* ESTRELLA BASE (SVG) */
+.star {
+    width: 28px;  /* Tamaño por defecto */
+    height: 28px; /* Tamaño por defecto */
+    fill: var(--star-inactive); /* Color base (apagado) */
+    transition: transform 0.2s ease, fill 0.2s ease;
 }
 
-.stars .star.half::before {
-    content: '★';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-    color: var(--star-full);
-    line-height: 1;
+/* Estrella Activa (Naranja) */
+.star.active {
+    fill: var(--orange);
 }
 
-.stars .star.active {
-    color: var(--star-full);
+/* Media Estrella (Usa el gradiente definido en el HTML) */
+.star.half {
+    fill: url(#half-star-gradient);
 }
 
-/* Sin cambios de tamaño al pasar el ratón */
-.stars .star:hover {
-    filter: brightness(1.08);
+/* --- Interactividad en el Formulario --- */
+.stars.form-stars .star {
+    cursor: pointer;
 }
 
-.stars.large .star {
-    font-size: 3em;
+.stars.form-stars .star:hover {
+    transform: scale(1.2); /* Efecto de aumento al pasar el ratón */
 }
 
-/* PUNTUACIÓN TOTAL */
+/* ============ TAMAÑOS SEGÚN EL CONTEXTO ============ */
+
+/* 1. Formulario: "Puntuación Total" (Caja turquesa) */
 .total-score-section {
     background: linear-gradient(135deg, var(--turquoise) 0%, var(--dark-turquoise) 100%);
-    padding: 30px;
+    padding: 40px;
     border-radius: 15px;
     margin: 30px 0;
     box-shadow: 0 8px 20px rgba(78, 205, 196, 0.4);
@@ -244,34 +230,78 @@ textarea:focus {
 .total-score-section h3 {
     color: var(--white);
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     font-size: 1.6em;
 }
 
 .total-score-section .rating-group {
+    display: flex;
+    align-items: center;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.1);
+    background: transparent;
+    padding: 0;
+    margin: 0;
 }
 
 .total-score-section .stars {
-    --star-full: var(--orange);
-    --star-empty: rgba(255, 255, 255, 0.3);
+    gap: 10px;
+    justify-content: center;
 }
 
 .total-score-section .star {
-    color: rgba(255, 255, 255, 0.3);
+    width: 48px; /* Muy grandes */
+    height: 48px;
 }
 
-.total-score-section .star.half {
-    color: var(--star-empty);
+/* Para la caja turquesa, las inactivas son semi-transparentes */
+.total-score-section .star:not(.active):not(.half) {
+    fill: rgba(255, 255, 255, 0.4);
 }
 
-.total-score-section .star.active {
-    color: var(--orange);
+/* 2. Tarjeta: "Puntuación Total" (Caja turquesa) */
+.total-rating {
+    background: linear-gradient(135deg, var(--turquoise) 0%, var(--dark-turquoise) 100%);
+    color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 15px 0;
+    font-size: 1.1em;
+    font-weight: 600;
 }
 
-.total-score-section .star:hover {
-    color: var(--orange);
+.total-rating .stars {
+    justify-content: center;
+}
+
+.total-rating .star {
+    width: 36px; /* Grandes */
+    height: 36px;
+}
+
+/* Para la caja turquesa, las inactivas son semi-transparentes */
+.total-rating .star:not(.active):not(.half) {
+    fill: rgba(255, 255, 255, 0.4);
+}
+
+/* 3. Tarjeta: Listado pequeño (Calidad, Cantidad, etc.) */
+.rating-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    font-size: 0.9em;
+}
+
+.rating-item span:first-child {
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.rating-item .star {
+    width: 22px; /* Pequeñas */
+    height: 22px;
 }
 
 /* VOLVER */
@@ -423,87 +453,6 @@ textarea:focus {
     padding: 15px;
     background: var(--bg-tertiary);
     border-radius: 10px;
-}
-
-.rating-item {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 12px;
-    font-size: 0.9em;
-}
-
-.rating-item span:first-child {
-    margin-bottom: 4px;
-    font-weight: 600;
-}
-
-.rating-item .stars-display {
-    letter-spacing: 2px;
-    font-size: 1.4em;
-}
-
-.rating-item .stars-display .star {
-    font-size: 1em;
-    width: 1em;
-    height: 1em;
-}
-
-/* Star styling for cards */
-.stars-display {
-    display: inline-flex;
-    gap: 3px;
-    align-items: center;
-    font-size: 1.4em;
-}
-
-.stars-display .star {
-    font-size: 1em;
-    color: #555;
-    line-height: 1;
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-}
-
-.stars-display .star.active {
-    color: var(--orange);
-}
-
-.stars-display .star.half {
-    background: linear-gradient(90deg, var(--orange) 50%, #555 50%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.total-rating {
-    background: linear-gradient(135deg, var(--orange) 0%, var(--dark-orange) 100%);
-    color: var(--white);
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
-    margin: 15px 0;
-    font-size: 1.2em;
-}
-
-.total-rating .stars-display {
-    font-size: 1.5em;
-}
-
-.total-rating .star {
-    color: rgba(255, 255, 255, 0.3);
-}
-
-.total-rating .star.active {
-    color: var(--white);
-}
-
-.total-rating .star.half {
-    background: linear-gradient(90deg, var(--white) 50%, rgba(255, 255, 255, 0.3) 50%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
 }
 
 .restaurant-card .info-item {
@@ -668,51 +617,6 @@ textarea:focus {
     margin-bottom: 10px;
 }
 
-/* EXCEL BUTTONS */
-.excel-actions {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 30px;
-    padding: 20px;
-}
-
-#export-excel,
-#import-excel-btn {
-    padding: 15px 40px;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    font-weight: 700;
-    font-size: 1em;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px var(--shadow);
-}
-
-#export-excel {
-    background: linear-gradient(135deg, var(--turquoise) 0%, var(--dark-turquoise) 100%);
-    color: var(--white);
-}
-
-#export-excel:hover {
-    background: linear-gradient(135deg, var(--dark-turquoise) 0%, var(--turquoise) 100%);
-    box-shadow: 0 6px 25px rgba(78, 205, 196, 0.5);
-    transform: translateY(-3px);
-}
-
-#import-excel-btn {
-    background: linear-gradient(135deg, var(--orange) 0%, var(--dark-orange) 100%);
-    color: var(--white);
-}
-
-#import-excel-btn:hover {
-    background: linear-gradient(135deg, var(--dark-orange) 0%, var(--orange) 100%);
-    box-shadow: 0 6px 25px rgba(255, 140, 66, 0.5);
-    transform: translateY(-3px);
-}
-
 /* RESPONSIVE */
 @media (max-width: 768px) {
     header h1 {
@@ -729,14 +633,6 @@ textarea:focus {
 
     #restaurant-form {
         padding: 20px;
-    }
-
-    .stars .star {
-        font-size: 1.5em;
-    }
-
-    .stars.large .star {
-        font-size: 2em;
     }
 }
 
