@@ -6,13 +6,13 @@
     <title>Restaurantes de la Hada y el Limón</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <svg style="width:0;height:0;position:absolute;" aria-hidden="true" focusable="false">
       <linearGradient id="half-star-gradient" x2="100%">
-        <stop offset="50%" stop-color="#FF8C42" /> <stop offset="50%" stop-color="#c7c7c7" /> </linearGradient>
+        <stop offset="50%" stop-color="#FF8C42" /> 
+        <stop offset="50%" stop-color="#4a4a4a" /> </linearGradient>
     </svg>
 
     <div class="container">
@@ -210,10 +210,29 @@ Tarta de queso"></textarea>
             </form>
         </section>
 
+        <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
+
         <section id="list-section" class="section">
-            <div class="search-bar">
-                <input type="text" id="search" placeholder="🔍 Buscar restaurante...">
+            <div class="toolbar">
+                <div class="search-sort-container">
+                    <input type="text" id="search" placeholder="🔍 Buscar restaurante...">
+                    
+                    <select id="sort-order">
+                        <option value="newest">📅 Más recientes</option>
+                        <option value="score-desc">⭐ Nota (Mayor a menor)</option>
+                        <option value="score-asc">⭐ Nota (Menor a mayor)</option>
+                        <option value="name-asc">🔤 Nombre (A-Z)</option>
+                        <option value="visits-desc">🏆 Más visitados</option>
+                    </select>
+                </div>
+
+                <div class="excel-actions">
+                    <button id="btn-export" class="btn-mini" title="Exportar a Excel">📤 Excel</button>
+                    <button id="btn-import-trigger" class="btn-mini" title="Importar desde Excel">📥 Importar</button>
+                    <input type="file" id="file-import" accept=".xlsx, .xls" style="display: none;">
+                </div>
             </div>
+
             <div id="restaurants-list" class="restaurants-grid"></div>
         </section>
     </div>

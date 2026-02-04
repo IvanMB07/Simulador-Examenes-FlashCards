@@ -11,18 +11,20 @@
     --dark-turquoise: #44A6A0;
     --bg-primary: #1a1a1a;
     --bg-secondary: #2d2d2d;
-    --bg-tertiary: #3d3d3d;
+    --bg-tertiary: #383838;
     --white: #FFFFFF;
     --text-dark: #e0e0e0;
     --text-light: #a0a0a0;
     --shadow: rgba(0, 0, 0, 0.4);
     --border-color: #4a4a4a;
-    --star-inactive: #c7c7c7; /* Color para las estrellas apagadas SVG */
+    --star-inactive: #4a4a4a; /* Gris oscuro para el fondo oscuro */
+    --font-hand: 'Patrick Hand', cursive; /* NUEVA FUENTE LEGIBLE */
+    --font-body: 'Quicksand', sans-serif;
 }
 
 body {
-    font-family: 'Quicksand', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+    font-family: var(--font-body);
+    background: var(--bg-primary);
     color: var(--text-dark);
     min-height: 100vh;
     padding: 20px;
@@ -35,60 +37,59 @@ body {
 
 /* HEADER */
 header {
-    background: linear-gradient(135deg, var(--orange) 0%, var(--dark-orange) 100%);
+    background: transparent;
     padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 8px 20px var(--shadow);
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    border-bottom: 2px dashed var(--border-color);
 }
 
 header h1 {
-    color: var(--white);
+    color: var(--orange);
     font-size: 3.5em;
     font-weight: 700;
-    font-family: 'Caveat', cursive;
-    letter-spacing: 2px;
+    font-family: var(--font-hand);
+    letter-spacing: 1px;
 }
 
 /* TABS */
 .tabs {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     margin-bottom: 30px;
     justify-content: center;
     flex-wrap: wrap;
 }
 
 .tab {
-    background: var(--bg-secondary);
+    background: transparent;
     border: 2px solid var(--turquoise);
-    padding: 15px 30px;
-    border-radius: 50px;
+    padding: 12px 25px;
+    border-radius: 20px 5px 20px 5px;
     cursor: pointer;
-    font-size: 1.1em;
-    font-weight: 600;
+    font-size: 1.3em;
+    font-weight: 400; /* Patrick Hand es bold por defecto */
+    font-family: var(--font-hand);
     color: var(--turquoise);
     transition: all 0.3s ease;
 }
 
 .tab:hover {
-    background: linear-gradient(135deg, var(--bg-tertiary) 0%, #2a2a2a 100%);
-    color: var(--turquoise);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px var(--shadow);
+    transform: rotate(-2deg);
+    background: rgba(78, 205, 196, 0.1);
 }
 
 .tab.active {
-    background: linear-gradient(135deg, var(--turquoise) 0%, #3a9d96 100%);
-    color: var(--white);
-    box-shadow: 0 0 20px rgba(78, 205, 196, 0.4);
+    background: var(--turquoise);
+    color: var(--bg-primary);
+    box-shadow: 0 0 15px rgba(78, 205, 196, 0.3);
+    transform: rotate(2deg);
 }
 
 /* SECTIONS */
 .section {
     display: none;
-    animation: fadeIn 0.3s ease;
+    animation: fadeIn 0.4s ease;
 }
 
 .section.active {
@@ -104,8 +105,9 @@ header h1 {
 #restaurant-form {
     background: var(--bg-secondary);
     padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 8px 30px var(--shadow);
+    border-radius: 25px;
+    box-shadow: 0 10px 30px var(--shadow);
+    border: 1px solid var(--border-color);
 }
 
 .form-group {
@@ -121,9 +123,10 @@ header h1 {
 label {
     display: block;
     margin-bottom: 8px;
-    font-weight: 600;
-    color: var(--text-dark);
-    font-size: 1em;
+    color: var(--turquoise);
+    font-family: var(--font-hand);
+    font-size: 1.5em;
+    letter-spacing: 0.5px;
 }
 
 input[type="text"],
@@ -133,8 +136,9 @@ textarea {
     width: 100%;
     padding: 12px 15px;
     border: 2px solid var(--border-color);
-    border-radius: 10px;
+    border-radius: 12px;
     font-size: 1em;
+    font-family: var(--font-body);
     transition: all 0.3s ease;
     background: var(--bg-tertiary);
     color: var(--text-dark);
@@ -144,15 +148,11 @@ input:focus,
 select:focus,
 textarea:focus {
     outline: none;
-    border-color: var(--turquoise);
+    border-color: var(--orange);
     background: var(--bg-secondary);
 }
 
-.custom-input {
-    margin-top: 10px;
-}
-
-/* ============ SISTEMA DE ESTRELLAS SVG (NUEVO Y DEFINITIVO) ============ */
+/* ============ ESTRELLAS SVG ============ */
 
 .rating-group {
     display: flex;
@@ -160,151 +160,97 @@ textarea:focus {
     justify-content: space-between;
     margin-bottom: 15px;
     padding: 10px;
-    background: var(--bg-secondary);
-    border-radius: 10px;
+    background: var(--bg-tertiary);
+    border-radius: 12px;
 }
 
 .rating-group label {
     margin: 0;
     min-width: 120px;
+    color: var(--text-dark);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 1.1em;
 }
 
-.ratings-section {
-    background: linear-gradient(135deg, var(--bg-tertiary) 0%, #1a1a1a 100%);
-    padding: 25px;
-    border-radius: 15px;
-    margin: 30px 0;
-}
-
-.ratings-section h3 {
-    color: var(--orange);
-    margin-bottom: 20px;
-    font-size: 1.4em;
-}
-
-/* Contenedor de la fila de estrellas */
 .stars {
     display: flex;
     align-items: center;
-    gap: 4px; /* Espacio estándar entre estrellas */
+    gap: 5px;
 }
 
-/* ESTRELLA BASE (SVG) */
 .star {
-    width: 28px;  /* Tamaño por defecto */
-    height: 28px; /* Tamaño por defecto */
-    fill: var(--star-inactive); /* Color base (apagado) */
+    width: 28px;
+    height: 28px;
+    fill: var(--star-inactive);
     transition: transform 0.2s ease, fill 0.2s ease;
 }
 
-/* Estrella Activa (Naranja) */
 .star.active {
     fill: var(--orange);
 }
 
-/* Media Estrella (Usa el gradiente definido en el HTML) */
 .star.half {
     fill: url(#half-star-gradient);
 }
 
-/* --- Interactividad en el Formulario --- */
 .stars.form-stars .star {
     cursor: pointer;
 }
-
 .stars.form-stars .star:hover {
-    transform: scale(1.2); /* Efecto de aumento al pasar el ratón */
+    transform: scale(1.2);
 }
 
-/* ============ TAMAÑOS SEGÚN EL CONTEXTO ============ */
-
-/* 1. Formulario: "Puntuación Total" (Caja turquesa) */
+/* ============ CAJA PUNTUACIÓN TOTAL (Formulario) ============ */
 .total-score-section {
     background: linear-gradient(135deg, var(--turquoise) 0%, var(--dark-turquoise) 100%);
-    padding: 40px;
-    border-radius: 15px;
+    padding: 30px;
+    border-radius: 20px;
     margin: 30px 0;
-    box-shadow: 0 8px 20px rgba(78, 205, 196, 0.4);
+    position: relative;
+}
+
+/* Cinta adhesiva visual */
+.total-score-section::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    width: 100px;
+    height: 20px;
+    background: rgba(255,255,255,0.2);
+    transform: translateX(-50%) rotate(-2deg);
 }
 
 .total-score-section h3 {
-    color: var(--white);
+    color: var(--bg-primary);
     text-align: center;
-    margin-bottom: 25px;
-    font-size: 1.6em;
+    margin-bottom: 15px;
+    font-size: 2.2em;
+    font-family: var(--font-hand);
 }
 
 .total-score-section .rating-group {
     display: flex;
-    align-items: center;
     justify-content: center;
     background: transparent;
     padding: 0;
-    margin: 0;
-}
-
-.total-score-section .stars {
-    gap: 10px;
-    justify-content: center;
 }
 
 .total-score-section .star {
-    width: 48px; /* Muy grandes */
-    height: 48px;
+    width: 55px;
+    height: 55px;
 }
 
-/* Para la caja turquesa, las inactivas son semi-transparentes */
 .total-score-section .star:not(.active):not(.half) {
-    fill: rgba(255, 255, 255, 0.4);
+    fill: rgba(0, 0, 0, 0.2); 
+}
+.total-score-section .star.active {
+    fill: var(--orange);
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
 }
 
-/* 2. Tarjeta: "Puntuación Total" (Caja turquesa) */
-.total-rating {
-    background: linear-gradient(135deg, var(--turquoise) 0%, var(--dark-turquoise) 100%);
-    color: var(--white);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    margin: 15px 0;
-    font-size: 1.1em;
-    font-weight: 600;
-}
-
-.total-rating .stars {
-    justify-content: center;
-}
-
-.total-rating .star {
-    width: 36px; /* Grandes */
-    height: 36px;
-}
-
-/* Para la caja turquesa, las inactivas son semi-transparentes */
-.total-rating .star:not(.active):not(.half) {
-    fill: rgba(255, 255, 255, 0.4);
-}
-
-/* 3. Tarjeta: Listado pequeño (Calidad, Cantidad, etc.) */
-.rating-item {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 12px;
-    font-size: 0.9em;
-}
-
-.rating-item span:first-child {
-    margin-bottom: 6px;
-    font-weight: 600;
-    color: var(--text-dark);
-}
-
-.rating-item .star {
-    width: 22px; /* Pequeñas */
-    height: 22px;
-}
-
-/* VOLVER */
+/* VOLVER (Radio buttons) */
 .return-options {
     display: flex;
     gap: 20px;
@@ -316,27 +262,17 @@ textarea:focus {
     gap: 8px;
     padding: 10px 20px;
     background: var(--bg-tertiary);
-    border-radius: 10px;
+    border-radius: 15px;
     cursor: pointer;
     transition: all 0.3s ease;
+    border: 2px solid transparent;
 }
 
 .return-option:hover {
-    background: linear-gradient(135deg, var(--turquoise) 0%, #3a9d96 100%);
-    color: var(--white);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(78, 205, 196, 0.3);
+    border-color: var(--turquoise);
 }
 
-.return-option input[type="radio"] {
-    width: auto;
-}
-
-.emoji {
-    font-size: 1.5em;
-}
-
-/* BOTONES */
+/* BOTONES PRINCIPALES */
 .form-actions {
     display: flex;
     gap: 15px;
@@ -345,308 +281,445 @@ textarea:focus {
 
 .btn {
     flex: 1;
-    padding: 15px 30px;
+    padding: 15px;
     border: none;
     border-radius: 50px;
-    font-size: 1.1em;
-    font-weight: 600;
+    font-size: 1.4em;
+    font-family: var(--font-hand);
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--turquoise) 0%, var(--dark-turquoise) 100%);
-    color: var(--white);
+    background: var(--turquoise);
+    color: var(--bg-primary);
 }
 
 .btn-primary:hover {
+    background: var(--dark-turquoise);
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(78, 205, 196, 0.5);
 }
 
 .btn-secondary {
-    background: var(--bg-tertiary);
-    color: var(--text-dark);
-    display: none;
+    background: transparent;
     border: 2px solid var(--border-color);
+    color: var(--text-light);
+    display: none;
 }
 
-.btn-secondary:hover {
-    background: linear-gradient(135deg, var(--bg-secondary) 0%, #1a1a1a 100%);
-    border-color: var(--turquoise);
-    box-shadow: 0 4px 10px rgba(78, 205, 196, 0.2);
-}
-
-/* LISTA DE RESTAURANTES */
+/* ============ LISTA DE RESTAURANTES (TARJETAS) ============ */
 .search-bar {
     margin-bottom: 30px;
 }
 
 #search {
-    width: 100%;
-    padding: 15px 20px;
-    font-size: 1.1em;
-    border: 2px solid var(--turquoise);
-    border-radius: 50px;
+    border-radius: 30px;
+    padding: 15px 25px;
     background: var(--bg-secondary);
-    color: var(--text-dark);
+    border: 2px solid var(--border-color);
+}
+#search:focus {
+    border-color: var(--turquoise);
 }
 
 .restaurants-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
 }
 
+/* DISEÑO DE TARJETA */
 .restaurant-card {
     background: var(--bg-secondary);
     border-radius: 20px;
-    padding: 25px;
-    box-shadow: 0 4px 15px var(--shadow);
-    transition: all 0.3s ease;
-    position: relative;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
-.restaurant-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px var(--shadow);
+/* Cabecera de la tarjeta */
+.card-header {
+    margin-bottom: 15px;
 }
 
 .restaurant-card h3 {
     color: var(--orange);
-    font-size: 1.5em;
-    margin-bottom: 15px;
+    font-family: var(--font-hand);
+    font-size: 2.5em; /* Ligeramente más grande con Patrick Hand */
+    margin-bottom: 5px;
+    line-height: 1;
 }
 
 .restaurant-card .location {
+    font-size: 0.95em;
     color: var(--text-light);
+    display: flex;
+    align-items: center;
+    gap: 5px;
     margin-bottom: 10px;
 }
 
-.restaurant-card .type-badges {
+.type-badges {
     display: flex;
-    gap: 10px;
-    margin-bottom: 15px;
     flex-wrap: wrap;
+    gap: 8px;
 }
 
 .badge {
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 0.9em;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.85em;
     font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.badge-type { background: var(--bg-tertiary); color: var(--turquoise); border: 1px solid var(--turquoise); }
+.badge-subtype { background: var(--bg-tertiary); color: var(--orange); border: 1px solid var(--orange); }
+
+.card-body {
+    flex-grow: 1; 
 }
 
-.badge-type {
+/* CAJA PUNTUACIÓN TOTAL - ARREGLO DE CENTRADO */
+.total-rating {
     background: linear-gradient(135deg, var(--turquoise) 0%, var(--dark-turquoise) 100%);
-    color: var(--white);
-}
-
-.badge-subtype {
-    background: linear-gradient(135deg, var(--orange) 0%, var(--dark-orange) 100%);
-    color: var(--white);
-}
-
-.restaurant-card .ratings {
-    margin: 15px 0;
     padding: 15px;
-    background: var(--bg-tertiary);
-    border-radius: 10px;
-}
-
-.restaurant-card .info-item {
-    margin: 10px 0;
-    font-size: 0.9em;
-}
-
-.restaurant-card .notes {
-    background: var(--bg-tertiary);
-    padding: 10px;
-    border-radius: 8px;
-    margin: 10px 0;
-    font-style: italic;
-    color: var(--text-light);
-    border-left: 3px solid var(--orange);
-}
-
-.card-actions {
+    border-radius: 15px;
+    margin: 15px 0;
+    color: var(--bg-primary);
+    
+    /* CENTRADO ABSOLUTO */
     display: flex;
-    gap: 10px;
-    margin-top: 15px;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente los hijos */
+    justify-content: center;
 }
 
-.btn-edit,
-.btn-delete,
-.btn-order {
+.total-rating div:first-child {
+    font-family: var(--font-hand);
+    font-size: 1.6em;
+    margin-bottom: 5px;
+}
+
+.total-rating .stars {
+    display: flex;
+    justify-content: center; /* Asegura que las estrellas estén juntas al centro */
+    width: 100%;
+}
+
+.total-rating .star { width: 35px; height: 35px; }
+.total-rating .star:not(.active):not(.half) { fill: rgba(0,0,0,0.2); }
+.total-rating .star.active { fill: var(--orange); }
+
+/* Grid de detalles */
+.ratings-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 5px;
+    background: var(--bg-tertiary);
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+.rating-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+}
+.rating-item span {
+    font-size: 0.8em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-bottom: 3px;
+}
+.rating-item .star { width: 16px; height: 16px; }
+
+/* ============ ESTADÍSTICAS (SELLOS COMPACTOS) ============ */
+
+.stats-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Menos hueco entre ellos */
+    margin: 15px 0;
+    padding: 8px 0;
+    border-top: 1px dashed var(--border-color);
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.stat-badge {
     flex: 1;
-    padding: 10px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    font-size: 0.9em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px; /* Mucho menos relleno para que no sean gigantes */
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
-.btn-edit {
-    background: var(--turquoise);
-    color: var(--white);
+.stat-badge:hover {
+    transform: scale(1.03) rotate(-1deg);
 }
 
-.btn-edit:hover {
-    background: linear-gradient(135deg, var(--turquoise) 0%, #3a9d96 100%);
-    box-shadow: 0 4px 15px rgba(78, 205, 196, 0.4);
+/* --- SELLO DE VISITAS --- */
+.stat-badge.visits {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--orange); /* Borde más fino */
+    color: var(--orange);
 }
 
-.btn-delete {
-    background: #E74C3C;
-    color: var(--white);
-}
-
-.btn-delete:hover {
-    background: #C0392B;
-}
-
-.btn-order {
-    background: linear-gradient(135deg, var(--orange) 0%, var(--dark-orange) 100%);
-    color: var(--white);
-    padding: 12px 20px;
-    font-weight: 700;
+.stat-badge.visits .stat-label {
+    font-family: var(--font-body);
+    font-size: 0.7em; /* Texto "Visitas" pequeñito */
     text-transform: uppercase;
     letter-spacing: 1px;
-    box-shadow: 0 4px 15px rgba(255, 140, 66, 0.3);
+    margin-bottom: 0;
+}
+
+.stat-badge.visits .stat-value {
+    font-family: var(--font-hand);
+    font-size: 1.6em; /* Número más controlado */
+    line-height: 1;
+    font-weight: 400;
+}
+
+/* --- SELLO DE VOLVER --- */
+.stat-badge.return.yes {
+    background: var(--turquoise);
+    border: 1px solid var(--turquoise);
+    color: var(--bg-primary);
+}
+
+.stat-badge.return.no {
+    background: #ff6b6b;
+    border: 1px solid #ff6b6b;
+    color: white;
+}
+
+.stat-badge.return.undefined {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    color: var(--text-light);
+}
+
+.stat-badge.return .stat-value {
+    font-family: var(--font-hand);
+    font-size: 1.2em; /* Texto "Sí/No" más compacto */
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    line-height: 1.1;
+}
+
+/* Notas */
+.notes-container {
+    background: #3a3a3a;
+    padding: 15px;
+    border-radius: 2px 2px 15px 2px;
+    margin-bottom: 15px;
+    position: relative;
+    border-left: 4px solid var(--turquoise);
+}
+.notes-container p {
+    font-family: var(--font-hand);
+    font-size: 1.4em;
+    color: var(--text-dark);
+    font-style: italic;
+    line-height: 1.4;
+}
+
+/* Botón Pedido - AHORA MÁS GRANDE Y LLAMATIVO */
+.btn-order {
+    width: 100%;
+    background: transparent;
+    border: 3px dashed var(--orange); /* Borde más grueso */
+    color: var(--orange);
+    padding: 12px; /* Más espacio interior */
+    margin-bottom: 15px;
+    
+    /* Cambio clave: Usamos la fuente de rotulador para que destaque */
+    font-family: var(--font-hand); 
+    font-size: 1.5em; /* Letra más grande */
+    
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
 .btn-order:hover {
-    background: linear-gradient(135deg, var(--dark-orange) 0%, var(--orange) 100%);
-    box-shadow: 0 6px 20px rgba(255, 140, 66, 0.5);
-    transform: translateY(-2px);
+    background: var(--orange);
+    color: var(--bg-primary);
+    transform: scale(1.02); /* Pequeño zoom al pasar el ratón */
 }
 
-/* Order display section */
-.order-section {
-    margin: 15px 0;
-}
-
-.order-display {
-    margin-top: 10px;
-    animation: slideDown 0.3s ease;
-}
-
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
+/* Order display */
 .paper-note {
-    background: linear-gradient(to bottom, 
-        #fdfcf0 0%, 
-        #f8f6e8 100%);
-    border: 1px solid #d4c5a9;
-    border-radius: 4px;
-    padding: 15px 20px;
-    box-shadow: 
-        0 1px 3px rgba(0,0,0,0.1),
-        inset 0 0 50px rgba(250,240,200,0.3);
-    font-family: 'Caveat', cursive;
-    position: relative;
-    margin: 10px 0;
+    background: #fffcf5;
+    color: #333;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-family: var(--font-hand);
+    transform: rotate(-1deg);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+.paper-note h4 { color: var(--dark-orange); font-size: 1.6em; border-bottom: 1px solid #ccc; }
+.order-list li { font-size: 1.3em; margin: 5px 0; }
+.order-list li::before { content: '-'; color: var(--orange); margin-right: 5px; }
+
+/* FOOTER DE LA TARJETA */
+.card-footer {
+    margin-top: auto;
+    padding-top: 15px;
+    border-top: 1px solid var(--border-color);
 }
 
-.paper-note::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 30px;
-    width: 2px;
-    height: 100%;
-    background: rgba(255, 107, 53, 0.2);
-}
-
-.paper-note h4 {
-    font-size: 1.5em;
-    color: var(--dark-orange);
-    margin-bottom: 10px;
-    font-weight: 700;
-}
-
-.order-list {
-    list-style: none;
-    padding-left: 35px;
-    margin: 0;
-}
-
-.order-list li {
-    font-size: 1.3em;
-    color: #2d2d2d;
-    margin: 8px 0;
-    position: relative;
-    line-height: 1.6;
-}
-
-.order-list li::before {
-    content: '•';
-    position: absolute;
-    left: -20px;
-    color: var(--orange);
-    font-size: 1.2em;
-}
-
-.no-order {
-    font-size: 1.2em;
-    color: #999;
-    font-style: italic;
-    padding-left: 35px;
-}
-
-.empty-state {
+/* Reserva */
+.reservation-box {
+    display: block;
+    width: 100%;
     text-align: center;
-    padding: 60px 20px;
-    color: var(--text-light);
+    background: var(--bg-tertiary);
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 20px; /* Separación con las notas */
+    color: var(--turquoise);
+    font-weight: 600;
+    font-family: var(--font-body);
+    border: 1px solid var(--border-color); /* Borde sutil */
 }
 
-.empty-state h3 {
-    font-size: 2em;
-    margin-bottom: 10px;
+/* BOTONES EDITAR / BORRAR (NUEVO DISEÑO) */
+.card-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.card-actions button {
+    font-size: 1.1em;
+    padding: 6px 15px;
+    border-radius: 20px; /* Forma píldora */
+    font-family: var(--font-hand);
+    cursor: pointer;
+    background: transparent;
+    transition: all 0.2s ease;
+    flex: 1;
+}
+
+/* Estilo Editar */
+.btn-edit { 
+    color: var(--text-light); 
+    border: 1px solid var(--border-color); 
+}
+.btn-edit:hover { 
+    border-color: var(--turquoise); 
+    color: var(--turquoise); 
+    background: rgba(78, 205, 196, 0.05);
+}
+
+/* Estilo Borrar */
+.btn-delete { 
+    color: #ff6b6b; 
+    border: 1px solid rgba(255, 107, 107, 0.3); 
+}
+.btn-delete:hover { 
+    background: rgba(255, 107, 107, 0.1); 
+    border-color: #ff6b6b;
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 1.8em;
-    }
-
-    .form-row {
-        grid-template-columns: 1fr;
-    }
-
-    .restaurants-grid {
-        grid-template-columns: 1fr;
-    }
-
-    #restaurant-form {
-        padding: 20px;
-    }
+    .ratings-grid { grid-template-columns: 1fr 1fr 1fr; }
+    .restaurant-card h3 { font-size: 2em; }
 }
 
-@media (max-width: 480px) {
-    body {
-        padding: 10px;
-    }
+/* ============ BARRA DE HERRAMIENTAS (Búsqueda + Orden + Excel) ============ */
+.toolbar {
+    background: var(--bg-secondary);
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    .tab {
-        padding: 10px 20px;
-        font-size: 1em;
-    }
+.search-sort-container {
+    display: flex;
+    flex: 1;
+    gap: 15px;
+    min-width: 300px;
+}
 
-    .return-options {
+/* El input de búsqueda ya tenía estilos, pero aseguramos que flexione bien */
+#search {
+    flex: 2;
+    margin-bottom: 0; /* Quitar margen antiguo */
+}
+
+/* Estilo del Select de Ordenar */
+#sort-order {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid var(--border-color);
+    border-radius: 30px;
+    background: var(--bg-tertiary);
+    color: var(--turquoise);
+    font-family: var(--font-hand); /* Caveat Brush */
+    font-size: 1.2em;
+    cursor: pointer;
+    outline: none;
+}
+
+#sort-order:focus {
+    border-color: var(--turquoise);
+}
+
+/* Botones Excel */
+.excel-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-mini {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 2px solid var(--border-color);
+    background: transparent;
+    color: var(--text-dark);
+    font-family: var(--font-hand);
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-mini:hover {
+    background: var(--bg-tertiary);
+    border-color: var(--orange);
+    color: var(--orange);
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .toolbar {
         flex-direction: column;
+        align-items: stretch;
+    }
+    .search-sort-container {
+        flex-direction: column;
+    }
+    .excel-actions {
+        justify-content: center;
     }
 }

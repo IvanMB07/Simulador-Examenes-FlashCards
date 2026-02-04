@@ -1,9 +1,16 @@
-// Base de datos de restaurantes
+// ==========================================
+// VARIABLES GLOBALES Y CONFIGURACIÓN
+// ==========================================
 let restaurants = [];
 let editingId = null;
 let useFirebase = false;
 
+// ==========================================
+// SISTEMA DE ALMACENAMIENTO (FIREBASE / LOCALSTORAGE)
+// ==========================================
+
 function initStorage() {
+    // Detecta si Firebase se ha cargado en el HTML
     useFirebase = Boolean(window.firebaseDB && window.firebaseRef);
 }
 
@@ -19,18 +26,21 @@ async function loadRestaurants() {
                 restaurants = [];
             }
         } catch (error) {
-            console.warn('Firebase no disponible, usando localStorage');
+            console.warn('Firebase no disponible o error, usando localStorage');
             restaurants = JSON.parse(localStorage.getItem('restaurants')) || [];
         }
     } else {
         restaurants = JSON.parse(localStorage.getItem('restaurants')) || [];
     }
-    // Migración: asegurar que todos tengan orderItems como array
+    
+    // Migración de datos: asegurar que todos tengan orderItems como array
     restaurants.forEach(r => {
         if (!('orderItems' in r) || !Array.isArray(r.orderItems)) {
             r.orderItems = [];
         }
     });
+    
+    // Renderizado inicial (sin filtro)
     renderRestaurants();
 }
 
@@ -39,7 +49,7 @@ async function saveRestaurantsToStorage() {
         const dbRef = window.firebaseRef(window.firebaseDB, 'restaurants');
         const data = {};
         restaurants.forEach(r => {
-            data[r.id] = r;
+            data[r.id] = r; // Usamos el ID como clave
         });
         await window.firebaseSet(dbRef, data);
     } else {
@@ -57,33 +67,54 @@ function listenFirebaseUpdates() {
         } else {
             restaurants = [];
         }
-        renderRestaurants();
+        // Recargamos la vista manteniendo el filtro de búsqueda actual si existe
+        const currentSearch = document.getElementById('search').value;
+        renderRestaurants(currentSearch);
     });
 }
 
-// Inicializar la aplicación
+// ==========================================
+// INICIALIZACIÓN DE LA APP
+// ==========================================
+
 document.addEventListener('DOMContentLoaded', async () => {
     initStorage();
     await loadRestaurants();
+    
     setupTabs();
     setupStarRatings();
     setupCustomSelects();
     setupForm();
+    setupExcelFunctions(); // Nueva función de Excel
+    
+    // Listener para actualizaciones en tiempo real
     listenFirebaseUpdates();
+
+    // Listener para Búsqueda
+    document.getElementById('search').addEventListener('input', (e) => {
+        renderRestaurants(e.target.value);
+    });
+
+    // Listener para Ordenación (NUEVO)
+    document.getElementById('sort-order').addEventListener('change', () => {
+        const searchValue = document.getElementById('search').value;
+        renderRestaurants(searchValue);
+    });
 });
 
-// TABS
+// ==========================================
+// TABS (PESTAÑAS)
+// ==========================================
 function setupTabs() {
     const tabs = document.querySelectorAll('.tab');
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {
             const targetTab = tab.dataset.tab;
             
-            // Cambiar tab activa
+            // UI Update
             tabs.forEach(t => t.classList.remove('active'));
             tab.classList.add('active');
             
-            // Cambiar sección activa
             document.querySelectorAll('.section').forEach(section => {
                 section.classList.remove('active');
             });
@@ -92,7 +123,9 @@ function setupTabs() {
     });
 }
 
-// SISTEMA DE ESTRELLAS
+// ==========================================
+// LÓGICA DE ESTRELLAS (INPUTS)
+// ==========================================
 function setupStarRatings() {
     const starContainers = document.querySelectorAll('.stars');
     
@@ -101,48 +134,22 @@ function setupStarRatings() {
         const ratingName = container.dataset.rating;
         const hiddenInput = document.getElementById(ratingName);
         
-        // Si no es un input de formulario (es decir, solo visualización), saltar listeners
+        // Si no hay input oculto, es solo visualización (no hacemos nada)
         if (!hiddenInput) return;
 
         stars.forEach((star, index) => {
+            // Click
             star.addEventListener('click', (e) => {
-                // En SVG el click target puede ser path o svg, aseguramos obtener el SVG
-                const svgEl = star.closest('svg');
-                const rect = svgEl.getBoundingClientRect();
-                const clickX = e.clientX - rect.left;
-                const starWidth = rect.width;
-                
-                // Detectar si el click es en la mitad izquierda o derecha
-                let value;
-                if (clickX < starWidth / 2) {
-                    // Mitad izquierda - dar medio punto
-                    value = index + 0.5;
-                } else {
-                    // Mitad derecha - dar punto completo
-                    value = index + 1;
-                }
-                
-                hiddenInput.value = value;
-                updateStarDisplay(stars, value);
+                handleStarInteraction(e, star, index, hiddenInput, stars, true);
             });
             
+            // Hover
             star.addEventListener('mousemove', (e) => {
-                const svgEl = star.closest('svg');
-                const rect = svgEl.getBoundingClientRect();
-                const clickX = e.clientX - rect.left;
-                const starWidth = rect.width;
-                
-                let value;
-                if (clickX < starWidth / 2) {
-                    value = index + 0.5;
-                } else {
-                    value = index + 1;
-                }
-                
-                updateStarDisplay(stars, value);
+                handleStarInteraction(e, star, index, hiddenInput, stars, false);
             });
         });
         
+        // Mouse leave (reset al valor guardado)
         container.addEventListener('mouseleave', () => {
             const currentValue = parseFloat(hiddenInput.value) || 0;
             updateStarDisplay(stars, currentValue);
@@ -150,7 +157,28 @@ function setupStarRatings() {
     });
 }
 
-// Actualizar visualización de estrellas (soporta medias estrellas)
+function handleStarInteraction(e, star, index, input, stars, isClick) {
+    // Calculamos si el click fue a la izquierda o derecha del SVG
+    // Necesario porque SVG no tiene offsetLeft simple como div
+    const svgEl = star.closest('svg') || star; 
+    const rect = svgEl.getBoundingClientRect();
+    const clickX = e.clientX - rect.left;
+    const starWidth = rect.width;
+    
+    let value;
+    // Mitad izquierda (0-50%) o derecha (50-100%)
+    if (clickX < starWidth / 2) {
+        value = index + 0.5;
+    } else {
+        value = index + 1;
+    }
+    
+    if (isClick) {
+        input.value = value;
+    }
+    updateStarDisplay(stars, value);
+}
+
 function updateStarDisplay(stars, value) {
     stars.forEach((star, index) => {
         const fullValue = index + 1;
@@ -166,37 +194,32 @@ function updateStarDisplay(stars, value) {
     });
 }
 
-// SELECTORES PERSONALIZADOS
+// ==========================================
+// FORMULARIO: SELECTORES CUSTOM Y GUARDADO
+// ==========================================
 function setupCustomSelects() {
-    const typeSelect = document.getElementById('type');
-    const typeCustom = document.getElementById('type-custom');
-    const subtypeSelect = document.getElementById('subtype');
-    const subtypeCustom = document.getElementById('subtype-custom');
+    const selects = [
+        { main: 'type', custom: 'type-custom' },
+        { main: 'subtype', custom: 'subtype-custom' }
+    ];
     
-    typeSelect.addEventListener('change', () => {
-        if (typeSelect.value === 'custom') {
-            typeCustom.style.display = 'block';
-            typeCustom.required = true;
-        } else {
-            typeCustom.style.display = 'none';
-            typeCustom.required = false;
-            typeCustom.value = '';
-        }
-    });
-    
-    subtypeSelect.addEventListener('change', () => {
-        if (subtypeSelect.value === 'custom') {
-            subtypeCustom.style.display = 'block';
-            subtypeCustom.required = true;
-        } else {
-            subtypeCustom.style.display = 'none';
-            subtypeCustom.required = false;
-            subtypeCustom.value = '';
-        }
+    selects.forEach(pair => {
+        const mainEl = document.getElementById(pair.main);
+        const customEl = document.getElementById(pair.custom);
+        
+        mainEl.addEventListener('change', () => {
+            if (mainEl.value === 'custom') {
+                customEl.style.display = 'block';
+                customEl.required = true;
+            } else {
+                customEl.style.display = 'none';
+                customEl.required = false;
+                customEl.value = '';
+            }
+        });
     });
 }
 
-// FORMULARIO
 function setupForm() {
     const form = document.getElementById('restaurant-form');
     const cancelBtn = document.getElementById('cancel-edit');
@@ -211,7 +234,7 @@ function setupForm() {
         resetForm();
     });
     
-    // Prevenir envío del formulario al presionar Enter en el textarea de pedido
+    // Evitar envío al pulsar Enter en el textarea
     if (orderItemsField) {
         orderItemsField.addEventListener('keydown', (e) => {
             if (e.key === 'Enter') {
@@ -221,163 +244,301 @@ function setupForm() {
     }
 }
 
-// GUARDAR RESTAURANTE
 function saveRestaurant() {
+    // Recopilar valores
     const typeSelect = document.getElementById('type');
     const typeCustom = document.getElementById('type-custom');
     const subtypeSelect = document.getElementById('subtype');
     const subtypeCustom = document.getElementById('subtype-custom');
     
-    // Procesar pedido (orderItems)
+    // Procesar pedido
     let orderItems = [];
     const orderItemsField = document.getElementById('order-items');
-    if (orderItemsField) {
-        const orderItemsRaw = orderItemsField.value;
-        orderItems = orderItemsRaw
-            ? orderItemsRaw.split('\n').map(item => item.trim()).filter(Boolean)
-            : [];
+    if (orderItemsField && orderItemsField.value.trim()) {
+        orderItems = orderItemsField.value.split('\n').map(item => item.trim()).filter(Boolean);
     }
     
     const restaurant = {
-        id: editingId || Date.now(),
+        id: editingId || Date.now(), // ID único basado en fecha
         name: document.getElementById('name').value,
         location: document.getElementById('location').value,
         type: typeSelect.value === 'custom' ? typeCustom.value : typeSelect.value,
         subtype: subtypeSelect.value === 'custom' ? subtypeCustom.value : subtypeSelect.value,
+        
+        // Puntuaciones
         quality: parseFloat(document.getElementById('quality').value) || 0,
         quantity: parseFloat(document.getElementById('quantity').value) || 0,
         variety: parseFloat(document.getElementById('variety').value) || 0,
         aesthetics: parseFloat(document.getElementById('aesthetics').value) || 0,
         service: parseFloat(document.getElementById('service').value) || 0,
         qualityPrice: parseFloat(document.getElementById('quality-price').value) || 0,
+        totalScore: parseFloat(document.getElementById('total-score').value) || 0,
+        
+        // Extras
         returnVisit: document.querySelector('input[name="return"]:checked')?.value || '',
         timesVisited: parseInt(document.getElementById('times-visited').value) || 0,
-        totalScore: parseFloat(document.getElementById('total-score').value) || 0,
         notes: document.getElementById('notes').value,
         reservation: document.getElementById('reservation').value,
-        orderItems
+        orderItems: orderItems
     };
     
+    // Guardar (Nuevo o Edición)
     if (editingId) {
-        // Editar restaurante existente
         const index = restaurants.findIndex(r => r.id === editingId);
-        restaurants[index] = restaurant;
+        if (index !== -1) restaurants[index] = restaurant;
     } else {
-        // Agregar nuevo restaurante
         restaurants.push(restaurant);
     }
     
-    // Guardar en Firebase o localStorage
     saveRestaurantsToStorage();
-    
-    // Resetear formulario y mostrar lista
     resetForm();
+    
+    // Volver a la lista
     document.querySelector('[data-tab="list"]').click();
     renderRestaurants();
 }
 
-// RESETEAR FORMULARIO
 function resetForm() {
     document.getElementById('restaurant-form').reset();
     document.getElementById('edit-id').value = '';
     editingId = null;
     
-    // Resetear estrellas
+    // Resetear visualmente las estrellas
     document.querySelectorAll('.star').forEach(star => {
         star.classList.remove('active', 'half');
     });
+    // Resetear inputs ocultos de estrellas
     document.querySelectorAll('.stars + input[type="hidden"]').forEach(input => {
         input.value = '0';
     });
     
-    // Ocultar campos custom
+    // Resetear selects custom
     document.getElementById('type-custom').style.display = 'none';
     document.getElementById('subtype-custom').style.display = 'none';
     
-    // Ocultar botón cancelar
+    // Ocultar cancelar
     document.getElementById('cancel-edit').style.display = 'none';
 }
 
-// RENDERIZAR RESTAURANTES
+// ==========================================
+// EXCEL: EXPORTAR E IMPORTAR
+// ==========================================
+function setupExcelFunctions() {
+    const btnExport = document.getElementById('btn-export');
+    const btnImportTrigger = document.getElementById('btn-import-trigger');
+    const fileInput = document.getElementById('file-import');
+
+    if(!btnExport || !btnImportTrigger) return;
+
+    // 1. EXPORTAR
+    btnExport.addEventListener('click', () => {
+        if (restaurants.length === 0) {
+            alert("¡No hay restaurantes para exportar!");
+            return;
+        }
+
+        // Clonamos y formateamos para Excel (arrays a string)
+        const dataToExport = restaurants.map(r => ({
+            ...r,
+            orderItems: r.orderItems ? r.orderItems.join(', ') : '' 
+        }));
+
+        // Crear hoja y libro
+        const ws = XLSX.utils.json_to_sheet(dataToExport);
+        const wb = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(wb, ws, "Restaurantes");
+
+        // Descargar
+        XLSX.writeFile(wb, "Restaurantes_Hada_Limon.xlsx");
+    });
+
+    // 2. IMPORTAR (Disparar input file)
+    btnImportTrigger.addEventListener('click', () => {
+        fileInput.click();
+    });
+
+    // 3. PROCESAR ARCHIVO
+    fileInput.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+
+        reader.onload = (evt) => {
+            try {
+                const data = new Uint8Array(evt.target.result);
+                const workbook = XLSX.read(data, { type: 'array' });
+                const firstSheetName = workbook.SheetNames[0];
+                const worksheet = workbook.Sheets[firstSheetName];
+                const jsonResults = XLSX.utils.sheet_to_json(worksheet);
+
+                // Procesar datos importados
+                const importedRestaurants = jsonResults.map(r => {
+                    // Convertir string de pedido a array
+                    let items = [];
+                    if (r.orderItems && typeof r.orderItems === 'string') {
+                        items = r.orderItems.split(',').map(s => s.trim());
+                    }
+                    
+                    return {
+                        ...r,
+                        orderItems: items,
+                        // Convertir a números
+                        quality: Number(r.quality) || 0,
+                        quantity: Number(r.quantity) || 0,
+                        variety: Number(r.variety) || 0,
+                        aesthetics: Number(r.aesthetics) || 0,
+                        service: Number(r.service) || 0,
+                        qualityPrice: Number(r.qualityPrice) || 0,
+                        totalScore: Number(r.totalScore) || 0,
+                        timesVisited: Number(r.timesVisited) || 0,
+                        // Nuevo ID para evitar conflictos
+                        id: Date.now() + Math.random() 
+                    };
+                });
+
+                if (importedRestaurants.length > 0) {
+                    if (confirm(`Se han encontrado ${importedRestaurants.length} restaurantes. ¿Importarlos?`)) {
+                        restaurants = [...restaurants, ...importedRestaurants];
+                        saveRestaurantsToStorage();
+                        renderRestaurants();
+                        alert("¡Importación completada!");
+                    }
+                } else {
+                    alert("El archivo parece estar vacío o no tiene el formato correcto.");
+                }
+            } catch (err) {
+                console.error(err);
+                alert("Error al leer el archivo Excel.");
+            }
+            fileInput.value = ""; // Limpiar input
+        };
+
+        reader.readAsArrayBuffer(file);
+    });
+}
+
+// ==========================================
+// RENDERIZADO (LISTA DE TARJETAS)
+// ==========================================
+// RENDER
 function renderRestaurants(filter = '') {
     const container = document.getElementById('restaurants-list');
-    const filteredRestaurants = restaurants.filter(r => 
+    
+    // 1. Filtrar
+    let processedList = restaurants.filter(r => 
         r.name.toLowerCase().includes(filter.toLowerCase())
     );
     
-    if (filteredRestaurants.length === 0) {
+    // 2. Ordenar
+    const sortMode = document.getElementById('sort-order').value;
+    
+    processedList.sort((a, b) => {
+        switch (sortMode) {
+            case 'score-desc': return b.totalScore - a.totalScore;
+            case 'score-asc': return a.totalScore - b.totalScore;
+            case 'name-asc': return a.name.localeCompare(b.name);
+            case 'visits-desc': return b.timesVisited - a.timesVisited;
+            case 'newest':
+            default: return b.id - a.id;
+        }
+    });
+
+    // 3. Estado vacío
+    if (processedList.length === 0) {
         container.innerHTML = `
             <div class="empty-state">
-                <h3>🍽️</h3>
-                <p>No hay restaurantes registrados aún.</p>
-                <p>¡Añade tu primer restaurante!</p>
+                <h3 style="color:var(--turquoise); font-family: 'Caveat Brush', cursive;">No hay resultados...</h3>
+                <p>¡Prueba con otra búsqueda o añade uno nuevo!</p>
             </div>
         `;
         return;
     }
     
-        container.innerHTML = filteredRestaurants.map(restaurant => `
-            <div class="restaurant-card">
+    // 4. Generar HTML
+    container.innerHTML = processedList.map(restaurant => `
+        <div class="restaurant-card">
+            <div class="card-header">
                 <h3>${restaurant.name}</h3>
-                ${restaurant.location ? `<p class="location">📍 ${restaurant.location}</p>` : ''}
+                <div class="location">
+                    <span>📍</span> ${restaurant.location || 'Sin ubicación'}
+                </div>
                 <div class="type-badges">
                     ${restaurant.type ? `<span class="badge badge-type">${restaurant.type}</span>` : ''}
                     ${restaurant.subtype ? `<span class="badge badge-subtype">${restaurant.subtype}</span>` : ''}
                 </div>
+            </div>
+
+            <div class="card-body">
                 <div class="total-rating">
                     <div>Puntuación Total</div>
-                    <div>${renderStars(restaurant.totalScore)}</div>
+                    <div>${renderStarsSVG(restaurant.totalScore)}</div>
                 </div>
-                <div class="ratings">
-                    ${renderRatingItem('Calidad', restaurant.quality)}
-                    ${renderRatingItem('Cantidad', restaurant.quantity)}
-                    ${renderRatingItem('Variedad', restaurant.variety)}
-                    ${renderRatingItem('Estética', restaurant.aesthetics)}
-                    ${renderRatingItem('Servicio', restaurant.service)}
-                    ${renderRatingItem('Calidad/Precio', restaurant.qualityPrice)}
+
+                <div class="ratings-grid">
+                    ${renderRatingItemHTML('Calidad', restaurant.quality)}
+                    ${renderRatingItemHTML('Cantidad', restaurant.quantity)}
+                    ${renderRatingItemHTML('Variedad', restaurant.variety)}
+                    ${renderRatingItemHTML('Estética', restaurant.aesthetics)}
+                    ${renderRatingItemHTML('Servicio', restaurant.service)}
+                    ${renderRatingItemHTML('Calidad/Precio', restaurant.qualityPrice)}
                 </div>
-                <div class="info-item">
-                    <strong>¿Volveríamos?</strong> 
-                    ${restaurant.returnVisit === 'yes' ? '✅ Sí' : restaurant.returnVisit === 'no' ? '❌ No' : '-'}
+
+                <div class="stats-row">
+                    <div class="stat-badge return ${restaurant.returnVisit === 'yes' ? 'yes' : restaurant.returnVisit === 'no' ? 'no' : 'undefined'}">
+                        <span class="stat-value">
+                            ${restaurant.returnVisit === 'yes' ? '¡SÍ VOLVER!' : restaurant.returnVisit === 'no' ? 'NO VOLVER' : '¿Volver? -'}
+                            ${restaurant.returnVisit === 'yes' ? '❤️' : restaurant.returnVisit === 'no' ? '💀' : ''}
+                        </span>
+                    </div>
+                    <div class="stat-badge visits">
+                        <span class="stat-label">Visitas</span>
+                        <span class="stat-value">${restaurant.timesVisited}</span>
+                    </div>
                 </div>
-                <div class="info-item">
-                    <strong>Veces visitado:</strong> ${restaurant.timesVisited}
-                </div>
-                ${restaurant.notes ? `<div class="notes">💭 ${restaurant.notes}</div>` : ''}
-                ${restaurant.reservation ? `<div class="info-item">📞 ${restaurant.reservation}</div>` : ''}
+
                 <div class="order-section">
                     <button class="btn-order" onclick="toggleOrder(${restaurant.id})">📋 Ver pedido</button>
                     <div id="order-${restaurant.id}" class="order-display" style="display: none;">
                         <div class="paper-note">
-                            <h4>Pedido</h4>
+                            <h4>Lo que pedimos:</h4>
                             ${restaurant.orderItems && restaurant.orderItems.length ? 
                                 `<ul class="order-list">${restaurant.orderItems.map(item => `<li>${item}</li>`).join('')}</ul>` : 
-                                '<p class="no-order">No hay pedido registrado</p>'}
+                                '<p class="no-order">Nada apuntado</p>'}
                         </div>
                     </div>
                 </div>
+
+                ${restaurant.reservation ? `
+                    <div class="reservation-box">
+                        📞 Reserva: ${restaurant.reservation}
+                    </div>
+                ` : ''}
+
+                ${restaurant.notes ? `
+                    <div class="notes-container">
+                        <p>“${restaurant.notes}”</p>
+                    </div>
+                ` : ''}
+
+            </div>
+
+            <div class="card-footer">
                 <div class="card-actions">
-                    <button class="btn-edit" onclick="editRestaurant(${restaurant.id})">✏️ Editar</button>
-                    <button class="btn-delete" onclick="deleteRestaurant(${restaurant.id})">🗑️ Eliminar</button>
+                    <button class="btn-edit" onclick="editRestaurant(${restaurant.id})">Editar</button>
+                    <button class="btn-delete" onclick="deleteRestaurant(${restaurant.id})">Borrar</button>
                 </div>
             </div>
-        `).join('');
+        </div>
+    `).join('');
 }
 
-// Toggle order display (global function)
-window.toggleOrder = function(id) {
-    const orderDisplay = document.getElementById(`order-${id}`);
-    if (orderDisplay) {
-        if (orderDisplay.style.display === 'none') {
-            orderDisplay.style.display = 'block';
-        } else {
-            orderDisplay.style.display = 'none';
-        }
-    }
-};
+// ==========================================
+// HELPERS DE RENDERIZADO
+// ==========================================
 
-// RENDERIZAR ESTRELLAS - Versión SVG
-function renderStars(rating) {
+// Renderiza las 5 estrellas SVG
+function renderStarsSVG(rating) {
     let html = '';
     for (let i = 1; i <= 5; i++) {
         const starValue = i;
@@ -389,7 +550,6 @@ function renderStars(rating) {
             starClass = 'half';
         }
         
-        // Usamos un icono SVG de estrella en lugar de un carácter de texto
         html += `
         <svg class="star ${starClass}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
@@ -398,101 +558,113 @@ function renderStars(rating) {
     return `<div class="stars">${html}</div>`;
 }
 
-// RENDERIZAR ITEM DE VALORACIÓN
-function renderRatingItem(label, value) {
-    if (value === 0) return '';
+// Renderiza un item pequeño de la grid (Calidad, etc)
+function renderRatingItemHTML(label, value) {
+    if (!value) return '';
     return `
         <div class="rating-item">
             <span>${label}</span>
-            ${renderStars(value)}
+            ${renderStarsSVG(value)}
         </div>
     `;
 }
 
-// EDITAR RESTAURANTE
-function editRestaurant(id) {
+// Muestra/Oculta el pedido (Global para poder llamarse desde HTML)
+window.toggleOrder = function(id) {
+    const orderDisplay = document.getElementById(`order-${id}`);
+    if (orderDisplay) {
+        orderDisplay.style.display = (orderDisplay.style.display === 'none') ? 'block' : 'none';
+    }
+};
+
+// ==========================================
+// ACCIONES (EDITAR / BORRAR)
+// ==========================================
+
+window.editRestaurant = function(id) {
     const restaurant = restaurants.find(r => r.id === id);
     if (!restaurant) return;
     
     editingId = id;
     
-    // Llenar formulario
+    // Rellenar campos básicos
     document.getElementById('name').value = restaurant.name;
     document.getElementById('location').value = restaurant.location || '';
-    
-    // Tipo y Subtipo
-    const typeSelect = document.getElementById('type');
-    const typeOptions = Array.from(typeSelect.options).map(o => o.value);
-    if (typeOptions.includes(restaurant.type)) {
-        typeSelect.value = restaurant.type;
-    } else if (restaurant.type) {
-        typeSelect.value = 'custom';
-        document.getElementById('type-custom').style.display = 'block';
-        document.getElementById('type-custom').value = restaurant.type;
-    }
-    
-    const subtypeSelect = document.getElementById('subtype');
-    const subtypeOptions = Array.from(subtypeSelect.options).map(o => o.value);
-    if (subtypeOptions.includes(restaurant.subtype)) {
-        subtypeSelect.value = restaurant.subtype;
-    } else if (restaurant.subtype) {
-        subtypeSelect.value = 'custom';
-        document.getElementById('subtype-custom').style.display = 'block';
-        document.getElementById('subtype-custom').value = restaurant.subtype;
-    }
-    
-    // Valoraciones
-    setStarRating('quality', restaurant.quality);
-    setStarRating('quantity', restaurant.quantity);
-    setStarRating('variety', restaurant.variety);
-    setStarRating('aesthetics', restaurant.aesthetics);
-    setStarRating('service', restaurant.service);
-    setStarRating('quality-price', restaurant.qualityPrice);
-    setStarRating('total-score', restaurant.totalScore);
-    
-    // Volver
-    if (restaurant.returnVisit) {
-        document.querySelector(`input[name="return"][value="${restaurant.returnVisit}"]`).checked = true;
-    }
-    
     document.getElementById('times-visited').value = restaurant.timesVisited;
     document.getElementById('notes').value = restaurant.notes || '';
     document.getElementById('reservation').value = restaurant.reservation || '';
     
-    // Cargar pedido (orderItems)
-    const orderItemsField = document.getElementById('order-items');
-    if (orderItemsField) {
-        orderItemsField.value = (restaurant.orderItems && Array.isArray(restaurant.orderItems) && restaurant.orderItems.length)
-            ? restaurant.orderItems.join('\n') : '';
+    // Selects Inteligentes (Detectar si es custom o predefinido)
+    handleSelectPopulation('type', 'type-custom', restaurant.type);
+    handleSelectPopulation('subtype', 'subtype-custom', restaurant.subtype);
+    
+    // Estrellas
+    const ratings = ['quality', 'quantity', 'variety', 'aesthetics', 'service', 'quality-price', 'total-score'];
+    ratings.forEach(r => setStarRatingInput(r, restaurant[rToKey(r)]));
+    
+    // Radio button
+    if (restaurant.returnVisit) {
+        const radio = document.querySelector(`input[name="return"][value="${restaurant.returnVisit}"]`);
+        if(radio) radio.checked = true;
     }
     
-    // Mostrar botón cancelar
+    // Pedido
+    const orderItemsField = document.getElementById('order-items');
+    if (orderItemsField) {
+        orderItemsField.value = (restaurant.orderItems && Array.isArray(restaurant.orderItems)) 
+            ? restaurant.orderItems.join('\n') 
+            : '';
+    }
+    
+    // UI: Mostrar botón cancelar y cambiar tab
     document.getElementById('cancel-edit').style.display = 'block';
-    
-    // Cambiar a tab de formulario
     document.querySelector('[data-tab="form"]').click();
-}
+};
 
-// ESTABLECER VALORACIÓN DE ESTRELLAS
-function setStarRating(ratingName, value) {
-    const input = document.getElementById(ratingName);
-    input.value = value;
-    
-    const container = document.querySelector(`[data-rating="${ratingName}"]`);
-    const stars = container.querySelectorAll('.star');
-    updateStarDisplay(stars, value);
-}
-
-// ELIMINAR RESTAURANTE
-function deleteRestaurant(id) {
-    if (!confirm('¿Estás seguro de que quieres eliminar este restaurante?')) return;
+window.deleteRestaurant = function(id) {
+    if (!confirm('¿Seguro que quieres borrar este restaurante?')) return;
     
     restaurants = restaurants.filter(r => r.id !== id);
     saveRestaurantsToStorage();
     renderRestaurants();
+};
+
+// Helper para rellenar selects y mostrar campo custom si es necesario
+function handleSelectPopulation(selectId, customInputId, value) {
+    const select = document.getElementById(selectId);
+    const customInput = document.getElementById(customInputId);
+    
+    // Ver si el valor existe en las opciones del select
+    const options = Array.from(select.options).map(o => o.value);
+    
+    if (options.includes(value)) {
+        select.value = value;
+        customInput.style.display = 'none';
+    } else if (value) {
+        select.value = 'custom';
+        customInput.style.display = 'block';
+        customInput.value = value;
+    } else {
+        select.value = "";
+        customInput.style.display = 'none';
+    }
 }
 
-// BÚSQUEDA
-document.getElementById('search').addEventListener('input', (e) => {
-    renderRestaurants(e.target.value);
-});
+// Helper para rellenar las estrellas visualmente al editar
+function setStarRatingInput(ratingName, value) {
+    const input = document.getElementById(ratingName);
+    if(input) input.value = value || 0;
+    
+    const container = document.querySelector(`[data-rating="${ratingName}"]`);
+    if(container) {
+        const stars = container.querySelectorAll('.star');
+        updateStarDisplay(stars, value || 0);
+    }
+}
+
+// Helper para convertir id HTML (quality-price) a key de objeto (qualityPrice)
+function rToKey(str) {
+    if(str === 'quality-price') return 'qualityPrice';
+    if(str === 'total-score') return 'totalScore';
+    return str;
+}
