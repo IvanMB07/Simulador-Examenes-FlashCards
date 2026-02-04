@@ -615,8 +615,28 @@ textarea:focus {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-    .ratings-grid { grid-template-columns: 1fr 1fr 1fr; }
+    .ratings-grid { 
+        grid-template-columns: 1fr 1fr; /* Volvemos a 2 columnas si 3 quedan muy apretadas */
+        gap: 15px 10px; 
+    }
+    
     .restaurant-card h3 { font-size: 2em; }
+
+    /* AJUSTE ESPECÍFICO PARA ESTRELLAS EN MÓVIL */
+    .rating-item .stars {
+        gap: 6px; /* Más espacio entre estrellas para que no se peguen */
+    }
+
+    .rating-item .star {
+        width: 14px; /* Un pelín más pequeñas para que quepan con el nuevo gap */
+        height: 14px;
+    }
+
+    /* En la puntuación total (la caja grande) también bajamos un poco */
+    .total-rating .star {
+        width: 30px;
+        height: 30px;
+    }
 }
 
 /* ============ TOOLBAR ============ */
@@ -696,4 +716,5 @@ textarea:focus {
     .excel-actions {
         justify-content: center;
     }
+
 }
