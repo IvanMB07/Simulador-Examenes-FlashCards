@@ -25,6 +25,12 @@ async function loadRestaurants() {
     } else {
         restaurants = JSON.parse(localStorage.getItem('restaurants')) || [];
     }
+    // Migración: asegurar que todos tengan orderItems como array
+    restaurants.forEach(r => {
+        if (!('orderItems' in r) || !Array.isArray(r.orderItems)) {
+            r.orderItems = [];
+        }
+    });
     renderRestaurants();
 }
 
@@ -188,6 +194,7 @@ function setupCustomSelects() {
 function setupForm() {
     const form = document.getElementById('restaurant-form');
     const cancelBtn = document.getElementById('cancel-edit');
+    const orderItemsField = document.getElementById('order-items');
     
     form.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -197,6 +204,15 @@ function setupForm() {
     cancelBtn.addEventListener('click', () => {
         resetForm();
     });
+    
+    // Prevenir envío del formulario al presionar Enter en el textarea de pedido
+    if (orderItemsField) {
+        orderItemsField.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                e.stopPropagation();
+            }
+        });
+    }
 }
 
 // GUARDAR RESTAURANTE
@@ -205,6 +221,16 @@ function saveRestaurant() {
     const typeCustom = document.getElementById('type-custom');
     const subtypeSelect = document.getElementById('subtype');
     const subtypeCustom = document.getElementById('subtype-custom');
+    
+    // Procesar pedido (orderItems)
+    let orderItems = [];
+    const orderItemsField = document.getElementById('order-items');
+    if (orderItemsField) {
+        const orderItemsRaw = orderItemsField.value;
+        orderItems = orderItemsRaw
+            ? orderItemsRaw.split('\n').map(item => item.trim()).filter(Boolean)
+            : [];
+    }
     
     const restaurant = {
         id: editingId || Date.now(),
@@ -222,7 +248,8 @@ function saveRestaurant() {
         timesVisited: parseInt(document.getElementById('times-visited').value) || 0,
         totalScore: parseFloat(document.getElementById('total-score').value) || 0,
         notes: document.getElementById('notes').value,
-        reservation: document.getElementById('reservation').value
+        reservation: document.getElementById('reservation').value,
+        orderItems
     };
     
     if (editingId) {
@@ -283,67 +310,82 @@ function renderRestaurants(filter = '') {
         return;
     }
     
-    container.innerHTML = filteredRestaurants.map(restaurant => `
-        <div class="restaurant-card">
-            <h3>${restaurant.name}</h3>
-            ${restaurant.location ? `<p class="location">📍 ${restaurant.location}</p>` : ''}
-            
-            <div class="type-badges">
-                ${restaurant.type ? `<span class="badge badge-type">${restaurant.type}</span>` : ''}
-                ${restaurant.subtype ? `<span class="badge badge-subtype">${restaurant.subtype}</span>` : ''}
+        container.innerHTML = filteredRestaurants.map(restaurant => `
+            <div class="restaurant-card">
+                <h3>${restaurant.name}</h3>
+                ${restaurant.location ? `<p class="location">📍 ${restaurant.location}</p>` : ''}
+                <div class="type-badges">
+                    ${restaurant.type ? `<span class="badge badge-type">${restaurant.type}</span>` : ''}
+                    ${restaurant.subtype ? `<span class="badge badge-subtype">${restaurant.subtype}</span>` : ''}
+                </div>
+                <div class="total-rating">
+                    <div>Puntuación Total</div>
+                    <div class="stars-display">${renderStars(restaurant.totalScore)}</div>
+                </div>
+                <div class="ratings">
+                    ${renderRatingItem('Calidad', restaurant.quality)}
+                    ${renderRatingItem('Cantidad', restaurant.quantity)}
+                    ${renderRatingItem('Variedad', restaurant.variety)}
+                    ${renderRatingItem('Estética', restaurant.aesthetics)}
+                    ${renderRatingItem('Servicio', restaurant.service)}
+                    ${renderRatingItem('Calidad/Precio', restaurant.qualityPrice)}
+                </div>
+                <div class="info-item">
+                    <strong>¿Volveríamos?</strong> 
+                    ${restaurant.returnVisit === 'yes' ? '✅ Sí' : restaurant.returnVisit === 'no' ? '❌ No' : '-'}
+                </div>
+                <div class="info-item">
+                    <strong>Veces visitado:</strong> ${restaurant.timesVisited}
+                </div>
+                ${restaurant.notes ? `<div class="notes">💭 ${restaurant.notes}</div>` : ''}
+                ${restaurant.reservation ? `<div class="info-item">📞 ${restaurant.reservation}</div>` : ''}
+                <div class="order-section">
+                    <button class="btn-order" onclick="toggleOrder(${restaurant.id})">📋 Ver pedido</button>
+                    <div id="order-${restaurant.id}" class="order-display" style="display: none;">
+                        <div class="paper-note">
+                            <h4>Pedido</h4>
+                            ${restaurant.orderItems && restaurant.orderItems.length ? 
+                                `<ul class="order-list">${restaurant.orderItems.map(item => `<li>${item}</li>`).join('')}</ul>` : 
+                                '<p class="no-order">No hay pedido registrado</p>'}
+                        </div>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <button class="btn-edit" onclick="editRestaurant(${restaurant.id})">✏️ Editar</button>
+                    <button class="btn-delete" onclick="deleteRestaurant(${restaurant.id})">🗑️ Eliminar</button>
+                </div>
             </div>
-            
-            <div class="total-rating">
-                <div>Puntuación Total</div>
-                <div class="stars-display">${renderStars(restaurant.totalScore)}</div>
-            </div>
-            
-            <div class="ratings">
-                ${renderRatingItem('Calidad', restaurant.quality)}
-                ${renderRatingItem('Cantidad', restaurant.quantity)}
-                ${renderRatingItem('Variedad', restaurant.variety)}
-                ${renderRatingItem('Estética', restaurant.aesthetics)}
-                ${renderRatingItem('Servicio', restaurant.service)}
-                ${renderRatingItem('Calidad/Precio', restaurant.qualityPrice)}
-            </div>
-            
-            <div class="info-item">
-                <strong>¿Volveríamos?</strong> 
-                ${restaurant.returnVisit === 'yes' ? '✅ Sí' : restaurant.returnVisit === 'no' ? '❌ No' : '-'}
-            </div>
-            
-            <div class="info-item">
-                <strong>Veces visitado:</strong> ${restaurant.timesVisited}
-            </div>
-            
-            ${restaurant.notes ? `<div class="notes">💭 ${restaurant.notes}</div>` : ''}
-            
-            ${restaurant.reservation ? `<div class="info-item">📞 ${restaurant.reservation}</div>` : ''}
-            
-            <div class="card-actions">
-                <button class="btn-edit" onclick="editRestaurant(${restaurant.id})">✏️ Editar</button>
-                <button class="btn-delete" onclick="deleteRestaurant(${restaurant.id})">🗑️ Eliminar</button>
-            </div>
-        </div>
-    `).join('');
+        `).join('');
 }
+
+// Toggle order display (global function)
+window.toggleOrder = function(id) {
+    const orderDisplay = document.getElementById(`order-${id}`);
+    if (orderDisplay) {
+        if (orderDisplay.style.display === 'none') {
+            orderDisplay.style.display = 'block';
+        } else {
+            orderDisplay.style.display = 'none';
+        }
+    }
+};
 
 // RENDERIZAR ESTRELLAS
 function renderStars(rating) {
-    let stars = '';
-    const fullStars = Math.floor(rating);
-    const hasHalfStar = (rating % 1) >= 0.5;
-    
+    let html = '';
     for (let i = 1; i <= 5; i++) {
-        if (i <= fullStars) {
-            stars += '★'; // Estrella llena
-        } else if (i === fullStars + 1 && hasHalfStar) {
-            stars += '½★'; // Media estrella
-        } else {
-            stars += '☆'; // Estrella vacía
+        const starValue = i;
+        let starClass = '';
+        
+        if (rating >= starValue) {
+            starClass = 'active';
+        } else if (rating >= starValue - 0.5) {
+            starClass = 'half';
         }
+        
+        html += `<span class="star ${starClass}">★</span>`;
     }
-    return stars;
+    return html;
 }
 
 // RENDERIZAR ITEM DE VALORACIÓN
@@ -406,6 +448,13 @@ function editRestaurant(id) {
     document.getElementById('times-visited').value = restaurant.timesVisited;
     document.getElementById('notes').value = restaurant.notes || '';
     document.getElementById('reservation').value = restaurant.reservation || '';
+    
+    // Cargar pedido (orderItems)
+    const orderItemsField = document.getElementById('order-items');
+    if (orderItemsField) {
+        orderItemsField.value = (restaurant.orderItems && Array.isArray(restaurant.orderItems) && restaurant.orderItems.length)
+            ? restaurant.orderItems.join('\n') : '';
+    }
     
     // Mostrar botón cancelar
     document.getElementById('cancel-edit').style.display = 'block';
