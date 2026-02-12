@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Nuestro Álbum 2026 ❤️</title>
+    <title>Nuestro Álbum ❤️</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Playfair+Display:wght@700&family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Dancing+Script:wght@700&family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     
-    <div class="ambient-light"></div>
+    <div class="bright-light"></div>
 
     <header class="main-header">
-        <h1>Feliz San Valentín 2026 ❤️</h1>
-        <div class="counter">
-            <span id="days-count">0</span> días caminando juntos
+        <h1>San Valentín 2026</h1>
+        <div class="counter-wrapper">
+            <span class="heart-icon">💖</span>
+            <span id="days-count">0</span> días de magia
+            <span class="heart-icon">💖</span>
         </div>
     </header>
 
@@ -23,8 +25,8 @@
             
             <div class="page cover" id="p1">
                 <div class="front cover-design">
-                    <div class="spine-line"></div>
-                    <h2>Nuestro<br>Álbum</h2>
+                    <div class="gold-border"></div>
+                    <h2>Nuestra<br>Historia</h2>
                     <div class="seal">❤️</div>
                     <p class="date">Desde 16.07.2024</p>
                 </div>
@@ -32,35 +34,37 @@
             </div>
 
             <div class="page" id="p2">
-                <div class="front paper">
-                    <div class="grid" id="grid-1"></div> </div>
-                <div class="back paper">
-                    <div class="grid" id="grid-2"></div> </div>
+                <div class="front paper"><div class="grid" id="grid-1"></div></div>
+                <div class="back paper"><div class="grid" id="grid-2"></div></div>
             </div>
 
             <div class="page" id="p3">
-                <div class="front paper">
-                    <div class="grid" id="grid-3"></div> </div>
-                <div class="back paper">
-                    <div class="grid" id="grid-4"></div> </div>
+                <div class="front paper"><div class="grid" id="grid-3"></div></div>
+                <div class="back paper"><div class="grid" id="grid-4"></div></div>
             </div>
 
             <div class="page cover" id="p4">
                 <div class="front paper"></div>
                 <div class="back cover-design reverse">
-                    <h3>Te amo</h3>
-                    <p>Por siempre tú y yo.</p>
+                    <div class="gold-border"></div>
+                    <h3>Te Amo</h3>
+                    <p class="final-msg">Hoy y siempre.</p>
                 </div>
             </div>
 
         </div>
     </div>
 
-    <p class="hint">Desliza para pasar página • Toca una foto para ampliar</p>
+    <div class="info-wrapper">
+        <button id="info-btn" class="info-btn">i</button>
+        <div id="info-tooltip" class="info-tooltip">
+            <p>✨ Desliza para ver el libro</p>
+            <p>✨ Toca una foto para ampliarla</p>
+        </div>
+    </div>
 
     <div id="zoom-overlay" class="overlay">
-        <div id="zoom-content">
-            </div>
+        <div id="zoom-content"></div>
     </div>
 
     <script src="script.js"></script>
