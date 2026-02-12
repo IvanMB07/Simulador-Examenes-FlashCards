@@ -1,155 +1,163 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // --- CONFIGURACIÓN ---
-    const startDate = new Date('2024-07-16'); 
+    
+    // --- DATOS DEL ÁLBUM ---
+    const startDate = new Date('2024-07-16'); // ¡Pon tu fecha aquí!
     const totalPhotos = 16;
-    const moments = [
-        "Nuestro comienzo", "Esa mirada", "Risas infinitas", "Cena favorita", 
-        "Escapada juntos", "Tú y yo", "Complicidad", "Paz a tu lado", 
-        "Tus abrazos", "Aventuras", "Magia pura", "Mi hogar", 
-        "Siempre así", "Inolvidable", "Te quiero", "Por más días"
+    const phrases = [
+        "Nuestro comienzo", "Esa mirada", "Risas locas", "Cena romántica",
+        "Escapada juntos", "Solo tú y yo", "Complicidad", "Paz absoluta",
+        "Abrazos fuertes", "Aventuras", "Magia pura", "Mi hogar",
+        "Siempre juntos", "Inolvidable", "Te amo", "Por mil más"
     ];
 
-    let currentAudio = null;
-    let currentOpenPage = 0;
-    let startX = 0;
-    
-    const pages = document.querySelectorAll('.page');
+    // --- ELEMENTOS ---
     const book = document.getElementById('book');
-    const overlay = document.getElementById('photo-overlay');
-    const overlayContent = document.getElementById('overlay-content');
+    const pages = document.querySelectorAll('.page');
+    const overlay = document.getElementById('zoom-overlay');
+    const zoomContent = document.getElementById('zoom-content');
+    let currentAudio = null;
+    let currentPage = 0; // 0 = Cerrado inicio, 1 = Pág 1 abierta, etc.
+    const totalPages = pages.length; // 4 páginas (portada, 2 pliegos, contraportada)
 
-    // 1. CONTADOR
-    function updateCounter() {
-        const diff = new Date() - startDate;
-        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const el = document.getElementById('days-number');
-        if(el) el.textContent = days;
+    // 1. INICIALIZAR Z-INDEX
+    // Las páginas deben estar ordenadas para que la portada esté encima
+    pages.forEach((page, i) => {
+        page.style.zIndex = totalPages - i;
+    });
+
+    // 2. CONTADOR DE DÍAS
+    const diff = new Date() - startDate;
+    document.getElementById('days-count').textContent = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+    // 3. GENERAR LAS FOTOS
+    for (let i = 1; i <= totalPhotos; i++) {
+        // Calcular en qué grid va la foto (1-4 -> grid1, 5-8 -> grid2...)
+        const gridId = `grid-${Math.ceil(i / 4)}`;
+        const container = document.getElementById(gridId);
+        if (!container) continue;
+
+        const imgIndex = i;
+        const rot = (Math.random() * 6 - 3).toFixed(1); // Rotación sutil
+        
+        const card = document.createElement('div');
+        card.className = 'polaroid';
+        card.style.setProperty('--r', `${rot}deg`);
+        // Usamos .jpeg como pediste
+        card.innerHTML = `<img src="fotos/${imgIndex}.jpeg" alt="Foto ${imgIndex}" onerror="this.src='https://via.placeholder.com/150/ccc/333?text=IMG+${imgIndex}'">`;
+
+        // --- CLIC EN FOTO PEQUEÑA ---
+        card.addEventListener('click', (e) => {
+            e.stopPropagation(); // ¡IMPORTANTE! Evita que el libro pase de página
+            openZoom(imgIndex, phrases[imgIndex - 1]);
+        });
+
+        container.appendChild(card);
     }
 
-    // 2. CARGAR FOTOS
-    function loadGallery() {
-        for (let i = 1; i <= totalPhotos; i++) {
-            const gridNum = Math.ceil(i / 4);
-            const container = document.getElementById(`grid-${gridNum}`);
-            if (!container) continue;
+    // 4. FUNCIÓN DE ZOOM (ABRIR FOTO GIGANTE)
+    function openZoom(index, text) {
+        // Audio
+        if (currentAudio) currentAudio.pause();
+        const audio = new Audio(`sonidos/audio${index}.mp3`);
+        audio.play().catch(() => {}); // Ignorar error si no hay interacción previa
+        currentAudio = audio;
 
-            const randomRot = (Math.random() * 4 - 2).toFixed(2);
-
-            const photoDiv = document.createElement('div');
-            photoDiv.className = 'polaroid-container';
-            photoDiv.innerHTML = `
-                <div class="polaroid-inner" style="--r: ${randomRot}deg">
-                    <div class="photo-front">
-                        <img src="fotos/${i}.jpeg" alt="Foto ${i}" onerror="this.src='https://via.placeholder.com/150?text=Error'">
-                    </div>
-                    <div class="photo-back">
-                        <p>${moments[i-1] || '❤️'}</p>
-                    </div>
+        // Crear HTML de la tarjeta gigante
+        zoomContent.innerHTML = `
+            <div class="big-card">
+                <div class="big-face big-front">
+                    <img src="fotos/${index}.jpeg">
                 </div>
-            `;
-
-            const audioPath = `sonidos/audio${i}.mp3`;
-            const audio = new Audio(audioPath);
-            
-            photoDiv.onclick = (e) => {
-                e.stopPropagation();
-                openPhotoZoom(`fotos/${i}.jpeg`, moments[i-1] || '', audio);
-            };
-
-            container.appendChild(photoDiv);
-        }
-    }
-
-    // 3. ZOOM
-    function openPhotoZoom(imgSrc, text, audioObj) {
-        if(currentAudio) currentAudio.pause();
-        audioObj.play().catch(e => console.log("Audio bloqueado"));
-        currentAudio = audioObj;
-
-        overlayContent.innerHTML = `
-            <div class="polaroid-container overlay-polaroid" onclick="this.querySelector('.polaroid-inner').classList.toggle('is-flipped')">
-                <div class="polaroid-inner">
-                    <div class="photo-front"><img src="${imgSrc}"></div>
-                    <div class="photo-back"><p>${text}</p></div>
+                <div class="big-face big-back">
+                    ${text}
                 </div>
             </div>
         `;
+
+        // Mostrar overlay
         overlay.classList.add('active');
+
+        // Añadir evento de giro a la tarjeta NUEVA creada
+        const bigCard = zoomContent.querySelector('.big-card');
+        bigCard.addEventListener('click', (e) => {
+            e.stopPropagation(); // Evita cerrar el overlay
+            bigCard.classList.toggle('flipped');
+        });
     }
 
-    if(overlay) {
-        overlay.onclick = (e) => {
-            if (e.target === overlay) {
-                overlay.classList.remove('active');
-                overlayContent.innerHTML = '';
-                if(currentAudio) currentAudio.pause();
-            }
-        };
-    }
+    // CERRAR ZOOM (Clic en fondo negro)
+    overlay.addEventListener('click', () => {
+        overlay.classList.remove('active');
+        if (currentAudio) currentAudio.pause();
+        zoomContent.innerHTML = ''; // Limpiar
+    });
 
-    // 4. GESTOS (SWIPE)
+    // 5. NAVEGACIÓN DEL LIBRO (TOUCH & CLICK)
+    let startX = 0;
+
     document.addEventListener('touchstart', e => startX = e.touches[0].clientX);
     document.addEventListener('mousedown', e => startX = e.clientX);
+
     document.addEventListener('touchend', e => handleSwipe(e.changedTouches[0].clientX));
     document.addEventListener('mouseup', e => handleSwipe(e.clientX));
 
     function handleSwipe(endX) {
-        if(overlay && overlay.classList.contains('active')) return;
+        // Si el zoom está abierto, no movemos el libro
+        if (overlay.classList.contains('active')) return;
 
-        const threshold = 50;
         const diff = startX - endX;
+        if (Math.abs(diff) < 50) return; // Movimiento muy corto, ignorar (es un clic)
 
-        if (Math.abs(diff) < threshold) return;
-
-        // Siguiente Página
-        if (diff > 0 && currentOpenPage < pages.length) { 
-            pages[currentOpenPage].classList.add('flipped');
-            pages[currentOpenPage].style.zIndex = 10 + currentOpenPage; 
-            currentOpenPage++;
-        } 
-        // Anterior Página
-        else if (diff < 0 && currentOpenPage > 0) { 
-            currentOpenPage--;
-            pages[currentOpenPage].classList.remove('flipped');
-            setTimeout(() => {
-                if(!pages[currentOpenPage].classList.contains('flipped')) {
-                    pages[currentOpenPage].style.zIndex = pages.length - currentOpenPage;
-                }
-            }, 300);
-        }
-        
-        updateBookPosition();
+        if (diff > 0) nextPage(); // Deslizar izquierda -> Siguiente
+        else prevPage();          // Deslizar derecha -> Anterior
     }
 
-    // --- 5. CENTRADO DEL LIBRO (CORREGIDO) ---
-    function updateBookPosition() {
-        const isClosedStart = currentOpenPage === 0;
-        const isClosedEnd = currentOpenPage === pages.length;
-        
-        // Si el libro está en medio (abierto), lo movemos 50% a la derecha.
-        // Esto coloca el "lomo" (borde izquierdo del contenedor) en el centro de la pantalla.
-        // Funciona en móvil Y en escritorio.
-        let moveX = "0%";
-        
-        if (!isClosedStart && !isClosedEnd) {
-            moveX = "50%";
-        } 
-        else if (isClosedEnd) {
-            // Opcional: Si quieres ver la contraportada centrada
-            moveX = "100%"; 
+    function nextPage() {
+        if (currentPage < totalPages) {
+            // Girar página actual
+            const page = document.getElementById(`p${currentPage + 1}`);
+            page.style.transform = "rotateY(-180deg)";
+            
+            // Ajuste Z-Index para que se vea bien al caer
+            // (La página que giramos debe quedar encima de las anteriores pero debajo de las siguientes)
+            page.style.zIndex = 10 + currentPage; 
+            
+            currentPage++;
+            updateBookCenter();
         }
+    }
 
+    function prevPage() {
+        if (currentPage > 0) {
+            currentPage--;
+            const page = document.getElementById(`p${currentPage + 1}`);
+            page.style.transform = "rotateY(0deg)";
+            
+            // Restaurar Z-Index original con delay para la animación
+            setTimeout(() => {
+                page.style.zIndex = totalPages - currentPage;
+            }, 300);
+            
+            updateBookCenter();
+        }
+    }
+
+    // --- 6. CENTRADO INTELIGENTE DEL LOMO (LA SOLUCIÓN CLAVE) ---
+    function updateBookCenter() {
+        // Si el libro está cerrado (inicio) o terminado (final), centro = 0
+        // Si el libro está abierto (páginas intermedias), centro = 50% a la derecha
+        // Esto coloca el "lomo" en el centro de la pantalla
+        
+        const isClosedStart = currentPage === 0;
+        const isClosedEnd = currentPage === totalPages;
+        
+        let moveX = "50%"; // Por defecto, abierto y centrado en el lomo
+
+        if (isClosedStart) moveX = "0%"; // Centrado en la portada
+        if (isClosedEnd) moveX = "100%"; // Centrado en la contraportada (opcional, o 0%)
+
+        // Aplicar movimiento
         book.style.transform = `translateX(${moveX})`;
     }
 
-    function initBook() {
-        pages.forEach((page, index) => {
-            page.style.zIndex = pages.length - index;
-        });
-        updateCounter();
-        loadGallery();
-    }
-
-    initBook();
-    window.addEventListener('resize', updateBookPosition);
 });
