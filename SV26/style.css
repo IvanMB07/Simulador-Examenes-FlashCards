@@ -1,0 +1,140 @@
+:root {
+    --bg-dark: #2c1e1a;
+    --leather: #5d4037;
+    --paper: #fdfaf0;
+    --gold: #d4af37;
+    --text-light: #ffffff;
+}
+
+body {
+    background: radial-gradient(circle at center, #4e342e 0%, var(--bg-dark) 100%);
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Quicksand', sans-serif;
+    color: var(--text-light);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ambient-light {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 60%;
+    background: linear-gradient(to bottom, rgba(255,236,179,0.1), transparent);
+    pointer-events: none; z-index: 10;
+}
+
+.main-header {
+    text-align: center; padding: 20px 10px; z-index: 20;
+}
+
+h1 { font-family: 'Playfair Display', serif; font-size: 2.2rem; margin: 0; }
+#counter-box { font-size: 1rem; opacity: 0.9; margin-top: 5px; }
+
+.table-surface {
+    perspective: 2500px;
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.book {
+    width: 350px;
+    height: 500px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.2, 1, 0.3, 1);
+    /* ELIMINADO overflow: hidden aquí para que la página girada se vea */
+}
+
+.page {
+    position: absolute;
+    width: 100%; height: 100%;
+    top: 0; left: 0;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.page-front, .page-back {
+    position: absolute;
+    width: 100%; height: 100%;
+    backface-visibility: hidden;
+    background: var(--paper);
+    /* CORRECCIÓN: El recorte se hace aquí para que las fotos no se salgan */
+    overflow: hidden; 
+    box-shadow: inset 3px 0 10px rgba(0,0,0,0.1);
+}
+
+.page-back { transform: rotateY(180deg); }
+
+.paper-texture {
+    background: var(--paper);
+    background-image: linear-gradient(to right, rgba(0,0,0,0.05) 0%, transparent 10%);
+    border: 1px solid #e0d8c8;
+}
+
+.cover-design {
+    background: var(--leather);
+    color: var(--gold);
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+    border: 4px solid #3e2723;
+    box-shadow: inset 0 0 60px rgba(0,0,0,0.5);
+}
+
+.cover-design h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin: 10px 0; }
+.heart-seal { font-size: 3rem; color: #c62828; }
+.date-label { font-family: 'Dancing Script', cursive; font-size: 1.2rem; }
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px; padding: 25px; height: 100%;
+}
+
+.polaroid-container {
+    perspective: 1000px;
+    width: 100%; height: 180px;
+}
+
+.polaroid-inner {
+    position: relative; width: 100%; height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    transform: rotate(var(--r));
+}
+
+.polaroid-inner.is-flipped { transform: rotateY(180deg) rotate(var(--r)); }
+
+.photo-front, .photo-back {
+    position: absolute; width: 100%; height: 100%;
+    backface-visibility: hidden;
+    background: white;
+    padding: 8px 8px 35px 8px;
+    border: 1px solid #eee;
+}
+
+/* FORMATO JPEG EN CSS (Solo como referencia si usaras backgrounds) */
+.photo-front img { width: 100%; height: 100%; object-fit: cover; }
+
+.photo-back {
+    transform: rotateY(180deg);
+    background: #fffdf2;
+    display: flex; align-items: center; justify-content: center;
+    padding: 10px; text-align: center;
+    font-family: 'Dancing Script', cursive; font-size: 1rem; color: #444;
+}
+
+.page.flipped { transform: rotateY(-180deg); }
+
+.instruction { margin-top: 20px; font-size: 0.9rem; opacity: 0.7; }
+
+@media (max-width: 500px) {
+    .book { width: 310px; height: 460px; }
+    .grid { padding: 15px; gap: 10px; }
+    .polaroid-container { height: 160px; }
+}
