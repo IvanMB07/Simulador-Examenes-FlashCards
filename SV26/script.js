@@ -4,10 +4,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const startDate = new Date('2024-07-16'); 
     const totalPhotos = 16;
     const phrases = [
-        "Nuestro comienzo", "Esa mirada", "Risas locas", "Cena romántica",
-        "Escapada juntos", "Solo tú y yo", "Complicidad", "Paz absoluta",
-        "Abrazos fuertes", "Aventuras", "Magia pura", "Mi hogar",
-        "Siempre juntos", "Inolvidable", "Te amo", "Por mil más"
+        "Esta es porque verte feliz en sitios así me hace infinitamente feliz, y también porque quizá seas mi Medialuna, o mi Polaris o Supernova, quién sabe.", 
+        "Esta es porque me encanta lo bien que salimos y lo bien que nos lo pasamos ese día.", 
+        "Esta no creo que necesite explicación; es tu sitio y me gusta que lo compartas conmigo.", 
+        "Esta es porque, no sé, creo que siempre nos ha representado. Además, se la puse a la primera canción que te escribí.",
+        "Esta es porque fue probablemente la primera foto así, seria, que nos hicimos. Es muy bonita y ya, xd.", 
+        "Esta es porque, aunque no sea un 5 estrellas, nunca falla y siempre estará ahí para nosotros, como tú para mí y yo para ti.", 
+        "Esta es porque fue un día inolvidable y te estoy muy agradecido por acompañarme a tantos conciertos de cantantes que no te gustaban, pero que has empezado a escuchar al estar conmigo.", 
+        "Esta es porque creo que podríamos llamarla \"nuestra foto\".",
+        "Esta es porque simplemente sales guapísima, y así cuando la veas te puedes hacer una idea de cómo te ves a través de mis ojos.", 
+        "Esta es porque, aunque contigo no sea capaz de dormir del tirón toda la noche, es algo que no se puede describir; es algo indescriptible lo que se siente al estar a tu lado por las noches.", 
+        "Esta es porque gracias a él podríamos decir que comenzó todo y, como sabes, es una película muy importante para mí, y fue una experiencia increíble.", 
+        "Esta es porque me apetece, un besazo.",
+        "Esta es porque la vi y fue de cuando empezamos, dos jóvenes alocados por aquel entonces... ahora no tanto, o sí (tristemente no).", 
+        "Esta es porque, aunque no terminó como nos hubiera gustado, mirándolo con perspectiva fue un viaje inolvidable. Fue nuestro primer viaje de novios, aunque no solos, ya tocará (AHORRA).", 
+        "Esta es porque creo que es de las cosas que más nos unió desde el principio de todo, desde Villasequilla. Y el resto, pues bueno, es historia como se suele decir.", 
+        "Esta es porque me lo pasé muy bien en tu pueblo y pudimos arreglar un poco las cosas con tu amiga. Aunque no me termina de convencer el resto, lo importante es que me lo pasé genial ese día."
     ];
 
     // --- ELEMENTOS ---
@@ -24,9 +36,15 @@ document.addEventListener('DOMContentLoaded', () => {
         page.style.zIndex = totalPages - i;
     });
 
-    // 2. CONTADOR
-    const diff = new Date() - startDate;
-    document.getElementById('days-count').textContent = Math.floor(diff / (1000 * 60 * 60 * 24));
+// 2. CONTADOR (Corregido)
+    const today = new Date();
+    const diffTime = today - startDate; 
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+    
+    const counterElement = document.getElementById('days-count');
+    if (counterElement) {
+        counterElement.textContent = diffDays;
+    }
 
     // 3. GENERAR FOTOS
     for (let i = 1; i <= totalPhotos; i++) {
@@ -53,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 4. ZOOM
     function openZoom(index, text) {
         if (currentAudio) currentAudio.pause();
-        const audio = new Audio(`sonidos/audio${index}.mp3`);
+        const audio = new Audio(`sonidos/${index}.mp3`);
         audio.play().catch(() => {});
         currentAudio = audio;
 

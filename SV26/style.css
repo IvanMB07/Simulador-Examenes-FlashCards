@@ -20,6 +20,8 @@ body {
     color: var(--text-dark);
     overflow: hidden;
     touch-action: pan-y;
+
+    
 }
 
 /* Luz ambiental más brillante y limpia */
@@ -57,7 +59,7 @@ h1 {
     transform-style: preserve-3d;
     transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
     /* Sombra más suave y colorida */
-    box-shadow: 0 20px 50px rgba(194, 24, 91, 0.3); 
+    box-shadow: none; 
 }
 
 /* --- PÁGINAS --- */
@@ -71,6 +73,7 @@ h1 {
     position: absolute; width: 100%; height: 100%;
     backface-visibility: hidden;
     border-radius: 4px 10px 10px 4px; /* Bordes más redondeados y suaves */
+    box-shadow: 2px 5px 15px rgba(0,0,0,0.15);
 }
 .back { transform: rotateY(180deg); }
 
@@ -84,30 +87,55 @@ h1 {
 }
 
 .cover-design {
-    background: var(--cover-ruby);
+    background: var(--cover-ruby); 
     color: var(--text-pop);
-    display: flex; flex-direction: column; justify-content: center; align-items: center;
-    /* Sombra interna para dar volumen, pero limpia */
-    box-shadow: inset 0 0 50px rgba(0,0,0,0.2);
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    box-shadow: inset 0 0 50px rgba(0,0,0,0.2); 
     border: none;
+    /* Añadimos padding y overflow para seguridad */
+    padding: 20px;
+    overflow: hidden;
 }
+
 .reverse { border-left: none; }
 
 /* Detalles dorados en portada */
 .gold-border {
-    position: absolute; top: 20px; left: 20px; right: 20px; bottom: 20px;
-    border: 3px solid var(--accent-gold); /* Borde dorado más grueso */
+    position: absolute; 
+    top: 20px; left: 20px; right: 20px; bottom: 20px;
+    border: 3px solid var(--accent-gold); 
     pointer-events: none;
-    box-shadow: 0 0 10px rgba(255, 215, 0, 0.3); /* Brillo dorado */
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.3); 
     border-radius: 8px;
 }
 .cover-design h2 { 
-    font-family: 'Cinzel', serif; font-size: 2.8rem; line-height: 1.1; text-align: center; 
-    text-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    color: var(--text-pop); font-weight: 700;
+    font-family: 'Cinzel', serif; 
+    font-size: 2.2rem;          /* Tamaño ajustado */
+    line-height: 1.1;           /* Interlineado más junto */
+    text-align: center; 
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3); 
+    color: var(--text-pop); 
+    font-weight: 700;
+    margin: 0;                  /* Quitamos margen por defecto */
 }
-.seal { font-size: 3.5rem; margin: 20px 0; text-shadow: 0 5px 10px rgba(0,0,0,0.2); }
-.date { font-family: 'Quicksand', sans-serif; font-size: 1.1rem; color: var(--accent-gold); font-weight: 700; letter-spacing: 1px; }
+.seal { 
+    font-size: 2.5rem;          /* Tamaño reducido */
+    margin: 10px 0;             /* Menos espacio arriba y abajo */
+    text-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+}
+
+.date { 
+    font-family: 'Quicksand', sans-serif; 
+    font-size: 1.1rem; 
+    color: var(--accent-gold); 
+    font-weight: bold; 
+    letter-spacing: 1px;
+    margin: 0;                  /* Quitamos margen por defecto */
+    margin-bottom: 15px;        /* ¡ESTO ES LO QUE ARREGLA QUE SE SALGA! */
+}
 .final-msg { font-family: 'Dancing Script', cursive; font-size: 1.8rem; margin-top: 10px; color: var(--accent-gold); }
 
 /* --- GRID DE FOTOS --- */
@@ -210,4 +238,69 @@ h1 {
 
 @media (max-width: 360px) {
     .scene { transform: scale(0.52); }
+}
+
+/* --- ESTILO DEL MENSAJE SECRETO --- */
+.dedication-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+    color: var(--text-dark);
+}
+
+.message-body {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    font-weight: 500;
+    margin: 20px 0;
+    color: #555;
+}
+
+.message-sign {
+    font-family: 'Dancing Script', cursive; /* Letra manuscrita romántica */
+    font-size: 1.8rem;
+    color: var(--cover-ruby); /* Mismo rojo que la portada */
+    margin-top: 10px;
+}
+
+.corner-ornament {
+    font-size: 1.5rem;
+    color: var(--accent-gold);
+    opacity: 0.8;
+}
+
+.flipped-ornament {
+    transform: rotate(180deg);
+}
+
+/* --- ARREGLO CONTRAPORTADA --- */
+
+/* Estilo para el título "Te Amo mi hadita" */
+.cover-design h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.2rem;      /* Un poco más pequeño que la portada para que quepa */
+    line-height: 1.2;
+    text-align: center;     /* IMPORTANTE: Centra el texto si ocupa dos líneas */
+    color: var(--text-pop);
+    font-weight: 700;
+    margin: 0 0 15px 0;     /* Un poco de espacio debajo */
+    max-width: 90%;         /* Evita que toque los bordes laterales */
+    z-index: 2;             /* Asegura que esté sobre el borde dorado */
+}
+
+/* Estilo mejorado para el mensaje final */
+.final-msg {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.6rem;      /* Tamaño ajustado */
+    color: var(--accent-gold);
+    text-align: center;     /* IMPORTANTE: Centrado */
+    line-height: 1.4;       /* Mejor espaciado entre líneas */
+    max-width: 85%;         /* Margen de seguridad lateral */
+    margin: 0;              /* Quitamos márgenes extraños */
+    z-index: 2;
 }
