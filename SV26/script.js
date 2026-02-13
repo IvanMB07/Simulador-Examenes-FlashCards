@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 4. ZOOM
     function openZoom(index, text) {
         if (currentAudio) currentAudio.pause();
-        const audio = new Audio(`sonidos/${index}.mp3`);
+        const audio = new Audio(`musica/${index}.mp3`);
         audio.play().catch(() => {});
         currentAudio = audio;
 
@@ -165,5 +165,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('click', () => {
         infoBtn.blur();
     });
+
 
 });
