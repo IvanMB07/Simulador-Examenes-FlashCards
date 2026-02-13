@@ -33,8 +33,14 @@ body {
 
 /* --- CABECERA --- */
 .main-header {
-    text-align: center; z-index: 10; margin-top: 30px;
-    text-shadow: 0 2px 5px rgba(255,255,255,0.3);
+    position: absolute; /* Sacamos el título del flujo para que no mueva el libro */
+    top: 40px;          /* AJUSTA AQUÍ: Más número = más abajo el título */
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+    margin: 0;
+    padding: 0;
 }
 h1 { 
     font-family: 'Cinzel', serif;
@@ -161,39 +167,37 @@ h1 {
 .polaroid p { display: none; }
 
 /* --- BOTÓN INFO --- */
-.info-wrapper {
-    position: fixed; bottom: 25px; right: 25px; z-index: 100;
-    display: flex; flex-direction: column; align-items: flex-end;
-}
-
 .info-btn {
-    width: 44px; height: 44px;
-    background: var(--cover-ruby); /* Botón rojo */
+    width: 36px; height: 36px;
+    background-color: var(--cover-ruby); /* Rojo por defecto */
+    color: var(--text-pop);
     border: 2px solid var(--accent-gold);
     border-radius: 50%;
-    color: var(--text-pop); font-family: 'Quicksand', sans-serif; font-weight: bold; font-size: 1.2rem;
-    cursor: pointer; transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(194, 24, 91, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
-.info-btn:hover, .info-btn:focus {
-    transform: scale(1.1) rotate(10deg);
-    background: var(--accent-gold); color: var(--cover-ruby);
+/* LA ÚNICA REGLA PARA EL COLOR AMARILLO */
+.info-btn.active {
+    background-color: var(--accent-gold) !important;
+    color: var(--cover-ruby) !important;
+    transform: scale(1.1);
 }
 
+/* EL TOOLTIP */
 .info-tooltip {
-    position: absolute; bottom: 55px; right: 0;
-    background: #fff; /* Fondo blanco limpio */
-    padding: 15px; border-radius: 12px; 
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    width: 220px; text-align: right;
-    opacity: 0; pointer-events: none; transform: translateY(10px);
-    transition: all 0.3s ease; color: var(--text-dark);
+    position: absolute; bottom: 50px; right: 0;
+    background: #fff; padding: 15px; border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1); width: 200px;
+    opacity: 0; pointer-events: none;
+    transition: all 0.3s ease;
 }
-.info-btn:hover + .info-tooltip, .info-btn:focus + .info-tooltip {
-    opacity: 1; pointer-events: auto; transform: translateY(0);
+
+.info-tooltip.active {
+    opacity: 1; pointer-events: auto;
 }
-.info-tooltip p { margin: 8px 0; font-size: 0.9rem; line-height: 1.4; font-weight: 500; }
 
 /* --- ZOOM OVERLAY --- */
 .overlay {
@@ -233,8 +237,49 @@ h1 {
     .book { height: 420px; }
     .grid { gap: 10px; padding: 15px; }
     .polaroid { padding-bottom: 22px; }
-    .info-wrapper { bottom: 20px; right: 20px; }
+/* --- BOTÓN INFO (CORREGIDO) --- */
+.info-wrapper {
+    position: fixed; bottom: 25px; right: 25px; z-index: 100;
+    display: flex; flex-direction: column; align-items: flex-end;
 }
+
+.info-btn {
+    /* --- CAMBIO 1: TAMAÑO MÁS PEQUEÑO --- */
+    width: 36px; height: 36px;          /* Antes era 44px */
+    font-size: 1rem;                    /* Letra más pequeña */
+    
+    background: var(--cover-ruby); border: 2px solid var(--accent-gold);
+    border-radius: 50%; color: var(--text-pop); 
+    font-family: 'Quicksand', sans-serif; font-weight: bold; 
+    cursor: pointer; transition: all 0.3s ease; 
+    box-shadow: 0 4px 15px rgba(194, 24, 91, 0.4);
+    /* Quitamos el outline feo que ponen los navegadores al hacer clic */
+    outline: none; 
+}
+
+/* --- CAMBIO 2: SOLO HOVER, NO FOCUS --- */
+/* Quitamos el :focus para que el estilo no se quede pegado tras el clic */
+.info-btn:hover {
+    transform: scale(1.1) rotate(10deg); 
+    background: var(--accent-gold); 
+    color: var(--cover-ruby);
+}
+/* Efecto de pulsación momentáneo */
+.info-btn:active {
+    transform: scale(0.95);
+}
+
+.info-tooltip {
+    position: absolute; bottom: 50px; right: 0; background: #fff; padding: 15px; border-radius: 12px; 
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1); width: 200px; text-align: right;
+    opacity: 0; pointer-events: none; transform: translateY(10px); transition: all 0.3s ease; color: var(--text-dark);
+}
+
+/* El JS se encarga de poner y quitar esta clase 'active' */
+.info-tooltip.active {
+    opacity: 1; pointer-events: auto; transform: translateY(0);
+}
+.info-tooltip p { margin: 8px 0; font-size: 0.85rem; line-height: 1.4; font-weight: 500; }}
 
 @media (max-width: 360px) {
     .scene { transform: scale(0.52); }
@@ -303,4 +348,33 @@ h1 {
     max-width: 85%;         /* Margen de seguridad lateral */
     margin: 0;              /* Quitamos márgenes extraños */
     z-index: 2;
+}
+
+/* --- ESTILO DE LA FECHA EN EL ZOOM --- */
+/* --- ESTILO DE LA FECHA EN EL ZOOM (VERSIÓN ABAJO) --- */
+.zoom-date {
+    position: absolute;
+    bottom: 0;             /* La anclamos al final de la tarjeta */
+    left: 0;
+    width: 100%;
+    height: 15%;           /* Le damos el 15% del espacio inferior */
+    display: flex;         /* Usamos flex para centrar el texto perfecto */
+    justify-content: center;
+    align-items: center;
+    
+    font-family: 'Dancing Script', cursive; /* Queda más bonito tipo firma */
+    font-weight: 700;
+    font-size: 1.4rem;     /* Un poco más grande */
+    color: var(--text-dark); /* Color oscuro para que se lea bien sobre blanco */
+    z-index: 10;
+}
+
+/* --- AJUSTE DE LA FOTO GIGANTE --- */
+.big-front img {
+    margin-top: 0;         /* Quitamos el margen de arriba */
+    width: 100%;
+    height: 85% !important; /* La foto ocupa el 85%, dejando el 15% abajo para la fecha */
+    object-fit: cover;
+    border-radius: 4px 4px 0 0; /* Redondeamos solo las esquinas de arriba */
+    display: block;
 }

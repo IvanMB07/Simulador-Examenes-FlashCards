@@ -22,6 +22,24 @@ document.addEventListener('DOMContentLoaded', () => {
         "Esta es porque me lo pasé muy bien en tu pueblo y pudimos arreglar un poco las cosas con tu amiga. Aunque no me termina de convencer el resto, lo importante es que me lo pasé genial ese día."
     ];
 
+    const photoDates = [
+        "31/01/2026", 
+        "20/06/2025", 
+        "31/08/2023", 
+        "11/09/2023", 
+        "07/10/2023", 
+        "06/12/2023", 
+        "26/05/2024", 
+        "14/07/2024", 
+        "12/09/2024", 
+        "13/09/2024", 
+        "17/09/2024", 
+        "24/11/2024", 
+        "17/07/2023", 
+        "31/07/2025", 
+        "28/07/2023", 
+        "27/08/2025"
+    ]
     // --- ELEMENTOS ---
     const book = document.getElementById('book');
     const pages = document.querySelectorAll('.page');
@@ -62,15 +80,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
         card.addEventListener('click', (e) => {
             e.stopPropagation(); 
-            openZoom(imgIndex, phrases[imgIndex - 1]);
+            openZoom(imgIndex, phrases[imgIndex - 1], photoDates[imgIndex - 1]);
         });
 
         container.appendChild(card);
     }
 
     // 4. ZOOM
-    function openZoom(index, text) {
+    function openZoom(index, text, date) {
         if (currentAudio) currentAudio.pause();
+        
+        // Usamos la carpeta "musica" como me has dicho
         const audio = new Audio(`musica/${index}.mp3`);
         audio.play().catch(() => {});
         currentAudio = audio;
@@ -78,6 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
         zoomContent.innerHTML = `
             <div class="big-card">
                 <div class="big-face big-front">
+                    <div class="zoom-date">${date}</div>
                     <img src="fotos/${index}.jpeg">
                 </div>
                 <div class="big-face big-back">
@@ -155,16 +176,27 @@ document.addEventListener('DOMContentLoaded', () => {
         book.style.transform = `translateX(${moveX})`;
     }
 
-    const infoBtn = document.getElementById('info-btn');
-    
-    infoBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        infoBtn.focus();
-    });
-    
-    document.addEventListener('click', () => {
-        infoBtn.blur();
-    });
+    // --- LÓGICA DE INTERRUPTOR SIMPLE ---
+const infoBtn = document.getElementById('info-btn');
+const infoTooltip = document.getElementById('info-tooltip');
 
+if (infoBtn && infoTooltip) {
+    infoBtn.addEventListener('click', (e) => {
+        e.stopPropagation(); // Evita que el clic "atraviese" el botón
+        
+        // El 'toggle' añade la clase si no está, y la quita si está. 
+        // Es el interruptor perfecto.
+        infoBtn.classList.toggle('active');
+        infoTooltip.classList.toggle('active');
+    });
+}
+
+// Si pulsas en cualquier otra parte del libro, se apaga todo
+document.addEventListener('click', () => {
+    infoBtn.classList.remove('active');
+    infoTooltip.classList.remove('active');
+});
+
+    
 
 });
