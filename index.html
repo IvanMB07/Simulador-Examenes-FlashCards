@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simuladores de Estudio</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .contenedor {
+            max-width: 800px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #3a9eff, #7b68ee);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        p {
+            color: #aaa;
+            margin-bottom: 50px;
+            font-size: 1.1em;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        .tarjeta {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 40px 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        .tarjeta:hover {
+            border-color: rgba(58, 158, 255, 0.8);
+            box-shadow: 0 0 30px rgba(58, 158, 255, 0.2);
+            transform: translateY(-5px);
+            background: rgba(58, 158, 255, 0.1);
+        }
+        .icono {
+            font-size: 3em;
+        }
+        .titulo {
+            font-size: 1.5em;
+            font-weight: 600;
+        }
+        .descripcion {
+            font-size: 0.9em;
+            color: #aaa;
+        }
+        @media (max-width: 600px) {
+            h1 { font-size: 1.8em; }
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>📚 Simuladores de Estudio</h1>
+        <p>Elige el proyecto que quieres estudiar</p>
+        
+        <div class="grid">
+            <a href="simulador-iso/index.html" class="tarjeta">
+                <div class="icono">🖥️</div>
+                <div class="titulo">Simulador ISO II</div>
+                <div class="descripcion">Examen Ingeniería del Software II</div>
+            </a>
+            
+            <a href="flashcards-ipo/index.html" class="tarjeta">
+                <div class="icono">📚</div>
+                <div class="titulo">Flashcards IPO</div>
+                <div class="descripcion">Interacción Persona-Ordenador</div>
+            </a>
+
+          <a href="simulador-API/index.html" class="tarjeta">
+                <div class="icono">🖥️</div>
+                <div class="titulo">Simulador API</div>
+                <div class="descripcion">Examen Apectos Profesionales de la Informática</div>
+            </a>
+
+            
+        </div>
+    </div>
+</body>
+</html>
