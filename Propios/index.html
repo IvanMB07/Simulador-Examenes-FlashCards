@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Creaciones</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Georgia', serif; 
+            background-color: #fdf6e3; /* Papel crema */
+            color: #5c4b37; /* Marrón suave */
+            padding: 50px 20px;
+        }
+        .contenedor { max-width: 800px; margin: 0 auto; }
+        .header { text-align: center; margin-bottom: 60px; border-bottom: 2px solid #eee; padding-bottom: 20px; }
+        h1 { font-style: italic; font-weight: 400; font-size: 2.8em; color: #8c6d46; }
+        
+        .lista-proyectos { list-style: none; }
+        .proyecto-item { 
+            margin-bottom: 25px; 
+            padding: 20px; 
+            background: #fff; 
+            border-radius: 20px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-decoration: none;
+            color: inherit;
+            transition: 0.3s;
+        }
+        .proyecto-item:hover { transform: scale(1.02); box-shadow: 0 6px 20px rgba(140, 109, 70, 0.15); }
+        .nombre { font-size: 1.3em; font-weight: bold; color: #8c6d46; }
+        .flecha { color: #d1bfa7; font-size: 1.5em; }
+        
+        .btn-inicio { 
+            display: block; margin-top: 40px; text-align: center; 
+            color: #b5a48b; text-decoration: none; font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="header">
+            <h1>Rincón Personal</h1>
+            <p>Hecho con paciencia y café.</p>
+        </div>
+
+        <div class="lista-proyectos">
+            <a href="fart-counter/index.html" class="proyecto-item">
+                <div>
+                    <span class="nombre">💨 Fart Counter</span>
+                </div>
+                <span class="flecha">→</span>
+            </a>
+
+            <a href="Restaurantes/index.html" class="proyecto-item">
+                <div>
+                    <span class="nombre">🍴 Restaurantes</span>
+                </div>
+                <span class="flecha">→</span>
+            </a>
+
+            <a href="SV26/index.html" class="proyecto-item">
+                <div>
+                    <span class="nombre">🛠️ SV26</span>
+                </div>
+                <span class="flecha">→</span>
+            </a>
+        </div>
+
+        <a href="../index.html" class="btn-inicio">Volver a la puerta principal</a>
+    </div>
+</body>
+</html>
