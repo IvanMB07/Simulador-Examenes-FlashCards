@@ -1,0 +1,2615 @@
+[
+    {
+        "cuestion": "SSDD-1718X-Q1- Se deseaimplementar exclusión mutua en unsistema distribuido formadopor N procesosmediante elalgoritmo del anillo con testigo. Los procesos se ordenan en el anillo mediante los ID de procesos i=0..N-1.Se dispone de la primitiva send(i, j, token) y receive(i,j,token) donde i es el identificador del proceso receptor y j el identificador del proceso emisor, con i,j=[0,N-1]. ¿Qué par de primitivas debería ejecutar el proceso i=2?",
+        "opciones": [
+            "A) send(3, 2, token); receive(3, 2, token);",
+            "C) send(1, 2, token); receive(3, 2, token);",
+            "B) send(3, 2, token); receive(2, 1, token);",
+            "D) send(2, 3, token); receive(2, 1, token);"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1718X-Q2- En la ejecución del algoritmo de Cristian, un cliente envía un mensaje de sincronización y, pasados 2 segundos, recibe la respuesta con un tiempo de servidor Ts=10h.5min.3seg. ¿Cuál es el tiempo al que podría actualizar su hora este computador?",
+        "opciones": [
+            "A) 10h.5min.3seg",
+            "C) 10h.5min.5seg",
+            "B) 10h.5min.4seg",
+            "D) 10h.5min.1seg E. [2p] Dados los procesos p1 y p2, con prefijos de historia h1 y h2, respectivamente: h1 = abrir fichero f, leer f, calcular estadísticas, send(p2, estadísticas). h2 = recibir(p1, estadísticas), send(p1,ack). 3 ¿Qué tipo de corte forman la unión deambos prefijos de historia?",
+            "A) Corte consistente",
+            "C) Corte global alcanzable",
+            "B) Corte inconsistente",
+            "D) No se puede saber 4 Llamamos frontera de un corte al último evento de cada proceso almacenado en ese corte, ¿Cuál es la frontera del corte con las historias descritas h1 y h2?",
+            "A) leer fichero f, calcular estadísticas, send(p2, estadísticas), recibir(p1, estadísticas), send(p1, ack)",
+            "B) send(p2, estadísticas), send(p1, ack)",
+            "C) abrir fichero f, recibir(p1, estadísticas)",
+            "D) calcular estadísticas, send(p2, estadísticas), recibir(p1, estadísticas), send(p1, ack)"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1718X-Q5- ¿Cuál de las siguientes no es una aplicación del algoritmo de Chandy-Lamport?",
+        "opciones": [
+            "A) Recolección de basura",
+            "C) Detección de terminación de un proceso",
+            "B) Detección de interbloqueos",
+            "D) Detección de eventos concurrentes"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1718X-Q6- ¿Qué es un sistema tolerante a fallos?",
+        "opciones": [
+            "A) Sistema muy robusto en el que no se producen fallos de ningún tipo",
+            "B) Sistema que permite la ejecución continuada del sistema, posiblemente degradada, aún en presencia de fallos",
+            "C) Sistema que cumple con todas las especificaciones del sistema en presencia de cualquier tipo de fallo",
+            "D) Sistema que persigue la consistencia de la información 12 de junio de 2018 1/4 Sistemas Distribuidos",
+            "A) Curso 17/18 :: Parcial 2 (extraordinaria) Escuela Superior de Informática"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1718X-Q7- ¿Qué método de replicación no es un método pesimista?",
+        "opciones": [
+            "A) Copia primaria",
+            "C) Vectores de versiones",
+            "B) Réplicas activas",
+            "D) Quorum"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1718X-Q8- Sea N=49 el número de réplicas hoja de un sistema distribuido. En un sistema de votación jerárquica ¿cuántas réplicas hay en el nivel intermedio?",
+        "opciones": [
+            "A) 49",
+            "C) 1",
+            "B) 7",
+            "D) 56"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1718X-Q9- Dado un sistema compuesto por k=3 componentes en paralelo, donde la fiabilidad de cada componente es r(i)=0.8. ¿Cuál es la probabilidad del fallo Q(t) del sistema y cuál su fiabilidad R(t)?",
+        "opciones": [
+            "A) Q(t)=0.008, R(t)=0.992",
+            "C) Q(t)=0.2, R(t)=2.4",
+            "B) Q(t)=0.488, R(t)=0.512",
+            "D) Q(t)=0.512, R(t)=0.488 E. [2p] En un sistema distribuido el proceso P4 envía dos mensajes multicast (m1, m2) a un grupo g compuesto por los procesos g=(P1, P2, P3). 10 ¿Qué tipo de grupo es g?",
+            "A) Grupo abierto",
+            "C) Grupo IP multicast",
+            "B) Grupo cerrado",
+            "D) Grupo R-multicast 11 En el mismo escenario, el proceso P1 envía dos mensajes multicast (m1, m2) y P2 envía (m3, m4). Los procesos P1 y P3 reciben (m1, m3, m2 y m4) y P2 y P4 reciben (m1, m4, m2 y m3). ¿Qué ordenación se está preservando en el sistema?",
+            "A) Orden FIFO",
+            "C) Orden total",
+            "B) Orden causal",
+            "D) No se preserva ningún orden"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1718X-Q12- ¿Cuál de las siguientes condiciones no se cumple en el multicast fiable?",
+        "opciones": [
+            "A) Integridad",
+            "C) Acuerdo uniforme",
+            "B) Validez",
+            "D) Terminación"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1718X-Q13- ¿Qué quiere decir que el emisor y el receptor en un sistema de comunicación indirecta están desacoplados en tiempo?",
+        "opciones": [
+            "A) Emisor y receptor no necesitan existir al mismo tiempo",
+            "B) Emisor no necesita conocer la identidad del receptor y viceversa",
+            "C) Emisor y receptor necesitan existir al mismo tiempo",
+            "D) Emisor necesita conocer la identidad del receptor y viceversa"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1718X-Q14- ¿Qué modelo de subscripción de un sistema publish-subscribe se usa cuando el filtro es una consulta definida sobre los valores de los atributos de cada evento?",
+        "opciones": [
+            "A) Basado en canal.",
+            "C) Basado en contenido.",
+            "B) Basado en tópicos.",
+            "D) Basado en tipos. 12 de junio de 2018 2/4 Sistemas Distribuidos",
+            "A) Curso 17/18 :: Parcial 2 (extraordinaria) Escuela Superior de Informática E. [6p] Sea el siguiente escenario para los procesos P0, P1 y P2: 15 Indique cuáles son los relojes lógicos de Lamport de los eventos g, l y m:",
+            "A) RL(g)= 4; RL(l)=4 ; RL(m)=5",
+            "C) RL(g)=4 ; RL(l)=3 ; RL(m)=5",
+            "B) RL(g)= 3; RL(l)= 4; RL(m)=5",
+            "D) RL(g)=3 ; RL(l)=3 ; RL(m)=6 16 Indique cuáles son los relojes vectoriales de los eventos d, i y m:",
+            "A) RV(d)= (4,3,1); RV(i)=(1,5,3); RV(m)=(1,5,4)",
+            "B) RV(d)= (3,2,2); RV(i)=(2,4,4); RV(m)=(2,4,5)",
+            "C) RV(d)= (3,3,3); RV(i)=(2,5,4) ; RV(m)=(1,6,4)",
+            "D) RV(d)= (4,3,3); RV(i)=(3,5,3) ; RV(m)=(2,4,6) E. [6p] Dado un conjunto de N nodos, con N=8, que usa el método de votación dinámica (quórum) para mantener la consistencia de las réplicas:"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1718X-Q17- Indique cuál de los siguientes opciones no es un quórum válido (R=réplicas de lectura y W=réplicas de",
+        "opciones": [
+            "A) escritura):",
+            "A) R=3, W=6",
+            "C) R=5, W=3",
+            "B) R=4, W=5",
+            "D) R=8, W=8"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1718X-Q18- Para un quorum R,W=5, con un porcentaje de lecturas p=80%, un coste de lectura CL=5 y un coste de escritura tres veces el coste de lectura, ¿cuál es el coste medio de lecturas y escrituras?:",
+        "opciones": [
+            "A) 45",
+            "C) 13",
+            "B) 35",
+            "D) 28"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1718X-Q19- Durante la ejecución del sistema se produce un fallo en la red que da lugar a dos particiones p1 = (1,2,3,5,6) y p2 = (4,7,8). En ese momento, todos los nodos en p1 y p2 tienen el valor NV=15 y SC=8. Determine los valores de NV y SC para los nodos 1, 5 y 8 tras intentar actualizar p1:",
+        "opciones": [
+            "A) Nodo 1=(NV=16, SC=5); Nodo 5=(NV=16,SC=5); Nodo 8=(NV=15,SC=8)",
+            "B) Nodo 1=(NV=16, SC=5); Nodo 5=(NV=15,SC=8); Nodo 8=(NV=15,SC=8)",
+            "C) Nodo 1=(NV=15, SC=8); Nodo 5=(NV=15,SC=8); Nodo 8=(NV=15,SC=8)",
+            "D) Nodo 1=(NV=15, SC=5); Nodo 5=(NV=15,SC=5); Nodo 8=(NV=16,SC=8) 12 de junio de 2018 3/4 Sistemas Distribuidos",
+            "A) Curso 17/18 :: Parcial 2 (extraordinaria) Escuela Superior de Informática E. [8p] Considere el siguiente sistema distribuido formado por 4 procesos con IDs 1,2, 3 y 4. 20 Si el sistema usa exclusión mutua centralizada y todos los procesos envían un mensaje al coordinador para entrar en la sección crítica (SC) al mismo tiempo ¿cuántos mensajes son necesarios para que el proceso 4 logre entrar en la SC? Asuma que el coordinador ordena los mensajes de menor a mayor ID, es decir, atiende al proceso de menor ID primero y tenga en cuenta los cuatro mensajes de petición iniciales:",
+            "A) 10",
+            "C) 8",
+            "B) 6",
+            "D) 11 21 Si el sistema usa exclusión mutua distribuida basada en anillo con testigo. ¿Cuál es el número de mensajes que deben transferirse para que el proceso con id 4 logre entrar en la sección crítica? Asuma que el anillo se ordena de menor a mayor id de proceso, el token que le da acceso se encuentra en el proceso con id 1 y el token se mueve en el sentido de las agujas del reloj:",
+            "A) 5",
+            "C) 4",
+            "B) 1",
+            "D) 3 22 Si el sistema usa exclusión mutua distribuida basada en el algoritmo de Ricart y Agrawala y los procesos 1 y 3 con marcas de tiempo MT(1)=3, MT(3)=6, respectivamente, solicitan entrar en la sección crítica al mismo tiempo, ¿Cuál es el número de mensajes que deben transferirse para que el proceso 1 logre entrar en la sección crítica? Asuma que los procesos no envían mensajes a sí mismo y que no hay ningún proceso en la sección crítica:",
+            "A) 7",
+            "C) 8",
+            "B) 9",
+            "D) 11 23 En el escenario anterior, si el sistema dispone de primitivas multicast ¿Cuántos mensajes son necesarios?",
+            "A) 5",
+            "C) 2",
+            "B) 4",
+            "D) 7 12 de junio de 2018 4/4"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q5- ¿En qué consiste la técnica de polling en un sistema de colas de mensajes?",
+        "opciones": [
+            "A) El consumidor se bloquea hasta que exista un mensaje en la cola.",
+            "B) El consumidor continúa su ejecución y cuando exista un mensaje en la cola recibe una notificación.",
+            "C) El consumidor sondea periódicamente la cola para detectar si existe algún mensaje en la cola.",
+            "D) El productor envía periódicamente mensajes al sistema de colas."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q6- ¿Qué técnica de comunicación indirecta implementa, por defecto, comunicación unicast?",
+        "opciones": [
+            "A) Colas de mensajes",
+            "C) Comunicación en grupos",
+            "B) Sistemas basados en eventos",
+            "D) Memoria compartida distribuida 09 de enero de 2020 1/5 Sistemas Distribuidos Curso 19/20 :: Prueba 2 Escuela Superior de Informática"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q7- Complete la siguiente frase para definir el concepto de comunicación indirecta: «Un sistema de comunicación indirecta permite...",
+        "opciones": [
+            "A) ... comunicación entre entidades a través de un intermediario proporcionando así desacoplamiento en tiempo y espacio».",
+            "B) ... el envío de un mensaje multicast a un conjunto de procesos del mismo grupo»",
+            "C) ... diseminación de eventos a un gran conjunto de subscriptores».",
+            "D) ... comunicación entre entidades a través de memoria compartida»."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q8- En el contexto de comunicación indirecta, ¿qué quiere decir desacoplamiento en espacio?",
+        "opciones": [
+            "A) Emisores/Receptores pueden tener tiempos de vida diferentes.",
+            "B) Se desconoce la identidad de emisores/receptores.",
+            "C) Emisores/Receptores no necesitan coexistir al mismo tiempo.",
+            "D) Emisores/Receptores necesitan compartir un espacio de direcciones."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q9- ¿Cuál de las siguientes funciones no es implementada por el broker de un sistema publish-subscribe?",
+        "opciones": [
+            "A) Relacionar los publicadores de mensajes con sus subscriptores.",
+            "B) Garantizar la entrega fiable de mensajes a todos los subscriptores.",
+            "C) Determinar la estructura que deben tener los mensajes que se publican/reciben.",
+            "D) Enrutar los mensajes desde los publicadores hasta sus subscriptores."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q11- ¿Qué modelo de subscripción permite especificar un filtro como una condición lógica sobre los valores de los atributos del evento?",
+        "opciones": [
+            "A) Basado en canales",
+            "C) Basados en contenidos",
+            "B) Basado en temas",
+            "D) Basado en claves"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q12- Indique la frase incorrecta sobre el enrutamiento de eventos:",
+        "opciones": [
+            "A) Puede explotar la información transportada en los eventos para determinar la ruta a los subscriptores.",
+            "B) Puede necesitar conocer los subscriptores que cada broker en la red mantiene.",
+            "C) Un solo broker es responsable de determinar el enrutamiento.",
+            "D) La decisión de enrutamiento es tomada en cada broker de la red."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q13- ¿Qué indica el sesgo (skew)?",
+        "opciones": [
+            "A) La diferencia instantánea entre dos relojes lógicos.",
+            "B) La diferencia instantánea entre dos relojes físicos.",
+            "C) Diferencia entre el valor actual y pasado de un reloj lógico.",
+            "D) La tasa de cambio de un reloj de cristal de cuarzo."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q14- ¿Cuál es una interpretación correcta del concepto de «causalidad potencial»?",
+        "opciones": [
+            "A) Si un evento es un efecto, su causa le precede en la historia de eventos.",
+            "B) Si un evento tiene la capacidad de causar otro, deberá considerarse posterior.",
+            "C) Dos eventos en distintos nodos nunca tienen relación de orden.",
+            "D) Define ambos componentes de los relojes lógicos de orden total. 09 de enero de 2020 2/5 Sistemas Distribuidos Curso 19/20 :: Prueba 2 Escuela Superior de Informática"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q15- ¿Por qué el algoritmo de Berkeley proporciona sincronización interna?",
+        "opciones": [
+            "A) Solo funciona en redes de área local.",
+            "B) Puede proporcinar también sincronización externa.",
+            "C) El servidor central no tiene acceso a servidores fuera de la red.",
+            "D) Ninguna de las marcas temporales es considerada como referencia."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q16- El cálculo que se aplica en el algoritmo de Cristian trata de acotar...",
+        "opciones": [
+            "A) ... el error causado por un ancho de banda asimético.",
+            "B) ... el error causado por la latencia de la red.",
+            "C) ... la cantidad de mensajes necesarios para la sincronización de un grupo.",
+            "D) ... el número de nodos que forma parte del grupo de réplicas."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q17- ¿Qué propiedad ofrecen los relojes vectoriales?",
+        "opciones": [
+            "A) Representan causalidad potencial.",
+            "B) Evitan cortes inconsistentes.",
+            "C) Reducen la sobrecarga de sincronización.",
+            "D) Dos o más eventos serán concurrentes si tienen el mismo valor de su reloj lógico."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q18- Señale qué afirmación es correcta para el concepto de corte consistente:",
+        "opciones": [
+            "A) Al corte consistente es suficiente con incluir las causas e ignorar los efectos",
+            "B) Al corte consistente le pueden faltar efectos, pero no causas",
+            "C) Un corte consistente siempre tiene la causa y su efecto incluido",
+            "D) Al corte consistente le pueden faltar causas, pero no efectos"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q19- ¿Por qué un recolector de basura distribuido necesita averiguar el estado global del sistema?",
+        "opciones": [
+            "A) Es necesario averiguar el momento exacto en el que todos los procesos han salido de la sección crítica distribuida.",
+            "B) Las referencias existentes a un objeto podrían estar contenidas solo en mensajes en tránsito.",
+            "C) No se requiere disponer del estado global para implentar un recolector de basura distribuido.",
+            "D) Formalmente no es posible implementar recolección de basura distribuida."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q20- De las situaciones siguientes ¿cuál requiere un mecanismo de exclusión mutua distribuida?",
+        "opciones": [
+            "A) El control de una grúa robotizada desde una estación base y varios operarios en planta.",
+            "B) Un sistema de ficheros distribuido que dispone de implementaciones para diferentes sistemas operativos.",
+            "C) Un broker de propagación de eventos.",
+            "D) Una impresora compartida."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q21- En multidifusión ¿a qué nos referimos con un grupo cerrado?",
+        "opciones": [
+            "A) Sólo los miembros del grupo pueden enviar mensajes al grupo.",
+            "B) Para formar parte del grupo los miembros deben conseguir exclusión mutua.",
+            "C) Todos los procesos se ejecutan sobre computadores de una misma LAN.",
+            "D) Los mensajes enviados al grupo tienen un tamaño predefinido."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q22- ¿Por qué no es posible implementar algoritmos de consenso en sistemas asíncronos?",
+        "opciones": [
+            "A) Es imposible distinguir entre un enlace o proceso lento, y un proceso/nodo caído.",
+            "B) Los algoritmos de consenso requieren restricciones de tiempo real muy exigentes.",
+            "C) Los algoritmos de consenso requieren un reloj físico global.",
+            "D) En las redes asíncronas aparecen fallos no recuperables. 09 de enero de 2020 3/5 Sistemas Distribuidos Curso 19/20 :: Prueba 2 Escuela Superior de Informática"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q23- ¿Por qué el algoritmo de la instantanea (snapshot) incluye el registro de los mensajes recibidos (obviando la",
+        "opciones": [
+            "A) marca) cuando se captura el estado local de cada proceso?",
+            "A) Falso. Se guarda el contenido de los canales, pero se descartan los mensajes como estado local.",
+            "B) Falso. El algoritmo solo considera las variables internas del proceso entre la marca original y la final.",
+            "C) El contenido de los mensajes tiene el potencial de cambiar el estado local de proceso receptor.",
+            "D) El instante en el que llegan los mensajes determina el orden en el que se hace la captura del estado local."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q24- ¿Qué es el «vector de decisión» en un problema de consistencia interactiva?",
+        "opciones": [
+            "A) Los datos de entrada del algoritmo.",
+            "B) El reloj vectorial que acuerdan todos los miembros del grupo.",
+            "C) El conjunto de valores propuestos por cada proceso participante.",
+            "D) La secuencia de todos los valores propuestos hasta llegar al acuerdo."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q25- Construir un sistema que emplea multidifusión sobre el protocolo IP, implica la utilización de:",
+        "opciones": [
+            "A) SNMP",
+            "B) TCP",
+            "C) UDP",
+            "D) RPC"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q26- Un sistema de multidifusión dado garantiza que los mensajes enviados por un mismo proceso llegarán a los receptores en el mismo orden en el que fueron enviados. ¿Qué tipo de multidifusión es?",
+        "opciones": [
+            "A) Reliable mcast",
+            "C) Causal Order mcast",
+            "B) FIFO mcast",
+            "D) Total Order mcast"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q27- En transacciones, ¿qué propiedad me garantiza que un sistema transaccional ejecuta una transacción entre estados consistentes?",
+        "opciones": [
+            "A) Atomicity",
+            "B) Consistency",
+            "C) Isolation",
+            "D) Durability"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q28- Indique la respuesta mas correcta. La «actualización perdida» en transacciones:",
+        "opciones": [
+            "A) El resto de respuestas son todas correctas.",
+            "B) Ocurre siempre entre transacciones que sólo leen.",
+            "C) Ocurre cuando una transacción utiliza un valor obsoleto para fijar un nuevo estado.",
+            "D) Ocurre cuando una transacción de lectura y una de actualización se ejecutan de forma concurrente."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q29- En un sistema transaccional ¿Qué sistema de control de concurrencia detecta problemas a posteriori y puede ser necesario deshacer?",
+        "opciones": [
+            "A) Bloqueos",
+            "C) Control optimista",
+            "B) Ordenación",
+            "D) Abusón de García Molina"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q31- La fiabilidad de un sistema es:",
+        "opciones": [
+            "A) la tasa de fallos de ese sistema en un periodo concreto de tiempo.",
+            "B) una medida de conformidad con una especificación autorizada de su comportamiento.",
+            "C) la seguridad de un sistema en cuanto a que no pueda ocasionar daños a personas.",
+            "D) un concepto amplio que incluye todas las anteriores respuestas. 09 de enero de 2020 4/5 Sistemas Distribuidos Curso 19/20 :: Prueba 2 Escuela Superior de Informática"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q32- Un modelo de consistencia fuerte:",
+        "opciones": [
+            "A) utiliza un esquema de replicación optimista.",
+            "B) utiliza un esquema de replicacion pesimista.",
+            "C) es válido cuano hay pocos accesos concurrentes en escritura.",
+            "D) permite actualizaciones locales sin ningún tipo de restricciones. 09 de enero de 2020 5/5"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q1- ¿En qué caso NO es adecuado a priori el uso de un middleware de colas de mensajes distribuidas?",
+        "opciones": [
+            "A) Emisores y receptores no están activos al mismo tiempo.",
+            "B) Los receptores se encuentran dispersos en múltiples nodos de la red.",
+            "C) Los emisores esperan los resultados del cómputo realizado en los receptores.",
+            "D) Se desea persistencia de los mensajes."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q2- ¿Cuál de los siguientes suele ser un efecto indeseable de los sistemas de comunicación indirecta?",
+        "opciones": [
+            "A) Disminución del ancho de banda.",
+            "C) Disminución del rendimiento.",
+            "B) Aumento de la latencia.",
+            "D) Aumento de la tasa de fallos"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q3- ¿Cuál NO es una función del broker en un middleware de comunicación indirecta?",
+        "opciones": [
+            "A) Determinar a qué subscriptores debe llegar cada mensaje.",
+            "B) Gestionar la creación/destrucción de canales, topics o colas.",
+            "C) Enviar mensajes a los subscriptores.",
+            "D) Determinar el tipo de filtrado más adecuado en cada caso."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q4- ¿Por qué los sistemas de comunicación indirecta se consideran en su mayoría asíncronos?",
+        "opciones": [
+            "A) El emisor es notificado de la entrega mediante un mensaje asíncrono.",
+            "B) El broker envía los mensajes a los subscriptores mediante una invocación no bloqueante sin respuesta tipo RRA.",
+            "C) El emisor no puede hacer ninguna asunción sobre el instante en que el mensaje llega al receptor.",
+            "D) El subscriptor informa al broker mediante un flag tipo piggybacking"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q5- ¿Cuáles son las ventajas del uso de filtros en los sistemas comunicación indirecta? (marque 2)",
+        "opciones": [
+            "A) Ahorrar en recursos de red entre broker y receptor.",
+            "B) Ahorrar en recursos de red entre emisor y broker.",
+            "C) Ahorrar en procesamiento en los receptores.",
+            "D) Ahorrar en procesamiento en el broker."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q6- Explica cómo construirías un sistema de propagación de eventos de tipo publicación-subscripción utilizando únicamente tecnología RPC. Los publicadores serían clientes que invocan RPC sobre el broker. El broker sería un servidor RPC al igual que los subscriptores. Un proce- dimiento publish(topic, event) permitiriría al publicador enviar un evento a un canal dado indicando su nombre. El subscriptor tendría que invocar un procedimiento subscribe(topic, endpoint) para informar al brocker sobre el canal al que quiere subscribirse e información sobre el endpoint de su servidor. Otros diseños y enfoques similares podrían ser igualmente válidos.",
+        "opciones": [],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q7- ¿Cual de los siguientes algoritmos no es útil para sincronizar tiempo físico:?",
+        "opciones": [
+            "A) Cristian",
+            "C) Lamport",
+            "B) Berkeley",
+            "D) Todos los algoritmos valen"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q8- En un proceso que forma parte de un algoritmo distribuido:",
+        "opciones": [
+            "A) Toma las decisiones sólo en base a la información local",
+            "B) Es más simple que un algoritmo centralizado",
+            "C) Se ejecuta en una red de área local",
+            "D) Usa direcciones IP privadas 16 de junio de 2020 1/5 Sistemas Distribuidos Curso 19/20 :: Prueba 2 (extraordinario) Escuela Superior de Informática"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q9- Los computadores que ejecutan su sistema distribuido se quedan sin memoria con el paso del tiempo, lo cual indica claramente que no todos los objetos que se instancian se liberan, usted tiene la historia de estados globales de su sistema distribuido almacenada. ¿Qué algoritmo le puede ayudar?",
+        "opciones": [
+            "A) Marzullo-Neiger",
+            "B) Chandy-Lamport",
+            "C) Berkeley",
+            "D) Ninguno de estos algoritmos me puede ayudar"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q10- Los computadores que ejecutan su sistema distribuido se quedan sin memoria con el paso del tiempo, lo cual indica cla- ramente que no todos los objetos que se instancian se liberan, usted tiene la historia de estados globales de su sistema distribuido almacenada. ¿Qué algoritmo ha usado para obtener dichos estados globales?",
+        "opciones": [
+            "A) Marzullo-Neiger",
+            "B) Chandy-Lamport",
+            "C) Berkeley",
+            "D) Ninguno de estos algoritmos puede obtener estados globales"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q11- En mi nuevo ordenador empotrado, el reloj físico tiene una frecuencia de un herzio por segundo, ¿qué clase de eventos no puedo ordenar?",
+        "opciones": [
+            "A) El paso de trenes por un punto de la via",
+            "B) El número de personas atendidas en una caja registradora",
+            "C) El número de coches en una autovía de 8 carriles en cada dirección que pasan por debajo de un puente en una gran ciudad",
+            "D) Puedo ordenarlos todos"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q12- Sea un cliente y un servidor ejecutando el algoritmo de cristian, tras el proceso de sincronización, el cliente actualiza a Tc=12:00:00, en ese mismo instante, observamos el tiempo del servidor y es Ts=12:00:01, ¿Qué hora original tenía el cliente antes del proceso de sincronización?",
+        "opciones": [
+            "A) 12:00:01",
+            "C) 12:00:00:05",
+            "B) 12:00:02",
+            "D) Ninguna respuesta es válida"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q13- Dada la siguiente figura, asumiendo que los relojes lógicos de Lamport de Pa y Pb están inicialmente a cero y cada evento relevante es representado con un circulo negro en cada proceso, ¿qué valores tendrán en el instante Tb?",
+        "opciones": [
+            "A) RLb = 6 y RLa = 5",
+            "C) RLb = 4 y RLa = 5",
+            "B) RLb = 5 y RLa = 6",
+            "D) RLb = 7 y RLa = 6 16 de junio de 2020 2/5 Sistemas Distribuidos Curso 19/20 :: Prueba 2 (extraordinario) Escuela Superior de Informática"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q14- Dada la siguiente figura, ¿Qué corte es consistente?:",
+        "opciones": [
+            "A) Ca",
+            "B) Cb",
+            "C) Cc",
+            "D) Ninguno"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q15- ¿Por qué se requiere obtener estados globales?",
+        "opciones": [
+            "A) Para determinar la coherencia de los estados locales respecto a un conjunto de eventos.",
+            "B) Es un proceso empírico sin aplicaciones prácticas.",
+            "C) No es posible obtener estados globales en SD síncronos o asíncronos.",
+            "D) Para ignorar la información en los canales de comunicación que distorsiona la depuración"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q16- Dada la siguiente figura, asumiendo que los relojes lógicos vectoriales de Pa y Pb están inicialmente a cero y cada evento",
+        "opciones": [
+            "B) relevante es representado con un circulo negro en cada proceso, asuma (a,b) para indicar el número de evento del proceso a y del proceso b respectivamente ¿qué valores tendrán en el instante Tb?:",
+            "A) RVb = (2,3) y RVa = (5,4)",
+            "C) RVb = (2,4) y RVa = (4,3)",
+            "B) RVb = (2,5) y RVa = (5,5)",
+            "D) RVb = (4,2) y RVa = (4,5)"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q17- ¿Qué algoritmo de exclusión mútua distribuido te garantiza el orden en el acceso al recurso compartido?:",
+        "opciones": [
+            "A) Exclusión mutua centralizada",
+            "C) Ricart y Agrawala",
+            "B) Anillo",
+            "D) Todos"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q18- ¿Qué combinación de propiedades debe cumplir como mínimo un algoritmo de exclusión mutua distribuido para ser usable?:",
+        "opciones": [
+            "A) Seguridad y liveness",
+            "C) Liveness y orden",
+            "B) Seguridad y orden",
+            "D) Seguridad, liveness y orden"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q19- En el algoritmo de Ricart y Agrawala, si lo ejecuto en una red que soporta multicast, el número de mensajes para acceder a la sección crítica...",
+        "opciones": [
+            "A) disminuye",
+            "B) aumenta",
+            "C) es igual",
+            "D) depende de la posición en el anillo lógico"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q20- Tenemos un sistema distribuido, queremos probar la eficiencia en obtener acceso a la sección crítica. Si no hay ningún proceso en la sección crítica y teniendo en cuenta el número de mensajes exclusivamente, en la situación óptima en cada algoritmo, ¿qué algoritmo emplea menos mensajes en entrar en la sección crítica?:",
+        "opciones": [
+            "A) Centralizado",
+            "C) Ricart y Agrawala",
+            "B) Anillo con testigo",
+            "D) Cristian 16 de junio de 2020 3/5 Sistemas Distribuidos Curso 19/20 :: Prueba 2 (extraordinario) Escuela Superior de Informática"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q21- El algoritmo de Maekawa surge con la idea de",
+        "opciones": [
+            "A) Proporcionar orden al algoritmo de Ricart y Agrawala",
+            "B) Evitar tener que buscar el consentimiento de todos los procesos del sistema distribuido en el algoritmo de Ricart y Agrawala",
+            "C) Evitar tener que buscar el consentimiento de todos los procesos del sistema distribuido en el algoritmo del anillo",
+            "D) Proporcionar orden al algoritmo del anillo"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q22- En el algoritmo de García-Molina, 5 procesos identificados con pid 1,2,3,4,5 se quedan sin coordinador debido al fallo permanente del proceso con pid 6. El proceso 3 se da cuenta e inicia el proceso de elegir un nuevo coordinador, ¿Qué proceso/s recibe/n el primer mensaje de este proceso?",
+        "opciones": [
+            "A) Todos los procesos",
+            "C) Los procesos 1 y 2",
+            "B) Los procesos 4 y 5",
+            "D) El proceso con el pid mas alto, el 5"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q23- En el algoritmo de García-Molina, 5 procesos identificados con pid 1,2,3,4,5 se quedan sin coordinador. El proceso 3 se da cuenta e inicia el proceso de elegir un nuevo coordinador, ¿Cuantos mensajes se envían para determinar el coordinador?. La red no soporta multicast",
+        "opciones": [
+            "A) 5",
+            "B) 10",
+            "C) 6",
+            "D) 25"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q24- En Internet tal y como la conocemos en la actualidad ¿Qué mecanismo es mas exigente de implementar desde el punto de vista de dificultad de conseguir un funcionamiento correcto?",
+        "opciones": [
+            "A) FIFO(FO-mcast)",
+            "B) Causal(CO-mcast)",
+            "C) Total Fiable(RTO-mcast)",
+            "D) Los tres mecanismos son igual de exigentes"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q25- Si el proceso que propone el valor es correcto, cualquier proceso correcto ha elegido dicho valor, esta propiedad es",
+        "opciones": [
+            "A) Acuerdo",
+            "B) Integridad",
+            "C) Terminación",
+            "D) Liveness"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q26- ¿Cuál de los siguientes motivos haría inviable el algoritmo de anillo para exclusión mutua?",
+        "opciones": [
+            "A) Latencia variable en la red de comunicaciones.",
+            "B) Número creciente de procesos.",
+            "C) Comunicaciones no fiables."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q27- ¿Dónde se aplica principalmente el concepto de transacciones distribuidas?",
+        "opciones": [
+            "A) Bases de datos distribuidas",
+            "B) Sistemas operativos distribuidos",
+            "C) Redes de computadores de área local",
+            "D) Sistemas distribuidos de sistemas empotrados"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q28- En una unica transacción donde recibo tres ingresos de tres cuentas distintas en mi cuenta, puedo ver como mi saldo se incrementa las tres veces, ese sistema transaccional tiene mal implementado la propiedad:",
+        "opciones": [
+            "A) Atomicidad (Atomicity)",
+            "C) Aislamiento (Isolation)",
+            "B) Consistencia (Consistency)",
+            "D) Durabilidad (Durability) 16 de junio de 2020 4/5 Sistemas Distribuidos Curso 19/20 :: Prueba 2 (extraordinario) Escuela Superior de Informática"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q29- En una unica transacción donde recibo tres ingresos de 10 euros de tres cuentas distintas en mi cuenta, al final de la transac- ción sólo tengo 20 euros más. Con la información proporcionada, ¿qué propiedad no tiene que ver nada con el error?:",
+        "opciones": [
+            "A) Atomicidad (Atomicity)",
+            "C) Aislamiento (Isolation)",
+            "B) Consistencia (Consistency)",
+            "D) Durabilidad (Durability)"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q30- Una agencia de viajes consigue, de forma satisfactoria, la reserva de 150 plazas en un mismo Airbus A320 con una única transacción cuando dicho avión tiene solo 120 plazas disponibles, ese sistema transaccional tiene mal implementada la propiedad:",
+        "opciones": [
+            "A) Atomicidad (Atomicity)",
+            "C) Aislamiento (Isolation)",
+            "B) Consistencia (Consistency)",
+            "D) Durabilidad (Durability)"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q31- Se lanzan cien transacciones simultáneas de lectura para calcular el balance de ocupación de los aviones de una aerolínea, durante ese proceso, ninguna otra transacción se está ejecutando o se lanza en el sistema, ¿Qué tipo de problemas es más probable que surja?:",
+        "opciones": [
+            "A) Actualizaciones perdidas",
+            "C) Problemas Write-Write",
+            "B) Lecturas inconsistentes",
+            "D) No surge ningún problema"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q32- Salvaguardando el sistema de lecturas sucias/escrituras prematuras ¿Qué técnica tiene mas potencial de paralelismo?:",
+        "opciones": [
+            "A) Sistema totalmente secuencial",
+            "B) Bloqueo en dos fases (Two-Phase Locking)",
+            "C) Bloqueo estricto en dos fases (Strict Two-Phase Locking)",
+            "D) Todos los sistemas tienen el mismo potencial de paralelismo"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q33- Como administrador de un sistema transaccional con muchos objetos donde existe muy poca concurrencia en el acceso a los mismos objetos por parte de las transacciones que se lanzan. ¿Qué sistema de control de concurrencia habilitaría?:",
+        "opciones": [
+            "A) Ordenación",
+            "B) Sistema sencuencial",
+            "C) Bloqueo estricto en dos fases (Strict Two-Phase Locking)",
+            "D) Optimista"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q34- Como administrador de un sistema transaccional con pocos objetos donde existe mucha concurrencia en el acceso a los mismos objetos por parte de las transacciones de escritura que se lanzan. ¿Qué sistema de control de concurrencia habilitaría?",
+        "opciones": [
+            "A) Ordenación",
+            "B) Sistema secuencial",
+            "C) Bloqueo estricto en dos fases (Strict Two-Phase Locking)",
+            "D) Optimista"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q35- En el two-phase-commit-protocol, si un participante no responde:",
+        "opciones": [
+            "A) El coordinador aborta toda la transacción",
+            "B) El resto de participantes consuma",
+            "C) Se abortan las escrituras pero las lecturas progresan",
+            "D) Se espera hasta que conteste"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q36- ¿En qué versión del TPCP los mensajes tienen que transportar el «abortList» en el control de las transacciones anidadas?",
+        "opciones": [
+            "A) Versión jerárquica",
+            "C) En las dos",
+            "B) Versión plana",
+            "D) En ninguna 16 de junio de 2020 5/5"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021-Q1- ¿Qué afirmación es falsa para la replicación?",
+        "opciones": [
+            "A) Puede mejorar el tiempo de respuesta en el acceso a los datos.",
+            "B) Mejora la tolerancia a fallos.",
+            "C) Incrementa la disponibilidad del sistema distribuido.",
+            "D) Simplifica la consistencia de datos."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021-Q2- Qué factores pueden afectar a la ventana de inconsistencia",
+        "opciones": [
+            "A) Retardo en las comunicaciones, carga de los sistemas y número de réplicas.",
+            "B) Retardo en las comunicaciones y carga de los sistemas.",
+            "C) Retardo en las comunicaciones.",
+            "D) Carga de los sistemas."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021-Q3- En un conjunto de 7 réplicas, decide implementar un protocolo de consistencia Quorum ¿qué asignación de número de réplicas a grupos de lectura/escritura le vale?",
+        "opciones": [
+            "A) Escritura 3, Lectura 3.",
+            "C) Escritura 1, Lectura 6.",
+            "B) Escritura 2, Lectura 5.",
+            "D) Escritura 4, Lectura 7."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021-Q4- ¿En qué modelo de log de replicación, una actualización de la versión de la base de datos en solo una de las réplicas, puede causar problemas?",
+        "opciones": [
+            "A) Log basado en sentencias/declaraciones (Statement-based).",
+            "B) Log basado en lógica (Logical-base).",
+            "C) Log basado en adelanto de escritura (write-ahead).",
+            "D) En ningún caso hay problema mientras la base de datos (Oracle, Mysql, etc.) sea la misma."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021-Q5- ¿En qué modelo de log de replicación, una sentencia SQL con una referencia a un número aleatorio, puede causar problemas?",
+        "opciones": [
+            "A) Log basado en adelanto de escritura (Write-ahead).",
+            "B) Log basado en sentencias/declaraciones (Statement-based).",
+            "C) Log basado en lógica (Logical-base).",
+            "D) En ningún caso hay problema."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021-Q6- En qué modelo de replicación, una actualización de un dato X se tiene que ver instantáneamente",
+        "opciones": [
+            "A) Secuencial",
+            "B) Estricta",
+            "C) Lineal",
+            "D) En sistemas asíncronos no se puede propagar de forma instantánea (tiempo de los mensajes) 19 de enero de 2021 1/4 Sistemas Distribuidos Curso 20/21 :: Prueba 2 Escuela Superior de Informática E. [6p] Considere el siguiente conjunto de eventos que tienen lugar en los procesos p1, p2 y p3 de un sistema distribuido: > 7 (1p) ¿Cuál es el valor del reloj lógico (RL) de los eventos e, j y n?:",
+            "A) RL(e)=5; RL(j)=6; RL(n)=7",
+            "C) RL(e)=6 ; RL(j)=7; RL(n)=6",
+            "B) RL(e)=7; RL(j)=7; RL(n)=8",
+            "D) RL(e)=6; RL(j)=6; RL(n)=6 > 8 (2p) ¿Cuál es el valor del reloj vectorial de los eventos e, j y n?:",
+            "A) RV(e)=[6,6,4]; RV(j)=[6,4,3]; RV(n)=[5,4,5]",
+            "B) RV(e)=[5,3,2]; RV(j)=[5,5,2]; RV(n)=[1,4,4]",
+            "C) RV(e)=[5,4,3]; RV(j)=[6,5,3] ; RV(n)=[5,4,3]",
+            "D) RV(e)=[6,3,4]; RV(j)=[6,5,4] ; RV(n)=[3,5,5]",
+            "A) > 9 (1p) Si el valor del reloj vectorial de dos eventos a y b son RV(a)=[1,2,3] y RV(b)=[3,2,1], entonces:",
+            "A) a ->b",
+            "C) a y b son concurrentes",
+            "B) b ->a",
+            "D) RV(a) = RV(b) > 10 (2p) Sea un corte C=[h1,h2,h3] donde h1, h2 y h3 son los prefijos de historia de p1, p2 y p3, respectivamente, definidos como h1=[a,b,c] y h3=[k,l,m,n], ¿cuál sería un prefijo de historia h2 válido para que C sea un corte consistente?",
+            "A) h2 = [f,g]",
+            "B) h2 = [f,g,h]",
+            "C) h2 = [f,g,h,i]",
+            "D) No es posible definir un prefijo de historia h2 tal que C sea consistente 19 de enero de 2021 2/4 Sistemas Distribuidos Curso 20/21 :: Prueba 2 Escuela Superior de Informática E. [3p] Considere el siguiente diagrama de estados globales: > 11 (1p) El estado S21 es un estado global..:",
+            "A) inconsistente.",
+            "C) consistente y alcanzable.",
+            "B) consistente e inalcanzable.",
+            "D) inconsistente e inalcanzable. > 12 (2p) Suponga que se evalúa un cierto predicado global P sobre este diagrama con el siguiente resultado: P(S00)=F, P(S01)=F, P(S10)=T, P(S11)=F,P(S21)=F, P(S22)=F, P(S32)=T, con F=False y T=True ¿cuál sería el resultado de evaluar definitivamente P?",
+            "A) True",
+            "B) False",
+            "C) Indefinido",
+            "D) No se puede saber con la información proporcionada en el enunciado."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021-Q13- ¿Que indica la propiedad liveness en los algoritmos de exclusión mutua distribuida?",
+        "opciones": [
+            "A) Cualquier proceso que solicite acceso al recurso lo obtendrá en algún momento.",
+            "B) Si hay un proceso utilizando el recurso, ningún otro proceso puede obtener acceso.",
+            "C) Cualquier proceso correcto (vivo) tiene permiso para solicitar acceso al recurso.",
+            "D) Todos los procesos de un grupo dado tienen permiso para acceder a todos los recursos del grupo."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021-Q14- Respecto a su eficiencia ¿cuál es la diferencia principal entre los algoritmos de anillo para exclusión mutua y para elección?",
+        "opciones": [
+            "A) El algoritmo de elección requiere menos mensajes.",
+            "B) El algoritmo de exclusión mutua requiere menos mensajes.",
+            "C) El de elección solo consume recursos cuando un proceso lo dispara, el de exclusión mutua los consume constantemente.",
+            "D) El de exclusión mutua solo consume recursos cuando un proceso lo dispara, el de elección los consume constantemente."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021-Q15- ¿Qué implica «multicast FIFO»?",
+        "opciones": [
+            "A) Los mensajes enviados por un proceso llegarán a en el mismo orden que fueron enviados.",
+            "B) Si existe una relación causal entre dos mensajes multicast, su recepción respeta ese mismo orden.",
+            "C) Todos los mensajes recibidos por un proceso del grupo son confirmados individualmente al emisor.",
+            "D) Todos las la entregas correspondiente a un mismo envío llegarán a la vez a todos los procesos del grupo."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021-Q16- ¿Cuál es la finalidad de un algoritmo de «consenso»?",
+        "opciones": [
+            "A) Decidir qué proceso determina el valor correcto de la variable de decisión.",
+            "B) Al terminar, todos los procesos llegan al mismo valor correcto en la variable de decisión.",
+            "C) Al terminar, todos los procesos conocen los valores propuestos por todos los procesos del grupo.",
+            "D) Comprobar que todos los procesos correctos obtienen acceso a la variable de decisión determinada por el coordinador. 19 de enero de 2021 3/4 Sistemas Distribuidos Curso 20/21 :: Prueba 2 Escuela Superior de Informática"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021-Q17- ¿Qué es el «vector de decisión» en un problema de consistencia interactiva?",
+        "opciones": [
+            "A) Los datos de entrada del algoritmo.",
+            "B) El reloj vectorial que acuerdan todos los miembros del grupo.",
+            "C) El conjunto de valores propuestos por cada proceso participante.",
+            "D) La secuencia de todos los valores propuestos hasta llegar al acuerdo."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021-Q18- ¿Qué opción es mas escalable, a priori, en el desarrollo de un sistema distribuido?",
+        "opciones": [
+            "A) Comunicación indirecta",
+            "B) RPC",
+            "C) RMI",
+            "D) Todas tienen similares prestaciones en cuanto a escalabilidad"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021-Q19- ¿Qué módelos de invocación se podrían implementar con RabbitMQ?",
+        "opciones": [
+            "A) Comunicación indirecta",
+            "B) RPC",
+            "C) RMI",
+            "D) RabbitMQ puede implementar/emular los modelos de comunicación",
+            "A) ,",
+            "B) y",
+            "C) "
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021-Q20- En una comunicación IP multicast, los participantes...",
+        "opciones": [
+            "A) Están acoplados en espacio y tiempo.",
+            "B) Están desacoplados en espacio y tiempo.",
+            "C) Están desacoplados en espacio y acoplados en tiempo.",
+            "D) Están acoplados en espacio y desacoplados en tiempo."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021-Q21- El mecanismo que implementa el enrutado de mensajes a los consumidores en RabbitMQ se denomina:",
+        "opciones": [
+            "A) Es un mecanismo de las colas.",
+            "C) Se implementa en los consumidores.",
+            "B) Se implementa en los publicadores.",
+            "D) Exchanges."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021-Q22- Está implementando un sistema de comunicación indirecta con ZeroC Ice. ¿Quién es mas lógico que implemente la siguiente interfaz? 1 interface in { 2 void publish(string m); 3 void setfilter(string m);",
+        "opciones": [
+            "C) 4 void subscribe(string topic); 5 }",
+            "A) El publicador",
+            "C) El broker",
+            "B) El consumidor",
+            "D) El broker y el consumidor"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021-Q23- ¿Cuál es el modelo de comunicación más adecuado para un sistema de estaciones meteorológicas que informan sobre tem- peratura, viento y presión a un conjunto indeterminado y dinámico de posibles clientes?",
+        "opciones": [
+            "A) Polling a una base de datos.",
+            "C) Un sistema de ficheros distribuido.",
+            "B) Un sistema publicador-subscriptor.",
+            "D) RPC o RMI. 19 de enero de 2021 4/4"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021X-Q7- Utilizando un sistema de comunicación indirecto basado en eventos, donde el gestor de eventos almacena eventos, ¿qué se requiere, como mínimo, para el envío de un evento?",
+        "opciones": [
+            "A) Que el publicador y el gestor de eventos estén acoplados temporalmente.",
+            "B) Que el publicador y el subscriptor estén acoplados temporalmente.",
+            "C) Que el subscriptor y el gestor de eventos estén acoplados temporalmente.",
+            "D) Que el publicador, subscriptor y gestor de eventos estén acoplados temporalmente."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021X-Q8- En RabbitMQ, ¿cómo se implementan las políticas de enrutado de los mensajes a las distintas colas?",
+        "opciones": [
+            "A) Los publicadores especifican las colas destino.",
+            "B) Las propias colas tienen sus filtros asociados.",
+            "C) Los Exchanges o intercambiadores las implementan.",
+            "D) Los consumidores, al declarar las colas a las que se subscriben."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021X-Q9- En RabbitMQ ¿podría usar Protocol Buffers de google para codificar mensajes a las colas?",
+        "opciones": [
+            "A) No",
+            "C) Depende del tamaño del mensaje",
+            "B) Si",
+            "D) Solo a partir de la versión 3"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021X-Q10- Los sistemas de comunicación indirecta son adecuados para...",
+        "opciones": [
+            "A) ... aplicaciones que mantienen la conexión durando mucho tiempo.",
+            "B) ... nodos de cómputo para procesamiento masivo por lotes en grandes grids.",
+            "C) ... aplicaciones con un gran número de usuarios que consumen información esporádicamente.",
+            "D) ... cualquier tipo de aplicación. 09 de junio de 2021 2/4 Sistemas Distribuidos Curso 20/21 :: Prueba 2 (extraordinario) Escuela Superior de Informática"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021X-Q11- ¿Qué modelo de comunicación indirecta implica conocer los identificadores de los destinatarios del mensaje que envia- mos?",
+        "opciones": [
+            "A) Comunicación en grupo",
+            "C) Ninguno",
+            "B) Colas de mensajes",
+            "D) Modelo de memoria distribuida compartida"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021X-Q12- ¿Que propiedades nos dificulta elegir como modelo de comunicación un esquema indirecto?",
+        "opciones": [
+            "A) Diseminación de los mensajes",
+            "C) Tiempo real en las comunicaciones",
+            "B) Escalabilidad",
+            "D) Desacoplamiento E. [5p] El siguiente diagrama representa la ejecución de un sistema distribuido, donde S000 es el estado global inicial. 1 S000 2 / | \\ 3 S001 S010 S100 4 \\ / \\ / 5 S011 S110 6 \\ / 7 S111 8 / \\ 9 S211 S112 10 / 11 S311 > 13 (1p) ¿Cuántos procesos están implicados en la ejecución del sistema distribuido representado en el diagrama?",
+            "A) 5",
+            "B) 10",
+            "C) 2",
+            "D) 3 > 14 (1p) En el estado global S311, ¿cuántos eventos han ocurrido?",
+            "A) 5",
+            "C) 2",
+            "B) 8",
+            "D) No se puede saber > 15 (1p) ¿Cuál sería el resultado de evaluar el predicado «definitivamente X» si el estado global S111 se evalúa como True y el resto de estados se evalúan como False?",
+            "A) True",
+            "C) No se puede saber",
+            "B) False",
+            "D) Depende del estado inicial > 16 (1p) Indique cuál sería una posible ejecución de este sistema distribuido:",
+            "A) S000 ->S001 ->S011 ->S111 ->S211 ->S311",
+            "B) S000 ->S010 ->S011 ->S112",
+            "C) S000 ->S001 ->S011 ->S111 ->S121",
+            "D) ",
+            "A) y",
+            "B) son ciertas > 17 (1p) El estado global S221 es:",
+            "A) Inconsistente.",
+            "B) Consistente.",
+            "C) Consistente pero inalcanzable.",
+            "D) No pertenece a la ejecución del Sistema Distribuido."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021X-Q18- En una sincronización mediante el algoritmo de Cristian, un cliente envía un mensaje de sincronización a un servidor con Tc=15:01:30. El mensaje de respuesta del servidor llega a las 15:01.40 con Ts=15:01:05, ¿Qué hora debe fijar el cliente como objetivo para sincronizarse? ¿Qué error está cometiendo?",
+        "opciones": [
+            "A) 15:01:10, e = 5 segundos",
+            "C) 15:01:45, e = 10 segundos",
+            "B) 15:01:15, e = 5 segundos",
+            "D) 15:01:20, e = 10 segundos 09 de junio de 2021 3/4 Sistemas Distribuidos Curso 20/21 :: Prueba 2 (extraordinario) Escuela Superior de Informática"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021X-Q19- Cuando se aplica un algoritmo de sincronización externa a un grupo de procesos en una LAN...",
+        "opciones": [
+            "A) Es determinante la latencia entre los procesos del grupo.",
+            "B) El ancho de banda hacia el servidor delimita la precisión.",
+            "C) El error es mayor conforme crece el número de procesos del grupo.",
+            "D) Todas las afirmaciones son falsas."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021X-Q20- ¿Qué consecuencia tiene la replicación?",
+        "opciones": [
+            "A) Aumenta la latencia.",
+            "C) Reduce las opciones de escalabilidad.",
+            "B) Incrementa la disponibilidad.",
+            "D) Simplifica la consistencia."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021X-Q21- ¿Cómo se consigue normalmente el «balanceo de carga»?",
+        "opciones": [
+            "A) El sistema redirige las peticiones de los clientes a las distintas réplicas disponibles.",
+            "B) El cliente reparte equitativamente sus peticiones entre las réplicas conocidas.",
+            "C) El planificador decide en qué momento ejecutar las peticiones para haya un equilibrio de carga a lo largo del tiempo.",
+            "D) Ajustando constantemente el porcentaje de uso de las CPUs disponibles para evitar sobrecargas."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021X-Q22- ¿Qué proporciona un sistema con consistencia estricta?",
+        "opciones": [
+            "A) La marca de tiempo en qué se actualizó cualquier recurso replicado.",
+            "B) Siempre está disponible el último valor proporcionado a cualquier recurso.",
+            "C) El orden de las lecturas debe coincidir estrictamente con el orden de las escrituras.",
+            "D) El sistema informa explícitamente si no puede proporcionar el valor de la última escritura."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021X-Q23- ¿Qué es la «ventana de inconsistencia» (inconsistency window)?",
+        "opciones": [
+            "A) Es el plazo en el que la réplica permite nuevas operaciones de escritura sin afectar al valor persistente almacenado.",
+            "B) El plazo que transcurre entre una escritura y el momento es que está garantizado que se puede acceder al último valor.",
+            "C) Eltamañomínimodelbufferdeenvíoquegarantizaquetodaslasréplicassepodránactualizareneltiemposolicitado.",
+            "D) El conjunto de operaciones de lectura/escritura que puede manejar el gestor de réplicas antes de que se actualice un recurso."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021X-Q24- ¿Cuál es la estrategia más simple para implementar consistencia débil (weak)?",
+        "opciones": [
+            "A) Las operaciones se realizan sobre el leader, y éste se encarga de actualizar los (followers).",
+            "B) Un sistema de réplicas basado en quorum con un mínimo 2R copias de lectura y W copias de escritura.",
+            "C) El cliente actualiza todas las réplicas de forma simultánea mediando invocaciones concurrentes.",
+            "D) Se utiliza un protocolo two phase commit protocol. 09 de junio de 2021 4/4"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122-Q1- En una comunicación IP multicast, los participantes...",
+        "opciones": [
+            "A) Están acoplados en espacio y tiempo.",
+            "B) Están desacoplados en espacio y tiempo.",
+            "C) Están desacoplados en espacio y acoplados en tiempo.",
+            "D) Están acoplados en espacio y desacoplados en tiempo."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122-Q2- ¿Cuál de las siguientes frases define mejor el concepto de evento?",
+        "opciones": [
+            "A) Ejecución de un fragmento de código remoto que retorna una respuesta síncrona.",
+            "B) Ejecución de un fragmento de código remoto que retorna una respuesta asíncrona.",
+            "C) Comunicación de datos entre dos objetos distribuidos cualesquiera.",
+            "D) Difusión de una notificación con un valor asociado."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122-Q3- ¿Cuál es el modelo de comunicación más adecuado para un sistema de estaciones meteorológicas que informan sobre temperatura, viento y presión a un conjunto indeterminado y dinámico de posibles clientes?",
+        "opciones": [
+            "A) Polling a una base de datos.",
+            "C) Un sistema de ficheros distribuido.",
+            "B) Un sistema publicador-subscriptor.",
+            "D) RPC o RMI."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122-Q4- ¿Qué quiere decir que el emisor y el receptor en un sistema de comunicación indirecta están desacoplados en tiempo?",
+        "opciones": [
+            "A) Emisor y receptor no necesitan existir al mismo tiempo",
+            "B) Emisor no necesita conocer la identidad del receptor y viceversa",
+            "C) Emisor y receptor necesitan existir al mismo tiempo",
+            "D) Emisor necesita conocer la identidad del receptor y viceversa"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122-Q5- ¿Qué modelo de comunicación indirecta implica conocer los identificadores de los destinatarios del mensaje que envia- mos?",
+        "opciones": [
+            "A) Comunicación en grupo",
+            "C) Ninguno",
+            "B) Colas de mensajes",
+            "D) Modelo de memoria distribuida compartida"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122-Q6- ¿Cuál es una interpretación correcta del concepto de «causalidad potencial»?",
+        "opciones": [
+            "A) Si un evento es un efecto, su causa le precede en la historia de eventos.",
+            "B) Si un evento tiene la capacidad de causar otro, deberá considerarse posterior.",
+            "C) Dos eventos en distintos nodos nunca tienen relación de orden.",
+            "D) Define ambos componentes de los relojes lógicos de orden total. 12 de enero de 2022 1/3 Sistemas Distribuidos Curso 21/22 :: Prueba 2 Escuela Superior de Informática"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122-Q7- En una sincronización mediante el algoritmo de Cristian, un cliente manda un mensaje de sincronización a un servidor con su hora de cliente de Tc=10:00:00, le llega un mensaje de vuelta a las 10:00:20 con la hora de servidor de Ts=10:00:05, ¿Qué hora debe configurar como objetivo para sincronizarse? ¿Qué error máximo está cometiendo?",
+        "opciones": [
+            "A) 10:00:15, 10 segundos",
+            "C) 10:00:05, 10 segundos",
+            "B) 10:00:05, 20 segundos",
+            "D) 10:00:25, 10 segundos"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122-Q8- Señale qué afirmación es correcta para el concepto de corte consistente:",
+        "opciones": [
+            "A) Al corte consistente es suficiente con incluir las causas e ignorar cualquier efecto",
+            "B) Al corte consistente le pueden faltar efectos, pero no causas",
+            "C) Un corte consistente siempre tiene la causa y su efecto incluido",
+            "D) Al corte consistente le pueden faltar causas, pero no efectos"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122-Q9- ¿Qué indica el sesgo (skew)?",
+        "opciones": [
+            "A) La diferencia instantánea entre dos relojes lógicos.",
+            "B) La diferencia instantánea entre dos relojes físicos.",
+            "C) Diferencia entre el valor actual y pasado de un reloj lógico.",
+            "D) La tasa de cambio de un reloj de cristal de cuarzo."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122-Q10- ¿Cuál es la relación que existe entre el reloj físico y el lógico en un mismo computador?",
+        "opciones": [
+            "A) El reloj lógico tiene aproximadamente la mitad de deriva que el físico.",
+            "B) El reloj lógico es mucho más preciso porque puede interpolar valores entre dos ticks del reloj físico.",
+            "C) Al reloj lógico se le aplica una restricción sobre el máximo valor de sesgo.",
+            "D) No existe ninguna relación entre ambos relojes."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122-Q11- En un problema de exclusión mutua centralizada, necesita implementar un acceso por orden de petición en el acceso a la sección crítica ¿Qué algoritmo de los siguientes garantiza el orden?",
+        "opciones": [
+            "A) Servidor central",
+            "C) Ricart y Agrawala",
+            "B) Anillo con testigo",
+            "D) Todos los algoritmos garantizan el orden"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122-Q12- Determine el tipo de problema específico que le ayuda a resolver el algoritmo de Chang y Roberts:",
+        "opciones": [
+            "A) Elección de coordinador",
+            "C) Acuerdo",
+            "B) Consenso",
+            "D) Exclusión mutua"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122-Q13- Determine el tipo de problema que le ayuda a resolver el algoritmo de anillo:",
+        "opciones": [
+            "A) Consenso",
+            "B) Multidifusión",
+            "C) Consistencia interactiva",
+            "D) Depende, hay dos algoritmos «de anillo»: uno exclusión mutua y otro para elección de coordinador"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122-Q14- Desde el punto de vista de un sistema distribuido con alta escalabilidad sin fallos, ¿cuál es el aspecto mas débil del algoritmo de exclusión mutua con servidor central?",
+        "opciones": [
+            "A) El servidor representa un cuello de botella.",
+            "B) Limitaciones en el tamaño de la cola de peticiones.",
+            "C) En entornos de alta escalabilidad no proporciona liveness.",
+            "D) En entornos de alta escalabilidad, el alto número de mensajes para entrar y salir de la región crítica. 12 de enero de 2022 2/3 Sistemas Distribuidos Curso 21/22 :: Prueba 2 Escuela Superior de Informática"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122-Q15- De las situaciones siguientes ¿cuál requiere un mecanismo de exclusión mutua distribuida?",
+        "opciones": [
+            "A) Una impresora compartida.",
+            "B) Un broker de propagación de eventos.",
+            "C) El control de una grúa robotizada desde una estación base y varios operarios en planta.",
+            "D) Un sistema de ficheros distribuido que dispone de implementaciones para diferentes sistemas operativos."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122-Q16- ¿Qué afirmación es falsa para la replicación?",
+        "opciones": [
+            "A) Mejora la tolerancia a fallos.",
+            "B) Simplifica la consistencia de datos.",
+            "C) Incrementa la disponibilidad del sistema distribuido.",
+            "D) Puede mejorar el tiempo de respuesta en el acceso a los datos."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122-Q17- Qué factores pueden afectar a la ventana de inconsistencia",
+        "opciones": [
+            "A) Carga de los sistemas.",
+            "B) Retardo en las comunicaciones.",
+            "C) Retardo en las comunicaciones y carga de los sistemas.",
+            "D) Retardo en las comunicaciones, carga de los sistemas y número de réplicas."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122-Q18- En qué modelo de replicación, una actualización de un dato X se tiene que ver instantáneamente",
+        "opciones": [
+            "A) Lineal",
+            "B) Estricta",
+            "C) Secuencial",
+            "D) En sistemas asíncronos no se puede propagar de forma instantánea (tiempo de los mensajes)"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122-Q19- Complete la siguiente frase: «La disponibilidad es inversamente proporcional a...»",
+        "opciones": [
+            "A) La carga del sistema",
+            "C) La redundancia del sistema",
+            "B) El coste del sistema",
+            "D) La fiabilidad del sistema"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122-Q20- ¿Qué es un sistema tolerante a fallos?",
+        "opciones": [
+            "A) Sistema que persigue la consistencia de la información.",
+            "B) Sistema muy robusto en el que no se producen fallos de ningún tipo.",
+            "C) Sistema que cumple con todas las especificaciones del sistema en presencia de cualquier tipo de fallo.",
+            "D) Sistema que permite la ejecución continuada del sistema, posiblemente degradada, aún en presencia de fallos. 12 de enero de 2022 3/3"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122X-Q1- RabbitMQ usa un modelo de comunicación indirecta del tipo:",
+        "opciones": [
+            "A) Sistema basado en eventos distribuidos.",
+            "C) Cola de mensajes.",
+            "B) Memoria distribuida.",
+            "D) Comunicación uno a uno."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122X-Q2- Marca la afirmación correcta en relación a los sistemas de propagación de eventos de publicación–subscripción basados en broker:",
+        "opciones": [
+            "A) Los publicadores no conocen las referencias de los subscriptores.",
+            "B) Cada publicador es responsable de almacenar las referencias de sus subscriptores.",
+            "C) Cada subscriptor es responsable de almacenar las referencias de sus publicadores.",
+            "D) Cada pareja publicador-subscriptor es única y está identificada unívocamente."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122X-Q3- ¿Cuál sería la definición más acertada de un sistema de colas de mensajes distribuidas?",
+        "opciones": [
+            "A) El emisor coloca sus mensajes en una cola genérica, el broker los clasifica y responde al emisor.",
+            "B) Un broker central determina el receptor de cada mensaje de la cola distribuida.",
+            "C) Varios receptores reciben copias del mismo mensaje.",
+            "D) No hay diferencias sustanciales con un sistema publicador-subscriptor."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122X-Q4- ¿Cuál de los siguientes NO se considera un mecanismo de comunicación indirecta?",
+        "opciones": [
+            "A) Comunicación de grupos",
+            "C) Sistemas de propagación de eventos",
+            "B) Llamada a procedimiento remoto",
+            "D) Memoria compartida distribuida"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122X-Q5- ¿Cuál de las siguientes frases define mejor el concepto de «evento»?",
+        "opciones": [
+            "A) Difusión de una notificación con un valor asociado.",
+            "B) Comunicación de datos entre dos objetos distribuidos cualesquiera.",
+            "C) Ejecución de un fragmento de código remoto que retorna una respuesta síncrona.",
+            "D) Ejecución de un fragmento de código remoto que retorna una respuesta asíncrona."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122X-Q6- ¿Qué trata de acotar el cálculo que se aplica en el algoritmo de Cristian?",
+        "opciones": [
+            "A) .El error causado por un ancho de banda asimético.",
+            "B) El error causado por la latencia de la red.",
+            "C) La cantidad de mensajes necesarios para la sincronización de un grupo.",
+            "D) El número de nodos que forma parte del grupo de réplicas. 20 de junio de 2022 1/3 Sistemas Distribuidos Curso 21/22 :: Prueba 2 (extraordinario) Escuela Superior de Informática"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122X-Q7- En la ejecución del algoritmo de Cristian, el tiempo de respuesta que percibe un computador es de 8 segundos y el servidor envía Ts=10:25:07. ¿Cuál es el tiempo al que podría actualizar su hora el cliente?",
+        "opciones": [
+            "A) 10:25:11",
+            "C) 09:59:59",
+            "B) 10:25:15",
+            "D) Habría que conocer la hora del cliente."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122X-Q8- ¿Cuál es una interpretación correcta del concepto de «causalidad potencial»?",
+        "opciones": [
+            "A) Si un evento es un efecto, su causa le precede en la historia de eventos.",
+            "B) Si un evento tiene la capacidad de causar otro, deberá considerarse posterior.",
+            "C) Dos eventos en distintos nodos nunca tienen relación de orden.",
+            "D) Define ambos componentes de los relojes lógicos de orden total."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122X-Q9- ¿Por qué la detección de terminación de un algoritmo distribuido requiere determinar el estado global?",
+        "opciones": [
+            "A) Los procesos involucrados podrían estar des-sincronizados.",
+            "B) No se requiere cuando el algoritmo distribuido es asíncrono.",
+            "C) Una invocación en tránsito podría implicar que el algoritmo continúa.",
+            "D) Es necesario determinar el orden causal de todos los mensajes involucrados."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122X-Q10- Marca la afirmación FALSA en relación a los relojes software:",
+        "opciones": [
+            "A) Su valor se determina a partir de un reloj lógico.",
+            "B) Su valor se obtiene a partir de un dispositivo hardware local.",
+            "C) Dos relojes software sin relación pueden tener el mismo valor.",
+            "D) Se aplican procedimientos específicos para asegurar que no se producen saltos."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122X-Q11- Un sistema con 18 nodos se configura mediante una red de comunicaciones por satélite mediante un contrato de pago por uso (10 euros por MB), a continuación, se configura un algoritmo de exclusión mutua para controlar el acceso a una sección crítica. Durante el primer mes de funcionamiento, ningún nodo accede a la sección crítica ¿Qué algoritmo implicaría un coste mayor?",
+        "opciones": [
+            "A) Anillo",
+            "B) Servidor Central",
+            "C) Ricart Agrawala",
+            "D) Si no hay acceso a la sección crítica, todos los algoritmos habrían tenido el mismo coste."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122X-Q12- En un problema de exclusión mutua centralizada, necesita implementar un acceso por orden de petición en el acceso a la sección crítica ¿Qué algoritmo de los siguientes garantiza el orden?",
+        "opciones": [
+            "A) Servidor central",
+            "C) Ricart y Agrawala",
+            "B) Anillo con testigo",
+            "D) Todos los algoritmos garantizan el orden"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122X-Q13- Determine el tipo de problema que le ayuda a resolver el algoritmo de anillo:",
+        "opciones": [
+            "A) Consenso",
+            "B) Multidifusión",
+            "C) Consistencia interactiva",
+            "D) Depende, hay dos algoritmos «de anillo»: uno de exclusión mutua y otro para elección de coordinador."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122X-Q14- Construir un sistema que emplea multidifusión sobre el protocolo IP, implica la utilización de:",
+        "opciones": [
+            "A) SNMP",
+            "B) TCP",
+            "C) UDP",
+            "D) RPC 20 de junio de 2022 2/3 Sistemas Distribuidos Curso 21/22 :: Prueba 2 (extraordinario) Escuela Superior de Informática"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122X-Q15- En un sistema distribuido con 4 procesos y un recurso compartido R, ningún proceso quiere acceso a R en el instante 0. En el instante 1, el proceso P1 solicita acceso a R. En cuanto a número de mensajes ¿cuál de los siguientes algoritmos es más eficiente para conseguir la exclusión mutua en ausencia de fallos?",
+        "opciones": [
+            "A) Servidor Central",
+            "B) Anillo (formado por P2->P3->P4->P1->P2 y el token en P3)",
+            "C) Ricart y Agrawala (con soporte multicast real)",
+            "D) García Molina (con soporte multicast real)"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122X-Q16- ¿Cuál es el comportamiento ideal que persigue la replicación?",
+        "opciones": [
+            "A) Mantener varias copias idénticas de un recurso o servicio en varios nodos.",
+            "B) Llevar un registro detallado de los accesos concurrentes a un mismo recurso.",
+            "C) Acotar el tiempo de acceso a las copias secundarias de un servicio para evitar inanición.",
+            "D) Impedir el acceso concurrente de varios clientes a un recurso compartido para así evitar inconsistencias."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122X-Q17- ¿Por qué decimos que la replicación reduce la latencia?",
+        "opciones": [
+            "A) No es cierto. La latencia crece linealmente con el número de réplicas.",
+            "B) El tiempo de sincronización de las réplicas está acotado y converge con el tiempo.",
+            "C) Si las réplicas se distribuyen geográficamente, la latencia media desde los clientes se reduce.",
+            "D) El balanceador de carga ofrece al cliente un acceso prioritario en función de la carga de los nodos."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122X-Q18- ¿Cuál de las siguientes no es una característica considerada por el teorema CAP?",
+        "opciones": [
+            "A) Consistencia de datos",
+            "C) Ventana de inconsistencia estricta",
+            "B) Disponibilidad del sistema",
+            "D) Tolerancia a las particiones de red"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122X-Q19- ¿Qué dice el modelo de «consistencia eventual»?",
+        "opciones": [
+            "A) El programador es responsable de actualizar las copias en base a un modelo líder-seguidores.",
+            "B) Todas las réplicas deben ser sincronizadas inmediatamente después de cualquier acceso a una de las réplicas.",
+            "C) Si no se hacen escrituras nuevas sobre un recurso dado, todos los accesos devolverán eventualmente el último valor escrito.",
+            "D) Requiere de un protocolo de transacción distribuidas para garantizar la coherencia entre réplicas, especialmente ante particiones en la red."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122X-Q20- ¿Qué es la «ventana de inconsistencia» (inconsistency window)?",
+        "opciones": [
+            "A) Es el plazo en el que la réplica permite nuevas operaciones de escritura sin afectar al valor persistente almacenado.",
+            "B) El plazo que transcurre entre una escritura y el momento es que está garantizado que se puede acceder al último valor.",
+            "C) Eltamañomínimodelbufferdeenvíoquegarantizaquetodaslasréplicassepodránactualizareneltiemposolicitado.",
+            "D) El conjunto de operaciones de lectura/escritura que puede manejar el gestor de réplicas antes de que se actualice un recurso. 20 de junio de 2022 3/3"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223-Q1- ¿Con qué mecanismo proporcionado por ZeroC Ice está relacionada la técnica de procesamiento «working queue» habitual en los middlewares de colas de mensajes distribuidas?",
+        "opciones": [
+            "A) Batched invocations",
+            "C) Asynchronous Method Invocation",
+            "B) Asynchronous Method Dispatch",
+            "D) No hay un ningún mencanismo relacionado"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223-Q2- ¿Cuál de los siguientes medios de comunicación podríamos considerar que se encuentra desacoplado en espacio, pero acoplado en tiempo?",
+        "opciones": [
+            "A) RMI",
+            "C) IP multicast",
+            "B) MQTT",
+            "D) Ninguno cumple lo indicado"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223-Q3- ¿Qué caracteriza al modelo de suscripción «topic based» en un sistema de publicación-suscripción?",
+        "opciones": [
+            "A) Depende de la clase (tipo) de los mensajes.",
+            "B) El «topic» aparece como un campo de los mensajes.",
+            "C) El «topic» es un nombre de una lista disponible en el broker.",
+            "D) La suscripción indica el rango de valores en los que está interesado."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223-Q4- En un sistema de publicación-suscripción ¿Cuál es el principal inconveniente de un broker centralizado respecto a uno descentralizado?",
+        "opciones": [
+            "A) Poca escalabiliad.",
+            "B) Su implementación es más compleja.",
+            "C) Dificultad para garantizar propiedades extremo a extremo, como seguridad.",
+            "D) No implica inconvenientes adicionales."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223-Q5- Con la configuración más básica, en las colas de mensajes distribuidas cuando se envía un mensaje a una cola en la que hay varios suscriptores ¿cuántos de ellos lo reciben?",
+        "opciones": [
+            "A) ninguno",
+            "B) 1",
+            "C) todos",
+            "D) Aquellos que no han recibido ningún mensaje previo 18 de enero de 2023 1/4 Sistemas Distribuidos Curso 22/23 :: Prueba 2 Escuela Superior de Informática E. [10p] La figura de la izquierda representa el diagrama de eventos de un SD formado por tres procesos. Para cada evento se muestra su estado local, asumiendo que el valor inicial es 0 para todos los procesos. El diagrama de la derecha (que contiene un error) es el diagrama de transición de estados globales correspondiente: > 6 (2p) ¿Cuál sería el valor del reloj lógico vectorial del segundo evento de P3?",
+            "A) (3,2,2)",
+            "B) (3,1,2)",
+            "C) (0,3,1)",
+            "D) (0,1,2) > 7 (2p) ¿Cuántos eventos han ocurrido en el estado global S221?",
+            "A) 2",
+            "B) 4",
+            "C) 5",
+            "D) No es determinista > 8 (2p) ¿Cuáles son los valores de a, b y c después de ocurrir el segundo evento de P1?",
+            "A) a=2, b=2, c=1",
+            "C) a=2, b=2, c=indeterminado",
+            "B) a=2, b=3, c=1",
+            "D) No es determinista",
+            "G) > 9 (2p) Dada la función g = a + c > b, ¿cuáles serían los resultados de evaluar los predicados «posiblemente(g)» y «defini-",
+            "G) tivamente(g)»?",
+            "A) false, false",
+            "B) false, true",
+            "C) true, false",
+            "D) true, true > 10 (2p) ¿Qué transición se ha omitido en el diagrama de transición de estados globales?",
+            "A) S030 - S130",
+            "B) S011 - S111",
+            "C) S321 - S332",
+            "D) S130 - S221"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223-Q11- Desde el punto de vista de un sistema distribuido con alta escalabilidad tolerante a fallos, ¿cuál es el aspecto mas débil del algoritmo de exclusión mutua con servidor central?",
+        "opciones": [
+            "A) El servidor representa un cuello de botella.",
+            "B) Limitaciones en el tamaño de la cola de peticiones.",
+            "C) En entornos de alta escalabilidad no proporciona liveness.",
+            "D) En entornos de alta escalabilidad, el alto número de mensajes para entrar y salir de la sección crítica. 18 de enero de 2023 2/4 Sistemas Distribuidos Curso 22/23 :: Prueba 2 Escuela Superior de Informática E. [3p] Considere un sistema distribuido formado por 5 procesos con PIDs 1, 2, 3, 4 y 5. > 12 (1p) Si el sistema usa exclusión mutua con servidor central y los procesos 4, 5 y 1 envían un mensaje al coordinador, en ese orden, ¿cuántos mensajes son necesarios para que el proceso 5 logre entrar en la sección crítica?",
+            "A) 5",
+            "B) 8",
+            "C) 9",
+            "D) No se puede saber > 13 (1p) ¿Cuántos mensajes son necesarios si el coordinador priorizase las peticiones de menor a mayor PID, es decir, atiende primero al proceso de menor PID? Suponga que todos los mensajes se reciben al mismo tiempo.",
+            "A) 5",
+            "B) 8",
+            "C) 9",
+            "D) No se puede saber P1, P3 y P5 envían \"request\" (3) Servidor envía \"grant\" a P1 y P1 envía \"release\" (2) Lo mismo para P3 (2) Servidor envía \"grant\" a P5 (1) total: 8 > 14 (1p) Si el sistema utilizase exclusión mutua basada en anillo con testigo, ¿cuántos mensajes deben enviarse para conceder el acceso a la sección crítica al proceso 5? Asuma que el anillo se ordena de menor a mayor PID, que el token se encuentra en el proceso 3 y que el token se mueve en el sentido de menor a mayor PID:",
+            "A) 1",
+            "B) 2",
+            "C) 3",
+            "D) 4"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223-Q15- Siendo N el número de procesos, ¿cuál es el número de mensajes que se utiliza el algoritmo de Ricart y Agrawala para entrar (sin considerar la salida de ningún proceso) en la sección crítica?",
+        "opciones": [
+            "A) N mensajes",
+            "B) 2*(N-1)",
+            "C) 2 mensajes",
+            "D) 2*sqrt(N) E. [3p] Considere un sistema distribuido formado por 4 procesos con IDs 1, 2, 3 y 4. > 16 Se quiere seleccionar uno de los procesos como coordinador del sistema utilizando el algoritmo basado en anillo de Chang y Roberts. Asuma que el ID de cada proceso se corresponde con su identificador a efectos de la elección: ¿Cuántos mensajes se enviarán, en el peor caso, para completar la elección?",
+            "A) 7",
+            "B) 8",
+            "C) 15",
+            "D) 11 > 17 En el ejemplo anterior, si se usara el algoritmo de García-Molina y asumiendo que no ocurre ningún error durante el proceso de elección, ¿cuál sería el número de mensajes enviados en total por todos los procesos en el peor de los casos?",
+            "A) Menos de 12",
+            "B) 12",
+            "C) 13",
+            "D) Más de 13 - P1: 3 request + 3 answer - P2: 2 + 2 - P3: 1 + 1 - P4: 3 coordinator - total: 15 > 18 ¿Qué características del sistema distribuido tiene en consideración el algoritmo de García-Molina no existe en el algoritmo de Chang y Roberts?",
+            "A) El tamaño del sistema distribuido.",
+            "B) El identificador de cada proceso es desconocido para los demás procesos.",
+            "C) Tolerancia a fallos en los procesos.",
+            "D) Todas las anteriores son correctas."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223-Q19- ¿Cuál de las siguientes no es una característica considerada por el teorema CAP?",
+        "opciones": [
+            "A) Consistencia de datos",
+            "C) Ventana de inconsistencia estricta",
+            "B) Disponibilidad del sistema",
+            "D) Tolerancia a las particiones de red 18 de enero de 2023 3/4 Sistemas Distribuidos Curso 22/23 :: Prueba 2 Escuela Superior de Informática"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223-Q20- ¿Qué es la «ventana de inconsistencia» (inconsistency window)?",
+        "opciones": [
+            "A) Es el plazo en el que la réplica permite nuevas operaciones de escritura sin afectar al valor persistente almacenado.",
+            "B) El plazo que transcurre entre una escritura y el momento es que está garantizado que se puede acceder al último valor.",
+            "C) Eltamañomínimodelbufferdeenvíoquegarantizaquetodaslasréplicassepodránactualizareneltiemposolicitado.",
+            "D) El conjunto de operaciones de lectura/escritura que puede manejar el gestor de réplicas antes de que se actualice un recurso."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223-Q21- Escoja la definición más ajustada a protocolo líder/seguidores",
+        "opciones": [
+            "A) Protocolo para conseguir consistencia débil en el que todos los nodos pueden actuar como líder o seguidor en cada transacción.",
+            "B) Protocolo para conseguir consistencia fuerte dónde un nodo tiene un rol distinguido del resto.",
+            "C) Protocolo para conseguir consistencia débil dónde un nodo tiene un rol distinguido del resto.",
+            "D) Protocolo para conseguir consistencia débil donde los nodos seguidores almacenan una copia parcial del líder"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223-Q22- Para un conjunto de 6 nodos, se define un método de votación (quorum) y usted debe definir el número de copias de lectura (R) y el número de copias de escritura (W) ¿qué números propondría para garantizar la consistencia?",
+        "opciones": [
+            "A) R=3, W=4",
+            "B) R=2, W=3",
+            "C) R=4, W=2",
+            "D) R=3, W=3"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223-Q23- ¿Cómo se consigue normalmente el «balanceo de carga»?",
+        "opciones": [
+            "A) El sistema redirige las peticiones de los clientes a las distintas réplicas disponibles.",
+            "B) El cliente reparte equitativamente sus peticiones entre las réplicas conocidas.",
+            "C) El planificador decide en qué momento ejecutar las peticiones para haya un equilibrio de carga a lo largo del tiempo.",
+            "D) Ajustando constantemente el porcentaje de uso de las CPUs disponibles para evitar sobrecargas. 18 de enero de 2023 4/4"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223X-Q1- Marca cuál de las siguientes afirmaciones es cierta:",
+        "opciones": [
+            "A) En comunicación indirecta existe un desacoplamiento en espacio y tiempo entre los participantes.",
+            "B) Implementar comunicación indirecta es apropiado para la difusión de eventos, pero cuando los receptores son bien conocidos y no suelen cambiar.",
+            "C) En comunicación indirecta se utiliza un intermediario y todas las partes de la comunicación deben estar en ejecución.",
+            "D) RMI implementa comunicación indirecta."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223X-Q2- ¿Cuál es el modelo de comunicación más adecuado para un sistema de estaciones meteorológicas que informan sobre temperatura, viento y presión a un conjunto indeterminado y dinámico de posibles clientes?",
+        "opciones": [
+            "A) Polling a una base de datos.",
+            "C) Un sistema de ficheros distribuido.",
+            "B) Un sistema publicador-subscriptor.",
+            "D) RPC o RMI."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223X-Q3- ¿Qué modelo de comunicación indirecta implica conocer los identificadores de los destinatarios del mensaje que envia- mos?",
+        "opciones": [
+            "A) Comunicación en grupo",
+            "C) Ninguno",
+            "B) Colas de mensajes",
+            "D) Modelo de memoria distribuida compartida"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223X-Q4- Marca la afirmación correcta en relación a los sistemas de propagación de eventos de publicación–subscripción basados en broker:",
+        "opciones": [
+            "A) Los publicadores no conocen las referencias de los subscriptores.",
+            "B) Cada publicador es responsable de almacenar las referencias de sus subscriptores.",
+            "C) Cada subscriptor es responsable de almacenar las referencias de sus publicadores.",
+            "D) Cada pareja publicador-subscriptor es única y está identificada unívocamente."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223X-Q5- ¿En qué caso NO es adecuado a priori el uso de un middleware de colas de mensajes distribuidas?",
+        "opciones": [
+            "A) Emisores y receptores no están activos al mismo tiempo.",
+            "B) Los receptores se encuentran dispersos en múltiples nodos de la red.",
+            "C) Los emisores esperan los resultados del cómputo realizado en los receptores.",
+            "D) Se desea persistencia de los mensajes."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223X-Q6- IceStorm es un sistema de propagación de eventos basado en...",
+        "opciones": [
+            "A) contenido",
+            "C) canal",
+            "B) tipo",
+            "D) Ninguno de los otros 07 de junio de 2023 1/4 Sistemas Distribuidos",
+            "A) Curso 22/23 :: Prueba 2 (extraordinaria) Escuela Superior de Informática E. [8p] La figura de la izquierda representa el diagrama de eventos de un SD formado por tres procesos. Para cada evento se muestra su estado local, asumiendo que el valor inicial es 0 para todos los procesos. El diagrama de la derecha (que contiene un error) es el diagrama de transición de estados globales correspondiente: > 7 (2p) ¿Cuál sería el valor del reloj lógico vectorial del tercer evento de P2?",
+            "A) (1,3,1)",
+            "B) (2,3,1)",
+            "C) (0,3,0)",
+            "D) (1,2,1) > 8 (2p) ¿Cuántos eventos han ocurrido en el estado global S031?",
+            "A) 2",
+            "B) 4",
+            "C) 5",
+            "D) No es determinista > 9 (2p) ¿Cuáles son los valores de a, b y c después de ocurrir el segundo evento de P3?",
+            "A) a=3, b=3, c=2",
+            "C) a=3, b=indeterminado, c=2",
+            "B) a=3, b=2, c=2",
+            "D) No es determinista",
+            "F) > 10 (2p) Dada la función f = a + b == c + 1, ¿cuáles serían los resultados de evaluar los predicados «posiblemente(f)» y",
+            "F) «definitivamente(f)»?",
+            "A) false, false",
+            "B) false, true",
+            "C) true, false",
+            "D) true, true"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223X-Q11- Un diagrama de estados globales consistentes tiene dos propiedades fundamentales ¿cuál de las siguientes NO es una de ellas?",
+        "opciones": [
+            "A) En un estado, haber almacenado recepción de mensajes, pero no su envío.",
+            "B) El estado almacenado es alcanzable desde el estado inicial.",
+            "C) El estado final es alcanzable desde el estado almacenado."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223X-Q12- Sea un cliente y un servidor ejecutando el algoritmo de Cristian, tras el proceso de sincronización, el cliente actualiza a Tc=12:00:00, en ese mismo instante, observamos el tiempo del servidor y es Ts=12:00:01, ¿Qué hora original tenía el cliente antes del proceso de sincronización?",
+        "opciones": [
+            "A) 12:00:01",
+            "C) 12:00:00:05",
+            "B) 12:00:02",
+            "D) Ninguna respuesta es válida 07 de junio de 2023 2/4 Sistemas Distribuidos",
+            "A) Curso 22/23 :: Prueba 2 (extraordinaria) Escuela Superior de Informática"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223X-Q13- Disponemos de un sistema distribuido formado por 10 procesos (P1-P10). P5 está actuando como servidor central para exclusión mutua, pero debido a un fallo del nodo, el proceso termina inesperadamente. ¿Qué opción considera más adecuada para decidir qué proceso debe desempeñar ahora esa función teniendo en cuenta que todos ellos tienen la capacidad de hacerlo?",
+        "opciones": [
+            "A) El siguiente: P6",
+            "C) Deberían ejecutar un algoritmo de elección.",
+            "B) El anterior: P7.",
+            "D) Deberían esperar a que P5 esté activo de nuevo."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223X-Q14- ¿Qué implica «multicast causal»?",
+        "opciones": [
+            "A) Los mensajes enviados por un proceso llegarán a en el mismo orden que fueron enviados.",
+            "B) Si existe una relación causal entre el envío de dos mensajes multicast, su recepción respeta ese mismo orden.",
+            "C) Todos los mensajes recibidos por un proceso del grupo son confirmados individualmente al emisor.",
+            "D) Todos las la entregas correspondiente a un mismo envío llegarán a la vez a todos los procesos del grupo."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223X-Q15- Si ejecutamos el algoritmo de Ricart y Agrawala en una red que soporta multicast, la cantidad de mensajes para acceder a la sección crítica...",
+        "opciones": [
+            "A) aumenta",
+            "C) no varía",
+            "B) disminuye",
+            "D) depende de qué proceso ostenta el testigo"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223X-Q16- ¿A qué se refiere la propiedad «liveness» cuando se aplica a un algoritmo de exclusión mutua distribuida?",
+        "opciones": [
+            "A) Asegura que no habrá inanición o deadlock.",
+            "B) Asegura que solo un proceso podrán entrar en la CS.",
+            "C) Asegura que los procesos obtendrán acceso a la CS en el mismo orden que lo pidieron.",
+            "D) Asegura que la CS fue liberada antes de otorgar permiso a otro proceso."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223X-Q17- El algoritmo de Ricart and Agrawala se basa en:",
+        "opciones": [
+            "A) Relojes lógicos y soporte multicast.",
+            "C) El paso continuo de un testigo.",
+            "B) La necesidad de elegir un nuevo coordinador.",
+            "D) La creación de subconjuntos de voto."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223X-Q18- En el contexto de la replicación ¿a qué nos referimos con «particiones de red»?",
+        "opciones": [
+            "A) Situaciones en que grupo de una o más réplicas pierden conectividad con el resto.",
+            "B) Al modo en que se organiza el espacio de almacenamiento local dentro de cada réplica.",
+            "C) Agrupaciones arbitarias de las réplicas para ofrecer mejor redundancia.",
+            "D) Es solo una forma de referirse a las subredes que forman la red de nodos."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223X-Q19- ¿Cuál de las siguientes no se encuadra en el concepto de «replicación»?",
+        "opciones": [
+            "A) Múltiples nodos con servidores que mantienen de forma consistente copias de los mismos datos.",
+            "B) Los servidores que gestionan los datos replicados están conectados mediante una red.",
+            "C) Idealemente, el cliente debería ser plenamente consciente con qué servidor está contactando.",
+            "D) Los nodos replicados pueden ofrecer un servicio en lugar de datos."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223X-Q20- ANULADA",
+        "opciones": [],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223X-Q21- ¿Cuál de las siguientes estrategias de replicación ofrece mayor consistencia?",
+        "opciones": [
+            "A) Replicación asíncrona",
+            "C) Basados en transacciones",
+            "B) Consistencia eventual",
+            "D) Ordenación débil 07 de junio de 2023 3/4 Sistemas Distribuidos",
+            "A) Curso 22/23 :: Prueba 2 (extraordinaria) Escuela Superior de Informática 07 de junio de 2023 4/4"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2324-Q1- Está implementando un sistema de comunicación indirecta con ZeroC Ice. ¿Que componente es más probable que imple- mente una interfaz similar a la siguiente? 1 interface Foo { 2 void publish(string m); 3 void setfilter(string m);",
+        "opciones": [
+            "C) 4 void subscribe(string topic); 5 } ■",
+            "A) El publicador",
+            "B) El consumidor",
+            "C) El broker",
+            "D) Broker y consumidor"
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "SSDD-2324-Q2- En un sistema de publicación/suscripción, tanto publicador como subscriptor proporcionan funciones «callback» para envío y recepción de mensajes respectivamente. ¿Qué modelo de interacción parece seguir este sistema? ■",
+        "opciones": [
+            "A) push/push",
+            "B) pull/pull",
+            "C) push/pull",
+            "D) pull/push"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2324-Q3- El tipo de comunicación que ofrece RabbitMQ en el caso más habitual está...",
+        "opciones": [
+            "A) Acoplado en tiempo y espacio.",
+            "B) Desacoplado en tiempo y acoplado en espacio",
+            "C) Acoplado en tiempo y desacoplado en espacio. ■",
+            "D) Desacoplado en tiempo y espacio."
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "SSDD-2324-Q4- ¿Qué modelo de subscripción permite especificar un filtro como un predicado sobre los valores de los atributos del evento? ■",
+        "opciones": [
+            "A) Basado en canales",
+            "C) Basado en contenido",
+            "B) Basado en temas",
+            "D) Basado en claves"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2324-Q5- ¿A qué se refiere el concepto de callback habitual en los mecanismos que soportan recepción push?",
+        "opciones": [
+            "A) Es un mecanismo de bloqueo que se aplica en el despachado concurrente.",
+            "B) Se refiere al menanismo de serialización del sirviente en middlewares RMI. ■",
+            "C) Es algún elemento invocable mediante el cual el runtime nos proporciona los mensajes.",
+            "D) Es un módulo del runtime que proporciona la interfaz de serialización que ofrece el servidor."
+        ],
+        "solucion": "B"
+    },
+    {
+        "cuestion": "SSDD-2324-Q6- En el diseño de SSDD altamente escalables, ¿cómo se puede lograr una coordinación eficiente sin depender de un único punto de fallo?",
+        "opciones": [
+            "A) Mediante el uso exclusivo de protocolos centralizados.",
+            "C) Minimizando la comunicación entre nodos. ■",
+            "B) Implementando algoritmos de consenso distribuido.",
+            "D) Usando un coordinador centralizado de baja disponibilidad."
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "SSDD-2324-Q7- Como ingeniero informático encargado de la implementación de un sistema distribuido dedicado al mantenimiento de la información del tiempo de un aeropuerto, tiene tres estaciones meteorológicas replicadas identificadas como A, B y C. Normal- mente, solo la estación seleccionada como coordinadora manda los datos. Si esto no ocurriera, se seleccionaría otra de forma automática para que envíe las actualizaciones. De los siguientes ¿Qué algoritmo ayudaría a lograr este objetivo?",
+        "opciones": [
+            "A) Ricart y Agrawala",
+            "C) Maekawa ■",
+            "B) García Molina (bully)",
+            "D) Ninguno de los anteriores 16 de enero de 2024 1/3 Sistemas Distribuidos Curso 23/24 :: Prueba 2 Escuela Superior de Informática"
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "SSDD-2324-Q8- ¿Cuál de las siguientes explica mejor el funcionamiento y la importancia del algoritmo de Maekawa, destacando cómo aborda la coordinación de manera eficiente y reduce la necesidad de comunicación entre nodos?",
+        "opciones": [
+            "A) El algoritmo de Maekawa utiliza un enfoque basado en reglas de prioridad para asignar turnos a los nodos, garantizando la exclusión mutua a través de la cooperación de nodos vecinos y minimizando las consultas a nodos distantes.",
+            "B) Maekawa implementa un modelo de acuerdos distribuidos que utiliza lógica difusa para asignar prioridades, permitiendo una coordinación más flexible y adaptativa en entornos dinámicos. ■",
+            "C) El algoritmo de Maekawa optimiza la coordinación al permitir que solo algunos de los nodos resuelvan conflictos de exclusión mutua, reduciendo así la carga de comunicación.",
+            "D) La esencia del algoritmo de Maekawa radica en la aplicación de técnicas de aprendizaje profundo para predecir patrones de acceso a recursos, logrando una coordinación autónoma y adaptativa en sistemas distribuidos complejos."
+        ],
+        "solucion": "B"
+    },
+    {
+        "cuestion": "SSDD-2324-Q9- ¿Cuál de las siguientes explica mejor el algoritmo de servidor central en comparación con otros enfoques de coordinación?",
+        "opciones": [
+            "A) El algoritmo de servidor central utiliza un único nodo como punto focal para coordinar todas las operaciones, simplificando la gestión de transacciones y mejorando la consistencia de datos mediante la centralización de la toma de decisiones.",
+            "B) A través de la implementación de un sistema de replicación de servidores, el algoritmo de servidor central busca mitigar la posibilidad de fallos únicos y mejorar la disponibilidad del sistema, aunque a expensas de una mayor complejidad y carga de red. ■",
+            "C) El algoritmo de servidor central, al depender de un único punto centralizado, puede enfrentar desafíos significativos en términos de escalabilidad y tolerancia a fallos, ya que un colapso en el nodo central puede paralizar completa- mente la coordinación en el sistema distribuido.",
+            "D) Al incorporar mecanismos avanzados de encriptación y firma digital, el algoritmo de servidor central garantiza la seguridad de la comunicación entre nodos, minimizando así los riesgos asociados con la coordinación en entornos distribuidos."
+        ],
+        "solucion": "B"
+    },
+    {
+        "cuestion": "SSDD-2324-Q10- ¿Cuál de las siguientes explica mejor la función y la relevancia del algoritmo de elección de líder/coordinador en sistemas distribuidos, destacando cómo aborda la coordinación de operaciones críticas y asegura la consistencia en la toma de decisiones?",
+        "opciones": [
+            "A) La elección de líder no es esencial para la coordinación en sistemas distribuidos, ya que introduce complejidad innecesaria.",
+            "B) El algoritmo de elección de líder garantiza la exclusión mutua en sistemas distribuidos, minimizando la necesidad de coordinación. ■",
+            "C) Al seleccionar un nodo como líder, el algoritmo facilita la coordinación al centralizar la toma de decisiones, crucial para operaciones críticas y la consistencia del sistema.",
+            "D) La elección de líder solo es relevante en entornos de baja concurrencia."
+        ],
+        "solucion": "B"
+    },
+    {
+        "cuestion": "SSDD-2324-Q11- ¿Qué es un sistema tolerante a fallos?",
+        "opciones": [
+            "A) Persigue la consistencia de la información.",
+            "B) Sistema muy robusto en el que no se producen fallos de ningún tipo.",
+            "C) Cumple con todas las especificaciones del sistema en presencia de cualquier tipo de fallo. ■",
+            "D) Permite la ejecución continuada del sistema, posiblemente degradada, aún en presencia de fallos."
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "SSDD-2324-Q12- ¿En qué modelo de replicación, una actualización de un dato X se tiene que ver inmediatamente en las otras réplicas?",
+        "opciones": [
+            "A) Lineal",
+            "C) Secuencial ■",
+            "B) Estricta",
+            "D) Ninguna de las anteriores."
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "SSDD-2324-Q13- ¿Qué factores pueden afectar a la ventana de inconsistencia?",
+        "opciones": [
+            "A) Carga de los sistemas.",
+            "C) Latencia y carga del sistema. ■",
+            "B) Latencia.",
+            "D) Latencia, carga de los sistemas y número de réplicas. 16 de enero de 2024 2/3 Sistemas Distribuidos Curso 23/24 :: Prueba 2 Escuela Superior de Informática"
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "SSDD-2324-Q14- Señala la afirmación FALSA respecto al esquema de replicación asíncrona. ■",
+        "opciones": [
+            "A) Cumple ACID.",
+            "C) Proporciona bajo acoplamiento.",
+            "B) Proporciona baja latencia.",
+            "D) Es aplicable a un sistema de consistencia eventual."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2324-Q15- En un sistema de réplicación de 7 nodos basado en «quorum assembly». ¿Cuál de los siguientes sería una configuración ROWA? ■",
+        "opciones": [
+            "A) R=1, W=4",
+            "B) R=1, W=7",
+            "C) R=4, W=1",
+            "D) R=7, W=7 A [10p] La figura de la izquierda representa el diagrama de eventos de un SD formado por tres procesos. Para cada evento se muestra su estado local, asumiendo que el valor inicial es 0 para todos los procesos. El diagrama de la derecha es el diagrama de transición de estados globales correspondiente: > 16 (2p) ¿Cuál es el valor del reloj lógico vectorial del segundo evento de P2? ■",
+            "A) (0,1,0)",
+            "B) (0,2,0)",
+            "C) (0,3,0)",
+            "D) (1,2,0) > 17 (2p) ¿Cómo cambiaría el recuento de estados globales si se hubiera enviado un mensaje en el evento c=2 que llega a P2 en el evento b=3?",
+            "A) No habría cambios",
+            "C) 3 estados menos ■",
+            "B) 4 estados más",
+            "D) 6 estados menos > 18 (2p) ¿Qué habría que añadir o eliminar en el diagrama de eventos de la izquierda para que hubiera una transición entre los estados S030 y S131 en el diagrama de la derecha?",
+            "A) Un evento nuevo en P2 entre b=2 y b=3.",
+            "C) Un mensaje entre a=2 y b=2. ■",
+            "B) Eliminar el evento c=2.",
+            "D) No es posible. > 19 (2p) ¿Cuáles son los valores de a, b y c después del segundo evento de P2?",
+            "A) (a=1, b=2, c=0)",
+            "C) (a=indeterminado, b=2, c=1) ■",
+            "B) (a=1, b=2, c=1)",
+            "D) (a=indeterminado, b=2, c=indeterminado) > 20 (2p) Dada la función f = (2a > b +",
+            "C) , ¿cuáles serían los resultados de evaluar los predicados «posiblemente(f)» y",
+            "F) «definitivamente(f)»? ■",
+            "A) (false, false)",
+            "C) (true, false)",
+            "B) (fase, true)",
+            "D) (true, true) 16 de enero de 2024 3/3"
+        ],
+        "solucion": "F"
+    },
+    {
+        "cuestion": "SSDD-2324X-Q1- ¿Qué es la comunicación indirecta en sistemas distribuidos?",
+        "opciones": [
+            "A) Comunicación directa entre dos procesos.",
+            "C) Comunicación a través de líneas telefónicas. ■",
+            "B) Comunicación a través de un intermediario.",
+            "D) Comunicación sincrónica en tiempo real."
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "SSDD-2324X-Q2- ¿Cuál de los siguientes es un ejemplo de comunicación indirecta? ■",
+        "opciones": [
+            "A) Llamadas a procedimiento remoto (RPC).",
+            "C) Colas de mensajes distribuidas.",
+            "B) Comunicación por sockets.",
+            "D) Comunicación por bluetooth."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2324X-Q3- ¿Qué es el patrón de publicación/suscripción en sistemas distribuidos?",
+        "opciones": [
+            "A) Un método para realizar llamadas a procedimiento remoto (RPC).",
+            "B) Un esquema en el que los procesos se comunican mediante el intercambio de archivos. ■",
+            "C) Productores envían mensajes a múltiples consumidores interesados a través de un intermediario.",
+            "D) Una técnica para compartir memoria entre procesos en diferentes nodos."
+        ],
+        "solucion": "B"
+    },
+    {
+        "cuestion": "SSDD-2324X-Q4- ¿Cuál de los siguientes mecanismos NO es una forma de comunicación indirecta?",
+        "opciones": [
+            "A) Memoria compartida distribuida.",
+            "C) Comunicación de grupos. ■",
+            "B) Base de datos compartida.",
+            "D) Sockets TCP/IP."
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "SSDD-2324X-Q5- ¿Qué característica tiene la comunicación indirecta respecto de la directa?",
+        "opciones": [
+            "A) Es más rápida.",
+            "C) Aumenta el acoplamiento entre los procesos. ■",
+            "B) Facilita la sincronización directa entre procesos.",
+            "D) Proporciona mayor flexibilidad y desacoplamiento."
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "SSDD-2324X-Q6- Indique el tipo de problema que le ayuda a resolver el algoritmo de Ricart y Agrawala ■",
+        "opciones": [
+            "A) Elección de coordinador",
+            "C) Exclusión mutua",
+            "B) Consenso",
+            "D) Sincronización de eventos"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2324X-Q7- Construir un sistema que emplea multidifusión sobre el protocolo IP, implica la utilización de: ■",
+        "opciones": [
+            "A) SNMP",
+            "B) TCP",
+            "C) UDP",
+            "D) RPC"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2324X-Q8- En un sistema distribuido con 4 procesos y un recurso compartido R, ningún proceso quiere acceso a R en el instante 0. En el instante 1, el proceso P1 solicita acceso a R. En cuanto a número de mensajes ¿cuál de los siguientes algoritmos es más eficiente para conseguir la exclusión mutua en ausencia de fallos? ■",
+        "opciones": [
+            "A) Servidor Central",
+            "B) Anillo (formado por P2->P3->P4->P1->P2 y el token en P3)",
+            "C) Ricart y Agrawala (con soporte multicast real)",
+            "D) García Molina (con soporte multicast real)"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2324X-Q9- ¿Qué caracteriza inequívocamente a un error bizantino?",
+        "opciones": [
+            "A) Errores en las comunicaciones.",
+            "C) Errores aleatorios en comunicaciones y procesos. ■",
+            "B) Errores en los procesos.",
+            "D) Comportamiento aparentemente malicioso."
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "SSDD-2324X-Q10- En multidifusión ¿a qué nos referimos con un grupo cerrado? ■",
+        "opciones": [
+            "A) Sólo los miembros del grupo pueden enviar mensajes al grupo.",
+            "B) Para formar parte del grupo los miembros deben conseguir exclusión mutua.",
+            "C) Todos los procesos se ejecutan sobre computadores de una misma LAN.",
+            "D) Los mensajes enviados al grupo tienen un tamaño predefinido. 03 de junio de 2024 1/2 Sistemas Distribuidos Curso 23/24 :: Prueba 2 (extraordinario) Escuela Superior de Informática"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2324X-Q11- En un conjunto de 7 réplicas, decide implementar un protocolo de consistencia Quorum ¿qué asignación de número de réplicas a grupos de lectura/escritura sería correcta?",
+        "opciones": [
+            "A) Escritura 3, Lectura 3.",
+            "C) Escritura 1, Lectura 6. ■",
+            "B) Escritura 2, Lectura 5.",
+            "D) Escritura 4, Lectura 7."
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "SSDD-2324X-Q12- ¿Qué métodos de replicación no aseguran una consistencia estricta? ■",
+        "opciones": [
+            "A) Métodos optimistas",
+            "C) Ambos métodos aseguran una consistencia estricta",
+            "B) Métodos pesimistas",
+            "D) Ambos métodos no aseguran una consistencia estricta"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2324X-Q13- Complete la siguiente frase: «La disponibilidad es inversamente proporcional a...» ■",
+        "opciones": [
+            "A) La carga del sistema.",
+            "C) La redundancia del sistema.",
+            "B) El coste del sistema.",
+            "D) La fiabilidad del sistema."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2324X-Q14- ¿Cuál de las siguientes puede ser una consecuencia de la replicación?",
+        "opciones": [
+            "A) Aumenta la latencia.",
+            "C) Reduce las opciones de escalabilidad. ■",
+            "B) Incrementa la disponibilidad.",
+            "D) Simplifica la consistencia."
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "SSDD-2324X-Q15- ¿Qué dice el modelo de «consistencia eventual»?",
+        "opciones": [
+            "A) El programador es responsable de actualizar las copias en base a un modelo líder-seguidores.",
+            "B) Todas las réplicas deben ser sincronizadas inmediatamente después de cualquier acceso a una de las réplicas. ■",
+            "C) Si no se hacen escrituras nuevas sobre un recurso dado, todos los accesos devolverán eventualmente el último valor escrito.",
+            "D) Requiere de un protocolo de transacción distribuidas para garantizar la coherencia entre réplicas, especialmente ante particiones en la red."
+        ],
+        "solucion": "B"
+    },
+    {
+        "cuestion": "SSDD-2324X-Q16- ¿Qué son los relojes lógicos en sistemas distribuidos? ■",
+        "opciones": [
+            "A) Esquemas para ordenar eventos.",
+            "C) Relojes físicos que se sincronizan con precisión.",
+            "B) Métodos para medir el tiempo real en cada nodo.",
+            "D) Dispositivos de hardware para mantener la hora actual."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2324X-Q17- ¿Cuál es el propósito de los relojes vectoriales?",
+        "opciones": [
+            "A) Reducir el tiempo de procesamiento en cada nodo.",
+            "C) Sincronizar relojes físicos entre nodos. ■",
+            "B) Capturar las dependencias causales entre eventos.",
+            "D) Proporcionar una GUI para la gestión del tiempo."
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "SSDD-2324X-Q18- ¿Qué problema intenta resolver NTP? ■",
+        "opciones": [
+            "A) La sincronización de relojes entre nodos en una red.",
+            "C) La recuperación de datos después de una falla del sistema.",
+            "B) La comunicación segura entre nodos.",
+            "D) La distribución de la carga de trabajo en un SD."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2324X-Q19- ¿Cuál es el propósito del «algoritmo del abusón»?",
+        "opciones": [
+            "A) Sincronizar los relojes físicos de todos los nodos en una red. ■",
+            "B) Elegir un proceso para realizar una tarea específica.",
+            "C) Asegurar la integridad y seguridad de los datos transmitidos.",
+            "D) Ordenar eventos en ausencia de sincronización de reloj físico."
+        ],
+        "solucion": "A"
+    },
+    {
+        "cuestion": "SSDD-2324X-Q20- ¿Cuál es una limitación de usar relojes físicos en sistemas distribuidos?",
+        "opciones": [
+            "A) Son difíciles de implementar.",
+            "C) Consumen demasiados recursos. ■",
+            "B) Pueden llevar a inconsistencias debido a su resolución.",
+            "D) No se pueden sincronizar en redes locales. 03 de junio de 2024 2/2"
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "SSDD-2425-Q1- ¿Cuál de las siguientes es una operación típica del paradigma publicación-suscripción? ■",
+        "opciones": [
+            "A) notify()",
+            "B) subscribe()",
+            "C) advertise()",
+            "D) Todas las anteriores"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2425-Q2- ¿Qué afirmación sobre un sistema de colas de mensajes distribuidas es más acertada? ■",
+        "opciones": [
+            "A) El broker determina el receptor de cada mensaje de la cola distribuida.",
+            "B) El emisor coloca sus mensajes en una cola genérica, y el broker los clasifica y responde al emisor.",
+            "C) Varios receptores reciben copias del mismo mensaje.",
+            "D) No hay diferencias sustanciales con un sistema publicador-subscriptor."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2425-Q3- ¿Cuál de las siguientes es una característica de IceStorm poco común en otros sistemas de propagación de eventos?",
+        "opciones": [
+            "A) Puede funcionar sin broker.",
+            "B) Es posible crear y gestionar «topics» para la segregación de mensajes. ■",
+            "C) Su modelo de programación consiste en invocar métodos de una interfaz.",
+            "D) Dispone de un mecanismo de replicación en el que todos los publicadores pueden actuar como brokers."
+        ],
+        "solucion": "B"
+    },
+    {
+        "cuestion": "SSDD-2425-Q4- ¿Quéquieredecirqueelpublicadoryelsuscriptorenunsistemadecomunicaciónindirectaestándesacopladosenespacio? ■",
+        "opciones": [
+            "A) Ninguno de los dos necesita conocer la dirección del otro.",
+            "B) El publicador no necesita conocer la identidad del suscriptor.",
+            "C) Publicadores, suscriptores y brokers se ejecutan todos en nodos distintos.",
+            "D) El broker puede ejecutarse en un nodo distinto a publicadores y suscriptores. A [6p] La figura muestra los mensajes entre 3 procesos de un sistema distribuido durante la ejecución del algoritmo de Chandy-Lamport. Las flechas de línea continua son mensajes de aplicación, mientras que las de línea discontinua llevan la marca.",
+            "E) > 5 (2p) Marca las opciones (respuesta múltiple) que corresponden con los eventos en que cada proceso captura su estado local. Ejemplo: P1:e1 indica que el proceso P1 almacenó su estado en el evento e1. ■",
+            "A) P1:e1",
+            "C) P1:e3",
+            "E) P2:e1",
+            "G) P2:e3 i) P2:e5 k) P3:e5 m) P3:e7 ■ ■",
+            "B) P1:e2",
+            "D) P1:e4",
+            "F) P2:e2 h) P2:e4 j) P3:e4 l) P3:e6",
+            "E) > 6 (2p) Marca las opciones (respuesta múltiple) que corresponden con mensajes capturados como estado en los canales de cada proceso. Ejemplo: P1:m1 significa que P1 ha capturado el mensaje m1 en alguno de sus canales de entrada (no se indica cuál).",
+            "A) P1:m1",
+            "C) P1:m4",
+            "E) P2:m3",
+            "G) P2:m5 i) P3:m2 k) P3:m5 ■ ■",
+            "B) P1:m2",
+            "D) P1:m5",
+            "F) P2:m4 h) P3:m1 j) P3:m3 > 7 (2p) Asumiendo que todos los procesos pueden comunicarse con todos los demás ¿Cuántos canales utliza el algoritmo Chandy Lamport en la ejecución representada en la figura? ■",
+            "A) 2",
+            "B) 3",
+            "C) 4",
+            "D) 5",
+            "E) 6",
+            "F) 7",
+            "G) 8 21 de enero de 2025 1/3 Sistemas Distribuidos Curso 24/25 :: Prueba 2 Escuela Superior de Informática B [10p] La figura de la izquierda representa el diagrama de eventos de un sistema distribuido formado por tres procesos. Para cada evento se muestra su estado local, asumiendo que el valor inicial es 0 para todos los procesos. La figura derecha es el diagrama de transición de estados globales correspondiente. Identificaremos los eventos por las propias asignaciones. Ejemplo: a=1 se refiere al primer evento de P1 (en el que ocurre esa asignación). > 8 (2p) ¿Cuál es el valor del reloj lógico vectorial del evento b=2?",
+            "A) (1,1,0)",
+            "C) (0,2,1)",
+            "E) (1,2,1)",
+            "G) (2,2,1) ■",
+            "B) (0,2,0)",
+            "D) (1,2,0)",
+            "F) (2,2,0) > 9 (2p) ¿Cuáles son los valores de a, b y c después del segundo evento de P2? ■",
+            "A) (a=1, b=2, c=indeterminado)",
+            "D) (a=indeterminado, b=2, c=1)",
+            "B) (a=1, b=2, c=0)",
+            "E) (a=indeterminado, b=2, c=indeterminado)",
+            "C) (a=1, b=2, c=1)",
+            "F) a, b y c indeterminados > 10 (2p) De las siguientes opciones, marca TODAS las que indican eventos concurrentes: ■ ■ ■ ■",
+            "A) a=1 || b=1",
+            "B) b=2 || c=1",
+            "C) b=2 || c=2",
+            "D) a=2 || b=2",
+            "E) c=1 || b=4",
+            "F) a=2 || b=4",
+            "C) > 11 (2p) Cosiderando el diagrama de estados globales mostrado en la figura y dada la función f = (2a > b+c) ¿cuáles serían",
+            "F) los resultados de evaluar los predicados «posiblemente(f)» y «definitivamente(f)»? ■",
+            "A) (false, false)",
+            "B) (false, true)",
+            "C) (true, false)",
+            "D) (true, true) > 12 (2p) El diagrama de estados globales de la figura en realidad es incorrecto. Indica cuál es el error:",
+            "A) Falta el estado S",
+            "C) Sobra el estado S 101 242 ■",
+            "B) Falta el estado S",
+            "D) Sobra el estado S 142 232"
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "SSDD-2425-Q13- ¿Qué indica una propiedad de pervivencia (liveness) en los algoritmos de elección?",
+        "opciones": [
+            "A) La petición para entrar en una sección crítica eventualmente sucederá.",
+            "B) Un algoritmo de elección terminará cuando hayan votado n/2+1 procesos, sin importar si el resto de procesos ha efectuado su voto. ■",
+            "C) Todos los procesos acordarán una elección o abortarán.",
+            "D) CadaprocesoparticipanteohaentradoenlaseccióncríticaohaelegidoalprocesoPquedebeentrarendichasección."
+        ],
+        "solucion": "B"
+    },
+    {
+        "cuestion": "SSDD-2425-Q14- Imagina que te han seleccionado para diseñar un sistema distribuido, el cual, requiere garantizar el acceso exclusivo a un conjunto recursos compartidos. Dentro de este sistema se impone una restricción importante, y es que el ancho de banda es un recurso muy valioso y escaso, por lo que debes consumir siempre el mínimo posible. Teniendo en cuenta que el número de procesos mínimo del sistema será de alrededor de 100 ¿Qué algoritmo de exclusión mutua sería el más adecuado? ■",
+        "opciones": [
+            "A) Servidor central",
+            "C) Ricart y Agrawala",
+            "B) Basado en anillo",
+            "D) Maekawa"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2425-Q15- ¿Cuál es el tamaño teórico óptimo para los subconjuntos de votación de acuerdo al algoritmo de Maekawa? ■ √",
+        "opciones": [
+            "A) N",
+            "B) N − 1",
+            "C) 2N/3",
+            "D) N/2 + 1 21 de enero de 2025 2/3 Sistemas Distribuidos Curso 24/25 :: Prueba 2 Escuela Superior de Informática"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2425-Q16- Estás trabajando para una empresa de automoción, diseñando un sistema de seguridad para el despliegue de un airbag en caso de accidente. El sistema está formado por 4 sensores que son capaces de detectar una colisión, los cuales, son leídos por 4 procesos que pueden comunicarse mediante paso de mensajes. Como resultado de un estudio exhaustivo del sistema, la empresa te comunica que existe la posibilidad de que 1 de estos sensores pueda fallar en la detección ¿Qué solución se puede aplicar para solventar este problema?",
+        "opciones": [
+            "A) Algoritmo de exclusión mutua",
+            "C) Ordenación de eventos ■",
+            "B) Algoritmo de elección",
+            "D) Problema de los generales bizantinos"
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "SSDD-2425-Q17- ¿Qué característica de las siguientes NO debe cumplir una comunicación multicast fiable?",
+        "opciones": [
+            "A) Integridad (Integrity)",
+            "C) Acuerdo uniforme (Uniform Agreement) ■",
+            "B) Seguridad (Safety)",
+            "D) Validez (Validity)"
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "SSDD-2425-Q18- Amazon Dynamo es un ejemplo de: ■",
+        "opciones": [
+            "A) Consistencia fuerte.",
+            "B) Consistencia eventual.",
+            "C) Consistencia débil.",
+            "D) Consistencia lineal."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2425-Q19- ¿Qué dos operaciones definen los modelos de consistencia débil? ■",
+        "opciones": [
+            "A) Read y Write.",
+            "B) Read y Update.",
+            "C) Data y Sync",
+            "D) Todas son incorrectas"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2425-Q20- Señale la opción correcta: ■",
+        "opciones": [
+            "A) En la consistencia estricta cualquier lectura obtiene el último valor escrito.",
+            "B) En la consistencia secuencial no todos los clientes tienen que ver los cambios en el mismo orden.",
+            "C) La consistencia causal es la más eficiente de implementar debido al uso de relojes físicos sincronizados.",
+            "D) Todas son incorrectas. 21 de enero de 2025 3/3"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2425X-Q1- AMQP es:",
+        "opciones": [
+            "A) Un protocolo de comunicación directa entre procesos",
+            "B) Un protocolo de comunicación basado en memoria compartida",
+            "C) Un broker de comunicaciones ■",
+            "D) Un protocolo de comunicación de la capa de aplicación usado típicamente en sistemas de comunicación indirecta"
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "SSDD-2425X-Q2- ¿Qué modelo de subscripción de un sistema publish-subscribe se usa cuando el filtro es una consulta definida sobre los valores de los atributos de cada evento? ■",
+        "opciones": [
+            "A) Basado en canal.",
+            "C) Basado en contenido.",
+            "B) Basado en tópicos.",
+            "D) Basado en tipos."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2425X-Q3- En un despliegue de Internet of Things con errores de comunicación intermitentes, ¿qué mecanismo es el más adecuado?",
+        "opciones": [
+            "A) Comunicación directa entre dispositivos",
+            "B) Comunicación mediante sockets TCP/IP ■",
+            "C) Comunicación mediante un sistema de publicación/suscripción con brokers",
+            "D) Ninguna es correcta"
+        ],
+        "solucion": "B"
+    },
+    {
+        "cuestion": "SSDD-2425X-Q4- Marca la correcta en relación a los sistemas de propagación de eventos de publicación–suscripción basados en broker: ■",
+        "opciones": [
+            "A) Los publicadores no conocen las referencias de los subscriptores.",
+            "B) Cada publicador es responsable de almacenar las referencias de sus subscriptores.",
+            "C) Cada subscriptor es responsable de almacenar las referencias de sus publicadores.",
+            "D) Cada pareja publicador-subscriptor es única y está identificada unívocamente."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2425X-Q5- ¿Cuál de las siguientes puede ser una consecuencia de la replicación?",
+        "opciones": [
+            "A) Aumenta la latencia.",
+            "C) Reduce las opciones de escalabilidad. ■",
+            "B) Incrementa la disponibilidad.",
+            "D) Simplifica la consistencia."
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "SSDD-2425X-Q6- Señala de las siguientes definiciones cuál se ajusta mejor a la definición de replicación: ■",
+        "opciones": [
+            "A) Mantener una copia consistente de los mismos datos o servicios en diferentes nodos conectados entre sí.",
+            "B) Mantener una copia de seguridad de datos o servicios en una localización centralizada, conectada a la copia original.",
+            "C) Distribución de los datos o servicios en distintas copias con el propósito de distribuir la carga de trabajo.",
+            "D) Uso de copias en el mismo servidor de la copia original para asegurar la recuperación de datos o servicios."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2425X-Q7- En relación a los modelos de consistencia, señala cuál se corresponde a un modelo de consistencia débil:",
+        "opciones": [
+            "A) Siempre se devuelve el valor de la última escritura. ■",
+            "B) Pueden existir inconsistencias temporales.",
+            "C) Por lo general obtiene peor rendimiento que otros tipos de consistencias.",
+            "D) Requiere hacer uso de transacciones."
+        ],
+        "solucion": "A"
+    },
+    {
+        "cuestion": "SSDD-2425X-Q8- ¿Cuál de las siguientes no es una característica considerada por el teorema CAP? ■",
+        "opciones": [
+            "A) Consistencia de datos.",
+            "C) Ventana de inconsistencia estricta.",
+            "B) Disponibilidad del sistema.",
+            "D) Tolerancia a las particiones de red."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2425X-Q9- En un sistema distribuido ¿cuál de las siguientes afirmaciones es la correcta?",
+        "opciones": [
+            "A) El skew es la variación aleatoria en la frecuencia del reloj debido al ruido eléctrico",
+            "B) El jitter es la diferencia instantánea entre el tiempo marcado por un reloj y una referencia ■",
+            "C) El drift es la variación sistemática en la frecuencia de un reloj respecto a una referencia",
+            "D) El skew es un fenómeno acumulativo debido al desgaste de cuarzo del cristal 11 de junio de 2025 1/3 Sistemas Distribuidos Curso 24/25 :: Prueba 2 (extraordinario) Escuela Superior de Informática A [6p] Considere el siguiente diagrama de eventos de un SD: > 10 (1p) ¿Cuál es el valor del reloj lógico (RL) de los eventos d, i y n? (marca 3) ■ ■",
+            "A) RL(d)=4",
+            "C) RL(d)=6",
+            "E) RL(i)=5",
+            "G) RL(n)=6 i) RL(n)=8 ■",
+            "B) RL(d)=5",
+            "D) RL(i)=4",
+            "F) RL(i)=6 h) RL(n)=7 > 11 (2p) ¿Cuál es el valor del reloj vectorial de los eventos d, i y n? (marca 3) ■ ■",
+            "A) RV(d)=[4,1,2]",
+            "D) RV(d)=[5,4,3]",
+            "G) RV(i)=[1,4,2] j) RV(n)=[1,4,4] ■",
+            "B) RV(d)=[4,3,2]",
+            "E) RV(d)=[6,3,4] h) RV(i)=[1,4,4] k) RV(n)=[3,5,5]",
+            "C) RV(d)=[5,3,2]",
+            "F) RV(i)=[1,3,2] i) RV(i)=[2,5,2] l) RV(n)=[5,4,3] > 12 (2p) Sea un corte C=[h1,h2,h3] donde h1, h2 y h3 son los prefijos de historia de p1, p2 y p3, respectivamente, definidos como h1=[a,b,c] y h3=[k,l,m,n], ¿cuál sería un prefijo de historia h2 válido para que C sea un corte consistente? ■",
+            "A) h2 = [f,g]",
+            "C) h2 = [f,g,h,i]",
+            "B) h2 = [f,g,h]",
+            "D) No hay ningún h2 que haga C consistente > 13 ¿Cuáles de las siguientes definen cadenas de causalidad válidas para el evento d? ■ ■",
+            "A) a, b, c, d",
+            "C) f, g, h, i, d",
+            "E) k, l, g, h, d ■ ■",
+            "B) a, f, g, h, d",
+            "D) k, b, c, d",
+            "F) k, l, m, i, d"
+        ],
+        "solucion": "E"
+    },
+    {
+        "cuestion": "SSDD-2425X-Q14- Un sistema con 18 nodos se configura mediante una red de comunicaciones por satélite mediante un contrato de pago por uso (10 euros por MB), a continuación, se configura un algoritmo de exclusión mutua para controlar el acceso a una sección crítica. Durante el primer mes de funcionamiento, ningún nodo accede a la sección crítica ¿Qué algoritmo implicaría un coste mayor? ■",
+        "opciones": [
+            "A) Anillo",
+            "B) Servidor Central",
+            "C) Ricart Agrawala",
+            "D) No habría diferencia."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2425X-Q15- ¿Qué eligen realmente los algoritmos de elección de coordinador? ■",
+        "opciones": [
+            "A) Cualquier proceso que deba tomar un rol especial.",
+            "C) Servidores fallback.",
+            "B) Servidores de exclusión mutua.",
+            "D) Coordinadores de zona."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2425X-Q16- ¿A qué se refiere la propiedad «liveness» cuando se aplica a un algoritmo de exclusión mutua distribuida? ■",
+        "opciones": [
+            "A) Asegura que no habrá inanición o deadlock.",
+            "B) Asegura que solo un proceso podrán entrar en la CS.",
+            "C) Asegura que los procesos obtendrán acceso a la CS en el mismo orden que lo pidieron.",
+            "D) Asegura que la CS fue liberada antes de otorgar permiso a otro proceso. 11 de junio de 2025 2/3 Sistemas Distribuidos Curso 24/25 :: Prueba 2 (extraordinario) Escuela Superior de Informática B [10p] La figura de la izquierda representa el diagrama de eventos de un SD formado por tres procesos. Para cada evento se muestra su estado local, asumiendo que el valor inicial es 0 para todos los procesos. La figura derecha es el diagrama de transición de estados globales correspondiente: > 17 (2p) ¿Cuántos eventos han ocurrido en el estado global S221? ■",
+            "A) 1",
+            "C) 3",
+            "E) 5",
+            "G) 7",
+            "B) 2",
+            "D) 4",
+            "F) 6 h) No es determinista > 18 (2p) ¿Cuáles son los valores de a, b y c después de ocurrir el segundo evento de P1? (marca 3) ■",
+            "A) a=1",
+            "D) b=1",
+            "G) b=indeterminado ■",
+            "B) a=2",
+            "E) b=2 h) c=1 ■",
+            "C) a=indeterminado",
+            "F) b=3 i) c=indeterminado > 19 (2p) Dada la función g = (a + c ≥",
+            "B) , ¿cuáles serían los resultados de evaluar los predicados «posiblemente(g)» y",
+            "G) «definitivamente(g)»? ■",
+            "A) false, false",
+            "B) false, true",
+            "C) true, false",
+            "D) true, true > 20 (2p) ¿Qué transición se ha omitido en el diagrama de transición de estados globales? ■",
+            "A) S000 - S011",
+            "B) S010 - S021",
+            "C) S120 - S221",
+            "D) S220 - S31",
+            "E) Ninguna > 21 (2p) ¿Cuántos cortes consistentes con al menos un evento pueden ocurrir en la historia del sistema? ■",
+            "A) 1",
+            "C) 3",
+            "E) 5",
+            "G) 7 i) 9 k) 11 m) 13",
+            "B) 2",
+            "D) 4",
+            "F) 6 h) 8 j) 10 l) 12 11 de junio de 2025 3/3"
+        ],
+        "solucion": "E"
+    }
+]

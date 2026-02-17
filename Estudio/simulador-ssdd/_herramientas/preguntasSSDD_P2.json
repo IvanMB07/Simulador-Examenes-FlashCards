@@ -1,0 +1,2215 @@
+[
+    {
+        "cuestion": "SSDD-1718X-Q1- SedeseaimplementarexclusiónmutuaenunsistemadistribuidoformadoporNprocesosmedianteelalgoritmo del anillo con testigo. Los procesos se ordenan en el anillo mediante los ID de procesos i=0..N-1.Se dispone de la primitiva send(i, j, token) y receive(i,j,token) donde i es el identificador del proceso receptor y j el identificador del procesoemisor,coni,j=[0,N-1].¿Quépardeprimitivasdeberíaejecutarelprocesoi=2? (cid:3) (cid:3)",
+        "opciones": [
+            "A. a) send(3,2,token);receive(3,2,token); c) send(1,2,token);receive(3,2,token); (cid:4) (cid:3)",
+            "B. b) send(3,2,token);receive(2,1,token); d) send(2,3,token);receive(2,1,token);"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1718X-Q2- EnlaejecucióndelalgoritmodeCristian,unclienteenvíaunmensajedesincronizacióny,pasados2segundos, recibelarespuestaconuntiempodeservidorTs=10h.5min.3seg.¿Cuáleseltiempoalquepodríaactualizarsuhora estecomputador? (cid:3) (cid:3)",
+        "opciones": [
+            "A. a) 10h.5min.3seg c) 10h.5min.5seg (cid:4) (cid:3)",
+            "B. b) 10h.5min.4seg d) 10h.5min.1seg E. [2p] Dadoslosprocesosp1yp2,conprefijosdehistoriah1yh2,respectivamente: h1=abrirficherof,leerf,calcularestadísticas,send(p2,estadísticas). h2=recibir(p1,estadísticas),send(p1,ack). 3 ¿Quétipodecorteformanlaunióndeambosprefijosdehistoria? (cid:4) (cid:3)",
+            "A. a) Corteconsistente c) Corteglobalalcanzable (cid:3) (cid:3)",
+            "B. b) Corteinconsistente d) Nosepuedesaber 4 Llamamosfronteradeuncortealúltimoeventodecadaprocesoalmacenadoenesecorte,¿Cuáleslafronteradel corteconlashistoriasdescritash1yh2? (cid:3)",
+            "A. a) leerficherof,calcularestadísticas,send(p2,estadísticas),recibir(p1,estadísticas),send(p1,ack) (cid:4)",
+            "B. b) send(p2,estadísticas),send(p1,ack) (cid:3)",
+            "C. c) abrirficherof,recibir(p1,estadísticas) (cid:3)",
+            "D. d) calcularestadísticas,send(p2,estadísticas),recibir(p1,estadísticas),send(p1,ack)"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1718X-Q5- ¿CuáldelassiguientesnoesunaaplicacióndelalgoritmodeChandy-Lamport? (cid:3) (cid:3)",
+        "opciones": [
+            "A. a) Recoleccióndebasura c) Deteccióndeterminacióndeunproceso (cid:3) (cid:4)",
+            "B. b) Deteccióndeinterbloqueos d) Deteccióndeeventosconcurrentes"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1718X-Q6- ¿Quéesunsistematoleranteafallos? (cid:3)",
+        "opciones": [
+            "A. a) Sistemamuyrobustoenelquenoseproducenfallosdeningúntipo (cid:4)",
+            "B. b) Sistema que permite la ejecución continuada del sistema, posiblemente degradada, aún en presencia de fallos (cid:3)",
+            "C. c) Sistemaquecumplecontodaslasespecificacionesdelsistemaenpresenciadecualquiertipodefallo (cid:3)",
+            "D. d) Sistemaquepersiguelaconsistenciadelainformación 12dejuniode2018 1/4 Sistemas Distribuidos Curso17/18::Parcial2(extraordinaria) Escuela Superior de Informática"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1718X-Q7- ¿Quémétododereplicaciónnoesunmétodopesimista? (cid:3) (cid:4)",
+        "opciones": [
+            "A. a) Copiaprimaria c) Vectoresdeversiones (cid:3) (cid:3)",
+            "B. b) Réplicasactivas d) Quorum"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1718X-Q8- SeaN=49elnúmeroderéplicashojadeunsistemadistribuido.Enunsistemadevotaciónjerárquica¿cuántas réplicashayenelnivelintermedio? (cid:3) (cid:3)",
+        "opciones": [
+            "A. a) 49 c) 1 (cid:4) (cid:3)",
+            "B. b) 7 d) 56"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1718X-Q9- Dado un sistema compuesto por k=3 componentes en paralelo, donde la fiabilidad de cada componente es r(i)=0.8.¿CuáleslaprobabilidaddelfalloQ(t)delsistemaycuálsufiabilidadR(t)? (cid:4) (cid:3)",
+        "opciones": [
+            "A. a) Q(t)=0.008,R(t)=0.992 c) Q(t)=0.2,R(t)=2.4 (cid:3) (cid:3)",
+            "B. b) Q(t)=0.488,R(t)=0.512 d) Q(t)=0.512,R(t)=0.488 E. [2p] EnunsistemadistribuidoelprocesoP4envíadosmensajesmulticast(m1,m2)aungrupogcompuestoporlos procesosg=(P1,P2,P3). 10 ¿Quétipodegrupoesg? (cid:4) (cid:3)",
+            "A. a) Grupoabierto c) GrupoIPmulticast (cid:3) (cid:3)",
+            "B. b) Grupocerrado d) GrupoR-multicast 11 Enelmismoescenario,elprocesoP1envíadosmensajesmulticast(m1,m2)yP2envía(m3,m4).Losprocesos P1yP3reciben(m1,m3,m2ym4)yP2yP4reciben(m1,m4,m2ym3).¿Quéordenaciónseestápreservando enelsistema? (cid:3) (cid:3)",
+            "A. a) OrdenFIFO c) Ordentotal (cid:3) (cid:4)",
+            "B. b) Ordencausal d) Nosepreservaningúnorden"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1718X-Q12- ¿Cuáldelassiguientescondicionesnosecumpleenelmulticastfiable? (cid:3) (cid:3)",
+        "opciones": [
+            "A. a) Integridad c) Acuerdouniforme (cid:3) (cid:4)",
+            "B. b) Validez d) Terminación"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1718X-Q13- ¿Quéquieredecirqueelemisoryelreceptorenunsistemadecomunicaciónindirectaestándesacopladosen tiempo? (cid:4)",
+        "opciones": [
+            "A. a) Emisoryreceptornonecesitanexistiralmismotiempo (cid:3)",
+            "B. b) Emisornonecesitaconocerlaidentidaddelreceptoryviceversa (cid:3)",
+            "C. c) Emisoryreceptornecesitanexistiralmismotiempo (cid:3)",
+            "D. d) Emisornecesitaconocerlaidentidaddelreceptoryviceversa"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1718X-Q14- ¿Quémodelodesubscripcióndeunsistemapublish-subscribeseusacuandoelfiltroesunaconsultadefinida sobrelosvaloresdelosatributosdecadaevento? (cid:3) (cid:4)",
+        "opciones": [
+            "A. a) Basadoencanal. c) Basadoencontenido. (cid:3) (cid:3)",
+            "B. b) Basadoentópicos. d) Basadoentipos. 12dejuniode2018 2/4 Sistemas Distribuidos Curso17/18::Parcial2(extraordinaria) Escuela Superior de Informática E. [6p] SeaelsiguienteescenarioparalosprocesosP0,P1yP2: 15 IndiquecuálessonlosrelojeslógicosdeLamportdeloseventosg,lym: (cid:3) (cid:3)",
+            "A. a) RL(g)=4;RL(l)=4;RL(m)=5 c) RL(g)=4;RL(l)=3;RL(m)=5 (cid:3) (cid:4)",
+            "B. b) RL(g)=3;RL(l)=4;RL(m)=5 d) RL(g)=3;RL(l)=3;RL(m)=6 16 Indiquecuálessonlosrelojesvectorialesdeloseventosd,iym: (cid:4)",
+            "A. a) RV(d)=(4,3,1);RV(i)=(1,5,3);RV(m)=(1,5,4) (cid:3)",
+            "B. b) RV(d)=(3,2,2);RV(i)=(2,4,4);RV(m)=(2,4,5) (cid:3)",
+            "C. c) RV(d)=(3,3,3);RV(i)=(2,5,4);RV(m)=(1,6,4) (cid:3)",
+            "D. d) RV(d)=(4,3,3);RV(i)=(3,5,3);RV(m)=(2,4,6) E. [6p] Dado un conjunto de N nodos, con N=8, que usa el método de votación dinámica (quórum) para mantener la consistenciadelasréplicas: 17 (1p) Indique cuál de los siguientes opciones no es un quórum válido (R=réplicas de lectura y W=réplicas de escritura): (cid:3) (cid:4)",
+            "A. a) R=3,W=6 c) R=5,W=3 (cid:3) (cid:3)",
+            "B. b) R=4,W=5 d) R=8,W=8 18 (2p) Para un quorum R,W=5, con un porcentaje de lecturas p=80%, un coste de lectura CL=5 y un coste de escrituratresveceselcostedelectura,¿cuáleselcostemediodelecturasyescrituras?: (cid:3) (cid:3)",
+            "A. a) 45 c) 13 (cid:4) (cid:3)",
+            "B. b) 35 d) 28 19 (3p)Durantelaejecucióndelsistemaseproduceunfalloenlaredquedalugaradosparticionesp1=(1,2,3,5,6) yp2=(4,7,8).Enesemomento,todoslosnodosenp1yp2tienenelvalorNV=15ySC=8.Determinelosvalores deNVySCparalosnodos1,5y8trasintentaractualizarp1: (cid:4)",
+            "A. a) Nodo1=(NV=16,SC=5);Nodo5=(NV=16,SC=5);Nodo8=(NV=15,SC=8) (cid:3)",
+            "B. b) Nodo1=(NV=16,SC=5);Nodo5=(NV=15,SC=8);Nodo8=(NV=15,SC=8) (cid:3)",
+            "C. c) Nodo1=(NV=15,SC=8);Nodo5=(NV=15,SC=8);Nodo8=(NV=15,SC=8) (cid:3)",
+            "D. d) Nodo1=(NV=15,SC=5);Nodo5=(NV=15,SC=5);Nodo8=(NV=16,SC=8) 12dejuniode2018 3/4 Sistemas Distribuidos Curso17/18::Parcial2(extraordinaria) Escuela Superior de Informática E. [8p] Considereelsiguientesistemadistribuidoformadopor4procesosconIDs1,2,3y4. 20 Sielsistemausaexclusiónmutuacentralizadaytodoslosprocesosenvíanunmensajealcoordinadorparaentrar enlaseccióncrítica(SC)almismotiempo¿cuántosmensajessonnecesariosparaqueelproceso4logreentrar enlaSC? AsumaqueelcoordinadorordenalosmensajesdemenoramayorID,esdecir,atiendealprocesodemenorID primeroytengaencuentaloscuatromensajesdepeticióniniciales: (cid:3) (cid:3)",
+            "A. a) 10 c) 8 (cid:3) (cid:4)",
+            "B. b) 6 d) 11 21 Sielsistemausaexclusiónmutuadistribuidabasadaenanillocontestigo.¿Cuáleselnúmerodemensajesque debentransferirseparaqueelprocesoconid4logreentrarenlaseccióncrítica?Asumaqueelanilloseordena demenoramayoriddeproceso,eltokenqueledaaccesoseencuentraenelprocesoconid1yeltokensemueve enelsentidodelasagujasdelreloj: (cid:3) (cid:3)",
+            "A. a) 5 c) 4 (cid:3) (cid:4)",
+            "B. b) 1 d) 3 22 SielsistemausaexclusiónmutuadistribuidabasadaenelalgoritmodeRicartyAgrawalaylosprocesos1y3con marcas de tiempo MT(1)=3, MT(3)=6, respectivamente, solicitan entrar en la sección crítica al mismo tiempo, ¿Cuáleselnúmerodemensajesquedebentransferirseparaqueelproceso1logreentrarenlaseccióncrítica? Asumaquelosprocesosnoenvíanmensajesasímismoyquenohayningúnprocesoenlaseccióncrítica: (cid:3) (cid:3)",
+            "A. a) 7 c) 8 (cid:4) (cid:3)",
+            "B. b) 9 d) 11 23 Enelescenarioanterior,sielsistemadisponedeprimitivasmulticast¿Cuántosmensajessonnecesarios? (cid:4) (cid:3)",
+            "A. a) 5 c) 2 (cid:3) (cid:3)",
+            "B. b) 4 d) 7 12dejuniode2018 4/4"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q5- ¿Enquéconsistelatécnicadepollingenunsistemadecolasdemensajes? (cid:3)",
+        "opciones": [
+            "A. a) Elconsumidorsebloqueahastaqueexistaunmensajeenlacola. (cid:3)",
+            "B. b) Elconsumidorcontinúasuejecuciónycuandoexistaunmensajeenlacolarecibeunanotificación. (cid:4)",
+            "C. c) Elconsumidorsondeaperiódicamentelacolaparadetectarsiexistealgúnmensajeenlacola. (cid:3)",
+            "D. d) Elproductorenvíaperiódicamentemensajesalsistemadecolas."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q6- ¿Quétécnicadecomunicaciónindirectaimplementa,pordefecto,comunicaciónunicast? (cid:4) (cid:3)",
+        "opciones": [
+            "A. a) Colasdemensajes c) Comunicaciónengrupos (cid:3) (cid:3)",
+            "B. b) Sistemasbasadoseneventos d) Memoriacompartidadistribuida 09deenerode2020 1/5 Sistemas Distribuidos Curso19/20::Prueba2 Escuela Superior de Informática"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q7- Completelasiguientefraseparadefinirelconceptodecomunicaciónindirecta:«Unsistemadecomunicación indirectapermite... (cid:4)",
+        "opciones": [
+            "A. a) ... comunicación entre entidades a través de un intermediario proporcionando así desacoplamiento en tiempoyespacio». (cid:3)",
+            "B. b) ...elenvíodeunmensajemulticastaunconjuntodeprocesosdelmismogrupo» (cid:3)",
+            "C. c) ...diseminacióndeeventosaungranconjuntodesubscriptores». (cid:3)",
+            "D. d) ...comunicaciónentreentidadesatravésdememoriacompartida»."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q8- Enelcontextodecomunicaciónindirecta,¿quéquieredecirdesacoplamientoenespacio? (cid:3)",
+        "opciones": [
+            "A. a) Emisores/Receptorespuedentenertiemposdevidadiferentes. (cid:4)",
+            "B. b) Sedesconocelaidentidaddeemisores/receptores. (cid:3)",
+            "C. c) Emisores/Receptoresnonecesitancoexistiralmismotiempo. (cid:3)",
+            "D. d) Emisores/Receptoresnecesitancompartirunespaciodedirecciones."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q9- ¿Cuáldelassiguientesfuncionesnoesimplementadaporelbrokerdeunsistemapublish-subscribe? (cid:3)",
+        "opciones": [
+            "A. a) Relacionarlospublicadoresdemensajesconsussubscriptores. (cid:3)",
+            "B. b) Garantizarlaentregafiabledemensajesatodoslossubscriptores. (cid:4)",
+            "C. c) Determinarlaestructuraquedebentenerlosmensajesquesepublican/reciben. (cid:3)",
+            "D. d) Enrutarlosmensajesdesdelospublicadoreshastasussubscriptores."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q10- ¿Paraquéseutilizalafunciónadvertise(f)empleadaenunsistemapublish-subscribe? (cid:3)",
+        "opciones": [
+            "A. a) Parasubscribirseaeventosdeundeterminadofiltro. (cid:4)",
+            "B. b) Paraanunciareltipodeeventosqueunpublicadorvaacomenzaradiseminar. (cid:3)",
+            "C. c) Paracancelarunasubscripcióndeeventos. (cid:3)",
+            "D. d) Paraenviarmensajeshaciaundeterminadodestinoutilizandounarutaconcreta."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q11- ¿Quémodelodesubscripciónpermiteespecificarunfiltrocomounacondiciónlógicasobrelosvaloresdelos atributosdelevento? (cid:3) (cid:4)",
+        "opciones": [
+            "A. a) Basadoencanales c) Basadosencontenidos (cid:3) (cid:3)",
+            "B. b) Basadoentemas d) Basadoenclaves"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q12- Indiquelafraseincorrectasobreelenrutamientodeeventos: (cid:3)",
+        "opciones": [
+            "A. a) Puedeexplotarlainformacióntransportadaenloseventosparadeterminarlarutaalossubscriptores. (cid:3)",
+            "B. b) Puedenecesitarconocerlossubscriptoresquecadabrokerenlaredmantiene. (cid:4)",
+            "C. c) Unsolobrokeresresponsablededeterminarelenrutamiento. (cid:3)",
+            "D. d) Ladecisióndeenrutamientoestomadaencadabrokerdelared."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q13- ¿Quéindicaelsesgo(skew)? (cid:3)",
+        "opciones": [
+            "A. a) Ladiferenciainstantáneaentredosrelojeslógicos. (cid:4)",
+            "B. b) Ladiferenciainstantáneaentredosrelojesfísicos. (cid:3)",
+            "C. c) Diferenciaentreelvaloractualypasadodeunrelojlógico. (cid:3)",
+            "D. d) Latasadecambiodeunrelojdecristaldecuarzo."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q14- ¿Cuálesunainterpretacióncorrectadelconceptode«causalidadpotencial»? (cid:4)",
+        "opciones": [
+            "A. a) Siuneventoesunefecto,sucausaleprecedeenlahistoriadeeventos. (cid:3)",
+            "B. b) Siuneventotienelacapacidaddecausarotro,deberáconsiderarseposterior. (cid:3)",
+            "C. c) Doseventosendistintosnodosnuncatienenrelacióndeorden. (cid:3)",
+            "D. d) Defineamboscomponentesdelosrelojeslógicosdeordentotal. 09deenerode2020 2/5 Sistemas Distribuidos Curso19/20::Prueba2 Escuela Superior de Informática"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q15- ¿PorquéelalgoritmodeBerkeleyproporcionasincronizacióninterna? (cid:3)",
+        "opciones": [
+            "A. a) Solofuncionaenredesdeárealocal. (cid:3)",
+            "B. b) Puedeproporcinartambiénsincronizaciónexterna. (cid:3)",
+            "C. c) Elservidorcentralnotieneaccesoaservidoresfueradelared. (cid:4)",
+            "D. d) Ningunadelasmarcastemporalesesconsideradacomoreferencia."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q16- ElcálculoqueseaplicaenelalgoritmodeCristiantratadeacotar... (cid:3)",
+        "opciones": [
+            "A. a) ...elerrorcausadoporunanchodebandaasimético. (cid:4)",
+            "B. b) ...elerrorcausadoporlalatenciadelared. (cid:3)",
+            "C. c) ...lacantidaddemensajesnecesariosparalasincronizacióndeungrupo. (cid:3)",
+            "D. d) ...elnúmerodenodosqueformapartedelgrupoderéplicas."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q17- ¿Quépropiedadofrecenlosrelojesvectoriales? (cid:4)",
+        "opciones": [
+            "A. a) Representancausalidadpotencial. (cid:3)",
+            "B. b) Evitancortesinconsistentes. (cid:3)",
+            "C. c) Reducenlasobrecargadesincronización. (cid:3)",
+            "D. d) Dosomáseventosseránconcurrentessitienenelmismovalordesurelojlógico."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q18- Señalequéafirmaciónescorrectaparaelconceptodecorteconsistente: (cid:3)",
+        "opciones": [
+            "A. a) Alcorteconsistenteessuficienteconincluirlascausaseignorarlosefectos (cid:4)",
+            "B. b) Alcorteconsistentelepuedenfaltarefectos,peronocausas (cid:3)",
+            "C. c) Uncorteconsistentesiempretienelacausaysuefectoincluido (cid:3)",
+            "D. d) Alcorteconsistentelepuedenfaltarcausas,peronoefectos"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q19- ¿Porquéunrecolectordebasuradistribuidonecesitaaveriguarelestadoglobaldelsistema? (cid:3)",
+        "opciones": [
+            "A. a) Es necesario averiguar el momento exacto en el que todos los procesos han salido de la sección crítica distribuida. (cid:4)",
+            "B. b) Lasreferenciasexistentesaunobjetopodríanestarcontenidassoloenmensajesentránsito. (cid:3)",
+            "C. c) Noserequieredisponerdelestadoglobalparaimplentarunrecolectordebasuradistribuido. (cid:3)",
+            "D. d) Formalmentenoesposibleimplementarrecoleccióndebasuradistribuida."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q20- Delassituacionessiguientes¿cuálrequiereunmecanismodeexclusiónmutuadistribuida? (cid:4)",
+        "opciones": [
+            "A. a) Elcontroldeunagrúarobotizadadesdeunaestaciónbaseyvariosoperariosenplanta. (cid:3)",
+            "B. b) Unsistemadeficherosdistribuidoquedisponedeimplementacionesparadiferentessistemasoperativos. (cid:3)",
+            "C. c) Unbrokerdepropagacióndeeventos. (cid:3)",
+            "D. d) Unaimpresoracompartida."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q21- Enmultidifusión¿aquénosreferimosconungrupocerrado? (cid:4)",
+        "opciones": [
+            "A. a) Sólolosmiembrosdelgrupopuedenenviarmensajesalgrupo. (cid:3)",
+            "B. b) Paraformarpartedelgrupolosmiembrosdebenconseguirexclusiónmutua. (cid:3)",
+            "C. c) TodoslosprocesosseejecutansobrecomputadoresdeunamismaLAN. (cid:3)",
+            "D. d) Losmensajesenviadosalgrupotienenuntamañopredefinido."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q22- ¿Porquénoesposibleimplementaralgoritmosdeconsensoensistemasasíncronos? (cid:4)",
+        "opciones": [
+            "A. a) Esimposibledistinguirentreunenlaceoprocesolento,yunproceso/nodocaído. (cid:3)",
+            "B. b) Losalgoritmosdeconsensorequierenrestriccionesdetiemporealmuyexigentes. (cid:3)",
+            "C. c) Losalgoritmosdeconsensorequierenunrelojfísicoglobal. (cid:3)",
+            "D. d) Enlasredesasíncronasaparecenfallosnorecuperables. 09deenerode2020 3/5 Sistemas Distribuidos Curso19/20::Prueba2 Escuela Superior de Informática"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q23- ¿Porquéelalgoritmodelainstantanea(snapshot)incluyeelregistrodelosmensajesrecibidos(obviandola marca)cuandosecapturaelestadolocaldecadaproceso? (cid:3)",
+        "opciones": [
+            "A. a) Falso.Seguardaelcontenidodeloscanales,perosedescartanlosmensajescomoestadolocal. (cid:3)",
+            "B. b) Falso.Elalgoritmosoloconsideralasvariablesinternasdelprocesoentrelamarcaoriginalylafinal. (cid:4)",
+            "C. c) Elcontenidodelosmensajestieneelpotencialdecambiarelestadolocaldeprocesoreceptor. (cid:3)",
+            "D. d) Elinstanteenelquelleganlosmensajesdeterminaelordenenelquesehacelacapturadelestadolocal."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q24- ¿Quéesel«vectordedecisión»enunproblemadeconsistenciainteractiva? (cid:3)",
+        "opciones": [
+            "A. a) Losdatosdeentradadelalgoritmo. (cid:3)",
+            "B. b) Elrelojvectorialqueacuerdantodoslosmiembrosdelgrupo. (cid:4)",
+            "C. c) Elconjuntodevalorespropuestosporcadaprocesoparticipante. (cid:3)",
+            "D. d) Lasecuenciadetodoslosvalorespropuestoshastallegaralacuerdo."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q25- ConstruirunsistemaqueempleamultidifusiónsobreelprotocoloIP,implicalautilizaciónde: (cid:3) (cid:3) (cid:4) (cid:3)",
+        "opciones": [
+            "A. a) SNMP b) TCP c) UDP d) RPC"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q26- Unsistemademultidifusióndadogarantizaquelosmensajesenviadosporunmismoprocesollegaránalos receptoresenelmismoordenenelquefueronenviados.¿Quétipodemultidifusiónes? (cid:3) (cid:3)",
+        "opciones": [
+            "A. a) Reliablemcast c) CausalOrdermcast (cid:4) (cid:3)",
+            "B. b) FIFOmcast d) TotalOrdermcast"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q27- En transacciones, ¿qué propiedad me garantiza que un sistema transaccional ejecuta una transacción entre estadosconsistentes? (cid:3) (cid:4) (cid:3) (cid:3)",
+        "opciones": [
+            "A. a) Atomicity b) Consistency c) Isolation d) Durability"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q28- Indiquelarespuestamascorrecta.La«actualizaciónperdida»entransacciones: (cid:3)",
+        "opciones": [
+            "A. a) Elrestoderespuestassontodascorrectas. (cid:3)",
+            "B. b) Ocurresiempreentretransaccionesquesóloleen. (cid:4)",
+            "C. c) Ocurrecuandounatransacciónutilizaunvalorobsoletoparafijarunnuevoestado. (cid:3)",
+            "D. d) Ocurrecuandounatransaccióndelecturayunadeactualizaciónseejecutandeformaconcurrente."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q29- Enunsistematransaccional¿Quésistemadecontroldeconcurrenciadetectaproblemasaposterioriypuede sernecesariodeshacer? (cid:3) (cid:4)",
+        "opciones": [
+            "A. a) Bloqueos c) Controloptimista (cid:3) (cid:3)",
+            "B. b) Ordenación d) AbusóndeGarcíaMolina"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q30- Enunsistematransaccional,Eltwo-phaselockingobloqueoendosfases:(señalelamascorrecta) (cid:4)",
+        "opciones": [
+            "A. a) Garantizaequivalenciasecuencial. (cid:3)",
+            "B. b) Unatxnadquiereyliberabloqueosenordendeaccesoalosobjetos. (cid:3)",
+            "C. c) Todaslaspropiedadesdelasotrasrespuestassonciertas. (cid:3)",
+            "D. d) Previenelecturassucias."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q31- Lafiabilidaddeunsistemaes: (cid:3)",
+        "opciones": [
+            "A. a) latasadefallosdeesesistemaenunperiodoconcretodetiempo. (cid:4)",
+            "B. b) unamedidadeconformidadconunaespecificaciónautorizadadesucomportamiento. (cid:3)",
+            "C. c) laseguridaddeunsistemaencuantoaquenopuedaocasionardañosapersonas. (cid:3)",
+            "D. d) unconceptoamplioqueincluyetodaslasanterioresrespuestas. 09deenerode2020 4/5 Sistemas Distribuidos Curso19/20::Prueba2 Escuela Superior de Informática"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920-Q32- Unmodelodeconsistenciafuerte: (cid:3)",
+        "opciones": [
+            "A. a) utilizaunesquemadereplicaciónoptimista. (cid:4)",
+            "B. b) utilizaunesquemadereplicacionpesimista. (cid:3)",
+            "C. c) esválidocuanohaypocosaccesosconcurrentesenescritura. (cid:3)",
+            "D. d) permiteactualizacioneslocalessinningúntipoderestricciones. 09deenerode2020 5/5"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q1- ¿EnquécasoNOesadecuadoapriorielusodeunmiddlewaredecolasdemensajesdistribuidas? (cid:3)",
+        "opciones": [
+            "A. a) Emisoresyreceptoresnoestánactivosalmismotiempo. (cid:3)",
+            "B. b) Losreceptoresseencuentrandispersosenmúltiplesnodosdelared. (cid:4)",
+            "C. c) Losemisoresesperanlosresultadosdelcómputorealizadoenlosreceptores. (cid:3)",
+            "D. d) Sedeseapersistenciadelosmensajes."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q2- ¿Cuáldelossiguientessueleserunefectoindeseabledelossistemasdecomunicaciónindirecta? (cid:3) (cid:3)",
+        "opciones": [
+            "A. a) Disminucióndelanchodebanda. c) Disminucióndelrendimiento. (cid:4) (cid:3)",
+            "B. b) Aumentodelalatencia. d) Aumentodelatasadefallos"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q3- ¿CuálNOesunafuncióndelbrokerenunmiddlewaredecomunicaciónindirecta? (cid:3)",
+        "opciones": [
+            "A. a) Determinaraquésubscriptoresdebellegarcadamensaje. (cid:3)",
+            "B. b) Gestionarlacreación/destruccióndecanales,topicsocolas. (cid:3)",
+            "C. c) Enviarmensajesalossubscriptores. (cid:4)",
+            "D. d) Determinareltipodefiltradomásadecuadoencadacaso."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q4- ¿Porquélossistemasdecomunicaciónindirectaseconsideranensumayoríaasíncronos? (cid:3)",
+        "opciones": [
+            "A. a) Elemisoresnotificadodelaentregamedianteunmensajeasíncrono. (cid:3)",
+            "B. b) ElbrokerenvíalosmensajesalossubscriptoresmedianteunainvocaciónnobloqueantesinrespuestatipoRRA. (cid:4)",
+            "C. c) Elemisornopuedehacerningunaasunciónsobreelinstanteenqueelmensajellegaalreceptor. (cid:3)",
+            "D. d) Elsubscriptorinformaalbrokermedianteunflagtipopiggybacking"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q5- ¿Cuálessonlasventajasdelusodefiltrosenlossistemascomunicaciónindirecta?(marque2) (cid:4)",
+        "opciones": [
+            "A. a) Ahorrarenrecursosderedentrebrokeryreceptor. (cid:3)",
+            "B. b) Ahorrarenrecursosderedentreemisorybroker. (cid:4)",
+            "C. c) Ahorrarenprocesamientoenlosreceptores. (cid:3)",
+            "D. d) Ahorrarenprocesamientoenelbroker."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q6- Explica cómo construirías un sistema de propagación de eventos de tipo publicación-subscripción utilizando únicamente tecnologíaRPC. LospublicadoresseríanclientesqueinvocanRPCsobreelbroker.ElbrokerseríaunservidorRPCaligualquelossubscriptores.Unproce- dimientopublish(topic, event)permitiriríaalpublicadorenviaruneventoauncanaldadoindicandosunombre.Elsubscriptortendría queinvocarunprocedimientosubscribe(topic, endpoint)parainformaralbrockersobreelcanalalquequieresubscribirseeinformación sobreelendpointdesuservidor.Otrosdiseñosyenfoquessimilarespodríanserigualmenteválidos.",
+        "opciones": [],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q7- ¿Cualdelossiguientesalgoritmosnoesútilparasincronizartiempofísico:? (cid:3) (cid:4)",
+        "opciones": [
+            "A. a) Cristian c) Lamport (cid:3) (cid:3)",
+            "B. b) Berkeley d) Todoslosalgoritmosvalen"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q8- Enunprocesoqueformapartedeunalgoritmodistribuido: (cid:4)",
+        "opciones": [
+            "A. a) Tomalasdecisionessóloenbasealainformaciónlocal (cid:3)",
+            "B. b) Esmássimplequeunalgoritmocentralizado (cid:3)",
+            "C. c) Seejecutaenunareddeárealocal (cid:3)",
+            "D. d) UsadireccionesIPprivadas 16dejuniode2020 1/5 Sistemas Distribuidos Curso19/20::Prueba2(extraordinario) Escuela Superior de Informática"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q9- Loscomputadoresqueejecutansusistemadistribuidosequedansinmemoriaconelpasodeltiempo,locualindicaclaramente quenotodoslosobjetosqueseinstancianseliberan,ustedtienelahistoriadeestadosglobalesdesusistemadistribuidoalmacenada. ¿Quéalgoritmolepuedeayudar? (cid:4)",
+        "opciones": [
+            "A. a) Marzullo-Neiger (cid:3)",
+            "B. b) Chandy-Lamport (cid:3)",
+            "C. c) Berkeley (cid:3)",
+            "D. d) Ningunodeestosalgoritmosmepuedeayudar"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q10- Los computadores que ejecutan su sistema distribuido se quedan sin memoria con el paso del tiempo, lo cual indica cla- ramente que no todos los objetos que se instancian se liberan, usted tiene la historia de estados globales de su sistema distribuido almacenada.¿Quéalgoritmohausadoparaobtenerdichosestadosglobales? (cid:3)",
+        "opciones": [
+            "A. a) Marzullo-Neiger (cid:4)",
+            "B. b) Chandy-Lamport (cid:3)",
+            "C. c) Berkeley (cid:3)",
+            "D. d) Ningunodeestosalgoritmospuedeobtenerestadosglobales"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q11- Enminuevoordenadorempotrado,elrelojfísicotieneunafrecuenciadeunherzioporsegundo,¿quéclasedeeventosno puedoordenar? (cid:3)",
+        "opciones": [
+            "A. a) Elpasodetrenesporunpuntodelavia (cid:3)",
+            "B. b) Elnúmerodepersonasatendidasenunacajaregistradora (cid:4)",
+            "C. c) Elnúmerodecochesenunaautovíade8carrilesencadadirecciónquepasanpordebajodeunpuenteenunagranciudad (cid:3)",
+            "D. d) Puedoordenarlostodos"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q12- Sea un cliente y un servidor ejecutando el algoritmo de cristian, tras el proceso de sincronización, el cliente actualiza a Tc=12:00:00,enesemismoinstante,observamoseltiempodelservidoryesTs=12:00:01,¿Quéhoraoriginalteníaelclienteantes delprocesodesincronización? (cid:3) (cid:3)",
+        "opciones": [
+            "A. a) 12:00:01 c) 12:00:00:05 (cid:3) (cid:4)",
+            "B. b) 12:00:02 d) Ningunarespuestaesválida"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q13- Dadalasiguientefigura,asumiendoquelosrelojeslógicosdeLamportdePayPbestáninicialmenteaceroycadaevento relevanteesrepresentadoconuncirculonegroencadaproceso,¿quévalorestendránenelinstanteTb? (cid:3) (cid:3)",
+        "opciones": [
+            "A. a) RLb=6yRLa=5 c) RLb=4yRLa=5 (cid:4) (cid:3)",
+            "B. b) RLb=5yRLa=6 d) RLb=7yRLa=6 16dejuniode2020 2/5 Sistemas Distribuidos Curso19/20::Prueba2(extraordinario) Escuela Superior de Informática"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q14- Dadalasiguientefigura,¿Quécorteesconsistente?: (cid:4) (cid:3) (cid:3) (cid:3)",
+        "opciones": [
+            "A. a) Ca b) Cb c) Cc d) Ninguno"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q15- ¿Porquéserequiereobtenerestadosglobales? (cid:4)",
+        "opciones": [
+            "A. a) Paradeterminarlacoherenciadelosestadoslocalesrespectoaunconjuntodeeventos. (cid:3)",
+            "B. b) Esunprocesoempíricosinaplicacionesprácticas. (cid:3)",
+            "C. c) NoesposibleobtenerestadosglobalesenSDsíncronosoasíncronos. (cid:3)",
+            "D. d) Paraignorarlainformaciónenloscanalesdecomunicaciónquedistorsionaladepuración"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q16- Dadalasiguientefigura,asumiendoquelosrelojeslógicosvectorialesdePayPbestáninicialmenteaceroycadaevento relevante es representado con un circulo negro en cada proceso, asuma (a,b) para indicar el número de evento del proceso a y del procesobrespectivamente¿quévalorestendránenelinstanteTb?: (cid:3) (cid:3)",
+        "opciones": [
+            "A. a) RVb=(2,3)yRVa=(5,4) c) RVb=(2,4)yRVa=(4,3) (cid:4) (cid:3)",
+            "B. b) RVb=(2,5)yRVa=(5,5) d) RVb=(4,2)yRVa=(4,5)"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q17- ¿Quéalgoritmodeexclusiónmútuadistribuidotegarantizaelordenenelaccesoalrecursocompartido?: (cid:3) (cid:4)",
+        "opciones": [
+            "A. a) Exclusiónmutuacentralizada c) RicartyAgrawala (cid:3) (cid:3)",
+            "B. b) Anillo d) Todos"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q18- ¿Quécombinacióndepropiedadesdebecumplircomomínimounalgoritmodeexclusiónmutuadistribuidoparaserusable?: (cid:4) (cid:3)",
+        "opciones": [
+            "A. a) Seguridadyliveness c) Livenessyorden (cid:3) (cid:3)",
+            "B. b) Seguridadyorden d) Seguridad,livenessyorden"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q19- EnelalgoritmodeRicartyAgrawala,siloejecutoenunaredquesoportamulticast,elnúmerodemensajesparaaccedera laseccióncrítica... (cid:4)",
+        "opciones": [
+            "A. a) disminuye (cid:3)",
+            "B. b) aumenta (cid:3)",
+            "C. c) esigual (cid:3)",
+            "D. d) dependedelaposiciónenelanillológico"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q20- Tenemos un sistema distribuido, queremos probar la eficiencia en obtener acceso a la sección crítica. Si no hay ningún procesoenlaseccióncríticayteniendoencuentaelnúmerodemensajesexclusivamente,enlasituaciónóptimaencadaalgoritmo, ¿quéalgoritmoempleamenosmensajesenentrarenlaseccióncrítica?: (cid:3) (cid:3)",
+        "opciones": [
+            "A. a) Centralizado c) RicartyAgrawala (cid:4) (cid:3)",
+            "B. b) Anillocontestigo d) Cristian 16dejuniode2020 3/5 Sistemas Distribuidos Curso19/20::Prueba2(extraordinario) Escuela Superior de Informática"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q21- ElalgoritmodeMaekawasurgeconlaideade (cid:3)",
+        "opciones": [
+            "A. a) ProporcionarordenalalgoritmodeRicartyAgrawala (cid:4)",
+            "B. b) Evitar tener que buscar el consentimiento de todos los procesos del sistema distribuido en el algoritmo de Ricart y Agrawala (cid:3)",
+            "C. c) Evitartenerquebuscarelconsentimientodetodoslosprocesosdelsistemadistribuidoenelalgoritmodelanillo (cid:3)",
+            "D. d) Proporcionarordenalalgoritmodelanillo"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q22- En el algoritmo de García-Molina, 5 procesos identificados con pid 1,2,3,4,5 se quedan sin coordinador debido al fallo permanente del proceso con pid 6. El proceso 3 se da cuenta e inicia el proceso de elegir un nuevo coordinador, ¿Qué proceso/s recibe/nelprimermensajedeesteproceso? (cid:3) (cid:3)",
+        "opciones": [
+            "A. a) Todoslosprocesos c) Losprocesos1y2 (cid:4) (cid:3)",
+            "B. b) Losprocesos4y5 d) Elprocesoconelpidmasalto,el5"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q23- EnelalgoritmodeGarcía-Molina,5procesosidentificadosconpid1,2,3,4,5sequedansincoordinador.Elproceso3seda cuentaeiniciaelprocesodeelegirunnuevocoordinador,¿Cuantosmensajesseenvíanparadeterminarelcoordinador?.Laredno soportamulticast (cid:3) (cid:4) (cid:3) (cid:3)",
+        "opciones": [
+            "A. a) 5 b) 10 c) 6 d) 25"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q24- EnInternettalycomolaconocemosenlaactualidad¿Quémecanismoesmasexigentedeimplementardesdeelpuntode vistadedificultaddeconseguirunfuncionamientocorrecto? (cid:3)",
+        "opciones": [
+            "A. a) FIFO(FO-mcast) (cid:3)",
+            "B. b) Causal(CO-mcast) (cid:4)",
+            "C. c) TotalFiable(RTO-mcast) (cid:3)",
+            "D. d) Lostresmecanismossonigualdeexigentes"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q25- Sielprocesoqueproponeelvalorescorrecto,cualquierprocesocorrectohaelegidodichovalor,estapropiedades (cid:3) (cid:4) (cid:3) (cid:3)",
+        "opciones": [
+            "A. a) Acuerdo b) Integridad c) Terminación d) Liveness"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q26- ¿Cuáldelossiguientesmotivosharíainviableelalgoritmodeanilloparaexclusiónmutua? (cid:3)",
+        "opciones": [
+            "A. a) Latenciavariableenlareddecomunicaciones. (cid:3)",
+            "B. b) Númerocrecientedeprocesos. (cid:4)",
+            "C. c) Comunicacionesnofiables."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q27- ¿Dóndeseaplicaprincipalmenteelconceptodetransaccionesdistribuidas? (cid:4)",
+        "opciones": [
+            "A. a) Basesdedatosdistribuidas (cid:3)",
+            "B. b) Sistemasoperativosdistribuidos (cid:3)",
+            "C. c) Redesdecomputadoresdeárealocal (cid:3)",
+            "D. d) Sistemasdistribuidosdesistemasempotrados"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q28- En una unica transacción donde recibo tres ingresos de tres cuentas distintas en mi cuenta, puedo ver como mi saldo se incrementalastresveces,esesistematransaccionaltienemalimplementadolapropiedad: (cid:3) (cid:4)",
+        "opciones": [
+            "A. a) Atomicidad(Atomicity) c) Aislamiento(Isolation) (cid:3) (cid:3)",
+            "B. b) Consistencia(Consistency) d) Durabilidad(Durability) 16dejuniode2020 4/5 Sistemas Distribuidos Curso19/20::Prueba2(extraordinario) Escuela Superior de Informática"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q29- Enunaunicatransaccióndonderecibotresingresosde10eurosdetrescuentasdistintasenmicuenta,alfinaldelatransac- ciónsólotengo20eurosmás.Conlainformaciónproporcionada,¿quépropiedadnotienequevernadaconelerror?: (cid:3) (cid:3)",
+        "opciones": [
+            "A. a) Atomicidad(Atomicity) c) Aislamiento(Isolation) (cid:3) (cid:4)",
+            "B. b) Consistencia(Consistency) d) Durabilidad(Durability)"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q30- Una agencia deviajes consigue, de forma satisfactoria, lareserva de 150 plazas enun mismo Airbus A320 con unaúnica transaccióncuandodichoavióntienesolo120plazasdisponibles,esesistematransaccionaltienemalimplementadalapropiedad: (cid:3) (cid:3)",
+        "opciones": [
+            "A. a) Atomicidad(Atomicity) c) Aislamiento(Isolation) (cid:4) (cid:3)",
+            "B. b) Consistencia(Consistency) d) Durabilidad(Durability)"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q31- Selanzancientransaccionessimultáneasdelecturaparacalcularelbalancedeocupacióndelosavionesdeunaaerolínea, duranteeseproceso,ningunaotratransacciónseestáejecutandooselanzaenelsistema,¿Quétipodeproblemasesmásprobable quesurja?: (cid:3) (cid:3)",
+        "opciones": [
+            "A. a) Actualizacionesperdidas c) ProblemasWrite-Write (cid:3) (cid:4)",
+            "B. b) Lecturasinconsistentes d) Nosurgeningúnproblema"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q32- Salvaguardandoelsistemadelecturassucias/escriturasprematuras¿Quétécnicatienemaspotencialdeparalelismo?: (cid:3)",
+        "opciones": [
+            "A. a) Sistematotalmentesecuencial (cid:3)",
+            "B. b) Bloqueoendosfases(Two-PhaseLocking) (cid:4)",
+            "C. c) Bloqueoestrictoendosfases(StrictTwo-PhaseLocking) (cid:3)",
+            "D. d) Todoslossistemastienenelmismopotencialdeparalelismo"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q33- Comoadministradordeunsistematransaccionalconmuchosobjetosdondeexistemuypocaconcurrenciaenelaccesoalos mismosobjetosporpartedelastransaccionesqueselanzan.¿Quésistemadecontroldeconcurrenciahabilitaría?: (cid:3)",
+        "opciones": [
+            "A. a) Ordenación (cid:3)",
+            "B. b) Sistemasencuencial (cid:3)",
+            "C. c) Bloqueoestrictoendosfases(StrictTwo-PhaseLocking) (cid:4)",
+            "D. d) Optimista"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q34- Como administrador de un sistema transaccional con pocos objetos donde existe mucha concurrencia en el acceso a los mismosobjetosporpartedelastransaccionesdeescrituraqueselanzan.¿Quésistemadecontroldeconcurrenciahabilitaría? (cid:3)",
+        "opciones": [
+            "A. a) Ordenación (cid:3)",
+            "B. b) Sistemasecuencial (cid:4)",
+            "C. c) Bloqueoestrictoendosfases(StrictTwo-PhaseLocking) (cid:3)",
+            "D. d) Optimista"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q35- Eneltwo-phase-commit-protocol,siunparticipantenoresponde: (cid:4)",
+        "opciones": [
+            "A. a) Elcoordinadorabortatodalatransacción (cid:3)",
+            "B. b) Elrestodeparticipantesconsuma (cid:3)",
+            "C. c) Seabortanlasescriturasperolaslecturasprogresan (cid:3)",
+            "D. d) Seesperahastaqueconteste"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-1920X-Q36- ¿EnquéversióndelTPCPlosmensajestienenquetransportarel«abortList»enelcontroldelastransaccionesanidadas? (cid:3) (cid:3)",
+        "opciones": [
+            "A. a) Versiónjerárquica c) Enlasdos (cid:4) (cid:3)",
+            "B. b) Versiónplana d) Enninguna 16dejuniode2020 5/5"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021-Q1- ¿Quéafirmaciónesfalsaparalareplicación? (cid:3)",
+        "opciones": [
+            "A. a) Puedemejorareltiempoderespuestaenelaccesoalosdatos. (cid:3)",
+            "B. b) Mejoralatoleranciaafallos. (cid:3)",
+            "C. c) Incrementaladisponibilidaddelsistemadistribuido. (cid:4)",
+            "D. d) Simplificalaconsistenciadedatos."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021-Q2- Quéfactorespuedenafectaralaventanadeinconsistencia (cid:4)",
+        "opciones": [
+            "A. a) Retardoenlascomunicaciones,cargadelossistemasynúmeroderéplicas. (cid:3)",
+            "B. b) Retardoenlascomunicacionesycargadelossistemas. (cid:3)",
+            "C. c) Retardoenlascomunicaciones. (cid:3)",
+            "D. d) Cargadelossistemas."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021-Q3- Enunconjuntode7réplicas,decideimplementarunprotocolodeconsistenciaQuorum¿quéasignacióndenúmeroderéplicas agruposdelectura/escrituralevale? (cid:3) (cid:3)",
+        "opciones": [
+            "A. a) Escritura3,Lectura3. c) Escritura1,Lectura6. (cid:3) (cid:4)",
+            "B. b) Escritura2,Lectura5. d) Escritura4,Lectura7."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021-Q4- ¿Enquémodelodelogdereplicación,unaactualizacióndelaversióndelabasededatosensolounadelasréplicas,puede causarproblemas? (cid:3)",
+        "opciones": [
+            "A. a) Logbasadoensentencias/declaraciones(Statement-based). (cid:3)",
+            "B. b) Logbasadoenlógica(Logical-base). (cid:4)",
+            "C. c) Logbasadoenadelantodeescritura(write-ahead). (cid:3)",
+            "D. d) Enningúncasohayproblemamientraslabasededatos(Oracle,Mysql,etc.)sealamisma."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021-Q5- ¿Enquémodelodelogdereplicación,unasentenciaSQLconunareferenciaaunnúmeroaleatorio,puedecausarproblemas? (cid:3)",
+        "opciones": [
+            "A. a) Logbasadoenadelantodeescritura(Write-ahead). (cid:4)",
+            "B. b) Logbasadoensentencias/declaraciones(Statement-based). (cid:3)",
+            "C. c) Logbasadoenlógica(Logical-base). (cid:3)",
+            "D. d) Enningúncasohayproblema."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021-Q6- Enquémodelodereplicación,unaactualizacióndeundatoXsetienequeverinstantáneamente (cid:3)",
+        "opciones": [
+            "A. a) Secuencial (cid:4)",
+            "B. b) Estricta (cid:3)",
+            "C. c) Lineal (cid:3)",
+            "D. d) Ensistemasasíncronosnosepuedepropagardeformainstantánea(tiempodelosmensajes) 19deenerode2021 1/4 Sistemas Distribuidos Curso20/21::Prueba2 Escuela Superior de Informática E. [6p] Considereelsiguienteconjuntodeeventosquetienenlugarenlosprocesosp1,p2yp3deunsistemadistribuido: > 7 (1p)¿Cuáleselvalordelrelojlógico(RL)deloseventose,jyn?: (cid:3) (cid:4)",
+            "A. a) RL(e)=5;RL(j)=6;RL(n)=7 c) RL(e)=6;RL(j)=7;RL(n)=6 (cid:3) (cid:3)",
+            "B. b) RL(e)=7;RL(j)=7;RL(n)=8 d) RL(e)=6;RL(j)=6;RL(n)=6 > 8 (2p)¿Cuáleselvalordelrelojvectorialdeloseventose,jyn?: (cid:3)",
+            "A. a) RV(e)=[6,6,4];RV(j)=[6,4,3];RV(n)=[5,4,5] (cid:4)",
+            "B. b) RV(e)=[5,3,2];RV(j)=[5,5,2];RV(n)=[1,4,4] (cid:3)",
+            "C. c) RV(e)=[5,4,3];RV(j)=[6,5,3];RV(n)=[5,4,3] (cid:3)",
+            "D. d) RV(e)=[6,3,4];RV(j)=[6,5,4];RV(n)=[3,5,5] > 9 (1p)SielvalordelrelojvectorialdedoseventosaybsonRV(a)=[1,2,3]yRV(b)=[3,2,1],entonces: (cid:3) (cid:4)",
+            "A. a) a->b c) aybsonconcurrentes (cid:3) (cid:3)",
+            "B. b) b->a d) RV(a)=RV(b) > 10 (2p)SeauncorteC=[h1,h2,h3]dondeh1,h2yh3sonlosprefijosdehistoriadep1,p2yp3,respectivamente,definidoscomo h1=[a,b,c]yh3=[k,l,m,n],¿cuálseríaunprefijodehistoriah2válidoparaqueCseauncorteconsistente? (cid:3)",
+            "A. a) h2=[f,g] (cid:3)",
+            "B. b) h2=[f,g,h] (cid:4)",
+            "C. c) h2=[f,g,h,i] (cid:3)",
+            "D. d) Noesposibledefinirunprefijodehistoriah2talqueCseaconsistente 19deenerode2021 2/4 Sistemas Distribuidos Curso20/21::Prueba2 Escuela Superior de Informática E. [3p] Considereelsiguientediagramadeestadosglobales: > 11 (1p)ElestadoS21esunestadoglobal..: (cid:3) (cid:4)",
+            "A. a) inconsistente. c) consistenteyalcanzable. (cid:3) (cid:3)",
+            "B. b) consistenteeinalcanzable. d) inconsistenteeinalcanzable. > 12 (2p)SupongaqueseevalúaunciertopredicadoglobalPsobreestediagramaconelsiguienteresultado:P(S00)=F,P(S01)=F, P(S10)=T,P(S11)=F,P(S21)=F,P(S22)=F,P(S32)=T,conF=FalseyT=True¿cuálseríaelresultadodeevaluardefinitivamente P? (cid:4)",
+            "A. a) True (cid:3)",
+            "B. b) False (cid:3)",
+            "C. c) Indefinido (cid:3)",
+            "D. d) Nosepuedesaberconlainformaciónproporcionadaenelenunciado."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021-Q13- ¿Queindicalapropiedadlivenessenlosalgoritmosdeexclusiónmutuadistribuida? (cid:4)",
+        "opciones": [
+            "A. a) Cualquierprocesoquesoliciteaccesoalrecursoloobtendráenalgúnmomento. (cid:3)",
+            "B. b) Sihayunprocesoutilizandoelrecurso,ningúnotroprocesopuedeobteneracceso. (cid:3)",
+            "C. c) Cualquierprocesocorrecto(vivo)tienepermisoparasolicitaraccesoalrecurso. (cid:3)",
+            "D. d) Todoslosprocesosdeungrupodadotienenpermisoparaaccederatodoslosrecursosdelgrupo."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021-Q14- Respectoasueficiencia¿cuálesladiferenciaprincipalentrelosalgoritmosdeanilloparaexclusiónmutuayparaelección? (cid:3)",
+        "opciones": [
+            "A. a) Elalgoritmodeelecciónrequieremenosmensajes. (cid:3)",
+            "B. b) Elalgoritmodeexclusiónmutuarequieremenosmensajes. (cid:4)",
+            "C. c) Eldeelecciónsoloconsumerecursoscuandounprocesolodispara,eldeexclusiónmutualosconsumeconstantemente. (cid:3)",
+            "D. d) Eldeexclusiónmutuasoloconsumerecursoscuandounprocesolodispara,eldeelecciónlosconsumeconstantemente."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021-Q15- ¿Quéimplica«multicastFIFO»? (cid:4)",
+        "opciones": [
+            "A. a) Losmensajesenviadosporunprocesollegaránaenelmismoordenquefueronenviados. (cid:3)",
+            "B. b) Siexisteunarelacióncausalentredosmensajesmulticast,surecepciónrespetaesemismoorden. (cid:3)",
+            "C. c) Todoslosmensajesrecibidosporunprocesodelgruposonconfirmadosindividualmentealemisor. (cid:3)",
+            "D. d) Todoslaslaentregascorrespondienteaunmismoenvíollegaránalavezatodoslosprocesosdelgrupo."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021-Q16- ¿Cuáleslafinalidaddeunalgoritmode«consenso»? (cid:3)",
+        "opciones": [
+            "A. a) Decidirquéprocesodeterminaelvalorcorrectodelavariablededecisión. (cid:4)",
+            "B. b) Alterminar,todoslosprocesoslleganalmismovalorcorrectoenlavariablededecisión. (cid:3)",
+            "C. c) Alterminar,todoslosprocesosconocenlosvalorespropuestosportodoslosprocesosdelgrupo. (cid:3)",
+            "D. d) Comprobarquetodoslosprocesoscorrectosobtienenaccesoalavariablededecisióndeterminadaporelcoordinador. 19deenerode2021 3/4 Sistemas Distribuidos Curso20/21::Prueba2 Escuela Superior de Informática"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021-Q17- ¿Quéesel«vectordedecisión»enunproblemadeconsistenciainteractiva? (cid:3)",
+        "opciones": [
+            "A. a) Losdatosdeentradadelalgoritmo. (cid:3)",
+            "B. b) Elrelojvectorialqueacuerdantodoslosmiembrosdelgrupo. (cid:4)",
+            "C. c) Elconjuntodevalorespropuestosporcadaprocesoparticipante. (cid:3)",
+            "D. d) Lasecuenciadetodoslosvalorespropuestoshastallegaralacuerdo."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021-Q18- ¿Quéopciónesmasescalable,apriori,eneldesarrollodeunsistemadistribuido? (cid:4)",
+        "opciones": [
+            "A. a) Comunicaciónindirecta (cid:3)",
+            "B. b) RPC (cid:3)",
+            "C. c) RMI (cid:3)",
+            "D. d) Todastienensimilaresprestacionesencuantoaescalabilidad"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021-Q19- ¿QuémódelosdeinvocaciónsepodríanimplementarconRabbitMQ? (cid:3)",
+        "opciones": [
+            "A. a) Comunicaciónindirecta (cid:3)",
+            "B. b) RPC (cid:3)",
+            "C. c) RMI (cid:4)",
+            "D. d) RabbitMQpuedeimplementar/emularlosmodelosdecomunicacióna),b)yc)"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021-Q20- EnunacomunicaciónIPmulticast,losparticipantes... (cid:3)",
+        "opciones": [
+            "A. a) Estánacopladosenespacioytiempo. (cid:3)",
+            "B. b) Estándesacopladosenespacioytiempo. (cid:4)",
+            "C. c) Estándesacopladosenespacioyacopladosentiempo. (cid:3)",
+            "D. d) Estánacopladosenespacioydesacopladosentiempo."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021-Q21- ElmecanismoqueimplementaelenrutadodemensajesalosconsumidoresenRabbitMQsedenomina: (cid:3) (cid:3)",
+        "opciones": [
+            "A. a) Esunmecanismodelascolas. c) Seimplementaenlosconsumidores. (cid:3) (cid:4)",
+            "B. b) Seimplementaenlospublicadores. d) Exchanges."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021-Q22- EstáimplementandounsistemadecomunicaciónindirectaconZeroCIce.¿Quiénesmaslógicoqueimplementelasiguiente interfaz? 1 interface in { 2 void publish(string m); 3 void setfilter(string m); 4 void subscribe(string topic); 5 } (cid:3) (cid:4)",
+        "opciones": [
+            "A. a) Elpublicador c) Elbroker (cid:3) (cid:3)",
+            "B. b) Elconsumidor d) Elbrokeryelconsumidor"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021-Q23- ¿Cuáleselmodelodecomunicaciónmásadecuadoparaunsistemadeestacionesmeteorológicasqueinformansobretem- peratura,vientoypresiónaunconjuntoindeterminadoydinámicodeposiblesclientes? (cid:3) (cid:3)",
+        "opciones": [
+            "A. a) Pollingaunabasededatos. c) Unsistemadeficherosdistribuido. (cid:4) (cid:3)",
+            "B. b) Unsistemapublicador-subscriptor. d) RPCoRMI. 19deenerode2021 4/4"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021X-Q7- Utilizandounsistemadecomunicaciónindirectobasadoeneventos,dondeelgestordeeventosalmacenaeventos,¿qué serequiere,comomínimo,paraelenvíodeunevento? (cid:4)",
+        "opciones": [
+            "A. a) Queelpublicadoryelgestordeeventosesténacopladostemporalmente. (cid:3)",
+            "B. b) Queelpublicadoryelsubscriptoresténacopladostemporalmente. (cid:3)",
+            "C. c) Queelsubscriptoryelgestordeeventosesténacopladostemporalmente. (cid:3)",
+            "D. d) Queelpublicador,subscriptorygestordeeventosesténacopladostemporalmente."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021X-Q8- EnRabbitMQ,¿cómoseimplementanlaspolíticasdeenrutadodelosmensajesalasdistintascolas? (cid:3)",
+        "opciones": [
+            "A. a) Lospublicadoresespecificanlascolasdestino. (cid:3)",
+            "B. b) Laspropiascolastienensusfiltrosasociados. (cid:4)",
+            "C. c) LosExchangesointercambiadoreslasimplementan. (cid:3)",
+            "D. d) Losconsumidores,aldeclararlascolasalasquesesubscriben."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021X-Q9- EnRabbitMQ¿podríausarProtocolBuffersdegoogleparacodificarmensajesalascolas? (cid:3) (cid:3)",
+        "opciones": [
+            "A. a) No c) Dependedeltamañodelmensaje (cid:4) (cid:3)",
+            "B. b) Si d) Soloapartirdelaversión3"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021X-Q10- Lossistemasdecomunicaciónindirectasonadecuadospara... (cid:3)",
+        "opciones": [
+            "A. a) ...aplicacionesquemantienenlaconexióndurandomuchotiempo. (cid:3)",
+            "B. b) ...nodosdecómputoparaprocesamientomasivoporlotesengrandesgrids. (cid:4)",
+            "C. c) ...aplicacionesconungrannúmerodeusuariosqueconsumeninformaciónesporádicamente. (cid:3)",
+            "D. d) ...cualquiertipodeaplicación. 09dejuniode2021 2/4 Sistemas Distribuidos Curso20/21::Prueba2(extraordinario) Escuela Superior de Informática"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021X-Q11- ¿Quémodelodecomunicaciónindirectaimplicaconocerlosidentificadoresdelosdestinatariosdelmensajequeenvia- mos? (cid:3) (cid:4)",
+        "opciones": [
+            "A. a) Comunicaciónengrupo c) Ninguno (cid:3) (cid:3)",
+            "B. b) Colasdemensajes d) Modelodememoriadistribuidacompartida"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021X-Q12- ¿Quepropiedadesnosdificultaelegircomomodelodecomunicaciónunesquemaindirecto? (cid:3) (cid:4)",
+        "opciones": [
+            "A. a) Diseminacióndelosmensajes c) Tiemporealenlascomunicaciones (cid:3) (cid:3)",
+            "B. b) Escalabilidad d) Desacoplamiento E. [5p] Elsiguientediagramarepresentalaejecucióndeunsistemadistribuido,dondeS000eselestadoglobalinicial. 1 S000 2 / | \\ 3 S001 S010 S100 4 \\ / \\ / 5 S011 S110 6 \\ / 7 S111 8 / \\ 9 S211 S112 10 / 11 S311 > 13 (1p)¿Cuántosprocesosestánimplicadosenlaejecucióndelsistemadistribuidorepresentadoeneldiagrama? (cid:3) (cid:3) (cid:3) (cid:4)",
+            "A. a) 5 b) 10 c) 2 d) 3 > 14 (1p)EnelestadoglobalS311,¿cuántoseventoshanocurrido? (cid:4) (cid:3)",
+            "A. a) 5 c) 2 (cid:3) (cid:3)",
+            "B. b) 8 d) Nosepuedesaber > 15 (1p)¿Cuálseríaelresultadodeevaluarelpredicado«definitivamenteX»sielestadoglobalS111seevalúacomoTruey elrestodeestadosseevalúancomoFalse? (cid:4) (cid:3)",
+            "A. a) True c) Nosepuedesaber (cid:3) (cid:3)",
+            "B. b) False d) Dependedelestadoinicial > 16 (1p)Indiquecuálseríaunaposibleejecucióndeestesistemadistribuido: (cid:3)",
+            "A. a) S000->S001->S011->S111->S211->S311 (cid:3)",
+            "B. b) S000->S010->S011->S112 (cid:3)",
+            "C. c) S000->S001->S011->S111->S121 (cid:4)",
+            "D. d) a)yb)sonciertas > 17 (1p)ElestadoglobalS221es: (cid:4)",
+            "A. a) Inconsistente. (cid:3)",
+            "B. b) Consistente. (cid:3)",
+            "C. c) Consistenteperoinalcanzable. (cid:3)",
+            "D. d) NopertenecealaejecucióndelSistemaDistribuido."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021X-Q18- En una sincronización mediante el algoritmo de Cristian, un cliente envía un mensaje de sincronización a un servidor conTc=15:01:30.Elmensajederespuestadelservidorllegaalas15:01.40conTs=15:01:05,¿Quéhoradebefijarelclientecomo objetivoparasincronizarse?¿Quéerrorestácometiendo? (cid:4) (cid:3)",
+        "opciones": [
+            "A. a) 15:01:10,e=5segundos c) 15:01:45,e=10segundos (cid:3) (cid:3)",
+            "B. b) 15:01:15,e=5segundos d) 15:01:20,e=10segundos 09dejuniode2021 3/4 Sistemas Distribuidos Curso20/21::Prueba2(extraordinario) Escuela Superior de Informática"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021X-Q19- CuandoseaplicaunalgoritmodesincronizaciónexternaaungrupodeprocesosenunaLAN... (cid:3)",
+        "opciones": [
+            "A. a) Esdeterminantelalatenciaentrelosprocesosdelgrupo. (cid:3)",
+            "B. b) Elanchodebandahaciaelservidordelimitalaprecisión. (cid:3)",
+            "C. c) Elerroresmayorconformecreceelnúmerodeprocesosdelgrupo. (cid:4)",
+            "D. d) Todaslasafirmacionessonfalsas."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021X-Q20- ¿Quéconsecuenciatienelareplicación? (cid:3) (cid:3)",
+        "opciones": [
+            "A. a) Aumentalalatencia. c) Reducelasopcionesdeescalabilidad. (cid:4) (cid:3)",
+            "B. b) Incrementaladisponibilidad. d) Simplificalaconsistencia."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021X-Q21- ¿Cómoseconsiguenormalmenteel«balanceodecarga»? (cid:4)",
+        "opciones": [
+            "A. a) Elsistemaredirigelaspeticionesdelosclientesalasdistintasréplicasdisponibles. (cid:3)",
+            "B. b) Elclientereparteequitativamentesuspeticionesentrelasréplicasconocidas. (cid:3)",
+            "C. c) Elplanificadordecideenquémomentoejecutarlaspeticionesparahayaunequilibriodecargaalolargodeltiempo. (cid:3)",
+            "D. d) AjustandoconstantementeelporcentajedeusodelasCPUsdisponiblesparaevitarsobrecargas."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021X-Q22- ¿Quéproporcionaunsistemaconconsistenciaestricta? (cid:3)",
+        "opciones": [
+            "A. a) Lamarcadetiempoenquéseactualizócualquierrecursoreplicado. (cid:4)",
+            "B. b) Siempreestádisponibleelúltimovalorproporcionadoacualquierrecurso. (cid:3)",
+            "C. c) Elordendelaslecturasdebecoincidirestrictamenteconelordendelasescrituras. (cid:3)",
+            "D. d) Elsistemainformaexplícitamentesinopuedeproporcionarelvalordelaúltimaescritura."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021X-Q23- ¿Quéesla«ventanadeinconsistencia»(inconsistencywindow)? (cid:3)",
+        "opciones": [
+            "A. a) Eselplazoenelquelaréplicapermitenuevasoperacionesdeescriturasinafectaralvalorpersistentealmacenado. (cid:4)",
+            "B. b) Elplazoquetranscurreentreunaescriturayelmomentoesqueestágarantizadoquesepuedeaccederalúltimovalor. (cid:3)",
+            "C. c) Eltamañomínimodelbufferdeenvíoquegarantizaquetodaslasréplicassepodránactualizareneltiemposolicitado. (cid:3)",
+            "D. d) Elconjuntodeoperacionesdelectura/escrituraquepuedemanejarelgestorderéplicasantesdequeseactualiceun recurso."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2021X-Q24- ¿Cuáleslaestrategiamássimpleparaimplementarconsistenciadébil(weak)? (cid:4)",
+        "opciones": [
+            "A. a) Lasoperacionesserealizansobreelleader,yésteseencargadeactualizarlos(followers). (cid:3)",
+            "B. b) Unsistemaderéplicasbasadoenquorumconunmínimo2RcopiasdelecturayWcopiasdeescritura. (cid:3)",
+            "C. c) Elclienteactualizatodaslasréplicasdeformasimultáneamediandoinvocacionesconcurrentes. (cid:3)",
+            "D. d) Seutilizaunprotocolotwophasecommitprotocol. 09dejuniode2021 4/4"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122-Q1- EnunacomunicaciónIPmulticast,losparticipantes... (cid:3)",
+        "opciones": [
+            "A. a) Estánacopladosenespacioytiempo. (cid:3)",
+            "B. b) Estándesacopladosenespacioytiempo. (cid:4)",
+            "C. c) Estándesacopladosenespacioyacopladosentiempo. (cid:3)",
+            "D. d) Estánacopladosenespacioydesacopladosentiempo."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122-Q2- ¿Cuáldelassiguientesfrasesdefinemejorelconceptodeevento? (cid:3)",
+        "opciones": [
+            "A. a) Ejecucióndeunfragmentodecódigoremotoqueretornaunarespuestasíncrona. (cid:3)",
+            "B. b) Ejecucióndeunfragmentodecódigoremotoqueretornaunarespuestaasíncrona. (cid:3)",
+            "C. c) Comunicacióndedatosentredosobjetosdistribuidoscualesquiera. (cid:4)",
+            "D. d) Difusióndeunanotificaciónconunvalorasociado."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122-Q3- ¿Cuál es el modelo de comunicación más adecuado para un sistema de estaciones meteorológicas que informan sobre temperatura,vientoypresiónaunconjuntoindeterminadoydinámicodeposiblesclientes? (cid:3) (cid:3)",
+        "opciones": [
+            "A. a) Pollingaunabasededatos. c) Unsistemadeficherosdistribuido. (cid:4) (cid:3)",
+            "B. b) Unsistemapublicador-subscriptor. d) RPCoRMI."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122-Q4- ¿Quéquieredecirqueelemisoryelreceptorenunsistemadecomunicaciónindirectaestándesacopladosentiempo? (cid:4)",
+        "opciones": [
+            "A. a) Emisoryreceptornonecesitanexistiralmismotiempo (cid:3)",
+            "B. b) Emisornonecesitaconocerlaidentidaddelreceptoryviceversa (cid:3)",
+            "C. c) Emisoryreceptornecesitanexistiralmismotiempo (cid:3)",
+            "D. d) Emisornecesitaconocerlaidentidaddelreceptoryviceversa"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122-Q5- ¿Qué modelo de comunicación indirecta implica conocer los identificadores de los destinatarios del mensaje que envia- mos? (cid:3) (cid:4)",
+        "opciones": [
+            "A. a) Comunicaciónengrupo c) Ninguno (cid:3) (cid:3)",
+            "B. b) Colasdemensajes d) Modelodememoriadistribuidacompartida"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122-Q6- ¿Cuálesunainterpretacióncorrectadelconceptode«causalidadpotencial»? (cid:4)",
+        "opciones": [
+            "A. a) Siuneventoesunefecto,sucausaleprecedeenlahistoriadeeventos. (cid:3)",
+            "B. b) Siuneventotienelacapacidaddecausarotro,deberáconsiderarseposterior. (cid:3)",
+            "C. c) Doseventosendistintosnodosnuncatienenrelacióndeorden. (cid:3)",
+            "D. d) Defineamboscomponentesdelosrelojeslógicosdeordentotal. 12deenerode2022 1/3 Sistemas Distribuidos Curso21/22::Prueba2 Escuela Superior de Informática"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122-Q7- En una sincronización mediante el algoritmo de Cristian, un cliente manda un mensaje de sincronización a un servidor consuhoradeclientedeTc=10:00:00,lellegaunmensajedevueltaalas10:00:20conlahoradeservidordeTs=10:00:05,¿Qué horadebeconfigurarcomoobjetivoparasincronizarse?¿Quéerrormáximoestácometiendo? (cid:4) (cid:3)",
+        "opciones": [
+            "A. a) 10:00:15,10segundos c) 10:00:05,10segundos (cid:3) (cid:3)",
+            "B. b) 10:00:05,20segundos d) 10:00:25,10segundos"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122-Q8- Señalequéafirmaciónescorrectaparaelconceptodecorteconsistente: (cid:3)",
+        "opciones": [
+            "A. a) Alcorteconsistenteessuficienteconincluirlascausaseignorarcualquierefecto (cid:4)",
+            "B. b) Alcorteconsistentelepuedenfaltarefectos,peronocausas (cid:3)",
+            "C. c) Uncorteconsistentesiempretienelacausaysuefectoincluido (cid:3)",
+            "D. d) Alcorteconsistentelepuedenfaltarcausas,peronoefectos"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122-Q9- ¿Quéindicaelsesgo(skew)? (cid:3)",
+        "opciones": [
+            "A. a) Ladiferenciainstantáneaentredosrelojeslógicos. (cid:4)",
+            "B. b) Ladiferenciainstantáneaentredosrelojesfísicos. (cid:3)",
+            "C. c) Diferenciaentreelvaloractualypasadodeunrelojlógico. (cid:3)",
+            "D. d) Latasadecambiodeunrelojdecristaldecuarzo."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122-Q10- ¿Cuáleslarelaciónqueexisteentreelrelojfísicoyellógicoenunmismocomputador? (cid:3)",
+        "opciones": [
+            "A. a) Elrelojlógicotieneaproximadamentelamitaddederivaqueelfísico. (cid:3)",
+            "B. b) Elrelojlógicoesmuchomásprecisoporquepuedeinterpolarvaloresentredosticksdelrelojfísico. (cid:3)",
+            "C. c) Alrelojlógicoseleaplicaunarestricciónsobreelmáximovalordesesgo. (cid:4)",
+            "D. d) Noexisteningunarelaciónentreambosrelojes."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122-Q11- Enunproblemadeexclusiónmutuacentralizada,necesitaimplementarunaccesoporordendepeticiónenelaccesoala seccióncrítica¿Quéalgoritmodelossiguientesgarantizaelorden? (cid:3) (cid:4)",
+        "opciones": [
+            "A. a) Servidorcentral c) RicartyAgrawala (cid:3) (cid:3)",
+            "B. b) Anillocontestigo d) Todoslosalgoritmosgarantizanelorden"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122-Q12- DetermineeltipodeproblemaespecíficoqueleayudaaresolverelalgoritmodeChangyRoberts: (cid:4) (cid:3)",
+        "opciones": [
+            "A. a) Eleccióndecoordinador c) Acuerdo (cid:3) (cid:3)",
+            "B. b) Consenso d) Exclusiónmutua"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122-Q13- Determineeltipodeproblemaqueleayudaaresolverelalgoritmodeanillo: (cid:3)",
+        "opciones": [
+            "A. a) Consenso (cid:3)",
+            "B. b) Multidifusión (cid:3)",
+            "C. c) Consistenciainteractiva (cid:4)",
+            "D. d) Depende,haydosalgoritmos«deanillo»:unoexclusiónmutuayotroparaeleccióndecoordinador"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122-Q14- Desde el punto de vista de un sistema distribuido con alta escalabilidad sin fallos, ¿cuál es el aspecto mas débil del algoritmodeexclusiónmutuaconservidorcentral? (cid:4)",
+        "opciones": [
+            "A. a) Elservidorrepresentauncuellodebotella. (cid:3)",
+            "B. b) Limitacioneseneltamañodelacoladepeticiones. (cid:3)",
+            "C. c) Enentornosdealtaescalabilidadnoproporcionaliveness. (cid:3)",
+            "D. d) Enentornosdealtaescalabilidad,elaltonúmerodemensajesparaentrarysalirdelaregióncrítica. 12deenerode2022 2/3 Sistemas Distribuidos Curso21/22::Prueba2 Escuela Superior de Informática"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122-Q15- Delassituacionessiguientes¿cuálrequiereunmecanismodeexclusiónmutuadistribuida? (cid:3)",
+        "opciones": [
+            "A. a) Unaimpresoracompartida. (cid:3)",
+            "B. b) Unbrokerdepropagacióndeeventos. (cid:4)",
+            "C. c) Elcontroldeunagrúarobotizadadesdeunaestaciónbaseyvariosoperariosenplanta. (cid:3)",
+            "D. d) Unsistemadeficherosdistribuidoquedisponedeimplementacionesparadiferentessistemasoperativos."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122-Q16- ¿Quéafirmaciónesfalsaparalareplicación? (cid:3)",
+        "opciones": [
+            "A. a) Mejoralatoleranciaafallos. (cid:4)",
+            "B. b) Simplificalaconsistenciadedatos. (cid:3)",
+            "C. c) Incrementaladisponibilidaddelsistemadistribuido. (cid:3)",
+            "D. d) Puedemejorareltiempoderespuestaenelaccesoalosdatos."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122-Q17- Quéfactorespuedenafectaralaventanadeinconsistencia (cid:3)",
+        "opciones": [
+            "A. a) Cargadelossistemas. (cid:3)",
+            "B. b) Retardoenlascomunicaciones. (cid:3)",
+            "C. c) Retardoenlascomunicacionesycargadelossistemas. (cid:4)",
+            "D. d) Retardoenlascomunicaciones,cargadelossistemasynúmeroderéplicas."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122-Q18- Enquémodelodereplicación,unaactualizacióndeundatoXsetienequeverinstantáneamente (cid:3)",
+        "opciones": [
+            "A. a) Lineal (cid:4)",
+            "B. b) Estricta (cid:3)",
+            "C. c) Secuencial (cid:3)",
+            "D. d) Ensistemasasíncronosnosepuedepropagardeformainstantánea(tiempodelosmensajes)"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122-Q19- Completelasiguientefrase:«Ladisponibilidadesinversamenteproporcionala...» (cid:4) (cid:3)",
+        "opciones": [
+            "A. a) Lacargadelsistema c) Laredundanciadelsistema (cid:3) (cid:3)",
+            "B. b) Elcostedelsistema d) Lafiabilidaddelsistema"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122-Q20- ¿Quéesunsistematoleranteafallos? (cid:3)",
+        "opciones": [
+            "A. a) Sistemaquepersiguelaconsistenciadelainformación. (cid:3)",
+            "B. b) Sistemamuyrobustoenelquenoseproducenfallosdeningúntipo. (cid:3)",
+            "C. c) Sistemaquecumplecontodaslasespecificacionesdelsistemaenpresenciadecualquiertipodefallo. (cid:4)",
+            "D. d) Sistemaquepermitelaejecucióncontinuadadelsistema,posiblementedegradada,aúnenpresenciadefallos. 12deenerode2022 3/3"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122X-Q1- RabbitMQusaunmodelodecomunicaciónindirectadeltipo: (cid:3) (cid:4)",
+        "opciones": [
+            "A. a) Sistemabasadoeneventosdistribuidos. c) Colademensajes. (cid:3) (cid:3)",
+            "B. b) Memoriadistribuida. d) Comunicaciónunoauno."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122X-Q2- Marcalaafirmacióncorrectaenrelaciónalossistemasdepropagacióndeeventosdepublicación–subscripciónbasados enbroker: (cid:4)",
+        "opciones": [
+            "A. a) Lospublicadoresnoconocenlasreferenciasdelossubscriptores. (cid:3)",
+            "B. b) Cadapublicadoresresponsabledealmacenarlasreferenciasdesussubscriptores. (cid:3)",
+            "C. c) Cadasubscriptoresresponsabledealmacenarlasreferenciasdesuspublicadores. (cid:3)",
+            "D. d) Cadaparejapublicador-subscriptoresúnicayestáidentificadaunívocamente."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122X-Q3- ¿Cuálseríaladefiniciónmásacertadadeunsistemadecolasdemensajesdistribuidas? (cid:3)",
+        "opciones": [
+            "A. a) Elemisorcolocasusmensajesenunacolagenérica,elbrokerlosclasificayrespondealemisor. (cid:4)",
+            "B. b) Unbrokercentraldeterminaelreceptordecadamensajedelacoladistribuida. (cid:3)",
+            "C. c) Variosreceptoresrecibencopiasdelmismomensaje. (cid:3)",
+            "D. d) Nohaydiferenciassustancialesconunsistemapublicador-subscriptor."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122X-Q4- ¿CuáldelossiguientesNOseconsideraunmecanismodecomunicaciónindirecta? (cid:3) (cid:3)",
+        "opciones": [
+            "A. a) Comunicacióndegrupos c) Sistemasdepropagacióndeeventos (cid:4) (cid:3)",
+            "B. b) Llamadaaprocedimientoremoto d) Memoriacompartidadistribuida"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122X-Q5- ¿Cuáldelassiguientesfrasesdefinemejorelconceptode«evento»? (cid:4)",
+        "opciones": [
+            "A. a) Difusióndeunanotificaciónconunvalorasociado. (cid:3)",
+            "B. b) Comunicacióndedatosentredosobjetosdistribuidoscualesquiera. (cid:3)",
+            "C. c) Ejecucióndeunfragmentodecódigoremotoqueretornaunarespuestasíncrona. (cid:3)",
+            "D. d) Ejecucióndeunfragmentodecódigoremotoqueretornaunarespuestaasíncrona."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122X-Q6- ¿QuétratadeacotarelcálculoqueseaplicaenelalgoritmodeCristian? (cid:3)",
+        "opciones": [
+            "A. a) .Elerrorcausadoporunanchodebandaasimético. (cid:4)",
+            "B. b) Elerrorcausadoporlalatenciadelared. (cid:3)",
+            "C. c) Lacantidaddemensajesnecesariosparalasincronizacióndeungrupo. (cid:3)",
+            "D. d) Elnúmerodenodosqueformapartedelgrupoderéplicas. 20dejuniode2022 1/3 Sistemas Distribuidos Curso21/22::Prueba2(extraordinario) Escuela Superior de Informática"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122X-Q7- EnlaejecucióndelalgoritmodeCristian,eltiempoderespuestaquepercibeuncomputadoresde8segundosyelservidor envíaTs=10:25:07.¿Cuáleseltiempoalquepodríaactualizarsuhoraelcliente? (cid:4) (cid:3)",
+        "opciones": [
+            "A. a) 10:25:11 c) 09:59:59 (cid:3) (cid:3)",
+            "B. b) 10:25:15 d) Habríaqueconocerlahoradelcliente."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122X-Q8- ¿Cuálesunainterpretacióncorrectadelconceptode«causalidadpotencial»? (cid:4)",
+        "opciones": [
+            "A. a) Siuneventoesunefecto,sucausaleprecedeenlahistoriadeeventos. (cid:3)",
+            "B. b) Siuneventotienelacapacidaddecausarotro,deberáconsiderarseposterior. (cid:3)",
+            "C. c) Doseventosendistintosnodosnuncatienenrelacióndeorden. (cid:3)",
+            "D. d) Defineamboscomponentesdelosrelojeslógicosdeordentotal."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122X-Q9- ¿Porquéladeteccióndeterminacióndeunalgoritmodistribuidorequieredeterminarelestadoglobal? (cid:3)",
+        "opciones": [
+            "A. a) Losprocesosinvolucradospodríanestardes-sincronizados. (cid:3)",
+            "B. b) Noserequierecuandoelalgoritmodistribuidoesasíncrono. (cid:4)",
+            "C. c) Unainvocaciónentránsitopodríaimplicarqueelalgoritmocontinúa. (cid:3)",
+            "D. d) Esnecesariodeterminarelordencausaldetodoslosmensajesinvolucrados."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122X-Q10- MarcalaafirmaciónFALSAenrelaciónalosrelojessoftware: (cid:4)",
+        "opciones": [
+            "A. a) Suvalorsedeterminaapartirdeunrelojlógico. (cid:3)",
+            "B. b) Suvalorseobtieneapartirdeundispositivohardwarelocal. (cid:3)",
+            "C. c) Dosrelojessoftwaresinrelaciónpuedentenerelmismovalor. (cid:3)",
+            "D. d) Seaplicanprocedimientosespecíficosparaasegurarquenoseproducensaltos."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122X-Q11- Un sistema con 18 nodos se configura mediante una red de comunicaciones por satélite mediante un contrato de pago poruso(10eurosporMB),acontinuación,seconfiguraunalgoritmodeexclusiónmutuaparacontrolarelaccesoaunasección crítica. Durante el primer mes de funcionamiento, ningún nodo accede a la sección crítica ¿Qué algoritmo implicaría un coste mayor? (cid:4)",
+        "opciones": [
+            "A. a) Anillo (cid:3)",
+            "B. b) ServidorCentral (cid:3)",
+            "C. c) RicartAgrawala (cid:3)",
+            "D. d) Sinohayaccesoalaseccióncrítica,todoslosalgoritmoshabríantenidoelmismocoste."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122X-Q12- Enunproblemadeexclusiónmutuacentralizada,necesitaimplementarunaccesoporordendepeticiónenelaccesoala seccióncrítica¿Quéalgoritmodelossiguientesgarantizaelorden? (cid:3) (cid:4)",
+        "opciones": [
+            "A. a) Servidorcentral c) RicartyAgrawala (cid:3) (cid:3)",
+            "B. b) Anillocontestigo d) Todoslosalgoritmosgarantizanelorden"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122X-Q13- Determineeltipodeproblemaqueleayudaaresolverelalgoritmodeanillo: (cid:3)",
+        "opciones": [
+            "A. a) Consenso (cid:3)",
+            "B. b) Multidifusión (cid:3)",
+            "C. c) Consistenciainteractiva (cid:4)",
+            "D. d) Depende,haydosalgoritmos«deanillo»:unodeexclusiónmutuayotroparaeleccióndecoordinador."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122X-Q14- ConstruirunsistemaqueempleamultidifusiónsobreelprotocoloIP,implicalautilizaciónde: (cid:3) (cid:3) (cid:4) (cid:3)",
+        "opciones": [
+            "A. a) SNMP b) TCP c) UDP d) RPC 20dejuniode2022 2/3 Sistemas Distribuidos Curso21/22::Prueba2(extraordinario) Escuela Superior de Informática"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122X-Q15- Enunsistemadistribuidocon4procesosyunrecursocompartidoR,ningúnprocesoquiereaccesoaRenelinstante0. En el instante 1, el proceso P1 solicita acceso a R. En cuanto a número de mensajes ¿cuál de los siguientes algoritmos es más eficienteparaconseguirlaexclusiónmutuaenausenciadefallos? (cid:4)",
+        "opciones": [
+            "A. a) ServidorCentral (cid:3)",
+            "B. b) Anillo(formadoporP2->P3->P4->P1->P2yeltokenenP3) (cid:3)",
+            "C. c) RicartyAgrawala(consoportemulticastreal) (cid:3)",
+            "D. d) GarcíaMolina(consoportemulticastreal)"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122X-Q16- ¿Cuáleselcomportamientoidealquepersiguelareplicación? (cid:4)",
+        "opciones": [
+            "A. a) Mantenervariascopiasidénticasdeunrecursooservicioenvariosnodos. (cid:3)",
+            "B. b) Llevarunregistrodetalladodelosaccesosconcurrentesaunmismorecurso. (cid:3)",
+            "C. c) Acotareltiempodeaccesoalascopiassecundariasdeunservicioparaevitarinanición. (cid:3)",
+            "D. d) Impedirelaccesoconcurrentedevariosclientesaunrecursocompartidoparaasíevitarinconsistencias."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122X-Q17- ¿Porquédecimosquelareplicaciónreducelalatencia? (cid:3)",
+        "opciones": [
+            "A. a) Noescierto.Lalatenciacrecelinealmenteconelnúmeroderéplicas. (cid:3)",
+            "B. b) Eltiempodesincronizacióndelasréplicasestáacotadoyconvergeconeltiempo. (cid:4)",
+            "C. c) Silasréplicassedistribuyengeográficamente,lalatenciamediadesdelosclientessereduce. (cid:3)",
+            "D. d) Elbalanceadordecargaofrecealclienteunaccesoprioritarioenfuncióndelacargadelosnodos."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122X-Q18- ¿CuáldelassiguientesnoesunacaracterísticaconsideradaporelteoremaCAP? (cid:3) (cid:4)",
+        "opciones": [
+            "A. a) Consistenciadedatos c) Ventanadeinconsistenciaestricta (cid:3) (cid:3)",
+            "B. b) Disponibilidaddelsistema d) Toleranciaalasparticionesdered"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122X-Q19- ¿Quédiceelmodelode«consistenciaeventual»? (cid:3)",
+        "opciones": [
+            "A. a) Elprogramadoresresponsabledeactualizarlascopiasenbaseaunmodelolíder-seguidores. (cid:3)",
+            "B. b) Todaslasréplicasdebensersincronizadasinmediatamentedespuésdecualquieraccesoaunadelasréplicas. (cid:4)",
+            "C. c) Sinosehacenescriturasnuevassobreunrecursodado,todoslosaccesosdevolveráneventualmenteelúltimovalor escrito. (cid:3)",
+            "D. d) Requieredeunprotocolodetransaccióndistribuidasparagarantizarlacoherenciaentreréplicas,especialmenteante particionesenlared."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2122X-Q20- ¿Quéesla«ventanadeinconsistencia»(inconsistencywindow)? (cid:3)",
+        "opciones": [
+            "A. a) Eselplazoenelquelaréplicapermitenuevasoperacionesdeescriturasinafectaralvalorpersistentealmacenado. (cid:4)",
+            "B. b) Elplazoquetranscurreentreunaescriturayelmomentoesqueestágarantizadoquesepuedeaccederalúltimovalor. (cid:3)",
+            "C. c) Eltamañomínimodelbufferdeenvíoquegarantizaquetodaslasréplicassepodránactualizareneltiemposolicitado. (cid:3)",
+            "D. d) Elconjuntodeoperacionesdelectura/escrituraquepuedemanejarelgestorderéplicasantesdequeseactualiceun recurso. 20dejuniode2022 3/3"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223-Q1- ¿ConquémecanismoproporcionadoporZeroCIceestárelacionadalatécnicadeprocesamiento«workingqueue»habitual enlosmiddlewaresdecolasdemensajesdistribuidas? (cid:3) (cid:3)",
+        "opciones": [
+            "A. a) Batchedinvocations c) AsynchronousMethodInvocation (cid:4) (cid:3)",
+            "B. b) AsynchronousMethodDispatch d) Nohayunningúnmencanismorelacionado"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223-Q2- ¿Cuál de los siguientes medios de comunicación podríamos considerar que se encuentra desacoplado en espacio, pero acopladoentiempo? (cid:3) (cid:4)",
+        "opciones": [
+            "A. a) RMI c) IPmulticast (cid:3) (cid:3)",
+            "B. b) MQTT d) Ningunocumpleloindicado"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223-Q3- ¿Quécaracterizaalmodelodesuscripción«topicbased»enunsistemadepublicación-suscripción? (cid:3)",
+        "opciones": [
+            "A. a) Dependedelaclase(tipo)delosmensajes. (cid:4)",
+            "B. b) El«topic»aparececomouncampodelosmensajes. (cid:3)",
+            "C. c) El«topic»esunnombredeunalistadisponibleenelbroker. (cid:3)",
+            "D. d) Lasuscripciónindicaelrangodevaloresenlosqueestáinteresado."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223-Q4- En un sistema de publicación-suscripción ¿Cuál es el principal inconveniente de un broker centralizado respecto a uno descentralizado? (cid:4)",
+        "opciones": [
+            "A. a) Pocaescalabiliad. (cid:3)",
+            "B. b) Suimplementaciónesmáscompleja. (cid:3)",
+            "C. c) Dificultadparagarantizarpropiedadesextremoaextremo,comoseguridad. (cid:3)",
+            "D. d) Noimplicainconvenientesadicionales."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223-Q5- Conlaconfiguraciónmásbásica,enlascolasdemensajesdistribuidascuandoseenvíaunmensajeaunacolaenlaque hayvariossuscriptores¿cuántosdeellosloreciben? (cid:3)",
+        "opciones": [
+            "A. a) ninguno (cid:4)",
+            "B. b) 1 (cid:3)",
+            "C. c) todos (cid:3)",
+            "D. d) Aquellosquenohanrecibidoningúnmensajeprevio 18deenerode2023 1/4 Sistemas Distribuidos Curso22/23::Prueba2 Escuela Superior de Informática E. [10p] La figura de la izquierda representa el diagrama de eventos de un SD formado por tres procesos. Para cada evento se muestrasuestadolocal,asumiendoqueelvaloriniciales0paratodoslosprocesos.Eldiagramadeladerecha(quecontiene unerror)eseldiagramadetransicióndeestadosglobalescorrespondiente: > 6 (2p)¿CuálseríaelvalordelrelojlógicovectorialdelsegundoeventodeP3? (cid:4) (cid:3) (cid:3) (cid:3)",
+            "A. a) (3,2,2) b) (3,1,2) c) (0,3,1) d) (0,1,2) > 7 (2p)¿CuántoseventoshanocurridoenelestadoglobalS221? (cid:3) (cid:3) (cid:4) (cid:3)",
+            "A. a) 2 b) 4 c) 5 d) Noesdeterminista > 8 (2p)¿Cuálessonlosvaloresdea,bycdespuésdeocurrirelsegundoeventodeP1? (cid:3) (cid:3)",
+            "A. a) a=2,b=2,c=1 c) a=2,b=2,c=indeterminado (cid:3) (cid:4)",
+            "B. b) a=2,b=3,c=1 d) Noesdeterminista > 9 (2p)Dadalafuncióng =a+c>b,¿cuálesseríanlosresultadosdeevaluarlospredicados«posiblemente(g)»y«defini- tivamente(g)»? (cid:3) (cid:3) (cid:3) (cid:4)",
+            "A. a) false,false b) false,true c) true,false d) true,true > 10 (2p)¿Quétransiciónsehaomitidoeneldiagramadetransicióndeestadosglobales? (cid:4) (cid:3) (cid:3) (cid:3)",
+            "A. a) S030-S130 b) S011-S111 c) S321-S332 d) S130-S221"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223-Q11- Desdeelpuntodevistadeunsistemadistribuidoconaltaescalabilidadtoleranteafallos,¿cuáleselaspectomasdébil delalgoritmodeexclusiónmutuaconservidorcentral? (cid:4)",
+        "opciones": [
+            "A. a) Elservidorrepresentauncuellodebotella. (cid:3)",
+            "B. b) Limitacioneseneltamañodelacoladepeticiones. (cid:3)",
+            "C. c) Enentornosdealtaescalabilidadnoproporcionaliveness. (cid:3)",
+            "D. d) Enentornosdealtaescalabilidad,elaltonúmerodemensajesparaentrarysalirdelaseccióncrítica. 18deenerode2023 2/4 Sistemas Distribuidos Curso22/23::Prueba2 Escuela Superior de Informática E. [3p] Considereunsistemadistribuidoformadopor5procesosconPIDs1,2,3,4y5. > 12 (1p)Sielsistemausaexclusiónmutuaconservidorcentralylosprocesos4,5y1envíanunmensajealcoordinador,en eseorden,¿cuántosmensajessonnecesariosparaqueelproceso5logreentrarenlaseccióncrítica? (cid:3) (cid:3) (cid:3) (cid:4)",
+            "A. a) 5 b) 8 c) 9 d) Nosepuedesaber > 13 (1p)¿CuántosmensajessonnecesariossielcoordinadorpriorizaselaspeticionesdemenoramayorPID,esdecir,atiende primeroalprocesodemenorPID?Supongaquetodoslosmensajesserecibenalmismotiempo. (cid:3) (cid:4) (cid:3) (cid:3)",
+            "A. a) 5 b) 8 c) 9 d) Nosepuedesaber P1, P3 y P5 envían \"request\" (3) Servidor envía \"grant\" a P1 y P1 envía \"release\" (2) Lo mismo para P3 (2) Servidor envía \"grant\" a P5 (1) total: 8 > 14 (1p)Sielsistemautilizaseexclusiónmutuabasadaenanillocontestigo,¿cuántosmensajesdebenenviarseparaconceder elaccesoalaseccióncríticaalproceso5?AsumaqueelanilloseordenademenoramayorPID,queeltokenseencuentra enelproceso3yqueeltokensemueveenelsentidodemenoramayorPID: (cid:3) (cid:4) (cid:3) (cid:3)",
+            "A. a) 1 b) 2 c) 3 d) 4"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223-Q15- SiendoNelnúmerodeprocesos,¿cuáleselnúmerodemensajesqueseutilizaelalgoritmodeRicartyAgrawalapara entrar(sinconsiderarlasalidadeningúnproceso)enlaseccióncrítica? (cid:3) (cid:4) (cid:3) (cid:3)",
+        "opciones": [
+            "A. a) Nmensajes b) 2*(N-1) c) 2mensajes d) 2*sqrt(N) E. [3p] Considereunsistemadistribuidoformadopor4procesosconIDs1,2,3y4. > 16 SequiereseleccionarunodelosprocesoscomocoordinadordelsistemautilizandoelalgoritmobasadoenanillodeChang yRoberts. Asuma que el ID de cada proceso se corresponde con su identificador a efectos de la elección: ¿Cuántos mensajes se enviarán,enelpeorcaso,paracompletarlaelección? (cid:3) (cid:3) (cid:3) (cid:4)",
+            "A. a) 7 b) 8 c) 15 d) 11 > 17 En el ejemplo anterior, si se usara el algoritmo de García-Molina y asumiendo que no ocurre ningún error durante el procesodeelección,¿cuálseríaelnúmerodemensajesenviadosentotalportodoslosprocesosenelpeordeloscasos? (cid:3) (cid:3) (cid:3) (cid:4)",
+            "A. a) Menosde12 b) 12 c) 13 d) Másde13 - P1: 3 request + 3 answer - P2: 2 + 2 - P3: 1 + 1 - P4: 3 coordinator - total: 15 > 18 ¿QuécaracterísticasdelsistemadistribuidotieneenconsideraciónelalgoritmodeGarcía-Molinanoexisteenelalgoritmo deChangyRoberts? (cid:3)",
+            "A. a) Eltamañodelsistemadistribuido. (cid:3)",
+            "B. b) Elidentificadordecadaprocesoesdesconocidoparalosdemásprocesos. (cid:4)",
+            "C. c) Toleranciaafallosenlosprocesos. (cid:3)",
+            "D. d) Todaslasanterioressoncorrectas."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223-Q19- ¿CuáldelassiguientesnoesunacaracterísticaconsideradaporelteoremaCAP? (cid:3) (cid:4)",
+        "opciones": [
+            "A. a) Consistenciadedatos c) Ventanadeinconsistenciaestricta (cid:3) (cid:3)",
+            "B. b) Disponibilidaddelsistema d) Toleranciaalasparticionesdered 18deenerode2023 3/4 Sistemas Distribuidos Curso22/23::Prueba2 Escuela Superior de Informática"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223-Q20- ¿Quéesla«ventanadeinconsistencia»(inconsistencywindow)? (cid:3)",
+        "opciones": [
+            "A. a) Eselplazoenelquelaréplicapermitenuevasoperacionesdeescriturasinafectaralvalorpersistentealmacenado. (cid:4)",
+            "B. b) Elplazoquetranscurreentreunaescriturayelmomentoesqueestágarantizadoquesepuedeaccederalúltimovalor. (cid:3)",
+            "C. c) Eltamañomínimodelbufferdeenvíoquegarantizaquetodaslasréplicassepodránactualizareneltiemposolicitado. (cid:3)",
+            "D. d) Elconjuntodeoperacionesdelectura/escrituraquepuedemanejarelgestorderéplicasantesdequeseactualiceun recurso."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223-Q21- Escojaladefiniciónmásajustadaaprotocololíder/seguidores (cid:3)",
+        "opciones": [
+            "A. a) Protocoloparaconseguirconsistenciadébilenelquetodoslosnodospuedenactuarcomolíderoseguidorencada transacción. (cid:3)",
+            "B. b) Protocoloparaconseguirconsistenciafuertedóndeunnodotieneunroldistinguidodelresto. (cid:4)",
+            "C. c) Protocoloparaconseguirconsistenciadébildóndeunnodotieneunroldistinguidodelresto. (cid:3)",
+            "D. d) Protocoloparaconseguirconsistenciadébildondelosnodosseguidoresalmacenanunacopiaparcialdellíder"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223-Q22- Para un conjunto de 6 nodos, se define un método de votación (quorum) y usted debe definir el número de copias de lectura(R)yelnúmerodecopiasdeescritura(W)¿quénúmerospropondríaparagarantizarlaconsistencia? (cid:4) (cid:3) (cid:3) (cid:3)",
+        "opciones": [
+            "A. a) R=3,W=4 b) R=2,W=3 c) R=4,W=2 d) R=3,W=3"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223-Q23- ¿Cómoseconsiguenormalmenteel«balanceodecarga»? (cid:4)",
+        "opciones": [
+            "A. a) Elsistemaredirigelaspeticionesdelosclientesalasdistintasréplicasdisponibles. (cid:3)",
+            "B. b) Elclientereparteequitativamentesuspeticionesentrelasréplicasconocidas. (cid:3)",
+            "C. c) Elplanificadordecideenquémomentoejecutarlaspeticionesparahayaunequilibriodecargaalolargodeltiempo. (cid:3)",
+            "D. d) AjustandoconstantementeelporcentajedeusodelasCPUsdisponiblesparaevitarsobrecargas. 18deenerode2023 4/4"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223X-Q1- Marcacuáldelassiguientesafirmacionesescierta: (cid:4)",
+        "opciones": [
+            "A. a) Encomunicaciónindirectaexisteundesacoplamientoenespacioytiempoentrelosparticipantes. (cid:3)",
+            "B. b) Implementarcomunicaciónindirectaesapropiadoparaladifusióndeeventos,perocuandolosreceptoressonbien conocidosynosuelencambiar. (cid:3)",
+            "C. c) Encomunicaciónindirectaseutilizaunintermediarioytodaslaspartesdelacomunicacióndebenestarenejecución. (cid:3)",
+            "D. d) RMIimplementacomunicaciónindirecta."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223X-Q2- ¿Cuál es el modelo de comunicación más adecuado para un sistema de estaciones meteorológicas que informan sobre temperatura,vientoypresiónaunconjuntoindeterminadoydinámicodeposiblesclientes? (cid:3) (cid:3)",
+        "opciones": [
+            "A. a) Pollingaunabasededatos. c) Unsistemadeficherosdistribuido. (cid:4) (cid:3)",
+            "B. b) Unsistemapublicador-subscriptor. d) RPCoRMI."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223X-Q3- ¿Qué modelo de comunicación indirecta implica conocer los identificadores de los destinatarios del mensaje que envia- mos? (cid:3) (cid:4)",
+        "opciones": [
+            "A. a) Comunicaciónengrupo c) Ninguno (cid:3) (cid:3)",
+            "B. b) Colasdemensajes d) Modelodememoriadistribuidacompartida"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223X-Q4- Marcalaafirmacióncorrectaenrelaciónalossistemasdepropagacióndeeventosdepublicación–subscripciónbasados enbroker: (cid:4)",
+        "opciones": [
+            "A. a) Lospublicadoresnoconocenlasreferenciasdelossubscriptores. (cid:3)",
+            "B. b) Cadapublicadoresresponsabledealmacenarlasreferenciasdesussubscriptores. (cid:3)",
+            "C. c) Cadasubscriptoresresponsabledealmacenarlasreferenciasdesuspublicadores. (cid:3)",
+            "D. d) Cadaparejapublicador-subscriptoresúnicayestáidentificadaunívocamente."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223X-Q5- ¿EnquécasoNOesadecuadoapriorielusodeunmiddlewaredecolasdemensajesdistribuidas? (cid:3)",
+        "opciones": [
+            "A. a) Emisoresyreceptoresnoestánactivosalmismotiempo. (cid:3)",
+            "B. b) Losreceptoresseencuentrandispersosenmúltiplesnodosdelared. (cid:4)",
+            "C. c) Losemisoresesperanlosresultadosdelcómputorealizadoenlosreceptores. (cid:3)",
+            "D. d) Sedeseapersistenciadelosmensajes."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223X-Q6- IceStormesunsistemadepropagacióndeeventosbasadoen... (cid:3) (cid:4)",
+        "opciones": [
+            "A. a) contenido c) canal (cid:3) (cid:3)",
+            "B. b) tipo d) Ningunodelosotros 07dejuniode2023 1/4 Sistemas Distribuidos Curso22/23::Prueba2(extraordinaria) Escuela Superior de Informática E. [8p] La figura de la izquierda representa el diagrama de eventos de un SD formado por tres procesos. Para cada evento se muestrasuestadolocal,asumiendoqueelvaloriniciales0paratodoslosprocesos.Eldiagramadeladerecha(quecontiene unerror)eseldiagramadetransicióndeestadosglobalescorrespondiente: > 7 (2p)¿CuálseríaelvalordelrelojlógicovectorialdeltercereventodeP2? (cid:3) (cid:3) (cid:4) (cid:3)",
+            "A. a) (1,3,1) b) (2,3,1) c) (0,3,0) d) (1,2,1) > 8 (2p)¿CuántoseventoshanocurridoenelestadoglobalS031? (cid:3) (cid:4) (cid:3) (cid:3)",
+            "A. a) 2 b) 4 c) 5 d) Noesdeterminista > 9 (2p)¿Cuálessonlosvaloresdea,bycdespuésdeocurrirelsegundoeventodeP3? (cid:3) (cid:4)",
+            "A. a) a=3,b=3,c=2 c) a=3,b=indeterminado,c=2 (cid:3) (cid:3)",
+            "B. b) a=3,b=2,c=2 d) Noesdeterminista > 10 (2p)Dadalafunciónf = a+b == c+1,¿cuálesseríanlosresultadosdeevaluarlospredicados«posiblemente(f)»y «definitivamente(f)»? (cid:3) (cid:3) (cid:3) (cid:4)",
+            "A. a) false,false b) false,true c) true,false d) true,true"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223X-Q11- Undiagramadeestadosglobalesconsistentestienedospropiedadesfundamentales¿cuáldelassiguientesNOesunade ellas? (cid:4)",
+        "opciones": [
+            "A. a) Enunestado,haberalmacenadorecepcióndemensajes,peronosuenvío. (cid:3)",
+            "B. b) Elestadoalmacenadoesalcanzabledesdeelestadoinicial. (cid:3)",
+            "C. c) Elestadofinalesalcanzabledesdeelestadoalmacenado."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223X-Q12- Sea un cliente y un servidor ejecutando el algoritmo de Cristian, tras el proceso de sincronización, el cliente actualiza aTc=12:00:00,enesemismoinstante,observamoseltiempodelservidoryesTs=12:00:01,¿Quéhoraoriginalteníaelcliente antesdelprocesodesincronización? (cid:3) (cid:3)",
+        "opciones": [
+            "A. a) 12:00:01 c) 12:00:00:05 (cid:3) (cid:4)",
+            "B. b) 12:00:02 d) Ningunarespuestaesválida 07dejuniode2023 2/4 Sistemas Distribuidos Curso22/23::Prueba2(extraordinaria) Escuela Superior de Informática"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223X-Q13- Disponemosdeunsistemadistribuidoformadopor10procesos(P1-P10).P5estáactuandocomoservidorcentralpara exclusiónmutua,perodebidoaunfallodelnodo,elprocesoterminainesperadamente.¿Quéopciónconsideramásadecuadapara decidirquéprocesodebedesempeñarahoraesafunciónteniendoencuentaquetodosellostienenlacapacidaddehacerlo? (cid:3) (cid:4)",
+        "opciones": [
+            "A. a) Elsiguiente:P6 c) Deberíanejecutarunalgoritmodeelección. (cid:3) (cid:3)",
+            "B. b) Elanterior:P7. d) DeberíanesperaraqueP5estéactivodenuevo."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223X-Q14- ¿Quéimplica«multicastcausal»? (cid:3)",
+        "opciones": [
+            "A. a) Losmensajesenviadosporunprocesollegaránaenelmismoordenquefueronenviados. (cid:4)",
+            "B. b) Siexisteunarelacióncausalentreelenvíodedosmensajesmulticast,surecepciónrespetaesemismoorden. (cid:3)",
+            "C. c) Todoslosmensajesrecibidosporunprocesodelgruposonconfirmadosindividualmentealemisor. (cid:3)",
+            "D. d) Todoslaslaentregascorrespondienteaunmismoenvíollegaránalavezatodoslosprocesosdelgrupo."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223X-Q15- SiejecutamoselalgoritmodeRicartyAgrawalaenunaredquesoportamulticast,lacantidaddemensajesparaacceder alaseccióncrítica... (cid:3) (cid:3)",
+        "opciones": [
+            "A. a) aumenta c) novaría (cid:4) (cid:3)",
+            "B. b) disminuye d) dependedequéprocesoostentaeltestigo"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223X-Q16- ¿Aquéserefierelapropiedad«liveness»cuandoseaplicaaunalgoritmodeexclusiónmutuadistribuida? (cid:4)",
+        "opciones": [
+            "A. a) Aseguraquenohabráinaniciónodeadlock. (cid:3)",
+            "B. b) AseguraquesolounprocesopodránentrarenlaCS. (cid:3)",
+            "C. c) AseguraquelosprocesosobtendránaccesoalaCSenelmismoordenquelopidieron. (cid:3)",
+            "D. d) AseguraquelaCSfueliberadaantesdeotorgarpermisoaotroproceso."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223X-Q17- ElalgoritmodeRicartandAgrawalasebasaen: (cid:4) (cid:3)",
+        "opciones": [
+            "A. a) Relojeslógicosysoportemulticast. c) Elpasocontinuodeuntestigo. (cid:3) (cid:3)",
+            "B. b) Lanecesidaddeelegirunnuevocoordinador. d) Lacreacióndesubconjuntosdevoto."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223X-Q18- Enelcontextodelareplicación¿aquénosreferimoscon«particionesdered»? (cid:4)",
+        "opciones": [
+            "A. a) Situacionesenquegrupodeunaomásréplicaspierdenconectividadconelresto. (cid:3)",
+            "B. b) Almodoenqueseorganizaelespaciodealmacenamientolocaldentrodecadaréplica. (cid:3)",
+            "C. c) Agrupacionesarbitariasdelasréplicasparaofrecermejorredundancia. (cid:3)",
+            "D. d) Essolounaformadereferirsealassubredesqueformanlareddenodos."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223X-Q19- ¿Cuáldelassiguientesnoseencuadraenelconceptode«replicación»? (cid:3)",
+        "opciones": [
+            "A. a) Múltiplesnodosconservidoresquemantienendeformaconsistentecopiasdelosmismosdatos. (cid:3)",
+            "B. b) Losservidoresquegestionanlosdatosreplicadosestánconectadosmedianteunared. (cid:4)",
+            "C. c) Idealemente,elclientedeberíaserplenamenteconscienteconquéservidorestácontactando. (cid:3)",
+            "D. d) Losnodosreplicadospuedenofrecerunservicioenlugardedatos."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223X-Q20- ANULADA",
+        "opciones": [],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2223X-Q21- ¿Cuáldelassiguientesestrategiasdereplicaciónofrecemayorconsistencia? (cid:3) (cid:4)",
+        "opciones": [
+            "A. a) Replicaciónasíncrona c) Basadosentransacciones (cid:3) (cid:3)",
+            "B. b) Consistenciaeventual d) Ordenacióndébil 07dejuniode2023 3/4 Sistemas Distribuidos Curso22/23::Prueba2(extraordinaria) Escuela Superior de Informática 07dejuniode2023 4/4"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2324-Q1- EstáimplementandounsistemadecomunicaciónindirectaconZeroCIce.¿Quecomponenteesmásprobablequeimple- menteunainterfazsimilaralasiguiente? 1 interface Foo { 2 void publish(string m); 3 void setfilter(string m); 4 void subscribe(string topic); 5 } □ □ ■ □",
+        "opciones": [
+            "A. a) Elpublicador b) Elconsumidor c) Elbroker d) Brokeryconsumidor"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2324-Q2- En un sistema de publicación/suscripción, tanto publicador como subscriptor proporcionan funciones «callback» para envíoyrecepcióndemensajesrespectivamente.¿Quémodelodeinteracciónpareceseguirestesistema? □ □ □ ■",
+        "opciones": [
+            "A. a) push/push b) pull/pull c) push/pull d) pull/push"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2324-Q3- EltipodecomunicaciónqueofreceRabbitMQenelcasomáshabitualestá... □",
+        "opciones": [
+            "A. a) Acopladoentiempoyespacio. □",
+            "B. b) Desacopladoentiempoyacopladoenespacio □",
+            "C. c) Acopladoentiempoydesacopladoenespacio. ■",
+            "D. d) Desacopladoentiempoyespacio."
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "SSDD-2324-Q4- ¿Quémodelodesubscripciónpermiteespecificarunfiltrocomounpredicadosobrelosvaloresdelosatributosdelevento? □ ■",
+        "opciones": [
+            "A. a) Basadoencanales c) Basadoencontenido □ □",
+            "B. b) Basadoentemas d) Basadoenclaves"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2324-Q5- ¿Aquéserefiereelconceptodecallbackhabitualenlosmecanismosquesoportanrecepciónpush? □",
+        "opciones": [
+            "A. a) Esunmecanismodebloqueoqueseaplicaeneldespachadoconcurrente. □",
+            "B. b) SerefierealmenanismodeserializacióndelsirvienteenmiddlewaresRMI. ■",
+            "C. c) Esalgúnelementoinvocablemedianteelcualelruntimenosproporcionalosmensajes. □",
+            "D. d) Esunmódulodelruntimequeproporcionalainterfazdeserializaciónqueofreceelservidor."
+        ],
+        "solucion": "B"
+    },
+    {
+        "cuestion": "SSDD-2324-Q6- EneldiseñodeSSDDaltamenteescalables,¿cómosepuedelograrunacoordinacióneficientesindependerdeunúnico puntodefallo? □ □",
+        "opciones": [
+            "A. a) Medianteelusoexclusivodeprotocoloscentralizados. c) Minimizandolacomunicaciónentrenodos. ■ □",
+            "B. b) Implementandoalgoritmosdeconsensodistribuido. d) Usandouncoordinadorcentralizadodebajadisponibilidad."
+        ],
+        "solucion": "A"
+    },
+    {
+        "cuestion": "SSDD-2324-Q7- Comoingenieroinformáticoencargadodelaimplementacióndeunsistemadistribuidodedicadoalmantenimientodela informacióndeltiempodeunaeropuerto,tienetresestacionesmeteorológicasreplicadasidentificadascomoA,ByC.Normal- mente, solo la estación seleccionada como coordinadora manda los datos. Si esto no ocurriera, se seleccionaría otra de forma automáticaparaqueenvíelasactualizaciones.Delossiguientes¿Quéalgoritmoayudaríaalograresteobjetivo? □ □",
+        "opciones": [
+            "A. a) RicartyAgrawala c) Maekawa ■ □",
+            "B. b) GarcíaMolina(bully) d) Ningunodelosanteriores 16deenerode2024 1/3 Sistemas Distribuidos Curso23/24::Prueba2 Escuela Superior de Informática"
+        ],
+        "solucion": "A"
+    },
+    {
+        "cuestion": "SSDD-2324-Q8- ¿Cuál de las siguientes explica mejor el funcionamiento y la importancia del algoritmo de Maekawa, destacando cómo abordalacoordinacióndemaneraeficienteyreducelanecesidaddecomunicaciónentrenodos? □",
+        "opciones": [
+            "A. a) El algoritmo de Maekawa utiliza un enfoque basado en reglas de prioridad para asignar turnos a los nodos, garantizandolaexclusiónmutuaatravésdelacooperacióndenodosvecinosyminimizandolasconsultasanodos distantes. □",
+            "B. b) Maekawa implementa un modelo de acuerdos distribuidos que utiliza lógica difusa para asignar prioridades, permitiendounacoordinaciónmásflexibleyadaptativaenentornosdinámicos. ■",
+            "C. c) ElalgoritmodeMaekawaoptimizalacoordinaciónalpermitirquesoloalgunosdelosnodosresuelvanconflictosde exclusiónmutua,reduciendoasílacargadecomunicación. □",
+            "D. d) La esencia del algoritmo de Maekawa radica en la aplicación de técnicas de aprendizaje profundo para predecir patronesdeaccesoarecursos,lograndounacoordinaciónautónomayadaptativaensistemasdistribuidoscomplejos."
+        ],
+        "solucion": "B"
+    },
+    {
+        "cuestion": "SSDD-2324-Q9- ¿Cuáldelassiguientesexplicamejorelalgoritmodeservidorcentralencomparaciónconotrosenfoquesdecoordinación? □",
+        "opciones": [
+            "A. a) El algoritmo de servidor central utiliza un único nodo como punto focal para coordinar todas las operaciones, simplificandolagestióndetransaccionesymejorandolaconsistenciadedatosmediantelacentralizacióndelatoma dedecisiones. □",
+            "B. b) A través de la implementación de un sistema de replicación de servidores, el algoritmo de servidor central busca mitigar la posibilidad de fallos únicos y mejorar la disponibilidad del sistema, aunque a expensas de una mayor complejidadycargadered. ■",
+            "C. c) Elalgoritmodeservidorcentral,aldependerdeunúnicopuntocentralizado,puedeenfrentardesafíossignificativos en términos de escalabilidad y tolerancia a fallos, ya que un colapso en el nodo central puede paralizar completa- mentelacoordinaciónenelsistemadistribuido. □",
+            "D. d) Al incorporar mecanismos avanzados de encriptación y firma digital, el algoritmo de servidor central garantiza la seguridaddelacomunicaciónentrenodos,minimizandoasílosriesgosasociadosconlacoordinaciónenentornos distribuidos."
+        ],
+        "solucion": "B"
+    },
+    {
+        "cuestion": "SSDD-2324-Q10- ¿Cuáldelassiguientesexplicamejorlafunciónylarelevanciadelalgoritmodeeleccióndelíder/coordinadorensistemas distribuidos,destacandocómoabordalacoordinacióndeoperacionescríticasyaseguralaconsistenciaenlatomadedecisiones? □",
+        "opciones": [
+            "A. a) La elección de líder no es esencial para la coordinación en sistemas distribuidos, ya que introduce complejidad innecesaria. □",
+            "B. b) El algoritmo de elección de líder garantiza la exclusión mutua en sistemas distribuidos, minimizando la necesidad decoordinación. ■",
+            "C. c) Alseleccionarunnodocomolíder,elalgoritmofacilitalacoordinaciónalcentralizarlatomadedecisiones,crucial paraoperacionescríticasylaconsistenciadelsistema. □",
+            "D. d) Laeleccióndelídersoloesrelevanteenentornosdebajaconcurrencia."
+        ],
+        "solucion": "B"
+    },
+    {
+        "cuestion": "SSDD-2324-Q11- ¿Quéesunsistematoleranteafallos? □",
+        "opciones": [
+            "A. a) Persiguelaconsistenciadelainformación. □",
+            "B. b) Sistemamuyrobustoenelquenoseproducenfallosdeningúntipo. □",
+            "C. c) Cumplecontodaslasespecificacionesdelsistemaenpresenciadecualquiertipodefallo. ■",
+            "D. d) Permitelaejecucióncontinuadadelsistema,posiblementedegradada,aúnenpresenciadefallos."
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "SSDD-2324-Q12- ¿Enquémodelodereplicación,unaactualizacióndeundatoXsetienequeverinmediatamenteenlasotrasréplicas? □ □",
+        "opciones": [
+            "A. a) Lineal c) Secuencial ■ □",
+            "B. b) Estricta d) Ningunadelasanteriores."
+        ],
+        "solucion": "A"
+    },
+    {
+        "cuestion": "SSDD-2324-Q13- ¿Quéfactorespuedenafectaralaventanadeinconsistencia? □ □",
+        "opciones": [
+            "A. a) Cargadelossistemas. c) Latenciaycargadelsistema. □ ■",
+            "B. b) Latencia. d) Latencia,cargadelossistemasynúmeroderéplicas. 16deenerode2024 2/3 Sistemas Distribuidos Curso23/24::Prueba2 Escuela Superior de Informática"
+        ],
+        "solucion": "A"
+    },
+    {
+        "cuestion": "SSDD-2324-Q14- SeñalalaafirmaciónFALSArespectoalesquemadereplicaciónasíncrona. ■ □",
+        "opciones": [
+            "A. a) CumpleACID. c) Proporcionabajoacoplamiento. □ □",
+            "B. b) Proporcionabajalatencia. d) Esaplicableaunsistemadeconsistenciaeventual."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2324-Q15- Enunsistemaderéplicaciónde7nodosbasadoen«quorumassembly».¿Cuáldelossiguientesseríaunaconfiguración ROWA? □ ■ □ □",
+        "opciones": [
+            "A. a) R=1,W=4 b) R=1,W=7 c) R=4,W=1 d) R=7,W=7 A [10p] LafiguradelaizquierdarepresentaeldiagramadeeventosdeunSDformadoportresprocesos.Paracadaeventose muestrasuestadolocal,asumiendoqueelvaloriniciales0paratodoslosprocesos.Eldiagramadeladerechaeseldiagrama detransicióndeestadosglobalescorrespondiente: > 16 (2p)¿CuáleselvalordelrelojlógicovectorialdelsegundoeventodeP2? □ ■ □ □",
+            "A. a) (0,1,0) b) (0,2,0) c) (0,3,0) d) (1,2,0) > 17 (2p)¿Cómocambiaríaelrecuentodeestadosglobalessisehubieraenviadounmensajeeneleventoc=2quellegaaP2en eleventob=3? □ □",
+            "A. a) Nohabríacambios c) 3estadosmenos □ ■",
+            "B. b) 4estadosmás d) 6estadosmenos > 18 (2p)¿Quéhabríaqueañadiroeliminareneldiagramadeeventosdelaizquierdaparaquehubieraunatransiciónentrelos estadosS030yS131eneldiagramadeladerecha? □ □",
+            "A. a) UneventonuevoenP2entreb=2yb=3. c) Unmensajeentrea=2yb=2. □ ■",
+            "B. b) Eliminareleventoc=2. d) Noesposible. > 19 (2p)¿Cuálessonlosvaloresdea,bycdespuésdelsegundoeventodeP2? □ □",
+            "A. a) (a=1,b=2,c=0) c) (a=indeterminado,b=2,c=1) □ ■",
+            "B. b) (a=1,b=2,c=1) d) (a=indeterminado,b=2,c=indeterminado) > 20 (2p) Dada la función f = (2a > b+c), ¿cuáles serían los resultados de evaluar los predicados «posiblemente(f)» y «definitivamente(f)»? □ ■",
+            "A. a) (false,false) c) (true,false) □ □",
+            "B. b) (fase,true) d) (true,true) 16deenerode2024 3/3"
+        ],
+        "solucion": "A"
+    },
+    {
+        "cuestion": "SSDD-2324X-Q1- ¿Quéeslacomunicaciónindirectaensistemasdistribuidos? □ □",
+        "opciones": [
+            "A. a) Comunicacióndirectaentredosprocesos. c) Comunicaciónatravésdelíneastelefónicas. ■ □",
+            "B. b) Comunicaciónatravésdeunintermediario. d) Comunicaciónsincrónicaentiemporeal."
+        ],
+        "solucion": "A"
+    },
+    {
+        "cuestion": "SSDD-2324X-Q2- ¿Cuáldelossiguientesesunejemplodecomunicaciónindirecta? □ ■",
+        "opciones": [
+            "A. a) Llamadasaprocedimientoremoto(RPC). c) Colasdemensajesdistribuidas. □ □",
+            "B. b) Comunicaciónporsockets. d) Comunicaciónporbluetooth."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2324X-Q3- ¿Quéeselpatróndepublicación/suscripciónensistemasdistribuidos? □",
+        "opciones": [
+            "A. a) Unmétodopararealizarllamadasaprocedimientoremoto(RPC). □",
+            "B. b) Unesquemaenelquelosprocesossecomunicanmedianteelintercambiodearchivos. ■",
+            "C. c) Productoresenvíanmensajesamúltiplesconsumidoresinteresadosatravésdeunintermediario. □",
+            "D. d) Unatécnicaparacompartirmemoriaentreprocesosendiferentesnodos."
+        ],
+        "solucion": "B"
+    },
+    {
+        "cuestion": "SSDD-2324X-Q4- ¿CuáldelossiguientesmecanismosNOesunaformadecomunicaciónindirecta? □ □",
+        "opciones": [
+            "A. a) Memoriacompartidadistribuida. c) Comunicacióndegrupos. □ ■",
+            "B. b) Basededatoscompartida. d) SocketsTCP/IP."
+        ],
+        "solucion": "A"
+    },
+    {
+        "cuestion": "SSDD-2324X-Q5- ¿Quécaracterísticatienelacomunicaciónindirectarespectodeladirecta? □ □",
+        "opciones": [
+            "A. a) Esmásrápida. c) Aumentaelacoplamientoentrelosprocesos. □ ■",
+            "B. b) Facilitalasincronizacióndirectaentreprocesos. d) Proporcionamayorflexibilidadydesacoplamiento."
+        ],
+        "solucion": "A"
+    },
+    {
+        "cuestion": "SSDD-2324X-Q6- IndiqueeltipodeproblemaqueleayudaaresolverelalgoritmodeRicartyAgrawala □ ■",
+        "opciones": [
+            "A. a) Eleccióndecoordinador c) Exclusiónmutua □ □",
+            "B. b) Consenso d) Sincronizacióndeeventos"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2324X-Q7- ConstruirunsistemaqueempleamultidifusiónsobreelprotocoloIP,implicalautilizaciónde: □ □ ■ □",
+        "opciones": [
+            "A. a) SNMP b) TCP c) UDP d) RPC"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2324X-Q8- Enunsistemadistribuidocon4procesosyunrecursocompartidoR,ningúnprocesoquiereaccesoaRenelinstante0. En el instante 1, el proceso P1 solicita acceso a R. En cuanto a número de mensajes ¿cuál de los siguientes algoritmos es más eficienteparaconseguirlaexclusiónmutuaenausenciadefallos? ■",
+        "opciones": [
+            "A. a) ServidorCentral □",
+            "B. b) Anillo(formadoporP2->P3->P4->P1->P2yeltokenenP3) □",
+            "C. c) RicartyAgrawala(consoportemulticastreal) □",
+            "D. d) GarcíaMolina(consoportemulticastreal)"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2324X-Q9- ¿Quécaracterizainequívocamenteaunerrorbizantino? □ □",
+        "opciones": [
+            "A. a) Erroresenlascomunicaciones. c) Erroresaleatoriosencomunicacionesyprocesos. □ ■",
+            "B. b) Erroresenlosprocesos. d) Comportamientoaparentementemalicioso."
+        ],
+        "solucion": "A"
+    },
+    {
+        "cuestion": "SSDD-2324X-Q10- Enmultidifusión¿aquénosreferimosconungrupocerrado? ■",
+        "opciones": [
+            "A. a) Sólolosmiembrosdelgrupopuedenenviarmensajesalgrupo. □",
+            "B. b) Paraformarpartedelgrupolosmiembrosdebenconseguirexclusiónmutua. □",
+            "C. c) TodoslosprocesosseejecutansobrecomputadoresdeunamismaLAN. □",
+            "D. d) Losmensajesenviadosalgrupotienenuntamañopredefinido. 03dejuniode2024 1/2 Sistemas Distribuidos Curso23/24::Prueba2(extraordinario) Escuela Superior de Informática"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2324X-Q11- Enunconjuntode7réplicas,decideimplementarunprotocolodeconsistenciaQuorum¿quéasignacióndenúmerode réplicasagruposdelectura/escrituraseríacorrecta? □ □",
+        "opciones": [
+            "A. a) Escritura3,Lectura3. c) Escritura1,Lectura6. □ ■",
+            "B. b) Escritura2,Lectura5. d) Escritura4,Lectura7."
+        ],
+        "solucion": "A"
+    },
+    {
+        "cuestion": "SSDD-2324X-Q12- ¿Quémétodosdereplicaciónnoaseguranunaconsistenciaestricta? ■ □",
+        "opciones": [
+            "A. a) Métodosoptimistas c) Ambosmétodosaseguranunaconsistenciaestricta □ □",
+            "B. b) Métodospesimistas d) Ambosmétodosnoaseguranunaconsistenciaestricta"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2324X-Q13- Completelasiguientefrase:«Ladisponibilidadesinversamenteproporcionala...» ■ □",
+        "opciones": [
+            "A. a) Lacargadelsistema. c) Laredundanciadelsistema. □ □",
+            "B. b) Elcostedelsistema. d) Lafiabilidaddelsistema."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2324X-Q14- ¿Cuáldelassiguientespuedeserunaconsecuenciadelareplicación? □ □",
+        "opciones": [
+            "A. a) Aumentalalatencia. c) Reducelasopcionesdeescalabilidad. ■ □",
+            "B. b) Incrementaladisponibilidad. d) Simplificalaconsistencia."
+        ],
+        "solucion": "A"
+    },
+    {
+        "cuestion": "SSDD-2324X-Q15- ¿Quédiceelmodelode«consistenciaeventual»? □",
+        "opciones": [
+            "A. a) Elprogramadoresresponsabledeactualizarlascopiasenbaseaunmodelolíder-seguidores. □",
+            "B. b) Todaslasréplicasdebensersincronizadasinmediatamentedespuésdecualquieraccesoaunadelasréplicas. ■",
+            "C. c) Sinosehacenescriturasnuevassobreunrecursodado,todoslosaccesosdevolveráneventualmenteelúltimovalor escrito. □",
+            "D. d) Requieredeunprotocolodetransaccióndistribuidasparagarantizarlacoherenciaentreréplicas,especialmenteante particionesenlared."
+        ],
+        "solucion": "B"
+    },
+    {
+        "cuestion": "SSDD-2324X-Q16- ¿Quésonlosrelojeslógicosensistemasdistribuidos? ■ □",
+        "opciones": [
+            "A. a) Esquemasparaordenareventos. c) Relojesfísicosquesesincronizanconprecisión. □ □",
+            "B. b) Métodosparamedireltiemporealencadanodo. d) Dispositivosdehardwareparamantenerlahoraactual."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2324X-Q17- ¿Cuáleselpropósitodelosrelojesvectoriales? □ □",
+        "opciones": [
+            "A. a) Reducireltiempodeprocesamientoencadanodo. c) Sincronizarrelojesfísicosentrenodos. ■ □",
+            "B. b) Capturarlasdependenciascausalesentreeventos. d) ProporcionarunaGUIparalagestióndeltiempo."
+        ],
+        "solucion": "A"
+    },
+    {
+        "cuestion": "SSDD-2324X-Q18- ¿QuéproblemaintentaresolverNTP? ■ □",
+        "opciones": [
+            "A. a) Lasincronizaciónderelojesentrenodosenunared. c) Larecuperacióndedatosdespuésdeunafalladelsistema. □ □",
+            "B. b) Lacomunicaciónseguraentrenodos. d) LadistribucióndelacargadetrabajoenunSD."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2324X-Q19- ¿Cuáleselpropósitodel«algoritmodelabusón»? □",
+        "opciones": [
+            "A. a) Sincronizarlosrelojesfísicosdetodoslosnodosenunared. ■",
+            "B. b) Elegirunprocesopararealizarunatareaespecífica. □",
+            "C. c) Asegurarlaintegridadyseguridaddelosdatostransmitidos. □",
+            "D. d) Ordenareventosenausenciadesincronizaciónderelojfísico."
+        ],
+        "solucion": "A"
+    },
+    {
+        "cuestion": "SSDD-2324X-Q20- ¿Cuálesunalimitacióndeusarrelojesfísicosensistemasdistribuidos? □ □",
+        "opciones": [
+            "A. a) Sondifícilesdeimplementar. c) Consumendemasiadosrecursos. ■ □",
+            "B. b) Puedenllevarainconsistenciasdebidoasuresolución. d) Nosepuedensincronizarenredeslocales. 03dejuniode2024 2/2"
+        ],
+        "solucion": "A"
+    },
+    {
+        "cuestion": "SSDD-2425-Q1- ¿Cuáldelassiguientesesunaoperacióntípicadelparadigmapublicación-suscripción? □ □ □ ■",
+        "opciones": [
+            "A. a) notify() b) subscribe() c) advertise() d) Todaslasanteriores"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2425-Q2- ¿Quéafirmaciónsobreunsistemadecolasdemensajesdistribuidasesmásacertada? ■",
+        "opciones": [
+            "A. a) Elbrokerdeterminaelreceptordecadamensajedelacoladistribuida. □",
+            "B. b) Elemisorcolocasusmensajesenunacolagenérica,yelbrokerlosclasificayrespondealemisor. □",
+            "C. c) Variosreceptoresrecibencopiasdelmismomensaje. □",
+            "D. d) Nohaydiferenciassustancialesconunsistemapublicador-subscriptor."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2425-Q3- ¿CuáldelassiguientesesunacaracterísticadeIceStormpococomúnenotrossistemasdepropagacióndeeventos? □",
+        "opciones": [
+            "A. a) Puedefuncionarsinbroker. □",
+            "B. b) Esposiblecrearygestionar«topics»paralasegregacióndemensajes. ■",
+            "C. c) Sumodelodeprogramaciónconsisteeninvocarmétodosdeunainterfaz. □",
+            "D. d) Disponedeunmecanismodereplicaciónenelquetodoslospublicadorespuedenactuarcomobrokers."
+        ],
+        "solucion": "B"
+    },
+    {
+        "cuestion": "SSDD-2425-Q4- ¿Quéquieredecirqueelpublicadoryelsuscriptorenunsistemadecomunicaciónindirectaestándesacopladosenespacio? ■",
+        "opciones": [
+            "A. a) Ningunodelosdosnecesitaconocerladireccióndelotro. □",
+            "B. b) Elpublicadornonecesitaconocerlaidentidaddelsuscriptor. □",
+            "C. c) Publicadores,suscriptoresybrokersseejecutantodosennodosdistintos. □",
+            "D. d) Elbrokerpuedeejecutarseenunnododistintoapublicadoresysuscriptores. A [6p] La figura muestra los mensajes entre 3 procesos de un sistema distribuido durante la ejecución del algoritmo de Chandy-Lamport. Las flechas de línea continua son mensajes de aplicación, mientras que las de línea discontinua llevan la marca. > 5 (2p) Marca las opciones (respuesta múltiple) que corresponden con los eventos en que cada proceso captura su estado local.Ejemplo:P1:e1indicaqueelprocesoP1almacenósuestadoeneleventoe1. ■ □ □ □ □ □ □",
+            "A. a) P1:e1 c) P1:e3 e) P2:e1 g) P2:e3 i) P2:e5 k) P3:e5 m) P3:e7 □ □ □ ■ □ ■",
+            "B. b) P1:e2 d) P1:e4 f) P2:e2 h) P2:e4 j) P3:e4 l) P3:e6 > 6 (2p) Marca las opciones (respuesta múltiple) que corresponden con mensajes capturados como estado en los canales de cada proceso. Ejemplo: P1:m1 significa que P1 ha capturado el mensaje m1 en alguno de sus canales de entrada (no se indicacuál). □ □ □ □ □ □",
+            "A. a) P1:m1 c) P1:m4 e) P2:m3 g) P2:m5 i) P3:m2 k) P3:m5 ■ □ ■ □ □",
+            "B. b) P1:m2 d) P1:m5 f) P2:m4 h) P3:m1 j) P3:m3 > 7 (2p) Asumiendo que todos los procesos pueden comunicarse con todos los demás ¿Cuántos canales utliza el algoritmo ChandyLamportenlaejecuciónrepresentadaenlafigura? □ □ □ □ ■ □ □",
+            "A. a) 2 b) 3 c) 4 d) 5 e) 6 f) 7 g) 8 21deenerode2025 1/3 Sistemas Distribuidos Curso24/25::Prueba2 Escuela Superior de Informática B [10p] Lafiguradelaizquierdarepresentaeldiagramadeeventosdeunsistemadistribuidoformadoportresprocesos.Para cada evento se muestra su estado local, asumiendo que el valor inicial es 0 para todos los procesos. La figura derecha es el diagramadetransicióndeestadosglobalescorrespondiente.Identificaremosloseventosporlaspropiasasignaciones.Ejemplo: a=1serefierealprimereventodeP1(enelqueocurreesaasignación). > 8 (2p)¿Cuáleselvalordelrelojlógicovectorialdeleventob=2? □ □ □ □",
+            "A. a) (1,1,0) c) (0,2,1) e) (1,2,1) g) (2,2,1) □ ■ □",
+            "B. b) (0,2,0) d) (1,2,0) f) (2,2,0) > 9 (2p)¿Cuálessonlosvaloresdea,bycdespuésdelsegundoeventodeP2? ■ □",
+            "A. a) (a=1,b=2,c=indeterminado) d) (a=indeterminado,b=2,c=1) □ □",
+            "B. b) (a=1,b=2,c=0) e) (a=indeterminado,b=2,c=indeterminado) □ □",
+            "C. c) (a=1,b=2,c=1) f) a,bycindeterminados > 10 (2p)Delassiguientesopciones,marcaTODASlasqueindicaneventosconcurrentes: ■ ■ ■ □ □ ■",
+            "A. a) a=1||b=1 b) b=2||c=1 c) b=2||c=2 d) a=2||b=2 e) c=1||b=4 f) a=2||b=4 > 11 (2p)Cosiderandoeldiagramadeestadosglobalesmostradoenlafiguraydadalafunciónf =(2a>b+c)¿cuálesserían losresultadosdeevaluarlospredicados«posiblemente(f)»y«definitivamente(f)»? □ □ ■ □",
+            "A. a) (false,false) b) (false,true) c) (true,false) d) (true,true) > 12 (2p)Eldiagramadeestadosglobalesdelafiguraenrealidadesincorrecto.Indicacuáleselerror: □ □",
+            "A. a) FaltaelestadoS c) SobraelestadoS 101 242 ■ □",
+            "B. b) FaltaelestadoS d) SobraelestadoS 142 232"
+        ],
+        "solucion": "D"
+    },
+    {
+        "cuestion": "SSDD-2425-Q13- ¿Quéindicaunapropiedaddepervivencia(liveness)enlosalgoritmosdeelección? □",
+        "opciones": [
+            "A. a) Lapeticiónparaentrarenunaseccióncríticaeventualmentesucederá. □",
+            "B. b) Un algoritmo de elección terminará cuando hayan votado n/2+1 procesos, sin importar si el resto de procesos ha efectuadosuvoto. ■",
+            "C. c) Todoslosprocesosacordaránunaelecciónoabortarán. □",
+            "D. d) CadaprocesoparticipanteohaentradoenlaseccióncríticaohaelegidoalprocesoPquedebeentrarendichasección."
+        ],
+        "solucion": "B"
+    },
+    {
+        "cuestion": "SSDD-2425-Q14- Imagina que te han seleccionado para diseñar un sistema distribuido, el cual, requiere garantizar el acceso exclusivo a un conjunto recursos compartidos. Dentro de este sistema se impone una restricción importante, y es que el ancho de banda es un recurso muy valioso y escaso, por lo que debes consumir siempre el mínimo posible. Teniendo en cuenta que el número de procesosmínimodelsistemaserádealrededorde100¿Quéalgoritmodeexclusiónmutuaseríaelmásadecuado? ■ □",
+        "opciones": [
+            "A. a) Servidorcentral c) RicartyAgrawala □ □",
+            "B. b) Basadoenanillo d) Maekawa"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2425-Q15- ¿CuáleseltamañoteóricoóptimoparalossubconjuntosdevotacióndeacuerdoalalgoritmodeMaekawa? ■ √ □ □ □",
+        "opciones": [
+            "A. a) N b) N −1 c) 2N/3 d) N/2+1 21deenerode2025 2/3 Sistemas Distribuidos Curso24/25::Prueba2 Escuela Superior de Informática"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2425-Q16- Estástrabajandoparaunaempresadeautomoción,diseñandounsistemadeseguridadparaeldesplieguedeunairbagen casodeaccidente.Elsistemaestáformadopor4sensoresquesoncapacesdedetectarunacolisión,loscuales,sonleídospor4 procesosquepuedencomunicarsemediantepasodemensajes.Comoresultadodeunestudioexhaustivodelsistema,laempresa tecomunicaqueexistelaposibilidaddeque1deestossensorespuedafallarenladetección¿Quésoluciónsepuedeaplicarpara solventaresteproblema? □ □",
+        "opciones": [
+            "A. a) Algoritmodeexclusiónmutua c) Ordenacióndeeventos □ ■",
+            "B. b) Algoritmodeelección d) Problemadelosgeneralesbizantinos"
+        ],
+        "solucion": "A"
+    },
+    {
+        "cuestion": "SSDD-2425-Q17- ¿QuécaracterísticadelassiguientesNOdebecumplirunacomunicaciónmulticastfiable? □ □",
+        "opciones": [
+            "A. a) Integridad(Integrity) c) Acuerdouniforme(UniformAgreement) ■ □",
+            "B. b) Seguridad(Safety) d) Validez(Validity)"
+        ],
+        "solucion": "A"
+    },
+    {
+        "cuestion": "SSDD-2425-Q18- AmazonDynamoesunejemplode: □ ■ □ □",
+        "opciones": [
+            "A. a) Consistenciafuerte. b) Consistenciaeventual. c) Consistenciadébil. d) Consistencialineal."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2425-Q19- ¿Quédosoperacionesdefinenlosmodelosdeconsistenciadébil? □ □ ■ □",
+        "opciones": [
+            "A. a) ReadyWrite. b) ReadyUpdate. c) DataySync d) Todassonincorrectas"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2425-Q20- Señalelaopcióncorrecta: ■",
+        "opciones": [
+            "A. a) Enlaconsistenciaestrictacualquierlecturaobtieneelúltimovalorescrito. □",
+            "B. b) Enlaconsistenciasecuencialnotodoslosclientestienenqueverloscambiosenelmismoorden. □",
+            "C. c) Laconsistenciacausaleslamáseficientedeimplementardebidoalusoderelojesfísicossincronizados. □",
+            "D. d) Todassonincorrectas. 21deenerode2025 3/3"
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2425X-Q1- AMQPes: □",
+        "opciones": [
+            "A. a) Unprotocolodecomunicacióndirectaentreprocesos □",
+            "B. b) Unprotocolodecomunicaciónbasadoenmemoriacompartida □",
+            "C. c) Unbrokerdecomunicaciones ■",
+            "D. d) Unprotocolodecomunicacióndelacapadeaplicaciónusadotípicamenteensistemasdecomunicaciónindirecta"
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "SSDD-2425X-Q2- ¿Qué modelo de subscripción de un sistema publish-subscribe se usa cuando el filtro es una consulta definida sobre los valoresdelosatributosdecadaevento? □ ■",
+        "opciones": [
+            "A. a) Basadoencanal. c) Basadoencontenido. □ □",
+            "B. b) Basadoentópicos. d) Basadoentipos."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2425X-Q3- EnundesplieguedeInternetofThingsconerroresdecomunicaciónintermitentes,¿quémecanismoeselmásadecuado? □",
+        "opciones": [
+            "A. a) Comunicacióndirectaentredispositivos □",
+            "B. b) ComunicaciónmediantesocketsTCP/IP ■",
+            "C. c) Comunicaciónmedianteunsistemadepublicación/suscripciónconbrokers □",
+            "D. d) Ningunaescorrecta"
+        ],
+        "solucion": "B"
+    },
+    {
+        "cuestion": "SSDD-2425X-Q4- Marcalacorrectaenrelaciónalossistemasdepropagacióndeeventosdepublicación–suscripciónbasadosenbroker: ■",
+        "opciones": [
+            "A. a) Lospublicadoresnoconocenlasreferenciasdelossubscriptores. □",
+            "B. b) Cadapublicadoresresponsabledealmacenarlasreferenciasdesussubscriptores. □",
+            "C. c) Cadasubscriptoresresponsabledealmacenarlasreferenciasdesuspublicadores. □",
+            "D. d) Cadaparejapublicador-subscriptoresúnicayestáidentificadaunívocamente."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2425X-Q5- ¿Cuáldelassiguientespuedeserunaconsecuenciadelareplicación? □ □",
+        "opciones": [
+            "A. a) Aumentalalatencia. c) Reducelasopcionesdeescalabilidad. ■ □",
+            "B. b) Incrementaladisponibilidad. d) Simplificalaconsistencia."
+        ],
+        "solucion": "A"
+    },
+    {
+        "cuestion": "SSDD-2425X-Q6- Señaladelassiguientesdefinicionescuálseajustamejoraladefinicióndereplicación: ■",
+        "opciones": [
+            "A. a) Mantenerunacopiaconsistentedelosmismosdatososerviciosendiferentesnodosconectadosentresí. □",
+            "B. b) Mantenerunacopiadeseguridaddedatososerviciosenunalocalizacióncentralizada,conectadaalacopiaoriginal. □",
+            "C. c) Distribucióndelosdatososerviciosendistintascopiasconelpropósitodedistribuirlacargadetrabajo. □",
+            "D. d) Usodecopiasenelmismoservidordelacopiaoriginalparaasegurarlarecuperacióndedatososervicios."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2425X-Q7- Enrelaciónalosmodelosdeconsistencia,señalacuálsecorrespondeaunmodelodeconsistenciadébil: □",
+        "opciones": [
+            "A. a) Siempresedevuelveelvalordelaúltimaescritura. ■",
+            "B. b) Puedenexistirinconsistenciastemporales. □",
+            "C. c) Porlogeneralobtienepeorrendimientoqueotrostiposdeconsistencias. □",
+            "D. d) Requierehacerusodetransacciones."
+        ],
+        "solucion": "A"
+    },
+    {
+        "cuestion": "SSDD-2425X-Q8- ¿CuáldelassiguientesnoesunacaracterísticaconsideradaporelteoremaCAP? □ ■",
+        "opciones": [
+            "A. a) Consistenciadedatos. c) Ventanadeinconsistenciaestricta. □ □",
+            "B. b) Disponibilidaddelsistema. d) Toleranciaalasparticionesdered."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2425X-Q9- Enunsistemadistribuido¿cuáldelassiguientesafirmacioneseslacorrecta? □",
+        "opciones": [
+            "A. a) Elskeweslavariaciónaleatoriaenlafrecuenciadelrelojdebidoalruidoeléctrico □",
+            "B. b) Eljitteresladiferenciainstantáneaentreeltiempomarcadoporunrelojyunareferencia ■",
+            "C. c) Eldrifteslavariaciónsistemáticaenlafrecuenciadeunrelojrespectoaunareferencia □",
+            "D. d) Elskewesunfenómenoacumulativodebidoaldesgastedecuarzodelcristal 11dejuniode2025 1/3 Sistemas Distribuidos Curso24/25::Prueba2(extraordinario) Escuela Superior de Informática A [6p] ConsidereelsiguientediagramadeeventosdeunSD: > 10 (1p)¿Cuáleselvalordelrelojlógico(RL)deloseventosd,iyn?(marca3) □ □ ■ ■ □",
+            "A. a) RL(d)=4 c) RL(d)=6 e) RL(i)=5 g) RL(n)=6 i) RL(n)=8 ■ □ □ □",
+            "B. b) RL(d)=5 d) RL(i)=4 f) RL(i)=6 h) RL(n)=7 > 11 (2p)¿Cuáleselvalordelrelojvectorialdeloseventosd,iyn?(marca3) □ □ ■ ■",
+            "A. a) RV(d)=[4,1,2] d) RV(d)=[5,4,3] g) RV(i)=[1,4,2] j) RV(n)=[1,4,4] ■ □ □ □",
+            "B. b) RV(d)=[4,3,2] e) RV(d)=[6,3,4] h) RV(i)=[1,4,4] k) RV(n)=[3,5,5] □ □ □ □",
+            "C. c) RV(d)=[5,3,2] f) RV(i)=[1,3,2] i) RV(i)=[2,5,2] l) RV(n)=[5,4,3] > 12 (2p)SeauncorteC=[h1,h2,h3]dondeh1,h2yh3sonlosprefijosdehistoriadep1,p2yp3,respectivamente,definidos comoh1=[a,b,c]yh3=[k,l,m,n],¿cuálseríaunprefijodehistoriah2válidoparaqueCseauncorteconsistente? □ ■",
+            "A. a) h2=[f,g] c) h2=[f,g,h,i] □ □",
+            "B. b) h2=[f,g,h] d) Nohayningúnh2quehagaCconsistente > 13 ¿Cuálesdelassiguientesdefinencadenasdecausalidadválidasparaeleventod? ■ □ ■",
+            "A. a) a,b,c,d c) f,g,h,i,d e) k,l,g,h,d ■ ■ □",
+            "B. b) a,f,g,h,d d) k,b,c,d f) k,l,m,i,d"
+        ],
+        "solucion": "B"
+    },
+    {
+        "cuestion": "SSDD-2425X-Q14- Un sistema con 18 nodos se configura mediante una red de comunicaciones por satélite mediante un contrato de pago poruso(10eurosporMB),acontinuación,seconfiguraunalgoritmodeexclusiónmutuaparacontrolarelaccesoaunasección crítica. Durante el primer mes de funcionamiento, ningún nodo accede a la sección crítica ¿Qué algoritmo implicaría un coste mayor? ■ □ □ □",
+        "opciones": [
+            "A. a) Anillo b) ServidorCentral c) RicartAgrawala d) Nohabríadiferencia."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2425X-Q15- ¿Quéeligenrealmentelosalgoritmosdeeleccióndecoordinador? ■ □",
+        "opciones": [
+            "A. a) Cualquierprocesoquedebatomarunrolespecial. c) Servidoresfallback. □ □",
+            "B. b) Servidoresdeexclusiónmutua. d) Coordinadoresdezona."
+        ],
+        "solucion": "?"
+    },
+    {
+        "cuestion": "SSDD-2425X-Q16- ¿Aquéserefierelapropiedad«liveness»cuandoseaplicaaunalgoritmodeexclusiónmutuadistribuida? ■",
+        "opciones": [
+            "A. a) Aseguraquenohabráinaniciónodeadlock. □",
+            "B. b) AseguraquesolounprocesopodránentrarenlaCS. □",
+            "C. c) AseguraquelosprocesosobtendránaccesoalaCSenelmismoordenquelopidieron. □",
+            "D. d) AseguraquelaCSfueliberadaantesdeotorgarpermisoaotroproceso. 11dejuniode2025 2/3 Sistemas Distribuidos Curso24/25::Prueba2(extraordinario) Escuela Superior de Informática B [10p] La figura de la izquierda representa el diagrama de eventos de un SD formado por tres procesos. Para cada evento se muestra su estado local, asumiendo que el valor inicial es 0 para todos los procesos. La figura derecha es el diagrama de transicióndeestadosglobalescorrespondiente: > 17 (2p)¿CuántoseventoshanocurridoenelestadoglobalS221? □ □ ■ □",
+            "A. a) 1 c) 3 e) 5 g) 7 □ □ □ □",
+            "B. b) 2 d) 4 f) 6 h) Noesdeterminista > 18 (2p)¿Cuálessonlosvaloresdea,bycdespuésdeocurrirelsegundoeventodeP1?(marca3) □ □ ■",
+            "A. a) a=1 d) b=1 g) b=indeterminado ■ □ □",
+            "B. b) a=2 e) b=2 h) c=1 □ □ ■",
+            "C. c) a=indeterminado f) b=3 i) c=indeterminado > 19 (2p) Dada la función g = (a + c ≥ b), ¿cuáles serían los resultados de evaluar los predicados «posiblemente(g)» y «definitivamente(g)»? □ □ □ ■",
+            "A. a) false,false b) false,true c) true,false d) true,true > 20 (2p)¿Quétransiciónsehaomitidoeneldiagramadetransicióndeestadosglobales? □ □ □ □ ■",
+            "A. a) S000-S011 b) S010-S021 c) S120-S221 d) S220-S31 e) Ninguna > 21 (2p)¿Cuántoscortesconsistentesconalmenosuneventopuedenocurrirenlahistoriadelsistema? □ □ □ □ □ ■ □",
+            "A. a) 1 c) 3 e) 5 g) 7 i) 9 k) 11 m) 13 □ □ □ □ □ □",
+            "B. b) 2 d) 4 f) 6 h) 8 j) 10 l) 12 11dejuniode2025 3/3"
+        ],
+        "solucion": "D"
+    }
+]

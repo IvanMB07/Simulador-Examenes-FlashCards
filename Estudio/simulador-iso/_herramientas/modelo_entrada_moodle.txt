@@ -1,0 +1,4205 @@
+Pregunta 1
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3BC7-L21-Q18- Pregunta: ¿Cuándo debe incrementarse la versión MINOR (x.Y.z) en SemVer?:
+Pregunta 1Respuesta
+
+a.
+Al introducir únicamente arreglos compatibles.
+
+b.
+Al actualizar metadatos de compilación (+build).
+
+c.
+Al introducir cambios incompatibles.
+
+d.
+Al introducir nueva funcionalidad compatible o marcar funcionalidades como deprecated.
+Retroalimentación
+La respuesta correcta es: Al introducir nueva funcionalidad compatible o marcar funcionalidades como deprecated.
+Pregunta 2
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC01-L31-Q27-¿Cuál es la razón fundamental por la que los defectos son inevitables incluso después del testing?:
+Pregunta 2Respuesta
+
+a.
+Porque el testing solo elimina una parte de los defectos del producto, por lo que es necesario poner un producto de calidad en el testing para obtener uno de calidad.
+
+b.
+Porque es matemáticamente imposible probar todas las combinaciones posibles del software.
+
+c.
+Porque los testers no tienen suficiente experiencia en el dominio del producto.
+
+d.
+Porque el coste del testing es muy alto y las organizaciones limitan su duración.
+Retroalimentación
+La respuesta correcta es: Porque el testing solo elimina una parte de los defectos del producto, por lo que es necesario poner un producto de calidad en el testing para obtener uno de calidad.
+Pregunta 3
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC02-L3-Q14– Pregunta: ¿Cuál es la relación correcta entre la calidad del producto y la calidad del proceso?
+Pregunta 3Respuesta
+
+a.
+Un proceso bien definido y controlado mejora la calidad del producto resultante.
+
+b.
+La calidad del proceso depende de la interfaz del producto.
+
+c.
+La calidad del producto no influye en la percepción del proceso.
+
+d.
+Son totalmente independientes.
+Retroalimentación
+La respuesta correcta es: Un proceso bien definido y controlado mejora la calidad del producto resultante.
+Pregunta 4
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC3-L41-Q19-Pregunta: En el contexto de pruebas, ¿qué son los "valores límite"?:
+Pregunta 4Respuesta
+
+a.
+Valores situados en los límites de las clases de equivalencia.
+
+b.
+Valores aleatorios seleccionados para pruebas de rendimiento.
+
+c.
+Valores que se utilizan únicamente para pruebas de seguridad.
+
+d.
+Valores que siempre producen errores en el sistema.
+Retroalimentación
+La respuesta correcta es: Valores situados en los límites de las clases de equivalencia.
+Pregunta 5
+Incorrecta
+Se puntúa -0,33 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3C7-L21-Q16- Pregunta: ¿Qué NO aportan las herramientas de gestión de versiones?
+Pregunta 5Respuesta
+
+a.
+Registro del historial de cambios.
+
+b.
+Soporte al proyecto.
+
+c.
+Gestión de incidencias.
+
+d.
+Gestión de almacenamiento.
+Retroalimentación
+La respuesta correcta es: Gestión de incidencias.
+Pregunta 6
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC4-L11-Q02-¿Cuál de las siguientes opciones describe mejor el concepto de actividad?
+Pregunta 6Respuesta
+
+a.
+Producto intermedio generado en el desarrollo.
+
+b.
+Persona u organización implicada en el software.
+
+c.
+Acción que transforma entradas en salidas.
+
+d.
+Conjunto de tareas agrupadas bajo un mismo objetivo.
+Retroalimentación
+La respuesta correcta es: Conjunto de tareas agrupadas bajo un mismo objetivo.
+Pregunta 7
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B05-L3-Q21-¿Cuál de las siguientes características pertenece a la dimensión de “Fiabilidad” según ISO 25010?
+Pregunta 7Respuesta
+
+a.
+Modularidad
+
+b.
+Coexistencia
+
+c.
+Disponibilidad
+
+d.
+Accesibilidad
+Retroalimentación
+La respuesta correcta es: Disponibilidad
+Pregunta 8
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B03-L31-Q021- ¿En qué cuatro responsabilidades clave se basa la mejora del proceso?:
+Pregunta 8Respuesta
+
+a.
+Diseñar el producto, probar el producto, entregar el producto y mantener el producto.
+
+b.
+Asignar recursos, capacitar al personal, comunicar resultados y archivar informes.
+
+c.
+Definir el proceso, medir el proceso, controlar el proceso y mejorar el proceso.
+
+d.
+Planificar el proceso, auditar el proceso, documentar el proceso y eliminar el proceso.
+Retroalimentación
+La respuesta correcta es: Definir el proceso, medir el proceso, controlar el proceso y mejorar el proceso.
+Pregunta 9
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3B7-L2-Q06-¿Qué documento define los elementos necesarios para ejercer las actividades de Gestión de la Configuración?
+Pregunta 9Respuesta
+
+a.
+Plan de Gestión de la Configuración.
+
+b.
+Plan de Proyecto.
+
+c.
+Documento de Control de Cambios.
+
+d.
+Informe de Evaluación del Sistema.
+Retroalimentación
+La respuesta correcta es: Plan de Gestión de la Configuración.
+Pregunta 10
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC06-L21-Q11- Pregunta: ¿Qué actividad básica se encarga de ensamblar los componentes del programa?
+Pregunta 10Respuesta
+
+a.
+Construcción del sistema
+
+b.
+Gestión del cambio
+
+c.
+Gestión de Liberaciones
+
+d.
+Gestión de versiones
+Retroalimentación
+La respuesta correcta es: Construcción del sistema
+
+Pregunta 11
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3B7-L12-Q14-¿Qué se obtiene como resultado de la fase de Transición en el PUD?
+Pregunta 11Respuesta
+
+a.
+El código fuente inicial y pruebas unitarias básicas.
+
+b.
+Una línea base estable de arquitectura.
+
+c.
+Un modelo de casos de uso simplificado.
+
+d.
+Una versión beta del producto, con actividades de integración final, formación y corrección de defectos.
+Retroalimentación
+La respuesta correcta es: Una versión beta del producto, con actividades de integración final, formación y corrección de defectos.
+Pregunta 12
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC3-L31-Q19-Pregunta: ¿Qué significa el término cobertura en las pruebas de software?:
+Pregunta 12Respuesta
+
+a.
+El grado en que se detectan los defectos del sistema.
+
+b.
+La cantidad de casos de prueba ejecutados con éxito.
+
+c.
+El grado en el que ciertas partes del sistema han sido probadas.
+
+d.
+La verificación de los requerimientos funcionales del sistema.
+Retroalimentación
+La respuesta correcta es: El grado en el que ciertas partes del sistema han sido probadas.
+Pregunta 13
+Incorrecta
+Se puntúa -0,33 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3C8-L12-Q14- En el PUD, ¿En que fase se desarrollan los casos de usos más críticos?:
+Pregunta 13Respuesta
+
+a.
+Transición.
+
+b.
+Elaboración.
+
+c.
+Construcción.
+
+d.
+Inicio.
+Retroalimentación
+La respuesta correcta es: Elaboración.
+Pregunta 14
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+C04-L3-Q06- ¿Qué característica NO forma parte de la Fiabilidad en el modelo ISO 25010?:
+Pregunta 14Respuesta
+
+a.
+Madurez.
+
+b.
+Tolerancia a fallos.
+
+c.
+Disponibilidad.
+
+d.
+Modularidad.
+Retroalimentación
+La respuesta correcta es: Modularidad.
+Pregunta 15
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC06-L41-Q28- Pregunta: ¿Cuál de las siguientes opciones es una desventaja de las pruebas de mutación?
+Pregunta 15Respuesta
+
+a.
+Mejora los conjuntos de casos de prueba.
+
+b.
+Descubre ambigüedades en el código fuente.
+
+c.
+Usa un gran número de mutaciones.
+
+d.
+Conduce a mayores niveles de cobertura.
+Retroalimentación
+La respuesta correcta es: Usa un gran número de mutaciones.
+Pregunta 16
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B03-L41-Q06- ¿Cuál es la diferencia entre un error y un fallo en el contexto de testing?:
+Pregunta 16Respuesta
+
+a.
+Un error es una equivocación realizada por una persona, mientras que un fallo es una equivocación realizada por una máquina.
+
+b.
+No hay diferencia, fallo y error son sinónimos.
+
+c.
+Los fallos son desvíos respecto al comportamiento del sistema, mientras que los errores son equivocaciones por parte de una persona.
+
+d.
+Los fallos son errores por parte del programador, y los errores son las excepciones que saltan en el sistema.
+Retroalimentación
+La respuesta correcta es: Los fallos son desvíos respecto al comportamiento del sistema, mientras que los errores son equivocaciones por parte de una persona.
+Pregunta 17
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC06-L41-Q16- Pregunta: ¿Qué persigue la función MINIMAX en la planificación de pruebas?
+Pregunta 17Respuesta
+
+a.
+Maximizar el número de defectos encontrados con el mínimo número de casos de prueba y tiempo invertido.
+
+b.
+Ejecutar todas las combinaciones posibles de datos de prueba.
+
+c.
+Minimizar el número de desarrolladores implicados en las pruebas.
+
+d.
+Garantizar que no existan errores en el sistema.
+Retroalimentación
+La respuesta correcta es: Maximizar el número de defectos encontrados con el mínimo número de casos de prueba y tiempo invertido.
+Pregunta 18
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3C7-L4-Q24- Pregunta: En un sistema medianamante complejo, el número de casos de prueba...
+Pregunta 18Respuesta
+
+a.
+es normalmente bajo, por lo que es asequible probar todo el sistema en profundidad.
+
+b.
+ninguna es correcta.
+
+c.
+es constante e independiente de la complejidad del sistema.
+
+d.
+asciende a millones de combinaciones, por lo que es preferible acotar dichos casos de prueba.
+Retroalimentación
+La respuesta correcta es: asciende a millones de combinaciones, por lo que es preferible acotar dichos casos de prueba.
+Pregunta 19
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B03-L41-Q08- ¿Las pruebas de caja negra son opuestas a las pruebas de caja blanca?:
+Pregunta 19Respuesta
+
+a.
+No, pues conocemos la estructura interna de ambas.
+
+b.
+No, pues no tienen relación alguna.
+
+c.
+Sí, son opuestas en cuanto a que conocemos la estructura interna de una pero no de la otra.
+
+d.
+Sí, son opuestos ya que son blanco y negro.
+Retroalimentación
+La respuesta correcta es: Sí, son opuestas en cuanto a que conocemos la estructura interna de una pero no de la otra.
+Pregunta 20
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC05-L31-Q20- ¿Cuál es el objetivo principal de la mejora de procesos?:
+Pregunta 20Respuesta
+
+a.
+Aumentar el número de entregas.
+
+b.
+Hacer más tareas en menos tiempo.
+
+c.
+Reducir el coste del personal.
+
+d.
+Definir, medir, controlar y mejorar los procesos para obtener mejores resultados.
+Retroalimentación
+La respuesta correcta es: Definir, medir, controlar y mejorar los procesos para obtener mejores resultados.
+
+Pregunta 21
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B03-L31-Q06- ¿Qué parte de la gestión de calidad está orientada al aumento de las capacidades de la organización para cumplir los requisitos de calidad?:
+Pregunta 21Respuesta
+
+a.
+Ninguna de las otras respuestas.
+
+b.
+Aseguramiento de la calidad.
+
+c.
+Control de la calidad.
+
+d.
+Mejora de la calidad.
+Retroalimentación
+La respuesta correcta es: Mejora de la calidad.
+Pregunta 22
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+C04-L11-Q16- ¿CUÁL DE LAS SIGUIENTES NO ES UNA METODOLOGÍA DEL DESARROLLO?
+Pregunta 22Respuesta
+
+a.
+PUD.
+
+b.
+Metodología de Marco.
+
+c.
+Métrica v3.
+
+d.
+LLP.
+Retroalimentación
+La respuesta correcta es: LLP.
+Pregunta 23
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC01-L31-Q16-¿En qué consiste el aseguramiento de la calidad?
+Pregunta 23Respuesta
+
+a.
+En el conjunto de actividades destinadas a mejorar continuamente los procesos y productos de la organización.
+
+b.
+En la planificación de las tareas necesarias para alcanzar los objetivos de producción.
+
+c.
+En la verificación final de los productos para asegurar que cumplen las especificaciones técnicas.
+
+d.
+En la parte de la gestión de la calidad orientada a proporcionar confianza en que se cumplirán los requisitos de la calidad.
+Retroalimentación
+La respuesta correcta es: En la parte de la gestión de la calidad orientada a proporcionar confianza en que se cumplirán los requisitos de la calidad.
+Pregunta 24
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3C8-L12-Q22- Según el Manifiesto Ágil, ¿Qué idea está malinterpretada con frecuencia?:
+Pregunta 24Respuesta
+
+a.
+Que la documentación no es necesaria en absoluto.
+
+b.
+Que el equipo de desarrollo puede adaptarse a cambios.
+
+c.
+Que debe existir colaboración con el cliente.
+
+d.
+Que el software funcional es importante.
+Retroalimentación
+La respuesta correcta es: Que la documentación no es necesaria en absoluto.
+Pregunta 25
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC02-L4-Q06- Pregunta: ¿Qué es una caja negra?:
+Pregunta 25Respuesta
+
+a.
+Todas las otras respuestas son correctas.
+
+b.
+Una conjunto de programas de los que se conocen sus funciones.
+
+c.
+Aquella maquina o software de la que solo interesa lo que realiza, sin importar como.
+
+d.
+Una caja de color negro diseñado en el software.
+Retroalimentación
+La respuesta correcta es: Aquella maquina o software de la que solo interesa lo que realiza, sin importar como.
+Pregunta 26
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B02-L41-Q27- ¿Qué caracteriza a la técnica pairwise en la combinación de valores de prueba?
+Pregunta 26Respuesta
+
+a.
+Requiere la ejecución de casos de prueba aleatorios sin restricciones.
+
+b.
+Selecciona únicamente valores límite y sus adyacentes.
+
+c.
+Garantiza recorrer todas las combinaciones posibles de los parámetros.
+
+d.
+Asegura visitar al menos una vez todos los pares de valores entre parámetros.
+Retroalimentación
+La respuesta correcta es: Asegura visitar al menos una vez todos los pares de valores entre parámetros.
+Pregunta 27
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3B7-L41-Q22–Según el modelo en V del testing, ¿qué nivel de prueba valida que el software cumple con los requisitos funcionales acordados con el cliente?
+Pregunta 27Respuesta
+
+a.
+Pruebas de aceptación.
+
+b.
+Pruebas de sistema.
+
+c.
+Pruebas unitarias.
+
+d.
+Pruebas de integración.
+Retroalimentación
+La respuesta correcta es: Pruebas de aceptación.
+Pregunta 28
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+C04-L2-Q16- ¿Cuál de las siguientes afirmaciones sobre los baselines (líneas base) es incorrecta?:
+Pregunta 28Respuesta
+
+a.
+Solo se pueden modificar mediante un procedimiento formal.
+
+b.
+Representa un hito de cada fase de desarrollo.
+
+c.
+Es un producto que ha sido formalmente revisado y sobre el que se ha alcanzado un acuerdo.
+
+d.
+Se pueden actualizar libremente por cualquier desarrollador sin aprobación.
+Retroalimentación
+La respuesta correcta es: Se pueden actualizar libremente por cualquier desarrollador sin aprobación.
+Pregunta 29
+Incorrecta
+Se puntúa -0,33 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B01-L21-Q06- Pregunta: ¿Cuál es el propósito principal de la Gestión del Cambio dentro de la Gestión de la Configuración?:
+Pregunta 29Respuesta
+
+a.
+Implementar automáticamente todos los cambios solicitados.
+
+b.
+Asegurar que la evolución del sistema sea gestionada y priorizada adecuadamente.
+
+c.
+Documentar únicamente los cambios aprobados.
+
+d.
+Evitar que se realicen cambios en el software durante su ciclo de vida.
+Retroalimentación
+La respuesta correcta es: Asegurar que la evolución del sistema sea gestionada y priorizada adecuadamente.
+Pregunta 30
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3C1-L21-Q04- Según el estándar IEEE 828, ¿qué protege la Gestión de la Configuración a lo largo del ciclo de vida del software?
+Pregunta 30Respuesta
+
+a.
+Los intereses comerciales
+
+b.
+La integridad del producto
+
+c.
+La velocidad de desarrollo
+
+d.
+La rentabilidad del proyecto
+Retroalimentación
+La respuesta correcta es: La integridad del producto
+
+Pregunta 31
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC4-L12-Q16-En la fase de Transición del PUD, ¿qué actividad clave acompaña a la entrega del producto?:
+Pregunta 31Respuesta
+
+a.
+Priorización de los requisitos funcionales.
+
+b.
+Construcción de la arquitectura inicial.
+
+c.
+Desarrollo de nuevos casos de uso.
+
+d.
+Formación al cliente y soporte post-entrega.
+Retroalimentación
+La respuesta correcta es: Formación al cliente y soporte post-entrega.
+Pregunta 32
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC3-L12-Q06-Pregunta: ¿Qué pasa normalmente con el producto en la fase de transición del PUD?:
+Pregunta 32Respuesta
+
+a.
+Se entregan solo las pruebas unitarias.
+
+b.
+Se queda en beta, se corrigen fallos y se prepara la versión final.
+
+c.
+Se empieza a programar desde cero.
+
+d.
+Se hace únicamente la documentación.
+Retroalimentación
+La respuesta correcta es: Se queda en beta, se corrigen fallos y se prepara la versión final.
+Pregunta 33
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC4-Q7-Según la ISO 9000, ¿cómo se define la calidad?:
+Pregunta 33Respuesta
+
+a.
+Como el grado en que un conjunto de características inherentes cumple los requisitos.
+
+b.
+Como la ausencia total de defectos en el producto.
+
+c.
+Como la capacidad de un proceso para producir software reutilizable.
+
+d.
+Como la adecuación del producto a las necesidades del consumidor.
+Retroalimentación
+La respuesta correcta es: Como el grado en que un conjunto de características inherentes cumple los requisitos.
+Pregunta 34
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3C8-L11-Q08- ¿Qué objetivo persigue la estandarización en los procesos de software según ISO, IEEE o W3C?
+Pregunta 34Respuesta
+
+a.
+Sustituir las metodologías ágiles por metodologías estructuradas.
+
+b.
+Imponer leyes universales de obligado cumplimiento en todos los proyectos.
+
+c.
+Garantizar que todos los proyectos usen las mismas herramientas CASE.
+
+d.
+Proponer conceptos y buenas prácticas que cada organización debe adaptar a su realidad.
+Retroalimentación
+La respuesta correcta es: Proponer conceptos y buenas prácticas que cada organización debe adaptar a su realidad.
+Pregunta 35
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+C04-L3-Q28- En el ciclo PDCA, la fase Check corresponde a:
+Pregunta 35Respuesta
+
+a.
+Planificar objetivos y procesos necesarios.
+
+b.
+Evaluar y medir los resultados obtenidos.
+
+c.
+Implementar acciones de mejora.
+
+d.
+Ejecutar los procesos planificados.
+Retroalimentación
+La respuesta correcta es: Evaluar y medir los resultados obtenidos.
+Pregunta 36
+Incorrecta
+Se puntúa -0,33 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B01-L41-Q20- Pregunta:¿Cuál de las siguientes coberturas implica necesariamente la de decisiones?:
+Pregunta 36Respuesta
+
+a.
+Cobertura de condiciones/decisiones.
+
+b.
+Cobertura múltiple de condiciones (MCC).
+
+c.
+Cobertura de condiciones.
+
+d.
+Cobertura de sentencias.
+Retroalimentación
+La respuesta correcta es: Cobertura múltiple de condiciones (MCC).
+Pregunta 37
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3B7-L2-Q20- ¿Cuál de las siguientes definiciones corresponde al proceso de "Construcción del sistema" según las transparencias?
+Pregunta 37Respuesta
+
+a.
+Registro de relaciones entre elementos de configuración.
+
+b.
+Seguimiento de las peticiones de cambio y su aprobación.
+
+c.
+Proceso de ensamblar componentes, compilar y vincular para crear un sistema ejecutable.
+
+d.
+Planificar qué funcionalidades irán en cada release.
+Retroalimentación
+La respuesta correcta es: Proceso de ensamblar componentes, compilar y vincular para crear un sistema ejecutable.
+Pregunta 38
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3C8-L31-Q20- ¿Cuál es la diferencia entre "Acción correctiva" y "Corrección"?:
+Pregunta 38Respuesta
+
+a.
+La Acción Correctiva elimina la causa; la Corrección elimina la no conformidad detectada.
+
+b.
+No hay diferencia.
+
+c.
+La Acción Correctiva es preventiva; la Corrección es reparativa.
+
+d.
+La Acción Correctiva elimina la no conformidad; la Corrección elimina la causa.
+Retroalimentación
+La respuesta correcta es: La Acción Correctiva elimina la causa; la Corrección elimina la no conformidad detectada.
+Pregunta 39
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC06-L31-Q09- Pregunta: En Gestión de la Calidad, qué es una "no conformidad"
+Pregunta 39Respuesta
+
+a.
+Una versión preliminar del software.
+
+b.
+Una mejora propuesta para el proceso.
+
+c.
+El incumplimiento de un requisito.
+
+d.
+Un requisito adicional aceptado por el cliente.
+Retroalimentación
+La respuesta correcta es: El incumplimiento de un requisito.
+Pregunta 40
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC05-L31-Q04- Según la ISO 25010, ¿qué representa la “adecuación funcional”?:
+Pregunta 40Respuesta
+
+a.
+Que el software pueda instalarse fácilmente.
+
+b.
+Que el software tiene una interfaz atractiva.
+
+c.
+Que las funciones ofrecidas son completas, correctas y apropiadas para su propósito.
+
+d.
+Que el software no necesita mantenimiento.
+Retroalimentación
+La respuesta correcta es: Que las funciones ofrecidas son completas, correctas y apropiadas para su propósito.  
+
+Pregunta 41
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B02-L32-Q10- ¿Qué significa “calidad” según la ISO 9000?
+Pregunta 41Respuesta
+
+a.
+Ser el más barato.
+
+b.
+Cumplir con los plazos de entrega.
+
+c.
+Tener muchas funciones.
+
+d.
+Grado en que un conjunto de características cumple con los requisitos.
+Retroalimentación
+La respuesta correcta es: Grado en que un conjunto de características cumple con los requisitos.
+Pregunta 42
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC01-L12-Q15-¿En qué consisten las reuniones diarias Scrum?:
+Pregunta 42Respuesta
+
+a.
+En presentar al cliente los incrementos del producto desarrollados durante el Sprint.
+
+b.
+En reunirse cada día para que cada miembro del equipo informe de sus avances, dificultades y próximos pasos.
+
+c.
+En reunirse con el Product Owner para revisar y modificar el Product Backlog completo.
+
+d.
+En revisar los entregables finales del proyecto antes de la entrega oficial.
+Retroalimentación
+La respuesta correcta es: En reunirse cada día para que cada miembro del equipo informe de sus avances, dificultades y próximos pasos.
+Pregunta 43
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC06-L12-Q23- ¿Cuál de las siguientes opciones describe mejor el concepto de “artefacto” en un ciclo de vida?
+Pregunta 43Respuesta
+
+a.
+Un rol asignado a un miembro del equipo.
+
+b.
+Una acción que transforma unas entradas en salidas.
+
+c.
+Una herramienta CASE utilizada en el desarrollo.
+
+d.
+Un producto utilizado como entrada o generado como salida.
+Retroalimentación
+La respuesta correcta es: Un producto utilizado como entrada o generado como salida.
+Pregunta 44
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC02-L3-Q30 – Pregunta: ¿Cuál es la característica de calidad relacionada con la facilidad para modificar y analizar el código en el futuro?
+Pregunta 44Respuesta
+
+a.
+Seguridad.
+
+b.
+Eficiencia.
+
+c.
+Mantenibilidad.
+
+d.
+Capacidad de Uso.
+Retroalimentación
+La respuesta correcta es: Mantenibilidad.
+Pregunta 45
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+C04-L3-Q25- ¿Cuál de las siguientes NO es subcaracterística de la portabilidad en 25010?:
+Pregunta 45Respuesta
+
+a.
+Capacidad para ser reemplazado.
+
+b.
+Adaptabilidad.
+
+c.
+Capacidad para ser instalado.
+
+d.
+Disponibilidad.
+Retroalimentación
+La respuesta correcta es: Disponibilidad.
+Pregunta 46
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3C8-L31-Q26- ¿Cuál es la afirmación que recoge mejor el Quality Principle nº5 de Humphrey?:
+Pregunta 46Respuesta
+
+a.
+La calidad depende de las pruebas.
+
+b.
+Las pruebas eliminan la mayoría de defectos.
+
+c.
+Un producto sin requisitos no puede probarse.
+
+d.
+Solo se obtiene buen producto en pruebas si previamente se introduce un buen producto.
+Retroalimentación
+La respuesta correcta es: Solo se obtiene buen producto en pruebas si previamente se introduce un buen producto.
+Pregunta 47
+Incorrecta
+Se puntúa -0,33 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B05-L3-Q08-¿Cuál de las siguientes afirmaciones no es falsa sobre el concepto de calidad?
+Pregunta 47Respuesta
+
+a.
+Que un producto tenga una calidad perfecta en todos los ámbitos es posible.
+
+b.
+La calidad de un producto la determina sus grandes proezas técnicas.
+
+c.
+Todas las otras respuestas son falsas.
+
+d.
+La adecuación al uso determina de mejor manera la calidad que el desempeño técnico.
+Retroalimentación
+La respuesta correcta es: La adecuación al uso determina de mejor manera la calidad que el desempeño técnico.
+Pregunta 48
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC02-L3-Q23- Pregunta: Según el modelo de evaluación ISO 33000, ¿Cuál es el nivel 2 de dicho modelo?:
+Pregunta 48Respuesta
+
+a.
+Que la organización use los procesos definidos basados en estándares.
+
+b.
+Que la organización mejore continuamente los procesos para cumplir sus objetivos de negocio.
+
+c.
+Que la organización gestione que sus procesos y productos resultantes se establecen, se controlen y se mantienen.
+
+d.
+Que la organización asegure que su producto sea compatible y seguro.
+Retroalimentación
+La respuesta correcta es: Que la organización gestione que sus procesos y productos resultantes se establecen, se controlen y se mantienen.
+Pregunta 49
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B03-L21-Q16- ¿Qué es un Elemento de Configuración (Configuration Item, CI) ?:
+Pregunta 49Respuesta
+
+a.
+Únicamente el código fuente del proyecto.
+
+b.
+Solo los documentos de requisitos.
+
+c.
+Agregación de productos de trabajo designados para estar bajo control de configuración y tratados como una entidad única.
+
+d.
+Cualquier archivo temporal generado durante la compilación.
+Retroalimentación
+La respuesta correcta es: Agregación de productos de trabajo designados para estar bajo control de configuración y tratados como una entidad única.
+Pregunta 50
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+C04-L2-Q20- ¿Cuál es el propósito de una rama hotfix en Git Flow?:
+Pregunta 50Respuesta
+
+a.
+Probar nuevas versiones experimentales antes de liberarlas.
+
+b.
+Sustituir la rama develop como principal de desarrollo.
+
+c.
+Corregir defectos graves encontrados en producción de forma urgente.
+
+d.
+Desarrollar nuevas funcionalidades de largo plazo.
+Retroalimentación
+La respuesta correcta es: Corregir defectos graves encontrados en producción de forma urgente.
+
+Pregunta 1
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B02-L32-Q23- En el modelo de madurez ISO 33000, ¿qué caracteriza el nivel “Innovada”? :
+Pregunta 1Respuesta
+
+a.
+Se gestionan cuantitativamente los procesos mediante indicadores.
+
+b.
+Los procesos se mejoran continuamente para alinearse con objetivos de negocio.
+
+c.
+La organización implementa procesos básicos que cumplen sus objetivos.
+
+d.
+La organización controla productos y procesos de forma estable.
+Retroalimentación
+La respuesta correcta es: Los procesos se mejoran continuamente para alinearse con objetivos de negocio.
+Pregunta 2
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC4-L2-Q06-De acuerdo con la norma ISO 12207, ¿qué objetivo persigue el proceso de Gestión de la Configuración?
+Pregunta 2Respuesta
+
+a.
+Automatizar el proceso de construcción del sistema a partir de sus componentes.
+
+b.
+Facilitar la instalación del software en el entorno de producción.
+
+c.
+Gestionar y mantener la coherencia entre un producto y su definición de configuración asociada.
+
+d.
+Controlar los cambios en el producto final tras su entrega al cliente.
+Retroalimentación
+La respuesta correcta es: Gestionar y mantener la coherencia entre un producto y su definición de configuración asociada.
+Pregunta 3
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC02-L4-Q22- Pregunta: ¿Cuál es una característica principal de las Pruebas de Aceptación?
+Pregunta 3Respuesta
+
+a.
+Siempre son de caja negra.
+
+b.
+Su objetivo es encontrar fallos de rendimiento.
+
+c.
+Prueban la arquitectura del software.
+
+d.
+Comprueban que las unidades de prueba funcionan correctamente al integrarse.
+Retroalimentación
+La respuesta correcta es: Siempre son de caja negra.
+Pregunta 4
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3C8-L41-Q05- ¿Cuál es la característica principal de las Pruebas de Caja Negra?:
+Pregunta 4Respuesta
+
+a.
+Se conocen sus entradas y salidas, pero no su estructura interna.
+
+b.
+Son realizadas exclusivamente por el cliente final.
+
+c.
+Se conoce la estructura interna del programa.
+
+d.
+Se centra en la cobertura de sentencias del código.
+Retroalimentación
+La respuesta correcta es: Se conocen sus entradas y salidas, pero no su estructura interna.
+Pregunta 5
+Incorrecta
+Se puntúa -0,33 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+
+Pregunta 6
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC05-L31-Q28- ¿Qué diferencia principal hay entre evaluar por capacidad y por madurez?:
+Pregunta 6Respuesta
+
+a.
+No hay diferencias entre ambas.
+
+b.
+La primera analiza procesos individuales; la segunda, el conjunto de la organización.
+
+c.
+La evaluación por madurez se centra en el producto.
+
+d.
+La evaluación por capacidad ignora los resultados.
+Retroalimentación
+La respuesta correcta es: La primera analiza procesos individuales; la segunda, el conjunto de la organización.
+Pregunta 7
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC3-L11-Q17- ¿Qué es un artefacto?
+Pregunta 7Respuesta
+
+a.
+Un tipo de metodología.
+
+b.
+Un producto de entrada o salida en un proceso.
+
+c.
+Una técnica de modelado.
+
+d.
+Una herramienta CASE.
+Retroalimentación
+La respuesta correcta es: Un producto de entrada o salida en un proceso.
+Pregunta 8
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC05-L31-Q20- ¿Cuál es el objetivo principal de la mejora de procesos?:
+Pregunta 8Respuesta
+
+a.
+Hacer más tareas en menos tiempo.
+
+b.
+Aumentar el número de entregas.
+
+c.
+Reducir el coste del personal.
+
+d.
+Definir, medir, controlar y mejorar los procesos para obtener mejores resultados.
+Retroalimentación
+La respuesta correcta es: Definir, medir, controlar y mejorar los procesos para obtener mejores resultados.
+Pregunta 9
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3C7-L4-Q12 - Pregunta: El objetivo de la función MINIMAX en las pruebas es lograr la máxima eficacia de las pruebas y, a la vez, ¿qué más?
+Pregunta 9Respuesta
+
+a.
+Máximo tiempo invertido.
+
+b.
+Máxima cobertura de condiciones.
+
+c.
+Mínimo tiempo invertido en las pruebas
+
+d.
+Máximo número de casos de prueba
+Retroalimentación
+La respuesta correcta es: Mínimo tiempo invertido en las pruebas
+Pregunta 10
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3B7-L2-Q21- ¿Cuáles son las actividades básicas de gestión de la configuración?
+Pregunta 10Respuesta
+
+a.
+Gestión del cambio, construcción de versiones, construcción del sistema, gestión de librerías.
+
+b.
+Gestión del cambio, gestión de versiones, construcción del sistema, gestión de librerías.
+
+c.
+Gestión del camibo, gestión de versiones, gestión de librerías.
+
+d.
+Gestión del cambio, gestión de versiones, gestión del sistema, gestión de librerías.
+Retroalimentación
+La respuesta correcta es: Gestión del cambio, gestión de versiones, construcción del sistema, gestión de librerías.
+
+Pregunta 11
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3C1-L31-Q01- Pregunta: Concepto de Calidad según Juran:
+Pregunta 11Respuesta
+
+a.
+Grado en que un producto cumple los requisitos del fabricante.
+
+b.
+Ausencia total de defectos.
+
+c.
+Adecuación del producto al uso.
+
+d.
+Grado en que un conjunto de características cumple las necesidades del usuario.
+Retroalimentación
+La respuesta correcta es: Adecuación del producto al uso.
+Pregunta 12
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC01-L31-Q11-En el ciclo PDCA, ¿cómo se llama el paso en el que revisamos los resultados para ver si se cumplieron los objetivos?:
+Pregunta 12Respuesta
+
+a.
+Planificar.
+
+b.
+Actuar.
+
+c.
+Hacer.
+
+d.
+Comprobar.
+Retroalimentación
+La respuesta correcta es: Comprobar.
+Pregunta 13
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B02-L11-Q15- ¿Cuál de las siguientes NO es una ventaja del modelo en cascada?
+Pregunta 13Respuesta
+
+a.
+Flexibilidad ante cambios frecuentes de requisitos.
+
+b.
+Útil cuando los requisitos están bien definidos desde el inicio.
+
+c.
+Facilita la migración de software desde entornos obsoletos.
+
+d.
+Impone una estructura clara de gestión de proyectos.
+Retroalimentación
+La respuesta correcta es: Flexibilidad ante cambios frecuentes de requisitos.
+Pregunta 14
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B03-L41-Q13- ¿Qué tipo de prueba se realiza para comprobar la correcta integración entre unidades que ya pasaron pruebas unitarias?:
+Pregunta 14Respuesta
+
+a.
+Pruebas de sistema.
+
+b.
+Pruebas unitarias.
+
+c.
+Pruebas de aceptación.
+
+d.
+Pruebas de integración.
+Retroalimentación
+La respuesta correcta es: Pruebas de integración.
+Pregunta 15
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B01-L21-Q12- Pregunta: ¿Qué representa una rama de feature (característica) en el modelo Git Flow?:
+Pregunta 15Respuesta
+
+a.
+Una rama creada para desarrollar nuevas funcionalidades de forma aislada.
+
+b.
+Una línea base congelada que no admite cambios.
+
+c.
+Un entorno temporal para pruebas en producción.
+
+d.
+Una copia de la rama master para implementar correcciones críticas.
+Retroalimentación
+La respuesta correcta es: Una rama creada para desarrollar nuevas funcionalidades de forma aislada.
+Pregunta 16
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC3-L31-Q20-Pregunta: ¿Qué indican los criterios de cobertura en las pruebas de software?:
+Pregunta 16Respuesta
+
+a.
+La forma en que se combinan los valores de prueba para cada parámetro en los casos de prueba.
+
+b.
+El número de defectos encontrados en cada iteración.
+
+c.
+El porcentaje de requerimientos implementados correctamente.
+
+d.
+La cantidad de pruebas ejecutadas de manera automatizada.
+Retroalimentación
+La respuesta correcta es: El porcentaje de requerimientos implementados correctamente.
+Pregunta 17
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B02-L22-Q28- ¿Cuál es la función del Configuration Control dentro de la Gestión de Configuración?:
+Pregunta 17Respuesta
+
+a.
+Controlar los cambios a los elementos después de su identificación formal.
+
+b.
+Evaluar el rendimiento del software tras cada release.
+
+c.
+Estimar los costes de mantenimiento del sistema.
+
+d.
+Documentar los requisitos funcionales del software.
+Retroalimentación
+La respuesta correcta es: Controlar los cambios a los elementos después de su identificación formal.
+Pregunta 18
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B01-L41-Q30- Pregunta: ¿Qué característica define a la estrategia de combinación AETG (Automatic Efficient Test Generator)?:
+Pregunta 18Respuesta
+
+a.
+Genera en tiempo polinomial un conjunto que consigue cobertura pairwise e introduce un factor de aleatoriedad.
+
+b.
+Selecciona casos basándose en la distancia Hamming para buscar los más diferentes entre sí.
+
+c.
+Genera casos de prueba calculando el producto cartesiano completo.
+
+d.
+Se basa en priorizar pares con restricciones y pesos específicos (PROW).
+Retroalimentación
+La respuesta correcta es: Genera en tiempo polinomial un conjunto que consigue cobertura pairwise e introduce un factor de aleatoriedad.
+Pregunta 19
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC3-L31-Q13-Pregunta: ¿En qué se diferencia una evaluación por madurez de una evaluación por capacidad?:
+Pregunta 19Respuesta
+
+a.
+La madurez se aplica solo a CMMI y la capacidad solo a ISO.
+
+b.
+La madurez da una puntuación a la organización y la capacidad da una puntuación a nivel de proceso.
+
+c.
+La madurez mide procesos individuales y la capacidad mide la organización.
+
+d.
+La madurez es para PYMEs y la capacidad para grandes empresas.
+Retroalimentación
+La respuesta correcta es: La madurez da una puntuación a la organización y la capacidad da una puntuación a nivel de proceso.
+Pregunta 20
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B03-L21-Q26- ¿Qué es el Branching (Ramificación)?:
+Pregunta 20Respuesta
+
+a.
+La eliminación de versiones anteriores para evitar conflictos en el desarrollo.
+
+b.
+La creación de una nueva línea base a partir de una versión existente. La nueva línea base y la existente pueden desarrollarse de manera independiente.
+
+c.
+El proceso de compilar el software para su distribución.
+
+d.
+La fusión de todas las versiones en una única línea de desarrollo.
+Retroalimentación
+La respuesta correcta es: La creación de una nueva línea base a partir de una versión existente. La nueva línea base y la existente pueden desarrollarse de manera independiente.
+
+Pregunta 21
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3B7-L31-Q12-¿Qué se entiende por calidad según Deming?
+Pregunta 21Respuesta
+
+a.
+Adecuación del producto al uso.
+
+b.
+Cero defectos.
+
+c.
+Grado en el que un conjunto de características inherentes cumple con los requisitos.
+
+d.
+Conformidad con requisitos y confiabilidad en funcionamiento.
+Retroalimentación
+La respuesta correcta es: Conformidad con requisitos y confiabilidad en funcionamiento.
+Pregunta 22
+Sin contestar
+Se puntúa como 0 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC06-L31-Q14- Pregunta: En la evaluación de la calidad de un producto software, ¿en qué etapa se aplica la especificación de la evaluación?
+Pregunta 22Respuesta
+
+a.
+En la tercera sección
+
+b.
+En la cuarta sección
+
+c.
+En el primera sección
+
+d.
+En la segunda sección
+Retroalimentación
+La respuesta correcta es: En la segunda sección
+Pregunta 23
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3C7-L11-Q13- Pregunta: ¿Qué se entiende por artefacto en el proceso de desarrollo del software?
+Pregunta 23Respuesta
+
+a.
+Una herramienta CASE para generar código automáticamente.
+
+b.
+Un test unitario para comprobar funciones.
+
+c.
+El servidor donde se despliega la aplicación.
+
+d.
+Un producto utilizado como entrada o generado como salida en una tarea.
+Retroalimentación
+La respuesta correcta es: Un producto utilizado como entrada o generado como salida en una tarea.
+Pregunta 24
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3C7-L21-Q01- Pregunta: ¿Cómo se les llama a los productos de trabajo que se pueden introducir en el Configuration Management (CM), como el código, los diagramas, los requisitos, etc?
+Pregunta 24Respuesta
+
+a.
+Release
+
+b.
+Codeline
+
+c.
+Mínimum Viable Product (MVP)
+
+d.
+Configuration Item
+Retroalimentación
+La respuesta correcta es: Configuration Item
+Pregunta 25
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC01-L31-Q26-¿Cuál es la principal diferencia entre una evaluación por capacidad y una evaluación por madurez?:
+Pregunta 25Respuesta
+
+a.
+Ambas obtienen la misma información, pero expresada de diferente manera.
+
+b.
+La evaluación por capacidad es más exhaustiva que la evaluación por madurez.
+
+c.
+La evaluación por madurez es más rápida que la evaluación por capacidad.
+
+d.
+La evaluación por capacidad obtiene puntuación a nivel de proceso, mientras que la evaluación por madurez obtiene puntuación a nivel de organización.
+Retroalimentación
+La respuesta correcta es: La evaluación por capacidad obtiene puntuación a nivel de proceso, mientras que la evaluación por madurez obtiene puntuación a nivel de organización.
+Pregunta 26
+Incorrecta
+Se puntúa -0,33 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3C8-L31-Q18- ¿Cuál de las siguientes es una sub-característica de la "Mantenibilidad" según ISO 25010?:
+Pregunta 26Respuesta
+
+a.
+Modularidad.
+
+b.
+Interoperabilidad.
+
+c.
+Confidencialidad.
+
+d.
+Disponibilidad.
+Retroalimentación
+La respuesta correcta es: Modularidad.
+Pregunta 27
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC01-L41-Q26-¿Cuál es el principal objetivo de las pruebas?:
+Pregunta 27Respuesta
+
+a.
+Encontrar fallos antes del paso a producción.
+
+b.
+Garantizar una cobertura del 100%.
+
+c.
+Reducir al mínimo el tiempo de programación.
+
+d.
+Confirmar que el software funciona perfectamente.
+Retroalimentación
+La respuesta correcta es: Encontrar fallos antes del paso a producción.
+Pregunta 28
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3C8-L31-Q15- ¿Cuál de las siguientes NO es una subcaracterística de “Capacidad de Uso” según ISO 25010?:
+Pregunta 28Respuesta
+
+a.
+Estética de la interfaz.
+
+b.
+Capacidad de ser usado.
+
+c.
+Confidencialidad.
+
+d.
+Protección contra errores de usuario.
+Retroalimentación
+La respuesta correcta es: Confidencialidad.
+Pregunta 29
+Incorrecta
+Se puntúa -0,33 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC4-L2-Q10-¿Qué herramienta o concepto se utiliza en la Gestión de la Configuración para registrar el estado de los atributos de los elementos de configuración y sus relaciones a lo largo del ciclo de vida?
+Pregunta 29Respuesta
+
+a.
+Configuration Management Database (CMDB).
+
+b.
+Build System Repository (BSR).
+
+c.
+Change Request Register (CRR).
+
+d.
+Configuration Control Board (CCB).
+Retroalimentación
+La respuesta correcta es: Configuration Management Database (CMDB).
+Pregunta 30
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3C7-L4-Q08- Pregunta: En la técnica de valores límite, se seleccionan:
+Pregunta 30Respuesta
+
+a.
+Valores situados en los límites de las clases de equivalencia.
+
+b.
+Valores aleatorios de cada parámetro.
+
+c.
+Solamente valores negativos.
+
+d.
+Todos los valores posibles de entrada.
+Retroalimentación
+La respuesta correcta es: Valores situados en los límites de las clases de equivalencia.
+
+Pregunta 31
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC05-L12-Q27– ¿Qué disciplina del PUD se encarga de describir qué debe hacer el sistema y poner de acuerdo a desarrolladores y clientes?:
+Pregunta 31Respuesta
+
+a.
+Requisitos.
+
+b.
+Implementación.
+
+c.
+Modelado del negocio.
+
+d.
+Pruebas.
+Retroalimentación
+La respuesta correcta es: Requisitos.
+Pregunta 32
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3BC7-L41-Q06- ¿Cuál de las siguientes es una herramienta para las metodologías basadas en pruebas?:
+Pregunta 32Respuesta
+
+a.
+Carrot.
+
+b.
+Eggplant.
+
+c.
+Banana.
+
+d.
+Cucumber.
+Retroalimentación
+La respuesta correcta es: Cucumber.
+Pregunta 33
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC4-Q14-¿Cuál de los siguientes conceptos corresponde a “Acción tomada para eliminar la causa de una no conformidad potencial”?:
+Pregunta 33Respuesta
+
+a.
+Reparación.
+
+b.
+Acción correctiva.
+
+c.
+Desecho.
+
+d.
+Acción preventiva.
+Retroalimentación
+La respuesta correcta es: Acción preventiva.
+Pregunta 34
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B02-L11-Q04- ¿Qué característica distingue al modelo en espiral de otros modelos?
+Pregunta 34Respuesta
+
+a.
+La eliminación del análisis de requisitos.
+
+b.
+El uso de iteraciones y gestión de riesgos.
+
+c.
+Que nunca se adapta a otros modelos.
+
+d.
+La ausencia de revisiones intermedias.
+Retroalimentación
+La respuesta correcta es: El uso de iteraciones y gestión de riesgos.
+Pregunta 35
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B05-L21-Q17-¿Qué propósito tiene la auditoría de configuración dentro del proceso de Gestión de la Configuración?
+Pregunta 35Respuesta
+
+a.
+Verificar que los elementos de configuración y sus versiones cumplen con los estándares y procedimientos establecidos.
+
+b.
+Sustituir la gestión de versiones en el control del proyecto.
+
+c.
+Automatizar la documentación del sistema.
+
+d.
+Detectar errores de programación antes de la compilación.
+Retroalimentación
+La respuesta correcta es: Verificar que los elementos de configuración y sus versiones cumplen con los estándares y procedimientos establecidos.
+Pregunta 36
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3C7-L3-Q24 - Pregunta: Según la definición de ISO 9000, la calidad es...
+Pregunta 36Respuesta
+
+a.
+Conformidad con requisitos y confiabilidad en funcionamiento.
+
+b.
+Cero defectos.
+
+c.
+Grado en el que un conjunto de características inherentes cumple con los requisitos.
+
+d.
+Adecuación (del producto) al uso.
+Retroalimentación
+La respuesta correcta es: Grado en el que un conjunto de características inherentes cumple con los requisitos.
+Pregunta 37
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3BC7-L12-Q11- Principales características del Proceso Unificado de Desarrollo (PUD):
+Pregunta 37Respuesta
+
+a.
+Enfocado exclusivamente en la documentación sin pruebas.
+
+b.
+Dirigido por casos de uso, centrado en la arquitectura e iterativo incremental.
+
+c.
+Adaptado únicamente a proyectos pequeños.
+
+d.
+Basado en el modelo en cascada, rígido y lineal.
+Retroalimentación
+La respuesta correcta es: Dirigido por casos de uso, centrado en la arquitectura e iterativo incremental.
+Pregunta 38
+Incorrecta
+Se puntúa -0,33 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+C04-L4-Q15- ¿Cuántos casos de prueba tendremos que hacer como mínimo si usamos pair-wise?:
+Pregunta 38Respuesta
+
+a.
+Tendremos que usar el multiplo del número de valores de los dos parámetros que más valores tengan.
+
+b.
+Pair-wise no está relacionado con valores ni los casos de prueba.
+
+c.
+Tendremos que usar el doble del número de valores del parámetro que más valores tenga.
+
+d.
+Tendremos que usar el número de valores del parámetro que tenga más.
+Retroalimentación
+La respuesta correcta es: Tendremos que usar el multiplo del número de valores de los dos parámetros que más valores tengan.
+Pregunta 39
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3C8-L12-Q08- ¿Qué disciplina del PUD se centra en describir qué es lo que tiene que hacer el sistema y alinear la visión entre cliente y desarrolladores?:
+Pregunta 39Respuesta
+
+a.
+Modelado del negocio.
+
+b.
+Pruebas.
+
+c.
+Implementación.
+
+d.
+Requisitos.
+Retroalimentación
+La respuesta correcta es: Requisitos.
+Pregunta 40
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC3-L31-Q06-Pregunta: ¿Cuál es el objetivo del ciclo de mejora continua (PDCA)?:
+Pregunta 40Respuesta
+
+a.
+Documentar cada error sin modificar el proceso.
+
+b.
+Definir nuevos productos en cada iteración del proyecto.
+
+c.
+Controlar y optimizar los procesos mediante revisión y ajuste constante.
+
+d.
+Repetir las actividades sin cambios para mantener la estabilidad.
+Retroalimentación
+La respuesta correcta es: Controlar y optimizar los procesos mediante revisión y ajuste constante.
+
+Pregunta 41
+Incorrecta
+Se puntúa -0,33 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B02-L3-Q08- Pregunta: ¿Qué ocurre si la empresa no define sus procesos?
+Pregunta 41Respuesta
+
+a.
+Los trabajadores acuerdan una manera de trabajar común poco eficiente.
+
+b.
+Cada trabajador usa su manera de trabajar, resultando en el desastre.
+
+c.
+No ocurre nada, se pueden tener buenos resultados aun asi.
+
+d.
+La empresa no obtiene una madurez adecuada.
+Retroalimentación
+La respuesta correcta es: Cada trabajador usa su manera de trabajar, resultando en el desastre.
+Pregunta 42
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+C04-L2-Q23- ¿Qué papel desempeña el Configuration Control Board (CCB)?:
+Pregunta 42Respuesta
+
+a.
+Es el equipo encargado de ejecutar las pruebas unitarias.
+
+b.
+Supervisa el rendimiento del sistema en producción.
+
+c.
+Evalúa, acepta o rechaza las peticiones de cambio y controla su implementación.
+
+d.
+Define la interfaz pública del software.
+Retroalimentación
+La respuesta correcta es: Evalúa, acepta o rechaza las peticiones de cambio y controla su implementación.
+Pregunta 43
+Incorrecta
+Se puntúa -0,33 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B05-L3-Q07-¿Cuándo se mejora un proceso, que se hace a continuación?
+Pregunta 43Respuesta
+
+a.
+No se hace nada.
+
+b.
+Utilizar el proceso.
+
+c.
+Medir el proceso.
+
+d.
+Redefinirlo.
+Retroalimentación
+La respuesta correcta es: Redefinirlo.
+Pregunta 44
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC05-L31-Q18- ¿Cuál es el nivel más bajo en los modelos de madurez de procesos?:
+Pregunta 44Respuesta
+
+a.
+Inmaduro.
+
+b.
+Establecido.
+
+c.
+Básico.
+
+d.
+Gestionado.
+Retroalimentación
+La respuesta correcta es: Inmaduro.
+Pregunta 45
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC3-L12-Q12-Pregunta: ¿Cuál es el objetivo principal del Modelado del Negocio en el Proceso Unificado de Desarrollo?:
+Pregunta 45Respuesta
+
+a.
+Visualizar los aspectos básicos del dominio de aplicación.
+
+b.
+Definir el cronograma del proyecto.
+
+c.
+Desarrollar el código y la arquitectura del sistema propuesto.
+
+d.
+Realizar pruebas de integración.
+Retroalimentación
+La respuesta correcta es: Visualizar los aspectos básicos del dominio de aplicación.
+Pregunta 46
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC05-L31-Q19- ¿Qué característica define un proceso en nivel “Gestionado”?:
+Pregunta 46Respuesta
+
+a.
+Solo se mide al final del proyecto.
+
+b.
+Depende de la improvisación del equipo.
+
+c.
+Se ejecuta sin control ni planificación.
+
+d.
+Se gestiona y sus productos se controlan y mantienen.
+Retroalimentación
+La respuesta correcta es: Se gestiona y sus productos se controlan y mantienen.
+Pregunta 47
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B05-L3-Q18-¿Qué se entiende por “Capacidad de Uso” en el modelo ISO 25010?
+Pregunta 47Respuesta
+
+a.
+El nivel de tolerancia a fallos que muestra el sistema.
+
+b.
+La facilidad con la que un usuario puede reconocer si el software es adecuado para su propósito.
+
+c.
+La capacidad del software para impedir su uso ante una no conformidad.
+
+d.
+La facilidad de migrar el software entre diferentes plataformas de hardware.
+Retroalimentación
+La respuesta correcta es: La facilidad con la que un usuario puede reconocer si el software es adecuado para su propósito.
+Pregunta 48
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC06-L12-Q12- ¿Cuál de estos inconvenientes no es característico del modelo en cascada?
+Pregunta 48Respuesta
+
+a.
+El modelo es poco flexible.
+
+b.
+Es fácil estimar el coste total del proyecto desde el principio.
+
+c.
+No se tienen resultados hasta el final.
+
+d.
+Se tarda mucho tiempo en pasar por todo el ciclo.
+Retroalimentación
+La respuesta correcta es: Es fácil estimar el coste total del proyecto desde el principio.
+Pregunta 49
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC06-L21-Q29- Pregunta: ¿Qué identifica el concepto de “Tag” dentro de la gestión de versiones?
+Pregunta 49Respuesta
+
+a.
+Un registro de cambios aplicados a una línea de código
+
+b.
+Un identificador inmutable que permite localizar una versión exacta del software
+
+c.
+Una rama destinada a pruebas de integración
+
+d.
+Una versión temporal del sistema antes de liberarse
+Retroalimentación
+La respuesta correcta es: Un identificador inmutable que permite localizar una versión exacta del software
+Pregunta 50
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3B7-L41-Q12- ¿Qué es la cobertura en la ingeniería de software?
+Pregunta 50Respuesta
+
+a.
+Grado en el que todas las partes del sistema han sido aprobadas.
+
+b.
+Grado en el que una de las parte del sistema ha sido aprobada.
+
+c.
+Grado en el que ciertas partes del sistema han sido aprobadas.
+
+d.
+Grado en el que ninguna de las partes del sistema han sido aprobadas.
+Retroalimentación
+La respuesta correcta es: Grado en el que ciertas partes del sistema han sido aprobadas.
+
+Pregunta 1
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3C1-L11-Q05- ¿Qué metodología estructurada corresponde a un enfoque mixto?
+Pregunta 1Respuesta
+
+a.
+Gane y Sarson.
+
+b.
+Métrica.
+
+c.
+OMT.
+
+d.
+De Marco.
+Retroalimentación
+La respuesta correcta es: Métrica.
+Pregunta 2
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3BC7-L21-Q07- Pregunta: ¿Cuál de las siguientes NO es una actividad básica de CM tratada en el tema?:
+Pregunta 2Respuesta
+
+a.
+Gestión del cambio.
+
+b.
+Gestión de versiones.
+
+c.
+Construcción del sistema.
+
+d.
+Diseño de la interfaz de usuario.
+Retroalimentación
+La respuesta correcta es: Diseño de la interfaz de usuario.
+Pregunta 3
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC01-L41-Q07-¿Cuál es el objetivo de cobertura?:
+Pregunta 3Respuesta
+
+a.
+Poder añadir casos de pruebas adicionales sobre las partes inexploradas del sistema.
+
+b.
+Todas las otras respuestas son correctas.
+
+c.
+Poder eliminar casos de pruebas adicionales sobre las partes inexploradas del sistema.
+
+d.
+Poder añadir casos de pruebas adicionales sobre las partes exploradas del sistema.
+Retroalimentación
+La respuesta correcta es: Poder añadir casos de pruebas adicionales sobre las partes inexploradas del sistema.
+Pregunta 4
+Incorrecta
+Se puntúa -0,33 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC02-L3-Q04- Pregunta: ¿Qué es lo que mejor define la calidad?:
+Pregunta 4Respuesta
+
+a.
+Grandes especificaciones técnicas.
+
+b.
+Ninguna de las anteriores.
+
+c.
+El mejor producto posible.
+
+d.
+Adecuación al uso.
+Retroalimentación
+La respuesta correcta es: Adecuación al uso.
+Pregunta 5
+Sin contestar
+Se puntúa como 0 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B02-L41-Q16- ¿Qué técnica se usa para seleccionar datos representativos reduciendo el número total de pruebas necesarias?
+Pregunta 5Respuesta
+
+a.
+Pruebas de integración incremental.
+
+b.
+Partición en clases de equivalencia.
+
+c.
+Pruebas de mutación.
+
+d.
+Test Driven Development.
+Retroalimentación
+La respuesta correcta es: Partición en clases de equivalencia.
+Pregunta 6
+Incorrecta
+Se puntúa -0,33 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+C04-L3-Q35- ¿Cuál de los siguientes conceptos está relacionado con la calidad?:
+Pregunta 6Respuesta
+
+a.
+Reparación.
+
+b.
+Modelo de calidad.
+
+c.
+A y C son correctas.
+
+d.
+Stakeholder.
+Retroalimentación
+La respuesta correcta es: A y C son correctas.
+Pregunta 7
+Incorrecta
+Se puntúa -0,33 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC01-L31-Q28-¿Cuál de las siguientes opciones NO es un componente de los Modelos de Referencia de Procesos?:
+Pregunta 7Respuesta
+
+a.
+Definir indicadores de rendimiento para cada proceso.
+
+b.
+Servir como base para evaluación y mejora de procesos.
+
+c.
+Proporcionar guías sobre aspectos de la organización específicos.
+
+d.
+Establecer un camino a seguir describiendo características de buenos procesos.
+Retroalimentación
+La respuesta correcta es: Definir indicadores de rendimiento para cada proceso.
+Pregunta 8
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+C04-L3-Q09- ¿Qué diferencia hay entre una evaluación por capacidad y una por madurez?:
+Pregunta 8Respuesta
+
+a.
+Ninguna de las otras respuestas es correcta.
+
+b.
+Ambas miden lo mismo con distinto nombre.
+
+c.
+La primera se aplica a organizaciones y la segunda a procesos.
+
+d.
+La primera se aplica a procesos y la segunda a la organización.
+Retroalimentación
+La respuesta correcta es: La primera se aplica a procesos y la segunda a la organización.
+Pregunta 9
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC05-L31-Q01- ¿Qué se entiende por “calidad del producto software” según la ISO 25000?:
+Pregunta 9Respuesta
+
+a.
+El grado en que un software cumple los plazos de entrega.
+
+b.
+La satisfacción del cliente sin importar el funcionamiento interno.
+
+c.
+La cantidad de líneas de código generadas en el proyecto.
+
+d.
+El grado en que un conjunto de características satisface las necesidades bajo condiciones determinadas.
+Retroalimentación
+La respuesta correcta es: El grado en que un conjunto de características satisface las necesidades bajo condiciones determinadas.
+Pregunta 10
+Incorrecta
+Se puntúa -0,33 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC05-L4-Q01- En la actualidad, ¿Cuál de las siguientes metodologías basadas en pruebas son más usadas por empresas?
+Pregunta 10Respuesta
+
+a.
+BDD.
+
+b.
+TDD.
+
+c.
+Todas son usadas por igual.
+
+d.
+ABDD.
+Retroalimentación
+La respuesta correcta es: TDD.
+
+Pregunta 11
+Sin contestar
+Se puntúa como 0 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC01-L41-Q20-¿Cuál de los siguientes criterios de cobertura obliga a recorrer la tabla de verdad completa?:
+Pregunta 11Respuesta
+
+a.
+Cobertura de sentencia.
+
+b.
+Cobertura múltiple de condiciones.
+
+c.
+Cobertura de condiciones/decisiones.
+
+d.
+Cobertura de decisiones.
+Retroalimentación
+La respuesta correcta es: Cobertura múltiple de condiciones.
+Pregunta 12
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B01-L31-Q02- Pregunta: En el modelo ISO 25010, la "Interoperabilidad" y la "Coexistencia" son sub-características de:
+Pregunta 12Respuesta
+
+a.
+Portabilidad.
+
+b.
+Compatibilidad.
+
+c.
+Mantenibilidad.
+
+d.
+Fiabilidad.
+Retroalimentación
+La respuesta correcta es: Compatibilidad.
+Pregunta 13
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC06-L32-Q28- Pregunta: Según el modelo ISO/IEC 25010, ¿cuál de las siguientes es una subcaracterística de la característica de “Seguridad” del producto software?
+Pregunta 13Respuesta
+
+a.
+Confidencialidad.
+
+b.
+Modularidad.
+
+c.
+Capacidad para ser probado.
+
+d.
+Adaptabilidad.
+Retroalimentación
+La respuesta correcta es: Confidencialidad.
+Pregunta 14
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B05-L3-Q08-¿Cuál de las siguientes afirmaciones no es falsa sobre el concepto de calidad?
+Pregunta 14Respuesta
+
+a.
+La adecuación al uso determina de mejor manera la calidad que el desempeño técnico.
+
+b.
+La calidad de un producto la determina sus grandes proezas técnicas.
+
+c.
+Todas las otras respuestas son falsas.
+
+d.
+Que un producto tenga una calidad perfecta en todos los ámbitos es posible.
+Retroalimentación
+La respuesta correcta es: La adecuación al uso determina de mejor manera la calidad que el desempeño técnico.
+Pregunta 15
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3BC7-L21-Q20- Respecto a las actividades básicas de la gestión de configuración, ¿cuál de estas no es una actividad básica?:
+Pregunta 15Respuesta
+
+a.
+Gestión del cambio.
+
+b.
+Gestión de permisos.
+
+c.
+Construcción del sistema.
+
+d.
+Gestión de entregas.
+Retroalimentación
+La respuesta correcta es: Gestión de permisos.
+Pregunta 16
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B03-L12-Q15 - ¿Cuál es una característica del Proceso Unificado de Desarrollo (PUD)?:
+Pregunta 16Respuesta
+
+a.
+No utiliza modelos UML para el diseño.
+
+b.
+Se basa en ciclo de vida en cascada.
+
+c.
+Cada ciclo concluye con una versión del producto para los clientes.
+
+d.
+No permite iteraciones dentro de las fases.
+Retroalimentación
+La respuesta correcta es: Cada ciclo concluye con una versión del producto para los clientes.
+Pregunta 17
+Incorrecta
+Se puntúa -0,33 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+C04-L3-Q15- Según el ciclo de mejora continua (PDCA), la fase Check consiste en:
+Pregunta 17Respuesta
+
+a.
+Identificar oportunidades de mejora y estandarizar los procesos.
+
+b.
+Implementar los procesos planificados.
+
+c.
+Medir y evaluar los resultados frente a los objetivos establecidos.
+
+d.
+Definir los objetivos y planificar los siguientes pasos.
+Retroalimentación
+La respuesta correcta es: Medir y evaluar los resultados frente a los objetivos establecidos.
+Pregunta 18
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3C8-L21-Q03- Qué representa una Línea Base (Baseline):
+Pregunta 18Respuesta
+
+a.
+Un registro informal de versiones experimentales.
+
+b.
+Un conjunto de versiones de componentes que pueden modificarse libremente.
+
+c.
+Un cambio temporal sin control formal.
+
+d.
+Una versión aprobada de un elemento de configuración fijada en un momento específico.
+Retroalimentación
+La respuesta correcta es: Una versión aprobada de un elemento de configuración fijada en un momento específico.
+Pregunta 19
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC06-L21-Q22- Pregunta: ¿Qué papel desempeña el Configuration Control Board (CCB)?
+Pregunta 19Respuesta
+
+a.
+Evaluar, aprobar o rechazar las peticiones de cambio y garantizar su correcta implementación
+
+b.
+Generar las versiones finales del producto y etiquetarlas
+
+c.
+Supervisar la construcción automática del sistema
+
+d.
+Elaborar los informes de auditoría de configuración
+Retroalimentación
+La respuesta correcta es: Evaluar, aprobar o rechazar las peticiones de cambio y garantizar su correcta implementación
+Pregunta 20
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3B7-L12-Q17-¿Cuál de los siguientes artefactos se obtiene como línea base de la arquitectura durante la fase de Elaboración?
+Pregunta 20Respuesta
+
+a.
+Product Backlog.
+
+b.
+Informe de marketing.
+
+c.
+Documento de arquitectura del software.
+
+d.
+Manual de usuario.
+Retroalimentación
+La respuesta correcta es: Documento de arquitectura del software.
+
+Pregunta 21
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC06-L21-Q03- Pregunta: ¿Qué significa "línea base" (baseline) en el contexto de la Gestión de Configuración?
+Pregunta 21Respuesta
+
+a.
+La versión final de un producto que no cambia.
+
+b.
+El primer commit en un sistema de control de versiones.
+
+c.
+La rama principal en un sistema de control de versiones.
+
+d.
+Es una colección de versiones de componentes que construyen un sistema.
+Retroalimentación
+La respuesta correcta es: Es una colección de versiones de componentes que construyen un sistema.
+Pregunta 22
+Sin contestar
+Se puntúa como 0 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B02-L21-Q08- Según el versionado semántico, ¿qué ocurre al incrementar la versión mayor?:
+Pregunta 22Respuesta
+
+a.
+Se actualiza la documentación del código sin modificar el software.
+
+b.
+Se introducen cambios que rompen la compatibilidad con versiones anteriores.
+
+c.
+Se añaden nuevas funcionalidades compatibles con la versión anterior.
+
+d.
+Se corrigen errores menores sin afectar la compatibilidad.
+Retroalimentación
+La respuesta correcta es: Se introducen cambios que rompen la compatibilidad con versiones anteriores.
+Pregunta 23
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3C8-L41-Q21- ¿Cuál es el primer paso en el funcionamiento de las Pruebas de Mutación?:
+Pregunta 23Respuesta
+
+a.
+Generar copias del software con mutaciones.
+
+b.
+Validación del software original con el conjunto de pruebas.
+
+c.
+Comparar la salida del mutante y el original.
+
+d.
+Calcular el Mutation Score.
+Retroalimentación
+La respuesta correcta es: Validación del software original con el conjunto de pruebas.
+Pregunta 24
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B02-L11-Q17- ¿Qué es un artefacto en el contexto del ciclo de vida del software?
+Pregunta 24Respuesta
+
+a.
+Un conjunto de tareas que forman una actividad.
+
+b.
+Un modelo que organiza las fases de desarrollo.
+
+c.
+Una acción que transforma entradas en salidas.
+
+d.
+Un producto utilizado como entrada o generado como salida.
+Retroalimentación
+La respuesta correcta es: Un producto utilizado como entrada o generado como salida.
+Pregunta 25
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3BC7-L12-Q024- ¿Cuál de las siguientes afirmaciones sobre el Product owner es incorrecta?:
+Pregunta 25Respuesta
+
+a.
+Blinda al equipo de influencias externas.
+
+b.
+Es el responsable de asegurar el retorno de la Inversión (ROI).
+
+c.
+Decide las fechas de publicación y sus contenidos.
+
+d.
+Acepta o rechaza los resultados del trabajo.
+Retroalimentación
+La respuesta correcta es: Blinda al equipo de influencias externas.
+Pregunta 26
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3C7-L3-Q23 - Pregunta: ¿Cuál de los siguientes modelos de evaluación de procesos está orientado específicamente a PYMEs y pequeños grupos de desarrollo?
+Pregunta 26Respuesta
+
+a.
+MMIS 2.0 AENOR-AQCLab.
+
+b.
+CMMI-DEV.
+
+c.
+ISO/IEC 25040.
+
+d.
+ISO/IEC 33000.
+Retroalimentación
+La respuesta correcta es: MMIS 2.0 AENOR-AQCLab.
+Pregunta 27
+Incorrecta
+Se puntúa -0,33 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+C04-L2-Q35- ¿Para qué sirve el versionado?:
+Pregunta 27Respuesta
+
+a.
+Para la especificación de una baseline concreta.
+
+b.
+B y D son correctas.
+
+c.
+Para marcar grandes cambios en el proyecto.
+
+d.
+Para la publicación/liberación de un producto software.
+Retroalimentación
+La respuesta correcta es: B y D son correctas.
+Pregunta 28
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC06-L41-Q17- Pregunta: ¿Qué es un conjunto de prueba (test suite)?
+Pregunta 28Respuesta
+
+a.
+Un único caso de prueba que se ejecuta repetidamente.
+
+b.
+Un informe con el resumen de todos los defectos encontrados.
+
+c.
+Uno o más casos de prueba con un propósito y base de datos comunes que se ejecutan en conjunto.
+
+d.
+La documentación de requisitos funcionales del sistema.
+Retroalimentación
+La respuesta correcta es: Uno o más casos de prueba con un propósito y base de datos comunes que se ejecutan en conjunto.
+Pregunta 29
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3BC7-L12-Q16- Según ISO 9000, ¿cómo se define la calidad?:
+Pregunta 29Respuesta
+
+a.
+Nivel de satisfacción del cliente según encuestas de usabilidad.
+
+b.
+Grado en que un producto es más rentable que sus competidores.
+
+c.
+Grado en que un conjunto de características inherentes cumple con los requisitos.
+
+d.
+Cumplimiento de los plazos establecidos para la entrega del producto.
+Retroalimentación
+La respuesta correcta es: Grado en que un conjunto de características inherentes cumple con los requisitos.
+Pregunta 30
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3C1-L31-Q09- Pregunta: Según las definiciones de calidad, ¿qué afirma Crosby?
+Pregunta 30Respuesta
+
+a.
+La calidad es el grado en que un producto satisface necesidades implícitas.
+
+b.
+La calidad es adecuación al uso.
+
+c.
+La calidad es conformidad con requisitos y confiabilidad.
+
+d.
+La calidad consiste en cero defectos.
+Retroalimentación
+La respuesta correcta es: La calidad consiste en cero defectos.
+
+Pregunta 31
+Incorrecta
+Se puntúa -0,33 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC01-L31-Q28-¿Cuál de las siguientes opciones NO es un componente de los Modelos de Referencia de Procesos?:
+Pregunta 31Respuesta
+
+a.
+Proporcionar guías sobre aspectos de la organización específicos.
+
+b.
+Definir indicadores de rendimiento para cada proceso.
+
+c.
+Servir como base para evaluación y mejora de procesos.
+
+d.
+Establecer un camino a seguir describiendo características de buenos procesos.
+Retroalimentación
+La respuesta correcta es: Definir indicadores de rendimiento para cada proceso.
+Pregunta 32
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC3-L11-Q05- Una desventaja del modelo en cascada es:
+Pregunta 32Respuesta
+
+a.
+Se tarda mucho tiempo en pasar por todas las fases y no se obtienen resultados hasta el final.
+
+b.
+Es flexible y permite cambios fáciles en los requisitos.
+
+c.
+Es ideal para sistemas con alta incertidumbre en los requisitos.
+
+d.
+Permite la entrega continua de incrementos de software.
+Retroalimentación
+La respuesta correcta es: Se tarda mucho tiempo en pasar por todas las fases y no se obtienen resultados hasta el final.
+Pregunta 33
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC01-L12-Q01-Dentro del contexto de un PUD (Proceso Unificado de Desarrollo), ¿qué entendemos por "línea base"?:
+Pregunta 33Respuesta
+
+a.
+El conjunto de buenas prácticas que describen cómo organizar un proceso de software efectivo.
+
+b.
+La estimación de recursos necesarios para terminar el proyecto.
+
+c.
+Conjunto de elementos verificados y aprobados, a partir del cual se desarrollan y controlan nuevas versiones de un proyecto.
+
+d.
+Una metodología de desarrollo orientada a objetos que define todas las fases del ciclo de vida.
+Retroalimentación
+La respuesta correcta es: Conjunto de elementos verificados y aprobados, a partir del cual se desarrollan y controlan nuevas versiones de un proyecto.
+Pregunta 34
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+C04-L3-Q33- ¿Cuál de los siguientes artefactos no es necesario para mejorar los procesos?:
+Pregunta 34Respuesta
+
+a.
+Modelos de mejora de procesos.
+
+b.
+Modelos de referencia de procesos.
+
+c.
+Modelos de evaluación.
+
+d.
+Modelos de ciclo de vida.
+Retroalimentación
+La respuesta correcta es: Modelos de ciclo de vida.
+Pregunta 35
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC01-L31-Q26-¿Cuál es la principal diferencia entre una evaluación por capacidad y una evaluación por madurez?:
+Pregunta 35Respuesta
+
+a.
+La evaluación por capacidad es más exhaustiva que la evaluación por madurez.
+
+b.
+La evaluación por madurez es más rápida que la evaluación por capacidad.
+
+c.
+La evaluación por capacidad obtiene puntuación a nivel de proceso, mientras que la evaluación por madurez obtiene puntuación a nivel de organización.
+
+d.
+Ambas obtienen la misma información, pero expresada de diferente manera.
+Retroalimentación
+La respuesta correcta es: La evaluación por capacidad obtiene puntuación a nivel de proceso, mientras que la evaluación por madurez obtiene puntuación a nivel de organización.
+Pregunta 36
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B03-L21-Q28- ¿Cúales son las 4 actividades básicas de la gestión de la configuración?:
+Pregunta 36Respuesta
+
+a.
+Gestión del cambio, gestión de versiones, construcción del sistema, gestión de liberaciones/Entregas.
+
+b.
+Diseño gráfico, codificación, pruebas unitarias, documentación.
+
+c.
+Planificación de recursos, análisis de mercado, gestión de clientes, soporte técnico.
+
+d.
+Revisión de código, integración continua, despliegue, mantenimiento.
+Retroalimentación
+La respuesta correcta es: Gestión del cambio, gestión de versiones, construcción del sistema, gestión de liberaciones/Entregas.
+Pregunta 37
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B02-L32-Q03- En el Ciclo de Mejora Continua PDCA, la fase de Check consiste en :
+Pregunta 37Respuesta
+
+a.
+Medir y verificar los resultados obtenidos.
+
+b.
+Incorporar las mejoras.
+
+c.
+Llevar a cabo la planificación realizada.
+
+d.
+Definir los objetivos y recursos de calidad.
+Retroalimentación
+La respuesta correcta es: Medir y verificar los resultados obtenidos.
+Pregunta 38
+Incorrecta
+Se puntúa -0,33 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+C04-L2-Q34- Si realiza un cambio no compatible con versiones anteriores en su proyecto con versión 3.2.2 y después realiza un parche menor, ¿Con qué versión queda el proyecto?:
+Pregunta 38Respuesta
+
+a.
+3.3.1.
+
+b.
+4.0.1.
+
+c.
+3.2.3.
+
+d.
+4.2.2.
+Retroalimentación
+La respuesta correcta es: 4.0.1.
+Pregunta 39
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3C8-L12-Q16- En la fase de Elaboración del PUD, uno de los resultados clave es:
+Pregunta 39Respuesta
+
+a.
+Obtener una línea base estable de la arquitectura del sistema.
+
+b.
+Tener la aplicación prácticamente construida.
+
+c.
+Planificar la formación de usuarios.
+
+d.
+Preparar la entrega del producto final al cliente.
+Retroalimentación
+La respuesta correcta es: Obtener una línea base estable de la arquitectura del sistema.
+Pregunta 40
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC05-L31-Q22- ¿Qué modelo fue desarrollado por el Software Engineering Institute (SEI)?:
+Pregunta 40Respuesta
+
+a.
+ISO 33000.
+
+b.
+CMMI (Capability Maturity Model Integration).
+
+c.
+MMIS 2.0.
+
+d.
+ISO 25010.
+Retroalimentación
+La respuesta correcta es: CMMI (Capability Maturity Model Integration).
+
+Pregunta 41
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3C8-L12-Q02- ¿Qué implica que el PUD sea iterativo e incremental?:
+Pregunta 41Respuesta
+
+a.
+Que las iteraciones no están controladas.
+
+b.
+Cada mini proyecto es una iteración que resulta en un incremento, no necesariamente aditivo.
+
+c.
+Qu se desarrolla todo el producto en un único bloque.
+
+d.
+No se realizan entregas intermedias.
+Retroalimentación
+La respuesta correcta es: Cada mini proyecto es una iteración que resulta en un incremento, no necesariamente aditivo.
+Pregunta 42
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3C1-L11-Q24- Una diferencia entre metodologías estructuradas y orientadas a objetos es que:
+Pregunta 42Respuesta
+
+a.
+Las orientadas a objetos no permiten reutilización.
+
+b.
+Las estructuradas separan datos y procesos, mientras que las orientadas a objetos los tratan de forma conjunta.
+
+c.
+Las orientadas a objetos eliminan la fase de diseño.
+
+d.
+Las estructuradas integran datos y procesos, mientras que las orientadas a objetos los separan.
+Retroalimentación
+La respuesta correcta es: Las estructuradas separan datos y procesos, mientras que las orientadas a objetos los tratan de forma conjunta.
+Pregunta 43
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+C04-L2-Q09- ¿Cuál es la función principal del proceso de liberación (release management)?:
+Pregunta 43Respuesta
+
+a.
+Eliminar versiones antiguas del sistema.
+
+b.
+Planificar, empaquetar y entregar versiones del software a los clientes.
+
+c.
+Ninguna de las otras opciones es correcta.
+
+d.
+Controlar únicamente las pruebas del sistema.
+Retroalimentación
+La respuesta correcta es: Planificar, empaquetar y entregar versiones del software a los clientes.
+Pregunta 44
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3C7-L4-Q23- Pregunta: Las pruebas de sistema...
+Pregunta 44Respuesta
+
+a.
+se ejecutan en el entorno de preproducción.
+
+b.
+se ejecutan en el entorno de producción.
+
+c.
+se ejecutan en local, del lado del desarrollador.
+
+d.
+se ejecutan en local, del lado del cliente.
+Retroalimentación
+La respuesta correcta es: se ejecutan en el entorno de preproducción.
+Pregunta 45
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+C04-L3-Q12- En el contexto de calidad, la definición de Juran describe la calidad como:
+Pregunta 45Respuesta
+
+a.
+Grado en que un conjunto de características cumple los requisitos.
+
+b.
+Adecuación al uso.
+
+c.
+Cero defectos.
+
+d.
+Conformidad con requisitos y confiabilidad en funcionamiento.
+Retroalimentación
+La respuesta correcta es: Adecuación al uso.
+Pregunta 46
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC06-L41-Q27- Pregunta: ¿Qué tipo de prueba se caracteriza por conocer sus entradas y salidas?
+Pregunta 46Respuesta
+
+a.
+Integración.
+
+b.
+Caja blanca.
+
+c.
+Caja Negra o funcionales.
+
+d.
+Mutación.
+Retroalimentación
+La respuesta correcta es: Caja Negra o funcionales.
+Pregunta 47
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC01-L31-Q22-¿Cuáles son los objetivos de la Mejora de Proceso?:
+Pregunta 47Respuesta
+
+a.
+Definir el proceso, controlar el proceso y mejorar el proceso.
+
+b.
+Definir el producto, medir el producto, controlar el producto y mejorar el producto.
+
+c.
+Definir el proceso, medir el proceso, controlar el proceso y mejorar el proceso.
+
+d.
+Definir el producto, controlar el producto y mejorar el producto.
+Retroalimentación
+La respuesta correcta es: Definir el proceso, medir el proceso, controlar el proceso y mejorar el proceso.
+Pregunta 48
+Incorrecta
+Se puntúa -0,33 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+C04-L4-Q14- Cuál de las opciones tiene un mayor nivel de cobertura:
+Pregunta 48Respuesta
+
+a.
+Múltiple de condiciones.
+
+b.
+Condiciones.
+
+c.
+Sentencias.
+
+d.
+Cobertura de requisitos.
+Retroalimentación
+La respuesta correcta es: Múltiple de condiciones.
+Pregunta 49
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC06-L41-Q22- Pregunta: ¿Qué tipo de pruebas se centran en la estructura interna del programa, teniendo en cuenta las partes que se van ejecutando?
+Pregunta 49Respuesta
+
+a.
+Pruebas de caja Negra o Funcionales.
+
+b.
+Pruebas de Sistema.
+
+c.
+Pruebas de caja Blanca o Estructurales.
+
+d.
+Pruebas de Aceptación.
+Retroalimentación
+La respuesta correcta es: Pruebas de caja Blanca o Estructurales.
+Pregunta 50
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B02-L32-Q15- ¿Cuál de los siguientes elementos se considera un Modelo de Evaluación?
+Pregunta 50Respuesta
+
+a.
+CMMI-SVC.
+
+b.
+ISO/IEC 33000.
+
+c.
+ISO/IEC 12207.
+
+d.
+MMIS 2.0.
+Retroalimentación
+La respuesta correcta es: ISO/IEC 33000.
+
+Pregunta 1
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B01-L21-Q12- Pregunta: ¿Qué representa una rama de feature (característica) en el modelo Git Flow?:
+Pregunta 1Respuesta
+
+a.
+Una copia de la rama master para implementar correcciones críticas.
+
+b.
+Una línea base congelada que no admite cambios.
+
+c.
+Una rama creada para desarrollar nuevas funcionalidades de forma aislada.
+
+d.
+Un entorno temporal para pruebas en producción.
+Retroalimentación
+La respuesta correcta es: Una rama creada para desarrollar nuevas funcionalidades de forma aislada.
+Pregunta 2
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B03-L31-Q027- ¿Cuál de estos no pertenece al ciclo de mejora continua PDCA?:
+Pregunta 2Respuesta
+
+a.
+Control.
+
+b.
+Act.
+
+c.
+Plan.
+
+d.
+Do.
+Retroalimentación
+La respuesta correcta es: Control.
+Pregunta 3
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3C1-L03-Q11- Según ISO 33000, ¿qué caracteriza al nivel 3 (Establecida)?
+Pregunta 3Respuesta
+
+a.
+Se mejora continuamente en función de objetivos de negocio.
+
+b.
+La organización no tiene procesos definidos.
+
+c.
+La organización utiliza procesos definidos basados en estándares.
+
+d.
+Los procesos se gestionan cuantitativamente.
+Retroalimentación
+La respuesta correcta es: La organización utiliza procesos definidos basados en estándares.
+Pregunta 4
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+C04-L3-Q16- ¿Qué principio de calidad establece que la calidad de un producto es determinada por la calidad del proceso usado para desarrollarlo?:
+Pregunta 4Respuesta
+
+a.
+Principio de Humphrey.
+
+b.
+Principio de proceso de calidad.
+
+c.
+Principio de gestión de calidad.
+
+d.
+Principio de mejora continua.
+Retroalimentación
+La respuesta correcta es: Principio de Humphrey.
+Pregunta 5
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B01-L12-Q05- Pregunta: ¿Cuál de las siguientes afirmaciones sobre las historias de usuario es correcta?:
+Pregunta 5Respuesta
+
+a.
+Representan necesidades del usuario en un formato breve y claro.
+
+b.
+Son descripciones técnicas detalladas de la arquitectura.
+
+c.
+Sustituyen el plan de proyecto y la estimación de costes.
+
+d.
+Se centran en cómo los desarrolladores implementarán la funcionalidad.
+Retroalimentación
+La respuesta correcta es: Representan necesidades del usuario en un formato breve y claro.
+Pregunta 6
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B02-L11-Q21- Según ISO 12207, ¿qué relación existe entre proceso, actividad y tarea?
+Pregunta 6Respuesta
+
+a.
+Un proceso está compuesto por actividades y estas por tareas.
+
+b.
+Son sinónimos que se usan indistintamente.
+
+c.
+Una tarea se compone de varias actividades y procesos.
+
+d.
+Las actividades no forman parte de los procesos.
+Retroalimentación
+La respuesta correcta es: Un proceso está compuesto por actividades y estas por tareas.
+Pregunta 7
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B02-L41-Q03- ¿Para que sirven las pruebas de integración?:
+Pregunta 7Respuesta
+
+a.
+Verificar que el código cumple con los requisitos sin necesidad de probar el sistema completo.
+
+b.
+Comprobar que el sistema se comporta correctamente con su entorno.
+
+c.
+Comprobar que las unidades de prueba funcionan correctamente cuando se integran junto a otras clases.
+
+d.
+Aceptar el software producido o rechazar el software y demandar correcciones o mejoras.
+Retroalimentación
+La respuesta correcta es: Comprobar que las unidades de prueba funcionan correctamente cuando se integran junto a otras clases.
+Pregunta 8
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B03-L21-Q13- ¿Quién es responsable de evaluar y aprobar los cambios propuestos a los elementos de configuración?:
+Pregunta 8Respuesta
+
+a.
+El Consejo de Control de Configuración (CCB).
+
+b.
+El cliente principal.
+
+c.
+El equipo de pruebas.
+
+d.
+El jefe de proyecto.
+Retroalimentación
+La respuesta correcta es: El Consejo de Control de Configuración (CCB).
+Pregunta 9
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+C04-L3-Q09- ¿Qué diferencia hay entre una evaluación por capacidad y una por madurez?:
+Pregunta 9Respuesta
+
+a.
+Ambas miden lo mismo con distinto nombre.
+
+b.
+La primera se aplica a procesos y la segunda a la organización.
+
+c.
+La primera se aplica a organizaciones y la segunda a procesos.
+
+d.
+Ninguna de las otras respuestas es correcta.
+Retroalimentación
+La respuesta correcta es: La primera se aplica a procesos y la segunda a la organización.
+Pregunta 10
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC3-L12-Q01-Pregunta: ¿Cuál de las siguientes afirmaciones describe mejor al Proceso Unificado de Desarrollo (PUD)?:
+Pregunta 10Respuesta
+
+a.
+Es un modelo de gestión de proyectos.
+
+b.
+Es un estándar de calidad para software.
+
+c.
+Es una metodología de desarrollo de software iterativa e incremental.
+
+d.
+Es un lenguaje de programación orientado a objetos.
+Retroalimentación
+La respuesta correcta es: Es una metodología de desarrollo de software iterativa e incremental.
+
+Pregunta 11
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC06-L31-Q13- Pregunta: ¿Qué característica corresponde a un modelo de calidad del producto software orientado a la fiabilidad?
+Pregunta 11Respuesta
+
+a.
+Madurez
+
+b.
+Tolerancia a fallos
+
+c.
+Disponibilidad
+
+d.
+Todas las otras respuestas son correctas
+Retroalimentación
+La respuesta correcta es: Todas las otras respuestas son correctas
+Pregunta 12
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B01-L12-Q11- Pregunta: ¿En qué consiste el enfoque iterativo?:
+Pregunta 12Respuesta
+
+a.
+Dividir el proyecto en mini-proyectos.
+
+b.
+Predecir lo que va a pasar y trabajar sobre eso.
+
+c.
+Estar dispuesto a cambiar todo en función de cómo se te exija.
+
+d.
+Desarrollar el proyecto completo lleno por distintas fases.
+Retroalimentación
+La respuesta correcta es: Dividir el proyecto en mini-proyectos.
+Pregunta 13
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B03-L41-Q17 - ¿Cuál de las siguientes afirmaciones sobre la cobertura es correcta?:
+Pregunta 13Respuesta
+
+a.
+Una cobertura alta garantiza que el software está completamente libre de fallos.
+
+b.
+La cobertura indica qué partes del sistema han sido ejercitadas por las pruebas.
+
+c.
+La cobertura solo es útil en pruebas de caja negra.
+
+d.
+La cobertura sustituye a la necesidad de diseñar casos de prueba.
+Retroalimentación
+La respuesta correcta es: La cobertura indica qué partes del sistema han sido ejercitadas por las pruebas.
+Pregunta 14
+Incorrecta
+Se puntúa -0,33 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC01-L21-Q24-¿Qué rama en Git Flow contiene el código listo para la producción?:
+Pregunta 14Respuesta
+
+a.
+Master.
+
+b.
+Ninguna es correcta.
+
+c.
+Release.
+
+d.
+Hotfix.
+Retroalimentación
+La respuesta correcta es: Master.
+Pregunta 15
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3BC7-L12-Q025- ¿Cuáles son las cualidades principales del product Backlog de la metodología Scrum?:
+Pregunta 15Respuesta
+
+a.
+Estimado, emergente, priorizado y inmutable.
+
+b.
+Grado de detalle adecuado, estimado y priorizado.
+
+c.
+Grado de detalle adecuado, estimado, emergente y priorizado.
+
+d.
+Grado de detalle adecuado, priorizado, estimado y definido exhaustivamente.
+Retroalimentación
+La respuesta correcta es: Grado de detalle adecuado, estimado, emergente y priorizado.
+Pregunta 16
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC4-L21-Q16-¿Qué describe mejor el concepto de Change Request?
+Pregunta 16Respuesta
+
+a.
+Petición formal para modificar una línea base, que debe ser aprobada por el CCB.
+
+b.
+Solicitud para crear una nueva rama en el repositorio de desarrollo.
+
+c.
+Documento técnico generado automáticamente por la herramienta de control de versiones.
+
+d.
+Requisito de cliente que aún no ha sido implementado.
+Retroalimentación
+La respuesta correcta es: Petición formal para modificar una línea base, que debe ser aprobada por el CCB.
+Pregunta 17
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3C1-L21-Q15- Pregunta: De acuerdo con Semantic Versioning (T.02.01.03), ¿qué acción requiere incrementar la versión "Patch" (M.m.p)?
+Pregunta 17Respuesta
+
+a.
+Introducir cambios que rompen la compatibilidad.
+
+b.
+Introducir nueva funcionalidad compatible con la versión anterior.
+
+c.
+Introducir arreglos de fallos que no cambian la interfaz y son compatibles.
+
+d.
+Adjuntar metadatos de construcción.
+Retroalimentación
+La respuesta correcta es: Introducir arreglos de fallos que no cambian la interfaz y son compatibles.
+Pregunta 18
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+C04-L12 -Q29- En Scrum, el conjunto de historias de usuario seleccionadas para desarrollarse en un sprint se denomina:
+Pregunta 18Respuesta
+
+a.
+Product Backlog.
+
+b.
+Sprint Backlog.
+
+c.
+Release Plan.
+
+d.
+Iteration List.
+Retroalimentación
+La respuesta correcta es: Sprint Backlog.
+Pregunta 19
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B02-L41-Q24- ¿Qué se verifica mediante la cobertura de sentencias?
+Pregunta 19Respuesta
+
+a.
+Que cada condición se evalúe como verdadera y falsa.
+
+b.
+Que todas las ramas se ejecuten al menos una vez.
+
+c.
+Que las pruebas se repitan hasta obtener cero fallos.
+
+d.
+Que todas las sentencias del programa sean recorridas.
+Retroalimentación
+La respuesta correcta es: Que todas las sentencias del programa sean recorridas.
+Pregunta 20
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3BC7-L31-Q02- ¿Cuál de las siguientes características no pertenece al modelo de calidad del producto software?:
+Pregunta 20Respuesta
+
+a.
+Integridad.
+
+b.
+Adecuación Funcional.
+
+c.
+Compatibilidad.
+
+d.
+Eficacia de desempeño.
+Retroalimentación
+La respuesta correcta es: Integridad.
+
+Pregunta 21
+Incorrecta
+Se puntúa -0,33 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC05-L31-Q07- ¿Cuál de estas opciones forma parte de la característica “compatibilidad”?:
+Pregunta 21Respuesta
+
+a.
+Mantenibilidad.
+
+b.
+Reusabilidad.
+
+c.
+Adaptabilidad.
+
+d.
+Interoperabilidad.
+Retroalimentación
+La respuesta correcta es: Interoperabilidad.
+Pregunta 22
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3BC7-L41-Q22- ¿Cuál es la relación correcta entre error, defecto y fallo?:
+Pregunta 22Respuesta
+
+a.
+Un defecto es un comportamiento observado por el usuario y el error es el efecto visible.
+
+b.
+Un error es una equivocación humana, que produce un defecto y puede manifestar un fallo en ejecución.
+
+c.
+Un fallo lo comete el programador y el error lo ve el usuario.
+
+d.
+No existe relación entre ellos.
+Retroalimentación
+La respuesta correcta es: Un error es una equivocación humana, que produce un defecto y puede manifestar un fallo en ejecución.
+Pregunta 23
+Incorrecta
+Se puntúa -0,33 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B02-L21-Q14- ¿Qué se entiende por línea base (baseline) en la gestión de configuración?:
+Pregunta 23Respuesta
+
+a.
+Conjunto de versiones de componentes que pueden cambiar libremente durante el desarrollo.
+
+b.
+Rama temporal para pruebas de integración entre módulos.
+
+c.
+Versión preliminar del software antes de su liberación oficial.
+
+d.
+Especificación o producto formalmente revisado que sirve como base para desarrollos futuros.
+Retroalimentación
+La respuesta correcta es: Especificación o producto formalmente revisado que sirve como base para desarrollos futuros.
+Pregunta 24
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC06-L31-Q06- Pregunta: ¿Cómo se define la calidad de un producto de software?
+Pregunta 24Respuesta
+
+a.
+El tiempo que tardó en desarrollarse.
+
+b.
+El precio al que se vende.
+
+c.
+El grado en que el producto cumple los requisitos, expectativas y necesidades del usuario.
+
+d.
+El número de pruebas automatizadas que tiene.
+Retroalimentación
+La respuesta correcta es: El grado en que el producto cumple los requisitos, expectativas y necesidades del usuario.
+Pregunta 25
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3C8-L12-Q12- ¿Qué es un Change Request (Petición de Cambio)?:
+Pregunta 25Respuesta
+
+a.
+Una solicitud de creación de un nuevo proyecto.
+
+b.
+Una lista de errores encontrados en el sistema.
+
+c.
+Un documento de diseño del sistema.
+
+d.
+Una petición para hacer un cambio a la línea base de la configuración.
+Retroalimentación
+La respuesta correcta es: Una petición para hacer un cambio a la línea base de la configuración.
+Pregunta 26
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC06-L21-Q23- Pregunta: ¿Qué ventaja ofrecen las herramientas de gestión de versiones al almacenar solo los “deltas” o incrementos?
+Pregunta 26Respuesta
+
+a.
+Permitir la integración continua en paralelo
+
+b.
+Optimizar el espacio de almacenamiento al guardar solo los cambios respecto a versiones anteriores
+
+c.
+Reducir el tiempo de compilación del sistema
+
+d.
+Acelerar la ejecución de pruebas automáticas
+Retroalimentación
+La respuesta correcta es: Optimizar el espacio de almacenamiento al guardar solo los cambios respecto a versiones anteriores
+Pregunta 27
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC05-L11-Q17- Pregunta: Indica cual es una característica propia del ciclo de vida en cascada:
+Pregunta 27Respuesta
+
+a.
+Se adapta bien a proyectos con requisitos cambiantes.
+
+b.
+Permite obtener resultados desde las primeras fases.
+
+c.
+Refleja fielmente cómo se desarrolla el software en la práctica.
+
+d.
+Es útil para equipos inexpertos al proponer una estructura ordenada.
+Retroalimentación
+La respuesta correcta es: Es útil para equipos inexpertos al proponer una estructura ordenada.
+Pregunta 28
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC02-L3-Q11– Pregunta: En el contexto del modelo CMMI, ¿Qué papel cumple la constelación CMMI?
+Pregunta 28Respuesta
+
+a.
+Agrupar componentes usados para construir modelos y materiales de entrenamiento.
+
+b.
+Proporcionar ejemplos prácticos de mejora continua.
+
+c.
+Determinar el grado de madurez de una organización.
+
+d.
+Definir los requisitos de evaluación según ISO 9001.
+Retroalimentación
+La respuesta correcta es: Agrupar componentes usados para construir modelos y materiales de entrenamiento.
+Pregunta 29
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B05-L4-Q26-¿Qué caracteriza a las pruebas de caja blanca?
+Pregunta 29Respuesta
+
+a.
+Se aplican únicamente en pruebas de sistema
+
+b.
+No requieren conocer la estructura interna del programa
+
+c.
+Evalúan qué partes del código se ejecutan durante la prueba
+
+d.
+Se centran únicamente en los requisitos del usuario
+Retroalimentación
+La respuesta correcta es: Evalúan qué partes del código se ejecutan durante la prueba
+Pregunta 30
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+C04-L3-Q14- En la norma ISO 25010, la característica Capacidad de uso incluye entre otras:
+Pregunta 30Respuesta
+
+a.
+Capacidad para reconocer su adecuación, estética de la interfaz y accesibilidad.
+
+b.
+Capacidad para ser instalado y reemplazado.
+
+c.
+Modularidad y Reusabilidad.
+
+d.
+Coexistencia y multiplataforma.
+Retroalimentación
+La respuesta correcta es: Capacidad para reconocer su adecuación, estética de la interfaz y accesibilidad.
+
+Pregunta 31
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B05-L3-Q19-En el contexto de la mejora de procesos, ¿cuál es el primer paso fundamental según el Tema 3.2?
+Pregunta 31Respuesta
+
+a.
+Rediseñar el proceso desde cero.
+
+b.
+Gestionar los riesgos del proceso.
+
+c.
+Definir correctamente el proceso.
+
+d.
+Validar los productos resultantes.
+Retroalimentación
+La respuesta correcta es: Definir correctamente el proceso.
+Pregunta 32
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3C1-L31-Q22- Pregunta: ¿Cuál de los siguientes conceptos describe una acción para hacer aceptable un producto no conforme?
+Pregunta 32Respuesta
+
+a.
+Desecho.
+
+b.
+Corrección.
+
+c.
+Medición.
+
+d.
+Reparación.
+Retroalimentación
+La respuesta correcta es: Reparación.
+Pregunta 33
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC02-L3-Q01- Pregunta: ¿Cómo se determina la madurez de una empresa?:
+Pregunta 33Respuesta
+
+a.
+Con el número de proyectos ejecutados exitosamente.
+
+b.
+Con el promedio de los niveles de capacidad de los procesos.
+
+c.
+Con el valor del nivel mínimo de capacidad.
+
+d.
+Con el tiempo que la empresa lleva operando.
+Retroalimentación
+La respuesta correcta es: Con el valor del nivel mínimo de capacidad.
+Pregunta 34
+Incorrecta
+Se puntúa -0,33 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B05-L11-Q07-El modelo de ciclo de vida en cascada:
+Pregunta 34Respuesta
+
+a.
+Refleja perfectamente el proceso del desarrollo del software.
+
+b.
+No refleja realmente el proceso de desarrollo de software.
+
+c.
+Permite al usuario involucrarse mucho más en el modelo.
+
+d.
+No es recomendable para realizar una migración de software de un entorno a otro.
+Retroalimentación
+La respuesta correcta es: No refleja realmente el proceso de desarrollo de software.
+Pregunta 35
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3B7-L11-Q06-¿Cuál de las siguientes fases forma parte para el desarrollo del Software?
+Pregunta 35Respuesta
+
+a.
+Venta del producto.
+
+b.
+Marketing digital.
+
+c.
+Análisis de requisitos.
+
+d.
+Fabricación del hardware.
+Retroalimentación
+La respuesta correcta es: Análisis de requisitos.
+Pregunta 36
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3C7-L4-Q29- Pregunta: ¿Qué tipo de prueba se realiza para comprobar que cambios en el sistema no han roto funcionalidades ya existentes?
+Pregunta 36Respuesta
+
+a.
+Pruebas de aceptación
+
+b.
+Pruebas de regresión
+
+c.
+Pruebas alfa
+
+d.
+Pruebas de integración
+Retroalimentación
+La respuesta correcta es: Pruebas de regresión
+Pregunta 37
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC05-L31-Q11- ¿Qué representa el ciclo de evaluación de calidad según la ISO 25040?:
+Pregunta 37Respuesta
+
+a.
+Verificar, validar, documentar y entregar.
+
+b.
+Establecer requisitos, diseñar, ejecutar y finalizar la evaluación.
+
+c.
+Codificar, integrar, probar y desplegar el sistema.
+
+d.
+Definir, planificar, probar y lanzar el software.
+Retroalimentación
+La respuesta correcta es: Establecer requisitos, diseñar, ejecutar y finalizar la evaluación.
+Pregunta 38
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+C04-L3-Q13- Según el modelo de evaluación ISO 33000, una organización en el nivel de madurez Predecible se caracteriza por:
+Pregunta 38Respuesta
+
+a.
+No tener implementación efectiva de los procesos.
+
+b.
+Mejora constante de sus procesos.
+
+c.
+Implementar y alcanzar los objetivos pautados de los procesos.
+
+d.
+Gestionar cuantitativamente sus procesos.
+Retroalimentación
+La respuesta correcta es: Gestionar cuantitativamente sus procesos.
+Pregunta 39
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3B7-L31-Q04- ¿Cuál de las siguientes características del modelo ISO 25010 evalúa la facilidad con la que el usuario aprende y usa el software?
+Pregunta 39Respuesta
+
+a.
+Usabilidad.
+
+b.
+Eficiencia de desempeño.
+
+c.
+Mantenibilidad.
+
+d.
+Compatibilidad.
+Retroalimentación
+La respuesta correcta es: Usabilidad.
+Pregunta 40
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B05-L4-Q17-¿Qué elemento permite determinar automáticamente si la salida de un programa es la correcta para un caso de prueba?
+Pregunta 40Respuesta
+
+a.
+Mutante.
+
+b.
+Valor límite.
+
+c.
+Oráculo.
+
+d.
+Test suite.
+Retroalimentación
+La respuesta correcta es: Oráculo.
+
+Pregunta 41
+Sin contestar
+Se puntúa como 0 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+C04-L3-Q01- ¿Cuál de las opciones NO ES una de las columnas de modelo MMIS 2.0 AENOR-AQCLAB?:
+Pregunta 41Respuesta
+
+a.
+Marco de medición.
+
+b.
+Modelo de procesos.
+
+c.
+Proceso de evaluación.
+
+d.
+Modelo de productos.
+Retroalimentación
+La respuesta correcta es: Modelo de productos.
+Pregunta 42
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3B7-L41-Q12- ¿Qué es la cobertura en la ingeniería de software?
+Pregunta 42Respuesta
+
+a.
+Grado en el que todas las partes del sistema han sido aprobadas.
+
+b.
+Grado en el que ciertas partes del sistema han sido aprobadas.
+
+c.
+Grado en el que ninguna de las partes del sistema han sido aprobadas.
+
+d.
+Grado en el que una de las parte del sistema ha sido aprobada.
+Retroalimentación
+La respuesta correcta es: Grado en el que ciertas partes del sistema han sido aprobadas.
+Pregunta 43
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B03-L21-Q15- ¿Cuál es el objetivo principal del proceso de ramificación (branching)?:
+Pregunta 43Respuesta
+
+a.
+Eliminar líneas base obsoletas de la configuración.
+
+b.
+Aumentar el rendimiento del compilador.
+
+c.
+Permitir el desarrollo simultáneo sin conflictos entre programadores.
+
+d.
+Reducir el tamaño del repositorio de versiones.
+Retroalimentación
+La respuesta correcta es: Permitir el desarrollo simultáneo sin conflictos entre programadores.
+Pregunta 44
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+3C7-L21-Q07- Pregunta: ¿Cuál de las siguientes afirmaciones es falsa sobre la versión patch?
+Pregunta 44Respuesta
+
+a.
+Debe resetearse a 0 cuando se incrementa la versión major.
+
+b.
+Se representa con la letra Z.
+
+c.
+Es la versión definitiva de una aplicación.
+
+d.
+Debe incrementarse cuando se introducen arreglos compatibles con la versión anterior.
+Retroalimentación
+La respuesta correcta es: Es la versión definitiva de una aplicación.
+Pregunta 45
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC06-L31-Q26- Pregunta: Según el tema 03.01, ¿qué elementos son susceptibles de tener calidad en el contexto del software?
+Pregunta 45Respuesta
+
+a.
+Tanto los productos software como los procesos que los generan.
+
+b.
+Solo los servicios de soporte asociados al producto.
+
+c.
+Únicamente los productos software desarrollados.
+
+d.
+Únicamente los procesos seguidos durante el desarrollo.
+Retroalimentación
+La respuesta correcta es: Tanto los productos software como los procesos que los generan.
+Pregunta 46
+Sin contestar
+Se puntúa como 0 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B05-L3-Q12-¿Es necesario que el proceso software sea mejorado en función de los objetivos de negocio?
+Pregunta 46Respuesta
+
+a.
+No, pero sí es recomendable para poder definir el proceso correctamente.
+
+b.
+Los objetivos de negocio no están relacionados con la calidad del software.
+
+c.
+No, aunque no se mejore el proceso se puede producir un software perfecto para el cliente.
+
+d.
+Sí, es necesario para así garantizar la calidad de un producto software en función de su proceso de producción.
+Retroalimentación
+La respuesta correcta es: Sí, es necesario para así garantizar la calidad de un producto software en función de su proceso de producción.
+Pregunta 47
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC06-L41-Q19- Pregunta: ¿En qué consiste la técnica de conjetura de errores (error-guessing)?
+Pregunta 47Respuesta
+
+a.
+En elegir valores de forma completamente aleatoria.
+
+b.
+En proponer valores que el ingeniero de pruebas intuye que pueden provocar comportamientos erróneos.
+
+c.
+En construir automáticamente todos los pares posibles de valores de entrada.
+
+d.
+En seleccionar datos de prueba solo a partir de las clases de equivalencia.
+Retroalimentación
+La respuesta correcta es: En proponer valores que el ingeniero de pruebas intuye que pueden provocar comportamientos erróneos.
+Pregunta 48
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B01-L31-Q27- Pregunta: ¿Cuál de los siguientes atributos pertenece a la característica Capacidad de Uso según ISO 25010?:
+Pregunta 48Respuesta
+
+a.
+Madurez.
+
+b.
+Capacidad para ser probado.
+
+c.
+Estética de la interfaz de usuario.
+
+d.
+Capacidad para ser reemplazado.
+Retroalimentación
+La respuesta correcta es: Estética de la interfaz de usuario.
+Pregunta 49
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+B05-L12-Q02-¿En qué fase del PUD se desarrollan los casos de uso más críticos identificados en la fase de inicio?
+Pregunta 49Respuesta
+
+a.
+En la fase de construcción.
+
+b.
+En la propia fase de inicio.
+
+c.
+En la fase de transición.
+
+d.
+En la fase de elaboración.
+Retroalimentación
+La respuesta correcta es: En la fase de elaboración.
+Pregunta 50
+Correcta
+Se puntúa 1,00 sobre 1,00
+Marcar pregunta
+Enunciado de la pregunta
+BC06-L32-Q29- Pregunta: En los conceptos relacionados con la calidad, ¿qué se entiende por “medida”?
+Pregunta 50Respuesta
+
+a.
+El resultado de comparar un producto con la competencia.
+
+b.
+La acción y efecto de obtener un valor que representa una característica de calidad.
+
+c.
+La acción de corregir desviaciones respecto a los requisitos.
+
+d.
+El documento en el que se registran las no conformidades detectadas.
+Retroalimentación
+La respuesta correcta es: La acción y efecto de obtener un valor que representa una característica de calidad.
+
