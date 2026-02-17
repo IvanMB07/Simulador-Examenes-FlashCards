@@ -2,7 +2,7 @@
 let PREGUNTAS_COMPLETAS = [];
 
 // URL del archivo JSON en GitHub (RAW)
-const URL_PREGUNTAS = 'https://raw.githubusercontent.com/IvanMB07/Simulador-Examenes-FlashCards/refs/heads/main/Estudio/simulador-API/preguntas.json';
+const URL_PREGUNTAS = 'https://raw.githubusercontent.com/IvanMB07/Simulador-Examenes-FlashCards/main/Estudio/simulador-API/preguntas.json';
 
 // Función para cargar las preguntas desde GitHub
 async function cargarPreguntasDesdeJSON() {
