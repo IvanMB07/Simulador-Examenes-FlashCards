@@ -698,5 +698,1009 @@
       "D. Organigrama del equipo."
     ],
     "solucion": "B"
+  },
+  
+  {
+    "cuestion": "API-T1-01- Pregunta: Según el Triángulo del Talento del PMI, ¿qué habilidad se refiere al conocimiento de la estrategia, misión y objetivos de la organización?",
+    "opciones": [
+      "A. Ways of Working (Formas de trabajar).",
+      "B. Power Skills (Habilidades de poder).",
+      "C. Business Acumen (Conocimiento del negocio).",
+      "D. Gestión técnica de proyectos."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T1-02- Pregunta: ¿Cuál es la función principal de un 'Project Coordinator' en una organización matricial débil?",
+    "opciones": [
+      "A. Tiene plena autoridad sobre el presupuesto.",
+      "B. Actúa como asistente sin capacidad de decisión.",
+      "C. Tiene cierto poder para tomar decisiones y reporta a un gerente de nivel superior.",
+      "D. Es el dueño del producto."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T1-03- Pregunta: El principio de 'Adaptabilidad y Resiliencia' sugiere que el equipo del proyecto debe:",
+    "opciones": [
+      "A. Mantener el plan original a toda costa.",
+      "B. Ser capaz de responder a condiciones cambiantes y recuperarse de los contratiempos.",
+      "C. Evitar cualquier riesgo.",
+      "D. Seguir estrictamente la metodología en cascada."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-04- Pregunta: ¿Qué diferencia existe entre 'Grado' y 'Calidad'?",
+    "opciones": [
+      "A. Son sinónimos.",
+      "B. La calidad es la categoría asignada (ej. Lujo) y el grado es el cumplimiento de requisitos.",
+      "C. El grado es la categoría asignada a productos con el mismo uso funcional y la calidad es el nivel de cumplimiento de los requisitos.",
+      "D. El grado es subjetivo y la calidad objetiva."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T1-05- Pregunta: En el modelo de complejidad del proyecto, la 'Ambigüedad' se refiere a:",
+    "opciones": [
+      "A. La falta de claridad o confusión sobre los eventos futuros o causas.",
+      "B. El comportamiento humano impredecible.",
+      "C. El número de interconexiones en el sistema.",
+      "D. La falta de presupuesto."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T1-06- Pregunta: ¿Qué documento pertenece a la fase de pre-proyecto y describe los beneficios tangibles e intangibles esperados?",
+    "opciones": [
+      "A. Acta de Constitución.",
+      "B. Plan de Gestión de Beneficios.",
+      "C. EDT.",
+      "D. Registro de Lecciones Aprendidas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-07- Pregunta: ¿Quién es el responsable último de que el Caso de Negocio se cumpla?",
+    "opciones": [
+      "A. El Director del Proyecto.",
+      "B. El Patrocinador (Sponsor).",
+      "C. El equipo técnico.",
+      "D. La PMO."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-08- Pregunta: En una organización 'Matricial Fuerte', ¿quién tiene más autoridad sobre los recursos?",
+    "opciones": [
+      "A. El Gerente Funcional.",
+      "B. El Director del Proyecto.",
+      "C. Comparten autoridad al 50%.",
+      "D. El Cliente."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-09- Pregunta: El enfoque de desarrollo 'Iterativo' se centra principalmente en:",
+    "opciones": [
+      "A. La velocidad de entrega.",
+      "B. La corrección de la solución mediante retroalimentación repetida.",
+      "C. Reducir costes.",
+      "D. Entregar todo al final de una sola vez."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-10- Pregunta: El enfoque 'Incremental' se centra en:",
+    "opciones": [
+      "A. La velocidad de entrega proporcionando partes terminadas del producto frecuentemente.",
+      "B. Refinar los requisitos sin entregar nada hasta el final.",
+      "C. Evitar cambios.",
+      "D. La planificación a largo plazo."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T1-11- Pregunta: Según el modelo de prominencia (Salience Model), ¿cuáles son los tres atributos para clasificar a los interesados?",
+    "opciones": [
+      "A. Dinero, Tiempo y Alcance.",
+      "B. Poder, Legitimidad y Urgencia.",
+      "C. Interés, Influencia e Impacto.",
+      "D. Interno, Externo y Neutro."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-12- Pregunta: ¿Qué es el 'Tailoring' (Adaptación) en la gestión de proyectos?",
+    "opciones": [
+      "A. Copiar el plan de otro proyecto.",
+      "B. La selección y ajuste deliberado del enfoque, la gobernanza y los procesos para que sean adecuados al proyecto específico.",
+      "C. Reducir el alcance para terminar antes.",
+      "D. Ignorar los procesos de calidad."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-13- Pregunta: ¿Cuál de las siguientes NO es una función típica de la PMO?",
+    "opciones": [
+      "A. Proveer metodologías y plantillas.",
+      "B. Dar soporte y entrenamiento.",
+      "C. Definir la estrategia comercial de la empresa.",
+      "D. Gestionar recursos compartidos entre proyectos."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T1-14- Pregunta: En el ciclo de vida del proyecto, las revisiones de fase (Phase Gate Reviews) sirven para:",
+    "opciones": [
+      "A. Celebrar el final del proyecto.",
+      "B. Decidir si el proyecto debe continuar a la siguiente fase, corregirse o cancelarse.",
+      "C. Cambiar al Director del Proyecto.",
+      "D. Aumentar el presupuesto automáticamente."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-15- Pregunta: El principio de 'Stewardship' (Administración/Mayordomía) implica actuar con:",
+    "opciones": [
+      "A. Rapidez y eficacia.",
+      "B. Integridad, cuidado, confiabilidad y cumplimiento.",
+      "C. Autoridad absoluta.",
+      "D. Enfoque exclusivo en el beneficio económico."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-16- Pregunta: ¿Qué teoría de motivación clasifica las necesidades en una pirámide (Fisiológicas, Seguridad, Sociales, Estima, Autorrealización)?",
+    "opciones": [
+      "A. Teoría de Herzberg.",
+      "B. Teoría X e Y de McGregor.",
+      "C. Jerarquía de Maslow.",
+      "D. Teoría de McClelland."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T1-17- Pregunta: Según la teoría de Herzberg, los 'Factores Higiénicos' (como el salario o condiciones laborales):",
+    "opciones": [
+      "A. Motivan a largo plazo.",
+      "B. No motivan por sí mismos, pero su ausencia causa insatisfacción.",
+      "C. Son irrelevantes.",
+      "D. Son los únicos que importan."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-18- Pregunta: ¿Cuál es la fórmula para calcular los canales de comunicación en un equipo de 'n' personas?",
+    "opciones": [
+      "A. n(n-1)/2",
+      "B. n^2",
+      "C. 2n + 1",
+      "D. (n-1)/2"
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T1-19- Pregunta: ¿Qué tipo de comunicación sucede cuando envías un email a todo el equipo sin esperar confirmación de lectura inmediata?",
+    "opciones": [
+      "A. Interactiva.",
+      "B. Pull (Tirar).",
+      "C. Push (Empujar).",
+      "D. Sincrónica."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T1-20- Pregunta: El dominio de 'Incertidumbre' trata principalmente sobre:",
+    "opciones": [
+      "A. La gestión de riesgos y la ambigüedad.",
+      "B. La planificación del cronograma.",
+      "C. La contratación de personal.",
+      "D. La definición del alcance."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T1-21- Pregunta: ¿Qué estilo de liderazgo se centra en servir al equipo y eliminar obstáculos?",
+    "opciones": [
+      "A. Autocrático.",
+      "B. Laissez-faire.",
+      "C. Servant Leadership (Liderazgo de servicio).",
+      "D. Transaccional."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T1-22- Pregunta: Un proyecto que busca cumplir requisitos regulatorios suele ser iniciado por una necesidad:",
+    "opciones": [
+      "A. De mercado.",
+      "B. Legal o social.",
+      "C. Tecnológica.",
+      "D. Ecológica."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-23- Pregunta: ¿Qué es OPM (Organizational Project Management)?",
+    "opciones": [
+      "A. Un software de gestión.",
+      "B. El marco estratégico que integra portafolios, programas y proyectos para lograr objetivos estratégicos.",
+      "C. Otro nombre para la PMO.",
+      "D. La gestión de operaciones."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-24- Pregunta: El 'Ciclo de Vida del Producto' comienza con:",
+    "opciones": [
+      "A. El Acta de Constitución.",
+      "B. La introducción del producto en el mercado (o su concepción) y termina con su retiro.",
+      "C. La primera reunión de equipo.",
+      "D. La firma del contrato."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-25- Pregunta: ¿Qué factor NO es una restricción clásica del proyecto (Triple Restricción ampliada)?",
+    "opciones": [
+      "A. Alcance.",
+      "B. Coste.",
+      "C. Tiempo.",
+      "D. La personalidad del patrocinador."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "API-T1-26- Pregunta: La comunicación 'No Verbal' incluye:",
+    "opciones": [
+      "A. El tono de voz y el lenguaje corporal.",
+      "B. Los correos electrónicos.",
+      "C. Las actas de reunión.",
+      "D. Las llamadas telefónicas."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T1-27- Pregunta: ¿Qué es un 'Stakeholder Negativo'?",
+    "opciones": [
+      "A. Alguien que siempre está de mal humor.",
+      "B. Alguien que ve el proyecto como una amenaza y trabaja para impedirlo.",
+      "C. Un proveedor que cobra mucho.",
+      "D. Un miembro del equipo con poca experiencia."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-28- Pregunta: El principio de 'Pensamiento Sistémico' requiere:",
+    "opciones": [
+      "A. Centrarse solo en tu tarea.",
+      "B. Reconocer, evaluar y responder a las interacciones dinámicas dentro y alrededor del proyecto.",
+      "C. Usar software complejo.",
+      "D. Ignorar los cambios externos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-29- Pregunta: ¿Cuándo se considera que un proyecto ha terminado?",
+    "opciones": [
+      "A. Cuando se acaba el dinero.",
+      "B. Cuando se alcanzan los objetivos o se decide terminarlo porque no se pueden cumplir.",
+      "C. Cuando el gerente se va de vacaciones.",
+      "D. Cuando empieza la fase de ejecución."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-30- Pregunta: La ética en la gestión de proyectos (según PMI) se basa en cuatro valores:",
+    "opciones": [
+      "A. Dinero, Poder, Fama, Éxito.",
+      "B. Responsabilidad, Respeto, Equidad (Justicia) y Honestidad.",
+      "C. Rapidez, Calidad, Coste, Alcance.",
+      "D. Planificación, Ejecución, Control, Cierre."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-01- Pregunta: En el Acta de Constitución, los 'Supuestos' (Assumptions) son:",
+    "opciones": [
+      "A. Factores que se consideran verdaderos sin prueba ni demostración.",
+      "B. Restricciones de presupuesto.",
+      "C. Mentiras piadosas.",
+      "D. Riesgos confirmados."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T2-02- Pregunta: ¿Cuál es la única salida del proceso 'Planificar la Gestión de Requisitos'?",
+    "opciones": [
+      "A. La lista de requisitos.",
+      "B. El Plan de Gestión de Requisitos.",
+      "C. La Matriz de Trazabilidad.",
+      "D. El Prototipo."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-03- Pregunta: La 'Regla del 100%' en la EDT (WBS) establece que:",
+    "opciones": [
+      "A. El proyecto debe terminarse al 100% de calidad.",
+      "B. La EDT debe incluir el 100% del trabajo definido por el alcance y nada más.",
+      "C. El 100% del presupuesto debe gastarse.",
+      "D. El 100% del equipo debe estar de acuerdo."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-04- Pregunta: ¿Qué es una 'Cuenta de Control' (Control Account)?",
+    "opciones": [
+      "A. Una cuenta bancaria.",
+      "B. Un punto de control de gestión donde se integran alcance, presupuesto y cronograma y se mide el desempeño.",
+      "C. Un paquete de trabajo muy pequeño.",
+      "D. Un error en la contabilidad."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-05- Pregunta: La diferencia entre el Plan de Gestión del Alcance y el Plan de Gestión de Requisitos es:",
+    "opciones": [
+      "A. El de Alcance dice 'cómo' hacer la EDT y el Enunciado; el de Requisitos dice 'cómo' recopilar y trazar las necesidades.",
+      "B. Son el mismo documento.",
+      "C. El de Alcance es para el cliente y el de Requisitos para el equipo.",
+      "D. El de Requisitos es opcional."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T2-06- Pregunta: En la gestión de cambios, ¿qué organismo es responsable de revisar, evaluar, aprobar, retrasar o rechazar los cambios al proyecto?",
+    "opciones": [
+      "A. El equipo de desarrollo.",
+      "B. El Comité de Control de Cambios (CCB).",
+      "C. El departamento de contabilidad.",
+      "D. El usuario final."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-07- Pregunta: ¿Qué es un 'Cambio Constructivo' (Constructive Change)?",
+    "opciones": [
+      "A. Un cambio que mejora el proyecto.",
+      "B. Una acción o directiva del cliente/gerencia que no se documenta formalmente pero que el contratista interpreta como un cambio de alcance.",
+      "C. Un cambio en la construcción de un edificio.",
+      "D. Un cambio rechazado."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-08- Pregunta: En el proceso de Validar el Alcance, la entrada clave 'Entregables Verificados' proviene del proceso de:",
+    "opciones": [
+      "A. Dirigir y Gestionar el Trabajo.",
+      "B. Controlar la Calidad.",
+      "C. Definir el Alcance.",
+      "D. Cerrar el Proyecto."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-09- Pregunta: ¿Cuál de las siguientes es una técnica para 'Cerrar el Proyecto o Fase'?",
+    "opciones": [
+      "A. Análisis de Regresión y Tendencias.",
+      "B. Prototipado.",
+      "C. Descomposición.",
+      "D. Tormenta de ideas."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T2-10- Pregunta: El 'Informe Final' del proyecto suele incluir:",
+    "opciones": [
+      "A. Quejas personales del equipo.",
+      "B. Resumen de alto nivel, validación de objetivos, resumen de calidad, costos y cronograma final.",
+      "C. El código fuente completo.",
+      "D. La lista de correos enviados."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-11- Pregunta: En un contrato de Costos Reembolsables, la tarifa (Fee) representa:",
+    "opciones": [
+      "A. El costo de los materiales.",
+      "B. La ganancia o beneficio del vendedor.",
+      "C. Los impuestos.",
+      "D. El sueldo del PM."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-12- Pregunta: El Punto de Asunción Total (PTA) en un contrato de precio fijo con incentivos es:",
+    "opciones": [
+      "A. Cuando el proyecto termina.",
+      "B. El punto de costo donde el vendedor asume todos los sobrecostos adicionales.",
+      "C. Cuando el comprador paga todo.",
+      "D. El inicio del proyecto."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-13- Pregunta: ¿Qué documento se utiliza para asegurar que las propuestas de los vendedores sean comparables y completas?",
+    "opciones": [
+      "A. La factura.",
+      "B. El Enunciado del Trabajo de las Adquisiciones (SOW).",
+      "C. El acta de constitución.",
+      "D. El plan de riesgos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-14- Pregunta: Las 'Conferencias de Oferentes' (Bidder Conferences) sirven para:",
+    "opciones": [
+      "A. Elegir al vendedor más barato inmediatamente.",
+      "B. Asegurar que todos los posibles vendedores tengan una comprensión clara y común de los requisitos.",
+      "C. Negociar el precio final en secreto.",
+      "D. Celebrar la firma del contrato."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-15- Pregunta: La técnica de 'Diagrama de Contexto' visualiza:",
+    "opciones": [
+      "A. El cronograma del proyecto.",
+      "B. El sistema, sus interfaces y las interacciones con actores externos.",
+      "C. La jerarquía del equipo.",
+      "D. El flujo de caja."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-16- Pregunta: ¿Qué diferencia hay entre 'Criterios de Aceptación' y 'Definición de Hecho (DoD)' en Ágil?",
+    "opciones": [
+      "A. No hay diferencia.",
+      "B. Los Criterios de Aceptación son específicos de una Historia de Usuario; la DoD aplica a todas las historias del backlog.",
+      "C. La DoD es para el cliente y los criterios para el equipo.",
+      "D. La DoD es un documento legal."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-17- Pregunta: El 'Análisis de Variación' en el Control del Alcance compara:",
+    "opciones": [
+      "A. El desempeño real frente a la línea base del alcance.",
+      "B. El presupuesto frente al gasto.",
+      "C. El equipo actual frente al equipo ideal.",
+      "D. Los riesgos frente a los problemas."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T2-18- Pregunta: ¿Qué es el 'Product Backlog Refinement' (Refinamiento)?",
+    "opciones": [
+      "A. Pulir el producto final.",
+      "B. La actividad continua de añadir detalle, estimaciones y orden a los elementos del backlog.",
+      "C. Una reunión para despedir gente.",
+      "D. El cierre del proyecto."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-19- Pregunta: Si el patrocinador se marcha de la empresa en mitad del proyecto, ¿qué debe hacer el PM?",
+    "opciones": [
+      "A. Cancelar el proyecto.",
+      "B. Seguir como si nada.",
+      "C. Buscar un nuevo patrocinador inmediatamente para mantener la autoridad y financiación.",
+      "D. Asumir él mismo el rol de patrocinador."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T2-20- Pregunta: Los 'Datos de Desempeño del Trabajo' (Work Performance Data) son:",
+    "opciones": [
+      "A. Informes analizados y formateados.",
+      "B. Observaciones y mediciones brutas identificadas durante la ejecución (ej. % completado, nº de defectos).",
+      "C. Decisiones finales.",
+      "D. El plan del proyecto."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-21- Pregunta: La 'Información de Desempeño del Trabajo' es:",
+    "opciones": [
+      "A. Los datos brutos.",
+      "B. Los datos analizados en contexto e integrados para tomar decisiones.",
+      "C. El informe final.",
+      "D. El contrato."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-22- Pregunta: ¿Qué plan subsidiario define cómo se gestionará la configuración de los entregables y la documentación?",
+    "opciones": [
+      "A. Plan de Gestión de la Configuración.",
+      "B. Plan de Alcance.",
+      "C. Plan de Calidad.",
+      "D. Plan de Recursos."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T2-23- Pregunta: En la Elicitación, la técnica de 'Observación' (Job Shadowing) es útil cuando:",
+    "opciones": [
+      "A. Los usuarios son reacios o tienen dificultades para articular sus requisitos.",
+      "B. El usuario está en otro país.",
+      "C. Se quiere hacer una tormenta de ideas.",
+      "D. No hay presupuesto."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T2-24- Pregunta: El 'Scope Baseline' es inmutable a menos que:",
+    "opciones": [
+      "A. El PM quiera cambiarlo.",
+      "B. Se apruebe una solicitud de cambio formal mediante el control integrado de cambios.",
+      "C. El equipo vaya retrasado.",
+      "D. Sea viernes."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-25- Pregunta: ¿Qué tipo de contrato es 'Tiempo y Materiales'?",
+    "opciones": [
+      "A. Cerrado y seguro.",
+      "B. Híbrido, con elementos de precio fijo (precio hora) y costos reembolsables (cantidad variable).",
+      "C. Solo para materiales.",
+      "D. Ilegal en la administración pública."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-26- Pregunta: Un 'Diccionario de la EDT' es esencial porque:",
+    "opciones": [
+      "A. La EDT gráfica no tiene suficiente detalle para que el equipo sepa exactamente qué hacer.",
+      "B. Lo exige la ley.",
+      "C. Es bonito.",
+      "D. Sirve para traducir idiomas."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T2-27- Pregunta: ¿Qué entrada del Acta de Constitución incluye contratos verbales o escritos previos?",
+    "opciones": [
+      "A. Acuerdos.",
+      "B. EEF.",
+      "C. APO.",
+      "D. Caso de Negocio."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T2-28- Pregunta: La validación del alcance suele realizarse:",
+    "opciones": [
+      "A. Solo al final del proyecto.",
+      "B. Periódicamente (ej. por fases o iteraciones) tras obtener entregables verificados por calidad.",
+      "C. Antes de empezar el trabajo.",
+      "D. Nunca, si el cliente confía en nosotros."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-29- Pregunta: ¿Qué es una 'Licitación' (Tender/Bid)?",
+    "opciones": [
+      "A. Una oferta de un vendedor para realizar un trabajo.",
+      "B. Un tipo de contrato.",
+      "C. Una reunión.",
+      "D. Un despido."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T2-30- Pregunta: Si el cliente rechaza un entregable en la validación del alcance, el PM debe:",
+    "opciones": [
+      "A. Discutir con el cliente.",
+      "B. Documentar las razones e iniciar una solicitud de cambio para la reparación de defectos.",
+      "C. Ignorarlo.",
+      "D. Entregarlo igualmente."
+    ],
+    "solucion": "B"
+  },
+  
+  {
+    "cuestion": "API-T1-100-Q01- Pregunta: ¿Cuál es el objetivo principal de la Gestión de Operaciones en comparación con la Gestión de Proyectos?",
+    "opciones": [
+      "A. Crear un producto único.",
+      "B. Asegurar que las funciones del negocio continúen de forma eficiente y permanente.",
+      "C. Definir el acta de constitución.",
+      "D. Gestionar esfuerzos temporales."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-100-Q02- Pregunta: En el contexto de Creación de Valor, ¿qué es un Sistema de Entrega de Valor?",
+    "opciones": [
+      "A. Un software de mensajería.",
+      "B. Una estructura jerárquica de carteras, programas y proyectos para alinear metas estratégicas.",
+      "C. El departamento de ventas de la empresa.",
+      "D. Un método para calcular el ROI."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-100-Q03- Pregunta: ¿Qué dimensión del equipo de gestión se enfoca en el pensamiento estratégico para alinear el proyecto con la organización?",
+    "opciones": [
+      "A. Responsabilidad Social.",
+      "B. Power Skills.",
+      "C. Business Acumen.",
+      "D. Ways of Working."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T1-100-Q04- Pregunta: Un equipo que es autoorganizado y descentralizado es típico de un enfoque:",
+    "opciones": [
+      "A. Centralizado.",
+      "B. Ágil / Adaptativo.",
+      "C. Funcional.",
+      "D. Predictivo."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-100-Q05- Pregunta: ¿Cuál es la función de soporte que se encarga de facilitar la colaboración resolviendo conflictos?",
+    "opciones": [
+      "A. Dirección clara.",
+      "B. Facilitar la colaboración.",
+      "C. Ejecutar trabajo técnico.",
+      "D. Gestión de retroalimentación."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-100-Q06- Pregunta: En el ciclo de vida del producto, ¿qué fase incluye las revisiones o actualizaciones significativas?",
+    "opciones": [
+      "A. Introducción.",
+      "B. Crecimiento.",
+      "C. Madurez.",
+      "D. Declive."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T1-100-Q07- Pregunta: ¿Qué enfoque de desarrollo es más útil cuando existe una gran incertidumbre sobre los requisitos?",
+    "opciones": [
+      "A. Predictivo.",
+      "B. Cascada.",
+      "C. Adaptativo.",
+      "D. Estructurado."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T1-100-Q08- Pregunta: El principio 'Sé un líder responsable' implica principalmente:",
+    "opciones": [
+      "A. Delegar toda la responsabilidad al equipo.",
+      "B. Inspirar, motivar y adaptarse a las situaciones dando ejemplo.",
+      "C. Seguir el plan sin importar los cambios.",
+      "D. Centrarse solo en los resultados técnicos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-100-Q09- Pregunta: ¿Qué dominio de desempeño se alinea directamente con el marco de decisiones de la estrategia organizacional?",
+    "opciones": [
+      "A. Recursos.",
+      "B. Gobernanza.",
+      "C. Riesgo.",
+      "D. Finanzas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-100-Q10- Pregunta: ¿Cuál es una característica común entre proyectos y operaciones?",
+    "opciones": [
+      "A. Ambas son temporales.",
+      "B. Ambas están restringidas por recursos limitados.",
+      "C. Ambas crean productos únicos cada vez.",
+      "D. Ambas terminan cuando se alcanza el objetivo."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-100-Q11- Pregunta: ¿Qué componente del equipo de gestión aplica métodos y enfoques de gestión del cambio adecuados al contexto?",
+    "opciones": [
+      "A. Power Skills.",
+      "B. Ways of Working.",
+      "C. Business Acumen.",
+      "D. Resultados."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-100-Q12- Pregunta: ¿Cuál es el rol de un Business Analyst respecto al producto?",
+    "opciones": [
+      "A. Financiar el proyecto.",
+      "B. Asegurar la alineación entre las necesidades del negocio y la funcionalidad del producto.",
+      "C. Ejecutar el código fuente.",
+      "D. Ser el jefe de la PMO."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-100-Q13- Pregunta: Un proyecto para reparar un proceso existente se clasifica como un esfuerzo para:",
+    "opciones": [
+      "A. Cumplir requisitos legales.",
+      "B. Crear, mejorar o reparar productos/procesos.",
+      "C. Cambiar estrategias tecnológicas.",
+      "D. Satisfacer solicitudes sociales."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-100-Q14- Pregunta: El valor de negocio 'intangible' podría ser:",
+    "opciones": [
+      "A. Dinero en efectivo.",
+      "B. Equipamiento físico.",
+      "C. Reconocimiento de marca o prestigio.",
+      "D. Acciones de la bolsa."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T1-100-Q15- Pregunta: ¿Cuál es el objetivo del dominio de desempeño 'Recursos'?",
+    "opciones": [
+      "A. Definir el alcance.",
+      "B. Planificar, estimar y adquirir recursos humanos y físicos.",
+      "C. Gestionar el presupuesto.",
+      "D. Identificar riesgos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-100-Q16- Pregunta: Un proyecto 'temporal' significa que:",
+    "opciones": [
+      "A. Dura para siempre.",
+      "B. Tiene un inicio y un fin definidos.",
+      "C. Se realiza solo cuando hay tiempo libre.",
+      "D. No tiene objetivos claros."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-100-Q17- Pregunta: El principio 'Enfócate en el valor' requiere evaluar el proyecto:",
+    "opciones": [
+      "A. Solo al final.",
+      "B. Solo al inicio.",
+      "C. Continuamente durante todas las fases.",
+      "D. Solo si el cliente lo pide."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T1-100-Q18- Pregunta: ¿Qué dominio gestiona el presupuesto y busca optimizar el valor financiero?",
+    "opciones": [
+      "A. Cronograma.",
+      "B. Finanzas.",
+      "C. Interesados.",
+      "D. Riesgo."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-100-Q19- Pregunta: La PMO ayuda a la gobernanza mediante:",
+    "opciones": [
+      "A. La eliminación de los directores de proyecto.",
+      "B. La estandarización, soporte y alineación estratégica.",
+      "C. La reducción del alcance.",
+      "D. El aumento de los riesgos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-100-Q20- Pregunta: El ciclo de vida del proyecto acaba cuando:",
+    "opciones": [
+      "A. El producto se retira del mercado.",
+      "B. Se alcanzan los objetivos declarados o se cancela.",
+      "C. Empieza la fase de mantenimiento.",
+      "D. El patrocinador se jubila."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-100-Q01- Pregunta: En el estudio de viabilidad, ¿qué dimensión evalúa si el proyecto cumple con el RGPD?",
+    "opciones": [
+      "A. Económica.",
+      "B. Técnica.",
+      "C. Legal.",
+      "D. Operativa."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T2-100-Q02- Pregunta: ¿Qué técnica de toma de decisiones implica que una persona asume la responsabilidad en nombre del grupo?",
+    "opciones": [
+      "A. Unanimidad.",
+      "B. Mayoría.",
+      "C. Autocrática.",
+      "D. Pluralidad."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T2-100-Q03- Pregunta: El Diccionario de la EDT incluye 'Referencias técnicas', ¿para qué sirven?",
+    "opciones": [
+      "A. Para saber quién es el jefe.",
+      "B. Para proporcionar estándares o manuales necesarios para el trabajo del paquete.",
+      "C. Para listar los números de teléfono.",
+      "D. Para definir el precio del contrato."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-100-Q04- Pregunta: ¿Qué proceso se encarga de 'Medir para mejorar'?",
+    "opciones": [
+      "A. Inicio.",
+      "B. Planificación.",
+      "C. Monitorear y Controlar el Desempeño.",
+      "D. Cierre."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T2-100-Q05- Pregunta: En un enfoque adaptativo, ¿cómo se gestionan los cambios que no se añaden al backlog?",
+    "opciones": [
+      "A. Se aceptan automáticamente.",
+      "B. Se consideran rechazados.",
+      "C. Se envían al comité de cambios formal.",
+      "D. Se guardan para el siguiente proyecto."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-100-Q06- Pregunta: ¿Cuál es un beneficio del 'Outsourcing' (Comprar)?",
+    "opciones": [
+      "A. Incrementa el control interno.",
+      "B. Permite centrarse en las fortalezas competitivas de la empresa.",
+      "C. Es siempre más caro.",
+      "D. Reduce la experiencia externa."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-100-Q07- Pregunta: ¿Qué documento se utiliza para clasificar gran número de ideas en grupos para su análisis?",
+    "opciones": [
+      "A. Mapa mental.",
+      "B. Diagrama de afinidad.",
+      "C. Matriz de trazabilidad.",
+      "D. Histograma."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-100-Q08- Pregunta: Un requisito que indica que el sistema debe soportar 1000 usuarios concurrentes es un:",
+    "opciones": [
+      "A. Requisito funcional.",
+      "B. Requisito no funcional (de solución).",
+      "C. Requisito de transición.",
+      "D. Requisito de negocio."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-100-Q09- Pregunta: ¿Qué técnica de elicitación permite ver directamente cómo los usuarios realizan su trabajo en su entorno real?",
+    "opciones": [
+      "A. Entrevistas.",
+      "B. Observación / Conversación.",
+      "C. Cuestionarios.",
+      "D. Técnica Delphi."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-100-Q10- Pregunta: El método MoSCoW se utiliza para:",
+    "opciones": [
+      "A. Calcular el presupuesto.",
+      "B. Priorización de requisitos.",
+      "C. Dibujar la EDT.",
+      "D. Identificar riesgos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-100-Q11- Pregunta: En el cierre adaptativo, ¿en qué se centran las 'Retrospectivas'?",
+    "opciones": [
+      "A. En firmar el contrato final.",
+      "B. En compartir conocimiento y gestionar riesgos pendientes.",
+      "C. En despedir al Product Owner.",
+      "D. En vender el producto."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-100-Q12- Pregunta: ¿Cuál es el riesgo de una 'descomposición excesiva' en la EDT?",
+    "opciones": [
+      "A. Que el proyecto sea muy corto.",
+      "B. Causar un sobreesfuerzo de gestión no productivo.",
+      "C. Que el cliente no lo entienda.",
+      "D. Que falten requisitos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-100-Q13- Pregunta: ¿Qué proceso traduce el plan de gestión de calidad en actividades concretas?",
+    "opciones": [
+      "A. Control de Calidad.",
+      "B. Gestionar el Aseguramiento de la Calidad.",
+      "C. Planificar la Calidad.",
+      "D. Validar el Alcance."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-100-Q14- Pregunta: ¿Qué herramienta permite evaluar muchas ideas usando una matriz de decisiones?",
+    "opciones": [
+      "A. Votación.",
+      "B. Análisis con múltiples criterios.",
+      "C. Tormenta de ideas.",
+      "D. Prototipado."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-100-Q15- Pregunta: En el cierre, la 'liberación de recursos' implica:",
+    "opciones": [
+      "A. Comprar nuevos equipos.",
+      "B. Reasignar el personal y equipos a nuevos proyectos u operaciones.",
+      "C. Eliminar los archivos del proyecto.",
+      "D. Devolver el dinero al cliente."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-100-Q16- Pregunta: ¿Qué es una 'Épica' en el entorno adaptativo?",
+    "opciones": [
+      "A. Un requisito de muy bajo nivel.",
+      "B. Un requisito de alto nivel que luego se descompone en Historias de Usuario.",
+      "C. Un error en el código.",
+      "D. Un miembro del equipo."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-100-Q17- Pregunta: ¿Qué documento documenta todas las características técnicas del producto software a obtener?",
+    "opciones": [
+      "A. Acta de Constitución.",
+      "B. ERS (Especificación de Requisitos Software).",
+      "C. EDT.",
+      "D. Plan de Gestión de Beneficios."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-100-Q18- Pregunta: Un cambio que 'realinea los resultados futuros con el plan' es una:",
+    "opciones": [
+      "A. Acción preventiva.",
+      "B. Acción correctiva.",
+      "C. Reparación de defectos.",
+      "D. Actualización."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-100-Q19- Pregunta: ¿Cuál es el propósito del 'Plan de Gestión de Requisitos' respecto a la configuración?",
+    "opciones": [
+      "A. Definir el sueldo de los desarrolladores.",
+      "B. Definir cómo se inician los cambios, análisis de impacto y niveles de autorización.",
+      "C. Comprar servidores.",
+      "D. Dibujar los mapas mentales."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-100-Q20- Pregunta: 'Insourcing' significa:",
+    "opciones": [
+      "A. Contratar a una empresa externa.",
+      "B. Hacer el trabajo internamente aprovechando la experiencia disponible.",
+      "C. Comprar una licencia de software.",
+      "D. Cancelar el proyecto."
+    ],
+    "solucion": "B"
   }
+
+
 ]
