@@ -11,7 +11,7 @@
         <div class="encabezado">
             <h1>Simulador de API</h1>
             <div class="timer">
-                <span class="contador">Pregunta: <strong id="numeroPregunta">1</strong>/50</span>
+                <span class="contador">Pregunta: <strong id="numeroPregunta">1</strong>/25</span>
                 <span class="contador" id="tiempoTranscurrido">Tiempo: 0s</span>
                 <span class="modo-pill">Modo: <strong id="modoActual">-</strong></span>
             </div>
@@ -25,8 +25,8 @@
             <div class="resultados">
                 <div class="titulo-resultados">Elige modo</div>
                 <div class="mensaje-resultado">
-                    <strong>Práctica</strong>: 50 preguntas de los temas seleccionados, feedback instantáneo y puedes volver atrás.<br>
-                    <strong>Examen</strong>: 50 preguntas (10 por cada uno de los 5 temas), 50 minutos, sin volver atrás.<br>
+                    <strong>Práctica</strong>: 25 preguntas de los temas seleccionados, feedback instantáneo y puedes volver atrás.<br>
+                    <strong>Examen</strong>: 25 preguntas (4 por cada uno de los 6 temas), 25 minutos, sin volver atrás.<br>
                     <strong>Test de Fallos</strong>: Repasa únicamente las preguntas que has fallado anteriormente.
                 </div>
                 
@@ -48,29 +48,33 @@
                 <div class="config-section">
                     <div class="config-title">📚 Seleccionar Temas (solo Modo Práctica)</div>
                     <div class="config-description" style="margin-bottom: 10px; color: #888;">
-                        50 preguntas distribuidas proporcionalmente entre los temas seleccionados
+                        25 preguntas distribuidas proporcionalmente entre los temas seleccionados
                     </div>
                     <div id="infoDistribucion" style="margin-bottom: 15px; padding: 10px; background: #1a1a1a; border-radius: 6px; font-size: 13px; color: #00d4ff;"></div>
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; max-width: 100%; overflow: hidden;">
                         <label class="tema-checkbox">
                             <input type="checkbox" value="1" checked onchange="toggleTema(1)">
-                            <span>Tema 1 (L1, L11, L12)</span>
+                            <span>Tema 1</span>
                         </label>
                         <label class="tema-checkbox">
                             <input type="checkbox" value="2" checked onchange="toggleTema(2)">
-                            <span>Tema 2 (L21)</span>
+                            <span>Tema 2</span>
                         </label>
                         <label class="tema-checkbox">
                             <input type="checkbox" value="3" checked onchange="toggleTema(3)">
-                            <span>Tema 3 (L31)</span>
+                            <span>Tema 3</span>
                         </label>
                         <label class="tema-checkbox">
                             <input type="checkbox" value="4" checked onchange="toggleTema(4)">
-                            <span>Tema 4 (L41)</span>
+                            <span>Tema 4</span>
                         </label>
                         <label class="tema-checkbox">
                             <input type="checkbox" value="5" checked onchange="toggleTema(5)">
-                            <span>Tema 5 (L51)</span>
+                            <span>Tema 5</span>
+                        </label>
+                        <label class="tema-checkbox">
+                            <input type="checkbox" value="6" checked onchange="toggleTema(6)">
+                            <span>Tema 6</span>
                         </label>
                     </div>
                     <div class="config-option" style="margin-top: 15px;">

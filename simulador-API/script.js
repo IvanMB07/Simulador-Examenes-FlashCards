@@ -2,7 +2,7 @@
 let PREGUNTAS_COMPLETAS = [];
 
 // URL del archivo JSON en GitHub (RAW)
-const URL_PREGUNTAS = 'https://raw.githubusercontent.com/IvanMB07/Simulador-Examenes-FlashCards/main/iso/preguntas.json';
+const URL_PREGUNTAS = 'https://raw.githubusercontent.com/IvanMB07/Simulador-Examenes-FlashCards/refs/heads/main/simulador-API/preguntas.json';
 
 // Función para cargar las preguntas desde GitHub
 async function cargarPreguntasDesdeJSON() {
@@ -25,11 +25,11 @@ async function cargarPreguntasDesdeJSON() {
     }
 }
 
-// Configuración del modo examen (según el código de tema Lxx en el txt: BC01-L12-Q25 -> tema L12)
-// L1 = L11+L12 (tema 1.1 y 1.2 juntos), L21, L31, L41, L51
-const TEMAS_EXAMEN = ['L1', 'L21', 'L31', 'L41', 'L51'];
-const PREGUNTAS_POR_TEMA_EXAMEN = 10;
-const TOTAL_PREGUNTAS_EXAMEN = 50;
+// Configuración del modo examen
+// Temas: 1, 2, 3, 4, 5, 6
+const TEMAS_EXAMEN = [1, 2, 3, 4, 5, 6];
+const PREGUNTAS_POR_TEMA_EXAMEN = 4;
+const TOTAL_PREGUNTAS_EXAMEN = 25;
 
 // Sistema de almacenamiento de preguntas falladas
 class GestorFallos {
@@ -174,7 +174,7 @@ class ConfiguracionApp {
             const data = localStorage.getItem('configApp');
             this.config = data ? JSON.parse(data) : {
               ordenarPorTema: false,
-              temasSeleccionados: [1, 2, 3, 4, 5],
+              temasSeleccionados: [1, 2, 3, 4, 5, 6],
               perfilActual: 'default',
               perfiles: {}
             };
@@ -184,7 +184,7 @@ class ConfiguracionApp {
         } catch (e) {
             this.config = {
               ordenarPorTema: false,
-              temasSeleccionados: [1, 2, 3, 4, 5],
+              temasSeleccionados: [1, 2, 3, 4, 5, 6],
               perfilActual: 'default',
               perfiles: {}
             };
@@ -225,7 +225,7 @@ class SimuladorExamen {
         this.respuestas = {};
         this.sinResponder = new Set(); // Para marcar preguntas sin responder
         this.tiempoInicio = Date.now();
-        this.tiempoLimiteMs = this.modo === 'examen' ? 50 * 60 * 1000 : null;
+        this.tiempoLimiteMs = this.modo === 'examen' ? 25 * 60 * 1000 : null;
         this.timerId = null;
         this.bloqueadoPorTiempo = false;
         this.erroresDelTest = []; // Para guardar errores del test actual
@@ -378,7 +378,7 @@ class SimuladorExamen {
 
     seleccionarPreguntasPractica(temasSeleccionados, ordenarPorTema = false) {
         const pool = PREGUNTAS_COMPLETAS.filter(p => !this.esGaitero(p));
-        const totalPreguntas = 50;
+        const totalPreguntas = 25;
         
         // Agrupar preguntas por tema
         const grupos = new Map();
@@ -421,7 +421,7 @@ class SimuladorExamen {
 
     seleccionarPreguntas(cantidad, ordenarPorTema = false) {
         // Esta función ya no se usa, mantenida por compatibilidad
-        return this.seleccionarPreguntasPractica([1, 2, 3, 4, 5], ordenarPorTema);
+        return this.seleccionarPreguntasPractica([1, 2, 3, 4, 5, 6], ordenarPorTema);
     }
 
     shuffleConSemilla(array, seed) {
@@ -448,21 +448,10 @@ class SimuladorExamen {
     }
 
     extraerTema(pregunta) {
-        const match = pregunta.cuestion.match(/-L(\d+)-/i);
+        // Busca el patrón -T1-, -T2-, etc.
+        const match = pregunta.cuestion.match(/-T([1-6])-/i);
         if (match && match[1]) {
-            const numeroTema = match[1];
-            // Convertir L11 y L12 a tema 1, L21 a tema 2, etc.
-            if (numeroTema === '11' || numeroTema === '12' || numeroTema === '1') {
-                return 1;
-            } else if (numeroTema === '21') {
-                return 2;
-            } else if (numeroTema === '31') {
-                return 3;
-            } else if (numeroTema === '41') {
-                return 4;
-            } else if (numeroTema === '51') {
-                return 5;
-            }
+            return parseInt(match[1]);
         }
         return null;
     }
@@ -539,7 +528,7 @@ class SimuladorExamen {
             grupos.get(tema).push(pregunta);
         }
 
-        const temasExamen = [1, 2, 3, 4, 5]; // Siempre los 5 temas
+        const temasExamen = [1, 2, 3, 4, 5, 6]; // Siempre los 6 temas
         const seleccion = [];
         const seleccionSet = new Set();
 
@@ -1057,8 +1046,8 @@ function toggleTema(numeroTema) {
 }
 
 function actualizarDistribucion() {
-    const temasSeleccionados = configuracion.get('temasSeleccionados') || [1, 2, 3, 4, 5];
-    const totalPreguntas = 50;
+    const temasSeleccionados = configuracion.get('temasSeleccionados') || [1, 2, 3, 4, 5, 6];
+    const totalPreguntas = 25;
     const numTemas = temasSeleccionados.length;
     const preguntasPorTema = Math.floor(totalPreguntas / numTemas);
     const preguntasExtras = totalPreguntas % numTemas;
@@ -1080,9 +1069,9 @@ function actualizarDistribucion() {
 }
 
 function actualizarTemasUI() {
-    const temasSeleccionados = configuracion.get('temasSeleccionados') || [1, 2, 3, 4, 5];
+    const temasSeleccionados = configuracion.get('temasSeleccionados') || [1, 2, 3, 4, 5, 6];
     
-    for (let i = 1; i <= 5; i++) {
+    for (let i = 1; i <= 6; i++) {
         const checkbox = document.querySelector(`input[type="checkbox"][value="${i}"]`);
         if (checkbox) {
             checkbox.checked = temasSeleccionados.includes(i);
