@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contador de pedos de ratas putrefactas - La app más loca y divertida. 💨">
+    <meta name="theme-color" content="#FF8C42">
+    
+    <title>Contador de Pedos de Ratas Putrefactas</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <div class="header__title-container">
+                    <h1 class="header__title">Contador de Pedos De Ratas Putrefactas</h1>
+                </div>
+            </div>
+                <div class="header__title-container">
+                    <h2 class="header__title-container">¿Cuántos pedos es capaz de tirarse Andrea en un mes?</h2>
+                </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+        <div class="container">
+            
+            <!-- LAYOUT SIMPLE: IMAGEN COMO BOTÓN -->
+            <section class="counter-layout-simple" aria-live="polite" aria-atomic="true">
+                
+                <div class="fart-animation-container" id="fartAnimationContainer"></div>
+                
+                <!-- BOTÓN CON IMAGEN -->
+                <button 
+                    id="mainButton" 
+                    class="main-image-button" 
+                    aria-label="Pulsa para contar un pedo"
+                    aria-pressed="false"
+                >
+                    <img src="assets/images/andrea_pedo.png" alt="Pulsa aquí" class="button-image">
+                </button>
+                
+                <!-- CONTADOR DEBAJO -->
+                <div class="counter-display-below">
+                    <div class="counter-number" id="counterDisplay" role="status">0</div>
+                    <div class="counter-label">¡Pedos!</div>
+                </div>
+                
+            </section>
+
+            <!-- CONTROLS -->
+            <section class="controls-section">
+                <div class="controls">
+                    <button 
+                        id="resetButton" 
+                        class="btn btn--secondary" 
+                        aria-label="Resetear contador a cero"
+                    >
+                        🔄 Reset
+                    </button>
+                    
+                    <button 
+                        id="soundToggle" 
+                        class="btn btn--tertiary" 
+                        aria-label="Activar o desactivar sonidos"
+                        aria-pressed="true"
+                    >
+                        <span class="sound-icon">🔊</span> Sonido
+                    </button>
+
+                    <button 
+                        id="infoButton" 
+                        class="btn btn--tertiary" 
+                        aria-label="Mostrar información"
+                    >
+                        ℹ️ Info
+                    </button>
+                </div>
+            </section>
+
+            <!-- VOLUME CONTROL (SECONDARY) -->
+            <section class="volume-section" style="display: none;" id="volumeSection">
+                <label for="volumeSlider" class="volume-label">Volumen</label>
+                <input 
+                    type="range" 
+                    id="volumeSlider" 
+                    class="volume-slider" 
+                    min="0" 
+                    max="100" 
+                    value="70"
+                    aria-label="Control de volumen"
+                >
+                <span class="volume-value" id="volumeValue">70%</span>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__content">
+            <p class="footer__text">
+                Hecho con ❤️ y mucho humor, para ti bombón pedón 💨.
+            </p>
+        </div>
+    </footer>
+
+    <!-- MODAL DE CONFIRMACIÓN PARA RESET -->
+    <div id="confirmModal" class="modal" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+            <h2 id="modalTitle" class="modal__title">¿Resetear contador?</h2>
+            <p class="modal__message">
+                ¿Estás seguro? Tu contador volverá a 0. 😅
+            </p>
+            <div class="modal__buttons">
+                <button id="confirmReset" class="btn btn--success" aria-label="Confirmar reset">
+                    Sí, resetea
+                </button>
+                <button id="cancelReset" class="btn btn--danger" aria-label="Cancelar reset">
+                    Cancelar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DE INFORMACIÓN -->
+    <div id="infoModal" class="modal" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="infoTitle">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+            <h2 id="infoTitle" class="modal__title">Información</h2>
+            <div class="modal__message">
+                <p>
+                    Una aplicación 100% divertida y 100% profesional para contar 
+                    los momentos más... digamos, memorables.
+                </p>
+                <h3>Características:</h3>
+                <ul>
+                    <li>✨ Contador con persistencia de datos</li>
+                    <li>🎨 Diseño responsivo (móvil y desktop)</li>
+                    <li>🔊 Efectos de sonido divertidos</li>
+                    <li>🎭 Animaciones satisfactorias</li>
+                    <li>📱 Funciona offline</li>
+                </ul>
+            </div>
+            <div class="modal__buttons">
+                <button id="closeInfoModal" class="btn btn--primary" aria-label="Cerrar información">
+                    Entendido
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="js/storage.js"></script>
+    <script src="js/audio.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
