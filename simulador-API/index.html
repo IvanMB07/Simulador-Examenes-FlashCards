@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Simulador de Examen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="contenedor">
+        <div class="encabezado">
+            <h1>Simulador de API</h1>
+            <div class="timer">
+                <span class="contador">Pregunta: <strong id="numeroPregunta">1</strong>/50</span>
+                <span class="contador" id="tiempoTranscurrido">Tiempo: 0s</span>
+                <span class="modo-pill">Modo: <strong id="modoActual">-</strong></span>
+            </div>
+            <div style="text-align: right; font-size: 11px; color: #666; margin-top: 8px; font-family: monospace;" id="totalPreguntasInfo"></div>
+            <div class="progreso">
+                <div class="progreso-barra" id="progresoBarra"></div>
+            </div>
+        </div>
+
+        <div id="seleccionModo">
+            <div class="resultados">
+                <div class="titulo-resultados">Elige modo</div>
+                <div class="mensaje-resultado">
+                    <strong>Práctica</strong>: 50 preguntas de los temas seleccionados, feedback instantáneo y puedes volver atrás.<br>
+                    <strong>Examen</strong>: 50 preguntas (10 por cada uno de los 5 temas), 50 minutos, sin volver atrás.<br>
+                    <strong>Test de Fallos</strong>: Repasa únicamente las preguntas que has fallado anteriormente.
+                </div>
+                
+                <!-- Selector de perfil de usuario -->
+                <div class="perfil-selector">
+                    <div class="perfil-selector-title">👤 Perfil de Usuario</div>
+                    <div class="perfil-selector-content">
+                        <select id="perfilSelect" class="perfil-select" onchange="cambiarPerfil()">
+                            <option value="default">Usuario Principal</option>
+                        </select>
+                        <button class="btn-perfil" onclick="crearNuevoPerfil()">+ Nuevo</button>
+                        <button class="btn-perfil danger" onclick="eliminarPerfilActual()" id="btnEliminar">Eliminar</button>
+                    </div>
+                    <div class="perfil-stats" id="perfilStats">
+                        Cargando estadísticas...
+                    </div>
+                </div>
+
+                <div class="config-section">
+                    <div class="config-title">📚 Seleccionar Temas (solo Modo Práctica)</div>
+                    <div class="config-description" style="margin-bottom: 10px; color: #888;">
+                        50 preguntas distribuidas proporcionalmente entre los temas seleccionados
+                    </div>
+                    <div id="infoDistribucion" style="margin-bottom: 15px; padding: 10px; background: #1a1a1a; border-radius: 6px; font-size: 13px; color: #00d4ff;"></div>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; max-width: 100%; overflow: hidden;">
+                        <label class="tema-checkbox">
+                            <input type="checkbox" value="1" checked onchange="toggleTema(1)">
+                            <span>Tema 1 (L1, L11, L12)</span>
+                        </label>
+                        <label class="tema-checkbox">
+                            <input type="checkbox" value="2" checked onchange="toggleTema(2)">
+                            <span>Tema 2 (L21)</span>
+                        </label>
+                        <label class="tema-checkbox">
+                            <input type="checkbox" value="3" checked onchange="toggleTema(3)">
+                            <span>Tema 3 (L31)</span>
+                        </label>
+                        <label class="tema-checkbox">
+                            <input type="checkbox" value="4" checked onchange="toggleTema(4)">
+                            <span>Tema 4 (L41)</span>
+                        </label>
+                        <label class="tema-checkbox">
+                            <input type="checkbox" value="5" checked onchange="toggleTema(5)">
+                            <span>Tema 5 (L51)</span>
+                        </label>
+                    </div>
+                    <div class="config-option" style="margin-top: 15px;">
+                        <div>
+                            <div class="config-label">Ordenar por temas</div>
+                            <div class="config-description">Las preguntas se agrupan por tema secuencialmente</div>
+                        </div>
+                        <div class="toggle-switch" id="toggleOrdenTema" onclick="toggleConfig('ordenarPorTema')">
+                            <div class="toggle-slider"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="config-section">
+                    <div class="stat" id="statFallos">
+                        <div class="stat-label">Preguntas falladas guardadas</div>
+                        <div class="stat-valor" id="contadorFallos">0</div>
+                    </div>
+                  <div class="config-option" style="margin-top: 10px;">
+                    <div style="flex: 1;">
+                      <div class="config-label">Importar / Exportar fallos</div>
+                      <div class="config-description">Sincroniza fallos entre móvil y PC en JSON</div>
+                      <div style="margin-top: 8px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
+                        <input id="importFallosFile" type="file" accept="application/json" style="color:#e0e0e0;" onchange="importarFallosDesdeArchivo(event)">
+                        <button class="btn-anterior" onclick="exportarFallos()">Exportar JSON</button>
+                      </div>
+                    </div>
+                  </div>
+                    <button class="btn-anterior" id="btnLimpiarFallos" onclick="limpiarFallos()" style="width: 100%; margin-top: 10px;">
+                        🗑️ Limpiar preguntas falladas
+                    </button>
+                </div>
+                
+                <div class="botones">
+                    <button class="btn-reiniciar" onclick="iniciarModo('practica')">Modo práctica</button>
+                    <button class="btn-terminar" onclick="iniciarModo('examen')">Modo examen</button>
+                    <button class="btn-test-fallos" id="btnTestFallos" onclick="iniciarModo('fallos')" disabled>Test de Fallos <span class="badge-fallos" id="badgeFallos">0</span></button>
+                </div>
+            </div>
+        </div>
+
+        <div id="examen" class="oculto">
+            <div class="pregunta-contenedor">
+                <div class="pregunta-numero" id="preguntaNumero"></div>
+                <div class="pregunta-texto" id="preguntaTexto"></div>
+                <div class="opciones" id="opcionesContenedor"></div>
+            </div>
+
+            <div class="atajos-teclado">
+                ⌨️ <strong>Atajos:</strong> 
+                <span class="tecla">←</span> <span class="tecla">→</span> Navegar preguntas | 
+                <span class="tecla">↑</span> <span class="tecla">↓</span> Navegar opciones | 
+                <span class="tecla">Espacio</span> o <span class="tecla">1-4</span> Seleccionar | 
+                <span class="tecla">Enter</span> Terminar
+            </div>
+
+            <div class="botones">
+                <button class="btn-anterior" id="btnAnterior" onclick="app.anterior()">← Anterior</button>
+                <button class="btn-siguiente" id="btnSiguiente" onclick="app.siguiente()">Siguiente →</button>
+                <button class="btn-terminar" onclick="app.terminar()">Terminar Examen</button>
+            </div>
+        </div>
+
+        <div id="resultados" class="oculto">
+            <div class="resultados">
+                <div class="titulo-resultados">Examen Completado</div>
+                <div class="mensaje-resultado">Tu puntuación final es:</div>
+                <div class="puntuacion" id="puntuacionFinal">0/10</div>
+                
+                <div class="estadisticas">
+                    <div class="stat">
+                        <div class="stat-label">Correctas</div>
+                        <div class="stat-valor" id="respuestasCorrectas">0</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-label">Incorrectas</div>
+                        <div class="stat-valor" id="respuestasIncorrectas">0</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-label">Sin responder</div>
+                        <div class="stat-valor" id="sinResponder">0</div>
+                    </div>
+                </div>
+
+                <div id="erroresDetalle" class="errores-detalle oculto"></div>
+
+                <button class="btn-reiniciar" onclick="app.reiniciar()">Reiniciar Examen</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
