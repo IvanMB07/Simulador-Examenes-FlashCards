@@ -1700,7 +1700,306 @@
       "D. Cancelar el proyecto."
     ],
     "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-Q01- Pregunta: ¿Cuál es la característica principal que define a un proyecto frente a las operaciones?",
+    "opciones": [
+      "A. Es realizado por personas.",
+      "B. Está restringido por recursos limitados.",
+      "C. Es un esfuerzo temporal para crear un producto único.",
+      "D. Es planificado, ejecutado y controlado."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T2-Q02- Pregunta: ¿En qué se diferencian los proyectos de las operaciones en cuanto a su finalización?",
+    "opciones": [
+      "A. Las operaciones acaban cuando se cumplen los objetivos.",
+      "B. Los proyectos son permanentes para producir eficientemente.",
+      "C. Los proyectos acaban cuando se alcanzan sus objetivos específicos.",
+      "D. No hay diferencia, ambos son continuos."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T2-Q03- Pregunta: ¿Qué concepto describe los beneficios tangibles e intangibles que una organización obtiene de los proyectos?",
+    "opciones": [
+      "A. Gestión de procesos de negocio.",
+      "B. Valor de negocio.",
+      "C. Restricciones concurrentes.",
+      "D. Gobernanza de carteras."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-Q04- Pregunta: ¿Cómo se define una Cartera (Portfolio) dentro del sistema de creación de valor?",
+    "opciones": [
+      "A. Un conjunto de proyectos relacionados con objetivos técnicos.",
+      "B. Un grupo de proyectos y programas gestionados para alcanzar metas estratégicas.",
+      "C. Una serie de fases que atraviesa un proyecto.",
+      "D. Un departamento dedicado a la formación de empleados."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-Q05- Pregunta: ¿Qué nivel jerárquico agrupa proyectos relacionados para obtener beneficios que no se lograrían individualmente?",
+    "opciones": [
+      "A. Operaciones.",
+      "B. Carteras.",
+      "C. Programas.",
+      "D. Tareas operativas."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T2-Q06- Pregunta: ¿Cuál es el objetivo principal de la Gestión de Proyectos?",
+    "opciones": [
+      "A. Maximizar el gasto de recursos.",
+      "B. Alcanzar o superar el valor previsto aplicando conocimientos y técnicas.",
+      "C. Eliminar la comunicación con los interesados.",
+      "D. Mantener el alcance fijo e inmutable siempre."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-Q07- Pregunta: ¿Qué sucede si una de las demandas concurrentes (Alcance, Tiempo, Coste, etc.) cambia?",
+    "opciones": [
+      "A. No afecta a las demás.",
+      "B. El proyecto se cancela automáticamente.",
+      "C. Probablemente afecte a al menos una de las otras demandas.",
+      "D. Solo afecta a la calidad."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T2-Q08- Pregunta: ¿Quién es cualquier persona o grupo que puede afectar o verse afectado por el resultado de un proyecto?",
+    "opciones": [
+      "A. Patrocinador.",
+      "B. Stakeholder (Interesado).",
+      "C. Director de Proyecto.",
+      "D. Usuario final únicamente."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-Q09- Pregunta: ¿En qué consiste la dimensión 'Business Acumen' del equipo de gestión?",
+    "opciones": [
+      "A. Habilidades de comunicación efectiva.",
+      "B. Capacidad para resolver conflictos técnicos.",
+      "C. Pensamiento estratégico para alinear el proyecto con la organización.",
+      "D. Aplicación de metodologías ágiles."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T2-Q10- Pregunta: ¿Cuál es la función principal de un Patrocinador (Sponsor)?",
+    "opciones": [
+      "A. Realizar el trabajo técnico del proyecto.",
+      "B. Proporcionar liderazgo en decisiones fuera de la autoridad del PM.",
+      "C. Definir el código fuente del producto.",
+      "D. Gestionar las tareas diarias del equipo."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-Q11- Pregunta: ¿Qué tipo de PMO tiene autoridad alta y gestiona directamente los proyectos?",
+    "opciones": [
+      "A. De Soporte.",
+      "B. De Control.",
+      "C. Directiva.",
+      "D. Ágil."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T2-Q12- Pregunta: ¿Qué tipo de PMO actúa con un rol consultivo y provee guías y buenas prácticas con autoridad baja?",
+    "opciones": [
+      "A. De Control.",
+      "B. De Soporte.",
+      "C. Directiva.",
+      "D. Jerárquica."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-Q13- Pregunta: ¿Qué son los Factores Ambientales de la Empresa (EEFs)?",
+    "opciones": [
+      "A. Plantillas y políticas internas de la organización.",
+      "B. Condiciones externas o internas que influyen o limitan el proyecto.",
+      "C. Lecciones aprendidas de proyectos pasados.",
+      "D. Bases de conocimiento de la empresa."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-Q14- Pregunta: ¿Cuál de los siguientes es un ejemplo de Activo de los Procesos de la Organización (APO)?",
+    "opciones": [
+      "A. Condiciones del mercado.",
+      "B. Estructura organizacional.",
+      "C. Procedimientos estandarizados y lecciones aprendidas.",
+      "D. Cultura de la empresa."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T2-Q15- Pregunta: ¿Qué diferencia principal hay entre un Coordinador y un Expedidor de proyectos?",
+    "opciones": [
+      "A. El expedidor tiene poder de decisión y el coordinador no.",
+      "B. El coordinador tiene cierto poder de decisión y el expedidor no.",
+      "C. El coordinador es externo y el expedidor interno.",
+      "D. No hay diferencia, son sinónimos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-Q16- Pregunta: En el ciclo de vida del proyecto, ¿cómo evoluciona el riesgo y la incertidumbre?",
+    "opciones": [
+      "A. Son bajos al inicio y aumentan al final.",
+      "B. Son altos al inicio y disminuyen hacia el final.",
+      "C. Se mantienen constantes.",
+      "D. Desaparecen tras la planificación."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-Q17- Pregunta: ¿Cómo afecta el tiempo al coste de los cambios en un proyecto?",
+    "opciones": [
+      "A. El coste de los cambios disminuye con el tiempo.",
+      "B. El coste de los cambios es bajo al inicio y aumenta significativamente al final.",
+      "C. El coste es siempre el mismo independientemente del momento.",
+      "D. Los cambios son gratuitos en la fase de cierre."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-Q18- Pregunta: ¿Qué rol prioriza el backlog y orienta el desarrollo hacia la entrega de valor en entornos ágiles?",
+    "opciones": [
+      "A. Director de Proyecto.",
+      "B. Business Analyst.",
+      "C. Product Owner.",
+      "D. Patrocinador."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T2-Q19- Pregunta: ¿Qué enfoque de desarrollo define el alcance, tiempo y coste al inicio del proyecto?",
+    "opciones": [
+      "A. Adaptativo.",
+      "B. Híbrido.",
+      "C. Predictivo (Cascada).",
+      "D. Iterativo."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T2-Q20- Pregunta: ¿Qué caracteriza al enfoque Adaptativo (Ágil)?",
+    "opciones": [
+      "A. Los requisitos son claros y estables desde el inicio.",
+      "B. Se basa en ciclos de Planificar, Realizar, Evaluar y Aprender.",
+      "C. Busca una única entrega final al terminar el proyecto.",
+      "D. Es ideal para proyectos con nula incertidumbre."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-Q21- Pregunta: ¿Qué área de enfoque de la dirección de proyectos define y autoriza formalmente el proyecto o fase?",
+    "opciones": [
+      "A. Planificación.",
+      "B. Ejecución.",
+      "C. Inicio.",
+      "D. Cierre."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T2-Q22- Pregunta: ¿Cuál es el objetivo principal del Monitoreo y Control?",
+    "opciones": [
+      "A. Realizar el trabajo físico del proyecto.",
+      "B. Formalizar la finalización del contrato.",
+      "C. Detectar desviaciones comparando lo real frente a lo planificado.",
+      "D. Definir los hitos iniciales."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T2-Q23- Pregunta: Según PMBOK 8, ¿qué elemento guía el pensamiento y comportamiento de los profesionales?",
+    "opciones": [
+      "A. Dominios de desempeño.",
+      "B. Principios.",
+      "C. Procesos técnicos.",
+      "D. Plantillas de la PMO."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-Q24- Pregunta: ¿Qué principio de la DP implica entender el proyecto como un sistema dentro de la organización?",
+    "opciones": [
+      "A. Enfócate en el valor.",
+      "B. Adopta una visión holística.",
+      "C. Integra la calidad.",
+      "D. Sé un líder responsable."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-Q25- Pregunta: ¿Qué dominio de desempeño se encarga de gestionar el presupuesto y estimar costos?",
+    "opciones": [
+      "A. Gobernanza.",
+      "B. Cronograma.",
+      "C. Finanzas.",
+      "D. Recursos."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T2-Q26- Pregunta: ¿Qué dominio de desempeño anticipa y se prepara para disrupciones y amenazas?",
+    "opciones": [
+      "A. Interesados.",
+      "B. Riesgo.",
+      "C. Alcance.",
+      "D. Finanzas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-Q27- Pregunta: ¿Qué tipo de organización estructural tiene al Director de Proyecto con autoridad alta y recursos dedicados a tiempo completo?",
+    "opciones": [
+      "A. Funcional.",
+      "B. Matricial Débil.",
+      "C. Orientada a Proyectos.",
+      "D. Matricial Equilibrada."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T2-Q28- Pregunta: ¿Qué principio de PMBOK 8 destaca la importancia de actuar con integridad y cuidado?",
+    "opciones": [
+      "A. Adopta una visión holística.",
+      "B. Sé un líder responsable.",
+      "C. Enfócate en el valor.",
+      "D. Integra la sostenibilidad."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-Q29- Pregunta: ¿Qué dimensión del valor se refiere a beneficios como la contribución social o ambiental positiva?",
+    "opciones": [
+      "A. Tangible.",
+      "B. Intangible.",
+      "C. Monetario.",
+      "D. De mercado."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-Q30- Pregunta: ¿Qué caracteriza a un enfoque Híbrido de desarrollo?",
+    "opciones": [
+      "A. No utiliza ningún tipo de planificación.",
+      "B. Combina planificación estable (predictiva) con enfoques flexibles (adaptativos).",
+      "C. Solo se usa en proyectos de construcción civil.",
+      "D. Es el enfoque más rígido de PMBOK 8."
+    ],
+    "solucion": "B"
   }
-
 
 ]
