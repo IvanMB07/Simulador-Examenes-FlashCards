@@ -350,6 +350,96 @@
     "solucion": "B"
   },
   {
+    "cuestion": "API-T1-36- Pregunta: La diferencia entre un proyecto, un programa y un portafolio es que:",
+    "opciones": [
+      "A. Un proyecto es una tarea contratada con un principio y un final, un portafolio es un grupo de proyectos con fechas de conclusión más abiertas, y un programa combina dos o más portafolios.",
+      "B. Un proyecto es una tarea prolongada con un principio y un final, un programa combina dos o más proyectos no relacionados, y un portafolio combina dos o más programas.",
+      "C. Un proyecto es una tarea temporal con un principio y un final, un programa es un conjunto de proyectos relacionados, y un portafolio es un grupo de proyectos y programas relacionados con un objetivo específico.",
+      "D. Un proyecto es una tarea temporal con un principio y un final, un programa puede incluir otro trabajo no relacionado con el proyecto, y un portafolio incluye todos los proyectos de un determinado departamento o división."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T1-37- Pregunta: ¿Cuál de los siguientes es lo MÁS apropiado que debe hacerse en el cierre del proyecto?",
+    "opciones": [
+      "A. Obtener la aprobación formal de los planes de gestión.",
+      "B. Confirmar que todos los requisitos del proyecto se hayan cumplido.",
+      "C. Recopilar información histórica de proyectos anteriores.",
+      "D. Trabajar con el cliente para determinar los criterios de aceptación."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-38- Pregunta: Comprender la cultura, las políticas y los procedimientos de la organización en la que se lleva a cabo el proyecto es MÁS difícil en:",
+    "opciones": [
+      "A. Organizaciones ágiles.",
+      "B. Organizaciones pequeñas.",
+      "C. Organizaciones globales.",
+      "D. Organizaciones de fabricación."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T1-39- Pregunta: ¿Cuál de las siguientes es una característica de los procesos de dirección de proyectos?",
+    "opciones": [
+      "A. Innecesario.",
+      "B. Estandarizado.",
+      "C. Iterativo.",
+      "D. Único."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T1-40- Pregunta: Durante una reunión del equipo, un miembro cuestiona las medidas utilizadas para evaluar el desempeño. ¿En qué grupo de procesos de dirección de proyectos ocurre esta situación?",
+    "opciones": [
+      "A. Seguimiento y Control.",
+      "B. Inicio.",
+      "C. Cierre.",
+      "D. Ejecución."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "API-T1-41- Pregunta: Un director de proyectos gestiona dos proyectos y el segundo crece cada día. Además, sabe de un proyecto similar realizado el año pasado. ¿Qué debe hacer?",
+    "opciones": [
+      "A. Contactar al otro director del proyecto para pedirle asistencia.",
+      "B. Asegurarse de que el alcance del proyecto sea acordado por todos los interesados.",
+      "C. Esperar para ver si el proyecto es impactado por el crecimiento del alcance.",
+      "D. Obtener registros históricos y orientación de parte de la oficina de dirección de proyectos (PMO)."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "API-T1-42- Pregunta: El ciclo de vida del proyecto difiere del proceso de la dirección de proyectos en que el proceso de la dirección de proyectos:",
+    "opciones": [
+      "A. No incorpora una metodología.",
+      "B. Es diferente para cada industria.",
+      "C. Puede generar muchos proyectos.",
+      "D. Es igual para todos los proyectos."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "API-T1-43- Pregunta: El MEJOR momento para asignar un proyecto al director del proyecto es durante:",
+    "opciones": [
+      "A. Selección de proyectos.",
+      "B. Integración.",
+      "C. Planificación.",
+      "D. Inicio."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "API-T1-44- Pregunta: Un director de proyectos detecta una variación entre la velocidad de un sistema y la planificada, y evalúa si merece respuesta. ¿En qué grupo de procesos se encuentra?",
+    "opciones": [
+      "A. Seguimiento y Control.",
+      "B. Ejecución.",
+      "C. Cierre.",
+      "D. Inicio."
+    ],
+    "solucion": "A"
+  },
+  {
     "cuestion": "API-T2-01- Pregunta: ¿Qué documento autoriza formalmente la existencia del proyecto y da autoridad al Director del Proyecto?",
     "opciones": [
       "A. El Caso de Negocio.",
@@ -2000,6 +2090,106 @@
       "D. Es el enfoque más rígido de PMBOK 8."
     ],
     "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-36- Pregunta: Una empresa está operando en un mercado muy dinámico. ¿Cuál de los siguientes cambios debería ser el más importante para el comité del control integrado de cambios? Un cambio originado en:",
+    "opciones": [
+      "A. El alcance del proyecto.",
+      "B. La empresa contratista.",
+      "C. El mercado.",
+      "D. El equipo de trabajo."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T2-37- Pregunta: En un proyecto, el principal entregable y los resultados del plan de pruebas fueron enviados al cliente para conseguir su aprobación formal. Han pasado 25 días y el cliente no contesta. ¿Qué es lo mejor que puede hacer?",
+    "opciones": [
+      "A. Documentar los hechos en el registro de problemas.",
+      "B. Ninguna de las anteriores.",
+      "C. Detener el proyecto hasta que el cliente apruebe los entregables formalmente.",
+      "D. Solicitar ayuda a la dirección general."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "API-T2-38- Pregunta: Todas las siguientes son técnicas de recopilación de datos que se utilizan para obtener los requisitos del proyecto, excepto:",
+    "opciones": [
+      "A. Juicio de expertos.",
+      "B. Tormenta de ideas.",
+      "C. Estudios comparativos.",
+      "D. Grupos focales (focus groups)."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T2-39- Pregunta: El principal rol de un patrocinador comprometido con un proyecto debería ser:",
+    "opciones": [
+      "A. Colaborar con el director del proyecto para desarrollar el plan para la dirección del proyecto.",
+      "B. Prevenir cambios innecesarios y garantizar los recursos para el proyecto.",
+      "C. Integrar y comunicar.",
+      "D. Identificar restricciones innecesarias."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-40- Pregunta: ¿Qué necesita para poder recopilar los requisitos de los interesados?",
+    "opciones": [
+      "A. Auditorías.",
+      "B. Registro de interesados.",
+      "C. Verificación del alcance.",
+      "D. EDT."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-41- Pregunta: Lo más importante del acta de constitución del proyecto es que:",
+    "opciones": [
+      "A. Se identifican a los interesados.",
+      "B. Se autoriza formalmente al director del proyecto a comenzar con los procesos de planificación.",
+      "C. Se justifica el proyecto y su relación con el plan estratégico de la empresa.",
+      "D. Se explicita en detalle el retorno de la inversión."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-42- Pregunta: El acta de constitución incluye una descripción del lugar donde va a desarrollarse el proyecto y limitaciones de coste y tiempo. Estas descripciones son:",
+    "opciones": [
+      "A. Compromiso formal de los interesados.",
+      "B. Supuestos.",
+      "C. Plan estratégico.",
+      "D. Restricciones."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "API-T2-43- Pregunta: Un proyecto está sufriendo demasiados cambios en el acta de constitución del proyecto. ¿Quién es el principal responsable para decidir si esos cambios son necesarios?",
+    "opciones": [
+      "A. El patrocinador.",
+      "B. Todos los interesados del proyecto.",
+      "C. El director del proyecto.",
+      "D. El interesado principal del proyecto."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T2-44- Pregunta: El director del proyecto y su equipo han finalizado el proceso de definir el alcance. Durante la siguiente etapa del proyecto, ¿cuál de las siguientes afirmaciones no es cierta?",
+    "opciones": [
+      "A. Se debe verificar que el grado de descomposición del trabajo sea suficiente.",
+      "B. Se tiene que descomponer el proyecto en paquetes de trabajo.",
+      "C. Se debe controlar el alcance.",
+      "D. El equipo y el director del proyecto deberían participar de la próxima etapa."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T2-45- Pregunta: En un sistema de control de cambios de un proyecto pequeño no se suele utilizar:",
+    "opciones": [
+      "A. Reuniones.",
+      "B. Procedimientos.",
+      "C. Lecciones aprendidas.",
+      "D. Normas."
+    ],
+    "solucion": "C"
   }
 
 ]
