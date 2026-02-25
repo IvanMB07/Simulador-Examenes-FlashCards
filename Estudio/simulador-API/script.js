@@ -492,6 +492,10 @@ class SimuladorExamen {
 
     ordenarPreguntasDeGrupo(preguntas) {
         return [...preguntas].sort((a, b) => {
+            const baseA = a.preguntaBaseDependencia === true ? 1 : 0;
+            const baseB = b.preguntaBaseDependencia === true ? 1 : 0;
+            if (baseA !== baseB) return baseB - baseA;
+
             const ordenA = Number.isFinite(a.ordenGrupo) ? a.ordenGrupo : Number.MAX_SAFE_INTEGER;
             const ordenB = Number.isFinite(b.ordenGrupo) ? b.ordenGrupo : Number.MAX_SAFE_INTEGER;
             if (ordenA !== ordenB) return ordenA - ordenB;
