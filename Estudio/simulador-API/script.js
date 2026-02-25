@@ -1,26 +1,53 @@
 // TODAS LAS PREGUNTAS (cargadas desde JSON)
 let PREGUNTAS_COMPLETAS = [];
 
-// URL del archivo JSON en GitHub (RAW)
+// URL de respaldo del archivo JSON en GitHub (RAW)
 const URL_PREGUNTAS = 'https://raw.githubusercontent.com/IvanMB07/Simulador-Examenes-FlashCards/main/Estudio/simulador-API/preguntas.json';
 
-// Función para cargar las preguntas desde GitHub
-async function cargarPreguntasDesdeJSON() {
+async function fetchConTimeout(url, timeoutMs = 12000) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), timeoutMs);
     try {
-        console.log('🔄 Cargando preguntas desde GitHub...');
-        const response = await fetch(URL_PREGUNTAS);
-        
-        if (!response.ok) {
-            throw new Error(`Error HTTP: ${response.status}`);
+        return await fetch(url, { cache: 'no-store', signal: controller.signal });
+    } finally {
+        clearTimeout(timer);
+    }
+}
+
+// Función para cargar las preguntas (primero local, luego respaldo remoto)
+async function cargarPreguntasDesdeJSON() {
+    const fuentes = [
+        { nombre: 'local', url: './preguntas.json' },
+        { nombre: 'remota', url: URL_PREGUNTAS }
+    ];
+
+    try {
+        for (const fuente of fuentes) {
+            try {
+                console.log(`🔄 Cargando preguntas desde ${fuente.nombre}...`);
+                const response = await fetchConTimeout(fuente.url);
+
+                if (!response.ok) {
+                    throw new Error(`Error HTTP: ${response.status}`);
+                }
+
+                const data = await response.json();
+                if (!Array.isArray(data)) {
+                    throw new Error('Formato JSON inválido (se esperaba un array)');
+                }
+
+                PREGUNTAS_COMPLETAS = data;
+                console.log(`✅ ${PREGUNTAS_COMPLETAS.length} preguntas cargadas desde ${fuente.nombre}`);
+                return true;
+            } catch (errorFuente) {
+                console.warn(`⚠️ Fallo cargando desde ${fuente.nombre}:`, errorFuente.message || errorFuente);
+            }
         }
-        
-        const data = await response.json();
-        PREGUNTAS_COMPLETAS = data;
-        console.log(`✅ ${PREGUNTAS_COMPLETAS.length} preguntas cargadas correctamente desde JSON`);
-        return true;
+
+        throw new Error('No se pudo cargar preguntas ni en local ni en remoto');
     } catch (error) {
         console.error('❌ Error al cargar preguntas:', error);
-        alert('Error al cargar las preguntas. Por favor, recarga la página.');
+        alert('Error al cargar las preguntas. Revisa conexión y recarga la página.');
         return false;
     }
 }
