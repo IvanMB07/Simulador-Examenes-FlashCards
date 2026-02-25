@@ -30,18 +30,6 @@
                     <strong>Test de Fallos</strong>: Repasa únicamente las preguntas que has fallado anteriormente.
                 </div>
 
-                <div class="config-section">
-                    <div class="config-title">🧾 Parcial de Examen</div>
-                    <div class="config-description" style="margin-bottom: 10px; color: #888;">
-                        Selección usada solo en Modo Examen
-                    </div>
-                    <select id="parcialExamenSelect" class="perfil-select" onchange="cambiarParcialExamen()" style="width:100%;">
-                        <option value="parcial1">Parcial 1 (T1, T2, T3, T4)</option>
-                        <option value="parcial2">Parcial 2 (T5, T6)</option>
-                        <option value="parcial3">Parcial 3 (T7)</option>
-                    </select>
-                </div>
-                
                 <!-- Selector de perfil de usuario -->
                 <div class="perfil-selector">
                     <div class="perfil-selector-title">👤 Perfil de Usuario</div>
@@ -88,6 +76,10 @@
                             <input type="checkbox" value="6" checked onchange="toggleTema(6)">
                             <span>Tema 6</span>
                         </label>
+                        <label class="tema-checkbox">
+                            <input type="checkbox" value="7" onchange="toggleTema(7)">
+                            <span>Tema 7</span>
+                        </label>
                     </div>
                     <div class="config-option" style="margin-top: 15px;">
                         <div>
@@ -98,6 +90,18 @@
                             <div class="toggle-slider"></div>
                         </div>
                     </div>
+                </div>
+
+                <div class="config-section">
+                    <div class="config-title">🧾 Parcial de Examen</div>
+                    <div class="config-description" style="margin-bottom: 10px; color: #888;">
+                        Limita temas en Modo Examen y Modo Práctica
+                    </div>
+                    <select id="parcialExamenSelect" class="perfil-select" onchange="cambiarParcialExamen()" style="width:100%;">
+                        <option value="parcial1">Parcial 1 (T1, T2, T3, T4)</option>
+                        <option value="parcial2">Parcial 2 (T5, T6)</option>
+                        <option value="parcial3">Parcial 3 (T7)</option>
+                    </select>
                 </div>
 
                 <div class="config-section">

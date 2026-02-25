@@ -205,7 +205,7 @@ class ConfiguracionApp {
             const data = localStorage.getItem('configApp');
             this.config = data ? JSON.parse(data) : {
               ordenarPorTema: false,
-              temasSeleccionados: [1, 2, 3, 4, 5, 6],
+                            temasSeleccionados: [1, 2, 3, 4, 5, 6, 7],
                             parcialExamen: 'parcial1',
               perfilActual: 'default',
               perfiles: {}
@@ -217,7 +217,7 @@ class ConfiguracionApp {
         } catch (e) {
             this.config = {
               ordenarPorTema: false,
-              temasSeleccionados: [1, 2, 3, 4, 5, 6],
+                            temasSeleccionados: [1, 2, 3, 4, 5, 6, 7],
                             parcialExamen: 'parcial1',
               perfilActual: 'default',
               perfiles: {}
@@ -296,10 +296,19 @@ class SimuladorExamen {
                 return;
             }
         } else {
-            // Modo práctica: 50 preguntas distribuidas proporcionalmente entre los temas seleccionados
+            // Modo práctica: 25 preguntas distribuidas entre temas del parcial seleccionado
             const ordenarPorTema = configuracion.get('ordenarPorTema');
-            const temasSeleccionados = configuracion.get('temasSeleccionados') || [1, 2, 3, 4, 5];
-            this.preguntas = this.seleccionarPreguntasPractica(temasSeleccionados, ordenarPorTema);
+            const temasParcial = this.obtenerTemasExamen();
+            const temasSeleccionados = configuracion.get('temasSeleccionados') || [...temasParcial];
+            const temasAplicables = temasSeleccionados.filter(tema => temasParcial.includes(tema));
+            const temasPractica = temasAplicables.length > 0 ? temasAplicables : [...temasParcial];
+
+            this.preguntas = this.seleccionarPreguntasPractica(temasPractica, ordenarPorTema);
+            if (!this.preguntas || this.preguntas.length === 0) {
+                alert('No hay preguntas disponibles para el parcial seleccionado en modo práctica.');
+                this.reiniciar();
+                return;
+            }
         }
         this.respuestas = {};
         this.sinResponder = new Set();
@@ -471,7 +480,7 @@ class SimuladorExamen {
 
     seleccionarPreguntas(cantidad, ordenarPorTema = false) {
         // Esta función ya no se usa, mantenida por compatibilidad
-        return this.seleccionarPreguntasPractica([1, 2, 3, 4, 5, 6], ordenarPorTema);
+        return this.seleccionarPreguntasPractica([1, 2, 3, 4, 5, 6, 7], ordenarPorTema);
     }
 
     shuffleConSemilla(array, seed) {
@@ -1393,7 +1402,7 @@ function importarFallosDesdeArchivo(event) {
 }
 
 function toggleTema(numeroTema) {
-    let temasSeleccionados = configuracion.get('temasSeleccionados') || [1, 2, 3, 4, 5, 6];
+    let temasSeleccionados = configuracion.get('temasSeleccionados') || [1, 2, 3, 4, 5, 6, 7];
     
     if (temasSeleccionados.includes(numeroTema)) {
         // Si ya está seleccionado, quitarlo
@@ -1417,7 +1426,7 @@ function toggleTema(numeroTema) {
 }
 
 function actualizarDistribucion() {
-    const temasSeleccionados = configuracion.get('temasSeleccionados') || [1, 2, 3, 4, 5, 6];
+    const temasSeleccionados = configuracion.get('temasSeleccionados') || [1, 2, 3, 4, 5, 6, 7];
     const totalPreguntas = 25;
     const numTemas = temasSeleccionados.length;
     const preguntasPorTema = Math.floor(totalPreguntas / numTemas);
@@ -1443,6 +1452,7 @@ function cambiarParcialExamen() {
     const select = document.getElementById('parcialExamenSelect');
     if (!select) return;
     configuracion.set('parcialExamen', select.value);
+    actualizarTemasUI();
 }
 
 function actualizarParcialExamenUI() {
@@ -1452,12 +1462,27 @@ function actualizarParcialExamenUI() {
 }
 
 function actualizarTemasUI() {
-    const temasSeleccionados = configuracion.get('temasSeleccionados') || [1, 2, 3, 4, 5, 6];
+    const parcial = configuracion.get('parcialExamen') || 'parcial1';
+    const temasParcial = PARCIALES_EXAMEN[parcial] || PARCIALES_EXAMEN.parcial1;
+    const temasSeleccionados = configuracion.get('temasSeleccionados') || [...temasParcial];
+    let temasCompatibles = temasSeleccionados.filter(tema => temasParcial.includes(tema));
+
+    if (temasCompatibles.length === 0) {
+        temasCompatibles = [...temasParcial];
+        configuracion.set('temasSeleccionados', temasCompatibles);
+    }
     
-    for (let i = 1; i <= 6; i++) {
+    for (let i = 1; i <= 7; i++) {
         const checkbox = document.querySelector(`input[type="checkbox"][value="${i}"]`);
         if (checkbox) {
-            checkbox.checked = temasSeleccionados.includes(i);
+            const permitido = temasParcial.includes(i);
+            checkbox.disabled = !permitido;
+            checkbox.checked = permitido && temasCompatibles.includes(i);
+
+            const etiqueta = checkbox.closest('.tema-checkbox');
+            if (etiqueta) {
+                etiqueta.style.opacity = permitido ? '1' : '0.45';
+            }
         }
     }
     
