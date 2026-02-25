@@ -3770,5 +3770,135 @@
       "D. Variación del cronograma."
     ],
     "solucion": "A"
+  },
+  {
+    "cuestion": "API-T4-EXTRA-Q01-Pregunta: Una forma simple y rápida para calcular la estimación hasta la conclusión (EAC) del proyecto, sería tomar el presupuesto hasta la conclusión (BAC) y luego dividirlo por:",
+    "opciones": [
+      "A. Índice de desempeño del coste.",
+      "B. Índice de desempeño del trabajo por completar.",
+      "C. Variación del coste.",
+      "D. Índice de desempeño del cronograma."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T4-EXTRA-Q02-Pregunta: El presupuesto estimado a su finalización (Estimate at Completion, EAC) es una evaluación periódica de:",
+    "opciones": [
+      "A. El valor del trabajo realizado al final del proyecto.",
+      "B. El presupuesto final aprobado inicialmente.",
+      "C. El presupuesto actualizado con las desviaciones hasta la fecha.",
+      "D. El coste del trabajo realizado hasta la fecha."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T4-EXTRA-Q03-Pregunta: La estimación ascendente utiliza:",
+    "opciones": [
+      "A. Se utiliza para imputar las horas realmente dedicadas en la fase de ejecución.",
+      "B. Utiliza parámetros estadísticos y simulaciones de Montecarlo.",
+      "C. Datos de proyectos similares.",
+      "D. La suma de los costes individuales de cada actividad y paquetes de trabajo."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "API-T4-EXTRA-Q04-Pregunta: ¿Cuál de los siguientes ítems será el menos utilizado para comenzar a estimar los costes de las actividades de un proyecto?",
+    "opciones": [
+      "A. Cronograma del proyecto.",
+      "B. Plan de gestión de costes.",
+      "C. Registro de riesgos.",
+      "D. Línea base del coste."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "API-T4-EXTRA-Q05-Pregunta: Si el valor ganado (EV) es de 400, el coste real (AC) es de 450 y el valor planificado (PV) es de 300, ¿cuál es la variación del coste?",
+    "opciones": [
+      "A. 100",
+      "B. -100",
+      "C. -50",
+      "D. 50"
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T4-EXTRA-Q06-Pregunta: Realizando el control de los costos de un proyecto que supera los 20 millones de euros, el principal resultado que obtendrá de este proceso será:",
+    "opciones": [
+      "A. Presupuesto.",
+      "B. Costes estimados de las actividades.",
+      "C. Requisitos de financiamiento.",
+      "D. Coste estimado a la conclusión."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "API-T4-EXTRA-Q07-Pregunta: ¿Qué significa la estimación análoga de costes?",
+    "opciones": [
+      "A. Sumar costes de arriba hacia abajo.",
+      "B. Sumar costes de abajo hacia arriba.",
+      "C. Agregar una reserva de coste adicional para contingencias.",
+      "D. Utilizar costes de proyectos históricos similares para estimar costes futuros."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "API-T4-EXTRA-Q08-Pregunta: El director del proyecto junto a su equipo establecieron la línea base de un proyecto industrial en 105 millones de euros y un plazo estimado de 3 años. ¿En qué caso sería aceptable cambiar la línea base cuando el proyecto esté en ejecución?",
+    "opciones": [
+      "A. La empresa contratista ha incrementado su presupuesto para la gestión de calidad en un 50%.",
+      "B. El cliente y el patrocinador han autorizado un cambio en el alcance del proyecto por 25,000 euros.",
+      "C. La productividad en el departamento de ingeniería está siendo un 30% inferior a lo esperado.",
+      "D. El precio de varios productos que utiliza el proyecto se ha incrementado un 45%."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T4-EXTRA-Q09-Pregunta: El valor planificado para la actividad A es de 600 euros (50% completado, AC 200). La actividad B valor 400 euros (75% avance, AC 350). La actividad C valor 100 euros (100% finalizado, AC 100). ¿Cuál es el índice de desempeño del coste (CPI)?",
+    "opciones": [
+      "A. 700 / 1100",
+      "B. 700 / 650",
+      "C. 650 / 700",
+      "D. 1100 / 700"
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T4-EXTRA-Q10-Pregunta: ¿Cuál de los siguientes proyectos tiene mejores índices de rendimiento?\nProyecto A: CPI 1,05 / SPI 0,90\nProyecto B: CPI 0,90 / SPI 1,20\nProyecto C: CPI 1,10 / SPI 1,20\nProyecto D: CPI 0,85 / SPI 0,95",
+    "opciones": [
+      "A. Proyecto B.",
+      "B. Proyecto D.",
+      "C. Proyecto A.",
+      "D. Proyecto C."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "API-T4-EXTRA-Q11-Pregunta: Quiere realizar un viaje en automóvil y conoce que la distancia a recorrer es de 1100 km, que el precio actual de la gasolina es de 1 euro/litro y que su vehículo consume 10 litros cada 100 km. ¿Qué técnica de estimación estaría utilizando?",
+    "opciones": [
+      "A. Análoga.",
+      "B. Definitiva.",
+      "C. Por orden de magnitud (ROM).",
+      "D. Paramétrica."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "API-T4-EXTRA-Q12-Pregunta: El director de proyectos ha decidido mejorar los procesos de planificación, seguimiento y control. ¿Qué herramienta utilizará para evaluar la eficiencia en el progreso del cronograma?",
+    "opciones": [
+      "A. Estimación hasta la conclusión.",
+      "B. Índice de desempeño del cronograma.",
+      "C. Diagrama de Gantt.",
+      "D. Variación del cronograma."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T4-EXTRA-Q13-Pregunta: El director de un proyecto de consultoría informática debe calcular el presupuesto de ese proyecto. ¿Cuál de las siguientes afirmaciones es FALSA?",
+    "opciones": [
+      "A. El presupuesto del proyecto generalmente incluye una reserva para contingencias.",
+      "B. La cuenta de control estará a un nivel de jerarquía superior a los paquetes de trabajo.",
+      "C. La reserva de gestión se tiene en cuenta en los cálculos del valor ganado.",
+      "D. El presupuesto del proyecto puede incluir una reserva de gestión para imprevistos."
+    ],
+    "solucion": "C"
   }
 ]
