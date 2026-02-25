@@ -53,10 +53,14 @@ async function cargarPreguntasDesdeJSON() {
 }
 
 // Configuración del modo examen
-// Temas: 1, 2, 3, 4, 5, 6
-const TEMAS_EXAMEN = [1, 2, 3, 4, 5, 6];
-const PREGUNTAS_POR_TEMA_EXAMEN = 4;
-const TOTAL_PREGUNTAS_EXAMEN = 25;
+// Formato oficial: 30 preguntas, 75 minutos
+const TOTAL_PREGUNTAS_EXAMEN = 30;
+const TIEMPO_EXAMEN_MINUTOS = 75;
+const PARCIALES_EXAMEN = {
+    parcial1: [1, 2, 3, 4],
+    parcial2: [5, 6],
+    parcial3: [7]
+};
 
 // Sistema de almacenamiento de preguntas falladas
 class GestorFallos {
@@ -202,16 +206,19 @@ class ConfiguracionApp {
             this.config = data ? JSON.parse(data) : {
               ordenarPorTema: false,
               temasSeleccionados: [1, 2, 3, 4, 5, 6],
+                            parcialExamen: 'parcial1',
               perfilActual: 'default',
               perfiles: {}
             };
             // Asegurar que existan las nuevas propiedades
             if (!this.config.perfilActual) this.config.perfilActual = 'default';
             if (!this.config.perfiles) this.config.perfiles = {};
+                        if (!this.config.parcialExamen) this.config.parcialExamen = 'parcial1';
         } catch (e) {
             this.config = {
               ordenarPorTema: false,
               temasSeleccionados: [1, 2, 3, 4, 5, 6],
+                            parcialExamen: 'parcial1',
               perfilActual: 'default',
               perfiles: {}
             };
@@ -252,7 +259,7 @@ class SimuladorExamen {
         this.respuestas = {};
         this.sinResponder = new Set(); // Para marcar preguntas sin responder
         this.tiempoInicio = Date.now();
-        this.tiempoLimiteMs = this.modo === 'examen' ? 25 * 60 * 1000 : null;
+        this.tiempoLimiteMs = this.modo === 'examen' ? TIEMPO_EXAMEN_MINUTOS * 60 * 1000 : null;
         this.timerId = null;
         this.bloqueadoPorTiempo = false;
         this.erroresDelTest = []; // Para guardar errores del test actual
@@ -275,6 +282,11 @@ class SimuladorExamen {
         if (this.modo === 'examen') {
             // Modo examen: siempre 50 preguntas, 10 de cada uno de los 5 temas
             this.preguntas = this.seleccionarPreguntasExamen();
+            if (!this.preguntas || this.preguntas.length < TOTAL_PREGUNTAS_EXAMEN) {
+                alert('No hay suficientes preguntas para generar este parcial de examen (se requieren 30).');
+                this.reiniciar();
+                return;
+            }
         } else if (this.modo === 'fallos') {
             // Modo fallos: todas las preguntas falladas guardadas
             this.preguntas = gestorFallos.obtenerFallos();
@@ -653,11 +665,51 @@ class SimuladorExamen {
 
     extraerTema(pregunta) {
         // Busca el patrón -T1-, -T2-, etc.
-        const match = pregunta.cuestion.match(/-T([1-6])-/i);
+        const match = pregunta.cuestion.match(/-T([1-7])-/i);
         if (match && match[1]) {
             return parseInt(match[1]);
         }
         return null;
+    }
+
+    esPreguntaConTabla(pregunta) {
+        return typeof pregunta?.cuestion === 'string' && /\n[^\n]*\|[^\n]*/.test(pregunta.cuestion);
+    }
+
+    esTablaTema3(pregunta) {
+        return this.extraerTema(pregunta) === 3 && this.esPreguntaConTabla(pregunta);
+    }
+
+    obtenerTemasExamen() {
+        const parcial = configuracion.get('parcialExamen') || 'parcial1';
+        return PARCIALES_EXAMEN[parcial] || PARCIALES_EXAMEN.parcial1;
+    }
+
+    seleccionarTema3ConUnaTabla(preguntasTema3, cantidad) {
+        if (cantidad <= 0) return [];
+
+        const tablas = preguntasTema3.filter(p => this.esTablaTema3(p));
+        const sinTabla = preguntasTema3.filter(p => !this.esTablaTema3(p));
+
+        let seleccion = [];
+        let grupoDependenciaPermitido = null;
+
+        if (tablas.length > 0) {
+            const tablaElegida = this.sample(tablas, 1)[0];
+            seleccion.push(tablaElegida);
+            grupoDependenciaPermitido = this.obtenerGrupoDependencia(tablaElegida);
+        }
+
+        const sinTablaPermitidas = sinTabla.filter(p => {
+            const grupo = this.obtenerGrupoDependencia(p);
+            if (!grupo) return true;
+            return grupoDependenciaPermitido != null && grupo === grupoDependenciaPermitido;
+        });
+
+        const faltan = Math.max(0, cantidad - seleccion.length);
+        seleccion.push(...this.sample(sinTablaPermitidas, faltan));
+
+        return seleccion.slice(0, cantidad);
     }
 
     barajar(array) {
@@ -721,33 +773,54 @@ class SimuladorExamen {
     }
 
     seleccionarPreguntasExamen() {
-        // Modo examen: SIEMPRE 50 preguntas, 10 de cada uno de los 5 temas, orden aleatorio
+        // Modo examen oficial: 30 preguntas, parcial configurable
         const pool = PREGUNTAS_COMPLETAS.filter(p => !this.esGaitero(p));
+        const temasExamen = this.obtenerTemasExamen();
+        const poolParcial = pool.filter(p => temasExamen.includes(this.extraerTema(p)));
+
+        if (poolParcial.length < TOTAL_PREGUNTAS_EXAMEN) {
+            return [];
+        }
 
         const grupos = new Map();
-        for (const pregunta of pool) {
+        for (const pregunta of poolParcial) {
             const tema = this.extraerTema(pregunta);
             if (tema === null) continue;
             if (!grupos.has(tema)) grupos.set(tema, []);
             grupos.get(tema).push(pregunta);
         }
 
-        const temasExamen = [1, 2, 3, 4, 5, 6]; // Siempre los 6 temas
         const seleccion = [];
         const seleccionSet = new Set();
 
-        for (const tema of temasExamen) {
+        const preguntasPorTemaBase = Math.floor(TOTAL_PREGUNTAS_EXAMEN / temasExamen.length);
+        const extras = TOTAL_PREGUNTAS_EXAMEN % temasExamen.length;
+
+        temasExamen.forEach((tema, indiceTema) => {
             const preguntasTema = grupos.get(tema) ?? [];
-            const elegidas = this.sample(preguntasTema, PREGUNTAS_POR_TEMA_EXAMEN);
+            const cuotaTema = preguntasPorTemaBase + (indiceTema < extras ? 1 : 0);
+
+            let elegidas = [];
+            if (tema === 3) {
+                elegidas = this.seleccionarTema3ConUnaTabla(preguntasTema, cuotaTema);
+            } else {
+                elegidas = this.sample(preguntasTema, cuotaTema);
+            }
+
             for (const p of elegidas) {
                 seleccion.push(p);
-                seleccionSet.add(p);
+                seleccionSet.add(p.cuestion);
             }
-        }
+        });
 
-        // Si no llegamos a 50, completar con preguntas aleatorias
+        // Completar hasta 30 desde el parcial (evitar tablas extra de T3)
         if (seleccion.length < TOTAL_PREGUNTAS_EXAMEN) {
-            const restantes = pool.filter(p => !seleccionSet.has(p));
+            const yaTieneTablaT3 = seleccion.some(p => this.esTablaTema3(p));
+            const restantes = poolParcial.filter(p => {
+                if (seleccionSet.has(p.cuestion)) return false;
+                if (yaTieneTablaT3 && this.esTablaTema3(p)) return false;
+                return true;
+            });
             const faltan = TOTAL_PREGUNTAS_EXAMEN - seleccion.length;
             seleccion.push(...this.sample(restantes, faltan));
         }
@@ -755,8 +828,27 @@ class SimuladorExamen {
         const seleccionNormalizada = this.normalizarSeleccionConDependencias(
             seleccion,
             TOTAL_PREGUNTAS_EXAMEN,
-            pool
+            poolParcial.length > 0 ? poolParcial : pool
         );
+
+        // Regla oficial interna: en T3 debe aparecer exactamente 1 ejercicio con tabla
+        const tablasT3 = seleccionNormalizada.filter(p => this.esTablaTema3(p));
+        if (temasExamen.includes(3) && tablasT3.length > 1) {
+            const primeraTabla = tablasT3[0];
+            const filtrada = seleccionNormalizada.filter(p => !this.esTablaTema3(p) || p.cuestion === primeraTabla.cuestion);
+
+            const restantesSinTablaT3 = this.barajar(
+                (poolParcial.length > 0 ? poolParcial : pool).filter(p =>
+                    !filtrada.some(s => s.cuestion === p.cuestion) && !this.esTablaTema3(p)
+                )
+            );
+
+            while (filtrada.length < TOTAL_PREGUNTAS_EXAMEN && restantesSinTablaT3.length > 0) {
+                filtrada.push(restantesSinTablaT3.shift());
+            }
+
+            return this.barajarRespetandoDependencias(filtrada).slice(0, TOTAL_PREGUNTAS_EXAMEN);
+        }
 
         // Orden aleatorio final, respetando bloques de dependencia
         return this.barajarRespetandoDependencias(seleccionNormalizada).slice(0, TOTAL_PREGUNTAS_EXAMEN);
@@ -840,6 +932,8 @@ class SimuladorExamen {
         const progreso = ((this.preguntaActual + 1) / this.preguntas.length) * 100;
         document.getElementById('progresoBarra').style.width = progreso + '%';
         document.getElementById('numeroPregunta').textContent = this.preguntaActual + 1;
+        const totalPreguntasActual = document.getElementById('totalPreguntasActual');
+        if (totalPreguntasActual) totalPreguntasActual.textContent = this.preguntas.length;
 
         if (this.modo === 'practica' && this.respuestas.hasOwnProperty(this.preguntaActual)) {
             this.aplicarFeedback();
@@ -1033,16 +1127,15 @@ class SimuladorExamen {
             }
         });
 
-        const incorrectas = Object.keys(this.respuestas).length - correctas;
-        const sinResponder = this.preguntas.length - Object.keys(this.respuestas).length;
-        
-        // Fórmula (examen real): (Correctas - Incorrectas/3) / Total de preguntas × 10
-        // 3 preguntas mal restan 1 bien.
-        // IMPORTANTE: Solo contar las preguntas respondidas para el cálculo de puntuación
-        const preguntasContadas = Object.keys(this.respuestas).length;
-        const puntuacionRaw = correctas - (incorrectas / 3);
-        const puntuacionFinal = preguntasContadas > 0 
-            ? Math.max(0, Math.min(10, (puntuacionRaw / preguntasContadas) * 10))
+        const respondidas = Object.keys(this.respuestas).length;
+        const incorrectas = respondidas - correctas;
+        const sinResponder = this.preguntas.length - respondidas;
+
+        // Fórmula oficial (imagen): NE = (10 / (NPV - 2)) * (NC - 2)
+        const npv = this.preguntas.length;
+        const nc = correctas;
+        const puntuacionFinal = npv > 2
+            ? Math.max(0, Math.min(10, (10 / (npv - 2)) * (nc - 2)))
             : 0;
 
         document.getElementById('respuestasCorrectas').textContent = correctas;
@@ -1300,7 +1393,7 @@ function importarFallosDesdeArchivo(event) {
 }
 
 function toggleTema(numeroTema) {
-    let temasSeleccionados = configuracion.get('temasSeleccionados') || [1, 2, 3, 4, 5];
+    let temasSeleccionados = configuracion.get('temasSeleccionados') || [1, 2, 3, 4, 5, 6];
     
     if (temasSeleccionados.includes(numeroTema)) {
         // Si ya está seleccionado, quitarlo
@@ -1344,6 +1437,18 @@ function actualizarDistribucion() {
     if (infoDiv) {
         infoDiv.textContent = texto;
     }
+}
+
+function cambiarParcialExamen() {
+    const select = document.getElementById('parcialExamenSelect');
+    if (!select) return;
+    configuracion.set('parcialExamen', select.value);
+}
+
+function actualizarParcialExamenUI() {
+    const select = document.getElementById('parcialExamenSelect');
+    if (!select) return;
+    select.value = configuracion.get('parcialExamen') || 'parcial1';
 }
 
 function actualizarTemasUI() {
@@ -1509,11 +1614,14 @@ window.addEventListener('DOMContentLoaded', async () => {
     document.getElementById('seleccionModo').classList.remove('oculto');
     document.getElementById('modoActual').textContent = '-';
     document.getElementById('tiempoTranscurrido').textContent = 'Tiempo: 0:00';
+    const totalPreguntasActual = document.getElementById('totalPreguntasActual');
+    if (totalPreguntasActual) totalPreguntasActual.textContent = '25';
     
     mostrarTotalPreguntas();
     cargarPerfiles();
     actualizarContadorFallos();
     actualizarConfigUI();
+    actualizarParcialExamenUI();
     actualizarTemasUI();
 });
 
