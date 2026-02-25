@@ -89,6 +89,7 @@ body {
     margin-bottom: 20px;
     line-height: 1.6;
     color: #e0e0e0;
+    white-space: pre-line;
 }
 
 .opciones {

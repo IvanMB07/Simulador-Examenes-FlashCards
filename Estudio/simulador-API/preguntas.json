@@ -2202,14 +2202,14 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T3-02- Pregunta: Sobre la base de lo siguiente, si necesitaras acortar la duración del proyecto, ¿qué actividad intentarías reducir para acortarlo? Actividades: Inicio (ninguna, 0), A (Inicio, 1), B (Inicio, 2), C (Inicio, 6), D (A, 10), E (B,C, 1), F (C, 2), G (D, 3), H (E, 9), I (F, 1), Fin (G,H,I, 0).",
+    "cuestion": "API-T3-02- Pregunta: Sobre la base de lo siguiente, si necesitaras acortar la duración del proyecto, ¿qué actividad intentarías reducir para acortarlo?\n\nActividad | Actividad anterior | Duración (sem)\nInicio    | Ninguna            | 0\nA         | Inicio             | 1\nB         | Inicio             | 2\nC         | Inicio             | 6\nD         | A                  | 10\nE         | B, C               | 1\nF         | C                  | 2\nG         | D                  | 3\nH         | E                  | 9\nI         | F                  | 1\nFin       | G, H, I            | 0",
     "opciones": [
       "A. Actividad H.",
       "B. Actividad B.",
       "C. Actividad D.",
       "D. Actividad C."
     ],
-    "solucion": "C"
+    "solucion": "D"
   },
   {
     "cuestion": "API-T3-03- Pregunta: Si el estimado optimista para una actividad es de 12 días y el estimado pesimista es de 18 días, ¿cuál es la desviación estándar de esta actividad?",
