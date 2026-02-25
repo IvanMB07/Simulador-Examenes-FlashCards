@@ -689,6 +689,21 @@ class SimuladorExamen {
         return this.extraerTema(pregunta) === 3 && this.esPreguntaConTabla(pregunta);
     }
 
+    esPracticaTema4(pregunta) {
+        if (this.extraerTema(pregunta) !== 4 || typeof pregunta?.cuestion !== 'string') {
+            return false;
+        }
+
+        const texto = pregunta.cuestion.toLowerCase();
+        const tieneNumeros = /\d/.test(texto);
+        const patronesPracticos = [
+            'calcula', 'cálculo', 'indice', 'índice', 'variación', 'valor ganado',
+            'cpi', 'spi', 'ev', 'ac', 'pv', 'eac', 'bac'
+        ];
+
+        return tieneNumeros || patronesPracticos.some(patron => texto.includes(patron));
+    }
+
     obtenerTemasExamen() {
         const parcial = configuracion.get('parcialExamen') || 'parcial1';
         return PARCIALES_EXAMEN[parcial] || PARCIALES_EXAMEN.parcial1;
@@ -704,7 +719,9 @@ class SimuladorExamen {
         let grupoDependenciaPermitido = null;
 
         if (tablas.length > 0) {
-            const tablaElegida = this.sample(tablas, 1)[0];
+            const tablasConGrupo = tablas.filter(p => this.obtenerGrupoDependencia(p));
+            const candidatasTabla = tablasConGrupo.length > 0 ? tablasConGrupo : tablas;
+            const tablaElegida = this.sample(candidatasTabla, 1)[0];
             seleccion.push(tablaElegida);
             grupoDependenciaPermitido = this.obtenerGrupoDependencia(tablaElegida);
         }
@@ -717,6 +734,24 @@ class SimuladorExamen {
 
         const faltan = Math.max(0, cantidad - seleccion.length);
         seleccion.push(...this.sample(sinTablaPermitidas, faltan));
+
+        return seleccion.slice(0, cantidad);
+    }
+
+    seleccionarTema4ConUnaPractica(preguntasTema4, cantidad) {
+        if (cantidad <= 0) return [];
+
+        const practicas = preguntasTema4.filter(p => this.esPracticaTema4(p));
+        const noPracticas = preguntasTema4.filter(p => !this.esPracticaTema4(p));
+
+        const seleccion = [];
+        if (practicas.length > 0) {
+            seleccion.push(this.sample(practicas, 1)[0]);
+        }
+
+        const restantes = [...noPracticas, ...practicas.filter(p => !seleccion.some(s => s.cuestion === p.cuestion))];
+        const faltan = Math.max(0, cantidad - seleccion.length);
+        seleccion.push(...this.sample(restantes, faltan));
 
         return seleccion.slice(0, cantidad);
     }
@@ -812,6 +847,8 @@ class SimuladorExamen {
             let elegidas = [];
             if (tema === 3) {
                 elegidas = this.seleccionarTema3ConUnaTabla(preguntasTema, cuotaTema);
+            } else if (tema === 4 && temasExamen.length > 0 && temasExamen.includes(3) && temasExamen.includes(4)) {
+                elegidas = this.seleccionarTema4ConUnaPractica(preguntasTema, cuotaTema);
             } else {
                 elegidas = this.sample(preguntasTema, cuotaTema);
             }
@@ -840,6 +877,14 @@ class SimuladorExamen {
             poolParcial.length > 0 ? poolParcial : pool
         );
 
+        const validarRequisitosParcial1 = (lista) => {
+            const esParcial1 = temasExamen.includes(3) && temasExamen.includes(4);
+            if (!esParcial1) return true;
+            const tieneTablaTema3 = lista.some(p => this.esTablaTema3(p));
+            const tienePracticaTema4 = lista.some(p => this.esPracticaTema4(p));
+            return tieneTablaTema3 && tienePracticaTema4;
+        };
+
         // Regla oficial interna: en T3 debe aparecer exactamente 1 ejercicio con tabla
         const tablasT3 = seleccionNormalizada.filter(p => this.esTablaTema3(p));
         if (temasExamen.includes(3) && tablasT3.length > 1) {
@@ -856,11 +901,13 @@ class SimuladorExamen {
                 filtrada.push(restantesSinTablaT3.shift());
             }
 
-            return this.barajarRespetandoDependencias(filtrada).slice(0, TOTAL_PREGUNTAS_EXAMEN);
+            const finalFiltrada = this.barajarRespetandoDependencias(filtrada).slice(0, TOTAL_PREGUNTAS_EXAMEN);
+            return validarRequisitosParcial1(finalFiltrada) ? finalFiltrada : [];
         }
 
         // Orden aleatorio final, respetando bloques de dependencia
-        return this.barajarRespetandoDependencias(seleccionNormalizada).slice(0, TOTAL_PREGUNTAS_EXAMEN);
+        const final = this.barajarRespetandoDependencias(seleccionNormalizada).slice(0, TOTAL_PREGUNTAS_EXAMEN);
+        return validarRequisitosParcial1(final) ? final : [];
     }
 
     mostrarPregunta() {
@@ -927,10 +974,8 @@ class SimuladorExamen {
         const btnNoResponder = document.getElementById('btnNoResponder');
 
         if (this.modo === 'examen') {
-            // En modo examen: permitir volver atrás dentro del bloque (cada 10 preguntas)
-            const inicioBloque = Math.floor(this.preguntaActual / 10) * 10;
             btnAnterior.classList.remove('oculto');
-            btnAnterior.disabled = this.preguntaActual === inicioBloque;
+            btnAnterior.disabled = this.preguntaActual === 0;
         } else {
             btnAnterior.classList.remove('oculto');
             btnAnterior.disabled = this.preguntaActual === 0;
@@ -1063,18 +1108,9 @@ class SimuladorExamen {
     }
 
     anterior() {
-        if (this.modo === 'examen') {
-            // Permitir ir atrás dentro del bloque (cada 10 preguntas)
-            const inicioBloque = Math.floor(this.preguntaActual / 10) * 10;
-            if (this.preguntaActual > inicioBloque) {
-                this.preguntaActual--;
-                this.mostrarPregunta();
-            }
-        } else {
-            if (this.preguntaActual > 0) {
-                this.preguntaActual--;
-                this.mostrarPregunta();
-            }
+        if (this.preguntaActual > 0) {
+            this.preguntaActual--;
+            this.mostrarPregunta();
         }
     }
 
