@@ -406,6 +406,7 @@ class SimuladorExamen {
     seleccionarPreguntasPractica(temasSeleccionados, ordenarPorTema = false) {
         const pool = PREGUNTAS_COMPLETAS.filter(p => !this.esGaitero(p));
         const totalPreguntas = 25;
+        const poolTemasSeleccionados = pool.filter(p => temasSeleccionados.includes(this.extraerTema(p)));
         
         // Agrupar preguntas por tema
         const grupos = new Map();
@@ -443,7 +444,17 @@ class SimuladorExamen {
             seleccion.push(...this.barajar(preguntasPorTemaTemporal));
         }
 
-        return seleccion.slice(0, totalPreguntas);
+        const seleccionNormalizada = this.normalizarSeleccionConDependencias(
+            seleccion,
+            totalPreguntas,
+            poolTemasSeleccionados
+        );
+
+        if (ordenarPorTema) {
+            return seleccionNormalizada;
+        }
+
+        return this.barajarRespetandoDependencias(seleccionNormalizada);
     }
 
     seleccionarPreguntas(cantidad, ordenarPorTema = false) {
@@ -472,6 +483,168 @@ class SimuladorExamen {
 
     esGaitero(pregunta) {
         return /gaitero/i.test(pregunta.cuestion);
+    }
+
+    obtenerGrupoDependencia(pregunta) {
+        if (!pregunta || !pregunta.grupoDependencia) return null;
+        return pregunta.mantenerJuntas === false ? null : String(pregunta.grupoDependencia);
+    }
+
+    ordenarPreguntasDeGrupo(preguntas) {
+        return [...preguntas].sort((a, b) => {
+            const ordenA = Number.isFinite(a.ordenGrupo) ? a.ordenGrupo : Number.MAX_SAFE_INTEGER;
+            const ordenB = Number.isFinite(b.ordenGrupo) ? b.ordenGrupo : Number.MAX_SAFE_INTEGER;
+            if (ordenA !== ordenB) return ordenA - ordenB;
+            return a.cuestion.localeCompare(b.cuestion, 'es');
+        });
+    }
+
+    construirMapaGrupos(pool) {
+        const grupos = new Map();
+        for (const pregunta of pool) {
+            const grupo = this.obtenerGrupoDependencia(pregunta);
+            if (!grupo) continue;
+            if (!grupos.has(grupo)) grupos.set(grupo, []);
+            grupos.get(grupo).push(pregunta);
+        }
+        for (const [id, preguntas] of grupos.entries()) {
+            grupos.set(id, this.ordenarPreguntasDeGrupo(preguntas));
+        }
+        return grupos;
+    }
+
+    compactarDependenciasEnOrden(lista) {
+        const resultado = [];
+        const gruposAñadidos = new Set();
+        const preguntasAñadidas = new Set();
+
+        for (const pregunta of lista) {
+            const clave = pregunta.cuestion;
+            if (preguntasAñadidas.has(clave)) continue;
+
+            const grupo = this.obtenerGrupoDependencia(pregunta);
+            if (!grupo) {
+                resultado.push(pregunta);
+                preguntasAñadidas.add(clave);
+                continue;
+            }
+
+            if (gruposAñadidos.has(grupo)) continue;
+
+            gruposAñadidos.add(grupo);
+            const bloque = this.ordenarPreguntasDeGrupo(
+                lista.filter(p => this.obtenerGrupoDependencia(p) === grupo)
+            );
+
+            for (const item of bloque) {
+                const itemClave = item.cuestion;
+                if (preguntasAñadidas.has(itemClave)) continue;
+                resultado.push(item);
+                preguntasAñadidas.add(itemClave);
+            }
+        }
+
+        return resultado;
+    }
+
+    normalizarSeleccionConDependencias(seleccionInicial, totalObjetivo, poolBase) {
+        const mapaGrupos = this.construirMapaGrupos(poolBase);
+        const seleccionOrdenada = this.compactarDependenciasEnOrden(seleccionInicial);
+
+        const preguntasSeleccionadas = new Set(seleccionOrdenada.map(p => p.cuestion));
+        const gruposRequeridos = new Set();
+
+        for (const pregunta of seleccionOrdenada) {
+            const grupo = this.obtenerGrupoDependencia(pregunta);
+            if (grupo) gruposRequeridos.add(grupo);
+        }
+
+        const resultado = [];
+        const resultadoSet = new Set();
+
+        const añadirPregunta = (pregunta) => {
+            if (!pregunta) return;
+            if (resultadoSet.has(pregunta.cuestion)) return;
+            resultado.push(pregunta);
+            resultadoSet.add(pregunta.cuestion);
+        };
+
+        const añadirGrupoCompleto = (grupoId) => {
+            const preguntasGrupo = mapaGrupos.get(grupoId) || [];
+            for (const pregunta of preguntasGrupo) {
+                añadirPregunta(pregunta);
+            }
+        };
+
+        for (const pregunta of seleccionOrdenada) {
+            const grupo = this.obtenerGrupoDependencia(pregunta);
+            if (grupo) {
+                añadirGrupoCompleto(grupo);
+            } else {
+                añadirPregunta(pregunta);
+            }
+        }
+
+        if (resultado.length > totalObjetivo) {
+            const clavesProtegidas = new Set();
+            for (const grupo of gruposRequeridos) {
+                for (const pregunta of mapaGrupos.get(grupo) || []) {
+                    clavesProtegidas.add(pregunta.cuestion);
+                }
+            }
+
+            for (let i = resultado.length - 1; i >= 0 && resultado.length > totalObjetivo; i--) {
+                const pregunta = resultado[i];
+                if (clavesProtegidas.has(pregunta.cuestion)) continue;
+                resultadoSet.delete(pregunta.cuestion);
+                resultado.splice(i, 1);
+            }
+        }
+
+        if (resultado.length < totalObjetivo) {
+            const disponibles = this.barajar(poolBase.filter(p => !resultadoSet.has(p.cuestion)));
+
+            for (const candidata of disponibles) {
+                if (resultado.length >= totalObjetivo) break;
+
+                const grupo = this.obtenerGrupoDependencia(candidata);
+                if (!grupo) {
+                    añadirPregunta(candidata);
+                    continue;
+                }
+
+                const preguntasGrupo = mapaGrupos.get(grupo) || [];
+                const faltantesGrupo = preguntasGrupo.filter(p => !resultadoSet.has(p.cuestion));
+                if (faltantesGrupo.length === 0) continue;
+                if (resultado.length + faltantesGrupo.length > totalObjetivo) continue;
+
+                for (const pregunta of faltantesGrupo) {
+                    añadirPregunta(pregunta);
+                }
+            }
+        }
+
+        return this.compactarDependenciasEnOrden(resultado).slice(0, totalObjetivo);
+    }
+
+    barajarRespetandoDependencias(array) {
+        const compactadas = this.compactarDependenciasEnOrden(array);
+        const bloques = [];
+        const gruposAñadidos = new Set();
+
+        for (const pregunta of compactadas) {
+            const grupo = this.obtenerGrupoDependencia(pregunta);
+            if (!grupo) {
+                bloques.push([pregunta]);
+                continue;
+            }
+
+            if (gruposAñadidos.has(grupo)) continue;
+            gruposAñadidos.add(grupo);
+            bloques.push(compactadas.filter(p => this.obtenerGrupoDependencia(p) === grupo));
+        }
+
+        return this.barajar(bloques).flat();
     }
 
     extraerTema(pregunta) {
@@ -575,8 +748,14 @@ class SimuladorExamen {
             seleccion.push(...this.sample(restantes, faltan));
         }
 
-        // Orden aleatorio final
-        return this.barajar(seleccion).slice(0, TOTAL_PREGUNTAS_EXAMEN);
+        const seleccionNormalizada = this.normalizarSeleccionConDependencias(
+            seleccion,
+            TOTAL_PREGUNTAS_EXAMEN,
+            pool
+        );
+
+        // Orden aleatorio final, respetando bloques de dependencia
+        return this.barajarRespetandoDependencias(seleccionNormalizada).slice(0, TOTAL_PREGUNTAS_EXAMEN);
     }
 
     mostrarPregunta() {

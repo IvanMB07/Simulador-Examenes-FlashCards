@@ -789,7 +789,6 @@
     ],
     "solucion": "B"
   },
-  
   {
     "cuestion": "API-T1-01-Pregunta: Según el Triángulo del Talento del PMI, ¿qué habilidad se refiere al conocimiento de la estrategia, misión y objetivos de la organización?",
     "opciones": [
@@ -1390,7 +1389,6 @@
     ],
     "solucion": "B"
   },
-  
   {
     "cuestion": "API-T1-100-Q01-Pregunta: ¿Cuál es el objetivo principal de la Gestión de Operaciones en comparación con la Gestión de Proyectos?",
     "opciones": [
@@ -2309,7 +2307,7 @@
       "C. La desviación estándar te dice qué tan incierta es una estimación.",
       "D. La desviación estándar te dice si la estimación incluye un relleno (padding)."
     ],
-    "solucion": "B"
+    "solucion": "C"
   },
   {
     "cuestion": "API-T3-13-Pregunta: Una actividad tiene un inicio temprano (ES) del día 3, un inicio tardío (LS) del día 13, una finalización temprana (EF) del día 9 y una finalización tardía (LF) del día 19. La actividad:",
@@ -2630,5 +2628,320 @@
       "D. Es exactamente lo mismo que el suavizado de recursos."
     ],
     "solucion": "C"
+  },
+  {
+    "cuestion": "API-T1-EX26-Q01-Pregunta: Estás dirigiendo un proyecto de diseño de sistemas de control por microprocesador. Se estima que el trabajo de diseño se completará en 4 meses, con siete hitos. El sexto hito es el prototipo que se entregará a fabricación. Todos los hitos anteriores se completaron antes de lo previsto, pero el sexto se ha retrasado 3 meses porque el prototipo se ha devuelto varias veces por conflictos entre departamentos. Tienes previsto celebrar una reunión para revisar especificaciones y tratar conflictos entre diseño y fabricación. ¿Quién tiene principalmente la culpa?",
+    "opciones": [
+      "A. Los responsables de los departamentos de diseño y fabricación.",
+      "B. El patrocinador.",
+      "C. El director del proyecto.",
+      "D. El encargado de la planificación de calendario."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T1-EX26-Q02-Pregunta: Estás dirigiendo un proyecto de diseño e instalación de un sistema para el control de presión de fuselaje de aviones. El departamento de ingeniería debe enviarte antes los requisitos de material para encargarlo por adquisiciones. Este es un ejemplo de:",
+    "opciones": [
+      "A. Restricción.",
+      "B. Dependencia obligatoria.",
+      "C. Suposición.",
+      "D. Dependencia discrecional."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-EX26-Q03-Pregunta: ¿Cuál de las siguientes relaciones de precedencia es la menos usada comúnmente en gestión de proyectos?",
+    "opciones": [
+      "A. Fin-Comienzo.",
+      "B. Comienzo-Fin.",
+      "C. Comienzo-Comienzo.",
+      "D. Fin-Fin."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-EX26-Q04-Pregunta: Durante una reunión semanal de seguimiento, un miembro del equipo sugiere añadir un componente al proyecto para mejorar su nivel de seguridad, ante los continuos ataques de ciberseguridad del sector. Como director del proyecto, ¿qué haces?",
+    "opciones": [
+      "A. Evalúas alternativas para implementar el cambio.",
+      "B. Indicas que toda la atención debe centrarse en el alcance actual y debe evitarse incorporar funcionalidades no solicitadas.",
+      "C. Te reúnes con el patrocinador para analizar el impacto que dicho componente tendría en el proyecto.",
+      "D. Validas el alcance para asegurarte de que dicho componente puede integrarse adecuadamente."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-EX26-Q05-Pregunta: Has oído por casualidad a dos directores funcionales discutir sobre las repercusiones que tu proyecto tendrá en sus departamentos. ¿Cuál es tu mejor respuesta?",
+    "opciones": [
+      "A. Analizar y comunicar a cada responsable el impacto que el proyecto tendrá en sus departamentos.",
+      "B. No hacer nada porque no han realizado una petición formal de información.",
+      "C. Hacer una solicitud de cambio dirigida a los directores funcionales con los recursos que el proyecto necesitará de dichos departamentos.",
+      "D. Informar a los responsables que pueden consultar dicho impacto en el acta de constitución porque ya se tuvo en cuenta ahí y fue aprobado por el patrocinador."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T1-EX26-Q06-Pregunta: Formas parte del equipo de desarrollo que acaba de cerrar un proyecto sobre un sistema de gestión de recursos humanos con funcionalidades destacadas respecto a la competencia. Sientes incertidumbre sobre tu próximo trabajo dentro de la empresa. Lo más habitual es que formes parte de una organización:",
+    "opciones": [
+      "A. Matricial fuerte.",
+      "B. Funcional.",
+      "C. Orientada a proyectos.",
+      "D. Híbrida."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T1-EX26-Q07-Pregunta: Un miembro de tu equipo te avisa de un problema de integridad de la línea base de alcance. Como consecuencia revisas el proceso que principalmente debe preservar dicha integridad, que es:",
+    "opciones": [
+      "A. Realizar el control integrado de cambios.",
+      "B. Controlar la calidad.",
+      "C. Validar el alcance.",
+      "D. Controlar el alcance."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T1-EX26-Q08-Pregunta: Estás recopilando requisitos con tu equipo de trabajo en un proyecto de álbumes fotográficos online. Estás utilizando las siguientes técnicas (indicar la RESPUESTA INCORRECTA):",
+    "opciones": [
+      "A. Entrevistas.",
+      "B. Estudios comparativos.",
+      "C. Cuestionarios.",
+      "D. Análisis de documentos."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "API-T1-EX26-Q09-Pregunta: Gestionar un proyecto implica recoger requisitos y gestionar expectativas de las partes interesadas, teniendo en cuenta restricciones para entregar el producto o servicio acordado. ¿Cuál de los siguientes elementos NO es una restricción al proyecto?",
+    "opciones": [
+      "A. Riesgo.",
+      "B. Tiempo.",
+      "C. Calidad.",
+      "D. Escala."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "API-T1-EX26-Q11-Pregunta: Estás a mitad de proyecto y los 4 programadores Java prometidos al firmar el acta ya no estarán disponibles para el proyecto, quedando 3 días para comenzar la codificación. Esto puede repercutir en cronograma y otras áreas. Como consecuencia te reúnes con el patrocinador para:",
+    "opciones": [
+      "A. Pedir la cancelación del proyecto.",
+      "B. Informar sobre el impacto que puede tener no contar con los programadores.",
+      "C. Informarle de que has replanificado el proyecto sin contar con dichos recursos.",
+      "D. Exigir disponer de los recursos prometidos o equivalentes en el plazo de 5 días, ya que se trata de un proyecto altamente crítico dentro del programa al que pertenece."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-EX26-Q12-Pregunta: Te han nombrado director del proyecto de construcción de dos bloques de viviendas de protección oficial. Debéis acotar y controlar muy bien los costes para obtener una mínima rentabilidad. Durante la ejecución, dos miembros del equipo discuten sobre si imputar el coste total de una actividad al terminarla o aplicar la regla del 50/50. ¿Qué es lo mejor que puedes hacer?",
+    "opciones": [
+      "A. Consultar el acta de constitución del proyecto.",
+      "B. Consultar el plan de gestión de costes.",
+      "C. Cualquiera de las dos opciones es válida (100% al final o 50/50).",
+      "D. Consultar al director financiero de la empresa."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-EX26-Q13-Pregunta: Acabas de recibir el encargo de dirigir el servicio de atención al cliente de una aplicación software de gestión de clínicas sanitarias en la nube. En el contexto de gestión de proyectos estamos hablando de:",
+    "opciones": [
+      "A. Una operación.",
+      "B. Un proyecto.",
+      "C. Una cartera.",
+      "D. Un programa."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T1-EX26-Q14-Pregunta: Te informan que el módulo software de planificación de calendarios, parte del producto que estás desarrollando, no calcula correctamente la desviación entre información real y prevista. Como resultado emites una solicitud de cambio de tipo:",
+    "opciones": [
+      "A. Preventiva.",
+      "B. Correctiva.",
+      "C. Adaptativa.",
+      "D. Reparación de defectos."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "API-T1-EX26-Q17-Pregunta: Al coste que se ha presupuestado para el trabajo realmente ejecutado hasta la fecha actual se le suele llamar:",
+    "opciones": [
+      "A. Coste real.",
+      "B. Valor planificado.",
+      "C. Valor ganado.",
+      "D. Valor actual."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T1-EX26-Q18-Pregunta: En un nuevo proyecto de desarrollo de una aplicación software de mensajería, te encargas de servir como facilitador para permitir comunicación, colaboración e implicación entre miembros del equipo. Lo más habitual es que tengas que aplicar:",
+    "opciones": [
+      "A. Actividades de liderazgo distribuido.",
+      "B. Actividades de liderazgo centralizado.",
+      "C. Gestión estratégica y de negocios.",
+      "D. Actividades de dirección."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T1-EX26-Q19-Pregunta: Estás discutiendo con el gerente de desarrollo software sobre los procesos del grupo de inicio a considerar en un próximo proyecto. Es cierto que:",
+    "opciones": [
+      "A. Eres un coordinador.",
+      "B. Las áreas de conocimiento afectadas son Integración e Interesados.",
+      "C. Trabajas en una organización matricial fuerte.",
+      "D. Eres un gestor de programas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-EX26-Q20-Pregunta: Dirigir y gestionar la ejecución de un proyecto es un proceso:",
+    "opciones": [
+      "A. Del grupo de ejecución y área de conocimiento de integración.",
+      "B. Del grupo de monitoreo y control y área de conocimiento de integración.",
+      "C. Del grupo de monitoreo y control y área de conocimiento de recursos.",
+      "D. Del grupo de ejecución y área de conocimiento de interesados."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T1-EX26-Q22-Pregunta: La aplicación de estimación de costes Bottom-up suele estar motivada por el tamaño y la complejidad de:",
+    "opciones": [
+      "A. La relación estadística entre datos históricos y otras variables.",
+      "B. El presupuesto del proyecto.",
+      "C. Los paquetes de trabajo.",
+      "D. El software de gestión de proyectos."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T1-EX26-Q23-Pregunta: Estás trabajando con el cronograma del proyecto y un interesado te recuerda incluir una solicitud de cambio aprobada. Tras incluirla, la nueva versión del cronograma tiene recursos sobreasignados. Para cumplir objetivos, el camino crítico no debería alterarse y los costes no deben incrementarse. Como primer paso analizas la parte del cronograma con sobreasignación para:",
+    "opciones": [
+      "A. Satisfacer el cambio identificando actividades que se puedan retrasar dentro de sus límites de holgura libre y total.",
+      "B. Aplicar compresión de la duración.",
+      "C. Aplicar nivelación de recursos.",
+      "D. Modificar los tipos de precedencias de las actividades afectadas."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T1-EX26-Q24-Pregunta: Juan dirige el desarrollo de un sistema de control digital industrial. Mensualmente recibe asignaciones de horas reales de cada departamento, costes reales de recursos materiales y equipamientos, y sobrecostes en ambos. ¿Qué es lo siguiente que debe hacer?",
+    "opciones": [
+      "A. Realizar el control integrado de cambios.",
+      "B. Informar sobre el desempeño.",
+      "C. Controlar los costes.",
+      "D. Monitorizar y controlar el trabajo del proyecto."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T1-EX26-Q25-Pregunta: Un compañero del equipo de dirección de tu nuevo proyecto te dice erróneamente que uno de los principios de dirección de proyectos es:",
+    "opciones": [
+      "A. Adaptabilidad y resiliencia.",
+      "B. Planificación.",
+      "C. Complejidad.",
+      "D. Pensamiento sistémico."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-EX26-Q28-Pregunta: Las técnicas de análisis de datos que se pueden utilizar para estimar los costes son (indicar la respuesta INCORRECTA):",
+    "opciones": [
+      "A. Análisis de reserva.",
+      "B. Análisis de alternativas.",
+      "C. Costes de la calidad.",
+      "D. Estimación por 3 valores."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-EX26-Q30-Pregunta: El equipo de dirección del proyecto ha obtenido varios calendarios posibles, considerando escenarios optimistas, más probables y pesimistas (con mayor probabilidad de riesgos). La técnica usada para esa salida es:",
+    "opciones": [
+      "A. Simulación.",
+      "B. Estimación paramétrica.",
+      "C. Estimación de tres valores.",
+      "D. Análisis de reserva."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T3-EX26-Q10-Pregunta: En base a la tabla del proyecto API (duraciones en días) y usando PERT, ¿cuál es la duración del proyecto?\nActividad | Óptima | Probable | Pésima | Predecesora\nA | 1 | 1 | 1 | -\nB | 1 | 3 | 5 | -\nC | 1 | 3 | 5 | -\nD | 1 | 2 | 9 | A\nE | 1 | 4 | 7 | A\nF | 2 | 3 | 4 | C\nG | 2 | 3 | 4 | E\nH | 2 | 4 | 6 | D, F\nI | 1 | 3 | 11 | D\nJ | 2 | 4 | 6 | B\nK | 1 | 4 | 7 | B, E\nL | 2 | 4 | 6 | H\nM | 2 | 2 | 8 | H, I\nN | 3 | 5 | 7 | J, M",
+    "opciones": [
+      "A. 19",
+      "B. 16",
+      "C. 17",
+      "D. 18"
+    ],
+    "solucion": "D",
+    "grupoDependencia": "API-EX26-BLOQUE2-PERT",
+    "ordenGrupo": 1,
+    "mantenerJuntas": true
+  },
+  {
+    "cuestion": "API-T3-EX26-Q16-Pregunta: En base a la tabla del proyecto API (duraciones en días) y usando PERT, ¿cuál es la actividad con mayor holgura total?\nActividad | Óptima | Probable | Pésima | Predecesora\nA | 1 | 1 | 1 | -\nB | 1 | 3 | 5 | -\nC | 1 | 3 | 5 | -\nD | 1 | 2 | 9 | A\nE | 1 | 4 | 7 | A\nF | 2 | 3 | 4 | C\nG | 2 | 3 | 4 | E\nH | 2 | 4 | 6 | D, F\nI | 1 | 3 | 11 | D\nJ | 2 | 4 | 6 | B\nK | 1 | 4 | 7 | B, E\nL | 2 | 4 | 6 | H\nM | 2 | 2 | 8 | H, I\nN | 3 | 5 | 7 | J, M",
+    "opciones": [
+      "A. K",
+      "B. L",
+      "C. B",
+      "D. N"
+    ],
+    "solucion": "A",
+    "grupoDependencia": "API-EX26-BLOQUE2-PERT",
+    "ordenGrupo": 2,
+    "mantenerJuntas": true
+  },
+  {
+    "cuestion": "API-T3-EX26-Q21-Pregunta: En base a la tabla del proyecto API (duraciones en días) y usando PERT, ¿cuántos caminos críticos tiene el proyecto?\nActividad | Óptima | Probable | Pésima | Predecesora\nA | 1 | 1 | 1 | -\nB | 1 | 3 | 5 | -\nC | 1 | 3 | 5 | -\nD | 1 | 2 | 9 | A\nE | 1 | 4 | 7 | A\nF | 2 | 3 | 4 | C\nG | 2 | 3 | 4 | E\nH | 2 | 4 | 6 | D, F\nI | 1 | 3 | 11 | D\nJ | 2 | 4 | 6 | B\nK | 1 | 4 | 7 | B, E\nL | 2 | 4 | 6 | H\nM | 2 | 2 | 8 | H, I\nN | 3 | 5 | 7 | J, M",
+    "opciones": [
+      "A. 2",
+      "B. 1",
+      "C. 4",
+      "D. 3"
+    ],
+    "solucion": "B",
+    "grupoDependencia": "API-EX26-BLOQUE2-PERT",
+    "ordenGrupo": 3,
+    "mantenerJuntas": true
+  },
+  {
+    "cuestion": "API-T3-EX26-Q26-Pregunta: En base a la tabla del proyecto API (duraciones en días) y usando PERT, ¿cuántas actividades críticas tiene el proyecto?\nActividad | Óptima | Probable | Pésima | Predecesora\nA | 1 | 1 | 1 | -\nB | 1 | 3 | 5 | -\nC | 1 | 3 | 5 | -\nD | 1 | 2 | 9 | A\nE | 1 | 4 | 7 | A\nF | 2 | 3 | 4 | C\nG | 2 | 3 | 4 | E\nH | 2 | 4 | 6 | D, F\nI | 1 | 3 | 11 | D\nJ | 2 | 4 | 6 | B\nK | 1 | 4 | 7 | B, E\nL | 2 | 4 | 6 | H\nM | 2 | 2 | 8 | H, I\nN | 3 | 5 | 7 | J, M",
+    "opciones": [
+      "A. 6",
+      "B. 7",
+      "C. 8",
+      "D. 5"
+    ],
+    "solucion": "D",
+    "grupoDependencia": "API-EX26-BLOQUE2-PERT",
+    "ordenGrupo": 4,
+    "mantenerJuntas": true
+  },
+  {
+    "cuestion": "API-T3-EX26-Q29-Pregunta: En base a la tabla del proyecto API (duraciones en días) y usando PERT, ¿cuántas actividades tienen holgura libre igual a 0?\nActividad | Óptima | Probable | Pésima | Predecesora\nA | 1 | 1 | 1 | -\nB | 1 | 3 | 5 | -\nC | 1 | 3 | 5 | -\nD | 1 | 2 | 9 | A\nE | 1 | 4 | 7 | A\nF | 2 | 3 | 4 | C\nG | 2 | 3 | 4 | E\nH | 2 | 4 | 6 | D, F\nI | 1 | 3 | 11 | D\nJ | 2 | 4 | 6 | B\nK | 1 | 4 | 7 | B, E\nL | 2 | 4 | 6 | H\nM | 2 | 2 | 8 | H, I\nN | 3 | 5 | 7 | J, M",
+    "opciones": [
+      "A. 4",
+      "B. 10",
+      "C. 5",
+      "D. 9"
+    ],
+    "solucion": "A",
+    "grupoDependencia": "API-EX26-BLOQUE2-PERT",
+    "ordenGrupo": 5,
+    "mantenerJuntas": true
+  },
+  {
+    "cuestion": "API-T3-EX26-Q15-Pregunta: Se presenta la línea base de coste de un proyecto con cuatro paquetes de trabajo (valor planificado mensual) y, al final del mes 4, el porcentaje ejecutado y costes reales (AC). ¿Cómo va el proyecto al final del mes 4?\nPlan inicial (PV mensual):\nPaquete | Mes 1 | Mes 2 | Mes 3 | Mes 4 | Mes 5 | TOTAL\nPT1 | 500 | 500 | 500 | 500 | 0 | 2000\nPT2 | 1000 | 2000 | 2000 | 3000 | 0 | 8000\nPT3 | 0 | 1000 | 2000 | 5000 | 0 | 8000\nPT4 | 0 | 0 | 2000 | 2000 | 1000 | 5000\n\nDatos al final del mes 4:\nPaquete | % Ejecutado | AC\nPT1 | 100 % | 1500\nPT2 | 100 % | 9000\nPT3 | 75 % | 6000\nPT4 | 80 % | 3000",
+    "opciones": [
+      "A. Retrasado en tiempo y ahorrando en costes.",
+      "B. Retrasado en tiempo y gastando más de lo previsto.",
+      "C. Adelantado en tiempo y gastando más de lo previsto.",
+      "D. Adelantado en tiempo y ahorrando en costes."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T3-EX26-Q27-Pregunta: Jorge está al final del primer mes realizando el seguimiento y control de costes de un proyecto con los siguientes costes por mes: Mes 1: Actividad A: 30; Actividad B: 25; Actividad C: 15. Mes 2: Actividad A: 20; Actividad B: 20; Actividad C: 10. Además, hay que añadir 10 por actividad y mes por reservas de contingencia y 5 por actividad y mes por reservas de gestión. El BAC es:",
+    "opciones": [
+      "A. 120",
+      "B. 210",
+      "C. 150",
+      "D. 180"
+    ],
+    "solucion": "D"
   }
 ]
