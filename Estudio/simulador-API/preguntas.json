@@ -2209,7 +2209,7 @@
       "C. Actividad D.",
       "D. Actividad C."
     ],
-    "solucion": "D"
+    "solucion": "C"
   },
   {
     "cuestion": "API-T3-03-Pregunta: Si el estimado optimista para una actividad es de 12 días y el estimado pesimista es de 18 días, ¿cuál es la desviación estándar de esta actividad?",
@@ -2330,7 +2330,7 @@
       "D. Cuando se realiza el análisis de riesgos."
     ],
     "solucion": "A"
-  },[
+  },
   {
     "cuestion": "API-T3-15-Pregunta: El equipo necesita esperar 3 días a que el cemento se seque antes de poder empezar a pintar las paredes. Este tiempo de espera se representa en el cronograma como:",
     "opciones": [
@@ -2631,6 +2631,4 @@
     ],
     "solucion": "C"
   }
-]
-
 ]
