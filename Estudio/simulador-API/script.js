@@ -570,7 +570,10 @@ class SimuladorExamen {
             document.getElementById('preguntaNumero').textContent =
                 `Pregunta ${this.preguntaActual + 1} de ${this.preguntas.length}`;
         }
-        document.getElementById('preguntaTexto').textContent = pregunta.cuestion;
+        const preguntaTextoEl = document.getElementById('preguntaTexto');
+        const esPreguntaConTabla = pregunta.cuestion.includes('\n') && pregunta.cuestion.includes('|');
+        preguntaTextoEl.classList.toggle('pregunta-texto-tabla', esPreguntaConTabla);
+        preguntaTextoEl.innerText = pregunta.cuestion;
 
         const contenedor = document.getElementById('opcionesContenedor');
         contenedor.innerHTML = '';

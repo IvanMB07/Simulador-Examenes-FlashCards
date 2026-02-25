@@ -2330,6 +2330,307 @@
       "D. Cuando se realiza el análisis de riesgos."
     ],
     "solucion": "A"
+  },[
+  {
+    "cuestion": "API-T3-15-Pregunta: El equipo necesita esperar 3 días a que el cemento se seque antes de poder empezar a pintar las paredes. Este tiempo de espera se representa en el cronograma como:",
+    "opciones": [
+      "A. Un adelanto (Lead).",
+      "B. Un retraso (Lag).",
+      "C. Una holgura libre.",
+      "D. Una dependencia discrecional."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T3-16-Pregunta: Estás definiendo la secuencia de actividades de un proyecto de software. El equipo decide que es preferible terminar la codificación del módulo A antes de empezar el B por 'mejores prácticas', aunque técnicamente podrían hacerse en paralelo. ¿Qué tipo de dependencia es esta?",
+    "opciones": [
+      "A. Obligatoria.",
+      "B. Externa.",
+      "C. Discrecional.",
+      "D. De lógica dura."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T3-17-Pregunta: Un director de proyecto decide planificar en detalle las actividades de las próximas dos semanas, pero deja las actividades que ocurrirán dentro de seis meses a un nivel de paquete de trabajo superior. ¿Qué técnica está utilizando?",
+    "opciones": [
+      "A. Descomposición funcional.",
+      "B. Planificación gradual (Rolling Wave Planning).",
+      "C. Método de la cadena crítica.",
+      "D. Análisis de reserva."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T3-18-Pregunta: Si utilizas la estimación por tres valores (PERT) y tienes los siguientes datos: Optimista = 4, Más probable = 7, Pesimista = 16. ¿Cuál es la duración estimada de la actividad?",
+    "opciones": [
+      "A. 9.",
+      "B. 8.",
+      "C. 7.",
+      "D. 10."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T3-19-Pregunta: Se te solicita optimizar el cronograma sin retrasar la fecha de finalización del proyecto y sin cambiar la ruta crítica. Solo puedes mover actividades dentro de sus límites de holgura. ¿Qué técnica debes aplicar?",
+    "opciones": [
+      "A. Nivelación de recursos (Resource Leveling).",
+      "B. Suavizado de recursos (Resource Smoothing).",
+      "C. Crashing.",
+      "D. Fast Tracking."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T3-20-Pregunta: ¿Cuál es el riesgo principal de utilizar la técnica de 'Ejecución Rápida' (Fast Tracking) para comprimir el cronograma?",
+    "opciones": [
+      "A. Aumento significativo de los costos.",
+      "B. Disminución de la moral del equipo.",
+      "C. Aumento de los riesgos y posibles reprocesos.",
+      "D. El camino crítico se vuelve más corto pero más rígido."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T3-21-Pregunta: La 'Holgura Total' se define como la cantidad de tiempo que una actividad puede retrasarse sin:",
+    "opciones": [
+      "A. Retrasar la fecha de inicio temprana de su sucesora.",
+      "B. Afectar la fecha de finalización del proyecto.",
+      "C. Cambiar los requisitos de recursos.",
+      "D. Afectar el presupuesto del proyecto."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T3-22-Pregunta: En el método de la ruta crítica, si una actividad tiene un Inicio Temprano (ES) de 5 y un Inicio Tardío (LS) de 5, podemos afirmar que:",
+    "opciones": [
+      "A. La actividad tiene holgura positiva.",
+      "B. La actividad pertenece a la ruta crítica.",
+      "C. El proyecto está retrasado.",
+      "D. Es una actividad de tipo hito."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T3-23-Pregunta: ¿Qué técnica de estimación utiliza un algoritmo matemático basado en datos históricos y parámetros del proyecto (como metros cuadrados o líneas de código)?",
+    "opciones": [
+      "A. Estimación por analogía.",
+      "B. Estimación ascendente (Bottom-up).",
+      "C. Estimación paramétrica.",
+      "D. Juicio de expertos."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T3-24-Pregunta: Un hito en un cronograma de proyecto se diferencia de una actividad en que:",
+    "opciones": [
+      "A. Siempre es una dependencia externa.",
+      "B. Tiene una duración de cero.",
+      "C. No puede estar en la ruta crítica.",
+      "D. Requiere más recursos para su validación."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T3-25-Pregunta: Estás utilizando la Técnica Delphi para estimar duraciones. ¿Cuál es la principal ventaja de este método?",
+    "opciones": [
+      "A. Es el método más rápido de estimación.",
+      "B. Reduce los sesgos y evita que una persona influyente domine la decisión.",
+      "C. No requiere la participación del director de proyecto.",
+      "D. Proporciona una precisión del 100%."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T3-26-Pregunta: En un entorno adaptativo (Ágil), ¿qué herramienta se utiliza para mostrar visualmente cuánto trabajo queda pendiente dentro de una iteración o sprint?",
+    "opciones": [
+      "A. Diagrama de Gantt.",
+      "B. Diagrama de Red.",
+      "C. Gráfico de trabajo pendiente (Burndown Chart).",
+      "D. Matriz de trazabilidad."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T3-27-Pregunta: Si el camino crítico de un proyecto es de 30 días y se añade un 'adelanto' (Lead) de 2 días en una relación de la ruta crítica, ¿qué sucede con la duración total del proyecto?",
+    "opciones": [
+      "A. Se mantiene en 30 días.",
+      "B. Aumenta a 32 días.",
+      "C. Disminuye a 28 días.",
+      "D. La ruta crítica desaparece."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T3-28-Pregunta: Al realizar el análisis de red, descubres que la ruta crítica tiene una holgura negativa. ¿Qué significa esto?",
+    "opciones": [
+      "A. Que el proyecto terminará antes de lo previsto.",
+      "B. Que no se podrá cumplir con la fecha de finalización impuesta.",
+      "C. Que hay demasiados recursos asignados.",
+      "D. Que las dependencias son incorrectas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T3-29-Pregunta: En metodologías ágiles, la 'Velocidad' se utiliza para:",
+    "opciones": [
+      "A. Medir el desempeño individual de cada programador.",
+      "B. Determinar la capacidad de entrega del equipo en futuras iteraciones.",
+      "C. Definir la duración del ciclo de vida del proyecto.",
+      "D. Calcular el presupuesto del proyecto."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T3-30-Pregunta: ¿Cuál es el proceso que consiste en transformar los paquetes de trabajo de la EDT en acciones específicas?",
+    "opciones": [
+      "A. Crear la EDT.",
+      "B. Definir las Actividades.",
+      "C. Secuenciar las Actividades.",
+      "D. Estimar los Recursos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T3-31-Pregunta: Estás realizando una estimación 'Bottom-up'. ¿Cuál es la principal desventaja de esta técnica?",
+    "opciones": [
+      "A. Es muy poco precisa.",
+      "B. No tiene en cuenta los riesgos.",
+      "C. Requiere mucho tiempo y esfuerzo para realizarse.",
+      "D. Solo puede usarse en proyectos ágiles."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T3-32-Pregunta: ¿Qué componente de la línea base del cronograma documenta información adicional sobre cada actividad, como predecesoras, sucesoras, requisitos de recursos y limitaciones?",
+    "opciones": [
+      "A. Lista de actividades.",
+      "B. Lista de hitos.",
+      "C. Atributos de las actividades.",
+      "D. Diccionario de la EDT."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T3-33-Pregunta: El método de la Cadena Crítica (Critical Chain) se diferencia del método de la Ruta Crítica (CPM) principalmente porque:",
+    "opciones": [
+      "A. Utiliza hitos obligatorios.",
+      "B. Se enfoca en la gestión de buffers y limitaciones de recursos.",
+      "C. No permite el uso de dependencias discrecionales.",
+      "D. Solo se puede aplicar en proyectos de construcción."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T3-34-Pregunta: En una relación 'Inicio a Fin' (SF) entre dos actividades A y B:",
+    "opciones": [
+      "A. B no puede comenzar hasta que A finalice.",
+      "B. B no puede finalizar hasta que A haya comenzado.",
+      "C. A y B deben empezar al mismo tiempo.",
+      "D. A no puede finalizar hasta que B haya finalizado."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T3-35-Pregunta: El análisis de reserva de contingencia se utiliza para:",
+    "opciones": [
+      "A. Cubrir los cambios de alcance no aprobados.",
+      "B. Gestionar la incertidumbre y los riesgos identificados en el cronograma.",
+      "C. Aumentar el beneficio del director de proyecto.",
+      "D. Pagar las horas extra durante el Crashing."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T3-36-Pregunta: ¿Cuál de las siguientes técnicas permite modelar los efectos de los riesgos individuales para evaluar su impacto potencial en el cumplimiento de las fechas del proyecto?",
+    "opciones": [
+      "A. Análisis de variación.",
+      "B. Simulación Montecarlo.",
+      "C. Análisis del valor ganado.",
+      "D. Nivelación de recursos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T3-37-Pregunta: Durante el seguimiento, observas que el proyecto tiene un retraso significativo. La gerencia te pide recuperar el tiempo sin aumentar los costos. ¿Qué técnica intentarías aplicar primero?",
+    "opciones": [
+      "A. Crashing.",
+      "B. Ejecución rápida (Fast Tracking).",
+      "C. Nivelación de recursos.",
+      "D. Reducción de la calidad."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T3-38-Pregunta: ¿Qué tipo de dependencia existe cuando el equipo de proyecto no puede empezar la instalación del servidor hasta que el proveedor externo entregue el hardware?",
+    "opciones": [
+      "A. Dependencia interna obligatoria.",
+      "B. Dependencia externa obligatoria.",
+      "C. Dependencia discrecional interna.",
+      "D. Dependencia lógica blanda."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T3-39-Pregunta: En la técnica de compresión por Crashing, ¿qué actividades deben seleccionarse para ser comprimidas?",
+    "opciones": [
+      "A. Aquellas que tengan la mayor holgura libre.",
+      "B. Aquellas en la ruta crítica con el menor costo por unidad de tiempo comprimida.",
+      "C. Las actividades más largas del proyecto sin importar la ruta.",
+      "D. Las actividades que se realizan al final del proyecto."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T3-40-Pregunta: Según tus apuntes sobre el método CPM con compresión, la restricción '$TM_k \\le TA_k$' significa que:",
+    "opciones": [
+      "A. La duración actual debe ser menor que la normal.",
+      "B. El tiempo del proyecto debe ser menor que el del camino crítico.",
+      "C. La duración actual de una actividad no puede ser inferior a su tiempo mínimo (crash time).",
+      "D. El costo total actual no puede superar el presupuesto."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T3-41-Pregunta: ¿Cuál es el objetivo principal del análisis de escenarios '¿Qué pasa si...?' en el control del cronograma?",
+    "opciones": [
+      "A. Calcular la ruta crítica exacta.",
+      "B. Evaluar la viabilidad del cronograma en condiciones adversas y preparar planes de contingencia.",
+      "C. Determinar quién es el responsable de un retraso.",
+      "D. Cambiar la línea base del alcance."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T3-42-Pregunta: Un 'Diagrama de Red' es especialmente útil para visualizar:",
+    "opciones": [
+      "A. El porcentaje de completitud de cada tarea.",
+      "B. Las dependencias y el flujo lógico entre las actividades.",
+      "C. Los nombres de los recursos asignados a cada mes.",
+      "D. Los costos acumulados del proyecto."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T3-43-Pregunta: Si una actividad A tiene una holgura libre de 5 días y una holgura total de 10 días, y se retrasa 7 días:",
+    "opciones": [
+      "A. Retrasará la fecha final del proyecto.",
+      "B. No retrasará el proyecto, pero sí retrasará el inicio temprano de sus sucesoras.",
+      "C. El proyecto se volverá crítico inmediatamente.",
+      "D. No afectará a ninguna otra actividad."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T3-44-Pregunta: ¿Cuál de las siguientes afirmaciones sobre la 'Nivelación de Recursos' es cierta según el material de estudio?",
+    "opciones": [
+      "A. Nunca afecta a la fecha de finalización del proyecto.",
+      "B. Solo se aplica a las actividades con holgura.",
+      "C. Puede causar que el camino crítico original cambie y el proyecto se retrase.",
+      "D. Es exactamente lo mismo que el suavizado de recursos."
+    ],
+    "solucion": "C"
   }
+]
 
 ]

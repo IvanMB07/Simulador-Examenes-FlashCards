@@ -89,7 +89,18 @@ body {
     margin-bottom: 20px;
     line-height: 1.6;
     color: #e0e0e0;
-    white-space: pre-line;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+}
+
+.pregunta-texto-tabla {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    line-height: 1.5;
+    font-size: 14px;
+    white-space: pre;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 4px;
 }
 
 .opciones {
@@ -296,6 +307,10 @@ button {
 
     .pregunta-texto {
         font-size: 15px;
+    }
+
+    .pregunta-texto-tabla {
+        font-size: 12px;
     }
 
     .opcion {
