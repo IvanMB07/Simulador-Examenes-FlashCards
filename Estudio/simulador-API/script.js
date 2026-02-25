@@ -571,9 +571,7 @@ class SimuladorExamen {
                 `Pregunta ${this.preguntaActual + 1} de ${this.preguntas.length}`;
         }
         const preguntaTextoEl = document.getElementById('preguntaTexto');
-        const esPreguntaConTabla = pregunta.cuestion.includes('\n') && pregunta.cuestion.includes('|');
-        preguntaTextoEl.classList.toggle('pregunta-texto-tabla', esPreguntaConTabla);
-        preguntaTextoEl.innerText = pregunta.cuestion;
+        this.renderizarPreguntaTexto(preguntaTextoEl, pregunta.cuestion);
 
         const contenedor = document.getElementById('opcionesContenedor');
         contenedor.innerHTML = '';
@@ -636,6 +634,73 @@ class SimuladorExamen {
         if (this.modo === 'practica' && this.respuestas.hasOwnProperty(this.preguntaActual)) {
             this.aplicarFeedback();
         }
+    }
+
+    renderizarPreguntaTexto(contenedor, texto) {
+        const lineas = texto.split('\n');
+        const indiceCabecera = lineas.findIndex(linea => linea.includes('|'));
+
+        if (indiceCabecera < 0) {
+            contenedor.classList.remove('pregunta-texto-tabla');
+            contenedor.innerHTML = '';
+            contenedor.textContent = texto;
+            return;
+        }
+
+        const filas = lineas
+            .slice(indiceCabecera)
+            .filter(linea => linea.includes('|'))
+            .map(linea => linea.split('|').map(celda => celda.trim()));
+
+        if (filas.length < 2) {
+            contenedor.classList.remove('pregunta-texto-tabla');
+            contenedor.innerHTML = '';
+            contenedor.textContent = texto;
+            return;
+        }
+
+        const introTexto = lineas.slice(0, indiceCabecera).join('\n').trim();
+
+        contenedor.classList.add('pregunta-texto-tabla');
+        contenedor.innerHTML = '';
+
+        if (introTexto) {
+            const intro = document.createElement('div');
+            intro.className = 'pregunta-tabla-intro';
+            intro.textContent = introTexto;
+            contenedor.appendChild(intro);
+        }
+
+        const wrap = document.createElement('div');
+        wrap.className = 'pregunta-tabla-wrap';
+
+        const table = document.createElement('table');
+        table.className = 'pregunta-tabla';
+
+        const thead = document.createElement('thead');
+        const trHead = document.createElement('tr');
+        filas[0].forEach(textoCelda => {
+            const th = document.createElement('th');
+            th.textContent = textoCelda;
+            trHead.appendChild(th);
+        });
+        thead.appendChild(trHead);
+
+        const tbody = document.createElement('tbody');
+        filas.slice(1).forEach(fila => {
+            const tr = document.createElement('tr');
+            fila.forEach(textoCelda => {
+                const td = document.createElement('td');
+                td.textContent = textoCelda;
+                tr.appendChild(td);
+            });
+            tbody.appendChild(tr);
+        });
+
+        table.appendChild(thead);
+        table.appendChild(tbody);
+        wrap.appendChild(table);
+        contenedor.appendChild(wrap);
     }
 
     obtenerIndiceCorrecto(pregunta) {

@@ -94,16 +94,44 @@ body {
 }
 
 .pregunta-texto-tabla {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    line-height: 1.35;
-    font-size: 13px;
-    white-space: pre;
+    white-space: normal;
+    overflow-wrap: normal;
+}
+
+.pregunta-tabla-intro {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.pregunta-tabla-wrap {
     overflow-x: auto;
-    overflow-y: hidden;
-    padding: 8px 10px;
     border: 1px solid #2f2f2f;
     border-radius: 6px;
     background-color: #151515;
+}
+
+.pregunta-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 420px;
+    font-size: 13px;
+}
+
+.pregunta-tabla th,
+.pregunta-tabla td {
+    padding: 8px 10px;
+    border-bottom: 1px solid #2a2a2a;
+    text-align: left;
+}
+
+.pregunta-tabla th {
+    color: #00d4ff;
+    font-weight: 600;
+    background-color: #1d1d1d;
+}
+
+.pregunta-tabla tr:last-child td {
+    border-bottom: none;
 }
 
 .opciones {
@@ -313,9 +341,17 @@ button {
     }
 
     .pregunta-texto-tabla {
-        font-size: 11px;
-        line-height: 1.3;
-        padding: 6px 8px;
+        font-size: 15px;
+    }
+
+    .pregunta-tabla {
+        min-width: 340px;
+        font-size: 12px;
+    }
+
+    .pregunta-tabla th,
+    .pregunta-tabla td {
+        padding: 7px 8px;
     }
 
     .opcion {
