@@ -2207,7 +2207,7 @@
       "C. Actividad D.",
       "D. Actividad C."
     ],
-    "solucion": "C"
+    "solucion": "D"
   },
   {
     "cuestion": "API-T3-03-Pregunta: Si el estimado optimista para una actividad es de 12 días y el estimado pesimista es de 18 días, ¿cuál es la desviación estándar de esta actividad?",
@@ -3901,4 +3901,5 @@
     ],
     "solucion": "C"
   }
+
 ]
