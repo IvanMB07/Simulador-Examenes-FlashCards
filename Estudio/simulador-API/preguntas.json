@@ -440,6 +440,846 @@
     "solucion": "A"
   },
   {
+    "cuestion": "API-T1-45-Pregunta: Según el Triángulo del Talento del PMI, ¿qué habilidad se refiere al conocimiento de la estrategia, misión y objetivos de la organización?",
+    "opciones": [
+      "A. Ways of Working (Formas de trabajar).",
+      "B. Power Skills (Habilidades de poder).",
+      "C. Business Acumen (Conocimiento del negocio).",
+      "D. Gestión técnica de proyectos."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T1-46-Pregunta: ¿Cuál es la función principal de un 'Project Coordinator' en una organización matricial débil?",
+    "opciones": [
+      "A. Tiene plena autoridad sobre el presupuesto.",
+      "B. Actúa como asistente sin capacidad de decisión.",
+      "C. Tiene cierto poder para tomar decisiones y reporta a un gerente de nivel superior.",
+      "D. Es el dueño del producto."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T1-47-Pregunta: El principio de 'Adaptabilidad y Resiliencia' sugiere que el equipo del proyecto debe:",
+    "opciones": [
+      "A. Mantener el plan original a toda costa.",
+      "B. Ser capaz de responder a condiciones cambiantes y recuperarse de los contratiempos.",
+      "C. Evitar cualquier riesgo.",
+      "D. Seguir estrictamente la metodología en cascada."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-48-Pregunta: ¿Qué diferencia existe entre 'Grado' y 'Calidad'?",
+    "opciones": [
+      "A. Son sinónimos.",
+      "B. La calidad es la categoría asignada (ej. Lujo) y el grado es el cumplimiento de requisitos.",
+      "C. El grado es la categoría asignada a productos con el mismo uso funcional y la calidad es el nivel de cumplimiento de los requisitos.",
+      "D. El grado es subjetivo y la calidad objetiva."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T1-49-Pregunta: En el modelo de complejidad del proyecto, la 'Ambigüedad' se refiere a:",
+    "opciones": [
+      "A. La falta de claridad o confusión sobre los eventos futuros o causas.",
+      "B. El comportamiento humano impredecible.",
+      "C. El número de interconexiones en el sistema.",
+      "D. La falta de presupuesto."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T1-50-Pregunta: ¿Qué documento pertenece a la fase de pre-proyecto y describe los beneficios tangibles e intangibles esperados?",
+    "opciones": [
+      "A. Acta de Constitución.",
+      "B. Plan de Gestión de Beneficios.",
+      "C. EDT.",
+      "D. Registro de Lecciones Aprendidas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-51-Pregunta: ¿Quién es el responsable último de que el Caso de Negocio se cumpla?",
+    "opciones": [
+      "A. El Director del Proyecto.",
+      "B. El Patrocinador (Sponsor).",
+      "C. El equipo técnico.",
+      "D. La PMO."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-52-Pregunta: En una organización 'Matricial Fuerte', ¿quién tiene más autoridad sobre los recursos?",
+    "opciones": [
+      "A. El Gerente Funcional.",
+      "B. El Director del Proyecto.",
+      "C. Comparten autoridad al 50%.",
+      "D. El Cliente."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-53-Pregunta: El enfoque de desarrollo 'Iterativo' se centra principalmente en:",
+    "opciones": [
+      "A. La velocidad de entrega.",
+      "B. La corrección de la solución mediante retroalimentación repetida.",
+      "C. Reducir costes.",
+      "D. Entregar todo al final de una sola vez."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-54-Pregunta: El enfoque 'Incremental' se centra en:",
+    "opciones": [
+      "A. La velocidad de entrega proporcionando partes terminadas del producto frecuentemente.",
+      "B. Refinar los requisitos sin entregar nada hasta el final.",
+      "C. Evitar cambios.",
+      "D. La planificación a largo plazo."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T1-55-Pregunta: Según el modelo de prominencia (Salience Model), ¿cuáles son los tres atributos para clasificar a los interesados?",
+    "opciones": [
+      "A. Dinero, Tiempo y Alcance.",
+      "B. Poder, Legitimidad y Urgencia.",
+      "C. Interés, Influencia e Impacto.",
+      "D. Interno, Externo y Neutro."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-56-Pregunta: ¿Qué es el 'Tailoring' (Adaptación) en la gestión de proyectos?",
+    "opciones": [
+      "A. Copiar el plan de otro proyecto.",
+      "B. La selección y ajuste deliberado del enfoque, la gobernanza y los procesos para que sean adecuados al proyecto específico.",
+      "C. Reducir el alcance para terminar antes.",
+      "D. Ignorar los procesos de calidad."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-57-Pregunta: ¿Cuál de las siguientes NO es una función típica de la PMO?",
+    "opciones": [
+      "A. Proveer metodologías y plantillas.",
+      "B. Dar soporte y entrenamiento.",
+      "C. Definir la estrategia comercial de la empresa.",
+      "D. Gestionar recursos compartidos entre proyectos."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T1-58-Pregunta: En el ciclo de vida del proyecto, las revisiones de fase (Phase Gate Reviews) sirven para:",
+    "opciones": [
+      "A. Celebrar el final del proyecto.",
+      "B. Decidir si el proyecto debe continuar a la siguiente fase, corregirse o cancelarse.",
+      "C. Cambiar al Director del Proyecto.",
+      "D. Aumentar el presupuesto automáticamente."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-59-Pregunta: El principio de 'Stewardship' (Administración/Mayordomía) implica actuar con:",
+    "opciones": [
+      "A. Rapidez y eficacia.",
+      "B. Integridad, cuidado, confiabilidad y cumplimiento.",
+      "C. Autoridad absoluta.",
+      "D. Enfoque exclusivo en el beneficio económico."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-60-Pregunta: ¿Qué teoría de motivación clasifica las necesidades en una pirámide (Fisiológicas, Seguridad, Sociales, Estima, Autorrealización)?",
+    "opciones": [
+      "A. Teoría de Herzberg.",
+      "B. Teoría X e Y de McGregor.",
+      "C. Jerarquía de Maslow.",
+      "D. Teoría de McClelland."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T1-61-Pregunta: Según la teoría de Herzberg, los 'Factores Higiénicos' (como el salario o condiciones laborales):",
+    "opciones": [
+      "A. Motivan a largo plazo.",
+      "B. No motivan por sí mismos, pero su ausencia causa insatisfacción.",
+      "C. Son irrelevantes.",
+      "D. Son los únicos que importan."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-62-Pregunta: ¿Cuál es la fórmula para calcular los canales de comunicación en un equipo de 'n' personas?",
+    "opciones": [
+      "A. n(n-1)/2",
+      "B. n^2",
+      "C. 2n + 1",
+      "D. (n-1)/2"
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T1-63-Pregunta: ¿Qué tipo de comunicación sucede cuando envías un email a todo el equipo sin esperar confirmación de lectura inmediata?",
+    "opciones": [
+      "A. Interactiva.",
+      "B. Pull (Tirar).",
+      "C. Push (Empujar).",
+      "D. Sincrónica."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T1-64-Pregunta: El dominio de 'Incertidumbre' trata principalmente sobre:",
+    "opciones": [
+      "A. La gestión de riesgos y la ambigüedad.",
+      "B. La planificación del cronograma.",
+      "C. La contratación de personal.",
+      "D. La definición del alcance."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T1-65-Pregunta: ¿Qué estilo de liderazgo se centra en servir al equipo y eliminar obstáculos?",
+    "opciones": [
+      "A. Autocrático.",
+      "B. Laissez-faire.",
+      "C. Servant Leadership (Liderazgo de servicio).",
+      "D. Transaccional."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T1-66-Pregunta: Un proyecto que busca cumplir requisitos regulatorios suele ser iniciado por una necesidad:",
+    "opciones": [
+      "A. De mercado.",
+      "B. Legal o social.",
+      "C. Tecnológica.",
+      "D. Ecológica."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-67-Pregunta: ¿Qué es OPM (Organizational Project Management)?",
+    "opciones": [
+      "A. Un software de gestión.",
+      "B. El marco estratégico que integra portafolios, programas y proyectos para lograr objetivos estratégicos.",
+      "C. Otro nombre para la PMO.",
+      "D. La gestión de operaciones."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-68-Pregunta: El 'Ciclo de Vida del Producto' comienza con:",
+    "opciones": [
+      "A. El Acta de Constitución.",
+      "B. La introducción del producto en el mercado (o su concepción) y termina con su retiro.",
+      "C. La primera reunión de equipo.",
+      "D. La firma del contrato."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-69-Pregunta: ¿Qué factor NO es una restricción clásica del proyecto (Triple Restricción ampliada)?",
+    "opciones": [
+      "A. Alcance.",
+      "B. Coste.",
+      "C. Tiempo.",
+      "D. La personalidad del patrocinador."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "API-T1-70-Pregunta: La comunicación 'No Verbal' incluye:",
+    "opciones": [
+      "A. El tono de voz y el lenguaje corporal.",
+      "B. Los correos electrónicos.",
+      "C. Las actas de reunión.",
+      "D. Las llamadas telefónicas."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T1-71-Pregunta: ¿Qué es un 'Stakeholder Negativo'?",
+    "opciones": [
+      "A. Alguien que siempre está de mal humor.",
+      "B. Alguien que ve el proyecto como una amenaza y trabaja para impedirlo.",
+      "C. Un proveedor que cobra mucho.",
+      "D. Un miembro del equipo con poca experiencia."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-72-Pregunta: El principio de 'Pensamiento Sistémico' requiere:",
+    "opciones": [
+      "A. Centrarse solo en tu tarea.",
+      "B. Reconocer, evaluar y responder a las interacciones dinámicas dentro y alrededor del proyecto.",
+      "C. Usar software complejo.",
+      "D. Ignorar los cambios externos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-73-Pregunta: ¿Cuándo se considera que un proyecto ha terminado?",
+    "opciones": [
+      "A. Cuando se acaba el dinero.",
+      "B. Cuando se alcanzan los objetivos o se decide terminarlo porque no se pueden cumplir.",
+      "C. Cuando el gerente se va de vacaciones.",
+      "D. Cuando empieza la fase de ejecución."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-74-Pregunta: La ética en la gestión de proyectos (según PMI) se basa en cuatro valores:",
+    "opciones": [
+      "A. Dinero, Poder, Fama, Éxito.",
+      "B. Responsabilidad, Respeto, Equidad (Justicia) y Honestidad.",
+      "C. Rapidez, Calidad, Coste, Alcance.",
+      "D. Planificación, Ejecución, Control, Cierre."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-75-Pregunta: ¿Cuál es el objetivo principal de la Gestión de Operaciones en comparación con la Gestión de Proyectos?",
+    "opciones": [
+      "A. Crear un producto único.",
+      "B. Asegurar que las funciones del negocio continúen de forma eficiente y permanente.",
+      "C. Definir el acta de constitución.",
+      "D. Gestionar esfuerzos temporales."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-76-Pregunta: En el contexto de Creación de Valor, ¿qué es un Sistema de Entrega de Valor?",
+    "opciones": [
+      "A. Un software de mensajería.",
+      "B. Una estructura jerárquica de carteras, programas y proyectos para alinear metas estratégicas.",
+      "C. El departamento de ventas de la empresa.",
+      "D. Un método para calcular el ROI."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-77-Pregunta: ¿Qué dimensión del equipo de gestión se enfoca en el pensamiento estratégico para alinear el proyecto con la organización?",
+    "opciones": [
+      "A. Responsabilidad Social.",
+      "B. Power Skills.",
+      "C. Business Acumen.",
+      "D. Ways of Working."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T1-78-Pregunta: Un equipo que es autoorganizado y descentralizado es típico de un enfoque:",
+    "opciones": [
+      "A. Centralizado.",
+      "B. Ágil / Adaptativo.",
+      "C. Funcional.",
+      "D. Predictivo."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-79-Pregunta: ¿Cuál es la función de soporte que se encarga de facilitar la colaboración resolviendo conflictos?",
+    "opciones": [
+      "A. Dirección clara.",
+      "B. Facilitar la colaboración.",
+      "C. Ejecutar trabajo técnico.",
+      "D. Gestión de retroalimentación."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-80-Pregunta: En el ciclo de vida del producto, ¿qué fase incluye las revisiones o actualizaciones significativas?",
+    "opciones": [
+      "A. Introducción.",
+      "B. Crecimiento.",
+      "C. Madurez.",
+      "D. Declive."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T1-81-Pregunta: ¿Qué enfoque de desarrollo es más útil cuando existe una gran incertidumbre sobre los requisitos?",
+    "opciones": [
+      "A. Predictivo.",
+      "B. Cascada.",
+      "C. Adaptativo.",
+      "D. Estructurado."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T1-82-Pregunta: El principio 'Sé un líder responsable' implica principalmente:",
+    "opciones": [
+      "A. Delegar toda la responsabilidad al equipo.",
+      "B. Inspirar, motivar y adaptarse a las situaciones dando ejemplo.",
+      "C. Seguir el plan sin importar los cambios.",
+      "D. Centrarse solo en los resultados técnicos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-83-Pregunta: ¿Qué dominio de desempeño se alinea directamente con el marco de decisiones de la estrategia organizacional?",
+    "opciones": [
+      "A. Recursos.",
+      "B. Gobernanza.",
+      "C. Riesgo.",
+      "D. Finanzas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-84-Pregunta: ¿Cuál es una característica común entre proyectos y operaciones?",
+    "opciones": [
+      "A. Ambas son temporales.",
+      "B. Ambas están restringidas por recursos limitados.",
+      "C. Ambas crean productos únicos cada vez.",
+      "D. Ambas terminan cuando se alcanza el objetivo."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-85-Pregunta: ¿Qué componente del equipo de gestión aplica métodos y enfoques de gestión del cambio adecuados al contexto?",
+    "opciones": [
+      "A. Power Skills.",
+      "B. Ways of Working.",
+      "C. Business Acumen.",
+      "D. Resultados."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-86-Pregunta: ¿Cuál es el rol de un Business Analyst respecto al producto?",
+    "opciones": [
+      "A. Financiar el proyecto.",
+      "B. Asegurar la alineación entre las necesidades del negocio y la funcionalidad del producto.",
+      "C. Ejecutar el código fuente.",
+      "D. Ser el jefe de la PMO."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-87-Pregunta: Un proyecto para reparar un proceso existente se clasifica como un esfuerzo para:",
+    "opciones": [
+      "A. Cumplir requisitos legales.",
+      "B. Crear, mejorar o reparar productos/procesos.",
+      "C. Cambiar estrategias tecnológicas.",
+      "D. Satisfacer solicitudes sociales."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-88-Pregunta: El valor de negocio 'intangible' podría ser:",
+    "opciones": [
+      "A. Dinero en efectivo.",
+      "B. Equipamiento físico.",
+      "C. Reconocimiento de marca o prestigio.",
+      "D. Acciones de la bolsa."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T1-89-Pregunta: ¿Cuál es el objetivo del dominio de desempeño 'Recursos'?",
+    "opciones": [
+      "A. Definir el alcance.",
+      "B. Planificar, estimar y adquirir recursos humanos y físicos.",
+      "C. Gestionar el presupuesto.",
+      "D. Identificar riesgos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-90-Pregunta: Un proyecto 'temporal' significa que:",
+    "opciones": [
+      "A. Dura para siempre.",
+      "B. Tiene un inicio y un fin definidos.",
+      "C. Se realiza solo cuando hay tiempo libre.",
+      "D. No tiene objetivos claros."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-91-Pregunta: El principio 'Enfócate en el valor' requiere evaluar el proyecto:",
+    "opciones": [
+      "A. Solo al final.",
+      "B. Solo al inicio.",
+      "C. Continuamente durante todas las fases.",
+      "D. Solo si el cliente lo pide."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T1-92-Pregunta: ¿Qué dominio gestiona el presupuesto y busca optimizar el valor financiero?",
+    "opciones": [
+      "A. Cronograma.",
+      "B. Finanzas.",
+      "C. Interesados.",
+      "D. Riesgo."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-93-Pregunta: La PMO ayuda a la gobernanza mediante:",
+    "opciones": [
+      "A. La eliminación de los directores de proyecto.",
+      "B. La estandarización, soporte y alineación estratégica.",
+      "C. La reducción del alcance.",
+      "D. El aumento de los riesgos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-94-Pregunta: El ciclo de vida del proyecto acaba cuando:",
+    "opciones": [
+      "A. El producto se retira del mercado.",
+      "B. Se alcanzan los objetivos declarados o se cancela.",
+      "C. Empieza la fase de mantenimiento.",
+      "D. El patrocinador se jubila."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-95-Pregunta: Estás dirigiendo un proyecto de diseño de sistemas de control por microprocesador. Se estima que el trabajo de diseño se completará en 4 meses, con siete hitos. El sexto hito es el prototipo que se entregará a fabricación. Todos los hitos anteriores se completaron antes de lo previsto, pero el sexto se ha retrasado 3 meses porque el prototipo se ha devuelto varias veces por conflictos entre departamentos. Tienes previsto celebrar una reunión para revisar especificaciones y tratar conflictos entre diseño y fabricación. ¿Quién tiene principalmente la culpa?",
+    "opciones": [
+      "A. Los responsables de los departamentos de diseño y fabricación.",
+      "B. El patrocinador.",
+      "C. El director del proyecto.",
+      "D. El encargado de la planificación de calendario."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T1-96-Pregunta: Durante una reunión semanal de seguimiento, un miembro del equipo sugiere añadir un componente al proyecto para mejorar su nivel de seguridad, ante los continuos ataques de ciberseguridad del sector. Como director del proyecto, ¿qué haces?",
+    "opciones": [
+      "A. Evalúas alternativas para implementar el cambio.",
+      "B. Indicas que toda la atención debe centrarse en el alcance actual y debe evitarse incorporar funcionalidades no solicitadas.",
+      "C. Te reúnes con el patrocinador para analizar el impacto que dicho componente tendría en el proyecto.",
+      "D. Validas el alcance para asegurarte de que dicho componente puede integrarse adecuadamente."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-97-Pregunta: Has oído por casualidad a dos directores funcionales discutir sobre las repercusiones que tu proyecto tendrá en sus departamentos. ¿Cuál es tu mejor respuesta?",
+    "opciones": [
+      "A. Analizar y comunicar a cada responsable el impacto que el proyecto tendrá en sus departamentos.",
+      "B. No hacer nada porque no han realizado una petición formal de información.",
+      "C. Hacer una solicitud de cambio dirigida a los directores funcionales con los recursos que el proyecto necesitará de dichos departamentos.",
+      "D. Informar a los responsables que pueden consultar dicho impacto en el acta de constitución porque ya se tuvo en cuenta ahí y fue aprobado por el patrocinador."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T1-98-Pregunta: Formas parte del equipo de desarrollo que acaba de cerrar un proyecto sobre un sistema de gestión de recursos humanos con funcionalidades destacadas respecto a la competencia. Sientes incertidumbre sobre tu próximo trabajo dentro de la empresa. Lo más habitual es que formes parte de una organización:",
+    "opciones": [
+      "A. Matricial fuerte.",
+      "B. Funcional.",
+      "C. Orientada a proyectos.",
+      "D. Híbrida."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T1-99-Pregunta: Gestionar un proyecto implica recoger requisitos y gestionar expectativas de las partes interesadas, teniendo en cuenta restricciones para entregar el producto o servicio acordado. ¿Cuál de los siguientes elementos NO es una restricción al proyecto?",
+    "opciones": [
+      "A. Riesgo.",
+      "B. Tiempo.",
+      "C. Calidad.",
+      "D. Escala."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "API-T1-100-Pregunta: Estás a mitad de proyecto y los 4 programadores Java prometidos al firmar el acta ya no estarán disponibles para el proyecto, quedando 3 días para comenzar la codificación. Esto puede repercutir en cronograma y otras áreas. Como consecuencia te reúnes con el patrocinador para:",
+    "opciones": [
+      "A. Pedir la cancelación del proyecto.",
+      "B. Informar sobre el impacto que puede tener no contar con los programadores.",
+      "C. Informarle de que has replanificado el proyecto sin contar con dichos recursos.",
+      "D. Exigir disponer de los recursos prometidos o equivalentes en el plazo de 5 días, ya que se trata de un proyecto altamente crítico dentro del programa al que pertenece."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-101-Pregunta: Acabas de recibir el encargo de dirigir el servicio de atención al cliente de una aplicación software de gestión de clínicas sanitarias en la nube. En el contexto de gestión de proyectos estamos hablando de:",
+    "opciones": [
+      "A. Una operación.",
+      "B. Un proyecto.",
+      "C. Una cartera.",
+      "D. Un programa."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T1-102-Pregunta: Te informan que el módulo software de planificación de calendarios, parte del producto que estás desarrollando, no calcula correctamente la desviación entre información real y prevista. Como resultado emites una solicitud de cambio de tipo:",
+    "opciones": [
+      "A. Preventiva.",
+      "B. Correctiva.",
+      "C. Adaptativa.",
+      "D. Reparación de defectos."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "API-T1-103-Pregunta: En un nuevo proyecto de desarrollo de una aplicación software de mensajería, te encargas de servir como facilitador para permitir comunicación, colaboración e implicación entre miembros del equipo. Lo más habitual es que tengas que aplicar:",
+    "opciones": [
+      "A. Actividades de liderazgo distribuido.",
+      "B. Actividades de liderazgo centralizado.",
+      "C. Gestión estratégica y de negocios.",
+      "D. Actividades de dirección."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T1-104-Pregunta: Estás discutiendo con el gerente de desarrollo software sobre los procesos del grupo de inicio a considerar en un próximo proyecto. Es cierto que:",
+    "opciones": [
+      "A. Eres un coordinador.",
+      "B. Las áreas de conocimiento afectadas son Integración e Interesados.",
+      "C. Trabajas en una organización matricial fuerte.",
+      "D. Eres un gestor de programas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-105-Pregunta: Dirigir y gestionar la ejecución de un proyecto es un proceso:",
+    "opciones": [
+      "A. Del grupo de ejecución y área de conocimiento de integración.",
+      "B. Del grupo de monitoreo y control y área de conocimiento de integración.",
+      "C. Del grupo de monitoreo y control y área de conocimiento de recursos.",
+      "D. Del grupo de ejecución y área de conocimiento de interesados."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T1-106-Pregunta: Un compañero del equipo de dirección de tu nuevo proyecto te dice erróneamente que uno de los principios de dirección de proyectos es:",
+    "opciones": [
+      "A. Adaptabilidad y resiliencia.",
+      "B. Planificación.",
+      "C. Complejidad.",
+      "D. Pensamiento sistémico."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-107-Pregunta: Está hablando con un colega sobre la incertidumbre con los requisitos a la que os tenéis que enfrentar en el próximo proyecto de gestión automática de placas solares. Lo más acertado es aplicar un enfoque de desarrollo:",
+    "opciones": [
+      "A. Iterativo e incremental.",
+      "B. Adaptativo.",
+      "C. Híbrido.",
+      "D. Predictivo."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-108-Pregunta: Te llama el gerente funcional del área de proyectos para indicarte que debes incluir en el plan de gestión de tu proyecto, tanto el plan de gestión de alcance, como el plan de gestión de tiempos y el plan de gestión de costes. Como resultado le indicas:",
+    "opciones": [
+      "A. Que efectivamente son parte del plan de gestión del proyecto y los incluyes.",
+      "B. No se incluyen en la planificación porque hasta que no avanzamos en el seguimiento y control podemos definir las medidas de desviación que incluyen.",
+      "C. No se incluyen porque son documentos aparte y deben tratarse de forma complementaria al plan de gestión del proyecto.",
+      "D. No se incluyen porque ya se incluyen dichos planes en las líneas base correspondientes a cada una de las áreas de alcance, tiempos y costes."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T1-109-Pregunta: Tienes un proyecto en el que te encargas de la actividad G. Si el inicio temprano de la actividad G es el día 13 y el final temprano el día 18 y sabemos que tiene una holgura de 15 días. Como muy tarde, ¿cuándo podrás comenzarla?",
+    "opciones": [
+      "A. 30",
+      "B. 15",
+      "C. 28",
+      "D. 33"
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T1-110-Pregunta: Si tienes dudas sobre cómo actuar en la ejecución y seguimiento del proyecto. ¿Qué documento, que define la manera en que se va a ejecutar, supervisar, controlar y cerrar el proyecto, consultarás?",
+    "opciones": [
+      "A. Plan para la dirección del proyecto.",
+      "B. Plan de Seguimiento del Proyecto.",
+      "C. Plan de Integración del Proyecto.",
+      "D. El ciclo de vida del Proyecto."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T1-111-Pregunta: Desde la junta directiva llega una petición de la oficina de dirección de proyectos que diriges, para gestionar los proyectos relacionados con la decisión de la junta de posicionarse como empresa de referencia en el sector de la fotografía digital online a través de una mejora sustancial en el desarrollo de software, venta de equipamiento y modernización de los distintos departamentos. La mejor forma de gestionar dicha petición es mediante:",
+    "opciones": [
+      "A. Una cartera.",
+      "B. Un programa.",
+      "C. Un plan estratégico.",
+      "D. Un enfoque de entrega de valor."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T1-112-Pregunta: Un director de proyecto entra a trabajar en una nueva empresa. Al poco tiempo uno de sus miembros del equipo se queja y se niega a realizar el trabajo que le ha sido asignado. ¿Qué tipo de estructura organizativa tiene la empresa?",
+    "opciones": [
+      "A. Matricial fuerte.",
+      "B. Funcional.",
+      "C. Orientada a proyectos.",
+      "D. Matricial equilibrada."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "API-T1-113-Pregunta: En tu empresa se han puesto en marcha grupos focales donde participan miembros con distintos niveles de experiencia para analizar los requisitos obtenidos de los usuarios. Con ello se está promoviendo:",
+    "opciones": [
+      "A. El juicio de expertos.",
+      "B. La aplicación de talleres JAD en la organización para mejorar la eficiencia en la captura de requisitos.",
+      "C. La toma de decisiones por pluralidad.",
+      "D. La gestión del conocimiento tácito."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "API-T1-114-Pregunta: Estás dirigiendo y gestionando el trabajo definido en el plan de dirección del proyecto para alcanzar los objetivos del proyecto gestionando de forma global el mismo. ¿Cuál de las siguientes NO será una salida del proceso en el que te encuentras?",
+    "opciones": [
+      "A. Los entregables.",
+      "B. Las actualizaciones a los documentos del proyecto.",
+      "C. Los datos de desempeño del trabajo.",
+      "D. Las solicitudes de cambio aprobadas."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "API-T1-115-Pregunta: En PMBOK 7, se considera que un grupo de actividades relacionadas y fundamentales para la consecución efectiva de los resultados de los proyectos es:",
+    "opciones": [
+      "A. Un dominio.",
+      "B. Un área de conocimiento.",
+      "C. Un grupo de procesos.",
+      "D. Un principio."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T1-116-Pregunta: Estás trabajando en el área de desarrollo de nuevos servicios de tu empresa. Eres responsable del mantenimiento de los ordenadores de todos los investigadores. ¿Cuál de las siguientes afirmaciones es la más correcta?",
+    "opciones": [
+      "A. Mi trabajo va a producir como resultado una nueva capacidad en el área de investigación e innovación.",
+      "B. No se puede considerar que yo sea un gestor de proyecto.",
+      "C. Tu trabajo producirá un resultado único y tiene una fecha de terminación.",
+      "D. Como buen planificador debo iniciar, planificar y ejecutar correctamente mi trabajo."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-117-Pregunta: Un directivo junior de tu empresa no acaba de entender el carácter diferencial de los proyectos respecto a las operaciones. NO coinciden en:",
+    "opciones": [
+      "A. Hay que tener en cuenta restricciones.",
+      "B. Se planifican, ejecutan y supervisan.",
+      "C. Tienen como objetivo apoyar la consecución de los objetivos estratégicos.",
+      "D. Tienen un ciclo de vida y una duración determinadas."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "API-T1-118-Pregunta: Estás hablando con tu equipo de dirección de proyecto sobre el software de gestión integral de los empleados. Lo más seguro es que estás hablando de:",
+    "opciones": [
+      "A. Enfoque de desarrollo.",
+      "B. Un programa.",
+      "C. Ciclo de vida del producto.",
+      "D. Ciclo de vida del proyecto."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T1-119-Pregunta: Un ejemplo de proyecto es:",
+    "opciones": [
+      "A. El envasado de los productos de alimentación de la empresa, fabricados para una campaña.",
+      "B. Tratamiento de los pedidos recibidos por la empresa relativos a la compra de los productos de alimentación ofertados.",
+      "C. Realización de la contabilidad de la empresa.",
+      "D. La fabricación de vehículos en una cadena de montaje."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T1-120-Pregunta: El grupo de procesos de PMBOK que contiene procesos de todas las áreas de conocimiento es:",
+    "opciones": [
+      "A. Cierre.",
+      "B. Ejecución.",
+      "C. Planificación.",
+      "D. Integración."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T1-121-Pregunta: PMBOK. Trabajando como líder de proyecto en una empresa con una estructura funcional. Su nivel de autoridad en los proyectos será:",
+    "opciones": [
+      "A. Alto.",
+      "B. Moderado.",
+      "C. Balanceado.",
+      "D. Bajo."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "API-T1-122-Pregunta: A medida que transcurre el tiempo en un proyecto:",
+    "opciones": [
+      "A. Aumenta la influencia de los interesados, el riesgo y la incertidumbre.",
+      "B. Aumenta el coste de los cambios.",
+      "C. Ninguna de las otras respuestas es correcta.",
+      "D. Aumenta la influencia de los interesados y el coste de los cambios."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-123-Pregunta: ¿Cuál de los siguientes enunciados es falso?",
+    "opciones": [
+      "A. El ciclo de vida del producto abarca desde la concepción del producto hasta su retirada del mercado.",
+      "B. Generalmente la mayor utilización de recursos se origina durante las fases intermedias del ciclo de vida del proyecto.",
+      "C. El ciclo de vida de un proyecto tiene tres grandes grupos de procesos.",
+      "D. El ciclo de vida del producto puede originar varios proyectos."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T1-124-Pregunta: ¿Cuál de los siguientes ítems tiene mayor nivel jerárquico?",
+    "opciones": [
+      "A. Actividades.",
+      "B. Programa.",
+      "C. Proyecto.",
+      "D. Cartera."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "API-T1-125-Pregunta: ¿Durante qué fase del ciclo de vida del proyecto la dotación de personal suele ser mayor?",
+    "opciones": [
+      "A. En las fases intermedias.",
+      "B. Es uniforme durante todo el ciclo de vida del proyecto.",
+      "C. Al final.",
+      "D. Al inicio."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T1-126-Pregunta: ¿Cuál de los siguientes ítems es el que requiere más iteraciones?",
+    "opciones": [
+      "A. Grupo de procesos de cierre.",
+      "B. Grupo de procesos de planificación.",
+      "C. Administrar las adquisiciones.",
+      "D. Plan de comunicaciones."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T1-127-Pregunta: Reunión de planificación con la dirección general: se informa sobre la importancia de un proyecto para cubrir una porción de demanda insatisfecha del mercado, a la cual han querido ofrecer servicios desde hace tres años. ¿A qué tipo de planificación pertenece este proyecto?",
+    "opciones": [
+      "A. Ciclo de vida del producto.",
+      "B. Planificación del portafolio.",
+      "C. Planificación de programas.",
+      "D. Planificación estratégica."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "API-T1-128-Pregunta: ¿Cuál de los siguientes elementos será considerado de mayor importancia en cualquier proyecto: alcance, coste y calidad?",
+    "opciones": [
+      "A. Calidad.",
+      "B. Son elementos complementarios y no se puede priorizar sin conocer detalles del proyecto.",
+      "C. Alcance.",
+      "D. Coste."
+    ],
+    "solucion": "B"
+  },
+  {
     "cuestion": "API-T2-01-Pregunta: ¿Qué documento autoriza formalmente la existencia del proyecto y da autoridad al Director del Proyecto?",
     "opciones": [
       "A. El Caso de Negocio.",
@@ -790,307 +1630,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T1-01-Pregunta: Según el Triángulo del Talento del PMI, ¿qué habilidad se refiere al conocimiento de la estrategia, misión y objetivos de la organización?",
-    "opciones": [
-      "A. Ways of Working (Formas de trabajar).",
-      "B. Power Skills (Habilidades de poder).",
-      "C. Business Acumen (Conocimiento del negocio).",
-      "D. Gestión técnica de proyectos."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "API-T1-02-Pregunta: ¿Cuál es la función principal de un 'Project Coordinator' en una organización matricial débil?",
-    "opciones": [
-      "A. Tiene plena autoridad sobre el presupuesto.",
-      "B. Actúa como asistente sin capacidad de decisión.",
-      "C. Tiene cierto poder para tomar decisiones y reporta a un gerente de nivel superior.",
-      "D. Es el dueño del producto."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "API-T1-03-Pregunta: El principio de 'Adaptabilidad y Resiliencia' sugiere que el equipo del proyecto debe:",
-    "opciones": [
-      "A. Mantener el plan original a toda costa.",
-      "B. Ser capaz de responder a condiciones cambiantes y recuperarse de los contratiempos.",
-      "C. Evitar cualquier riesgo.",
-      "D. Seguir estrictamente la metodología en cascada."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-04-Pregunta: ¿Qué diferencia existe entre 'Grado' y 'Calidad'?",
-    "opciones": [
-      "A. Son sinónimos.",
-      "B. La calidad es la categoría asignada (ej. Lujo) y el grado es el cumplimiento de requisitos.",
-      "C. El grado es la categoría asignada a productos con el mismo uso funcional y la calidad es el nivel de cumplimiento de los requisitos.",
-      "D. El grado es subjetivo y la calidad objetiva."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "API-T1-05-Pregunta: En el modelo de complejidad del proyecto, la 'Ambigüedad' se refiere a:",
-    "opciones": [
-      "A. La falta de claridad o confusión sobre los eventos futuros o causas.",
-      "B. El comportamiento humano impredecible.",
-      "C. El número de interconexiones en el sistema.",
-      "D. La falta de presupuesto."
-    ],
-    "solucion": "A"
-  },
-  {
-    "cuestion": "API-T1-06-Pregunta: ¿Qué documento pertenece a la fase de pre-proyecto y describe los beneficios tangibles e intangibles esperados?",
-    "opciones": [
-      "A. Acta de Constitución.",
-      "B. Plan de Gestión de Beneficios.",
-      "C. EDT.",
-      "D. Registro de Lecciones Aprendidas."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-07-Pregunta: ¿Quién es el responsable último de que el Caso de Negocio se cumpla?",
-    "opciones": [
-      "A. El Director del Proyecto.",
-      "B. El Patrocinador (Sponsor).",
-      "C. El equipo técnico.",
-      "D. La PMO."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-08-Pregunta: En una organización 'Matricial Fuerte', ¿quién tiene más autoridad sobre los recursos?",
-    "opciones": [
-      "A. El Gerente Funcional.",
-      "B. El Director del Proyecto.",
-      "C. Comparten autoridad al 50%.",
-      "D. El Cliente."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-09-Pregunta: El enfoque de desarrollo 'Iterativo' se centra principalmente en:",
-    "opciones": [
-      "A. La velocidad de entrega.",
-      "B. La corrección de la solución mediante retroalimentación repetida.",
-      "C. Reducir costes.",
-      "D. Entregar todo al final de una sola vez."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-10-Pregunta: El enfoque 'Incremental' se centra en:",
-    "opciones": [
-      "A. La velocidad de entrega proporcionando partes terminadas del producto frecuentemente.",
-      "B. Refinar los requisitos sin entregar nada hasta el final.",
-      "C. Evitar cambios.",
-      "D. La planificación a largo plazo."
-    ],
-    "solucion": "A"
-  },
-  {
-    "cuestion": "API-T1-11-Pregunta: Según el modelo de prominencia (Salience Model), ¿cuáles son los tres atributos para clasificar a los interesados?",
-    "opciones": [
-      "A. Dinero, Tiempo y Alcance.",
-      "B. Poder, Legitimidad y Urgencia.",
-      "C. Interés, Influencia e Impacto.",
-      "D. Interno, Externo y Neutro."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-12-Pregunta: ¿Qué es el 'Tailoring' (Adaptación) en la gestión de proyectos?",
-    "opciones": [
-      "A. Copiar el plan de otro proyecto.",
-      "B. La selección y ajuste deliberado del enfoque, la gobernanza y los procesos para que sean adecuados al proyecto específico.",
-      "C. Reducir el alcance para terminar antes.",
-      "D. Ignorar los procesos de calidad."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-13-Pregunta: ¿Cuál de las siguientes NO es una función típica de la PMO?",
-    "opciones": [
-      "A. Proveer metodologías y plantillas.",
-      "B. Dar soporte y entrenamiento.",
-      "C. Definir la estrategia comercial de la empresa.",
-      "D. Gestionar recursos compartidos entre proyectos."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "API-T1-14-Pregunta: En el ciclo de vida del proyecto, las revisiones de fase (Phase Gate Reviews) sirven para:",
-    "opciones": [
-      "A. Celebrar el final del proyecto.",
-      "B. Decidir si el proyecto debe continuar a la siguiente fase, corregirse o cancelarse.",
-      "C. Cambiar al Director del Proyecto.",
-      "D. Aumentar el presupuesto automáticamente."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-15-Pregunta: El principio de 'Stewardship' (Administración/Mayordomía) implica actuar con:",
-    "opciones": [
-      "A. Rapidez y eficacia.",
-      "B. Integridad, cuidado, confiabilidad y cumplimiento.",
-      "C. Autoridad absoluta.",
-      "D. Enfoque exclusivo en el beneficio económico."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-16-Pregunta: ¿Qué teoría de motivación clasifica las necesidades en una pirámide (Fisiológicas, Seguridad, Sociales, Estima, Autorrealización)?",
-    "opciones": [
-      "A. Teoría de Herzberg.",
-      "B. Teoría X e Y de McGregor.",
-      "C. Jerarquía de Maslow.",
-      "D. Teoría de McClelland."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "API-T1-17-Pregunta: Según la teoría de Herzberg, los 'Factores Higiénicos' (como el salario o condiciones laborales):",
-    "opciones": [
-      "A. Motivan a largo plazo.",
-      "B. No motivan por sí mismos, pero su ausencia causa insatisfacción.",
-      "C. Son irrelevantes.",
-      "D. Son los únicos que importan."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-18-Pregunta: ¿Cuál es la fórmula para calcular los canales de comunicación en un equipo de 'n' personas?",
-    "opciones": [
-      "A. n(n-1)/2",
-      "B. n^2",
-      "C. 2n + 1",
-      "D. (n-1)/2"
-    ],
-    "solucion": "A"
-  },
-  {
-    "cuestion": "API-T1-19-Pregunta: ¿Qué tipo de comunicación sucede cuando envías un email a todo el equipo sin esperar confirmación de lectura inmediata?",
-    "opciones": [
-      "A. Interactiva.",
-      "B. Pull (Tirar).",
-      "C. Push (Empujar).",
-      "D. Sincrónica."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "API-T1-20-Pregunta: El dominio de 'Incertidumbre' trata principalmente sobre:",
-    "opciones": [
-      "A. La gestión de riesgos y la ambigüedad.",
-      "B. La planificación del cronograma.",
-      "C. La contratación de personal.",
-      "D. La definición del alcance."
-    ],
-    "solucion": "A"
-  },
-  {
-    "cuestion": "API-T1-21-Pregunta: ¿Qué estilo de liderazgo se centra en servir al equipo y eliminar obstáculos?",
-    "opciones": [
-      "A. Autocrático.",
-      "B. Laissez-faire.",
-      "C. Servant Leadership (Liderazgo de servicio).",
-      "D. Transaccional."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "API-T1-22-Pregunta: Un proyecto que busca cumplir requisitos regulatorios suele ser iniciado por una necesidad:",
-    "opciones": [
-      "A. De mercado.",
-      "B. Legal o social.",
-      "C. Tecnológica.",
-      "D. Ecológica."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-23-Pregunta: ¿Qué es OPM (Organizational Project Management)?",
-    "opciones": [
-      "A. Un software de gestión.",
-      "B. El marco estratégico que integra portafolios, programas y proyectos para lograr objetivos estratégicos.",
-      "C. Otro nombre para la PMO.",
-      "D. La gestión de operaciones."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-24-Pregunta: El 'Ciclo de Vida del Producto' comienza con:",
-    "opciones": [
-      "A. El Acta de Constitución.",
-      "B. La introducción del producto en el mercado (o su concepción) y termina con su retiro.",
-      "C. La primera reunión de equipo.",
-      "D. La firma del contrato."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-25-Pregunta: ¿Qué factor NO es una restricción clásica del proyecto (Triple Restricción ampliada)?",
-    "opciones": [
-      "A. Alcance.",
-      "B. Coste.",
-      "C. Tiempo.",
-      "D. La personalidad del patrocinador."
-    ],
-    "solucion": "D"
-  },
-  {
-    "cuestion": "API-T1-26-Pregunta: La comunicación 'No Verbal' incluye:",
-    "opciones": [
-      "A. El tono de voz y el lenguaje corporal.",
-      "B. Los correos electrónicos.",
-      "C. Las actas de reunión.",
-      "D. Las llamadas telefónicas."
-    ],
-    "solucion": "A"
-  },
-  {
-    "cuestion": "API-T1-27-Pregunta: ¿Qué es un 'Stakeholder Negativo'?",
-    "opciones": [
-      "A. Alguien que siempre está de mal humor.",
-      "B. Alguien que ve el proyecto como una amenaza y trabaja para impedirlo.",
-      "C. Un proveedor que cobra mucho.",
-      "D. Un miembro del equipo con poca experiencia."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-28-Pregunta: El principio de 'Pensamiento Sistémico' requiere:",
-    "opciones": [
-      "A. Centrarse solo en tu tarea.",
-      "B. Reconocer, evaluar y responder a las interacciones dinámicas dentro y alrededor del proyecto.",
-      "C. Usar software complejo.",
-      "D. Ignorar los cambios externos."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-29-Pregunta: ¿Cuándo se considera que un proyecto ha terminado?",
-    "opciones": [
-      "A. Cuando se acaba el dinero.",
-      "B. Cuando se alcanzan los objetivos o se decide terminarlo porque no se pueden cumplir.",
-      "C. Cuando el gerente se va de vacaciones.",
-      "D. Cuando empieza la fase de ejecución."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-30-Pregunta: La ética en la gestión de proyectos (según PMI) se basa en cuatro valores:",
-    "opciones": [
-      "A. Dinero, Poder, Fama, Éxito.",
-      "B. Responsabilidad, Respeto, Equidad (Justicia) y Honestidad.",
-      "C. Rapidez, Calidad, Coste, Alcance.",
-      "D. Planificación, Ejecución, Control, Cierre."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T2-01-Pregunta: En el Acta de Constitución, los 'Supuestos' (Assumptions) son:",
+    "cuestion": "API-T2-36-Pregunta: En el Acta de Constitución, los 'Supuestos' (Assumptions) son:",
     "opciones": [
       "A. Factores que se consideran verdaderos sin prueba ni demostración.",
       "B. Restricciones de presupuesto.",
@@ -1100,7 +1640,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T2-02-Pregunta: ¿Cuál es la única salida del proceso 'Planificar la Gestión de Requisitos'?",
+    "cuestion": "API-T2-37-Pregunta: ¿Cuál es la única salida del proceso 'Planificar la Gestión de Requisitos'?",
     "opciones": [
       "A. La lista de requisitos.",
       "B. El Plan de Gestión de Requisitos.",
@@ -1110,7 +1650,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-03-Pregunta: La 'Regla del 100%' en la EDT (WBS) establece que:",
+    "cuestion": "API-T2-38-Pregunta: La 'Regla del 100%' en la EDT (WBS) establece que:",
     "opciones": [
       "A. El proyecto debe terminarse al 100% de calidad.",
       "B. La EDT debe incluir el 100% del trabajo definido por el alcance y nada más.",
@@ -1120,7 +1660,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-04-Pregunta: ¿Qué es una 'Cuenta de Control' (Control Account)?",
+    "cuestion": "API-T2-39-Pregunta: ¿Qué es una 'Cuenta de Control' (Control Account)?",
     "opciones": [
       "A. Una cuenta bancaria.",
       "B. Un punto de control de gestión donde se integran alcance, presupuesto y cronograma y se mide el desempeño.",
@@ -1130,7 +1670,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-05-Pregunta: La diferencia entre el Plan de Gestión del Alcance y el Plan de Gestión de Requisitos es:",
+    "cuestion": "API-T2-40-Pregunta: La diferencia entre el Plan de Gestión del Alcance y el Plan de Gestión de Requisitos es:",
     "opciones": [
       "A. El de Alcance dice 'cómo' hacer la EDT y el Enunciado; el de Requisitos dice 'cómo' recopilar y trazar las necesidades.",
       "B. Son el mismo documento.",
@@ -1140,7 +1680,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T2-06-Pregunta: En la gestión de cambios, ¿qué organismo es responsable de revisar, evaluar, aprobar, retrasar o rechazar los cambios al proyecto?",
+    "cuestion": "API-T2-41-Pregunta: En la gestión de cambios, ¿qué organismo es responsable de revisar, evaluar, aprobar, retrasar o rechazar los cambios al proyecto?",
     "opciones": [
       "A. El equipo de desarrollo.",
       "B. El Comité de Control de Cambios (CCB).",
@@ -1150,7 +1690,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-07-Pregunta: ¿Qué es un 'Cambio Constructivo' (Constructive Change)?",
+    "cuestion": "API-T2-42-Pregunta: ¿Qué es un 'Cambio Constructivo' (Constructive Change)?",
     "opciones": [
       "A. Un cambio que mejora el proyecto.",
       "B. Una acción o directiva del cliente/gerencia que no se documenta formalmente pero que el contratista interpreta como un cambio de alcance.",
@@ -1160,7 +1700,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-08-Pregunta: En el proceso de Validar el Alcance, la entrada clave 'Entregables Verificados' proviene del proceso de:",
+    "cuestion": "API-T2-43-Pregunta: En el proceso de Validar el Alcance, la entrada clave 'Entregables Verificados' proviene del proceso de:",
     "opciones": [
       "A. Dirigir y Gestionar el Trabajo.",
       "B. Controlar la Calidad.",
@@ -1170,7 +1710,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-09-Pregunta: ¿Cuál de las siguientes es una técnica para 'Cerrar el Proyecto o Fase'?",
+    "cuestion": "API-T2-44-Pregunta: ¿Cuál de las siguientes es una técnica para 'Cerrar el Proyecto o Fase'?",
     "opciones": [
       "A. Análisis de Regresión y Tendencias.",
       "B. Prototipado.",
@@ -1180,7 +1720,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T2-10-Pregunta: El 'Informe Final' del proyecto suele incluir:",
+    "cuestion": "API-T2-45-Pregunta: El 'Informe Final' del proyecto suele incluir:",
     "opciones": [
       "A. Quejas personales del equipo.",
       "B. Resumen de alto nivel, validación de objetivos, resumen de calidad, costos y cronograma final.",
@@ -1190,7 +1730,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-11-Pregunta: En un contrato de Costos Reembolsables, la tarifa (Fee) representa:",
+    "cuestion": "API-T2-46-Pregunta: En un contrato de Costos Reembolsables, la tarifa (Fee) representa:",
     "opciones": [
       "A. El costo de los materiales.",
       "B. La ganancia o beneficio del vendedor.",
@@ -1200,7 +1740,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-12-Pregunta: El Punto de Asunción Total (PTA) en un contrato de precio fijo con incentivos es:",
+    "cuestion": "API-T2-47-Pregunta: El Punto de Asunción Total (PTA) en un contrato de precio fijo con incentivos es:",
     "opciones": [
       "A. Cuando el proyecto termina.",
       "B. El punto de costo donde el vendedor asume todos los sobrecostos adicionales.",
@@ -1210,7 +1750,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-13-Pregunta: ¿Qué documento se utiliza para asegurar que las propuestas de los vendedores sean comparables y completas?",
+    "cuestion": "API-T2-48-Pregunta: ¿Qué documento se utiliza para asegurar que las propuestas de los vendedores sean comparables y completas?",
     "opciones": [
       "A. La factura.",
       "B. El Enunciado del Trabajo de las Adquisiciones (SOW).",
@@ -1220,7 +1760,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-14-Pregunta: Las 'Conferencias de Oferentes' (Bidder Conferences) sirven para:",
+    "cuestion": "API-T2-49-Pregunta: Las 'Conferencias de Oferentes' (Bidder Conferences) sirven para:",
     "opciones": [
       "A. Elegir al vendedor más barato inmediatamente.",
       "B. Asegurar que todos los posibles vendedores tengan una comprensión clara y común de los requisitos.",
@@ -1230,7 +1770,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-15-Pregunta: La técnica de 'Diagrama de Contexto' visualiza:",
+    "cuestion": "API-T2-50-Pregunta: La técnica de 'Diagrama de Contexto' visualiza:",
     "opciones": [
       "A. El cronograma del proyecto.",
       "B. El sistema, sus interfaces y las interacciones con actores externos.",
@@ -1240,7 +1780,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-16-Pregunta: ¿Qué diferencia hay entre 'Criterios de Aceptación' y 'Definición de Hecho (DoD)' en Ágil?",
+    "cuestion": "API-T2-51-Pregunta: ¿Qué diferencia hay entre 'Criterios de Aceptación' y 'Definición de Hecho (DoD)' en Ágil?",
     "opciones": [
       "A. No hay diferencia.",
       "B. Los Criterios de Aceptación son específicos de una Historia de Usuario; la DoD aplica a todas las historias del backlog.",
@@ -1250,7 +1790,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-17-Pregunta: El 'Análisis de Variación' en el Control del Alcance compara:",
+    "cuestion": "API-T2-52-Pregunta: El 'Análisis de Variación' en el Control del Alcance compara:",
     "opciones": [
       "A. El desempeño real frente a la línea base del alcance.",
       "B. El presupuesto frente al gasto.",
@@ -1260,7 +1800,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T2-18-Pregunta: ¿Qué es el 'Product Backlog Refinement' (Refinamiento)?",
+    "cuestion": "API-T2-53-Pregunta: ¿Qué es el 'Product Backlog Refinement' (Refinamiento)?",
     "opciones": [
       "A. Pulir el producto final.",
       "B. La actividad continua de añadir detalle, estimaciones y orden a los elementos del backlog.",
@@ -1270,7 +1810,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-19-Pregunta: Si el patrocinador se marcha de la empresa en mitad del proyecto, ¿qué debe hacer el PM?",
+    "cuestion": "API-T2-54-Pregunta: Si el patrocinador se marcha de la empresa en mitad del proyecto, ¿qué debe hacer el PM?",
     "opciones": [
       "A. Cancelar el proyecto.",
       "B. Seguir como si nada.",
@@ -1280,7 +1820,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T2-20-Pregunta: Los 'Datos de Desempeño del Trabajo' (Work Performance Data) son:",
+    "cuestion": "API-T2-55-Pregunta: Los 'Datos de Desempeño del Trabajo' (Work Performance Data) son:",
     "opciones": [
       "A. Informes analizados y formateados.",
       "B. Observaciones y mediciones brutas identificadas durante la ejecución (ej. % completado, nº de defectos).",
@@ -1290,7 +1830,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-21-Pregunta: La 'Información de Desempeño del Trabajo' es:",
+    "cuestion": "API-T2-56-Pregunta: La 'Información de Desempeño del Trabajo' es:",
     "opciones": [
       "A. Los datos brutos.",
       "B. Los datos analizados en contexto e integrados para tomar decisiones.",
@@ -1300,7 +1840,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-22-Pregunta: ¿Qué plan subsidiario define cómo se gestionará la configuración de los entregables y la documentación?",
+    "cuestion": "API-T2-57-Pregunta: ¿Qué plan subsidiario define cómo se gestionará la configuración de los entregables y la documentación?",
     "opciones": [
       "A. Plan de Gestión de la Configuración.",
       "B. Plan de Alcance.",
@@ -1310,7 +1850,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T2-23-Pregunta: En la Elicitación, la técnica de 'Observación' (Job Shadowing) es útil cuando:",
+    "cuestion": "API-T2-58-Pregunta: En la Elicitación, la técnica de 'Observación' (Job Shadowing) es útil cuando:",
     "opciones": [
       "A. Los usuarios son reacios o tienen dificultades para articular sus requisitos.",
       "B. El usuario está en otro país.",
@@ -1320,7 +1860,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T2-24-Pregunta: El 'Scope Baseline' es inmutable a menos que:",
+    "cuestion": "API-T2-59-Pregunta: El 'Scope Baseline' es inmutable a menos que:",
     "opciones": [
       "A. El PM quiera cambiarlo.",
       "B. Se apruebe una solicitud de cambio formal mediante el control integrado de cambios.",
@@ -1330,7 +1870,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-25-Pregunta: ¿Qué tipo de contrato es 'Tiempo y Materiales'?",
+    "cuestion": "API-T2-60-Pregunta: ¿Qué tipo de contrato es 'Tiempo y Materiales'?",
     "opciones": [
       "A. Cerrado y seguro.",
       "B. Híbrido, con elementos de precio fijo (precio hora) y costos reembolsables (cantidad variable).",
@@ -1340,7 +1880,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-26-Pregunta: Un 'Diccionario de la EDT' es esencial porque:",
+    "cuestion": "API-T2-61-Pregunta: Un 'Diccionario de la EDT' es esencial porque:",
     "opciones": [
       "A. La EDT gráfica no tiene suficiente detalle para que el equipo sepa exactamente qué hacer.",
       "B. Lo exige la ley.",
@@ -1350,7 +1890,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T2-27-Pregunta: ¿Qué entrada del Acta de Constitución incluye contratos verbales o escritos previos?",
+    "cuestion": "API-T2-62-Pregunta: ¿Qué entrada del Acta de Constitución incluye contratos verbales o escritos previos?",
     "opciones": [
       "A. Acuerdos.",
       "B. EEF.",
@@ -1360,7 +1900,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T2-28-Pregunta: La validación del alcance suele realizarse:",
+    "cuestion": "API-T2-63-Pregunta: La validación del alcance suele realizarse:",
     "opciones": [
       "A. Solo al final del proyecto.",
       "B. Periódicamente (ej. por fases o iteraciones) tras obtener entregables verificados por calidad.",
@@ -1370,7 +1910,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-29-Pregunta: ¿Qué es una 'Licitación' (Tender/Bid)?",
+    "cuestion": "API-T2-64-Pregunta: ¿Qué es una 'Licitación' (Tender/Bid)?",
     "opciones": [
       "A. Una oferta de un vendedor para realizar un trabajo.",
       "B. Un tipo de contrato.",
@@ -1380,7 +1920,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T2-30-Pregunta: Si el cliente rechaza un entregable en la validación del alcance, el PM debe:",
+    "cuestion": "API-T2-65-Pregunta: Si el cliente rechaza un entregable en la validación del alcance, el PM debe:",
     "opciones": [
       "A. Discutir con el cliente.",
       "B. Documentar las razones e iniciar una solicitud de cambio para la reparación de defectos.",
@@ -1390,207 +1930,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T1-100-Q01-Pregunta: ¿Cuál es el objetivo principal de la Gestión de Operaciones en comparación con la Gestión de Proyectos?",
-    "opciones": [
-      "A. Crear un producto único.",
-      "B. Asegurar que las funciones del negocio continúen de forma eficiente y permanente.",
-      "C. Definir el acta de constitución.",
-      "D. Gestionar esfuerzos temporales."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-100-Q02-Pregunta: En el contexto de Creación de Valor, ¿qué es un Sistema de Entrega de Valor?",
-    "opciones": [
-      "A. Un software de mensajería.",
-      "B. Una estructura jerárquica de carteras, programas y proyectos para alinear metas estratégicas.",
-      "C. El departamento de ventas de la empresa.",
-      "D. Un método para calcular el ROI."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-100-Q03-Pregunta: ¿Qué dimensión del equipo de gestión se enfoca en el pensamiento estratégico para alinear el proyecto con la organización?",
-    "opciones": [
-      "A. Responsabilidad Social.",
-      "B. Power Skills.",
-      "C. Business Acumen.",
-      "D. Ways of Working."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "API-T1-100-Q04-Pregunta: Un equipo que es autoorganizado y descentralizado es típico de un enfoque:",
-    "opciones": [
-      "A. Centralizado.",
-      "B. Ágil / Adaptativo.",
-      "C. Funcional.",
-      "D. Predictivo."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-100-Q05-Pregunta: ¿Cuál es la función de soporte que se encarga de facilitar la colaboración resolviendo conflictos?",
-    "opciones": [
-      "A. Dirección clara.",
-      "B. Facilitar la colaboración.",
-      "C. Ejecutar trabajo técnico.",
-      "D. Gestión de retroalimentación."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-100-Q06-Pregunta: En el ciclo de vida del producto, ¿qué fase incluye las revisiones o actualizaciones significativas?",
-    "opciones": [
-      "A. Introducción.",
-      "B. Crecimiento.",
-      "C. Madurez.",
-      "D. Declive."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "API-T1-100-Q07-Pregunta: ¿Qué enfoque de desarrollo es más útil cuando existe una gran incertidumbre sobre los requisitos?",
-    "opciones": [
-      "A. Predictivo.",
-      "B. Cascada.",
-      "C. Adaptativo.",
-      "D. Estructurado."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "API-T1-100-Q08-Pregunta: El principio 'Sé un líder responsable' implica principalmente:",
-    "opciones": [
-      "A. Delegar toda la responsabilidad al equipo.",
-      "B. Inspirar, motivar y adaptarse a las situaciones dando ejemplo.",
-      "C. Seguir el plan sin importar los cambios.",
-      "D. Centrarse solo en los resultados técnicos."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-100-Q09-Pregunta: ¿Qué dominio de desempeño se alinea directamente con el marco de decisiones de la estrategia organizacional?",
-    "opciones": [
-      "A. Recursos.",
-      "B. Gobernanza.",
-      "C. Riesgo.",
-      "D. Finanzas."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-100-Q10-Pregunta: ¿Cuál es una característica común entre proyectos y operaciones?",
-    "opciones": [
-      "A. Ambas son temporales.",
-      "B. Ambas están restringidas por recursos limitados.",
-      "C. Ambas crean productos únicos cada vez.",
-      "D. Ambas terminan cuando se alcanza el objetivo."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-100-Q11-Pregunta: ¿Qué componente del equipo de gestión aplica métodos y enfoques de gestión del cambio adecuados al contexto?",
-    "opciones": [
-      "A. Power Skills.",
-      "B. Ways of Working.",
-      "C. Business Acumen.",
-      "D. Resultados."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-100-Q12-Pregunta: ¿Cuál es el rol de un Business Analyst respecto al producto?",
-    "opciones": [
-      "A. Financiar el proyecto.",
-      "B. Asegurar la alineación entre las necesidades del negocio y la funcionalidad del producto.",
-      "C. Ejecutar el código fuente.",
-      "D. Ser el jefe de la PMO."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-100-Q13-Pregunta: Un proyecto para reparar un proceso existente se clasifica como un esfuerzo para:",
-    "opciones": [
-      "A. Cumplir requisitos legales.",
-      "B. Crear, mejorar o reparar productos/procesos.",
-      "C. Cambiar estrategias tecnológicas.",
-      "D. Satisfacer solicitudes sociales."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-100-Q14-Pregunta: El valor de negocio 'intangible' podría ser:",
-    "opciones": [
-      "A. Dinero en efectivo.",
-      "B. Equipamiento físico.",
-      "C. Reconocimiento de marca o prestigio.",
-      "D. Acciones de la bolsa."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "API-T1-100-Q15-Pregunta: ¿Cuál es el objetivo del dominio de desempeño 'Recursos'?",
-    "opciones": [
-      "A. Definir el alcance.",
-      "B. Planificar, estimar y adquirir recursos humanos y físicos.",
-      "C. Gestionar el presupuesto.",
-      "D. Identificar riesgos."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-100-Q16-Pregunta: Un proyecto 'temporal' significa que:",
-    "opciones": [
-      "A. Dura para siempre.",
-      "B. Tiene un inicio y un fin definidos.",
-      "C. Se realiza solo cuando hay tiempo libre.",
-      "D. No tiene objetivos claros."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-100-Q17-Pregunta: El principio 'Enfócate en el valor' requiere evaluar el proyecto:",
-    "opciones": [
-      "A. Solo al final.",
-      "B. Solo al inicio.",
-      "C. Continuamente durante todas las fases.",
-      "D. Solo si el cliente lo pide."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "API-T1-100-Q18-Pregunta: ¿Qué dominio gestiona el presupuesto y busca optimizar el valor financiero?",
-    "opciones": [
-      "A. Cronograma.",
-      "B. Finanzas.",
-      "C. Interesados.",
-      "D. Riesgo."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-100-Q19-Pregunta: La PMO ayuda a la gobernanza mediante:",
-    "opciones": [
-      "A. La eliminación de los directores de proyecto.",
-      "B. La estandarización, soporte y alineación estratégica.",
-      "C. La reducción del alcance.",
-      "D. El aumento de los riesgos."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-100-Q20-Pregunta: El ciclo de vida del proyecto acaba cuando:",
-    "opciones": [
-      "A. El producto se retira del mercado.",
-      "B. Se alcanzan los objetivos declarados o se cancela.",
-      "C. Empieza la fase de mantenimiento.",
-      "D. El patrocinador se jubila."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T2-100-Q01-Pregunta: En el estudio de viabilidad, ¿qué dimensión evalúa si el proyecto cumple con el RGPD?",
+    "cuestion": "API-T2-66-Pregunta: En el estudio de viabilidad, ¿qué dimensión evalúa si el proyecto cumple con el RGPD?",
     "opciones": [
       "A. Económica.",
       "B. Técnica.",
@@ -1600,7 +1940,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T2-100-Q02-Pregunta: ¿Qué técnica de toma de decisiones implica que una persona asume la responsabilidad en nombre del grupo?",
+    "cuestion": "API-T2-67-Pregunta: ¿Qué técnica de toma de decisiones implica que una persona asume la responsabilidad en nombre del grupo?",
     "opciones": [
       "A. Unanimidad.",
       "B. Mayoría.",
@@ -1610,7 +1950,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T2-100-Q03-Pregunta: El Diccionario de la EDT incluye 'Referencias técnicas', ¿para qué sirven?",
+    "cuestion": "API-T2-68-Pregunta: El Diccionario de la EDT incluye 'Referencias técnicas', ¿para qué sirven?",
     "opciones": [
       "A. Para saber quién es el jefe.",
       "B. Para proporcionar estándares o manuales necesarios para el trabajo del paquete.",
@@ -1620,7 +1960,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-100-Q04-Pregunta: ¿Qué proceso se encarga de 'Medir para mejorar'?",
+    "cuestion": "API-T2-69-Pregunta: ¿Qué proceso se encarga de 'Medir para mejorar'?",
     "opciones": [
       "A. Inicio.",
       "B. Planificación.",
@@ -1630,7 +1970,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T2-100-Q05-Pregunta: En un enfoque adaptativo, ¿cómo se gestionan los cambios que no se añaden al backlog?",
+    "cuestion": "API-T2-70-Pregunta: En un enfoque adaptativo, ¿cómo se gestionan los cambios que no se añaden al backlog?",
     "opciones": [
       "A. Se aceptan automáticamente.",
       "B. Se consideran rechazados.",
@@ -1640,7 +1980,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-100-Q06-Pregunta: ¿Cuál es un beneficio del 'Outsourcing' (Comprar)?",
+    "cuestion": "API-T2-71-Pregunta: ¿Cuál es un beneficio del 'Outsourcing' (Comprar)?",
     "opciones": [
       "A. Incrementa el control interno.",
       "B. Permite centrarse en las fortalezas competitivas de la empresa.",
@@ -1650,7 +1990,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-100-Q07-Pregunta: ¿Qué documento se utiliza para clasificar gran número de ideas en grupos para su análisis?",
+    "cuestion": "API-T2-72-Pregunta: ¿Qué documento se utiliza para clasificar gran número de ideas en grupos para su análisis?",
     "opciones": [
       "A. Mapa mental.",
       "B. Diagrama de afinidad.",
@@ -1660,7 +2000,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-100-Q08-Pregunta: Un requisito que indica que el sistema debe soportar 1000 usuarios concurrentes es un:",
+    "cuestion": "API-T2-73-Pregunta: Un requisito que indica que el sistema debe soportar 1000 usuarios concurrentes es un:",
     "opciones": [
       "A. Requisito funcional.",
       "B. Requisito no funcional (de solución).",
@@ -1670,7 +2010,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-100-Q09-Pregunta: ¿Qué técnica de elicitación permite ver directamente cómo los usuarios realizan su trabajo en su entorno real?",
+    "cuestion": "API-T2-74-Pregunta: ¿Qué técnica de elicitación permite ver directamente cómo los usuarios realizan su trabajo en su entorno real?",
     "opciones": [
       "A. Entrevistas.",
       "B. Observación / Conversación.",
@@ -1680,7 +2020,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-100-Q10-Pregunta: El método MoSCoW se utiliza para:",
+    "cuestion": "API-T2-75-Pregunta: El método MoSCoW se utiliza para:",
     "opciones": [
       "A. Calcular el presupuesto.",
       "B. Priorización de requisitos.",
@@ -1690,7 +2030,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-100-Q11-Pregunta: En el cierre adaptativo, ¿en qué se centran las 'Retrospectivas'?",
+    "cuestion": "API-T2-76-Pregunta: En el cierre adaptativo, ¿en qué se centran las 'Retrospectivas'?",
     "opciones": [
       "A. En firmar el contrato final.",
       "B. En compartir conocimiento y gestionar riesgos pendientes.",
@@ -1700,7 +2040,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-100-Q12-Pregunta: ¿Cuál es el riesgo de una 'descomposición excesiva' en la EDT?",
+    "cuestion": "API-T2-77-Pregunta: ¿Cuál es el riesgo de una 'descomposición excesiva' en la EDT?",
     "opciones": [
       "A. Que el proyecto sea muy corto.",
       "B. Causar un sobreesfuerzo de gestión no productivo.",
@@ -1710,7 +2050,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-100-Q13-Pregunta: ¿Qué proceso traduce el plan de gestión de calidad en actividades concretas?",
+    "cuestion": "API-T2-78-Pregunta: ¿Qué proceso traduce el plan de gestión de calidad en actividades concretas?",
     "opciones": [
       "A. Control de Calidad.",
       "B. Gestionar el Aseguramiento de la Calidad.",
@@ -1720,7 +2060,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-100-Q14-Pregunta: ¿Qué herramienta permite evaluar muchas ideas usando una matriz de decisiones?",
+    "cuestion": "API-T2-79-Pregunta: ¿Qué herramienta permite evaluar muchas ideas usando una matriz de decisiones?",
     "opciones": [
       "A. Votación.",
       "B. Análisis con múltiples criterios.",
@@ -1730,7 +2070,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-100-Q15-Pregunta: En el cierre, la 'liberación de recursos' implica:",
+    "cuestion": "API-T2-80-Pregunta: En el cierre, la 'liberación de recursos' implica:",
     "opciones": [
       "A. Comprar nuevos equipos.",
       "B. Reasignar el personal y equipos a nuevos proyectos u operaciones.",
@@ -1740,7 +2080,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-100-Q16-Pregunta: ¿Qué es una 'Épica' en el entorno adaptativo?",
+    "cuestion": "API-T2-81-Pregunta: ¿Qué es una 'Épica' en el entorno adaptativo?",
     "opciones": [
       "A. Un requisito de muy bajo nivel.",
       "B. Un requisito de alto nivel que luego se descompone en Historias de Usuario.",
@@ -1750,7 +2090,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-100-Q17-Pregunta: ¿Qué documento documenta todas las características técnicas del producto software a obtener?",
+    "cuestion": "API-T2-82-Pregunta: ¿Qué documento documenta todas las características técnicas del producto software a obtener?",
     "opciones": [
       "A. Acta de Constitución.",
       "B. ERS (Especificación de Requisitos Software).",
@@ -1760,7 +2100,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-100-Q18-Pregunta: Un cambio que 'realinea los resultados futuros con el plan' es una:",
+    "cuestion": "API-T2-83-Pregunta: Un cambio que 'realinea los resultados futuros con el plan' es una:",
     "opciones": [
       "A. Acción preventiva.",
       "B. Acción correctiva.",
@@ -1770,7 +2110,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-100-Q19-Pregunta: ¿Cuál es el propósito del 'Plan de Gestión de Requisitos' respecto a la configuración?",
+    "cuestion": "API-T2-84-Pregunta: ¿Cuál es el propósito del 'Plan de Gestión de Requisitos' respecto a la configuración?",
     "opciones": [
       "A. Definir el sueldo de los desarrolladores.",
       "B. Definir cómo se inician los cambios, análisis de impacto y niveles de autorización.",
@@ -1780,7 +2120,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-100-Q20-Pregunta: 'Insourcing' significa:",
+    "cuestion": "API-T2-85-Pregunta: 'Insourcing' significa:",
     "opciones": [
       "A. Contratar a una empresa externa.",
       "B. Hacer el trabajo internamente aprovechando la experiencia disponible.",
@@ -1790,7 +2130,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-Q01-Pregunta: ¿Cuál es la característica principal que define a un proyecto frente a las operaciones?",
+    "cuestion": "API-T2-86-Pregunta: ¿Cuál es la característica principal que define a un proyecto frente a las operaciones?",
     "opciones": [
       "A. Es realizado por personas.",
       "B. Está restringido por recursos limitados.",
@@ -1800,7 +2140,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T2-Q02-Pregunta: ¿En qué se diferencian los proyectos de las operaciones en cuanto a su finalización?",
+    "cuestion": "API-T2-87-Pregunta: ¿En qué se diferencian los proyectos de las operaciones en cuanto a su finalización?",
     "opciones": [
       "A. Las operaciones acaban cuando se cumplen los objetivos.",
       "B. Los proyectos son permanentes para producir eficientemente.",
@@ -1810,7 +2150,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T2-Q03-Pregunta: ¿Qué concepto describe los beneficios tangibles e intangibles que una organización obtiene de los proyectos?",
+    "cuestion": "API-T2-88-Pregunta: ¿Qué concepto describe los beneficios tangibles e intangibles que una organización obtiene de los proyectos?",
     "opciones": [
       "A. Gestión de procesos de negocio.",
       "B. Valor de negocio.",
@@ -1820,7 +2160,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-Q04-Pregunta: ¿Cómo se define una Cartera (Portfolio) dentro del sistema de creación de valor?",
+    "cuestion": "API-T2-89-Pregunta: ¿Cómo se define una Cartera (Portfolio) dentro del sistema de creación de valor?",
     "opciones": [
       "A. Un conjunto de proyectos relacionados con objetivos técnicos.",
       "B. Un grupo de proyectos y programas gestionados para alcanzar metas estratégicas.",
@@ -1830,7 +2170,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-Q05-Pregunta: ¿Qué nivel jerárquico agrupa proyectos relacionados para obtener beneficios que no se lograrían individualmente?",
+    "cuestion": "API-T2-90-Pregunta: ¿Qué nivel jerárquico agrupa proyectos relacionados para obtener beneficios que no se lograrían individualmente?",
     "opciones": [
       "A. Operaciones.",
       "B. Carteras.",
@@ -1840,7 +2180,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T2-Q06-Pregunta: ¿Cuál es el objetivo principal de la Gestión de Proyectos?",
+    "cuestion": "API-T2-91-Pregunta: ¿Cuál es el objetivo principal de la Gestión de Proyectos?",
     "opciones": [
       "A. Maximizar el gasto de recursos.",
       "B. Alcanzar o superar el valor previsto aplicando conocimientos y técnicas.",
@@ -1850,7 +2190,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-Q07-Pregunta: ¿Qué sucede si una de las demandas concurrentes (Alcance, Tiempo, Coste, etc.) cambia?",
+    "cuestion": "API-T2-92-Pregunta: ¿Qué sucede si una de las demandas concurrentes (Alcance, Tiempo, Coste, etc.) cambia?",
     "opciones": [
       "A. No afecta a las demás.",
       "B. El proyecto se cancela automáticamente.",
@@ -1860,7 +2200,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T2-Q08-Pregunta: ¿Quién es cualquier persona o grupo que puede afectar o verse afectado por el resultado de un proyecto?",
+    "cuestion": "API-T2-93-Pregunta: ¿Quién es cualquier persona o grupo que puede afectar o verse afectado por el resultado de un proyecto?",
     "opciones": [
       "A. Patrocinador.",
       "B. Stakeholder (Interesado).",
@@ -1870,7 +2210,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-Q09-Pregunta: ¿En qué consiste la dimensión 'Business Acumen' del equipo de gestión?",
+    "cuestion": "API-T2-94-Pregunta: ¿En qué consiste la dimensión 'Business Acumen' del equipo de gestión?",
     "opciones": [
       "A. Habilidades de comunicación efectiva.",
       "B. Capacidad para resolver conflictos técnicos.",
@@ -1880,7 +2220,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T2-Q10-Pregunta: ¿Cuál es la función principal de un Patrocinador (Sponsor)?",
+    "cuestion": "API-T2-95-Pregunta: ¿Cuál es la función principal de un Patrocinador (Sponsor)?",
     "opciones": [
       "A. Realizar el trabajo técnico del proyecto.",
       "B. Proporcionar liderazgo en decisiones fuera de la autoridad del PM.",
@@ -1890,7 +2230,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-Q11-Pregunta: ¿Qué tipo de PMO tiene autoridad alta y gestiona directamente los proyectos?",
+    "cuestion": "API-T2-96-Pregunta: ¿Qué tipo de PMO tiene autoridad alta y gestiona directamente los proyectos?",
     "opciones": [
       "A. De Soporte.",
       "B. De Control.",
@@ -1900,7 +2240,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T2-Q12-Pregunta: ¿Qué tipo de PMO actúa con un rol consultivo y provee guías y buenas prácticas con autoridad baja?",
+    "cuestion": "API-T2-97-Pregunta: ¿Qué tipo de PMO actúa con un rol consultivo y provee guías y buenas prácticas con autoridad baja?",
     "opciones": [
       "A. De Control.",
       "B. De Soporte.",
@@ -1910,7 +2250,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-Q13-Pregunta: ¿Qué son los Factores Ambientales de la Empresa (EEFs)?",
+    "cuestion": "API-T2-98-Pregunta: ¿Qué son los Factores Ambientales de la Empresa (EEFs)?",
     "opciones": [
       "A. Plantillas y políticas internas de la organización.",
       "B. Condiciones externas o internas que influyen o limitan el proyecto.",
@@ -1920,7 +2260,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-Q14-Pregunta: ¿Cuál de los siguientes es un ejemplo de Activo de los Procesos de la Organización (APO)?",
+    "cuestion": "API-T2-99-Pregunta: ¿Cuál de los siguientes es un ejemplo de Activo de los Procesos de la Organización (APO)?",
     "opciones": [
       "A. Condiciones del mercado.",
       "B. Estructura organizacional.",
@@ -1930,7 +2270,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T2-Q15-Pregunta: ¿Qué diferencia principal hay entre un Coordinador y un Expedidor de proyectos?",
+    "cuestion": "API-T2-100-Pregunta: ¿Qué diferencia principal hay entre un Coordinador y un Expedidor de proyectos?",
     "opciones": [
       "A. El expedidor tiene poder de decisión y el coordinador no.",
       "B. El coordinador tiene cierto poder de decisión y el expedidor no.",
@@ -1940,7 +2280,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-Q16-Pregunta: En el ciclo de vida del proyecto, ¿cómo evoluciona el riesgo y la incertidumbre?",
+    "cuestion": "API-T2-101-Pregunta: En el ciclo de vida del proyecto, ¿cómo evoluciona el riesgo y la incertidumbre?",
     "opciones": [
       "A. Son bajos al inicio y aumentan al final.",
       "B. Son altos al inicio y disminuyen hacia el final.",
@@ -1950,7 +2290,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-Q17-Pregunta: ¿Cómo afecta el tiempo al coste de los cambios en un proyecto?",
+    "cuestion": "API-T2-102-Pregunta: ¿Cómo afecta el tiempo al coste de los cambios en un proyecto?",
     "opciones": [
       "A. El coste de los cambios disminuye con el tiempo.",
       "B. El coste de los cambios es bajo al inicio y aumenta significativamente al final.",
@@ -1960,7 +2300,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-Q18-Pregunta: ¿Qué rol prioriza el backlog y orienta el desarrollo hacia la entrega de valor en entornos ágiles?",
+    "cuestion": "API-T2-103-Pregunta: ¿Qué rol prioriza el backlog y orienta el desarrollo hacia la entrega de valor en entornos ágiles?",
     "opciones": [
       "A. Director de Proyecto.",
       "B. Business Analyst.",
@@ -1970,7 +2310,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T2-Q19-Pregunta: ¿Qué enfoque de desarrollo define el alcance, tiempo y coste al inicio del proyecto?",
+    "cuestion": "API-T2-104-Pregunta: ¿Qué enfoque de desarrollo define el alcance, tiempo y coste al inicio del proyecto?",
     "opciones": [
       "A. Adaptativo.",
       "B. Híbrido.",
@@ -1980,7 +2320,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T2-Q20-Pregunta: ¿Qué caracteriza al enfoque Adaptativo (Ágil)?",
+    "cuestion": "API-T2-105-Pregunta: ¿Qué caracteriza al enfoque Adaptativo (Ágil)?",
     "opciones": [
       "A. Los requisitos son claros y estables desde el inicio.",
       "B. Se basa en ciclos de Planificar, Realizar, Evaluar y Aprender.",
@@ -1990,7 +2330,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-Q21-Pregunta: ¿Qué área de enfoque de la dirección de proyectos define y autoriza formalmente el proyecto o fase?",
+    "cuestion": "API-T2-106-Pregunta: ¿Qué área de enfoque de la dirección de proyectos define y autoriza formalmente el proyecto o fase?",
     "opciones": [
       "A. Planificación.",
       "B. Ejecución.",
@@ -2000,7 +2340,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T2-Q22-Pregunta: ¿Cuál es el objetivo principal del Monitoreo y Control?",
+    "cuestion": "API-T2-107-Pregunta: ¿Cuál es el objetivo principal del Monitoreo y Control?",
     "opciones": [
       "A. Realizar el trabajo físico del proyecto.",
       "B. Formalizar la finalización del contrato.",
@@ -2010,7 +2350,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T2-Q23-Pregunta: Según PMBOK 8, ¿qué elemento guía el pensamiento y comportamiento de los profesionales?",
+    "cuestion": "API-T2-108-Pregunta: Según PMBOK 8, ¿qué elemento guía el pensamiento y comportamiento de los profesionales?",
     "opciones": [
       "A. Dominios de desempeño.",
       "B. Principios.",
@@ -2020,7 +2360,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-Q24-Pregunta: ¿Qué principio de la DP implica entender el proyecto como un sistema dentro de la organización?",
+    "cuestion": "API-T2-109-Pregunta: ¿Qué principio de la DP implica entender el proyecto como un sistema dentro de la organización?",
     "opciones": [
       "A. Enfócate en el valor.",
       "B. Adopta una visión holística.",
@@ -2030,17 +2370,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-Q25-Pregunta: ¿Qué dominio de desempeño se encarga de gestionar el presupuesto y estimar costos?",
-    "opciones": [
-      "A. Gobernanza.",
-      "B. Cronograma.",
-      "C. Finanzas.",
-      "D. Recursos."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "API-T2-Q26-Pregunta: ¿Qué dominio de desempeño anticipa y se prepara para disrupciones y amenazas?",
+    "cuestion": "API-T2-110-Pregunta: ¿Qué dominio de desempeño anticipa y se prepara para disrupciones y amenazas?",
     "opciones": [
       "A. Interesados.",
       "B. Riesgo.",
@@ -2050,7 +2380,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-Q27-Pregunta: ¿Qué tipo de organización estructural tiene al Director de Proyecto con autoridad alta y recursos dedicados a tiempo completo?",
+    "cuestion": "API-T2-111-Pregunta: ¿Qué tipo de organización estructural tiene al Director de Proyecto con autoridad alta y recursos dedicados a tiempo completo?",
     "opciones": [
       "A. Funcional.",
       "B. Matricial Débil.",
@@ -2060,7 +2390,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T2-Q28-Pregunta: ¿Qué principio de PMBOK 8 destaca la importancia de actuar con integridad y cuidado?",
+    "cuestion": "API-T2-112-Pregunta: ¿Qué principio de PMBOK 8 destaca la importancia de actuar con integridad y cuidado?",
     "opciones": [
       "A. Adopta una visión holística.",
       "B. Sé un líder responsable.",
@@ -2070,7 +2400,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-Q29-Pregunta: ¿Qué dimensión del valor se refiere a beneficios como la contribución social o ambiental positiva?",
+    "cuestion": "API-T2-113-Pregunta: ¿Qué dimensión del valor se refiere a beneficios como la contribución social o ambiental positiva?",
     "opciones": [
       "A. Tangible.",
       "B. Intangible.",
@@ -2080,7 +2410,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-Q30-Pregunta: ¿Qué caracteriza a un enfoque Híbrido de desarrollo?",
+    "cuestion": "API-T2-114-Pregunta: ¿Qué caracteriza a un enfoque Híbrido de desarrollo?",
     "opciones": [
       "A. No utiliza ningún tipo de planificación.",
       "B. Combina planificación estable (predictiva) con enfoques flexibles (adaptativos).",
@@ -2090,7 +2420,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-36-Pregunta: Una empresa está operando en un mercado muy dinámico. ¿Cuál de los siguientes cambios debería ser el más importante para el comité del control integrado de cambios? Un cambio originado en:",
+    "cuestion": "API-T2-115-Pregunta: Una empresa está operando en un mercado muy dinámico. ¿Cuál de los siguientes cambios debería ser el más importante para el comité del control integrado de cambios? Un cambio originado en:",
     "opciones": [
       "A. El alcance del proyecto.",
       "B. La empresa contratista.",
@@ -2100,7 +2430,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T2-37-Pregunta: En un proyecto, el principal entregable y los resultados del plan de pruebas fueron enviados al cliente para conseguir su aprobación formal. Han pasado 25 días y el cliente no contesta. ¿Qué es lo mejor que puede hacer?",
+    "cuestion": "API-T2-116-Pregunta: En un proyecto, el principal entregable y los resultados del plan de pruebas fueron enviados al cliente para conseguir su aprobación formal. Han pasado 25 días y el cliente no contesta. ¿Qué es lo mejor que puede hacer?",
     "opciones": [
       "A. Documentar los hechos en el registro de problemas.",
       "B. Ninguna de las anteriores.",
@@ -2110,7 +2440,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T2-38-Pregunta: Todas las siguientes son técnicas de recopilación de datos que se utilizan para obtener los requisitos del proyecto, excepto:",
+    "cuestion": "API-T2-117-Pregunta: Todas las siguientes son técnicas de recopilación de datos que se utilizan para obtener los requisitos del proyecto, excepto:",
     "opciones": [
       "A. Juicio de expertos.",
       "B. Tormenta de ideas.",
@@ -2120,7 +2450,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T2-39-Pregunta: El principal rol de un patrocinador comprometido con un proyecto debería ser:",
+    "cuestion": "API-T2-118-Pregunta: El principal rol de un patrocinador comprometido con un proyecto debería ser:",
     "opciones": [
       "A. Colaborar con el director del proyecto para desarrollar el plan para la dirección del proyecto.",
       "B. Prevenir cambios innecesarios y garantizar los recursos para el proyecto.",
@@ -2130,7 +2460,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-40-Pregunta: ¿Qué necesita para poder recopilar los requisitos de los interesados?",
+    "cuestion": "API-T2-119-Pregunta: ¿Qué necesita para poder recopilar los requisitos de los interesados?",
     "opciones": [
       "A. Auditorías.",
       "B. Registro de interesados.",
@@ -2140,7 +2470,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-41-Pregunta: Lo más importante del acta de constitución del proyecto es que:",
+    "cuestion": "API-T2-120-Pregunta: Lo más importante del acta de constitución del proyecto es que:",
     "opciones": [
       "A. Se identifican a los interesados.",
       "B. Se autoriza formalmente al director del proyecto a comenzar con los procesos de planificación.",
@@ -2150,7 +2480,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-42-Pregunta: El acta de constitución incluye una descripción del lugar donde va a desarrollarse el proyecto y limitaciones de coste y tiempo. Estas descripciones son:",
+    "cuestion": "API-T2-121-Pregunta: El acta de constitución incluye una descripción del lugar donde va a desarrollarse el proyecto y limitaciones de coste y tiempo. Estas descripciones son:",
     "opciones": [
       "A. Compromiso formal de los interesados.",
       "B. Supuestos.",
@@ -2160,7 +2490,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T2-43-Pregunta: Un proyecto está sufriendo demasiados cambios en el acta de constitución del proyecto. ¿Quién es el principal responsable para decidir si esos cambios son necesarios?",
+    "cuestion": "API-T2-122-Pregunta: Un proyecto está sufriendo demasiados cambios en el acta de constitución del proyecto. ¿Quién es el principal responsable para decidir si esos cambios son necesarios?",
     "opciones": [
       "A. El patrocinador.",
       "B. Todos los interesados del proyecto.",
@@ -2170,7 +2500,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T2-44-Pregunta: El director del proyecto y su equipo han finalizado el proceso de definir el alcance. Durante la siguiente etapa del proyecto, ¿cuál de las siguientes afirmaciones no es cierta?",
+    "cuestion": "API-T2-123-Pregunta: El director del proyecto y su equipo han finalizado el proceso de definir el alcance. Durante la siguiente etapa del proyecto, ¿cuál de las siguientes afirmaciones no es cierta?",
     "opciones": [
       "A. Se debe verificar que el grado de descomposición del trabajo sea suficiente.",
       "B. Se tiene que descomponer el proyecto en paquetes de trabajo.",
@@ -2180,7 +2510,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T2-45-Pregunta: En un sistema de control de cambios de un proyecto pequeño no se suele utilizar:",
+    "cuestion": "API-T2-124-Pregunta: En un sistema de control de cambios de un proyecto pequeño no se suele utilizar:",
     "opciones": [
       "A. Reuniones.",
       "B. Procedimientos.",
@@ -2188,6 +2518,226 @@
       "D. Normas."
     ],
     "solucion": "C"
+  },
+  {
+    "cuestion": "API-T2-125-Pregunta: Un miembro de tu equipo te avisa de un problema de integridad de la línea base de alcance. Como consecuencia revisas el proceso que principalmente debe preservar dicha integridad, que es:",
+    "opciones": [
+      "A. Realizar el control integrado de cambios.",
+      "B. Controlar la calidad.",
+      "C. Validar el alcance.",
+      "D. Controlar el alcance."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T2-126-Pregunta: Estás recopilando requisitos con tu equipo de trabajo en un proyecto de álbumes fotográficos online. Estás utilizando las siguientes técnicas (indicar la RESPUESTA INCORRECTA):",
+    "opciones": [
+      "A. Entrevistas.",
+      "B. Estudios comparativos.",
+      "C. Cuestionarios.",
+      "D. Análisis de documentos."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "API-T2-127-Pregunta: Formas parte del equipo de dirección de un proyecto de instalación de software de aula virtual. Tu director te pide que identifiques y documentes las características físicas y funcionales de los elementos sobre los que se debe preservar su integridad. Como resultado estás concretamente trabajando sobre un sistema de:",
+    "opciones": [
+      "A. Seguimiento y control.",
+      "B. Control de cambios.",
+      "C. Validación de alcance.",
+      "D. Gestión de la configuración."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "API-T2-128-Pregunta: Una vez que has creado el enunciado del alcance del proyecto. ¿Qué es lo siguiente que harás?",
+    "opciones": [
+      "A. Se creará la estructura de desglose de trabajo.",
+      "B. Se refinarán los requerimientos del producto y del proyecto.",
+      "C. Se determinará el equipo al menos como perfiles tipo.",
+      "D. Identificarás qué entregables se subcontratarán a terceros."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T2-129-Pregunta: ¿En qué proceso se confirma que se han cerrado todos los contratos de compras?",
+    "opciones": [
+      "A. Monitorear y controlar el trabajo del proyecto.",
+      "B. Verificar el alcance.",
+      "C. Gestionar las adquisiciones.",
+      "D. Cerrar el proyecto o fase."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "API-T2-130-Pregunta: Tras realizar el control integrado de cambios, obtener la aprobación interna y obtener la aprobación del cliente para los cambios, debes:",
+    "opciones": [
+      "A. Comunicarlo a los interesados.",
+      "B. Actualizar el sistema de control de cambios.",
+      "C. Recabar el visto bueno del cliente.",
+      "D. Realizar una solicitud de aumento del presupuesto para poder abordarlos."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T2-131-Pregunta: En un proyecto se está utilizando un diccionario de la EDT. ¿Para qué sirve esto?",
+    "opciones": [
+      "A. Definir las actividades del proyecto.",
+      "B. Proporcionar información detallada de cada componente de la EDT.",
+      "C. Analizar las expectativas de los interesados.",
+      "D. Desarrollar el enunciado del alcance."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-132-Pregunta: ¿Qué necesita para poder recopilar los requisitos de los interesados?",
+    "opciones": [
+      "A. Auditorías.",
+      "B. EDT.",
+      "C. Verificación de alcance.",
+      "D. Registro de interesado."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "API-T2-133-Pregunta: PMBOK. El acta de constitución del proyecto acaba de ser firmado. En el acta de constitución hay una descripción del lugar donde va a desarrollarse el proyecto como así también limitaciones de coste y tiempo. Estas descripciones son:",
+    "opciones": [
+      "A. Restricciones.",
+      "B. Compromiso formal de los interesados.",
+      "C. Supuestos.",
+      "D. Plan estratégico."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T2-134-Pregunta: Lo más importante del acta de constitución del proyecto es que:",
+    "opciones": [
+      "A. Se justifica el proyecto y su relación con el plan estratégico de la empresa.",
+      "B. Se autoriza formalmente al director del proyecto a comenzar con los procesos de planificación.",
+      "C. Se explicita en detalle el retorno de la inversión.",
+      "D. Se identifican los interesados."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-135-Pregunta: Se está finalizando el proceso de crear la estructura de desglose de trabajo. Los siguientes enunciados forman parte de la línea base del alcance a excepción de:",
+    "opciones": [
+      "A. Documentación de requisitos.",
+      "B. Enunciado del alcance.",
+      "C. Diccionario de la EDT.",
+      "D. Estructura de desglose del trabajo (EDT)."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T2-136-Pregunta: PMBOK. Durante la implementación de un módulo en un proyecto, validar el alcance sería:",
+    "opciones": [
+      "A. Realizar un análisis coste-beneficio para determinar si debemos proceder con una instalación del próximo módulo.",
+      "B. Revisar el desempeño de un módulo.",
+      "C. Gestionar los cambios en el cronograma del proyecto.",
+      "D. Descomponer la EDT en paquetes de trabajo para revisar el alcance con el cliente."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-137-Pregunta: ¿En qué grupos de procesos se lleva a cabo la gestión del alcance del proyecto?",
+    "opciones": [
+      "A. Planificación – Control.",
+      "B. Iniciación – Planificación - Ejecución.",
+      "C. Iniciación – Planificación.",
+      "D. Iniciación – Planificación – Ejecución – Control – Cierre."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T2-138-Pregunta: Suponga que es el director de proyecto de una organización matricial y está controlando un proyecto. ¿Cuál debería ser su rol principal en este proyecto?",
+    "opciones": [
+      "A. Crear el plan de comunicaciones.",
+      "B. Controlar los cambios innecesarios.",
+      "C. Crear el plan de riesgos.",
+      "D. Crear el plan de administración del proyecto."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-139-Pregunta: Una empresa está operando en un campo muy dinámico. ¿Cuál de los siguientes cambios debería ser el más importante para el comité de control integrado de cambios? Un cambio originado en:",
+    "opciones": [
+      "A. El equipo de trabajo.",
+      "B. El alcance del proyecto.",
+      "C. El mercado.",
+      "D. La empresa contratista."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T2-140-Pregunta: Un proyecto está sufriendo demasiados cambios en el acta de constitución de un proyecto. ¿Quién es el principal responsable para decidir si esos cambios son necesarios?",
+    "opciones": [
+      "A. El interesado principal del proyecto.",
+      "B. El director del proyecto.",
+      "C. Todos los interesados del proyecto.",
+      "D. El patrocinador."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "API-T2-141-Pregunta: El cliente ha entregado el enunciado del alcance del proyecto. ¿Cuál será el próximo paso?",
+    "opciones": [
+      "A. Control integrado de cambios.",
+      "B. Completar la verificación del alcance.",
+      "C. Completar los paquetes de trabajo.",
+      "D. Realizar el plan para la dirección del proyecto."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "API-T2-142-Pregunta: El director del proyecto junto a su equipo estableció la línea base de un proyecto industrial en 105 millones de euros y un plazo estimado de 3 años. ¿En qué caso sería aceptable cambiar la línea base cuando el proyecto está en ejecución?",
+    "opciones": [
+      "A. El precio de varios productos que utiliza el proyecto se ha incrementado un 45%.",
+      "B. La empresa contratista ha incrementado su presupuesto para la gestión de calidad en 50%.",
+      "C. El cliente y el patrocinador han autorizado un cambio en el alcance del proyecto por 25000 euros.",
+      "D. La productividad en el departamento de ingeniería está siendo un 30% inferior a lo esperado."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T2-143-Pregunta: El director del proyecto y su equipo han finalizado el proceso de definir el alcance. Durante la siguiente etapa del proyecto, ¿cuál de las siguientes afirmaciones no es cierta?",
+    "opciones": [
+      "A. Se debe verificar que el grado de descomposición del trabajo sea suficiente.",
+      "B. El equipo y el director del proyecto deberían participar de la próxima etapa.",
+      "C. Sí tiene que descomponer el proyecto en paquetes de trabajo.",
+      "D. Se debe controlar el alcance."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "API-T2-144-Pregunta: En un proyecto, el principal entregable y los resultados del plan de pruebas fueron enviados al cliente para conseguir su aprobación formal. Sin embargo, han pasado 25 días y el cliente no contesta. ¿Qué es lo mejor que puede hacer?",
+    "opciones": [
+      "A. Preguntar al cliente por qué no devuelve las llamadas.",
+      "B. Documentar los hechos en el registro de problemas.",
+      "C. Solicitar ayuda a la dirección general.",
+      "D. Detener el proyecto hasta que el cliente apruebe los entregables formalmente."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T2-145-Pregunta: El principal rol de un patrocinador comprometido con un proyecto debería ser:",
+    "opciones": [
+      "A. Identificar restricciones innecesarias.",
+      "B. Prevenir cambios innecesarios y garantizar los recursos para el proyecto.",
+      "C. Integrar y comunicar.",
+      "D. Colaborar con el director del proyecto para desarrollar el plan para la dirección del proyecto."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T2-146-Pregunta: En un sistema de control de cambios de un proyecto pequeño no se suele utilizar:",
+    "opciones": [
+      "A. Reuniones.",
+      "B. Lecciones aprendidas.",
+      "C. Procedimientos.",
+      "D. Normas."
+    ],
+    "solucion": "B"
   },
   {
     "cuestion": "API-T3-01-Pregunta: Si el tiempo y costes del proyecto no son tan importantes como el número de recursos utilizados cada mes, ¿cuál de las siguientes es lo MEJOR que se puede hacer?",
@@ -2207,7 +2757,7 @@
       "C. Actividad D.",
       "D. Actividad C."
     ],
-    "solucion": "C"
+    "solucion": "D"
   },
   {
     "cuestion": "API-T3-03-Pregunta: Si el estimado optimista para una actividad es de 12 días y el estimado pesimista es de 18 días, ¿cuál es la desviación estándar de esta actividad?",
@@ -2630,17 +3180,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T1-EX26-Q01-Pregunta: Estás dirigiendo un proyecto de diseño de sistemas de control por microprocesador. Se estima que el trabajo de diseño se completará en 4 meses, con siete hitos. El sexto hito es el prototipo que se entregará a fabricación. Todos los hitos anteriores se completaron antes de lo previsto, pero el sexto se ha retrasado 3 meses porque el prototipo se ha devuelto varias veces por conflictos entre departamentos. Tienes previsto celebrar una reunión para revisar especificaciones y tratar conflictos entre diseño y fabricación. ¿Quién tiene principalmente la culpa?",
-    "opciones": [
-      "A. Los responsables de los departamentos de diseño y fabricación.",
-      "B. El patrocinador.",
-      "C. El director del proyecto.",
-      "D. El encargado de la planificación de calendario."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "API-T1-EX26-Q02-Pregunta: Estás dirigiendo un proyecto de diseño e instalación de un sistema para el control de presión de fuselaje de aviones. El departamento de ingeniería debe enviarte antes los requisitos de material para encargarlo por adquisiciones. Este es un ejemplo de:",
+    "cuestion": "API-T3-45-Pregunta: Estás dirigiendo un proyecto de diseño e instalación de un sistema para el control de presión de fuselaje de aviones. El departamento de ingeniería debe enviarte antes los requisitos de material para encargarlo por adquisiciones. Este es un ejemplo de:",
     "opciones": [
       "A. Restricción.",
       "B. Dependencia obligatoria.",
@@ -2650,7 +3190,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T1-EX26-Q03-Pregunta: ¿Cuál de las siguientes relaciones de precedencia es la menos usada comúnmente en gestión de proyectos?",
+    "cuestion": "API-T3-46-Pregunta: ¿Cuál de las siguientes relaciones de precedencia es la menos usada comúnmente en gestión de proyectos?",
     "opciones": [
       "A. Fin-Comienzo.",
       "B. Comienzo-Fin.",
@@ -2660,157 +3200,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T1-EX26-Q04-Pregunta: Durante una reunión semanal de seguimiento, un miembro del equipo sugiere añadir un componente al proyecto para mejorar su nivel de seguridad, ante los continuos ataques de ciberseguridad del sector. Como director del proyecto, ¿qué haces?",
-    "opciones": [
-      "A. Evalúas alternativas para implementar el cambio.",
-      "B. Indicas que toda la atención debe centrarse en el alcance actual y debe evitarse incorporar funcionalidades no solicitadas.",
-      "C. Te reúnes con el patrocinador para analizar el impacto que dicho componente tendría en el proyecto.",
-      "D. Validas el alcance para asegurarte de que dicho componente puede integrarse adecuadamente."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-EX26-Q05-Pregunta: Has oído por casualidad a dos directores funcionales discutir sobre las repercusiones que tu proyecto tendrá en sus departamentos. ¿Cuál es tu mejor respuesta?",
-    "opciones": [
-      "A. Analizar y comunicar a cada responsable el impacto que el proyecto tendrá en sus departamentos.",
-      "B. No hacer nada porque no han realizado una petición formal de información.",
-      "C. Hacer una solicitud de cambio dirigida a los directores funcionales con los recursos que el proyecto necesitará de dichos departamentos.",
-      "D. Informar a los responsables que pueden consultar dicho impacto en el acta de constitución porque ya se tuvo en cuenta ahí y fue aprobado por el patrocinador."
-    ],
-    "solucion": "A"
-  },
-  {
-    "cuestion": "API-T1-EX26-Q06-Pregunta: Formas parte del equipo de desarrollo que acaba de cerrar un proyecto sobre un sistema de gestión de recursos humanos con funcionalidades destacadas respecto a la competencia. Sientes incertidumbre sobre tu próximo trabajo dentro de la empresa. Lo más habitual es que formes parte de una organización:",
-    "opciones": [
-      "A. Matricial fuerte.",
-      "B. Funcional.",
-      "C. Orientada a proyectos.",
-      "D. Híbrida."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "API-T1-EX26-Q07-Pregunta: Un miembro de tu equipo te avisa de un problema de integridad de la línea base de alcance. Como consecuencia revisas el proceso que principalmente debe preservar dicha integridad, que es:",
-    "opciones": [
-      "A. Realizar el control integrado de cambios.",
-      "B. Controlar la calidad.",
-      "C. Validar el alcance.",
-      "D. Controlar el alcance."
-    ],
-    "solucion": "A"
-  },
-  {
-    "cuestion": "API-T1-EX26-Q08-Pregunta: Estás recopilando requisitos con tu equipo de trabajo en un proyecto de álbumes fotográficos online. Estás utilizando las siguientes técnicas (indicar la RESPUESTA INCORRECTA):",
-    "opciones": [
-      "A. Entrevistas.",
-      "B. Estudios comparativos.",
-      "C. Cuestionarios.",
-      "D. Análisis de documentos."
-    ],
-    "solucion": "D"
-  },
-  {
-    "cuestion": "API-T1-EX26-Q09-Pregunta: Gestionar un proyecto implica recoger requisitos y gestionar expectativas de las partes interesadas, teniendo en cuenta restricciones para entregar el producto o servicio acordado. ¿Cuál de los siguientes elementos NO es una restricción al proyecto?",
-    "opciones": [
-      "A. Riesgo.",
-      "B. Tiempo.",
-      "C. Calidad.",
-      "D. Escala."
-    ],
-    "solucion": "D"
-  },
-  {
-    "cuestion": "API-T1-EX26-Q11-Pregunta: Estás a mitad de proyecto y los 4 programadores Java prometidos al firmar el acta ya no estarán disponibles para el proyecto, quedando 3 días para comenzar la codificación. Esto puede repercutir en cronograma y otras áreas. Como consecuencia te reúnes con el patrocinador para:",
-    "opciones": [
-      "A. Pedir la cancelación del proyecto.",
-      "B. Informar sobre el impacto que puede tener no contar con los programadores.",
-      "C. Informarle de que has replanificado el proyecto sin contar con dichos recursos.",
-      "D. Exigir disponer de los recursos prometidos o equivalentes en el plazo de 5 días, ya que se trata de un proyecto altamente crítico dentro del programa al que pertenece."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-EX26-Q12-Pregunta: Te han nombrado director del proyecto de construcción de dos bloques de viviendas de protección oficial. Debéis acotar y controlar muy bien los costes para obtener una mínima rentabilidad. Durante la ejecución, dos miembros del equipo discuten sobre si imputar el coste total de una actividad al terminarla o aplicar la regla del 50/50. ¿Qué es lo mejor que puedes hacer?",
-    "opciones": [
-      "A. Consultar el acta de constitución del proyecto.",
-      "B. Consultar el plan de gestión de costes.",
-      "C. Cualquiera de las dos opciones es válida (100% al final o 50/50).",
-      "D. Consultar al director financiero de la empresa."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-EX26-Q13-Pregunta: Acabas de recibir el encargo de dirigir el servicio de atención al cliente de una aplicación software de gestión de clínicas sanitarias en la nube. En el contexto de gestión de proyectos estamos hablando de:",
-    "opciones": [
-      "A. Una operación.",
-      "B. Un proyecto.",
-      "C. Una cartera.",
-      "D. Un programa."
-    ],
-    "solucion": "A"
-  },
-  {
-    "cuestion": "API-T1-EX26-Q14-Pregunta: Te informan que el módulo software de planificación de calendarios, parte del producto que estás desarrollando, no calcula correctamente la desviación entre información real y prevista. Como resultado emites una solicitud de cambio de tipo:",
-    "opciones": [
-      "A. Preventiva.",
-      "B. Correctiva.",
-      "C. Adaptativa.",
-      "D. Reparación de defectos."
-    ],
-    "solucion": "D"
-  },
-  {
-    "cuestion": "API-T1-EX26-Q17-Pregunta: Al coste que se ha presupuestado para el trabajo realmente ejecutado hasta la fecha actual se le suele llamar:",
-    "opciones": [
-      "A. Coste real.",
-      "B. Valor planificado.",
-      "C. Valor ganado.",
-      "D. Valor actual."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "API-T1-EX26-Q18-Pregunta: En un nuevo proyecto de desarrollo de una aplicación software de mensajería, te encargas de servir como facilitador para permitir comunicación, colaboración e implicación entre miembros del equipo. Lo más habitual es que tengas que aplicar:",
-    "opciones": [
-      "A. Actividades de liderazgo distribuido.",
-      "B. Actividades de liderazgo centralizado.",
-      "C. Gestión estratégica y de negocios.",
-      "D. Actividades de dirección."
-    ],
-    "solucion": "A"
-  },
-  {
-    "cuestion": "API-T1-EX26-Q19-Pregunta: Estás discutiendo con el gerente de desarrollo software sobre los procesos del grupo de inicio a considerar en un próximo proyecto. Es cierto que:",
-    "opciones": [
-      "A. Eres un coordinador.",
-      "B. Las áreas de conocimiento afectadas son Integración e Interesados.",
-      "C. Trabajas en una organización matricial fuerte.",
-      "D. Eres un gestor de programas."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-EX26-Q20-Pregunta: Dirigir y gestionar la ejecución de un proyecto es un proceso:",
-    "opciones": [
-      "A. Del grupo de ejecución y área de conocimiento de integración.",
-      "B. Del grupo de monitoreo y control y área de conocimiento de integración.",
-      "C. Del grupo de monitoreo y control y área de conocimiento de recursos.",
-      "D. Del grupo de ejecución y área de conocimiento de interesados."
-    ],
-    "solucion": "A"
-  },
-  {
-    "cuestion": "API-T1-EX26-Q22-Pregunta: La aplicación de estimación de costes Bottom-up suele estar motivada por el tamaño y la complejidad de:",
-    "opciones": [
-      "A. La relación estadística entre datos históricos y otras variables.",
-      "B. El presupuesto del proyecto.",
-      "C. Los paquetes de trabajo.",
-      "D. El software de gestión de proyectos."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "API-T1-EX26-Q23-Pregunta: Estás trabajando con el cronograma del proyecto y un interesado te recuerda incluir una solicitud de cambio aprobada. Tras incluirla, la nueva versión del cronograma tiene recursos sobreasignados. Para cumplir objetivos, el camino crítico no debería alterarse y los costes no deben incrementarse. Como primer paso analizas la parte del cronograma con sobreasignación para:",
+    "cuestion": "API-T3-47-Pregunta: Estás trabajando con el cronograma del proyecto y un interesado te recuerda incluir una solicitud de cambio aprobada. Tras incluirla, la nueva versión del cronograma tiene recursos sobreasignados. Para cumplir objetivos, el camino crítico no debería alterarse y los costes no deben incrementarse. Como primer paso analizas la parte del cronograma con sobreasignación para:",
     "opciones": [
       "A. Satisfacer el cambio identificando actividades que se puedan retrasar dentro de sus límites de holgura libre y total.",
       "B. Aplicar compresión de la duración.",
@@ -2820,37 +3210,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T1-EX26-Q24-Pregunta: Juan dirige el desarrollo de un sistema de control digital industrial. Mensualmente recibe asignaciones de horas reales de cada departamento, costes reales de recursos materiales y equipamientos, y sobrecostes en ambos. ¿Qué es lo siguiente que debe hacer?",
-    "opciones": [
-      "A. Realizar el control integrado de cambios.",
-      "B. Informar sobre el desempeño.",
-      "C. Controlar los costes.",
-      "D. Monitorizar y controlar el trabajo del proyecto."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "API-T1-EX26-Q25-Pregunta: Un compañero del equipo de dirección de tu nuevo proyecto te dice erróneamente que uno de los principios de dirección de proyectos es:",
-    "opciones": [
-      "A. Adaptabilidad y resiliencia.",
-      "B. Planificación.",
-      "C. Complejidad.",
-      "D. Pensamiento sistémico."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-EX26-Q28-Pregunta: Las técnicas de análisis de datos que se pueden utilizar para estimar los costes son (indicar la respuesta INCORRECTA):",
-    "opciones": [
-      "A. Análisis de reserva.",
-      "B. Análisis de alternativas.",
-      "C. Costes de la calidad.",
-      "D. Estimación por 3 valores."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-EX26-Q30-Pregunta: El equipo de dirección del proyecto ha obtenido varios calendarios posibles, considerando escenarios optimistas, más probables y pesimistas (con mayor probabilidad de riesgos). La técnica usada para esa salida es:",
+    "cuestion": "API-T3-48-Pregunta: El equipo de dirección del proyecto ha obtenido varios calendarios posibles, considerando escenarios optimistas, más probables y pesimistas (con mayor probabilidad de riesgos). La técnica usada para esa salida es:",
     "opciones": [
       "A. Simulación.",
       "B. Estimación paramétrica.",
@@ -2860,7 +3220,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T3-EX26-Q10-Pregunta: En base a la tabla del proyecto API (duraciones en días) y usando PERT, ¿cuál es la duración del proyecto?\nActividad | Óptima | Probable | Pésima | Predecesora\nA | 1 | 1 | 1 | -\nB | 1 | 3 | 5 | -\nC | 1 | 3 | 5 | -\nD | 1 | 2 | 9 | A\nE | 1 | 4 | 7 | A\nF | 2 | 3 | 4 | C\nG | 2 | 3 | 4 | E\nH | 2 | 4 | 6 | D, F\nI | 1 | 3 | 11 | D\nJ | 2 | 4 | 6 | B\nK | 1 | 4 | 7 | B, E\nL | 2 | 4 | 6 | H\nM | 2 | 2 | 8 | H, I\nN | 3 | 5 | 7 | J, M",
+    "cuestion": "API-T3-49-Pregunta: En base a la tabla del proyecto API (duraciones en días) y usando PERT, ¿cuál es la duración del proyecto?\nActividad | Óptima | Probable | Pésima | Predecesora\nA | 1 | 1 | 1 | -\nB | 1 | 3 | 5 | -\nC | 1 | 3 | 5 | -\nD | 1 | 2 | 9 | A\nE | 1 | 4 | 7 | A\nF | 2 | 3 | 4 | C\nG | 2 | 3 | 4 | E\nH | 2 | 4 | 6 | D, F\nI | 1 | 3 | 11 | D\nJ | 2 | 4 | 6 | B\nK | 1 | 4 | 7 | B, E\nL | 2 | 4 | 6 | H\nM | 2 | 2 | 8 | H, I\nN | 3 | 5 | 7 | J, M",
     "opciones": [
       "A. 19",
       "B. 16",
@@ -2868,13 +3228,13 @@
       "D. 18"
     ],
     "solucion": "D",
-    "grupoDependencia": "API-EX26-BLOQUE2-PERT",
+    "grupoDependencia": "API-EDep01-BLOQUE2-PERT",
     "ordenGrupo": 1,
     "preguntaBaseDependencia": true,
     "mantenerJuntas": true
   },
   {
-    "cuestion": "API-T3-EX26-Q16-Pregunta: En base a la tabla del proyecto API mostrada en la pregunta anterior (duraciones en días) y usando PERT, ¿cuál es la actividad con mayor holgura total?",
+    "cuestion": "API-T3-50-Pregunta: En base a la tabla del proyecto API mostrada en la pregunta anterior (duraciones en días) y usando PERT, ¿cuál es la actividad con mayor holgura total?",
     "opciones": [
       "A. K",
       "B. L",
@@ -2882,12 +3242,12 @@
       "D. N"
     ],
     "solucion": "A",
-    "grupoDependencia": "API-EX26-BLOQUE2-PERT",
+    "grupoDependencia": "API-EDep01-BLOQUE2-PERT",
     "ordenGrupo": 2,
     "mantenerJuntas": true
   },
   {
-    "cuestion": "API-T3-EX26-Q21-Pregunta: En base a la tabla del proyecto API mostrada en la pregunta anterior (duraciones en días) y usando PERT, ¿cuántos caminos críticos tiene el proyecto?",
+    "cuestion": "API-T3-51-Pregunta: En base a la tabla del proyecto API mostrada en la pregunta anterior (duraciones en días) y usando PERT, ¿cuántos caminos críticos tiene el proyecto?",
     "opciones": [
       "A. 2",
       "B. 1",
@@ -2895,12 +3255,12 @@
       "D. 3"
     ],
     "solucion": "B",
-    "grupoDependencia": "API-EX26-BLOQUE2-PERT",
+    "grupoDependencia": "API-EDep01-BLOQUE2-PERT",
     "ordenGrupo": 3,
     "mantenerJuntas": true
   },
   {
-    "cuestion": "API-T3-EX26-Q26-Pregunta: En base a la tabla del proyecto API mostrada en la pregunta anterior (duraciones en días) y usando PERT, ¿cuántas actividades críticas tiene el proyecto?",
+    "cuestion": "API-T3-52-Pregunta: En base a la tabla del proyecto API mostrada en la pregunta anterior (duraciones en días) y usando PERT, ¿cuántas actividades críticas tiene el proyecto?",
     "opciones": [
       "A. 6",
       "B. 7",
@@ -2908,12 +3268,12 @@
       "D. 5"
     ],
     "solucion": "D",
-    "grupoDependencia": "API-EX26-BLOQUE2-PERT",
+    "grupoDependencia": "API-EDep01-BLOQUE2-PERT",
     "ordenGrupo": 4,
     "mantenerJuntas": true
   },
   {
-    "cuestion": "API-T3-EX26-Q29-Pregunta: En base a la tabla del proyecto API mostrada en la pregunta anterior (duraciones en días) y usando PERT, ¿cuántas actividades tienen holgura libre igual a 0?",
+    "cuestion": "API-T3-53-Pregunta: En base a la tabla del proyecto API mostrada en la pregunta anterior (duraciones en días) y usando PERT, ¿cuántas actividades tienen holgura libre igual a 0?",
     "opciones": [
       "A. 4",
       "B. 10",
@@ -2921,92 +3281,12 @@
       "D. 9"
     ],
     "solucion": "A",
-    "grupoDependencia": "API-EX26-BLOQUE2-PERT",
+    "grupoDependencia": "API-EDep01-BLOQUE2-PERT",
     "ordenGrupo": 5,
     "mantenerJuntas": true
   },
   {
-    "cuestion": "API-T3-EX26-Q15-Pregunta: Se presenta la línea base de coste de un proyecto con cuatro paquetes de trabajo (valor planificado mensual) y, al final del mes 4, el porcentaje ejecutado y costes reales (AC). ¿Cómo va el proyecto al final del mes 4?\nPlan inicial (PV mensual):\nPaquete | Mes 1 | Mes 2 | Mes 3 | Mes 4 | Mes 5 | TOTAL\nPT1 | 500 | 500 | 500 | 500 | 0 | 2000\nPT2 | 1000 | 2000 | 2000 | 3000 | 0 | 8000\nPT3 | 0 | 1000 | 2000 | 5000 | 0 | 8000\nPT4 | 0 | 0 | 2000 | 2000 | 1000 | 5000\n\nDatos al final del mes 4:\nPaquete | % Ejecutado | AC\nPT1 | 100 % | 1500\nPT2 | 100 % | 9000\nPT3 | 75 % | 6000\nPT4 | 80 % | 3000",
-    "opciones": [
-      "A. Retrasado en tiempo y ahorrando en costes.",
-      "B. Retrasado en tiempo y gastando más de lo previsto.",
-      "C. Adelantado en tiempo y gastando más de lo previsto.",
-      "D. Adelantado en tiempo y ahorrando en costes."
-    ],
-    "solucion": "A"
-  },
-  {
-    "cuestion": "API-T3-EX26-Q27-Pregunta: Jorge está al final del primer mes realizando el seguimiento y control de costes de un proyecto con los siguientes costes por mes: Mes 1: Actividad A: 30; Actividad B: 25; Actividad C: 15. Mes 2: Actividad A: 20; Actividad B: 20; Actividad C: 10. Además, hay que añadir 10 por actividad y mes por reservas de contingencia y 5 por actividad y mes por reservas de gestión. El BAC es:",
-    "opciones": [
-      "A. 120",
-      "B. 210",
-      "C. 150",
-      "D. 180"
-    ],
-    "solucion": "D"
-  },
-  {
-    "cuestion": "API-T1-EX26B-Q01-Pregunta: Está hablando con un colega sobre la incertidumbre con los requisitos a la que os tenéis que enfrentar en el próximo proyecto de gestión automática de placas solares. Lo más acertado es aplicar un enfoque de desarrollo:",
-    "opciones": [
-      "A. Iterativo e incremental.",
-      "B. Adaptativo.",
-      "C. Híbrido.",
-      "D. Predictivo."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-EX26B-Q04-Pregunta: Formas parte del equipo de dirección de un proyecto de instalación de software de aula virtual. Tu director te pide que identifiques y documentes las características físicas y funcionales de los elementos sobre los que se debe preservar su integridad. Como resultado estás concretamente trabajando sobre un sistema de:",
-    "opciones": [
-      "A. Seguimiento y control.",
-      "B. Control de cambios.",
-      "C. Validación de alcance.",
-      "D. Gestión de la configuración."
-    ],
-    "solucion": "D"
-  },
-  {
-    "cuestion": "API-T1-EX26B-Q05-Pregunta: La suma de las estimaciones de costes del proyecto asciende a 1200, las reservas de contingencia calculadas teniendo en cuenta los riesgos identificados son de 200. Teniendo en cuenta la singularidad del proyecto, el patrocinador, tras consultarte, propone unas reservas de gestión de 100. ¿Cuál será el presupuesto total del proyecto?",
-    "opciones": [
-      "A. 1500",
-      "B. 1300",
-      "C. 1200",
-      "D. 1400"
-    ],
-    "solucion": "A"
-  },
-  {
-    "cuestion": "API-T1-EX26B-Q06-Pregunta: Te llama el gerente funcional del área de proyectos para indicarte que debes incluir en el plan de gestión de tu proyecto, tanto el plan de gestión de alcance, como el plan de gestión de tiempos y el plan de gestión de costes. Como resultado le indicas:",
-    "opciones": [
-      "A. Que efectivamente son parte del plan de gestión del proyecto y los incluyes.",
-      "B. No se incluyen en la planificación porque hasta que no avanzamos en el seguimiento y control podemos definir las medidas de desviación que incluyen.",
-      "C. No se incluyen porque son documentos aparte y deben tratarse de forma complementaria al plan de gestión del proyecto.",
-      "D. No se incluyen porque ya se incluyen dichos planes en las líneas base correspondientes a cada una de las áreas de alcance, tiempos y costes."
-    ],
-    "solucion": "A"
-  },
-  {
-    "cuestion": "API-T1-EX26B-Q07-Pregunta: Tienes un proyecto en el que te encargas de la actividad G. Si el inicio temprano de la actividad G es el día 13 y el final temprano el día 18 y sabemos que tiene una holgura de 15 días. Como muy tarde, ¿cuándo podrás comenzarla?",
-    "opciones": [
-      "A. 30",
-      "B. 15",
-      "C. 28",
-      "D. 33"
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "API-T1-EX26B-Q08-Pregunta: Una vez que has creado el enunciado del alcance del proyecto. ¿Qué es lo siguiente que harás?",
-    "opciones": [
-      "A. Se creará la estructura de desglose de trabajo.",
-      "B. Se refinarán los requerimientos del producto y del proyecto.",
-      "C. Se determinará el equipo al menos como perfiles tipo.",
-      "D. Identificarás qué entregables se subcontratarán a terceros."
-    ],
-    "solucion": "A"
-  },
-  {
-    "cuestion": "API-T1-EX26B-Q09-Pregunta: Estás trabajando con el control de cronograma de un proyecto que sigue un enfoque de desarrollo adaptativo. Lo más probable es que estés utilizando:",
+    "cuestion": "API-T3-54-Pregunta: Estás trabajando con el control de cronograma de un proyecto que sigue un enfoque de desarrollo adaptativo. Lo más probable es que estés utilizando:",
     "opciones": [
       "A. Diagrama de Gantt de seguimiento.",
       "B. Gráfica de trabajo pendiente en la iteración (burndown).",
@@ -3016,37 +3296,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T1-EX26B-Q10-Pregunta: Desarrollar una aproximación de los recursos monetarios necesarios para completar el trabajo del proyecto es cometido del proceso de:",
-    "opciones": [
-      "A. Determinar el presupuesto.",
-      "B. Planificar la gestión de los costes.",
-      "C. Controlar los costes.",
-      "D. Estimar los costes."
-    ],
-    "solucion": "D"
-  },
-  {
-    "cuestion": "API-T1-EX26B-Q11-Pregunta: Si tienes dudas sobre cómo actuar en la ejecución y seguimiento del proyecto. ¿Qué documento, que define la manera en que se va a ejecutar, supervisar, controlar y cerrar el proyecto, consultarás?",
-    "opciones": [
-      "A. Plan para la dirección del proyecto.",
-      "B. Plan de Seguimiento del Proyecto.",
-      "C. Plan de Integración del Proyecto.",
-      "D. El ciclo de vida del Proyecto."
-    ],
-    "solucion": "A"
-  },
-  {
-    "cuestion": "API-T1-EX26B-Q12-Pregunta: Desde la junta directiva llega una petición de la oficina de dirección de proyectos que diriges, para gestionar los proyectos relacionados con la decisión de la junta de posicionarse como empresa de referencia en el sector de la fotografía digital online a través de una mejora sustancial en el desarrollo de software, venta de equipamiento y modernización de los distintos departamentos. La mejor forma de gestionar dicha petición es mediante:",
-    "opciones": [
-      "A. Una cartera.",
-      "B. Un programa.",
-      "C. Un plan estratégico.",
-      "D. Un enfoque de entrega de valor."
-    ],
-    "solucion": "A"
-  },
-  {
-    "cuestion": "API-T3-EX26B-Q13-Pregunta: En base a la tabla con datos del proyecto API, en la que la duración se especifica en días y utilizando la técnica PERT ¿Cuál es la duración del proyecto?\nActividad | Óptima | Probable | Pésima | Predecesora\nA | 2 | 3 | 10 | -\nB | 1 | 2 | 9 | A\nC | 1 | 4 | 7 | A\nD | 2 | 2 | 8 | B\nE | 2 | 4 | 6 | B\nF | 2 | 4 | 6 | C\nG | 2 | 3 | 10 | C\nH | 2 | 2 | 8 | C, D\nI | 1 | 2 | 9 | E\nJ | 2 | 2 | 8 | E\nK | 2 | 4 | 6 | F\nL | 2 | 4 | 6 | H\nM | 2 | 2 | 8 | J\nN | 2 | 2 | 8 | I, K, L, M",
+    "cuestion": "API-T3-55-Pregunta: En base a la tabla con datos del proyecto API, en la que la duración se especifica en días y utilizando la técnica PERT ¿Cuál es la duración del proyecto?\nActividad | Óptima | Probable | Pésima | Predecesora\nA | 2 | 3 | 10 | -\nB | 1 | 2 | 9 | A\nC | 1 | 4 | 7 | A\nD | 2 | 2 | 8 | B\nE | 2 | 4 | 6 | B\nF | 2 | 4 | 6 | C\nG | 2 | 3 | 10 | C\nH | 2 | 2 | 8 | C, D\nI | 1 | 2 | 9 | E\nJ | 2 | 2 | 8 | E\nK | 2 | 4 | 6 | F\nL | 2 | 4 | 6 | H\nM | 2 | 2 | 8 | J\nN | 2 | 2 | 8 | I, K, L, M",
     "opciones": [
       "A. 19",
       "B. 18",
@@ -3054,13 +3304,13 @@
       "D. 17"
     ],
     "solucion": "C",
-    "grupoDependencia": "API-EX26B-BLOQUE2-PERT",
+    "grupoDependencia": "API-EDep02-BLOQUE2-PERT",
     "ordenGrupo": 1,
     "preguntaBaseDependencia": true,
     "mantenerJuntas": true
   },
   {
-    "cuestion": "API-T3-EX26B-Q02-Pregunta: En base a la tabla del proyecto API mostrada en la pregunta anterior, y utilizando la técnica PERT de estimación de tiempos, ¿cuántas actividades tienen holgura libre mayor a 0?",
+    "cuestion": "API-T3-56-Pregunta: En base a la tabla del proyecto API mostrada en la pregunta anterior, y utilizando la técnica PERT de estimación de tiempos, ¿cuántas actividades tienen holgura libre mayor a 0?",
     "opciones": [
       "A. 3",
       "B. 4",
@@ -3068,12 +3318,12 @@
       "D. 6"
     ],
     "solucion": "B",
-    "grupoDependencia": "API-EX26B-BLOQUE2-PERT",
+    "grupoDependencia": "API-EDep02-BLOQUE2-PERT",
     "ordenGrupo": 2,
     "mantenerJuntas": true
   },
   {
-    "cuestion": "API-T3-EX26B-Q21-Pregunta: En base a la tabla del proyecto API mostrada en la pregunta anterior, y utilizando la técnica PERT de estimación de tiempos, ¿cuántas actividades críticas tiene el proyecto?",
+    "cuestion": "API-T3-57-Pregunta: En base a la tabla del proyecto API mostrada en la pregunta anterior, y utilizando la técnica PERT de estimación de tiempos, ¿cuántas actividades críticas tiene el proyecto?",
     "opciones": [
       "A. 7",
       "B. 8",
@@ -3081,12 +3331,12 @@
       "D. 6"
     ],
     "solucion": "D",
-    "grupoDependencia": "API-EX26B-BLOQUE2-PERT",
+    "grupoDependencia": "API-EDep02-BLOQUE2-PERT",
     "ordenGrupo": 3,
     "mantenerJuntas": true
   },
   {
-    "cuestion": "API-T3-EX26B-Q23-Pregunta: En base a la tabla del proyecto API mostrada en la pregunta anterior, y utilizando la técnica PERT de estimación de tiempos, ¿cuántos caminos críticos tiene el proyecto?",
+    "cuestion": "API-T3-58-Pregunta: En base a la tabla del proyecto API mostrada en la pregunta anterior, y utilizando la técnica PERT de estimación de tiempos, ¿cuántos caminos críticos tiene el proyecto?",
     "opciones": [
       "A. 0",
       "B. 1",
@@ -3094,12 +3344,12 @@
       "D. 2"
     ],
     "solucion": "B",
-    "grupoDependencia": "API-EX26B-BLOQUE2-PERT",
+    "grupoDependencia": "API-EDep02-BLOQUE2-PERT",
     "ordenGrupo": 4,
     "mantenerJuntas": true
   },
   {
-    "cuestion": "API-T3-EX26B-Q25-Pregunta: En base a la tabla del proyecto API mostrada en la pregunta anterior, y utilizando la técnica PERT de estimación de tiempos, ¿cuál es la holgura total de la actividad G?",
+    "cuestion": "API-T3-59-Pregunta: En base a la tabla del proyecto API mostrada en la pregunta anterior, y utilizando la técnica PERT de estimación de tiempos, ¿cuál es la holgura total de la actividad G?",
     "opciones": [
       "A. 9",
       "B. 0",
@@ -3107,112 +3357,12 @@
       "D. 2"
     ],
     "solucion": "A",
-    "grupoDependencia": "API-EX26B-BLOQUE2-PERT",
+    "grupoDependencia": "API-EDep02-BLOQUE2-PERT",
     "ordenGrupo": 5,
     "mantenerJuntas": true
   },
   {
-    "cuestion": "API-T3-EX26B-Q03-Pregunta: El plazo del proyecto es de 6 meses. Han pasado ya 3 y has finalizado 6 de los 10 coches que querías fabricar. Tu presupuesto total es de 3000 unidades monetarias a gastar de forma homogénea a lo largo de los 6 meses a un ritmo de 500 unidades monetarias por mes. Hasta ahora has gastado solamente 1200. ¿Cuál es la estimación hasta la conclusión del trabajo restante (ETC) si el ritmo de variación de costos se mantiene?",
-    "opciones": [
-      "A. 2000",
-      "B. 1200",
-      "C. 800",
-      "D. 2200"
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "API-T3-EX26B-Q14-Pregunta: Al analizar los datos de desempeño de un proyecto te encuentras con que el valor ganado EV es 12000, el valor planificado es 18000 y el coste real AC es 16000. ¿Cuál es el CPI del proyecto y qué implica?",
-    "opciones": [
-      "A. El CPI es 12000/18000 que indica un adelanto claro en las obras.",
-      "B. El CPI es 12000/16000 e implica que hay un sobrecoste importante en el proyecto.",
-      "C. Ninguna de las otras respuestas es correcta.",
-      "D. El CPI es 18000/16000 y hay un ahorro de coste significativo."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T3-EX26B-Q20-Pregunta: Se presenta la línea base de coste de un proyecto con cuatro paquetes de trabajo (valor planificado mensual) y, al final del mes 4, el porcentaje ejecutado y costes reales (AC). ¿Cómo va el proyecto al final del mes 4?\nPlan inicial (PV mensual):\nPaquete | Mes 1 | Mes 2 | Mes 3 | Mes 4 | Mes 5 | TOTAL\nPT1 | 500 | 500 | 500 | 500 | 500 | 2500\nPT2 | 1000 | 2000 | 3000 | 3000 | 0 | 9000\nPT3 | 0 | 1000 | 2000 | 5000 | 0 | 8000\nPT4 | 0 | 0 | 4000 | 4000 | 500 | 8500\n\nDatos al final del mes 4:\nPaquete | % Ejecutado | AC\nPT1 | 100 % | 3000\nPT2 | 100 % | 9000\nPT3 | 75 % | 6000\nPT4 | 100 % | 4500",
-    "opciones": [
-      "A. Adelantado en tiempo y ahorrando en costes.",
-      "B. Retrasado en tiempo y gastando más de lo previsto.",
-      "C. Retrasado en tiempo y ahorrando en costes.",
-      "D. Adelantado en tiempo y gastando más de lo previsto."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-EX26B-Q15-Pregunta: ¿En qué proceso se confirma que se han cerrado todos los contratos de compras?",
-    "opciones": [
-      "A. Monitorear y controlar el trabajo del proyecto.",
-      "B. Verificar el alcance.",
-      "C. Gestionar las adquisiciones.",
-      "D. Cerrar el proyecto o fase."
-    ],
-    "solucion": "D"
-  },
-  {
-    "cuestion": "API-T1-EX26B-Q16-Pregunta: Un director de proyecto entra a trabajar en una nueva empresa. Al poco tiempo uno de sus miembros del equipo se queja y se niega a realizar el trabajo que le ha sido asignado. ¿Qué tipo de estructura organizativa tiene la empresa?",
-    "opciones": [
-      "A. Matricial fuerte.",
-      "B. Funcional.",
-      "C. Orientada a proyectos.",
-      "D. Matricial equilibrada."
-    ],
-    "solucion": "D"
-  },
-  {
-    "cuestion": "API-T1-EX26B-Q17-Pregunta: En tu empresa se han puesto en marcha grupos focales donde participan miembros con distintos niveles de experiencia para analizar los requisitos obtenidos de los usuarios. Con ello se está promoviendo:",
-    "opciones": [
-      "A. El juicio de expertos.",
-      "B. La aplicación de talleres JAD en la organización para mejorar la eficiencia en la captura de requisitos.",
-      "C. La toma de decisiones por pluralidad.",
-      "D. La gestión del conocimiento tácito."
-    ],
-    "solucion": "D"
-  },
-  {
-    "cuestion": "API-T1-EX26B-Q18-Pregunta: Estás dirigiendo y gestionando el trabajo definido en el plan de dirección del proyecto para alcanzar los objetivos del proyecto gestionando de forma global el mismo. ¿Cuál de las siguientes NO será una salida del proceso en el que te encuentras?",
-    "opciones": [
-      "A. Los entregables.",
-      "B. Las actualizaciones a los documentos del proyecto.",
-      "C. Los datos de desempeño del trabajo.",
-      "D. Las solicitudes de cambio aprobadas."
-    ],
-    "solucion": "D"
-  },
-  {
-    "cuestion": "API-T1-EX26B-Q19-Pregunta: Tras realizar el control integrado de cambios, obtener la aprobación interna y obtener la aprobación del cliente para los cambios, debes:",
-    "opciones": [
-      "A. Comunicarlo a los interesados.",
-      "B. Actualizar el sistema de control de cambios.",
-      "C. Recabar el visto bueno del cliente.",
-      "D. Realizar una solicitud de aumento del presupuesto para poder abordarlos."
-    ],
-    "solucion": "A"
-  },
-  {
-    "cuestion": "API-T1-EX26B-Q22-Pregunta: En PMBOK 7, se considera que un grupo de actividades relacionadas y fundamentales para la consecución efectiva de los resultados de los proyectos es:",
-    "opciones": [
-      "A. Un dominio.",
-      "B. Un área de conocimiento.",
-      "C. Un grupo de procesos.",
-      "D. Un principio."
-    ],
-    "solucion": "A"
-  },
-  {
-    "cuestion": "API-T1-EX26B-Q24-Pregunta: Estás trabajando en el área de desarrollo de nuevos servicios de tu empresa. Eres responsable del mantenimiento de los ordenadores de todos los investigadores. ¿Cuál de las siguientes afirmaciones es la más correcta?",
-    "opciones": [
-      "A. Mi trabajo va a producir como resultado una nueva capacidad en el área de investigación e innovación.",
-      "B. No se puede considerar que yo sea un gestor de proyecto.",
-      "C. Tu trabajo producirá un resultado único y tiene una fecha de terminación.",
-      "D. Como buen planificador debo iniciar, planificar y ejecutar correctamente mi trabajo."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-EX26B-Q26-Pregunta: Un interesado te ha pedido ver la lista de los hitos del proyecto. Esto estaría disponible como salida del proceso:",
+    "cuestion": "API-T3-60-Pregunta: Un interesado te ha pedido ver la lista de los hitos del proyecto. Esto estaría disponible como salida del proceso:",
     "opciones": [
       "A. Desarrollar el cronograma.",
       "B. Estimar la duración de las actividades.",
@@ -3222,77 +3372,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T1-EX26B-Q27-Pregunta: Como director de un proyecto crees que es el momento de definir, entre otras cosas, cómo monitorizas los costes del proyecto. ¿Qué harás a continuación?",
-    "opciones": [
-      "A. Elaborar el plan de dirección del proyecto.",
-      "B. Planificar la gestión de costes.",
-      "C. Elaborar la línea de base de costes.",
-      "D. Estimar los costes de cada paquete de trabajo."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-EX26B-Q28-Pregunta: Un miembro de tu equipo de dirección te dice que no estás considerando algunos imprevistos identificados en tus estimaciones de costes. ¿Qué es lo mejor que puedes hacer?",
-    "opciones": [
-      "A. Mantener tu plan y no realizar ninguna acción adicional.",
-      "B. Revisar los riesgos del proyecto y sus reservas de contingencia para ver si son suficientes.",
-      "C. Añadir el 5% de incremento a dichas cuentas de control.",
-      "D. Hablar con el patrocinador para que dicho incremento lo considere en la reserva de gestión."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-EX26B-Q29-Pregunta: Un directivo junior de tu empresa no acaba de entender el carácter diferencial de los proyectos respecto a las operaciones. NO coinciden en:",
-    "opciones": [
-      "A. Hay que tener en cuenta restricciones.",
-      "B. Se planifican, ejecutan y supervisan.",
-      "C. Tienen como objetivo apoyar la consecución de los objetivos estratégicos.",
-      "D. Tienen un ciclo de vida y una duración determinadas."
-    ],
-    "solucion": "D"
-  },
-  {
-    "cuestion": "API-T1-EX26B-Q30-Pregunta: Estás hablando con tu equipo de dirección de proyecto sobre el software de gestión integral de los empleados. Lo más seguro es que estás hablando de:",
-    "opciones": [
-      "A. Enfoque de desarrollo.",
-      "B. Un programa.",
-      "C. Ciclo de vida del producto.",
-      "D. Ciclo de vida del proyecto."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "API-T1-EX19-Q01-Pregunta: Un ejemplo de proyecto es:",
-    "opciones": [
-      "A. El envasado de los productos de alimentación de la empresa, fabricados para una campaña.",
-      "B. Tratamiento de los pedidos recibidos por la empresa relativos a la compra de los productos de alimentación ofertados.",
-      "C. Realización de la contabilidad de la empresa.",
-      "D. La fabricación de vehículos en una cadena de montaje."
-    ],
-    "solucion": "A"
-  },
-  {
-    "cuestion": "API-T1-EX19-Q02-Pregunta: Un proyecto está informando un índice de rendimiento de coste de 0,72. Podríamos decir que:",
-    "opciones": [
-      "A. Se espera que el coste total del proyecto sea un 72% superior al valor planificado.",
-      "B. El proyecto ha realizado sólo un 72% de lo planificado.",
-      "C. El proyecto está un 28% por debajo del valor planificado.",
-      "D. El proyecto obtiene 0,72 euros por cada euro gastado."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-EX19-Q03-Pregunta: En un proyecto se está utilizando un diccionario de la EDT. ¿Para qué sirve esto?",
-    "opciones": [
-      "A. Definir las actividades del proyecto.",
-      "B. Proporcionar información detallada de cada componente de la EDT.",
-      "C. Analizar las expectativas de los interesados.",
-      "D. Desarrollar el enunciado del alcance."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T3-EX19-Q04-Pregunta: En base a la tabla anterior, ¿cuál es la holgura total de la actividad B?\nActividad | Duración | Predecesora\nA | 5 | -\nB | 3 | -\nC | 2 | A\nD | 3 | B\nE | 1 | B\nF | 3 | C, D\nG | 4 | E",
+    "cuestion": "API-T3-61-Pregunta: En base a la tabla anterior, ¿cuál es la holgura total de la actividad B?\nActividad | Duración | Predecesora\nA | 5 | -\nB | 3 | -\nC | 2 | A\nD | 3 | B\nE | 1 | B\nF | 3 | C, D\nG | 4 | E",
     "opciones": [
       "A. -1",
       "B. 2",
@@ -3300,53 +3380,13 @@
       "D. 1"
     ],
     "solucion": "D",
-    "grupoDependencia": "API-EX19-BLOQUE2-RED",
+    "grupoDependencia": "API-EDep03-BLOQUE2-RED",
     "ordenGrupo": 1,
     "preguntaBaseDependencia": true,
     "mantenerJuntas": true
   },
   {
-    "cuestion": "API-T1-EX19-Q05-Pregunta: ¿Qué necesita para poder recopilar los requisitos de los interesados?",
-    "opciones": [
-      "A. Auditorías.",
-      "B. EDT.",
-      "C. Verificación de alcance.",
-      "D. Registro de interesado."
-    ],
-    "solucion": "D"
-  },
-  {
-    "cuestion": "API-T1-EX19-Q06-Pregunta: El grupo de procesos de PMBOK que contiene procesos de todas las áreas de conocimiento es:",
-    "opciones": [
-      "A. Cierre.",
-      "B. Ejecución.",
-      "C. Planificación.",
-      "D. Integración."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "API-T1-EX19-Q07-Pregunta: Le han encargado que plante 10 pinos a más tardar el 15 de diciembre. El valor planificado para cada pino es de 5 euros, por lo que el presupuesto asciende a 50 euros. El 15 de diciembre todos los pinos fueron plantados a un coste de 40 euros. ¿Cuál será el índice de rendimiento del cronograma?",
-    "opciones": [
-      "A. 0,80.",
-      "B. 1,00.",
-      "C. 1,25.",
-      "D. 0,00."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-EX19-Q08-Pregunta: PMBOK. Trabajando como líder de proyecto en una empresa con una estructura funcional. Su nivel de autoridad en los proyectos será:",
-    "opciones": [
-      "A. Alto.",
-      "B. Moderado.",
-      "C. Balanceado.",
-      "D. Bajo."
-    ],
-    "solucion": "D"
-  },
-  {
-    "cuestion": "API-T3-EX19-Q09-Pregunta: En base a la tabla anterior, ¿cuál es el camino crítico de este proyecto?",
+    "cuestion": "API-T3-62-Pregunta: En base a la tabla anterior, ¿cuál es el camino crítico de este proyecto?",
     "opciones": [
       "A. BDF.",
       "B. BEG.",
@@ -3354,12 +3394,12 @@
       "D. ACF."
     ],
     "solucion": "D",
-    "grupoDependencia": "API-EX19-BLOQUE2-RED",
+    "grupoDependencia": "API-EDep03-BLOQUE2-RED",
     "ordenGrupo": 2,
     "mantenerJuntas": true
   },
   {
-    "cuestion": "API-T3-EX19-Q10-Pregunta: Todas las siguientes son técnicas grupales de creatividad que se utilizan para recopilar los requisitos del proyecto excepto:",
+    "cuestion": "API-T3-63-Pregunta: Todas las siguientes son técnicas grupales de creatividad que se utilizan para recopilar los requisitos del proyecto excepto:",
     "opciones": [
       "A. Juicio de expertos.",
       "B. Tormenta de ideas.",
@@ -3369,7 +3409,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T3-EX19-Q11-Pregunta: ¿Cuál de las siguientes relaciones de precedencia es la que menos utilizaría para el método de diagramación por precedencia?",
+    "cuestion": "API-T3-64-Pregunta: ¿Cuál de las siguientes relaciones de precedencia es la que menos utilizaría para el método de diagramación por precedencia?",
     "opciones": [
       "A. Fin a Inicio.",
       "B. Fin a Fin.",
@@ -3379,7 +3419,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T3-EX19-Q12-Pregunta: ¿Cuál de las siguientes herramientas será la menos utilizada para estimar la duración de las actividades?",
+    "cuestion": "API-T3-65-Pregunta: ¿Cuál de las siguientes herramientas será la menos utilizada para estimar la duración de las actividades?",
     "opciones": [
       "A. Por 3 valores.",
       "B. Método del camino crítico.",
@@ -3389,107 +3429,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T3-EX19-Q13-Pregunta: ¿Cuál de los siguientes proyectos tiene mejores índices de rendimiento?\nProyecto | CPI | SPI\nA | 1,05 | 0,90\nB | 0,90 | 1,20\nC | 1,10 | 1,20\nD | 0,85 | 0,95",
-    "opciones": [
-      "A. Proyecto B.",
-      "B. Proyecto A.",
-      "C. Proyecto D.",
-      "D. Proyecto C."
-    ],
-    "solucion": "D"
-  },
-  {
-    "cuestion": "API-T1-EX19-Q14-Pregunta: PMBOK. ¿Cuál de los siguientes ítems será el menos utilizado para comenzar a estimar los costes de las actividades de un proyecto?",
-    "opciones": [
-      "A. Plan de gestión de costes.",
-      "B. Línea base del coste.",
-      "C. Registro de riesgos.",
-      "D. Cronograma del proyecto."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-EX19-Q15-Pregunta: A medida que transcurre el tiempo en un proyecto:",
-    "opciones": [
-      "A. Aumenta la influencia de los interesados, el riesgo y la incertidumbre.",
-      "B. Aumenta el coste de los cambios.",
-      "C. Ninguna de las otras respuestas es correcta.",
-      "D. Aumenta la influencia de los interesados y el coste de los cambios."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-EX19-Q16-Pregunta: PMBOK. ¿Qué significa la estimación analógica de costes?",
-    "opciones": [
-      "A. Sumar costes de abajo hacia arriba.",
-      "B. Agregar una reserva de coste adicional para contingencias.",
-      "C. Sumar costes de arriba hacia abajo.",
-      "D. Utilizar costes de proyectos históricos similares para estimar costes futuros."
-    ],
-    "solucion": "D"
-  },
-  {
-    "cuestion": "API-T1-EX19-Q17-Pregunta: PMBOK. El acta de constitución del proyecto acaba de ser firmado. En el acta de constitución hay una descripción del lugar donde va a desarrollarse el proyecto como así también limitaciones de coste y tiempo. Estas descripciones son:",
-    "opciones": [
-      "A. Restricciones.",
-      "B. Compromiso formal de los interesados.",
-      "C. Supuestos.",
-      "D. Plan estratégico."
-    ],
-    "solucion": "A"
-  },
-  {
-    "cuestion": "API-T1-EX19-Q18-Pregunta: Lo más importante del acta de constitución del proyecto es que:",
-    "opciones": [
-      "A. Se justifica el proyecto y su relación con el plan estratégico de la empresa.",
-      "B. Se autoriza formalmente al director del proyecto a comenzar con los procesos de planificación.",
-      "C. Se explicita en detalle el retorno de la inversión.",
-      "D. Se identifican los interesados."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-EX19-Q19-Pregunta: Quiere realizar un viaje en automóvil y conoce que la distancia a recorrer es de 1100 km, que el precio actual de la gasolina es de 1 euro/litro y que su vehículo consume 10 litros cada 100km. ¿Qué técnica de estimación estaría utilizando?",
-    "opciones": [
-      "A. Análoga.",
-      "B. Paramétrica.",
-      "C. Definitiva.",
-      "D. Por orden de magnitud (ROM)."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-EX19-Q20-Pregunta: ¿Cuál de los siguientes enunciados es falso?",
-    "opciones": [
-      "A. El ciclo de vida del producto abarca desde la concepción del producto hasta su retirada del mercado.",
-      "B. Generalmente la mayor utilización de recursos se origina durante las fases intermedias del ciclo de vida del proyecto.",
-      "C. El ciclo de vida de un proyecto tiene tres grandes grupos de procesos.",
-      "D. El ciclo de vida del producto puede originar varios proyectos."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "API-T1-EX19-Q21-Pregunta: ¿Cuál de los siguientes ítems tiene mayor nivel jerárquico?",
-    "opciones": [
-      "A. Actividades.",
-      "B. Programa.",
-      "C. Proyecto.",
-      "D. Cartera."
-    ],
-    "solucion": "D"
-  },
-  {
-    "cuestion": "API-T1-EX19-Q22-Pregunta: Se está finalizando el proceso de crear la estructura de desglose de trabajo. Los siguientes enunciados forman parte de la línea base del alcance a excepción de:",
-    "opciones": [
-      "A. Documentación de requisitos.",
-      "B. Enunciado del alcance.",
-      "C. Diccionario de la EDT.",
-      "D. Estructura de desglose del trabajo (EDT)."
-    ],
-    "solucion": "A"
-  },
-  {
-    "cuestion": "API-T1-EX19-Q23-Pregunta: En un proyecto la fase de fabricación requiere que la fase de diseño esté finalizada. Esto es un ejemplo de dependencia:",
+    "cuestion": "API-T3-66-Pregunta: En un proyecto la fase de fabricación requiere que la fase de diseño esté finalizada. Esto es un ejemplo de dependencia:",
     "opciones": [
       "A. Obligatoria.",
       "B. Externa.",
@@ -3499,17 +3439,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T1-EX19-Q24-Pregunta: PMBOK. Durante la implementación de un módulo en un proyecto, validar el alcance sería:",
-    "opciones": [
-      "A. Realizar un análisis coste-beneficio para determinar si debemos proceder con una instalación del próximo módulo.",
-      "B. Revisar el desempeño de un módulo.",
-      "C. Gestionar los cambios en el cronograma del proyecto.",
-      "D. Descomponer la EDT en paquetes de trabajo para revisar el alcance con el cliente."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T3-EX19-Q25-Pregunta: En base a la tabla anterior, ¿qué ocurre con el proyecto si la actividad E se retrasa 2 unidades de tiempo más de lo planificado?",
+    "cuestion": "API-T3-67-Pregunta: En base a la tabla anterior, ¿qué ocurre con el proyecto si la actividad E se retrasa 2 unidades de tiempo más de lo planificado?",
     "opciones": [
       "A. La duración del proyecto se retrasa 2 unidades de tiempo.",
       "B. La duración del proyecto se retrasará 1 unidad de tiempo.",
@@ -3517,12 +3447,12 @@
       "D. El proyecto tendrá más riesgo."
     ],
     "solucion": "D",
-    "grupoDependencia": "API-EX19-BLOQUE2-RED",
+    "grupoDependencia": "API-EDep03-BLOQUE2-RED",
     "ordenGrupo": 3,
     "mantenerJuntas": true
   },
   {
-    "cuestion": "API-T3-EX19J-Q01-Pregunta: El equipo de proyecto ya ha finalizado la EDT con un buen nivel de detalle. El director de proyecto está manteniendo una reunión con su equipo de trabajo para comenzar con el proceso de estimación de la duración de las actividades. ¿Cuáles de los siguientes elementos no será de mucha ayuda en esta reunión?",
+    "cuestion": "API-T3-68-Pregunta: El equipo de proyecto ya ha finalizado la EDT con un buen nivel de detalle. El director de proyecto está manteniendo una reunión con su equipo de trabajo para comenzar con el proceso de estimación de la duración de las actividades. ¿Cuáles de los siguientes elementos no será de mucha ayuda en esta reunión?",
     "opciones": [
       "A. Restricciones.",
       "B. Riesgos identificados.",
@@ -3532,7 +3462,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T3-EX19J-Q02-Pregunta: ¿Cuál es la principal salida del proceso Planificar Tiempo?",
+    "cuestion": "API-T3-69-Pregunta: ¿Cuál es la principal salida del proceso Planificar Tiempo?",
     "opciones": [
       "A. Atributos de la actividad.",
       "B. Plan de gestión de tiempo.",
@@ -3542,17 +3472,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T3-EX19J-Q03-Pregunta: Realizando el control de los costos de un proyecto que supera los 20 millones de euros, el principal resultado que obtendrá este proceso será:",
-    "opciones": [
-      "A. Requisitos de financiamiento.",
-      "B. Coste estimado a la conclusión.",
-      "C. Costes estimados de las actividades.",
-      "D. Presupuesto."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T3-EX19J-Q04-Pregunta: El patrocinador está presionando al director de proyecto para que entregue el proyecto dos semanas antes de lo acordado en el plan de dirección del proyecto. ¿Qué es lo primero que debería hacer el director del proyecto?",
+    "cuestion": "API-T3-70-Pregunta: El patrocinador está presionando al director de proyecto para que entregue el proyecto dos semanas antes de lo acordado en el plan de dirección del proyecto. ¿Qué es lo primero que debería hacer el director del proyecto?",
     "opciones": [
       "A. Conseguir la aprobación del comité de cambios.",
       "B. Evaluar el impacto que tendrá dicho cambio en el proyecto.",
@@ -3562,117 +3482,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-EX19J-Q05-Pregunta: ¿En qué grupos de procesos se lleva a cabo la gestión del alcance del proyecto?",
-    "opciones": [
-      "A. Planificación – Control.",
-      "B. Iniciación – Planificación - Ejecución.",
-      "C. Iniciación – Planificación.",
-      "D. Iniciación – Planificación – Ejecución – Control – Cierre."
-    ],
-    "solucion": "A"
-  },
-  {
-    "cuestion": "API-T2-EX19J-Q06-Pregunta: Suponga que es el director de proyecto de una organización matricial y está controlando un proyecto. ¿Cuál debería ser su rol principal en este proyecto?",
-    "opciones": [
-      "A. Crear el plan de comunicaciones.",
-      "B. Controlar los cambios innecesarios.",
-      "C. Crear el plan de riesgos.",
-      "D. Crear el plan de administración del proyecto."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T2-EX19J-Q07-Pregunta: Una empresa está operando en un campo muy dinámico. ¿Cuál de los siguientes cambios debería ser el más importante para el comité de control integrado de cambios? Un cambio originado en:",
-    "opciones": [
-      "A. El equipo de trabajo.",
-      "B. El alcance del proyecto.",
-      "C. El mercado.",
-      "D. La empresa contratista."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "API-T2-EX19J-Q08-Pregunta: Un proyecto está sufriendo demasiados cambios en el acta de constitución de un proyecto. ¿Quién es el principal responsable para decidir si esos cambios son necesarios?",
-    "opciones": [
-      "A. El interesado principal del proyecto.",
-      "B. El director del proyecto.",
-      "C. Todos los interesados del proyecto.",
-      "D. El patrocinador."
-    ],
-    "solucion": "D"
-  },
-  {
-    "cuestion": "API-T3-EX19J-Q09-Pregunta: El valor planificado para la actividad A es de 600 euros, está completada en un 50% y su coste real es de 200 euros. La actividad B se había planificado con un valor de 400 euros, el avance real es de 75% y su coste real asciende a 350 euros. Por último, la actividad C con un valor planificado de 100 euros, ya ha finalizado y su coste real fue de 100 euros. ¿Cuál es el índice de desempeño del coste (CPI)?\nActividad | PV (Planificado) | % Avance Real | AC (Coste Real)\nA | 600 | 50 % | 200\nB | 400 | 75 % | 350\nC | 100 | 100 % | 100",
-    "opciones": [
-      "A. 650 / 700.",
-      "B. 1100 / 700.",
-      "C. 700 / 1100.",
-      "D. 700 / 650."
-    ],
-    "solucion": "D"
-  },
-  {
-    "cuestion": "API-T2-EX19J-Q10-Pregunta: El cliente ha entregado el enunciado del alcance del proyecto. ¿Cuál será el próximo paso?",
-    "opciones": [
-      "A. Control integrado de cambios.",
-      "B. Completar la verificación del alcance.",
-      "C. Completar los paquetes de trabajo.",
-      "D. Realizar el plan para la dirección del proyecto."
-    ],
-    "solucion": "D"
-  },
-  {
-    "cuestion": "API-T2-EX19J-Q11-Pregunta: El director del proyecto junto a su equipo estableció la línea base de un proyecto industrial en 105 millones de euros y un plazo estimado de 3 años. ¿En qué caso sería aceptable cambiar la línea base cuando el proyecto está en ejecución?",
-    "opciones": [
-      "A. El precio de varios productos que utiliza el proyecto se ha incrementado un 45%.",
-      "B. La empresa contratista ha incrementado su presupuesto para la gestión de calidad en 50%.",
-      "C. El cliente y el patrocinador han autorizado un cambio en el alcance del proyecto por 25000 euros.",
-      "D. La productividad en el departamento de ingeniería está siendo un 30% inferior a lo esperado."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "API-T1-EX19J-Q12-Pregunta: ¿Durante qué fase del ciclo de vida del proyecto la dotación de personal suele ser mayor?",
-    "opciones": [
-      "A. En las fases intermedias.",
-      "B. Es uniforme durante todo el ciclo de vida del proyecto.",
-      "C. Al final.",
-      "D. Al inicio."
-    ],
-    "solucion": "A"
-  },
-  {
-    "cuestion": "API-T1-EX19J-Q13-Pregunta: ¿Cuál de los siguientes ítems es el que requiere más iteraciones?",
-    "opciones": [
-      "A. Grupo de procesos de cierre.",
-      "B. Grupo de procesos de planificación.",
-      "C. Administrar las adquisiciones.",
-      "D. Plan de comunicaciones."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "API-T1-EX19J-Q14-Pregunta: Reunión de planificación con la dirección general: se informa sobre la importancia de un proyecto para cubrir una porción de demanda insatisfecha del mercado, a la cual han querido ofrecer servicios desde hace tres años. ¿A qué tipo de planificación pertenece este proyecto?",
-    "opciones": [
-      "A. Ciclo de vida del producto.",
-      "B. Planificación del portafolio.",
-      "C. Planificación de programas.",
-      "D. Planificación estratégica."
-    ],
-    "solucion": "D"
-  },
-  {
-    "cuestion": "API-T3-EX19J-Q15-Pregunta: Una forma simple y rápida para calcular la estimación hasta la conclusión (EAC) del proyecto, sería tomar el presupuesto hasta la conclusión (BAC) y luego dividirlo por:",
-    "opciones": [
-      "A. Variación del coste.",
-      "B. Índice de desempeño del cronograma.",
-      "C. Índice de desempeño del trabajo por completar.",
-      "D. Índice de desempeño del coste."
-    ],
-    "solucion": "D"
-  },
-  {
-    "cuestion": "API-T3-EX19J-Q16-Pregunta: Un proyecto ha identificado que el camino crítico está formado por las actividades A y C. Además, han estimado tres duraciones para cada una como se presenta en la tabla. ¿Cuál será la duración estimada del proyecto según PERT?\nActividad | Optimista | Más probable | Pesimista\nA | 1 | 2 | 9\nB | 1 | 2 | 3\nC | 3 | 5 | 7",
+    "cuestion": "API-T3-71-Pregunta: Un proyecto ha identificado que el camino crítico está formado por las actividades A y C. Además, han estimado tres duraciones para cada una como se presenta en la tabla. ¿Cuál será la duración estimada del proyecto según PERT?\nActividad | Optimista | Más probable | Pesimista\nA | 1 | 2 | 9\nB | 1 | 2 | 3\nC | 3 | 5 | 7",
     "opciones": [
       "A. 11",
       "B. 8",
@@ -3682,7 +3492,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T3-EX19J-Q17-Pregunta: Se necesita acortar la duración del proyecto para poder cumplir con el contrato acordado con el cliente. Las opciones que se están evaluando con el equipo de proyecto son la intensificación (crashing) o la ejecución más rápida (fast-tracking). ¿Cuál de los siguientes enunciados es más correcto?",
+    "cuestion": "API-T3-72-Pregunta: Se necesita acortar la duración del proyecto para poder cumplir con el contrato acordado con el cliente. Las opciones que se están evaluando con el equipo de proyecto son la intensificación (crashing) o la ejecución más rápida (fast-tracking). ¿Cuál de los siguientes enunciados es más correcto?",
     "opciones": [
       "A. La intensificación extenderá aún más los plazos del proyecto.",
       "B. La intensificación agrega riesgos al proyecto.",
@@ -3692,37 +3502,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T2-EX19J-Q18-Pregunta: El director del proyecto y su equipo han finalizado el proceso de definir el alcance. Durante la siguiente etapa del proyecto, ¿cuál de las siguientes afirmaciones no es cierta?",
-    "opciones": [
-      "A. Se debe verificar que el grado de descomposición del trabajo sea suficiente.",
-      "B. El equipo y el director del proyecto deberían participar de la próxima etapa.",
-      "C. Sí tiene que descomponer el proyecto en paquetes de trabajo.",
-      "D. Se debe controlar el alcance."
-    ],
-    "solucion": "D"
-  },
-  {
-    "cuestion": "API-T2-EX19J-Q19-Pregunta: En un proyecto, el principal entregable y los resultados del plan de pruebas fueron enviados al cliente para conseguir su aprobación formal. Sin embargo, han pasado 25 días y el cliente no contesta. ¿Qué es lo mejor que puede hacer?",
-    "opciones": [
-      "A. Preguntar al cliente por qué no devuelve las llamadas.",
-      "B. Documentar los hechos en el registro de problemas.",
-      "C. Solicitar ayuda a la dirección general.",
-      "D. Detener el proyecto hasta que el cliente apruebe los entregables formalmente."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "API-T3-EX19J-Q20-Pregunta: El director de un proyecto de consultoría informática debe calcular el presupuesto de ese proyecto. ¿Cuál de las siguientes afirmaciones es falsa?",
-    "opciones": [
-      "A. La cuenta de control está a un nivel de jerarquía superior a los paquetes de trabajo.",
-      "B. El presupuesto del proyecto puede incluir una reserva de gestión para imprevistos.",
-      "C. El presupuesto del proyecto generalmente incluye una reserva para contingencias.",
-      "D. La reserva de gestión se tiene en cuenta en los cálculos del valor ganado."
-    ],
-    "solucion": "D"
-  },
-  {
-    "cuestion": "API-T3-EX19J-Q21-Pregunta: Se está desarrollando el cronograma del proyecto y respecto a los diagramas de red. ¿Cuál de los siguientes enunciados sería correcto?",
+    "cuestion": "API-T3-73-Pregunta: Se está desarrollando el cronograma del proyecto y respecto a los diagramas de red. ¿Cuál de los siguientes enunciados sería correcto?",
     "opciones": [
       "A. El camino crítico puede incluir actividades ficticias.",
       "B. El diagrama de red va a cambiar siempre que cambie la fecha de inicio.",
@@ -3732,37 +3512,257 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-EX19J-Q22-Pregunta: El principal rol de un patrocinador comprometido con un proyecto debería ser:",
+    "cuestion": "API-T4-01-Pregunta: ¿Qué dominio de desempeño se encarga de gestionar el presupuesto y estimar costos?",
     "opciones": [
-      "A. Identificar restricciones innecesarias.",
-      "B. Prevenir cambios innecesarios y garantizar los recursos para el proyecto.",
-      "C. Integrar y comunicar.",
-      "D. Colaborar con el director del proyecto para desarrollar el plan para la dirección del proyecto."
+      "A. Gobernanza.",
+      "B. Cronograma.",
+      "C. Finanzas.",
+      "D. Recursos."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T4-02-Pregunta: Te han nombrado director del proyecto de construcción de dos bloques de viviendas de protección oficial. Debéis acotar y controlar muy bien los costes para obtener una mínima rentabilidad. Durante la ejecución, dos miembros del equipo discuten sobre si imputar el coste total de una actividad al terminarla o aplicar la regla del 50/50. ¿Qué es lo mejor que puedes hacer?",
+    "opciones": [
+      "A. Consultar el acta de constitución del proyecto.",
+      "B. Consultar el plan de gestión de costes.",
+      "C. Cualquiera de las dos opciones es válida (100% al final o 50/50).",
+      "D. Consultar al director financiero de la empresa."
     ],
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-EX19J-Q23-Pregunta: En un sistema de control de cambios de un proyecto pequeño no se suele utilizar:",
+    "cuestion": "API-T4-03-Pregunta: Al coste que se ha presupuestado para el trabajo realmente ejecutado hasta la fecha actual se le suele llamar:",
     "opciones": [
-      "A. Reuniones.",
-      "B. Lecciones aprendidas.",
-      "C. Procedimientos.",
-      "D. Normas."
+      "A. Coste real.",
+      "B. Valor planificado.",
+      "C. Valor ganado.",
+      "D. Valor actual."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T4-04-Pregunta: La aplicación de estimación de costes Bottom-up suele estar motivada por el tamaño y la complejidad de:",
+    "opciones": [
+      "A. La relación estadística entre datos históricos y otras variables.",
+      "B. El presupuesto del proyecto.",
+      "C. Los paquetes de trabajo.",
+      "D. El software de gestión de proyectos."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T4-05-Pregunta: Juan dirige el desarrollo de un sistema de control digital industrial. Mensualmente recibe asignaciones de horas reales de cada departamento, costes reales de recursos materiales y equipamientos, y sobrecostes en ambos. ¿Qué es lo siguiente que debe hacer?",
+    "opciones": [
+      "A. Realizar el control integrado de cambios.",
+      "B. Informar sobre el desempeño.",
+      "C. Controlar los costes.",
+      "D. Monitorizar y controlar el trabajo del proyecto."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T4-06-Pregunta: Las técnicas de análisis de datos que se pueden utilizar para estimar los costes son (indicar la respuesta INCORRECTA):",
+    "opciones": [
+      "A. Análisis de reserva.",
+      "B. Análisis de alternativas.",
+      "C. Costes de la calidad.",
+      "D. Estimación por 3 valores."
     ],
     "solucion": "B"
   },
   {
-    "cuestion": "API-T1-EX19J-Q24-Pregunta: ¿Cuál de los siguientes elementos será considerado de mayor importancia en cualquier proyecto: alcance, coste y calidad?",
+    "cuestion": "API-T4-07-Pregunta: Se presenta la línea base de coste de un proyecto con cuatro paquetes de trabajo (valor planificado mensual) y, al final del mes 4, el porcentaje ejecutado y costes reales (AC). ¿Cómo va el proyecto al final del mes 4?\nPlan inicial (PV mensual):\nPaquete | Mes 1 | Mes 2 | Mes 3 | Mes 4 | Mes 5 | TOTAL\nPT1 | 500 | 500 | 500 | 500 | 0 | 2000\nPT2 | 1000 | 2000 | 2000 | 3000 | 0 | 8000\nPT3 | 0 | 1000 | 2000 | 5000 | 0 | 8000\nPT4 | 0 | 0 | 2000 | 2000 | 1000 | 5000\n\nDatos al final del mes 4:\nPaquete | % Ejecutado | AC\nPT1 | 100 % | 1500\nPT2 | 100 % | 9000\nPT3 | 75 % | 6000\nPT4 | 80 % | 3000",
     "opciones": [
-      "A. Calidad.",
-      "B. Son elementos complementarios y no se puede priorizar sin conocer detalles del proyecto.",
-      "C. Alcance.",
-      "D. Coste."
+      "A. Retrasado en tiempo y ahorrando en costes.",
+      "B. Retrasado en tiempo y gastando más de lo previsto.",
+      "C. Adelantado en tiempo y gastando más de lo previsto.",
+      "D. Adelantado en tiempo y ahorrando en costes."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T4-08-Pregunta: Jorge está al final del primer mes realizando el seguimiento y control de costes de un proyecto con los siguientes costes por mes: Mes 1: Actividad A: 30; Actividad B: 25; Actividad C: 15. Mes 2: Actividad A: 20; Actividad B: 20; Actividad C: 10. Además, hay que añadir 10 por actividad y mes por reservas de contingencia y 5 por actividad y mes por reservas de gestión. El BAC es:",
+    "opciones": [
+      "A. 120",
+      "B. 210",
+      "C. 150",
+      "D. 180"
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "API-T4-09-Pregunta: La suma de las estimaciones de costes del proyecto asciende a 1200, las reservas de contingencia calculadas teniendo en cuenta los riesgos identificados son de 200. Teniendo en cuenta la singularidad del proyecto, el patrocinador, tras consultarte, propone unas reservas de gestión de 100. ¿Cuál será el presupuesto total del proyecto?",
+    "opciones": [
+      "A. 1500",
+      "B. 1300",
+      "C. 1200",
+      "D. 1400"
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "API-T4-10-Pregunta: Desarrollar una aproximación de los recursos monetarios necesarios para completar el trabajo del proyecto es cometido del proceso de:",
+    "opciones": [
+      "A. Determinar el presupuesto.",
+      "B. Planificar la gestión de los costes.",
+      "C. Controlar los costes.",
+      "D. Estimar los costes."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "API-T4-11-Pregunta: El plazo del proyecto es de 6 meses. Han pasado ya 3 y has finalizado 6 de los 10 coches que querías fabricar. Tu presupuesto total es de 3000 unidades monetarias a gastar de forma homogénea a lo largo de los 6 meses a un ritmo de 500 unidades monetarias por mes. Hasta ahora has gastado solamente 1200. ¿Cuál es la estimación hasta la conclusión del trabajo restante (ETC) si el ritmo de variación de costos se mantiene?",
+    "opciones": [
+      "A. 2000",
+      "B. 1200",
+      "C. 800",
+      "D. 2200"
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "API-T4-12-Pregunta: Al analizar los datos de desempeño de un proyecto te encuentras con que el valor ganado EV es 12000, el valor planificado es 18000 y el coste real AC es 16000. ¿Cuál es el CPI del proyecto y qué implica?",
+    "opciones": [
+      "A. El CPI es 12000/18000 que indica un adelanto claro en las obras.",
+      "B. El CPI es 12000/16000 e implica que hay un sobrecoste importante en el proyecto.",
+      "C. Ninguna de las otras respuestas es correcta.",
+      "D. El CPI es 18000/16000 y hay un ahorro de coste significativo."
     ],
     "solucion": "B"
   },
   {
-    "cuestion": "API-T3-EX19J-Q25-Pregunta: El director de proyecto en una empresa termina habitualmente sus proyectos gastando más de lo presupuestado y retrasando su finalización. Por tal motivo, ha decidido mejorar los procesos de planificación, seguimiento y control. ¿Qué herramienta utilizará para evaluar la eficiencia en el progreso del cronograma?",
+    "cuestion": "API-T4-13-Pregunta: Se presenta la línea base de coste de un proyecto con cuatro paquetes de trabajo (valor planificado mensual) y, al final del mes 4, el porcentaje ejecutado y costes reales (AC). ¿Cómo va el proyecto al final del mes 4?\nPlan inicial (PV mensual):\nPaquete | Mes 1 | Mes 2 | Mes 3 | Mes 4 | Mes 5 | TOTAL\nPT1 | 500 | 500 | 500 | 500 | 500 | 2500\nPT2 | 1000 | 2000 | 3000 | 3000 | 0 | 9000\nPT3 | 0 | 1000 | 2000 | 5000 | 0 | 8000\nPT4 | 0 | 0 | 4000 | 4000 | 500 | 8500\n\nDatos al final del mes 4:\nPaquete | % Ejecutado | AC\nPT1 | 100 % | 3000\nPT2 | 100 % | 9000\nPT3 | 75 % | 6000\nPT4 | 100 % | 4500",
+    "opciones": [
+      "A. Adelantado en tiempo y ahorrando en costes.",
+      "B. Retrasado en tiempo y gastando más de lo previsto.",
+      "C. Retrasado en tiempo y ahorrando en costes.",
+      "D. Adelantado en tiempo y gastando más de lo previsto."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T4-14-Pregunta: Como director de un proyecto crees que es el momento de definir, entre otras cosas, cómo monitorizas los costes del proyecto. ¿Qué harás a continuación?",
+    "opciones": [
+      "A. Elaborar el plan de dirección del proyecto.",
+      "B. Planificar la gestión de costes.",
+      "C. Elaborar la línea de base de costes.",
+      "D. Estimar los costes de cada paquete de trabajo."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T4-15-Pregunta: Un miembro de tu equipo de dirección te dice que no estás considerando algunos imprevistos identificados en tus estimaciones de costes. ¿Qué es lo mejor que puedes hacer?",
+    "opciones": [
+      "A. Mantener tu plan y no realizar ninguna acción adicional.",
+      "B. Revisar los riesgos del proyecto y sus reservas de contingencia para ver si son suficientes.",
+      "C. Añadir el 5% de incremento a dichas cuentas de control.",
+      "D. Hablar con el patrocinador para que dicho incremento lo considere en la reserva de gestión."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T4-16-Pregunta: Un proyecto está informando un índice de rendimiento de coste de 0,72. Podríamos decir que:",
+    "opciones": [
+      "A. Se espera que el coste total del proyecto sea un 72% superior al valor planificado.",
+      "B. El proyecto ha realizado sólo un 72% de lo planificado.",
+      "C. El proyecto está un 28% por debajo del valor planificado.",
+      "D. El proyecto obtiene 0,72 euros por cada euro gastado."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T4-17-Pregunta: Le han encargado que plante 10 pinos a más tardar el 15 de diciembre. El valor planificado para cada pino es de 5 euros, por lo que el presupuesto asciende a 50 euros. El 15 de diciembre todos los pinos fueron plantados a un coste de 40 euros. ¿Cuál será el índice de rendimiento del cronograma?",
+    "opciones": [
+      "A. 0,80.",
+      "B. 1,00.",
+      "C. 1,25.",
+      "D. 0,00."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T4-18-Pregunta: ¿Cuál de los siguientes proyectos tiene mejores índices de rendimiento?\nProyecto | CPI | SPI\nA | 1,05 | 0,90\nB | 0,90 | 1,20\nC | 1,10 | 1,20\nD | 0,85 | 0,95",
+    "opciones": [
+      "A. Proyecto B.",
+      "B. Proyecto A.",
+      "C. Proyecto D.",
+      "D. Proyecto C."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "API-T4-19-Pregunta: PMBOK. ¿Cuál de los siguientes ítems será el menos utilizado para comenzar a estimar los costes de las actividades de un proyecto?",
+    "opciones": [
+      "A. Plan de gestión de costes.",
+      "B. Línea base del coste.",
+      "C. Registro de riesgos.",
+      "D. Cronograma del proyecto."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T4-20-Pregunta: PMBOK. ¿Qué significa la estimación analógica de costes?",
+    "opciones": [
+      "A. Sumar costes de abajo hacia arriba.",
+      "B. Agregar una reserva de coste adicional para contingencias.",
+      "C. Sumar costes de arriba hacia abajo.",
+      "D. Utilizar costes de proyectos históricos similares para estimar costes futuros."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "API-T4-21-Pregunta: Quiere realizar un viaje en automóvil y conoce que la distancia a recorrer es de 1100 km, que el precio actual de la gasolina es de 1 euro/litro y que su vehículo consume 10 litros cada 100km. ¿Qué técnica de estimación estaría utilizando?",
+    "opciones": [
+      "A. Análoga.",
+      "B. Paramétrica.",
+      "C. Definitiva.",
+      "D. Por orden de magnitud (ROM)."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T4-22-Pregunta: Realizando el control de los costos de un proyecto que supera los 20 millones de euros, el principal resultado que obtendrá este proceso será:",
+    "opciones": [
+      "A. Requisitos de financiamiento.",
+      "B. Coste estimado a la conclusión.",
+      "C. Costes estimados de las actividades.",
+      "D. Presupuesto."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "API-T4-23-Pregunta: El valor planificado para la actividad A es de 600 euros, está completada en un 50% y su coste real es de 200 euros. La actividad B se había planificado con un valor de 400 euros, el avance real es de 75% y su coste real asciende a 350 euros. Por último, la actividad C con un valor planificado de 100 euros, ya ha finalizado y su coste real fue de 100 euros. ¿Cuál es el índice de desempeño del coste (CPI)?\nActividad | PV (Planificado) | % Avance Real | AC (Coste Real)\nA | 600 | 50 % | 200\nB | 400 | 75 % | 350\nC | 100 | 100 % | 100",
+    "opciones": [
+      "A. 650 / 700.",
+      "B. 1100 / 700.",
+      "C. 700 / 1100.",
+      "D. 700 / 650."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "API-T4-24-Pregunta: Una forma simple y rápida para calcular la estimación hasta la conclusión (EAC) del proyecto, sería tomar el presupuesto hasta la conclusión (BAC) y luego dividirlo por:",
+    "opciones": [
+      "A. Variación del coste.",
+      "B. Índice de desempeño del cronograma.",
+      "C. Índice de desempeño del trabajo por completar.",
+      "D. Índice de desempeño del coste."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "API-T4-25-Pregunta: El director de un proyecto de consultoría informática debe calcular el presupuesto de ese proyecto. ¿Cuál de las siguientes afirmaciones es falsa?",
+    "opciones": [
+      "A. La cuenta de control está a un nivel de jerarquía superior a los paquetes de trabajo.",
+      "B. El presupuesto del proyecto puede incluir una reserva de gestión para imprevistos.",
+      "C. El presupuesto del proyecto generalmente incluye una reserva para contingencias.",
+      "D. La reserva de gestión se tiene en cuenta en los cálculos del valor ganado."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "API-T4-26-Pregunta: El director de proyecto en una empresa termina habitualmente sus proyectos gastando más de lo presupuestado y retrasando su finalización. Por tal motivo, ha decidido mejorar los procesos de planificación, seguimiento y control. ¿Qué herramienta utilizará para evaluar la eficiencia en el progreso del cronograma?",
     "opciones": [
       "A. Índice de desempeño del cronograma.",
       "B. Estimación hasta la conclusión.",
@@ -3772,7 +3772,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T4-EXTRA-Q01-Pregunta: Una forma simple y rápida para calcular la estimación hasta la conclusión (EAC) del proyecto, sería tomar el presupuesto hasta la conclusión (BAC) y luego dividirlo por:",
+    "cuestion": "API-T4-27-Pregunta: Una forma simple y rápida para calcular la estimación hasta la conclusión (EAC) del proyecto, sería tomar el presupuesto hasta la conclusión (BAC) y luego dividirlo por:",
     "opciones": [
       "A. Índice de desempeño del coste.",
       "B. Índice de desempeño del trabajo por completar.",
@@ -3782,7 +3782,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T4-EXTRA-Q02-Pregunta: El presupuesto estimado a su finalización (Estimate at Completion, EAC) es una evaluación periódica de:",
+    "cuestion": "API-T4-28-Pregunta: El presupuesto estimado a su finalización (Estimate at Completion, EAC) es una evaluación periódica de:",
     "opciones": [
       "A. El valor del trabajo realizado al final del proyecto.",
       "B. El presupuesto final aprobado inicialmente.",
@@ -3792,7 +3792,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T4-EXTRA-Q03-Pregunta: La estimación ascendente utiliza:",
+    "cuestion": "API-T4-29-Pregunta: La estimación ascendente utiliza:",
     "opciones": [
       "A. Se utiliza para imputar las horas realmente dedicadas en la fase de ejecución.",
       "B. Utiliza parámetros estadísticos y simulaciones de Montecarlo.",
@@ -3802,7 +3802,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T4-EXTRA-Q04-Pregunta: ¿Cuál de los siguientes ítems será el menos utilizado para comenzar a estimar los costes de las actividades de un proyecto?",
+    "cuestion": "API-T4-30-Pregunta: ¿Cuál de los siguientes ítems será el menos utilizado para comenzar a estimar los costes de las actividades de un proyecto?",
     "opciones": [
       "A. Cronograma del proyecto.",
       "B. Plan de gestión de costes.",
@@ -3812,7 +3812,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T4-EXTRA-Q05-Pregunta: Si el valor ganado (EV) es de 400, el coste real (AC) es de 450 y el valor planificado (PV) es de 300, ¿cuál es la variación del coste?",
+    "cuestion": "API-T4-31-Pregunta: Si el valor ganado (EV) es de 400, el coste real (AC) es de 450 y el valor planificado (PV) es de 300, ¿cuál es la variación del coste?",
     "opciones": [
       "A. 100",
       "B. -100",
@@ -3822,7 +3822,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T4-EXTRA-Q06-Pregunta: Realizando el control de los costos de un proyecto que supera los 20 millones de euros, el principal resultado que obtendrá de este proceso será:",
+    "cuestion": "API-T4-32-Pregunta: Realizando el control de los costos de un proyecto que supera los 20 millones de euros, el principal resultado que obtendrá de este proceso será:",
     "opciones": [
       "A. Presupuesto.",
       "B. Costes estimados de las actividades.",
@@ -3832,7 +3832,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T4-EXTRA-Q07-Pregunta: ¿Qué significa la estimación análoga de costes?",
+    "cuestion": "API-T4-33-Pregunta: ¿Qué significa la estimación análoga de costes?",
     "opciones": [
       "A. Sumar costes de arriba hacia abajo.",
       "B. Sumar costes de abajo hacia arriba.",
@@ -3842,7 +3842,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T4-EXTRA-Q08-Pregunta: El director del proyecto junto a su equipo establecieron la línea base de un proyecto industrial en 105 millones de euros y un plazo estimado de 3 años. ¿En qué caso sería aceptable cambiar la línea base cuando el proyecto esté en ejecución?",
+    "cuestion": "API-T4-34-Pregunta: El director del proyecto junto a su equipo establecieron la línea base de un proyecto industrial en 105 millones de euros y un plazo estimado de 3 años. ¿En qué caso sería aceptable cambiar la línea base cuando el proyecto esté en ejecución?",
     "opciones": [
       "A. La empresa contratista ha incrementado su presupuesto para la gestión de calidad en un 50%.",
       "B. El cliente y el patrocinador han autorizado un cambio en el alcance del proyecto por 25,000 euros.",
@@ -3852,7 +3852,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T4-EXTRA-Q09-Pregunta: El valor planificado para la actividad A es de 600 euros (50% completado, AC 200). La actividad B valor 400 euros (75% avance, AC 350). La actividad C valor 100 euros (100% finalizado, AC 100). ¿Cuál es el índice de desempeño del coste (CPI)?",
+    "cuestion": "API-T4-35-Pregunta: El valor planificado para la actividad A es de 600 euros (50% completado, AC 200). La actividad B valor 400 euros (75% avance, AC 350). La actividad C valor 100 euros (100% finalizado, AC 100). ¿Cuál es el índice de desempeño del coste (CPI)?",
     "opciones": [
       "A. 700 / 1100",
       "B. 700 / 650",
@@ -3862,7 +3862,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T4-EXTRA-Q10-Pregunta: ¿Cuál de los siguientes proyectos tiene mejores índices de rendimiento?\nProyecto A: CPI 1,05 / SPI 0,90\nProyecto B: CPI 0,90 / SPI 1,20\nProyecto C: CPI 1,10 / SPI 1,20\nProyecto D: CPI 0,85 / SPI 0,95",
+    "cuestion": "API-T4-36-Pregunta: ¿Cuál de los siguientes proyectos tiene mejores índices de rendimiento?\nProyecto A: CPI 1,05 / SPI 0,90\nProyecto B: CPI 0,90 / SPI 1,20\nProyecto C: CPI 1,10 / SPI 1,20\nProyecto D: CPI 0,85 / SPI 0,95",
     "opciones": [
       "A. Proyecto B.",
       "B. Proyecto D.",
@@ -3872,7 +3872,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T4-EXTRA-Q11-Pregunta: Quiere realizar un viaje en automóvil y conoce que la distancia a recorrer es de 1100 km, que el precio actual de la gasolina es de 1 euro/litro y que su vehículo consume 10 litros cada 100 km. ¿Qué técnica de estimación estaría utilizando?",
+    "cuestion": "API-T4-37-Pregunta: Quiere realizar un viaje en automóvil y conoce que la distancia a recorrer es de 1100 km, que el precio actual de la gasolina es de 1 euro/litro y que su vehículo consume 10 litros cada 100 km. ¿Qué técnica de estimación estaría utilizando?",
     "opciones": [
       "A. Análoga.",
       "B. Definitiva.",
@@ -3882,7 +3882,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T4-EXTRA-Q12-Pregunta: El director de proyectos ha decidido mejorar los procesos de planificación, seguimiento y control. ¿Qué herramienta utilizará para evaluar la eficiencia en el progreso del cronograma?",
+    "cuestion": "API-T4-38-Pregunta: El director de proyectos ha decidido mejorar los procesos de planificación, seguimiento y control. ¿Qué herramienta utilizará para evaluar la eficiencia en el progreso del cronograma?",
     "opciones": [
       "A. Estimación hasta la conclusión.",
       "B. Índice de desempeño del cronograma.",
@@ -3892,7 +3892,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T4-EXTRA-Q13-Pregunta: El director de un proyecto de consultoría informática debe calcular el presupuesto de ese proyecto. ¿Cuál de las siguientes afirmaciones es FALSA?",
+    "cuestion": "API-T4-39-Pregunta: El director de un proyecto de consultoría informática debe calcular el presupuesto de ese proyecto. ¿Cuál de las siguientes afirmaciones es FALSA?",
     "opciones": [
       "A. El presupuesto del proyecto generalmente incluye una reserva para contingencias.",
       "B. La cuenta de control estará a un nivel de jerarquía superior a los paquetes de trabajo.",
