@@ -2030,7 +2030,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T2-Q25-Pregunta: ¿Qué dominio de desempeño se encarga de gestionar el presupuesto y estimar costos?",
+    "cuestion": "API-T4-Q25-Pregunta: ¿Qué dominio de desempeño se encarga de gestionar el presupuesto y estimar costos?",
     "opciones": [
       "A. Gobernanza.",
       "B. Cronograma.",
@@ -2640,7 +2640,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T1-EX26-Q02-Pregunta: Estás dirigiendo un proyecto de diseño e instalación de un sistema para el control de presión de fuselaje de aviones. El departamento de ingeniería debe enviarte antes los requisitos de material para encargarlo por adquisiciones. Este es un ejemplo de:",
+    "cuestion": "API-T3-EX26-Q02-Pregunta: Estás dirigiendo un proyecto de diseño e instalación de un sistema para el control de presión de fuselaje de aviones. El departamento de ingeniería debe enviarte antes los requisitos de material para encargarlo por adquisiciones. Este es un ejemplo de:",
     "opciones": [
       "A. Restricción.",
       "B. Dependencia obligatoria.",
@@ -2650,7 +2650,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T1-EX26-Q03-Pregunta: ¿Cuál de las siguientes relaciones de precedencia es la menos usada comúnmente en gestión de proyectos?",
+    "cuestion": "API-T3-EX26-Q03-Pregunta: ¿Cuál de las siguientes relaciones de precedencia es la menos usada comúnmente en gestión de proyectos?",
     "opciones": [
       "A. Fin-Comienzo.",
       "B. Comienzo-Fin.",
@@ -2690,7 +2690,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T1-EX26-Q07-Pregunta: Un miembro de tu equipo te avisa de un problema de integridad de la línea base de alcance. Como consecuencia revisas el proceso que principalmente debe preservar dicha integridad, que es:",
+    "cuestion": "API-T2-EX26-Q07-Pregunta: Un miembro de tu equipo te avisa de un problema de integridad de la línea base de alcance. Como consecuencia revisas el proceso que principalmente debe preservar dicha integridad, que es:",
     "opciones": [
       "A. Realizar el control integrado de cambios.",
       "B. Controlar la calidad.",
@@ -2700,7 +2700,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T1-EX26-Q08-Pregunta: Estás recopilando requisitos con tu equipo de trabajo en un proyecto de álbumes fotográficos online. Estás utilizando las siguientes técnicas (indicar la RESPUESTA INCORRECTA):",
+    "cuestion": "API-T2-EX26-Q08-Pregunta: Estás recopilando requisitos con tu equipo de trabajo en un proyecto de álbumes fotográficos online. Estás utilizando las siguientes técnicas (indicar la RESPUESTA INCORRECTA):",
     "opciones": [
       "A. Entrevistas.",
       "B. Estudios comparativos.",
@@ -2730,7 +2730,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T1-EX26-Q12-Pregunta: Te han nombrado director del proyecto de construcción de dos bloques de viviendas de protección oficial. Debéis acotar y controlar muy bien los costes para obtener una mínima rentabilidad. Durante la ejecución, dos miembros del equipo discuten sobre si imputar el coste total de una actividad al terminarla o aplicar la regla del 50/50. ¿Qué es lo mejor que puedes hacer?",
+    "cuestion": "API-T4-EX26-Q12-Pregunta: Te han nombrado director del proyecto de construcción de dos bloques de viviendas de protección oficial. Debéis acotar y controlar muy bien los costes para obtener una mínima rentabilidad. Durante la ejecución, dos miembros del equipo discuten sobre si imputar el coste total de una actividad al terminarla o aplicar la regla del 50/50. ¿Qué es lo mejor que puedes hacer?",
     "opciones": [
       "A. Consultar el acta de constitución del proyecto.",
       "B. Consultar el plan de gestión de costes.",
@@ -2760,7 +2760,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T1-EX26-Q17-Pregunta: Al coste que se ha presupuestado para el trabajo realmente ejecutado hasta la fecha actual se le suele llamar:",
+    "cuestion": "API-T4-EX26-Q17-Pregunta: Al coste que se ha presupuestado para el trabajo realmente ejecutado hasta la fecha actual se le suele llamar:",
     "opciones": [
       "A. Coste real.",
       "B. Valor planificado.",
@@ -2800,7 +2800,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T1-EX26-Q22-Pregunta: La aplicación de estimación de costes Bottom-up suele estar motivada por el tamaño y la complejidad de:",
+    "cuestion": "API-T4-EX26-Q22-Pregunta: La aplicación de estimación de costes Bottom-up suele estar motivada por el tamaño y la complejidad de:",
     "opciones": [
       "A. La relación estadística entre datos históricos y otras variables.",
       "B. El presupuesto del proyecto.",
@@ -2810,7 +2810,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T1-EX26-Q23-Pregunta: Estás trabajando con el cronograma del proyecto y un interesado te recuerda incluir una solicitud de cambio aprobada. Tras incluirla, la nueva versión del cronograma tiene recursos sobreasignados. Para cumplir objetivos, el camino crítico no debería alterarse y los costes no deben incrementarse. Como primer paso analizas la parte del cronograma con sobreasignación para:",
+    "cuestion": "API-T3-EX26-Q23-Pregunta: Estás trabajando con el cronograma del proyecto y un interesado te recuerda incluir una solicitud de cambio aprobada. Tras incluirla, la nueva versión del cronograma tiene recursos sobreasignados. Para cumplir objetivos, el camino crítico no debería alterarse y los costes no deben incrementarse. Como primer paso analizas la parte del cronograma con sobreasignación para:",
     "opciones": [
       "A. Satisfacer el cambio identificando actividades que se puedan retrasar dentro de sus límites de holgura libre y total.",
       "B. Aplicar compresión de la duración.",
@@ -2820,7 +2820,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T1-EX26-Q24-Pregunta: Juan dirige el desarrollo de un sistema de control digital industrial. Mensualmente recibe asignaciones de horas reales de cada departamento, costes reales de recursos materiales y equipamientos, y sobrecostes en ambos. ¿Qué es lo siguiente que debe hacer?",
+    "cuestion": "API-T4-EX26-Q24-Pregunta: Juan dirige el desarrollo de un sistema de control digital industrial. Mensualmente recibe asignaciones de horas reales de cada departamento, costes reales de recursos materiales y equipamientos, y sobrecostes en ambos. ¿Qué es lo siguiente que debe hacer?",
     "opciones": [
       "A. Realizar el control integrado de cambios.",
       "B. Informar sobre el desempeño.",
@@ -2840,7 +2840,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T1-EX26-Q28-Pregunta: Las técnicas de análisis de datos que se pueden utilizar para estimar los costes son (indicar la respuesta INCORRECTA):",
+    "cuestion": "API-T4-EX26-Q28-Pregunta: Las técnicas de análisis de datos que se pueden utilizar para estimar los costes son (indicar la respuesta INCORRECTA):",
     "opciones": [
       "A. Análisis de reserva.",
       "B. Análisis de alternativas.",
@@ -2850,7 +2850,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T1-EX26-Q30-Pregunta: El equipo de dirección del proyecto ha obtenido varios calendarios posibles, considerando escenarios optimistas, más probables y pesimistas (con mayor probabilidad de riesgos). La técnica usada para esa salida es:",
+    "cuestion": "API-T3-EX26-Q30-Pregunta: El equipo de dirección del proyecto ha obtenido varios calendarios posibles, considerando escenarios optimistas, más probables y pesimistas (con mayor probabilidad de riesgos). La técnica usada para esa salida es:",
     "opciones": [
       "A. Simulación.",
       "B. Estimación paramétrica.",
@@ -2926,7 +2926,7 @@
     "mantenerJuntas": true
   },
   {
-    "cuestion": "API-T3-EX26-Q15-Pregunta: Se presenta la línea base de coste de un proyecto con cuatro paquetes de trabajo (valor planificado mensual) y, al final del mes 4, el porcentaje ejecutado y costes reales (AC). ¿Cómo va el proyecto al final del mes 4?\nPlan inicial (PV mensual):\nPaquete | Mes 1 | Mes 2 | Mes 3 | Mes 4 | Mes 5 | TOTAL\nPT1 | 500 | 500 | 500 | 500 | 0 | 2000\nPT2 | 1000 | 2000 | 2000 | 3000 | 0 | 8000\nPT3 | 0 | 1000 | 2000 | 5000 | 0 | 8000\nPT4 | 0 | 0 | 2000 | 2000 | 1000 | 5000\n\nDatos al final del mes 4:\nPaquete | % Ejecutado | AC\nPT1 | 100 % | 1500\nPT2 | 100 % | 9000\nPT3 | 75 % | 6000\nPT4 | 80 % | 3000",
+    "cuestion": "API-T4-EX26-Q15-Pregunta: Se presenta la línea base de coste de un proyecto con cuatro paquetes de trabajo (valor planificado mensual) y, al final del mes 4, el porcentaje ejecutado y costes reales (AC). ¿Cómo va el proyecto al final del mes 4?\nPlan inicial (PV mensual):\nPaquete | Mes 1 | Mes 2 | Mes 3 | Mes 4 | Mes 5 | TOTAL\nPT1 | 500 | 500 | 500 | 500 | 0 | 2000\nPT2 | 1000 | 2000 | 2000 | 3000 | 0 | 8000\nPT3 | 0 | 1000 | 2000 | 5000 | 0 | 8000\nPT4 | 0 | 0 | 2000 | 2000 | 1000 | 5000\n\nDatos al final del mes 4:\nPaquete | % Ejecutado | AC\nPT1 | 100 % | 1500\nPT2 | 100 % | 9000\nPT3 | 75 % | 6000\nPT4 | 80 % | 3000",
     "opciones": [
       "A. Retrasado en tiempo y ahorrando en costes.",
       "B. Retrasado en tiempo y gastando más de lo previsto.",
@@ -2936,7 +2936,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T3-EX26-Q27-Pregunta: Jorge está al final del primer mes realizando el seguimiento y control de costes de un proyecto con los siguientes costes por mes: Mes 1: Actividad A: 30; Actividad B: 25; Actividad C: 15. Mes 2: Actividad A: 20; Actividad B: 20; Actividad C: 10. Además, hay que añadir 10 por actividad y mes por reservas de contingencia y 5 por actividad y mes por reservas de gestión. El BAC es:",
+    "cuestion": "API-T4-EX26-Q27-Pregunta: Jorge está al final del primer mes realizando el seguimiento y control de costes de un proyecto con los siguientes costes por mes: Mes 1: Actividad A: 30; Actividad B: 25; Actividad C: 15. Mes 2: Actividad A: 20; Actividad B: 20; Actividad C: 10. Además, hay que añadir 10 por actividad y mes por reservas de contingencia y 5 por actividad y mes por reservas de gestión. El BAC es:",
     "opciones": [
       "A. 120",
       "B. 210",
@@ -2956,7 +2956,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T1-EX26B-Q04-Pregunta: Formas parte del equipo de dirección de un proyecto de instalación de software de aula virtual. Tu director te pide que identifiques y documentes las características físicas y funcionales de los elementos sobre los que se debe preservar su integridad. Como resultado estás concretamente trabajando sobre un sistema de:",
+    "cuestion": "API-T2-EX26B-Q04-Pregunta: Formas parte del equipo de dirección de un proyecto de instalación de software de aula virtual. Tu director te pide que identifiques y documentes las características físicas y funcionales de los elementos sobre los que se debe preservar su integridad. Como resultado estás concretamente trabajando sobre un sistema de:",
     "opciones": [
       "A. Seguimiento y control.",
       "B. Control de cambios.",
@@ -2966,7 +2966,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T1-EX26B-Q05-Pregunta: La suma de las estimaciones de costes del proyecto asciende a 1200, las reservas de contingencia calculadas teniendo en cuenta los riesgos identificados son de 200. Teniendo en cuenta la singularidad del proyecto, el patrocinador, tras consultarte, propone unas reservas de gestión de 100. ¿Cuál será el presupuesto total del proyecto?",
+    "cuestion": "API-T4-EX26B-Q05-Pregunta: La suma de las estimaciones de costes del proyecto asciende a 1200, las reservas de contingencia calculadas teniendo en cuenta los riesgos identificados son de 200. Teniendo en cuenta la singularidad del proyecto, el patrocinador, tras consultarte, propone unas reservas de gestión de 100. ¿Cuál será el presupuesto total del proyecto?",
     "opciones": [
       "A. 1500",
       "B. 1300",
@@ -2996,7 +2996,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T1-EX26B-Q08-Pregunta: Una vez que has creado el enunciado del alcance del proyecto. ¿Qué es lo siguiente que harás?",
+    "cuestion": "API-T2-EX26B-Q08-Pregunta: Una vez que has creado el enunciado del alcance del proyecto. ¿Qué es lo siguiente que harás?",
     "opciones": [
       "A. Se creará la estructura de desglose de trabajo.",
       "B. Se refinarán los requerimientos del producto y del proyecto.",
@@ -3006,7 +3006,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T1-EX26B-Q09-Pregunta: Estás trabajando con el control de cronograma de un proyecto que sigue un enfoque de desarrollo adaptativo. Lo más probable es que estés utilizando:",
+    "cuestion": "API-T3-EX26B-Q09-Pregunta: Estás trabajando con el control de cronograma de un proyecto que sigue un enfoque de desarrollo adaptativo. Lo más probable es que estés utilizando:",
     "opciones": [
       "A. Diagrama de Gantt de seguimiento.",
       "B. Gráfica de trabajo pendiente en la iteración (burndown).",
@@ -3016,7 +3016,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T1-EX26B-Q10-Pregunta: Desarrollar una aproximación de los recursos monetarios necesarios para completar el trabajo del proyecto es cometido del proceso de:",
+    "cuestion": "API-T4-EX26B-Q10-Pregunta: Desarrollar una aproximación de los recursos monetarios necesarios para completar el trabajo del proyecto es cometido del proceso de:",
     "opciones": [
       "A. Determinar el presupuesto.",
       "B. Planificar la gestión de los costes.",
@@ -3112,7 +3112,7 @@
     "mantenerJuntas": true
   },
   {
-    "cuestion": "API-T3-EX26B-Q03-Pregunta: El plazo del proyecto es de 6 meses. Han pasado ya 3 y has finalizado 6 de los 10 coches que querías fabricar. Tu presupuesto total es de 3000 unidades monetarias a gastar de forma homogénea a lo largo de los 6 meses a un ritmo de 500 unidades monetarias por mes. Hasta ahora has gastado solamente 1200. ¿Cuál es la estimación hasta la conclusión del trabajo restante (ETC) si el ritmo de variación de costos se mantiene?",
+    "cuestion": "API-T4-EX26B-Q03-Pregunta: El plazo del proyecto es de 6 meses. Han pasado ya 3 y has finalizado 6 de los 10 coches que querías fabricar. Tu presupuesto total es de 3000 unidades monetarias a gastar de forma homogénea a lo largo de los 6 meses a un ritmo de 500 unidades monetarias por mes. Hasta ahora has gastado solamente 1200. ¿Cuál es la estimación hasta la conclusión del trabajo restante (ETC) si el ritmo de variación de costos se mantiene?",
     "opciones": [
       "A. 2000",
       "B. 1200",
@@ -3122,7 +3122,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T3-EX26B-Q14-Pregunta: Al analizar los datos de desempeño de un proyecto te encuentras con que el valor ganado EV es 12000, el valor planificado es 18000 y el coste real AC es 16000. ¿Cuál es el CPI del proyecto y qué implica?",
+    "cuestion": "API-T4-EX26B-Q14-Pregunta: Al analizar los datos de desempeño de un proyecto te encuentras con que el valor ganado EV es 12000, el valor planificado es 18000 y el coste real AC es 16000. ¿Cuál es el CPI del proyecto y qué implica?",
     "opciones": [
       "A. El CPI es 12000/18000 que indica un adelanto claro en las obras.",
       "B. El CPI es 12000/16000 e implica que hay un sobrecoste importante en el proyecto.",
@@ -3132,7 +3132,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T3-EX26B-Q20-Pregunta: Se presenta la línea base de coste de un proyecto con cuatro paquetes de trabajo (valor planificado mensual) y, al final del mes 4, el porcentaje ejecutado y costes reales (AC). ¿Cómo va el proyecto al final del mes 4?\nPlan inicial (PV mensual):\nPaquete | Mes 1 | Mes 2 | Mes 3 | Mes 4 | Mes 5 | TOTAL\nPT1 | 500 | 500 | 500 | 500 | 500 | 2500\nPT2 | 1000 | 2000 | 3000 | 3000 | 0 | 9000\nPT3 | 0 | 1000 | 2000 | 5000 | 0 | 8000\nPT4 | 0 | 0 | 4000 | 4000 | 500 | 8500\n\nDatos al final del mes 4:\nPaquete | % Ejecutado | AC\nPT1 | 100 % | 3000\nPT2 | 100 % | 9000\nPT3 | 75 % | 6000\nPT4 | 100 % | 4500",
+    "cuestion": "API-T4-EX26B-Q20-Pregunta: Se presenta la línea base de coste de un proyecto con cuatro paquetes de trabajo (valor planificado mensual) y, al final del mes 4, el porcentaje ejecutado y costes reales (AC). ¿Cómo va el proyecto al final del mes 4?\nPlan inicial (PV mensual):\nPaquete | Mes 1 | Mes 2 | Mes 3 | Mes 4 | Mes 5 | TOTAL\nPT1 | 500 | 500 | 500 | 500 | 500 | 2500\nPT2 | 1000 | 2000 | 3000 | 3000 | 0 | 9000\nPT3 | 0 | 1000 | 2000 | 5000 | 0 | 8000\nPT4 | 0 | 0 | 4000 | 4000 | 500 | 8500\n\nDatos al final del mes 4:\nPaquete | % Ejecutado | AC\nPT1 | 100 % | 3000\nPT2 | 100 % | 9000\nPT3 | 75 % | 6000\nPT4 | 100 % | 4500",
     "opciones": [
       "A. Adelantado en tiempo y ahorrando en costes.",
       "B. Retrasado en tiempo y gastando más de lo previsto.",
@@ -3142,7 +3142,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T1-EX26B-Q15-Pregunta: ¿En qué proceso se confirma que se han cerrado todos los contratos de compras?",
+    "cuestion": "API-T2-EX26B-Q15-Pregunta: ¿En qué proceso se confirma que se han cerrado todos los contratos de compras?",
     "opciones": [
       "A. Monitorear y controlar el trabajo del proyecto.",
       "B. Verificar el alcance.",
@@ -3182,7 +3182,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T1-EX26B-Q19-Pregunta: Tras realizar el control integrado de cambios, obtener la aprobación interna y obtener la aprobación del cliente para los cambios, debes:",
+    "cuestion": "API-T2-EX26B-Q19-Pregunta: Tras realizar el control integrado de cambios, obtener la aprobación interna y obtener la aprobación del cliente para los cambios, debes:",
     "opciones": [
       "A. Comunicarlo a los interesados.",
       "B. Actualizar el sistema de control de cambios.",
@@ -3212,7 +3212,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T1-EX26B-Q26-Pregunta: Un interesado te ha pedido ver la lista de los hitos del proyecto. Esto estaría disponible como salida del proceso:",
+    "cuestion": "API-T3-EX26B-Q26-Pregunta: Un interesado te ha pedido ver la lista de los hitos del proyecto. Esto estaría disponible como salida del proceso:",
     "opciones": [
       "A. Desarrollar el cronograma.",
       "B. Estimar la duración de las actividades.",
@@ -3222,7 +3222,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T1-EX26B-Q27-Pregunta: Como director de un proyecto crees que es el momento de definir, entre otras cosas, cómo monitorizas los costes del proyecto. ¿Qué harás a continuación?",
+    "cuestion": "API-T4-EX26B-Q27-Pregunta: Como director de un proyecto crees que es el momento de definir, entre otras cosas, cómo monitorizas los costes del proyecto. ¿Qué harás a continuación?",
     "opciones": [
       "A. Elaborar el plan de dirección del proyecto.",
       "B. Planificar la gestión de costes.",
@@ -3232,7 +3232,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T1-EX26B-Q28-Pregunta: Un miembro de tu equipo de dirección te dice que no estás considerando algunos imprevistos identificados en tus estimaciones de costes. ¿Qué es lo mejor que puedes hacer?",
+    "cuestion": "API-T4-EX26B-Q28-Pregunta: Un miembro de tu equipo de dirección te dice que no estás considerando algunos imprevistos identificados en tus estimaciones de costes. ¿Qué es lo mejor que puedes hacer?",
     "opciones": [
       "A. Mantener tu plan y no realizar ninguna acción adicional.",
       "B. Revisar los riesgos del proyecto y sus reservas de contingencia para ver si son suficientes.",
@@ -3272,7 +3272,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T1-EX19-Q02-Pregunta: Un proyecto está informando un índice de rendimiento de coste de 0,72. Podríamos decir que:",
+    "cuestion": "API-T4-EX19-Q02-Pregunta: Un proyecto está informando un índice de rendimiento de coste de 0,72. Podríamos decir que:",
     "opciones": [
       "A. Se espera que el coste total del proyecto sea un 72% superior al valor planificado.",
       "B. El proyecto ha realizado sólo un 72% de lo planificado.",
@@ -3282,7 +3282,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T1-EX19-Q03-Pregunta: En un proyecto se está utilizando un diccionario de la EDT. ¿Para qué sirve esto?",
+    "cuestion": "API-T2-EX19-Q03-Pregunta: En un proyecto se está utilizando un diccionario de la EDT. ¿Para qué sirve esto?",
     "opciones": [
       "A. Definir las actividades del proyecto.",
       "B. Proporcionar información detallada de cada componente de la EDT.",
@@ -3306,7 +3306,7 @@
     "mantenerJuntas": true
   },
   {
-    "cuestion": "API-T1-EX19-Q05-Pregunta: ¿Qué necesita para poder recopilar los requisitos de los interesados?",
+    "cuestion": "API-T2-EX19-Q05-Pregunta: ¿Qué necesita para poder recopilar los requisitos de los interesados?",
     "opciones": [
       "A. Auditorías.",
       "B. EDT.",
@@ -3326,7 +3326,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T1-EX19-Q07-Pregunta: Le han encargado que plante 10 pinos a más tardar el 15 de diciembre. El valor planificado para cada pino es de 5 euros, por lo que el presupuesto asciende a 50 euros. El 15 de diciembre todos los pinos fueron plantados a un coste de 40 euros. ¿Cuál será el índice de rendimiento del cronograma?",
+    "cuestion": "API-T4-EX19-Q07-Pregunta: Le han encargado que plante 10 pinos a más tardar el 15 de diciembre. El valor planificado para cada pino es de 5 euros, por lo que el presupuesto asciende a 50 euros. El 15 de diciembre todos los pinos fueron plantados a un coste de 40 euros. ¿Cuál será el índice de rendimiento del cronograma?",
     "opciones": [
       "A. 0,80.",
       "B. 1,00.",
@@ -3389,7 +3389,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T3-EX19-Q13-Pregunta: ¿Cuál de los siguientes proyectos tiene mejores índices de rendimiento?\nProyecto | CPI | SPI\nA | 1,05 | 0,90\nB | 0,90 | 1,20\nC | 1,10 | 1,20\nD | 0,85 | 0,95",
+    "cuestion": "API-T4-EX19-Q13-Pregunta: ¿Cuál de los siguientes proyectos tiene mejores índices de rendimiento?\nProyecto | CPI | SPI\nA | 1,05 | 0,90\nB | 0,90 | 1,20\nC | 1,10 | 1,20\nD | 0,85 | 0,95",
     "opciones": [
       "A. Proyecto B.",
       "B. Proyecto A.",
@@ -3399,7 +3399,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T1-EX19-Q14-Pregunta: PMBOK. ¿Cuál de los siguientes ítems será el menos utilizado para comenzar a estimar los costes de las actividades de un proyecto?",
+    "cuestion": "API-T4-EX19-Q14-Pregunta: PMBOK. ¿Cuál de los siguientes ítems será el menos utilizado para comenzar a estimar los costes de las actividades de un proyecto?",
     "opciones": [
       "A. Plan de gestión de costes.",
       "B. Línea base del coste.",
@@ -3419,7 +3419,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T1-EX19-Q16-Pregunta: PMBOK. ¿Qué significa la estimación analógica de costes?",
+    "cuestion": "API-T4-EX19-Q16-Pregunta: PMBOK. ¿Qué significa la estimación analógica de costes?",
     "opciones": [
       "A. Sumar costes de abajo hacia arriba.",
       "B. Agregar una reserva de coste adicional para contingencias.",
@@ -3429,7 +3429,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T1-EX19-Q17-Pregunta: PMBOK. El acta de constitución del proyecto acaba de ser firmado. En el acta de constitución hay una descripción del lugar donde va a desarrollarse el proyecto como así también limitaciones de coste y tiempo. Estas descripciones son:",
+    "cuestion": "API-T2-EX19-Q17-Pregunta: PMBOK. El acta de constitución del proyecto acaba de ser firmado. En el acta de constitución hay una descripción del lugar donde va a desarrollarse el proyecto como así también limitaciones de coste y tiempo. Estas descripciones son:",
     "opciones": [
       "A. Restricciones.",
       "B. Compromiso formal de los interesados.",
@@ -3439,7 +3439,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T1-EX19-Q18-Pregunta: Lo más importante del acta de constitución del proyecto es que:",
+    "cuestion": "API-T2-EX19-Q18-Pregunta: Lo más importante del acta de constitución del proyecto es que:",
     "opciones": [
       "A. Se justifica el proyecto y su relación con el plan estratégico de la empresa.",
       "B. Se autoriza formalmente al director del proyecto a comenzar con los procesos de planificación.",
@@ -3449,7 +3449,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T1-EX19-Q19-Pregunta: Quiere realizar un viaje en automóvil y conoce que la distancia a recorrer es de 1100 km, que el precio actual de la gasolina es de 1 euro/litro y que su vehículo consume 10 litros cada 100km. ¿Qué técnica de estimación estaría utilizando?",
+    "cuestion": "API-T4-EX19-Q19-Pregunta: Quiere realizar un viaje en automóvil y conoce que la distancia a recorrer es de 1100 km, que el precio actual de la gasolina es de 1 euro/litro y que su vehículo consume 10 litros cada 100km. ¿Qué técnica de estimación estaría utilizando?",
     "opciones": [
       "A. Análoga.",
       "B. Paramétrica.",
@@ -3479,7 +3479,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T1-EX19-Q22-Pregunta: Se está finalizando el proceso de crear la estructura de desglose de trabajo. Los siguientes enunciados forman parte de la línea base del alcance a excepción de:",
+    "cuestion": "API-T2-EX19-Q22-Pregunta: Se está finalizando el proceso de crear la estructura de desglose de trabajo. Los siguientes enunciados forman parte de la línea base del alcance a excepción de:",
     "opciones": [
       "A. Documentación de requisitos.",
       "B. Enunciado del alcance.",
@@ -3489,7 +3489,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T1-EX19-Q23-Pregunta: En un proyecto la fase de fabricación requiere que la fase de diseño esté finalizada. Esto es un ejemplo de dependencia:",
+    "cuestion": "API-T3-EX19-Q23-Pregunta: En un proyecto la fase de fabricación requiere que la fase de diseño esté finalizada. Esto es un ejemplo de dependencia:",
     "opciones": [
       "A. Obligatoria.",
       "B. Externa.",
@@ -3499,7 +3499,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T1-EX19-Q24-Pregunta: PMBOK. Durante la implementación de un módulo en un proyecto, validar el alcance sería:",
+    "cuestion": "API-T2-EX19-Q24-Pregunta: PMBOK. Durante la implementación de un módulo en un proyecto, validar el alcance sería:",
     "opciones": [
       "A. Realizar un análisis coste-beneficio para determinar si debemos proceder con una instalación del próximo módulo.",
       "B. Revisar el desempeño de un módulo.",
@@ -3542,7 +3542,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T3-EX19J-Q03-Pregunta: Realizando el control de los costos de un proyecto que supera los 20 millones de euros, el principal resultado que obtendrá este proceso será:",
+    "cuestion": "API-T4-EX19J-Q03-Pregunta: Realizando el control de los costos de un proyecto que supera los 20 millones de euros, el principal resultado que obtendrá este proceso será:",
     "opciones": [
       "A. Requisitos de financiamiento.",
       "B. Coste estimado a la conclusión.",
@@ -3602,7 +3602,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T3-EX19J-Q09-Pregunta: El valor planificado para la actividad A es de 600 euros, está completada en un 50% y su coste real es de 200 euros. La actividad B se había planificado con un valor de 400 euros, el avance real es de 75% y su coste real asciende a 350 euros. Por último, la actividad C con un valor planificado de 100 euros, ya ha finalizado y su coste real fue de 100 euros. ¿Cuál es el índice de desempeño del coste (CPI)?\nActividad | PV (Planificado) | % Avance Real | AC (Coste Real)\nA | 600 | 50 % | 200\nB | 400 | 75 % | 350\nC | 100 | 100 % | 100",
+    "cuestion": "API-T4-EX19J-Q09-Pregunta: El valor planificado para la actividad A es de 600 euros, está completada en un 50% y su coste real es de 200 euros. La actividad B se había planificado con un valor de 400 euros, el avance real es de 75% y su coste real asciende a 350 euros. Por último, la actividad C con un valor planificado de 100 euros, ya ha finalizado y su coste real fue de 100 euros. ¿Cuál es el índice de desempeño del coste (CPI)?\nActividad | PV (Planificado) | % Avance Real | AC (Coste Real)\nA | 600 | 50 % | 200\nB | 400 | 75 % | 350\nC | 100 | 100 % | 100",
     "opciones": [
       "A. 650 / 700.",
       "B. 1100 / 700.",
@@ -3662,7 +3662,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T3-EX19J-Q15-Pregunta: Una forma simple y rápida para calcular la estimación hasta la conclusión (EAC) del proyecto, sería tomar el presupuesto hasta la conclusión (BAC) y luego dividirlo por:",
+    "cuestion": "API-T4-EX19J-Q15-Pregunta: Una forma simple y rápida para calcular la estimación hasta la conclusión (EAC) del proyecto, sería tomar el presupuesto hasta la conclusión (BAC) y luego dividirlo por:",
     "opciones": [
       "A. Variación del coste.",
       "B. Índice de desempeño del cronograma.",
@@ -3712,7 +3712,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T3-EX19J-Q20-Pregunta: El director de un proyecto de consultoría informática debe calcular el presupuesto de ese proyecto. ¿Cuál de las siguientes afirmaciones es falsa?",
+    "cuestion": "API-T4-EX19J-Q20-Pregunta: El director de un proyecto de consultoría informática debe calcular el presupuesto de ese proyecto. ¿Cuál de las siguientes afirmaciones es falsa?",
     "opciones": [
       "A. La cuenta de control está a un nivel de jerarquía superior a los paquetes de trabajo.",
       "B. El presupuesto del proyecto puede incluir una reserva de gestión para imprevistos.",
@@ -3762,7 +3762,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T3-EX19J-Q25-Pregunta: El director de proyecto en una empresa termina habitualmente sus proyectos gastando más de lo presupuestado y retrasando su finalización. Por tal motivo, ha decidido mejorar los procesos de planificación, seguimiento y control. ¿Qué herramienta utilizará para evaluar la eficiencia en el progreso del cronograma?",
+    "cuestion": "API-T4-EX19J-Q25-Pregunta: El director de proyecto en una empresa termina habitualmente sus proyectos gastando más de lo presupuestado y retrasando su finalización. Por tal motivo, ha decidido mejorar los procesos de planificación, seguimiento y control. ¿Qué herramienta utilizará para evaluar la eficiencia en el progreso del cronograma?",
     "opciones": [
       "A. Índice de desempeño del cronograma.",
       "B. Estimación hasta la conclusión.",
@@ -3901,5 +3901,4 @@
     ],
     "solucion": "C"
   }
-
 ]
