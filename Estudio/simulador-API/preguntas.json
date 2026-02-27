@@ -1080,7 +1080,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T1-109-Pregunta: Tienes un proyecto en el que te encargas de la actividad G. Si el inicio temprano de la actividad G es el día 13 y el final temprano el día 18 y sabemos que tiene una holgura de 15 días. Como muy tarde, ¿cuándo podrás comenzarla?",
+    "cuestion": "API-T3-109-Pregunta: Tienes un proyecto en el que te encargas de la actividad G. Si el inicio temprano de la actividad G es el día 13 y el final temprano el día 18 y sabemos que tiene una holgura de 15 días. Como muy tarde, ¿cuándo podrás comenzarla?",
     "opciones": [
       "A. 30",
       "B. 15",
