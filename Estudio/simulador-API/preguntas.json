@@ -3130,7 +3130,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T3-40-Pregunta: Según tus apuntes sobre el método CPM con compresión, la restricción '$TM_k \\le TA_k$' significa que:",
+    "cuestion": "API-T3-40-Pregunta: Según tus apuntes sobre el método CPM con compresión, la restricción 'TM_k <= TA_k' significa que:",
     "opciones": [
       "A. La duración actual debe ser menor que la normal.",
       "B. El tiempo del proyecto debe ser menor que el del camino crítico.",
@@ -3852,14 +3852,14 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T4-35-Pregunta: El valor planificado para la actividad A es de 600 euros (50% completado, AC 200). La actividad B valor 400 euros (75% avance, AC 350). La actividad C valor 100 euros (100% finalizado, AC 100). ¿Cuál es el índice de desempeño del coste (CPI)?",
+    "cuestion": "El valor planificado (PV) para la actividad A es de 800 euros (se ha completado el 25%, con un coste real AC de 250). La actividad B tiene un valor de 500 euros (60% de avance, AC de 400). La actividad C tiene un valor de 200 euros (100% finalizado, AC de 200). ¿Cuál es el índice de desempeño del coste (CPI) del proyecto?",
     "opciones": [
-      "A. 700 / 1100",
-      "B. 700 / 650",
-      "C. 650 / 700",
-      "D. 1100 / 700"
+      "A. 850 / 700",
+      "B. 1500 / 850",
+      "C. 700 / 850",
+      "D. 700 / 1500"
     ],
-    "solucion": "B"
+    "solucion": "C"
   },
   {
     "cuestion": "API-T4-36-Pregunta: ¿Cuál de los siguientes proyectos tiene mejores índices de rendimiento?\nProyecto A: CPI 1,05 / SPI 0,90\nProyecto B: CPI 0,90 / SPI 1,20\nProyecto C: CPI 1,10 / SPI 1,20\nProyecto D: CPI 0,85 / SPI 0,95",
