@@ -3296,7 +3296,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T3-55-Pregunta: En base a la tabla con datos del proyecto API, en la que la duración se especifica en días y utilizando la técnica PERT ¿Cuál es la duración del proyecto?\nActividad | Óptima | Probable | Pésima | Predecesora\nA | 2 | 3 | 10 | -\nB | 1 | 2 | 9 | A\nC | 1 | 4 | 7 | A\nD | 2 | 2 | 8 | B\nE | 2 | 4 | 6 | B\nF | 2 | 4 | 6 | C\nG | 2 | 3 | 10 | C\nH | 2 | 2 | 8 | C, D\nI | 1 | 2 | 9 | E\nJ | 2 | 2 | 8 | E\nK | 2 | 4 | 6 | F\nL | 2 | 4 | 6 | H\nM | 2 | 2 | 8 | J\nN | 2 | 2 | 8 | I, K, L, M",
+    "cuestion": "API-T3-55-Pregunta: En base a la tabla con datos del proyecto API, en la que la duración se especifica en días y utilizando la técnica PERT ¿Cuál es la duración del proyecto?\nActividad | Óptima | Probable | Pésima | Predecesora\nA | 2 | 3 | 10 | -\nB | 1 | 2 | 9 | A\nC | 1 | 4 | 7 | A\nD | 2 | 2 | 8 | B\nE | 2 | 4 | 6 | B\nF | 2 | 4 | 6 | C\nG | 2 | 3 | 10 | C\nH | 2 | 2 | 8 | C, D\nI | 1 | 2 | 9 | E\nJ | 2 | 2 | 8 | E\nK | 2 | 4 | 6 | F\nL | 2 | 4 | 6 | H\nM | 2 | 2 | 6 | J\nN | 2 | 2 | 8 | I, K, L, M",
     "opciones": [
       "A. 19",
       "B. 18",
@@ -3639,7 +3639,7 @@
       "C. Retrasado en tiempo y ahorrando en costes.",
       "D. Adelantado en tiempo y gastando más de lo previsto."
     ],
-    "solucion": "B"
+    "solucion": "C"
   },
   {
     "cuestion": "API-T4-14-Pregunta: Como director de un proyecto crees que es el momento de definir, entre otras cosas, cómo monitorizas los costes del proyecto. ¿Qué harás a continuación?",
