@@ -999,256 +999,254 @@
     ],
     "solucion": "B"
   },
-  [
-    {
-      "cuestion": "SIE-T2-101-Pregunta: ¿Qué caracteriza a la fase de 'Selección' dentro del ciclo de vida de un ERP?",
-      "opciones": [
-        "A. Es la etapa donde se instalan los servidores físicos.",
-        "B. Es el análisis detallado de proveedores y paquetes de software para elegir el que mejor se adapte.",
-        "C. Es la formación de los usuarios finales.",
-        "D. Es el mantenimiento correctivo tras el Go-Live."
-      ],
-      "solucion": "B"
-    },
-    {
-      "cuestion": "SIE-T2-102-Pregunta: ¿Qué es el 'Middleware' en el contexto de la integración de sistemas empresariales?",
-      "opciones": [
-        "A. El hardware que está en medio de la oficina.",
-        "B. Software que actúa como puente para conectar y comunicar aplicaciones diferentes.",
-        "C. El sistema operativo de los terminales móviles.",
-        "D. Un tipo de base de datos de solo lectura."
-      ],
-      "solucion": "B"
-    },
-    {
-      "cuestion": "SIE-T1-103-Pregunta: En la pirámide de la jerarquía de la información, ¿qué proceso transforma la Información en Conocimiento?",
-      "opciones": [
-        "A. La suma y resta de datos numéricos.",
-        "B. El procesamiento mental, la experiencia y el aprendizaje humano.",
-        "C. El almacenamiento en un disco duro de estado sólido.",
-        "D. La impresión de gráficos en color."
-      ],
-      "solucion": "B"
-    },
-    {
-      "cuestion": "SIE-T2-104-Pregunta: ¿Cuál es la diferencia entre un ERP 'On-premise' y uno 'Cloud'?",
-      "opciones": [
-        "A. El On-premise es gratis y el Cloud es de pago.",
-        "B. El On-premise se instala en los servidores locales de la empresa; el Cloud es gestionado por el proveedor en internet.",
-        "C. El Cloud no permite usar el módulo de finanzas.",
-        "D. Solo el On-premise permite tener más de 10 usuarios."
-      ],
-      "solucion": "B"
-    },
-    {
-      "cuestion": "SIE-T2-105-Pregunta: ¿A qué se refiere el término 'Social CRM'?",
-      "opciones": [
-        "A. A un CRM que solo usan las ONGs.",
-        "B. A la integración de redes sociales para interactuar y obtener feedback directo de los clientes.",
-        "C. A un sistema para gestionar las cenas de empresa.",
-        "D. A un módulo que prohíbe el uso de Facebook en el trabajo."
-      ],
-      "solucion": "B"
-    },
-    {
-      "cuestion": "SIE-T2-106-Pregunta: ¿Qué es el 'Business Intelligence' (BI) en relación con los ERP?",
-      "opciones": [
-        "A. Un virus informático.",
-        "B. Herramientas que analizan los datos históricos del ERP para ayudar en la toma de decisiones estratégicas.",
-        "C. El manual de instrucciones del sistema.",
-        "D. La oficina donde trabajan los analistas."
-      ],
-      "solucion": "B"
-    },
-    {
-      "cuestion": "SIE-T1-107-Pregunta: ¿Qué se entiende por 'Sistema de Información Manual'?",
-      "opciones": [
-        "A. Un sistema que se rompe a menudo.",
-        "B. El que utiliza recursos como papel y lápiz sin apoyo de tecnologías digitales.",
-        "C. Un sistema operado por robots.",
-        "D. Un software que no tiene ayuda online."
-      ],
-      "solucion": "B"
-    },
-    {
-      "cuestion": "SIE-T2-108-Pregunta: ¿Qué es el 'Best-of-breed' en la estrategia de adquisición de software?",
-      "opciones": [
-        "A. Comprar siempre el software más barato.",
-        "B. Seleccionar la mejor aplicación específica para cada función, aunque sean de proveedores distintos.",
-        "C. Usar solo un proveedor para todo (ej. solo SAP).",
-        "D. Desarrollar todo el software internamente desde cero."
-      ],
-      "solucion": "B"
-    },
-    {
-      "cuestion": "SIE-T2-109-Pregunta: ¿Qué es la 'Contabilidad de Costes' dentro de un ERP?",
-      "opciones": [
-        "A. Pagar la factura de la luz.",
-        "B. El seguimiento de los costes asociados a la producción de bienes o servicios para análisis interno.",
-        "C. El precio de las licencias del software.",
-        "D. El dinero que se debe a los bancos."
-      ],
-      "solucion": "B"
-    },
-    {
-      "cuestion": "SIE-T2-110-Pregunta: El concepto de 'Empresa Digital' se define como aquella donde:",
-      "opciones": [
-        "A. No hay empleados físicos, solo robots.",
-        "B. Los procesos de negocio y las relaciones con clientes/proveedores se realizan digitalmente.",
-        "C. Solo se vende a través de Amazon.",
-        "D. No se utiliza papel en absoluto."
-      ],
-      "solucion": "B"
-    },
-    {
-      "cuestion": "SIE-T2-111-Pregunta: ¿Qué es el 'Just-in-Time' (JIT) en el contexto de SCM?",
-      "opciones": [
-        "A. Llegar tarde a las reuniones.",
-        "B. Sistema para recibir materiales solo cuando son necesarios, reduciendo inventarios.",
-        "C. Un método de pago rápido.",
-        "D. Una marca de camiones de reparto."
-      ],
-      "solucion": "B"
-    },
-    {
-      "cuestion": "SIE-T2-112-Pregunta: ¿Cuál es un riesgo de los 'Silos de Información'?",
-      "opciones": [
-        "A. Que los datos estén demasiado seguros.",
-        "B. Que la información no fluya entre departamentos, causando ineficiencia y errores.",
-        "C. Que el servidor se caliente demasiado.",
-        "D. Que la empresa gane demasiado dinero."
-      ],
-      "solucion": "B"
-    },
-    {
-      "cuestion": "SIE-T1-113-Pregunta: ¿Qué es la 'Disponibilidad' de un sistema?",
-      "opciones": [
-        "A. Que el software sea fácil de comprar.",
-        "B. El porcentaje de tiempo que el sistema está operativo y listo para ser usado.",
-        "C. El número de funciones que tiene el menú principal.",
-        "D. Que el sistema esté traducido a varios idiomas."
-      ],
-      "solucion": "B"
-    },
-    {
-      "cuestion": "SIE-T2-114-Pregunta: En SAP, ¿qué significa el módulo 'SD'?",
-      "opciones": [
-        "A. Super Data.",
-        "B. Sales and Distribution (Ventas y Distribución).",
-        "C. Software Development.",
-        "D. System Design."
-      ],
-      "solucion": "B"
-    },
-    {
-      "cuestion": "SIE-T2-115-Pregunta: ¿Qué es la 'Planificación de la Demanda' en SCM?",
-      "opciones": [
-        "A. Obligar a los clientes a comprar productos.",
-        "B. Predecir cuántos productos querrán los clientes para ajustar la producción.",
-        "C. Denunciar a un proveedor ante el juez.",
-        "D. Decidir el precio de los productos."
-      ],
-      "solucion": "B"
-    },
-    {
-      "cuestion": "SIE-T2-116-Pregunta: ¿A qué se refiere el 'Valor de Negocio' de un sistema?",
-      "opciones": [
-        "A. Al precio de reventa del software usado.",
-        "B. A los beneficios tangibles e intangibles que el sistema aporta a la rentabilidad y éxito de la empresa.",
-        "C. Al coste total de las nóminas de los informáticos.",
-        "D. Al valor de las acciones de la empresa de software."
-      ],
-      "solucion": "B"
-    },
-    {
-      "cuestion": "SIE-T2-117-Pregunta: ¿Qué es el 'Lead Time'?",
-      "opciones": [
-        "A. El tiempo que el jefe tarda en llegar a la oficina.",
-        "B. El tiempo que transcurre desde que se hace un pedido hasta que se recibe.",
-        "C. La velocidad de navegación por internet.",
-        "D. El tiempo de duración de la batería de un portátil."
-      ],
-      "solucion": "B"
-    },
-    {
-      "cuestion": "SIE-T1-118-Pregunta: ¿Qué es la 'Integridad' de los datos?",
-      "opciones": [
-        "A. Que los datos sean amables.",
-        "B. Que los datos sean precisos, completos y no hayan sido alterados de forma no autorizada.",
-        "C. Que los datos se guarden en una caja fuerte.",
-        "D. Que los datos sean fáciles de borrar."
-      ],
-      "solucion": "B"
-    },
-    {
-      "cuestion": "SIE-T2-119-Pregunta: ¿Qué es el módulo 'MM' en SAP?",
-      "opciones": [
-        "A. Multi Media.",
-        "B. Materials Management (Gestión de Materiales).",
-        "C. Marketing Manager.",
-        "D. Money Management."
-      ],
-      "solucion": "B"
-    },
-    {
-      "cuestion": "SIE-T2-120-Pregunta: ¿Qué significa 'Escalabilidad vertical'?",
-      "opciones": [
-        "A. Comprar más ordenadores pequeños.",
-        "B. Aumentar la potencia (RAM, CPU) de un servidor existente para soportar más carga.",
-        "C. Instalar el software en las oficinas del piso de arriba.",
-        "D. Contratar a empleados más altos."
-      ],
-      "solucion": "B"
-    },
-    {
-      "cuestion": "SIE-T2-121-Pregunta: ¿Qué es la 'Perspectiva del Cliente' en el BSC?",
-      "opciones": [
-        "A. Mirar a los clientes a los ojos.",
-        "B. Medir indicadores como satisfacción, retención y cuota de mercado.",
-        "C. Saber cuánto dinero tiene el cliente en su cuenta.",
-        "D. Conocer la dirección física de todos los clientes."
-      ],
-      "solucion": "B"
-    },
-    {
-      "cuestion": "SIE-T2-122-Pregunta: ¿Qué es un 'Sistema Transaccional'?",
-      "opciones": [
-        "A. Un sistema que solo sirve para transferencias bancarias.",
-        "B. Aquel que registra los intercambios rutinarios diarios necesarios para el negocio (ventas, recibos, depósitos).",
-        "C. Un sistema para traducir idiomas.",
-        "D. Un sistema que no permite cambios."
-      ],
-      "solucion": "B"
-    },
-    {
-      "cuestion": "SIE-T2-123-Pregunta: ¿Qué es el 'Análisis de Rentabilidad por Cliente' en un CRM?",
-      "opciones": [
-        "A. Saber cuánto nos cuesta el papel de las facturas.",
-        "B. Determinar qué clientes generan más beneficios tras restar los costes de captación y servicio.",
-        "C. Preguntar al cliente si está contento.",
-        "D. Calcular el sueldo de los comerciales."
-      ],
-      "solucion": "B"
-    },
-    {
-      "cuestion": "SIE-T2-124-Pregunta: ¿A qué reto corresponde la 'Seguridad y Privacidad' en los SIE actuales?",
-      "opciones": [
-        "A. A que nadie pueda usar el ordenador sin permiso.",
-        "B. A proteger la información sensible contra ciberataques y cumplir normativas como el RGPD.",
-        "C. A poner cámaras de seguridad en el almacén.",
-        "D. A que el software no se pueda copiar ilegalmente."
-      ],
-      "solucion": "B"
-    },
-    {
-      "cuestion": "SIE-T2-125-Pregunta: ¿Cuál es la principal ventaja de la integración ERP-SCM?",
-      "opciones": [
-        "A. Que los camiones van más rápido.",
-        "B. La visibilidad total de la cadena de suministro integrada con la planificación financiera y de producción.",
-        "C. Que el software de SCM es gratis si tienes un ERP.",
-        "D. Que no hace falta tener almacenes físicos."
-      ],
-      "solucion": "B"
-    }
-  ]
+  {
+    "cuestion": "SIE-T2-101-Pregunta: ¿Qué caracteriza a la fase de 'Selección' dentro del ciclo de vida de un ERP?",
+    "opciones": [
+      "A. Es la etapa donde se instalan los servidores físicos.",
+      "B. Es el análisis detallado de proveedores y paquetes de software para elegir el que mejor se adapte.",
+      "C. Es la formación de los usuarios finales.",
+      "D. Es el mantenimiento correctivo tras el Go-Live."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-102-Pregunta: ¿Qué es el 'Middleware' en el contexto de la integración de sistemas empresariales?",
+    "opciones": [
+      "A. El hardware que está en medio de la oficina.",
+      "B. Software que actúa como puente para conectar y comunicar aplicaciones diferentes.",
+      "C. El sistema operativo de los terminales móviles.",
+      "D. Un tipo de base de datos de solo lectura."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T1-103-Pregunta: En la pirámide de la jerarquía de la información, ¿qué proceso transforma la Información en Conocimiento?",
+    "opciones": [
+      "A. La suma y resta de datos numéricos.",
+      "B. El procesamiento mental, la experiencia y el aprendizaje humano.",
+      "C. El almacenamiento en un disco duro de estado sólido.",
+      "D. La impresión de gráficos en color."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-104-Pregunta: ¿Cuál es la diferencia entre un ERP 'On-premise' y uno 'Cloud'?",
+    "opciones": [
+      "A. El On-premise es gratis y el Cloud es de pago.",
+      "B. El On-premise se instala en los servidores locales de la empresa; el Cloud es gestionado por el proveedor en internet.",
+      "C. El Cloud no permite usar el módulo de finanzas.",
+      "D. Solo el On-premise permite tener más de 10 usuarios."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-105-Pregunta: ¿A qué se refiere el término 'Social CRM'?",
+    "opciones": [
+      "A. A un CRM que solo usan las ONGs.",
+      "B. A la integración de redes sociales para interactuar y obtener feedback directo de los clientes.",
+      "C. A un sistema para gestionar las cenas de empresa.",
+      "D. A un módulo que prohíbe el uso de Facebook en el trabajo."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-106-Pregunta: ¿Qué es el 'Business Intelligence' (BI) en relación con los ERP?",
+    "opciones": [
+      "A. Un virus informático.",
+      "B. Herramientas que analizan los datos históricos del ERP para ayudar en la toma de decisiones estratégicas.",
+      "C. El manual de instrucciones del sistema.",
+      "D. La oficina donde trabajan los analistas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T1-107-Pregunta: ¿Qué se entiende por 'Sistema de Información Manual'?",
+    "opciones": [
+      "A. Un sistema que se rompe a menudo.",
+      "B. El que utiliza recursos como papel y lápiz sin apoyo de tecnologías digitales.",
+      "C. Un sistema operado por robots.",
+      "D. Un software que no tiene ayuda online."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-108-Pregunta: ¿Qué es el 'Best-of-breed' en la estrategia de adquisición de software?",
+    "opciones": [
+      "A. Comprar siempre el software más barato.",
+      "B. Seleccionar la mejor aplicación específica para cada función, aunque sean de proveedores distintos.",
+      "C. Usar solo un proveedor para todo (ej. solo SAP).",
+      "D. Desarrollar todo el software internamente desde cero."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-109-Pregunta: ¿Qué es la 'Contabilidad de Costes' dentro de un ERP?",
+    "opciones": [
+      "A. Pagar la factura de la luz.",
+      "B. El seguimiento de los costes asociados a la producción de bienes o servicios para análisis interno.",
+      "C. El precio de las licencias del software.",
+      "D. El dinero que se debe a los bancos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-110-Pregunta: El concepto de 'Empresa Digital' se define como aquella donde:",
+    "opciones": [
+      "A. No hay empleados físicos, solo robots.",
+      "B. Los procesos de negocio y las relaciones con clientes/proveedores se realizan digitalmente.",
+      "C. Solo se vende a través de Amazon.",
+      "D. No se utiliza papel en absoluto."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-111-Pregunta: ¿Qué es el 'Just-in-Time' (JIT) en el contexto de SCM?",
+    "opciones": [
+      "A. Llegar tarde a las reuniones.",
+      "B. Sistema para recibir materiales solo cuando son necesarios, reduciendo inventarios.",
+      "C. Un método de pago rápido.",
+      "D. Una marca de camiones de reparto."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-112-Pregunta: ¿Cuál es un riesgo de los 'Silos de Información'?",
+    "opciones": [
+      "A. Que los datos estén demasiado seguros.",
+      "B. Que la información no fluya entre departamentos, causando ineficiencia y errores.",
+      "C. Que el servidor se caliente demasiado.",
+      "D. Que la empresa gane demasiado dinero."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T1-113-Pregunta: ¿Qué es la 'Disponibilidad' de un sistema?",
+    "opciones": [
+      "A. Que el software sea fácil de comprar.",
+      "B. El porcentaje de tiempo que el sistema está operativo y listo para ser usado.",
+      "C. El número de funciones que tiene el menú principal.",
+      "D. Que el sistema esté traducido a varios idiomas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-114-Pregunta: En SAP, ¿qué significa el módulo 'SD'?",
+    "opciones": [
+      "A. Super Data.",
+      "B. Sales and Distribution (Ventas y Distribución).",
+      "C. Software Development.",
+      "D. System Design."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-115-Pregunta: ¿Qué es la 'Planificación de la Demanda' en SCM?",
+    "opciones": [
+      "A. Obligar a los clientes a comprar productos.",
+      "B. Predecir cuántos productos querrán los clientes para ajustar la producción.",
+      "C. Denunciar a un proveedor ante el juez.",
+      "D. Decidir el precio de los productos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-116-Pregunta: ¿A qué se refiere el 'Valor de Negocio' de un sistema?",
+    "opciones": [
+      "A. Al precio de reventa del software usado.",
+      "B. A los beneficios tangibles e intangibles que el sistema aporta a la rentabilidad y éxito de la empresa.",
+      "C. Al coste total de las nóminas de los informáticos.",
+      "D. Al valor de las acciones de la empresa de software."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-117-Pregunta: ¿Qué es el 'Lead Time'?",
+    "opciones": [
+      "A. El tiempo que el jefe tarda en llegar a la oficina.",
+      "B. El tiempo que transcurre desde que se hace un pedido hasta que se recibe.",
+      "C. La velocidad de navegación por internet.",
+      "D. El tiempo de duración de la batería de un portátil."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T1-118-Pregunta: ¿Qué es la 'Integridad' de los datos?",
+    "opciones": [
+      "A. Que los datos sean amables.",
+      "B. Que los datos sean precisos, completos y no hayan sido alterados de forma no autorizada.",
+      "C. Que los datos se guarden en una caja fuerte.",
+      "D. Que los datos sean fáciles de borrar."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-119-Pregunta: ¿Qué es el módulo 'MM' en SAP?",
+    "opciones": [
+      "A. Multi Media.",
+      "B. Materials Management (Gestión de Materiales).",
+      "C. Marketing Manager.",
+      "D. Money Management."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-120-Pregunta: ¿Qué significa 'Escalabilidad vertical'?",
+    "opciones": [
+      "A. Comprar más ordenadores pequeños.",
+      "B. Aumentar la potencia (RAM, CPU) de un servidor existente para soportar más carga.",
+      "C. Instalar el software en las oficinas del piso de arriba.",
+      "D. Contratar a empleados más altos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-121-Pregunta: ¿Qué es la 'Perspectiva del Cliente' en el BSC?",
+    "opciones": [
+      "A. Mirar a los clientes a los ojos.",
+      "B. Medir indicadores como satisfacción, retención y cuota de mercado.",
+      "C. Saber cuánto dinero tiene el cliente en su cuenta.",
+      "D. Conocer la dirección física de todos los clientes."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-122-Pregunta: ¿Qué es un 'Sistema Transaccional'?",
+    "opciones": [
+      "A. Un sistema que solo sirve para transferencias bancarias.",
+      "B. Aquel que registra los intercambios rutinarios diarios necesarios para el negocio (ventas, recibos, depósitos).",
+      "C. Un sistema para traducir idiomas.",
+      "D. Un sistema que no permite cambios."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-123-Pregunta: ¿Qué es el 'Análisis de Rentabilidad por Cliente' en un CRM?",
+    "opciones": [
+      "A. Saber cuánto nos cuesta el papel de las facturas.",
+      "B. Determinar qué clientes generan más beneficios tras restar los costes de captación y servicio.",
+      "C. Preguntar al cliente si está contento.",
+      "D. Calcular el sueldo de los comerciales."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-124-Pregunta: ¿A qué reto corresponde la 'Seguridad y Privacidad' en los SIE actuales?",
+    "opciones": [
+      "A. A que nadie pueda usar el ordenador sin permiso.",
+      "B. A proteger la información sensible contra ciberataques y cumplir normativas como el RGPD.",
+      "C. A poner cámaras de seguridad en el almacén.",
+      "D. A que el software no se pueda copiar ilegalmente."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-125-Pregunta: ¿Cuál es la principal ventaja de la integración ERP-SCM?",
+    "opciones": [
+      "A. Que los camiones van más rápido.",
+      "B. La visibilidad total de la cadena de suministro integrada con la planificación financiera y de producción.",
+      "C. Que el software de SCM es gratis si tienes un ERP.",
+      "D. Que no hace falta tener almacenes físicos."
+    ],
+    "solucion": "B"
+  }
 ]
