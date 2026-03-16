@@ -819,6 +819,9 @@ class SimuladorExamen {
         // Modo examen oficial: 30 preguntas, parcial configurable
         const pool = PREGUNTAS_COMPLETAS.filter(p => !this.esGaitero(p));
         const temasExamen = this.obtenerTemasExamen();
+        const esParcial2 =
+            temasExamen.length === PARCIALES_EXAMEN.parcial2.length &&
+            PARCIALES_EXAMEN.parcial2.every(tema => temasExamen.includes(tema));
         const poolParcial = pool.filter(p => temasExamen.includes(this.extraerTema(p)));
 
         if (poolParcial.length < TOTAL_PREGUNTAS_EXAMEN) {
@@ -846,7 +849,7 @@ class SimuladorExamen {
             let elegidas = [];
             if (tema === 3) {
                 elegidas = this.seleccionarTema3ConUnaTabla(preguntasTema, cuotaTema);
-            } else if (tema === 4 && temasExamen.length > 0 && temasExamen.includes(3) && temasExamen.includes(4)) {
+            } else if (tema === 4 && esParcial2) {
                 elegidas = this.seleccionarTema4ConUnaPractica(preguntasTema, cuotaTema);
             } else {
                 elegidas = this.sample(preguntasTema, cuotaTema);
@@ -876,9 +879,8 @@ class SimuladorExamen {
             poolParcial.length > 0 ? poolParcial : pool
         );
 
-        const validarRequisitosParcial1 = (lista) => {
-            const esParcial1 = temasExamen.includes(3) && temasExamen.includes(4);
-            if (!esParcial1) return true;
+        const validarRequisitosParcial2 = (lista) => {
+            if (!esParcial2) return true;
             const tieneTablaTema3 = lista.some(p => this.esTablaTema3(p));
             const tienePracticaTema4 = lista.some(p => this.esPracticaTema4(p));
             return tieneTablaTema3 && tienePracticaTema4;
@@ -901,12 +903,12 @@ class SimuladorExamen {
             }
 
             const finalFiltrada = this.barajarRespetandoDependencias(filtrada).slice(0, TOTAL_PREGUNTAS_EXAMEN);
-            return validarRequisitosParcial1(finalFiltrada) ? finalFiltrada : [];
+            return validarRequisitosParcial2(finalFiltrada) ? finalFiltrada : [];
         }
 
         // Orden aleatorio final, respetando bloques de dependencia
         const final = this.barajarRespetandoDependencias(seleccionNormalizada).slice(0, TOTAL_PREGUNTAS_EXAMEN);
-        return validarRequisitosParcial1(final) ? final : [];
+        return validarRequisitosParcial2(final) ? final : [];
     }
 
     mostrarPregunta() {
