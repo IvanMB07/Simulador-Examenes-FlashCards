@@ -57,9 +57,8 @@ async function cargarPreguntasDesdeJSON() {
 const TOTAL_PREGUNTAS_EXAMEN = 30;
 const TIEMPO_EXAMEN_MINUTOS = 75;
 const PARCIALES_EXAMEN = {
-    parcial1: [1, 2, 3, 4],
-    parcial2: [5, 6],
-    parcial3: [7]
+    parcial1: [1, 2],
+    parcial2: [3, 4, 5],
 };
 
 // Sistema de almacenamiento de preguntas falladas
@@ -70,7 +69,7 @@ class GestorFallos {
 
     cargarFallos() {
         try {
-      const data = localStorage.getItem(this.getStorageKey());
+            const data = localStorage.getItem(this.getStorageKey());
             this.fallos = data ? JSON.parse(data) : [];
         } catch (e) {
             this.fallos = [];
@@ -79,20 +78,20 @@ class GestorFallos {
 
     guardarFallos() {
         try {
-      localStorage.setItem(this.getStorageKey(), JSON.stringify(this.fallos));
+            localStorage.setItem(this.getStorageKey(), JSON.stringify(this.fallos));
         } catch (e) {
             console.error('Error al guardar fallos:', e);
         }
     }
 
-  getStorageKey() {
-    const perfilActual = (typeof configuracion !== 'undefined' && configuracion.get('perfilActual')) || 'default';
-    return `preguntasFalladas:perfil:${perfilActual}`;
-  }
+    getStorageKey() {
+        const perfilActual = (typeof configuracion !== 'undefined' && configuracion.get('perfilActual')) || 'default';
+        return `preguntasFalladas:perfil:${perfilActual}`;
+    }
 
-  cambiarUsuario() {
-    this.cargarFallos();
-  }
+    cambiarUsuario() {
+        this.cargarFallos();
+    }
 
     agregarFallo(pregunta, respuestaUsuario, respuestaCorrecta) {
         // Evitar duplicados
@@ -105,7 +104,7 @@ class GestorFallos {
                 fecha: new Date().toISOString()
             });
             this.guardarFallos();
-            
+
             // Actualizar estadísticas del perfil si la función existe
             if (typeof actualizarEstadisticasPerfil === 'function') {
                 actualizarEstadisticasPerfil();
@@ -166,12 +165,12 @@ class GestorHistorial {
         // Agregar nuevas preguntas al historial
         const cuestiones = preguntas.map(p => p.cuestion);
         this.historial.push(...cuestiones);
-        
+
         // Mantener solo las últimas N preguntas
         if (this.historial.length > this.maxHistorial) {
             this.historial = this.historial.slice(-this.maxHistorial);
         }
-        
+
         this.guardarHistorial();
     }
 
@@ -204,23 +203,23 @@ class ConfiguracionApp {
         try {
             const data = localStorage.getItem('configApp');
             this.config = data ? JSON.parse(data) : {
-              ordenarPorTema: false,
-                            temasSeleccionados: [1, 2, 3, 4, 5, 6, 7],
-                            parcialExamen: 'parcial1',
-              perfilActual: 'default',
-              perfiles: {}
+                ordenarPorTema: false,
+                temasSeleccionados: [1, 2, 3, 4, 5],
+                parcialExamen: 'parcial1',
+                perfilActual: 'default',
+                perfiles: {}
             };
             // Asegurar que existan las nuevas propiedades
             if (!this.config.perfilActual) this.config.perfilActual = 'default';
             if (!this.config.perfiles) this.config.perfiles = {};
-                        if (!this.config.parcialExamen) this.config.parcialExamen = 'parcial1';
+            if (!this.config.parcialExamen) this.config.parcialExamen = 'parcial1';
         } catch (e) {
             this.config = {
-              ordenarPorTema: false,
-                            temasSeleccionados: [1, 2, 3, 4, 5, 6, 7],
-                            parcialExamen: 'parcial1',
-              perfilActual: 'default',
-              perfiles: {}
+                ordenarPorTema: false,
+                temasSeleccionados: [1, 2, 3, 4, 5],
+                parcialExamen: 'parcial1',
+                perfilActual: 'default',
+                perfiles: {}
             };
         }
     }
@@ -273,7 +272,7 @@ class SimuladorExamen {
         this.detenerTiempo();
         this.bloqueadoPorTiempo = false;
         this.erroresDelTest = [];
-        
+
         // Registrar preguntas del test anterior en el historial (si había)
         if (this.preguntas && this.preguntas.length > 0) {
             gestorHistorial.registrarPreguntas(this.preguntas);
@@ -332,7 +331,7 @@ class SimuladorExamen {
                 return;
             }
 
-            switch(e.key) {
+            switch (e.key) {
                 case 'ArrowLeft':
                     e.preventDefault();
                     this.anterior();
@@ -428,7 +427,7 @@ class SimuladorExamen {
         const pool = PREGUNTAS_COMPLETAS.filter(p => !this.esGaitero(p));
         const totalPreguntas = 25;
         const poolTemasSeleccionados = pool.filter(p => temasSeleccionados.includes(this.extraerTema(p)));
-        
+
         // Agrupar preguntas por tema
         const grupos = new Map();
         for (const pregunta of pool) {
@@ -480,13 +479,13 @@ class SimuladorExamen {
 
     seleccionarPreguntas(cantidad, ordenarPorTema = false) {
         // Esta función ya no se usa, mantenida por compatibilidad
-        return this.seleccionarPreguntasPractica([1, 2, 3, 4, 5, 6, 7], ordenarPorTema);
+        return this.seleccionarPreguntasPractica([1, 2, 3, 4, 5], ordenarPorTema);
     }
 
     shuffleConSemilla(array, seed) {
         const copia = [...array];
         let random = this.seededRandom(seed);
-        
+
         for (let i = copia.length - 1; i > 0; i--) {
             const j = Math.floor(random() * (i + 1));
             [copia[i], copia[j]] = [copia[j], copia[i]];
@@ -496,7 +495,7 @@ class SimuladorExamen {
 
     seededRandom(seed) {
         let estado = seed;
-        return function() {
+        return function () {
             estado = (estado * 9301 + 49297) % 233280;
             return estado / 233280;
         };
@@ -674,7 +673,7 @@ class SimuladorExamen {
 
     extraerTema(pregunta) {
         // Busca el patrón -T1-, -T2-, etc.
-        const match = pregunta.cuestion.match(/-T([1-7])-/i);
+        const match = pregunta.cuestion.match(/-T([1-5])-/i);
         if (match && match[1]) {
             return parseInt(match[1]);
         }
@@ -774,12 +773,12 @@ class SimuladorExamen {
         const noVistas = [];
         const vistasAntiguas = [];
         const vistasRecientes = [];
-        
+
         const umbralReciente = 50; // Últimas 50 preguntas se consideran "recientes"
-        
+
         for (const pregunta of array) {
             const prioridad = gestorHistorial.obtenerPrioridad(pregunta);
-            
+
             if (prioridad === Infinity) {
                 noVistas.push(pregunta);
             } else if (prioridad > umbralReciente) {
@@ -788,31 +787,31 @@ class SimuladorExamen {
                 vistasRecientes.push(pregunta);
             }
         }
-        
+
         // Estrategia de selección: priorizar no vistas, luego antiguas, luego recientes
         const seleccion = [];
-        
+
         // 1. Tomar de no vistas
         const deNoVistas = Math.min(noVistas.length, n);
         seleccion.push(...this.barajar(noVistas).slice(0, deNoVistas));
-        
+
         // 2. Si faltan, tomar de antiguas
         if (seleccion.length < n && vistasAntiguas.length > 0) {
             const faltan = n - seleccion.length;
             const deAntiguas = Math.min(vistasAntiguas.length, faltan);
             seleccion.push(...this.barajar(vistasAntiguas).slice(0, deAntiguas));
         }
-        
+
         // 3. Si aún faltan, tomar de recientes (pero las menos recientes primero)
         if (seleccion.length < n && vistasRecientes.length > 0) {
             const faltan = n - seleccion.length;
             // Ordenar por prioridad descendente (menos recientes primero)
-            vistasRecientes.sort((a, b) => 
+            vistasRecientes.sort((a, b) =>
                 gestorHistorial.obtenerPrioridad(b) - gestorHistorial.obtenerPrioridad(a)
             );
             seleccion.push(...vistasRecientes.slice(0, faltan));
         }
-        
+
         return this.barajar(seleccion).slice(0, n);
     }
 
@@ -912,11 +911,11 @@ class SimuladorExamen {
 
     mostrarPregunta() {
         const pregunta = this.preguntas[this.preguntaActual];
-        
+
         // Resetear el foco a la primera opción y desactivar el foco visual
         this.opcionEnfocada = 0;
         this.focoActivo = false;
-        
+
         if (this.modo === 'examen') {
             const bloque = Math.floor(this.preguntaActual / 10) + 1;
             const totalBloques = Math.ceil(this.preguntas.length / 10);
@@ -939,15 +938,15 @@ class SimuladorExamen {
         pregunta.opciones.forEach((opcion, indice) => {
             const boton = document.createElement('button');
             boton.className = 'opcion';
-            
+
             // Agregar número de tecla al inicio
             const numeroTecla = document.createElement('span');
             numeroTecla.style.cssText = 'display: inline-block; background: #3a3a3a; padding: 2px 6px; border-radius: 3px; margin-right: 8px; font-size: 11px; color: #00d4ff;';
             numeroTecla.textContent = (indice + 1);
-            
+
             const textoOpcion = document.createElement('span');
             textoOpcion.textContent = opcion;
-            
+
             boton.appendChild(numeroTecla);
             boton.appendChild(textoOpcion);
 
@@ -1136,13 +1135,13 @@ class SimuladorExamen {
     mostrarResultados() {
         let correctas = 0;
         this.erroresDelTest = [];
-        
+
         this.preguntas.forEach((pregunta, indice) => {
             if (this.respuestas.hasOwnProperty(indice)) {
                 const indiceRespuesta = this.respuestas[indice];
                 const respuestaUsuario = pregunta.opciones[indiceRespuesta].charAt(0);
                 const esCorrecta = respuestaUsuario === pregunta.solucion;
-                
+
                 if (esCorrecta) {
                     correctas++;
                 } else {
@@ -1153,7 +1152,7 @@ class SimuladorExamen {
                         respuestaUsuario: pregunta.opciones[indiceRespuesta],
                         respuestaCorrecta: pregunta.opciones[indiceCorrecto]
                     });
-                    
+
                     // Guardar en el gestor de fallos (todos los modos)
                     gestorFallos.agregarFallo(
                         pregunta,
@@ -1197,7 +1196,7 @@ class SimuladorExamen {
 
     mostrarDetalleErrores() {
         const contenedor = document.getElementById('erroresDetalle');
-        
+
         // Recopilar preguntas no respondidas (todas las que no tienen respuesta)
         const preguntasNoRespondidas = [];
         this.preguntas.forEach((pregunta, indice) => {
@@ -1208,7 +1207,7 @@ class SimuladorExamen {
                 });
             }
         });
-        
+
         if (this.erroresDelTest.length === 0 && preguntasNoRespondidas.length === 0) {
             contenedor.classList.add('oculto');
             return;
@@ -1216,7 +1215,7 @@ class SimuladorExamen {
 
         contenedor.classList.remove('oculto');
         let html = '';
-        
+
         // Mostrar preguntas falladas
         if (this.erroresDelTest.length > 0) {
             html += '<h3 style="color: #ef4444; margin-bottom: 15px;">📋 Preguntas Falladas</h3>';
@@ -1234,7 +1233,7 @@ class SimuladorExamen {
                 `;
             });
         }
-        
+
         // Mostrar preguntas no respondidas
         if (preguntasNoRespondidas.length > 0) {
             if (this.erroresDelTest.length > 0) {
@@ -1242,7 +1241,7 @@ class SimuladorExamen {
             }
             html += '<h3 style="color: #8b5cf6; margin-bottom: 15px; margin-top: 20px;">⭕ Preguntas No Respondidas</h3>';
             html += '<div style="font-size: 12px; color: #888; margin-bottom: 15px;">Se han agregado al test de fallos para que las repases</div>';
-            
+
             preguntasNoRespondidas.forEach((item, index) => {
                 const respuestaCorrecta = this.preguntas[item.indice].opciones[this.obtenerIndiceCorrecto(this.preguntas[item.indice])];
                 html += `
@@ -1255,7 +1254,7 @@ class SimuladorExamen {
                 `;
             });
         }
-        
+
         contenedor.innerHTML = html;
     }
 
@@ -1326,10 +1325,10 @@ function actualizarContadorFallos() {
     const contador = gestorFallos.contarFallos();
     document.getElementById('contadorFallos').textContent = contador;
     document.getElementById('badgeFallos').textContent = contador;
-    
+
     const btnTestFallos = document.getElementById('btnTestFallos');
     const btnLimpiarFallos = document.getElementById('btnLimpiarFallos');
-    
+
     if (contador > 0) {
         btnTestFallos.disabled = false;
         if (btnLimpiarFallos) btnLimpiarFallos.disabled = false;
@@ -1343,7 +1342,7 @@ function limpiarFallos() {
     if (gestorFallos.contarFallos() === 0) {
         return;
     }
-    
+
     if (confirm('¿Estás seguro de que quieres eliminar todas las preguntas falladas guardadas?')) {
         gestorFallos.limpiarFallos();
         actualizarContadorFallos();
@@ -1354,7 +1353,7 @@ function limpiarFallos() {
 function actualizarConfigUI() {
     const ordenarPorTema = configuracion.get('ordenarPorTema');
     const toggle = document.getElementById('toggleOrdenTema');
-    
+
     if (ordenarPorTema) {
         toggle.classList.add('active');
     } else {
@@ -1370,76 +1369,76 @@ function toggleConfig(clave) {
 
 // Importar/Exportar fallos
 function exportarFallos() {
-  try {
-    const perfilActual = configuracion.get('perfilActual') || 'default';
-    const perfiles = configuracion.get('perfiles') || {};
-    const nombrePerfil = perfilActual === 'default' ? 'Principal' : (perfiles[perfilActual]?.nombre || perfilActual);
-    
-    const datosExportar = {
-      perfil: perfilActual,
-      nombrePerfil: nombrePerfil,
-      fallos: gestorFallos.obtenerFallos(),
-      fecha: new Date().toISOString()
-    };
-    
-    const datos = JSON.stringify(datosExportar, null, 2);
-    const blob = new Blob([datos], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `fallos_${nombrePerfil}_${Date.now()}.json`;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-    alert(`Fallos exportados correctamente (Perfil: ${nombrePerfil})`);
-  } catch (e) {
-    alert('No se pudo exportar los fallos');
-  }
+    try {
+        const perfilActual = configuracion.get('perfilActual') || 'default';
+        const perfiles = configuracion.get('perfiles') || {};
+        const nombrePerfil = perfilActual === 'default' ? 'Principal' : (perfiles[perfilActual]?.nombre || perfilActual);
+
+        const datosExportar = {
+            perfil: perfilActual,
+            nombrePerfil: nombrePerfil,
+            fallos: gestorFallos.obtenerFallos(),
+            fecha: new Date().toISOString()
+        };
+
+        const datos = JSON.stringify(datosExportar, null, 2);
+        const blob = new Blob([datos], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `fallos_${nombrePerfil}_${Date.now()}.json`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        alert(`Fallos exportados correctamente (Perfil: ${nombrePerfil})`);
+    } catch (e) {
+        alert('No se pudo exportar los fallos');
+    }
 }
 
 function importarFallosDesdeArchivo(event) {
-  const file = event?.target?.files?.[0];
-  if (!file) return;
-  const reader = new FileReader();
-  reader.onload = () => {
-    try {
-      const datos = JSON.parse(reader.result);
-      
-      // Verificar formato nuevo (con perfil)
-      if (datos.fallos && Array.isArray(datos.fallos)) {
-        const mensaje = `¿Importar ${datos.fallos.length} fallos del perfil "${datos.nombrePerfil || 'Desconocido'}"?\n\nEsto reemplazará los fallos actuales del perfil activo.`;
-        if (!confirm(mensaje)) return;
-        
-        gestorFallos.fallos = datos.fallos;
-        gestorFallos.guardarFallos();
-        actualizarContadorFallos();
-        actualizarEstadisticasPerfil();
-        alert('Fallos importados correctamente');
-      } 
-      // Formato antiguo (array directo)
-      else if (Array.isArray(datos)) {
-        if (!confirm(`¿Importar ${datos.length} fallos?\nEsto reemplazará los fallos actuales del perfil activo.`)) return;
-        
-        gestorFallos.fallos = datos;
-        gestorFallos.guardarFallos();
-        actualizarContadorFallos();
-        actualizarEstadisticasPerfil();
-        alert('Fallos importados correctamente');
-      } 
-      else {
-        throw new Error('Formato inválido');
-      }
-    } catch (e) {
-      alert('Error al importar JSON de fallos: ' + e.message);
-    }
-  };
-  reader.readAsText(file);
+    const file = event?.target?.files?.[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+        try {
+            const datos = JSON.parse(reader.result);
+
+            // Verificar formato nuevo (con perfil)
+            if (datos.fallos && Array.isArray(datos.fallos)) {
+                const mensaje = `¿Importar ${datos.fallos.length} fallos del perfil "${datos.nombrePerfil || 'Desconocido'}"?\n\nEsto reemplazará los fallos actuales del perfil activo.`;
+                if (!confirm(mensaje)) return;
+
+                gestorFallos.fallos = datos.fallos;
+                gestorFallos.guardarFallos();
+                actualizarContadorFallos();
+                actualizarEstadisticasPerfil();
+                alert('Fallos importados correctamente');
+            }
+            // Formato antiguo (array directo)
+            else if (Array.isArray(datos)) {
+                if (!confirm(`¿Importar ${datos.length} fallos?\nEsto reemplazará los fallos actuales del perfil activo.`)) return;
+
+                gestorFallos.fallos = datos;
+                gestorFallos.guardarFallos();
+                actualizarContadorFallos();
+                actualizarEstadisticasPerfil();
+                alert('Fallos importados correctamente');
+            }
+            else {
+                throw new Error('Formato inválido');
+            }
+        } catch (e) {
+            alert('Error al importar JSON de fallos: ' + e.message);
+        }
+    };
+    reader.readAsText(file);
 }
 
 function toggleTema(numeroTema) {
-    let temasSeleccionados = configuracion.get('temasSeleccionados') || [1, 2, 3, 4, 5, 6, 7];
-    
+    let temasSeleccionados = configuracion.get('temasSeleccionados') || [1, 2, 3, 4, 5];
+
     if (temasSeleccionados.includes(numeroTema)) {
         // Si ya está seleccionado, quitarlo
         temasSeleccionados = temasSeleccionados.filter(t => t !== numeroTema);
@@ -1456,13 +1455,13 @@ function toggleTema(numeroTema) {
         temasSeleccionados.push(numeroTema);
         temasSeleccionados.sort((a, b) => a - b);
     }
-    
+
     configuracion.set('temasSeleccionados', temasSeleccionados);
     actualizarDistribucion();
 }
 
 function actualizarDistribucion() {
-    const temasSeleccionados = configuracion.get('temasSeleccionados') || [1, 2, 3, 4, 5, 6, 7];
+    const temasSeleccionados = configuracion.get('temasSeleccionados') || [1, 2, 3, 4, 5];
     const totalPreguntas = 25;
     const numTemas = temasSeleccionados.length;
     const preguntasPorTema = Math.floor(totalPreguntas / numTemas);
@@ -1470,14 +1469,14 @@ function actualizarDistribucion() {
 
     let texto = `📊 Distribución: `;
     const distribucionPorTema = [];
-    
+
     temasSeleccionados.forEach((tema, index) => {
         const cantidad = preguntasPorTema + (index < preguntasExtras ? 1 : 0);
         distribucionPorTema.push(`Tema ${tema}: ${cantidad}`);
     });
-    
+
     texto += distribucionPorTema.join(' | ');
-    
+
     const infoDiv = document.getElementById('infoDistribucion');
     if (infoDiv) {
         infoDiv.textContent = texto;
@@ -1507,8 +1506,8 @@ function actualizarTemasUI() {
         temasCompatibles = [...temasParcial];
         configuracion.set('temasSeleccionados', temasCompatibles);
     }
-    
-    for (let i = 1; i <= 7; i++) {
+
+    for (let i = 1; i <= 5; i++) {
         const checkbox = document.querySelector(`input[type="checkbox"][value="${i}"]`);
         if (checkbox) {
             const permitido = temasParcial.includes(i);
@@ -1521,7 +1520,7 @@ function actualizarTemasUI() {
             }
         }
     }
-    
+
     actualizarDistribucion();
 }
 
@@ -1533,11 +1532,11 @@ function iniciarModo(modo) {
     document.getElementById('seleccionModo').classList.add('oculto');
     document.getElementById('resultados').classList.add('oculto');
     document.getElementById('examen').classList.remove('oculto');
-    
+
     let textoModo = 'Práctica';
     if (modo === 'examen') textoModo = 'Examen';
     else if (modo === 'fallos') textoModo = 'Test de Fallos';
-    
+
     document.getElementById('modoActual').textContent = textoModo;
 
     app = new SimuladorExamen(modo);
@@ -1548,13 +1547,13 @@ function iniciarModo(modo) {
 function cargarPerfiles() {
     const select = document.getElementById('perfilSelect');
     if (!select) return;
-    
+
     const perfilActual = configuracion.get('perfilActual') || 'default';
     const perfiles = configuracion.get('perfiles') || {};
-    
+
     // Limpiar opciones
     select.innerHTML = '<option value="default">Usuario Principal</option>';
-    
+
     // Agregar perfiles personalizados
     Object.keys(perfiles).forEach(id => {
         if (id !== 'default') {
@@ -1564,36 +1563,36 @@ function cargarPerfiles() {
             select.appendChild(option);
         }
     });
-    
+
     // Seleccionar el perfil actual
     select.value = perfilActual;
-    
+
     // Actualizar botón de eliminar
     const btnEliminar = document.getElementById('btnEliminar');
     if (btnEliminar) {
         btnEliminar.disabled = perfilActual === 'default';
         btnEliminar.style.opacity = perfilActual === 'default' ? '0.5' : '1';
     }
-    
+
     actualizarEstadisticasPerfil();
 }
 
 function crearNuevoPerfil() {
     const nombre = prompt('Nombre del nuevo perfil:');
     if (!nombre || !nombre.trim()) return;
-    
+
     const id = 'perfil_' + Date.now();
     const perfiles = configuracion.get('perfiles') || {};
-    
+
     perfiles[id] = {
         nombre: nombre.trim(),
         fallos: [],
         fechaCreacion: new Date().toISOString()
     };
-    
+
     configuracion.set('perfiles', perfiles);
     configuracion.set('perfilActual', id);
-    
+
     // Cambiar al nuevo perfil
     gestorFallos.cambiarUsuario();
     gestorHistorial.cambiarUsuario();
@@ -1604,10 +1603,10 @@ function crearNuevoPerfil() {
 function cambiarPerfil() {
     const select = document.getElementById('perfilSelect');
     if (!select) return;
-    
+
     const nuevoPerfil = select.value;
     configuracion.set('perfilActual', nuevoPerfil);
-    
+
     // Recargar los fallos del nuevo perfil
     gestorFallos.cambiarUsuario();
     gestorHistorial.cambiarUsuario();
@@ -1621,18 +1620,18 @@ function eliminarPerfilActual() {
         alert('No puedes eliminar el perfil principal');
         return;
     }
-    
+
     const perfiles = configuracion.get('perfiles') || {};
     const nombrePerfil = perfiles[perfilActual]?.nombre || perfilActual;
-    
+
     if (!confirm(`¿Estás seguro de eliminar el perfil "${nombrePerfil}"?\nEsto borrará todos los fallos registrados en este perfil.`)) {
         return;
     }
-    
+
     // Eliminar el perfil
     delete perfiles[perfilActual];
     configuracion.set('perfiles', perfiles);
-    
+
     // Volver al perfil default
     configuracion.set('perfilActual', 'default');
     gestorFallos.cambiarUsuario();
@@ -1644,31 +1643,31 @@ function eliminarPerfilActual() {
 function actualizarEstadisticasPerfil() {
     const statsDiv = document.getElementById('perfilStats');
     if (!statsDiv) return;
-    
+
     const perfilActual = configuracion.get('perfilActual');
     const perfiles = configuracion.get('perfiles') || {};
     const totalFallos = gestorFallos.obtenerFallos().length;
-    
+
     let texto = `📊 Fallos registrados: ${totalFallos}`;
-    
+
     if (perfilActual !== 'default' && perfiles[perfilActual]) {
         const perfil = perfiles[perfilActual];
         const fecha = new Date(perfil.fechaCreacion).toLocaleDateString();
         texto += ` | Creado: ${fecha}`;
     }
-    
+
     statsDiv.textContent = texto;
 }
 
 window.addEventListener('DOMContentLoaded', async () => {
     // Primero cargar las preguntas desde GitHub
     const cargaExitosa = await cargarPreguntasDesdeJSON();
-    
+
     if (!cargaExitosa) {
         console.error('No se pudieron cargar las preguntas');
         return;
     }
-    
+
     // Una vez cargadas las preguntas, inicializar la aplicación
     document.getElementById('examen').classList.add('oculto');
     document.getElementById('resultados').classList.add('oculto');
@@ -1677,7 +1676,7 @@ window.addEventListener('DOMContentLoaded', async () => {
     document.getElementById('tiempoTranscurrido').textContent = 'Tiempo: 0:00';
     const totalPreguntasActual = document.getElementById('totalPreguntasActual');
     if (totalPreguntasActual) totalPreguntasActual.textContent = '25';
-    
+
     mostrarTotalPreguntas();
     cargarPerfiles();
     actualizarContadorFallos();

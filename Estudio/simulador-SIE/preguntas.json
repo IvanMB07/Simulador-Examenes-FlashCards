@@ -1,0 +1,502 @@
+[
+  {
+    "cuestion": "SIE-T1-01-Pregunta: ¿Cómo se definen los 'Datos' en el contexto de un sistema de información?",
+    "opciones": [
+      "A. Secuencias de hechos en bruto que representan eventos.",
+      "B. Información que las personas tienen en su cerebro.",
+      "C. Datos moldeados en una forma significativa y útil.",
+      "D. El conjunto de hardware de una empresa."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SIE-T1-02-Pregunta: ¿Qué es la 'Información' según la jerarquía de los SI?",
+    "opciones": [
+      "A. Hechos sin procesar.",
+      "B. Datos procesados que tienen un significado y utilidad para el ser humano.",
+      "C. Conocimiento almacenado en libros.",
+      "D. Un conjunto de cables y servidores."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T1-03-Pregunta: ¿A qué se refiere el término 'Conocimiento' en el material de estudio?",
+    "opciones": [
+      "A. A una base de datos SQL.",
+      "B. A la información que las personas tienen en su cerebro.",
+      "C. A los manuales de usuario del software.",
+      "D. A la velocidad de procesamiento de un CPU."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T1-04-Pregunta: ¿Cuál de las siguientes NO es una propiedad de la información útil?",
+    "opciones": [
+      "A. Accesible y legible.",
+      "B. Adecuada y correcta.",
+      "C. Ambigua y compleja.",
+      "D. Procesable y transmisible."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SIE-T1-05-Pregunta: ¿Qué elemento de un SI se considera su 'razón de ser'?",
+    "opciones": [
+      "A. El equipo de soporte (Hardware).",
+      "B. Los procedimientos.",
+      "C. La información.",
+      "D. El personal de mantenimiento."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SIE-T1-06-Pregunta: ¿Qué comprende el 'Equipo de Soporte' o SIA?",
+    "opciones": [
+      "A. Solo los empleados de la empresa.",
+      "B. El Hardware, Software y Tecnologías de Comunicación.",
+      "C. Los manuales de procedimiento en papel.",
+      "D. La estrategia de ventas anual."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T1-07-Pregunta: ¿Qué diferencia a un SI de un Sistema Informático?",
+    "opciones": [
+      "A. El SI es solo software, el Informático es hardware.",
+      "B. El SI incluye personal y procedimientos; el informático es el soporte técnico (SIA).",
+      "C. Son exactamente lo mismo.",
+      "D. El SI no puede ser automatizado."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T1-08-Pregunta: ¿Cuál es un ejemplo de 'Excelencia Operativa' como objetivo estratégico?",
+    "opciones": [
+      "A. Crear un nuevo producto que nadie tiene.",
+      "B. La mejora de la eficiencia para obtener mayor rentabilidad (ej. RetailLink de Wal-Mart).",
+      "C. Cumplir con una ley impuesta por el gobierno.",
+      "D. Cerrar la empresa por falta de fondos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T1-09-Pregunta: ¿Qué objetivo estratégico persiguen los bancos al instalar cajeros automáticos para no perder clientes?",
+    "opciones": [
+      "A. Ventaja competitiva.",
+      "B. Supervivencia.",
+      "C. Intimidad con clientes.",
+      "D. Nuevos modelos de negocio."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T1-10-Pregunta: ¿Qué característica de calidad de un SI se refiere a que la información llegue a tiempo para actuar?",
+    "opciones": [
+      "A. Fiabilidad.",
+      "B. Oportunidad.",
+      "C. Generalidad.",
+      "D. Flexibilidad."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T1-11-Pregunta: ¿A qué se refiere la 'Generalidad' en un SI?",
+    "opciones": [
+      "A. A que el sistema sea muy lento.",
+      "B. A la versatilidad para atender diferentes necesidades de información.",
+      "C. A que solo sirva para contabilidad.",
+      "D. A que lo usen todos los países del mundo."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T1-12-Pregunta: ¿Cuál es un inconveniente de los SIE 'no integrados'?",
+    "opciones": [
+      "A. Los datos están centralizados.",
+      "B. Duplicidades en el almacenamiento de información.",
+      "C. Demasiada comunicación entre departamentos.",
+      "D. Bajos costes de licencias."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T1-13-Pregunta: ¿Qué sistema abarca de forma integral la empresa?",
+    "opciones": [
+      "A. ERP.",
+      "B. Bloc de notas.",
+      "C. Calculadora de Windows.",
+      "D. Un sistema departamental aislado."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SIE-T2-14-Pregunta: ¿Qué significan las siglas ERP?",
+    "opciones": [
+      "A. External Resource Planning.",
+      "B. Enterprise Resource Planning.",
+      "C. Electronic Relationship Process.",
+      "D. Essential Regional Provider."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-15-Pregunta: ¿Cuál es el propósito fundamental de un ERP?",
+    "opciones": [
+      "A. Separar los departamentos para que no hablen entre ellos.",
+      "B. Incrementar la eficiencia organizacional gestionando de forma integrada los recursos.",
+      "C. Eliminar el uso de bases de datos.",
+      "D. Reducir el número de clientes."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-16-Pregunta: En la evolución histórica, ¿qué caracterizó a los sistemas MRP de los años 70?",
+    "opciones": [
+      "A. Gestión de redes sociales.",
+      "B. Programación de la producción y asignación de materiales.",
+      "C. Uso de Big Data.",
+      "D. Facturación electrónica obligatoria."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-17-Pregunta: ¿En qué década aparecen los ERP integrando Finanzas, RRHH y Ventas?",
+    "opciones": [
+      "A. 1960.",
+      "B. 1970.",
+      "C. 1980.",
+      "D. 1990."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "SIE-T2-18-Pregunta: ¿Cuál es la vida útil media estimada de un sistema ERP?",
+    "opciones": [
+      "A. 2 años.",
+      "B. 5 años.",
+      "C. 10 años.",
+      "D. 20 años."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "SIE-T2-19-Pregunta: ¿Qué es el 'Cuadrante Mágico de Gartner'?",
+    "opciones": [
+      "A. Un algoritmo de encriptación.",
+      "B. Una herramienta de análisis cualitativo que clasifica a los proveedores de software.",
+      "C. Un módulo del ERP para ventas.",
+      "D. Una base de datos de Microsoft."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-20-Pregunta: En el Cuadrante de Gartner, ¿quiénes son los 'Líderes'?",
+    "opciones": [
+      "A. Proveedores que no tienen visión de futuro.",
+      "B. Proveedores que puntúan alto en 'Habilidad de Ejecución' y 'Totalidad de Visión'.",
+      "C. Empresas que solo venden hardware.",
+      "D. Nuevas startups sin clientes."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-21-Pregunta: ¿Qué proveedores analiza el estudio 'Clash of the Titans'?",
+    "opciones": [
+      "A. Proveedores de open source exclusivamente.",
+      "B. SAP, Oracle y Microsoft Dynamics.",
+      "C. Apple, Google y Facebook.",
+      "D. Proveedores locales de hardware."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-22-Pregunta: ¿A qué se refiere la 'Parametrización' en un ERP?",
+    "opciones": [
+      "A. A escribir código fuente nuevo para cada cliente.",
+      "B. A configurar opciones predefinidas para adaptar el sistema al negocio.",
+      "C. A borrar la base de datos.",
+      "D. A comprar más servidores."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-23-Pregunta: ¿Qué es una interfaz 'Web-based' en un ERP?",
+    "opciones": [
+      "A. Una que requiere instalar un programa pesado en cada PC.",
+      "B. Una que permite acceso mediante navegadores web y facilita el acceso a externos.",
+      "C. Una que solo funciona sin internet.",
+      "D. Una interfaz de línea de comandos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-24-Pregunta: ¿De qué se encarga el módulo de 'Aprovisionamiento'?",
+    "opciones": [
+      "A. De la relación con los clientes.",
+      "B. De la gestión de materiales y relación con los proveedores.",
+      "C. De pagar las nóminas.",
+      "D. De diseñar el logo de la empresa."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-25-Pregunta: ¿Qué función realiza el módulo de 'Finanzas' en un ERP?",
+    "opciones": [
+      "A. Controlar la temperatura de la fábrica.",
+      "B. Contabilidad, elaboración de balances y liquidación de impuestos.",
+      "C. Contratar nuevos empleados.",
+      "D. Organizar las vacaciones de los jefes."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-26-Pregunta: ¿Cuál es el objetivo del módulo de 'Ventas'?",
+    "opciones": [
+      "A. Comprar materias primas.",
+      "B. Gestión de pedidos, facturación y seguimiento de preventa.",
+      "C. Reparar las máquinas rotas.",
+      "D. Auditar la red wifi."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-27-Pregunta: ¿Qué significan las siglas CRM?",
+    "opciones": [
+      "A. Company Resource Method.",
+      "B. Customer Relationship Management.",
+      "C. Control Remote Management.",
+      "D. Cost Reduction Module."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-28-Pregunta: ¿Cuál es un beneficio clave del CRM?",
+    "opciones": [
+      "A. Aumentar el coste de adquisición de clientes.",
+      "B. Reducir la tasa de abandono (churn rate).",
+      "C. Fabricar productos más pesados.",
+      "D. Reducir el número de proveedores."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-29-Pregunta: ¿Qué significan las siglas SCM?",
+    "opciones": [
+      "A. Sales Control Model.",
+      "B. Supply Chain Management.",
+      "C. Software Construction Method.",
+      "D. System Core Module."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-30-Pregunta: ¿Cuál es la función principal de un SCM?",
+    "opciones": [
+      "A. Gestionar las redes sociales del cliente.",
+      "B. Planificar y ejecutar los pasos de la cadena de suministro desde el origen al consumidor.",
+      "C. Hacer copias de seguridad de la base de datos.",
+      "D. Liquidar el IVA mensualmente."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-31-Pregunta: ¿Qué porcentaje de los gastos de operación pueden suponer los costes de la cadena de suministro?",
+    "opciones": [
+      "A. 10%.",
+      "B. 25%.",
+      "C. 50%.",
+      "D. Hasta el 75%."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "SIE-T2-32-Pregunta: ¿Quiénes crearon el 'Balanced Scorecard' (BSC)?",
+    "opciones": [
+      "A. Steve Jobs y Bill Gates.",
+      "B. Robert Kaplan y David Norton.",
+      "C. Larry Page y Sergey Brin.",
+      "D. Mark Zuckerberg."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-33-Pregunta: ¿Por qué nace el Balanced Scorecard?",
+    "opciones": [
+      "A. Porque los indicadores financieros no eran suficientes para ver la situación real de la empresa.",
+      "B. Para sustituir al ERP.",
+      "C. Para contar el número de empleados.",
+      "D. Para calcular el precio del hardware."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SIE-T2-34-Pregunta: ¿Cuál NO es una de las 4 perspectivas del Balanced Scorecard?",
+    "opciones": [
+      "A. Financiera.",
+      "B. Del Cliente.",
+      "C. De Procesos Internos.",
+      "D. Del Departamento de Limpieza."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "SIE-T2-35-Pregunta: ¿Qué mide la perspectiva de 'Aprendizaje y Crecimiento' en el BSC?",
+    "opciones": [
+      "A. El dinero en el banco.",
+      "B. El capital intangible (formación de empleados, cultura organizacional, SI).",
+      "C. El número de ventas del mes pasado.",
+      "D. El tiempo de entrega de un paquete."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-36-Pregunta: ¿Qué es un Mapa Estratégico en el contexto del BSC?",
+    "opciones": [
+      "A. Un mapa GPS para los camiones.",
+      "B. Una representación visual de las hipótesis de causa-efecto entre objetivos.",
+      "C. Un plano de las oficinas.",
+      "D. Una lista de precios de la competencia."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-37-Pregunta: ¿Cuál es un desafío común al implementar el BSC?",
+    "opciones": [
+      "A. Que el software sea gratis.",
+      "B. La falta de compromiso de la dirección.",
+      "C. Tener demasiados clientes.",
+      "D. Usar ordenadores muy potentes."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-38-Pregunta: ¿Qué significa 'Cross-selling' o venta cruzada en el ámbito de CRM?",
+    "opciones": [
+      "A. Vender productos a la competencia.",
+      "B. Ofrecer productos complementarios a los que el cliente ya compra.",
+      "C. No vender nada.",
+      "D. Vender solo a través de internet."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-39-Pregunta: ¿Qué es la 'Intimidad con clientes y proveedores' como objetivo estratégico?",
+    "opciones": [
+      "A. Espiar sus correos electrónicos.",
+      "B. Conocerlos mejor para ofrecer servicios personalizados y asegurar el suministro.",
+      "C. Ser amigos personales de todos ellos.",
+      "D. Comprar sus empresas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-40-Pregunta: ¿Qué es el ERP 'AdventureWorks' mencionado en clase?",
+    "opciones": [
+      "A. Un juego de rol.",
+      "B. Una base de datos de ejemplo de Microsoft para aprender procesos de negocio.",
+      "C. Una marca de ropa deportiva.",
+      "D. El competidor de SAP."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-41-Pregunta: ¿Qué caracteriza a los 'Niche Players' en el cuadrante de Gartner?",
+    "opciones": [
+      "A. Dominan todo el mercado.",
+      "B. Se enfocan con éxito en un segmento pequeño o específico.",
+      "C. No tienen ningún cliente.",
+      "D. Son empresas que van a quebrar."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-42-Pregunta: ¿Qué es la 'Cadena de Valor' de Porter?",
+    "opciones": [
+      "A. Una joya de oro.",
+      "B. Un modelo que identifica las actividades que crean valor para el cliente.",
+      "C. Una lista de precios de proveedores.",
+      "D. Un sistema de transporte de mercancías."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-43-Pregunta: ¿Cuál es un reto actual de los sistemas empresariales?",
+    "opciones": [
+      "A. Volver al papel.",
+      "B. La integración de la nube (Cloud) y la movilidad.",
+      "C. Usar menos memoria RAM.",
+      "D. Eliminar la conexión a internet."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T1-44-Pregunta: ¿Qué es la 'Exactitud' en un SI?",
+    "opciones": [
+      "A. Que la información sea muy larga.",
+      "B. Que la información esté libre de errores.",
+      "C. Que el sistema sea de color azul.",
+      "D. Que el sistema sea barato."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T1-45-Pregunta: ¿Cuál es una característica de los SIE modernos?",
+    "opciones": [
+      "A. Están aislados por departamentos.",
+      "B. Son integrales y abarcan toda la organización.",
+      "C. Solo sirven para la gerencia alta.",
+      "D. Son manuales."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-46-Pregunta: En SCM, ¿qué es el 'Efecto Látigo' (Bullwhip Effect)?",
+    "opciones": [
+      "A. Un método de castigo a empleados.",
+      "B. La distorsión de la demanda a medida que se sube en la cadena de suministro.",
+      "C. Un aumento repentino de las ventas.",
+      "D. La rotura de stock en la tienda."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-47-Pregunta: ¿Qué módulo gestiona las 'Nóminas'?",
+    "opciones": [
+      "A. Producción.",
+      "B. Recursos Humanos.",
+      "C. SCM.",
+      "D. CRM."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-48-Pregunta: ¿Qué proveedor es el líder histórico del mercado ERP?",
+    "opciones": [
+      "A. SAP.",
+      "B. Adobe.",
+      "C. Spotify.",
+      "D. WhatsApp."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SIE-T2-49-Pregunta: ¿Qué es el 'Total Cost of Ownership' (TCO) en un ERP?",
+    "opciones": [
+      "A. Solo el precio de la licencia.",
+      "B. El coste total que incluye licencia, implementación, mantenimiento y formación.",
+      "C. El sueldo de los directivos.",
+      "D. El coste de la electricidad."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T2-50-Pregunta: ¿Qué permiten los 'Paneles de Control' (Dashboards) en un ERP?",
+    "opciones": [
+      "A. Jugar a videojuegos.",
+      "B. Visualizar de forma rápida los KPIs y el estado de salud de la empresa.",
+      "C. Cambiar el fondo de pantalla.",
+      "D. Mandar correos electrónicos personales."
+    ],
+    "solucion": "B"
+  }
+]
