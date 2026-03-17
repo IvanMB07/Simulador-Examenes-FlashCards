@@ -53,8 +53,8 @@ async function cargarPreguntasDesdeJSON() {
 }
 
 // Configuración del modo examen
-// Formato oficial: 30 preguntas, 75 minutos
-const TOTAL_PREGUNTAS_EXAMEN = 30;
+// Formato oficial: 20 preguntas, 75 minutos
+const TOTAL_PREGUNTAS_EXAMEN = 20;
 const TIEMPO_EXAMEN_MINUTOS = 75;
 const PARCIALES_EXAMEN = {
     parcial1: [1, 2],
@@ -816,7 +816,7 @@ class SimuladorExamen {
     }
 
     seleccionarPreguntasExamen() {
-        // Modo examen oficial: 30 preguntas, parcial configurable
+        // Modo examen oficial: 20 preguntas, parcial configurable
         const pool = PREGUNTAS_COMPLETAS.filter(p => !this.esGaitero(p));
         const temasExamen = this.obtenerTemasExamen();
         const esParcial2 =
@@ -1177,11 +1177,14 @@ class SimuladorExamen {
         const incorrectas = respondidas - correctas;
         const sinResponder = this.preguntas.length - respondidas;
 
-        // Fórmula oficial (imagen): NE = (10 / (NPV - 2)) * (NC - 2)
+        // Nota sobre 10 con penalización de 1/3 por respuesta incorrecta.
+        // Las no respondidas no penalizan.
         const npv = this.preguntas.length;
         const nc = correctas;
-        const puntuacionFinal = npv > 2
-            ? Math.max(0, Math.min(10, (10 / (npv - 2)) * (nc - 2)))
+        const ni = incorrectas;
+        const puntuacionBruta = nc - (ni / 3);
+        const puntuacionFinal = npv > 0
+            ? Math.max(0, Math.min(10, (puntuacionBruta / npv) * 10))
             : 0;
 
         document.getElementById('respuestasCorrectas').textContent = correctas;
