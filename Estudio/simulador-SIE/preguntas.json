@@ -57,7 +57,7 @@
       "C. Los procedimientos manuales y documentación en papel.",
       "D. La infraestructura de telecomunicaciones únicamente."
     ],
-    "solucion": "B"
+    "solucion": "A"
   },
   {
     "cuestion": "SIE-T1-07-Pregunta: ¿Qué diferencia a un SI de un Sistema Informático?",
@@ -77,7 +77,7 @@
       "C. Mantener relaciones duraderas con clientes.",
       "D. Lograr supervivencia adaptándose a cambios regulatorios."
     ],
-    "solucion": "D"
+    "solucion": "A"
   },
   {
     "cuestion": "SIE-T1-09-Pregunta: ¿Qué objetivo estratégico persiguen los bancos al instalar cajeros automáticos para no perder clientes?",
@@ -92,12 +92,12 @@
   {
     "cuestion": "SIE-T1-10-Pregunta: ¿Qué característica de calidad de un SI se refiere a que la información llegue a tiempo para actuar?",
     "opciones": [
-      "A. Oportunidad, que la información llegue a tiempo para actuar.",
-      "B. Generalidad, versatilidad del sistema para múltiples usos.",
-      "C. Fiabilidad, que el sistema sea confiable y seguro.",
-      "D. Exactitud, que la información esté libre de errores."
+      "A. Oportunidad.",
+      "B. Generalidad.",
+      "C. Fiabilidad.",
+      "D. Exactitud."
     ],
-    "solucion": "B"
+    "solucion": "A"
   },
   {
     "cuestion": "SIE-T1-11-Pregunta: ¿A qué se refiere la 'Generalidad' en un SI?",
@@ -107,7 +107,7 @@
       "C. La capacidad de estar disponible sin interrupciones.",
       "D. La facilidad de uso para empleados sin formación técnica."
     ],
-    "solucion": "C"
+    "solucion": "A"
   },
   {
     "cuestion": "SIE-T1-12-Pregunta: ¿Cuál es un inconveniente de los SIE 'no integrados'?",
@@ -117,7 +117,7 @@
       "C. Posibilidad de personalizar cada sistema a necesidades departamentales.",
       "D. Reducción de costes operacionales al mantener sistemas antiguos."
     ],
-    "solucion": "D"
+    "solucion": "A"
   },
   {
     "cuestion": "SIE-T1-13-Pregunta: ¿Qué sistema abarca de forma integral la empresa?",
@@ -377,7 +377,7 @@
       "C. Aumentar el ticket promedio sin valor adicional.",
       "D. Reducir el número de interacciones con clientes."
     ],
-    "solucion": "B"
+    "solucion": "A"
   },
   {
     "cuestion": "SIE-T2-39-Pregunta: ¿Qué es la 'Intimidad con clientes y proveedores' como objetivo estratégico?",
@@ -387,7 +387,7 @@
       "C. Ser amigos personales de todos ellos.",
       "D. Comprar sus empresas para integrar verticalmente."
     ],
-    "solucion": "C"
+    "solucion": "A"
   },
   {
     "cuestion": "SIE-T2-40-Pregunta: ¿Qué es el ERP 'AdventureWorks' mencionado en clase?",
@@ -397,7 +397,7 @@
       "C. Un competidor empresarial de SAP en mercados latinoamericanos.",
       "D. Una plataforma de e-commerce para venta en línea."
     ],
-    "solucion": "D"
+    "solucion": "A"
   },
   {
     "cuestion": "SIE-T2-41-Pregunta: ¿Qué caracteriza a los 'Niche Players' en el cuadrante de Gartner?",
@@ -417,7 +417,7 @@
       "C. Una lista de precios de proveedores y competidores.",
       "D. Un sistema de transporte de mercancías entre centros."
     ],
-    "solucion": "B"
+    "solucion": "A"
   },
   {
     "cuestion": "SIE-T2-43-Pregunta: ¿Cuál es un reto actual de los sistemas empresariales?",
@@ -427,7 +427,7 @@
       "C. Usar menos memoria RAM y procesadores menos potentes.",
       "D. Eliminar la conexión a internet para seguridad total."
     ],
-    "solucion": "C"
+    "solucion": "A"
   },
   {
     "cuestion": "SIE-T1-44-Pregunta: ¿Qué es la 'Exactitud' en un SI?",
@@ -437,7 +437,7 @@
       "C. Que se entregue en tiempo oportuno.",
       "D. Que sea transmisible a otros usuarios del sistema."
     ],
-    "solucion": "D"
+    "solucion": "A"
   },
   {
     "cuestion": "SIE-T1-45-Pregunta: ¿Cuál es una característica de los SIE modernos?",
@@ -477,7 +477,7 @@
       "C. Spotify lider en servicios de música en línea.",
       "D. WhatsApp en comunicaciones empresariales."
     ],
-    "solucion": "D"
+    "solucion": "A"
   },
   {
     "cuestion": "SIE-T2-49-Pregunta: ¿Qué es el 'Total Cost of Ownership' (TCO) en un ERP?",
@@ -510,7 +510,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "SIE-T1-52-Pregunta: El componente 'Procedimientos' en un SI se refiere específicamente a:",
+    "cuestion": "SIE-T1-52-Pregunta: ¿Qué es un procedimiento?",
     "opciones": [
       "A. El código fuente de las aplicaciones.",
       "B. Los cables de red y servidores.",
@@ -530,7 +530,6 @@
     "solucion": "A"
   },
   {
-    "cuestion": "SIE-T1-54-Pregunta: ¿Cómo se define el proceso de 'Retroalimentación' (feedback) en un SI?",
     "opciones": [
       "A. El borrado de datos antiguos.",
       "B. La salida que se devuelve a la entrada para evaluar y corregir el sistema.",
@@ -540,7 +539,6 @@
     "solucion": "B"
   },
   {
-    "cuestion": "SIE-T1-55-Pregunta: ¿Qué nivel de la organización utiliza principalmente los Sistemas de Apoyo a Decisiones (DSS)?",
     "opciones": [
       "A. Nivel Operativo.",
       "B. Nivel de Conocimiento.",
@@ -550,7 +548,6 @@
     "solucion": "C"
   },
   {
-    "cuestion": "SIE-T1-56-Pregunta: Los Sistemas de Apoyo a Ejecutivos (ESS) están diseñados para:",
     "opciones": [
       "A. Registrar las ventas diarias una a una.",
       "B. Controlar el inventario del almacén.",
@@ -560,7 +557,6 @@
     "solucion": "D"
   },
   {
-    "cuestion": "SIE-T1-57-Pregunta: ¿Qué tipo de sistema se encarga de monitorizar las actividades y transacciones elementales de la organización?",
     "opciones": [
       "A. TPS (Sistemas de Procesamiento de Transacciones).",
       "B. MIS (Sistemas de Información Gerencial).",
