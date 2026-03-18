@@ -530,6 +530,7 @@
     "solucion": "A"
   },
   {
+    "cuestion": "SIE-T1-54-Pregunta: ¿Qué describe el concepto de retroalimentación?",
     "opciones": [
       "A. El borrado de datos antiguos.",
       "B. La salida que se devuelve a la entrada para evaluar y corregir el sistema.",
@@ -539,6 +540,7 @@
     "solucion": "B"
   },
   {
+    "cuestion": "SIE-T1-55-Pregunta: ¿Cuál es el nivel de toma de decisiones que se ocupa del control de gestión?",
     "opciones": [
       "A. Nivel Operativo.",
       "B. Nivel de Conocimiento.",
@@ -548,6 +550,7 @@
     "solucion": "C"
   },
   {
+    "cuestion": "SIE-T1-56-Pregunta: El nivel estratégico de la organización es responsable de:",
     "opciones": [
       "A. Registrar las ventas diarias una a una.",
       "B. Controlar el inventario del almacén.",
@@ -557,6 +560,7 @@
     "solucion": "D"
   },
   {
+    "cuestion": "SIE-T1-57-Pregunta: ¿Cuál de los siguientes es un tipo de sistema de información empresarial?",
     "opciones": [
       "A. TPS (Sistemas de Procesamiento de Transacciones).",
       "B. MIS (Sistemas de Información Gerencial).",

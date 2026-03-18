@@ -256,15 +256,15 @@ class SimuladorExamen {
         this.preguntas = [];
         this.preguntaActual = 0;
         this.respuestas = {};
-        this.sinResponder = new Set(); // Para marcar preguntas sin responder
+        this.sinResponder = new Set();
         this.tiempoInicio = Date.now();
         this.tiempoLimiteMs = this.modo === 'examen' ? TIEMPO_EXAMEN_MINUTOS * 60 * 1000 : null;
         this.timerId = null;
         this.bloqueadoPorTiempo = false;
-        this.erroresDelTest = []; // Para guardar errores del test actual
-        this.keyboardHandler = null; // Para guardar referencia al handler del teclado
-        this.opcionEnfocada = 0; // Índice de la opción actualmente enfocada
-        this.focoActivo = false; // Indicador de si el foco visual está activo
+        this.erroresDelTest = [];
+        this.keyboardHandler = null;
+        this.opcionEnfocada = 0;
+        this.focoActivo = false;
         this.inicializar();
     }
 
@@ -279,15 +279,13 @@ class SimuladorExamen {
         }
 
         if (this.modo === 'examen') {
-            // Modo examen: siempre 50 preguntas, 10 de cada uno de los 5 temas
             this.preguntas = this.seleccionarPreguntasExamen();
             if (!this.preguntas || this.preguntas.length < TOTAL_PREGUNTAS_EXAMEN) {
-                alert('No hay suficientes preguntas para generar este parcial de examen (se requieren 30).');
+                alert('No hay suficientes preguntas para generar este parcial de examen.');
                 this.reiniciar();
                 return;
             }
         } else if (this.modo === 'fallos') {
-            // Modo fallos: todas las preguntas falladas guardadas
             this.preguntas = gestorFallos.obtenerFallos();
             if (this.preguntas.length === 0) {
                 alert('No hay preguntas falladas guardadas');
@@ -295,7 +293,6 @@ class SimuladorExamen {
                 return;
             }
         } else {
-            // Modo práctica: 25 preguntas distribuidas entre temas del parcial seleccionado
             const ordenarPorTema = configuracion.get('ordenarPorTema');
             const temasParcial = this.obtenerTemasExamen();
             const temasSeleccionados = configuracion.get('temasSeleccionados') || [...temasParcial];
@@ -304,7 +301,7 @@ class SimuladorExamen {
 
             this.preguntas = this.seleccionarPreguntasPractica(temasPractica, ordenarPorTema);
             if (!this.preguntas || this.preguntas.length === 0) {
-                alert('No hay preguntas disponibles para el parcial seleccionado en modo práctica.');
+                alert('No hay preguntas disponibles para el parcial seleccionado.');
                 this.reiniciar();
                 return;
             }
@@ -319,14 +316,11 @@ class SimuladorExamen {
     }
 
     iniciarNavegacionTeclado() {
-        // Remover handler anterior si existe
         if (this.keyboardHandler) {
             document.removeEventListener('keydown', this.keyboardHandler);
         }
 
-        // Crear y guardar el nuevo handler
         this.keyboardHandler = (e) => {
-            // Ignorar si estamos en un input/textarea
             if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
                 return;
             }
@@ -338,7 +332,6 @@ class SimuladorExamen {
                     break;
                 case 'ArrowRight':
                     e.preventDefault();
-                    // Si estamos en la última pregunta, finalizar en lugar de avanzar
                     if (this.preguntaActual >= this.preguntas.length - 1) {
                         this.terminar();
                     } else {
@@ -390,7 +383,7 @@ class SimuladorExamen {
 
         const totalOpciones = pregunta.opciones.length;
         this.opcionEnfocada = (this.opcionEnfocada + direccion + totalOpciones) % totalOpciones;
-        this.focoActivo = true; // Activar el foco visual
+        this.focoActivo = true;
         this.actualizarFocoVisual();
     }
 
@@ -412,13 +405,11 @@ class SimuladorExamen {
             return;
         }
 
-        // En modo práctica: no permitir cambiar si ya está respondida
         const yaRespondida = this.respuestas.hasOwnProperty(this.preguntaActual);
         if (this.modo === 'practica' && yaRespondida) {
             return;
         }
 
-        // Actualizar el foco a la opción seleccionada
         this.opcionEnfocada = indice;
         this.responderPregunta(indice);
     }
@@ -428,7 +419,6 @@ class SimuladorExamen {
         const totalPreguntas = 25;
         const poolTemasSeleccionados = pool.filter(p => temasSeleccionados.includes(this.extraerTema(p)));
 
-        // Agrupar preguntas por tema
         const grupos = new Map();
         for (const pregunta of pool) {
             const tema = this.extraerTema(pregunta);
@@ -437,7 +427,6 @@ class SimuladorExamen {
             grupos.get(tema).push(pregunta);
         }
 
-        // Calcular preguntas por tema
         const numTemas = temasSeleccionados.length;
         const preguntasPorTema = Math.floor(totalPreguntas / numTemas);
         const preguntasExtras = totalPreguntas % numTemas;
@@ -445,7 +434,6 @@ class SimuladorExamen {
         const seleccion = [];
 
         if (ordenarPorTema) {
-            // Mantener orden por temas
             temasSeleccionados.forEach((tema, index) => {
                 const preguntasTema = grupos.get(tema) || [];
                 const cantidad = preguntasPorTema + (index < preguntasExtras ? 1 : 0);
@@ -453,7 +441,6 @@ class SimuladorExamen {
                 seleccion.push(...preguntasMezcladas.slice(0, cantidad));
             });
         } else {
-            // Orden aleatorio
             const preguntasPorTemaTemporal = [];
             temasSeleccionados.forEach((tema, index) => {
                 const preguntasTema = grupos.get(tema) || [];
@@ -478,7 +465,6 @@ class SimuladorExamen {
     }
 
     seleccionarPreguntas(cantidad, ordenarPorTema = false) {
-        // Esta función ya no se usa, mantenida por compatibilidad
         return this.seleccionarPreguntasPractica([1, 2, 3, 4, 5], ordenarPorTema);
     }
 
@@ -672,8 +658,7 @@ class SimuladorExamen {
     }
 
     extraerTema(pregunta) {
-        // Busca el patrón -T1-, -T2-, etc.
-        const match = pregunta.cuestion.match(/-T([1-5])-/i);
+        const match = pregunta.cuestion.match(/T([1-5])-/i);
         if (match && match[1]) {
             return parseInt(match[1]);
         }
@@ -769,12 +754,11 @@ class SimuladorExamen {
             return this.barajar(array);
         }
 
-        // Dividir preguntas en 3 grupos según historial
         const noVistas = [];
         const vistasAntiguas = [];
         const vistasRecientes = [];
 
-        const umbralReciente = 50; // Últimas 50 preguntas se consideran "recientes"
+        const umbralReciente = 50;
 
         for (const pregunta of array) {
             const prioridad = gestorHistorial.obtenerPrioridad(pregunta);
@@ -788,24 +772,19 @@ class SimuladorExamen {
             }
         }
 
-        // Estrategia de selección: priorizar no vistas, luego antiguas, luego recientes
         const seleccion = [];
 
-        // 1. Tomar de no vistas
         const deNoVistas = Math.min(noVistas.length, n);
         seleccion.push(...this.barajar(noVistas).slice(0, deNoVistas));
 
-        // 2. Si faltan, tomar de antiguas
         if (seleccion.length < n && vistasAntiguas.length > 0) {
             const faltan = n - seleccion.length;
             const deAntiguas = Math.min(vistasAntiguas.length, faltan);
             seleccion.push(...this.barajar(vistasAntiguas).slice(0, deAntiguas));
         }
 
-        // 3. Si aún faltan, tomar de recientes (pero las menos recientes primero)
         if (seleccion.length < n && vistasRecientes.length > 0) {
             const faltan = n - seleccion.length;
-            // Ordenar por prioridad descendente (menos recientes primero)
             vistasRecientes.sort((a, b) =>
                 gestorHistorial.obtenerPrioridad(b) - gestorHistorial.obtenerPrioridad(a)
             );
@@ -816,12 +795,8 @@ class SimuladorExamen {
     }
 
     seleccionarPreguntasExamen() {
-        // Modo examen oficial: 20 preguntas, parcial configurable
         const pool = PREGUNTAS_COMPLETAS.filter(p => !this.esGaitero(p));
         const temasExamen = this.obtenerTemasExamen();
-        const esParcial2 =
-            temasExamen.length === PARCIALES_EXAMEN.parcial2.length &&
-            PARCIALES_EXAMEN.parcial2.every(tema => temasExamen.includes(tema));
         const poolParcial = pool.filter(p => temasExamen.includes(this.extraerTema(p)));
 
         if (poolParcial.length < TOTAL_PREGUNTAS_EXAMEN) {
@@ -847,13 +822,7 @@ class SimuladorExamen {
             const cuotaTema = preguntasPorTemaBase + (indiceTema < extras ? 1 : 0);
 
             let elegidas = [];
-            if (tema === 3) {
-                elegidas = this.seleccionarTema3ConUnaTabla(preguntasTema, cuotaTema);
-            } else if (tema === 4 && esParcial2) {
-                elegidas = this.seleccionarTema4ConUnaPractica(preguntasTema, cuotaTema);
-            } else {
-                elegidas = this.sample(preguntasTema, cuotaTema);
-            }
+            elegidas = this.sample(preguntasTema, cuotaTema);
 
             for (const p of elegidas) {
                 seleccion.push(p);
@@ -861,12 +830,9 @@ class SimuladorExamen {
             }
         });
 
-        // Completar hasta 30 desde el parcial (evitar tablas extra de T3)
         if (seleccion.length < TOTAL_PREGUNTAS_EXAMEN) {
-            const yaTieneTablaT3 = seleccion.some(p => this.esTablaTema3(p));
             const restantes = poolParcial.filter(p => {
                 if (seleccionSet.has(p.cuestion)) return false;
-                if (yaTieneTablaT3 && this.esTablaTema3(p)) return false;
                 return true;
             });
             const faltan = TOTAL_PREGUNTAS_EXAMEN - seleccion.length;
@@ -879,42 +845,13 @@ class SimuladorExamen {
             poolParcial.length > 0 ? poolParcial : pool
         );
 
-        const validarRequisitosParcial2 = (lista) => {
-            if (!esParcial2) return true;
-            const tieneTablaTema3 = lista.some(p => this.esTablaTema3(p));
-            const tienePracticaTema4 = lista.some(p => this.esPracticaTema4(p));
-            return tieneTablaTema3 && tienePracticaTema4;
-        };
-
-        // Regla oficial interna: en T3 debe aparecer exactamente 1 ejercicio con tabla
-        const tablasT3 = seleccionNormalizada.filter(p => this.esTablaTema3(p));
-        if (temasExamen.includes(3) && tablasT3.length > 1) {
-            const primeraTabla = tablasT3[0];
-            const filtrada = seleccionNormalizada.filter(p => !this.esTablaTema3(p) || p.cuestion === primeraTabla.cuestion);
-
-            const restantesSinTablaT3 = this.barajar(
-                (poolParcial.length > 0 ? poolParcial : pool).filter(p =>
-                    !filtrada.some(s => s.cuestion === p.cuestion) && !this.esTablaTema3(p)
-                )
-            );
-
-            while (filtrada.length < TOTAL_PREGUNTAS_EXAMEN && restantesSinTablaT3.length > 0) {
-                filtrada.push(restantesSinTablaT3.shift());
-            }
-
-            const finalFiltrada = this.barajarRespetandoDependencias(filtrada).slice(0, TOTAL_PREGUNTAS_EXAMEN);
-            return validarRequisitosParcial2(finalFiltrada) ? finalFiltrada : [];
-        }
-
-        // Orden aleatorio final, respetando bloques de dependencia
         const final = this.barajarRespetandoDependencias(seleccionNormalizada).slice(0, TOTAL_PREGUNTAS_EXAMEN);
-        return validarRequisitosParcial2(final) ? final : [];
+        return final;
     }
 
     mostrarPregunta() {
         const pregunta = this.preguntas[this.preguntaActual];
 
-        // Resetear el foco a la primera opción y desactivar el foco visual
         this.opcionEnfocada = 0;
         this.focoActivo = false;
 
@@ -941,7 +878,6 @@ class SimuladorExamen {
             const boton = document.createElement('button');
             boton.className = 'opcion';
 
-            // Agregar número de tecla al inicio
             const numeroTecla = document.createElement('span');
             numeroTecla.style.cssText = 'display: inline-block; background: #3a3a3a; padding: 2px 6px; border-radius: 3px; margin-right: 8px; font-size: 11px; color: #00d4ff;';
             numeroTecla.textContent = (indice + 1);
@@ -956,7 +892,6 @@ class SimuladorExamen {
                 boton.classList.add('seleccionada');
             }
 
-            // En modo práctica: bloquear opciones una vez respondida
             if (this.modo === 'practica' && yaRespondida) {
                 boton.disabled = true;
                 boton.style.cursor = 'not-allowed';
@@ -968,11 +903,8 @@ class SimuladorExamen {
             contenedor.appendChild(boton);
         });
 
-        // No aplicar foco visual por defecto, solo cuando se use arriba/abajo
-
         const btnAnterior = document.getElementById('btnAnterior');
         const btnSiguiente = document.getElementById('btnSiguiente');
-        const btnNoResponder = document.getElementById('btnNoResponder');
 
         if (this.modo === 'examen') {
             btnAnterior.classList.remove('oculto');
@@ -1086,15 +1018,11 @@ class SimuladorExamen {
 
     responderPregunta(indice) {
         if (this.modo === 'practica') {
-            // En práctica: seleccionar y bloquear (como antes)
             this.respuestas[this.preguntaActual] = indice;
         } else {
-            // En examen: toggle (puedo desseleccionar y cambiar)
             if (this.respuestas[this.preguntaActual] === indice) {
-                // Si ya está seleccionada, deseleccionar
                 delete this.respuestas[this.preguntaActual];
             } else {
-                // Seleccionar opción
                 this.respuestas[this.preguntaActual] = indice;
             }
         }
@@ -1147,7 +1075,6 @@ class SimuladorExamen {
                 if (esCorrecta) {
                     correctas++;
                 } else {
-                    // Guardar error del test actual
                     const indiceCorrecto = this.obtenerIndiceCorrecto(pregunta);
                     this.erroresDelTest.push({
                         pregunta: pregunta.cuestion,
@@ -1155,7 +1082,6 @@ class SimuladorExamen {
                         respuestaCorrecta: pregunta.opciones[indiceCorrecto]
                     });
 
-                    // Guardar en el gestor de fallos (todos los modos)
                     gestorFallos.agregarFallo(
                         pregunta,
                         pregunta.opciones[indiceRespuesta],
@@ -1163,7 +1089,6 @@ class SimuladorExamen {
                     );
                 }
             } else {
-                // Todas las preguntas no respondidas se agregan al test de fallos
                 const indiceCorrecto = this.obtenerIndiceCorrecto(pregunta);
                 gestorFallos.agregarFallo(
                     pregunta,
@@ -1177,14 +1102,10 @@ class SimuladorExamen {
         const incorrectas = respondidas - correctas;
         const sinResponder = this.preguntas.length - respondidas;
 
-        // Nota sobre 10 con penalización de 1/3 por respuesta incorrecta.
-        // Las no respondidas no penalizan.
         const npv = this.preguntas.length;
         const nc = correctas;
-        const ni = incorrectas;
-        const puntuacionBruta = nc - (ni / 3);
-        const puntuacionFinal = npv > 0
-            ? Math.max(0, Math.min(10, (puntuacionBruta / npv) * 10))
+        const puntuacionFinal = npv > 2
+            ? Math.max(0, Math.min(10, (10 / (npv - 2)) * (nc - 2)))
             : 0;
 
         document.getElementById('respuestasCorrectas').textContent = correctas;
@@ -1192,7 +1113,6 @@ class SimuladorExamen {
         document.getElementById('sinResponder').textContent = sinResponder;
         document.getElementById('puntuacionFinal').textContent = puntuacionFinal.toFixed(2) + '/10';
 
-        // Mostrar detalle de errores
         this.mostrarDetalleErrores();
 
         document.getElementById('examen').classList.add('oculto');
@@ -1202,7 +1122,6 @@ class SimuladorExamen {
     mostrarDetalleErrores() {
         const contenedor = document.getElementById('erroresDetalle');
 
-        // Recopilar preguntas no respondidas (todas las que no tienen respuesta)
         const preguntasNoRespondidas = [];
         this.preguntas.forEach((pregunta, indice) => {
             if (!this.respuestas.hasOwnProperty(indice)) {
@@ -1221,7 +1140,6 @@ class SimuladorExamen {
         contenedor.classList.remove('oculto');
         let html = '';
 
-        // Mostrar preguntas falladas
         if (this.erroresDelTest.length > 0) {
             html += '<h3 style="color: #ef4444; margin-bottom: 15px;">📋 Preguntas Falladas</h3>';
             this.erroresDelTest.forEach((error, index) => {
@@ -1239,7 +1157,6 @@ class SimuladorExamen {
             });
         }
 
-        // Mostrar preguntas no respondidas
         if (preguntasNoRespondidas.length > 0) {
             if (this.erroresDelTest.length > 0) {
                 html += '<hr style="border: none; border-top: 1px solid #3a3a3a; margin: 20px 0;">';
@@ -1265,7 +1182,6 @@ class SimuladorExamen {
 
     reiniciar() {
         this.detenerTiempo();
-        // Limpiar el event listener del teclado
         if (this.keyboardHandler) {
             document.removeEventListener('keydown', this.keyboardHandler);
             this.keyboardHandler = null;
@@ -1318,7 +1234,6 @@ class SimuladorExamen {
 
 let app;
 
-// Mostrar total de preguntas en el encabezado
 function mostrarTotalPreguntas() {
     const totalElement = document.getElementById('totalPreguntasInfo');
     if (totalElement && PREGUNTAS_COMPLETAS.length > 0) {
@@ -1366,13 +1281,11 @@ function actualizarConfigUI() {
     }
 }
 
-// Funciones globales para configuración
 function toggleConfig(clave) {
     const nuevoValor = configuracion.toggle(clave);
     actualizarConfigUI();
 }
 
-// Importar/Exportar fallos
 function exportarFallos() {
     try {
         const perfilActual = configuracion.get('perfilActual') || 'default';
@@ -1410,7 +1323,6 @@ function importarFallosDesdeArchivo(event) {
         try {
             const datos = JSON.parse(reader.result);
 
-            // Verificar formato nuevo (con perfil)
             if (datos.fallos && Array.isArray(datos.fallos)) {
                 const mensaje = `¿Importar ${datos.fallos.length} fallos del perfil "${datos.nombrePerfil || 'Desconocido'}"?\n\nEsto reemplazará los fallos actuales del perfil activo.`;
                 if (!confirm(mensaje)) return;
@@ -1418,17 +1330,14 @@ function importarFallosDesdeArchivo(event) {
                 gestorFallos.fallos = datos.fallos;
                 gestorFallos.guardarFallos();
                 actualizarContadorFallos();
-                actualizarEstadisticasPerfil();
                 alert('Fallos importados correctamente');
             }
-            // Formato antiguo (array directo)
             else if (Array.isArray(datos)) {
                 if (!confirm(`¿Importar ${datos.length} fallos?\nEsto reemplazará los fallos actuales del perfil activo.`)) return;
 
                 gestorFallos.fallos = datos;
                 gestorFallos.guardarFallos();
                 actualizarContadorFallos();
-                actualizarEstadisticasPerfil();
                 alert('Fallos importados correctamente');
             }
             else {
@@ -1445,18 +1354,14 @@ function toggleTema(numeroTema) {
     let temasSeleccionados = configuracion.get('temasSeleccionados') || [1, 2, 3, 4, 5];
 
     if (temasSeleccionados.includes(numeroTema)) {
-        // Si ya está seleccionado, quitarlo
         temasSeleccionados = temasSeleccionados.filter(t => t !== numeroTema);
-        // Asegurar que al menos un tema quede seleccionado
         if (temasSeleccionados.length === 0) {
             alert('Debes seleccionar al menos un tema');
-            // Restaurar el checkbox
             const checkbox = document.querySelector(`input[type="checkbox"][value="${numeroTema}"]`);
             if (checkbox) checkbox.checked = true;
             return;
         }
     } else {
-        // Si no está seleccionado, agregarlo
         temasSeleccionados.push(numeroTema);
         temasSeleccionados.sort((a, b) => a - b);
     }
@@ -1547,8 +1452,6 @@ function iniciarModo(modo) {
     app = new SimuladorExamen(modo);
 }
 
-// ========== GESTIÓN DE PERFILES DE USUARIO ==========
-
 function cargarPerfiles() {
     const select = document.getElementById('perfilSelect');
     if (!select) return;
@@ -1556,10 +1459,8 @@ function cargarPerfiles() {
     const perfilActual = configuracion.get('perfilActual') || 'default';
     const perfiles = configuracion.get('perfiles') || {};
 
-    // Limpiar opciones
     select.innerHTML = '<option value="default">Usuario Principal</option>';
 
-    // Agregar perfiles personalizados
     Object.keys(perfiles).forEach(id => {
         if (id !== 'default') {
             const option = document.createElement('option');
@@ -1569,17 +1470,13 @@ function cargarPerfiles() {
         }
     });
 
-    // Seleccionar el perfil actual
     select.value = perfilActual;
 
-    // Actualizar botón de eliminar
     const btnEliminar = document.getElementById('btnEliminar');
     if (btnEliminar) {
         btnEliminar.disabled = perfilActual === 'default';
         btnEliminar.style.opacity = perfilActual === 'default' ? '0.5' : '1';
     }
-
-    actualizarEstadisticasPerfil();
 }
 
 function crearNuevoPerfil() {
@@ -1598,74 +1495,60 @@ function crearNuevoPerfil() {
     configuracion.set('perfiles', perfiles);
     configuracion.set('perfilActual', id);
 
-    // Cambiar al nuevo perfil
     gestorFallos.cambiarUsuario();
     gestorHistorial.cambiarUsuario();
     cargarPerfiles();
-    actualizarContadorFallos();
 }
 
 function cambiarPerfil() {
     const select = document.getElementById('perfilSelect');
     if (!select) return;
-
-    const nuevoPerfil = select.value;
-    configuracion.set('perfilActual', nuevoPerfil);
-
-    // Recargar los fallos del nuevo perfil
+    configuracion.set('perfilActual', select.value);
     gestorFallos.cambiarUsuario();
     gestorHistorial.cambiarUsuario();
     cargarPerfiles();
-    actualizarContadorFallos();
 }
 
 function eliminarPerfilActual() {
     const perfilActual = configuracion.get('perfilActual');
-    if (perfilActual === 'default') {
-        alert('No puedes eliminar el perfil principal');
-        return;
-    }
+    if (perfilActual === 'default') return;
+
+    if (!confirm('¿Estás seguro de que quieres eliminar este perfil?')) return;
 
     const perfiles = configuracion.get('perfiles') || {};
-    const nombrePerfil = perfiles[perfilActual]?.nombre || perfilActual;
-
-    if (!confirm(`¿Estás seguro de eliminar el perfil "${nombrePerfil}"?\nEsto borrará todos los fallos registrados en este perfil.`)) {
-        return;
-    }
-
-    // Eliminar el perfil
     delete perfiles[perfilActual];
     configuracion.set('perfiles', perfiles);
-
-    // Volver al perfil default
     configuracion.set('perfilActual', 'default');
+
     gestorFallos.cambiarUsuario();
     gestorHistorial.cambiarUsuario();
     cargarPerfiles();
-    actualizarContadorFallos();
+    alert('Perfil eliminado correctamente');
 }
 
 function actualizarEstadisticasPerfil() {
+    const perfilActual = configuracion.get('perfilActual') || 'default';
+    const perfiles = configuracion.get('perfiles') || {};
+    const perfilData = perfiles[perfilActual];
     const statsDiv = document.getElementById('perfilStats');
+
     if (!statsDiv) return;
 
-    const perfilActual = configuracion.get('perfilActual');
-    const perfiles = configuracion.get('perfiles') || {};
-    const totalFallos = gestorFallos.obtenerFallos().length;
-
-    let texto = `📊 Fallos registrados: ${totalFallos}`;
-
-    if (perfilActual !== 'default' && perfiles[perfilActual]) {
-        const perfil = perfiles[perfilActual];
-        const fecha = new Date(perfil.fechaCreacion).toLocaleDateString();
-        texto += ` | Creado: ${fecha}`;
+    let texto = '';
+    if (perfilActual === 'default') {
+        texto = '👤 Usuario Principal';
+    } else if (perfilData) {
+        texto = `👤 ${perfilData.nombre}`;
+        if (perfilData.fechaCreacion) {
+            const fecha = new Date(perfilData.fechaCreacion).toLocaleDateString();
+            texto += ` | Creado: ${fecha}`;
+        }
     }
 
     statsDiv.textContent = texto;
 }
 
 window.addEventListener('DOMContentLoaded', async () => {
-    // Primero cargar las preguntas desde GitHub
     const cargaExitosa = await cargarPreguntasDesdeJSON();
 
     if (!cargaExitosa) {
@@ -1673,7 +1556,6 @@ window.addEventListener('DOMContentLoaded', async () => {
         return;
     }
 
-    // Una vez cargadas las preguntas, inicializar la aplicación
     document.getElementById('examen').classList.add('oculto');
     document.getElementById('resultados').classList.add('oculto');
     document.getElementById('seleccionModo').classList.remove('oculto');
@@ -1689,5 +1571,3 @@ window.addEventListener('DOMContentLoaded', async () => {
     actualizarParcialExamenUI();
     actualizarTemasUI();
 });
-
-
