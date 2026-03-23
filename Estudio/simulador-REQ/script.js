@@ -68,8 +68,8 @@ async function cargarPreguntasDesdeJSON() {
 }
 
 // Configuración del modo examen
-// Formato oficial: 50 preguntas, 60 minutos
-const TOTAL_PREGUNTAS_EXAMEN = 50;
+// Formato oficial: 30 preguntas, 60 minutos
+const TOTAL_PREGUNTAS_EXAMEN = 30;
 const TIEMPO_EXAMEN_MINUTOS = 60;
 const PENALIZACION_ERROR = 1 / 3;
 const PARCIALES_EXAMEN = {
