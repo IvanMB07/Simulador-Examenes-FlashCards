@@ -272,6 +272,7 @@ class SimuladorExamen {
         this.preguntas = [];
         this.preguntaActual = 0;
         this.respuestas = {};
+        this.practicaBloqueadas = new Set();
         this.sinResponder = new Set();
         this.tiempoInicio = Date.now();
         this.tiempoLimiteMs = this.modo === 'examen' ? TIEMPO_EXAMEN_MINUTOS * 60 * 1000 : null;
@@ -323,6 +324,7 @@ class SimuladorExamen {
             }
         }
         this.respuestas = {};
+        this.practicaBloqueadas = new Set();
         this.sinResponder = new Set();
         this.preguntaActual = 0;
         this.tiempoInicio = Date.now();
@@ -896,6 +898,7 @@ class SimuladorExamen {
         const contenedor = document.getElementById('opcionesContenedor');
         contenedor.innerHTML = '';
         const seleccionActual = this.normalizarSeleccion(this.respuestas[this.preguntaActual] || []);
+        const bloqueadaEnPractica = this.modo === 'practica' && this.practicaBloqueadas.has(this.preguntaActual);
 
         pregunta.opciones.forEach((opcion, indice) => {
             const boton = document.createElement('button');
@@ -915,13 +918,20 @@ class SimuladorExamen {
                 boton.classList.add('seleccionada');
             }
 
-            boton.onclick = () => this.responderPregunta(indice);
+            if (bloqueadaEnPractica) {
+                boton.disabled = true;
+                boton.style.cursor = 'not-allowed';
+                boton.style.opacity = '0.85';
+            } else {
+                boton.onclick = () => this.responderPregunta(indice);
+            }
 
             contenedor.appendChild(boton);
         });
 
         const btnAnterior = document.getElementById('btnAnterior');
         const btnSiguiente = document.getElementById('btnSiguiente');
+        const btnComprobarPractica = document.getElementById('btnComprobarPractica');
 
         if (this.modo === 'examen') {
             btnAnterior.classList.remove('oculto');
@@ -933,13 +943,23 @@ class SimuladorExamen {
 
         btnSiguiente.disabled = this.preguntaActual >= this.preguntas.length - 1;
 
+        if (btnComprobarPractica) {
+            if (this.modo !== 'practica') {
+                btnComprobarPractica.classList.add('oculto');
+            } else {
+                const mostrarComprobar = esMultiple && !bloqueadaEnPractica;
+                btnComprobarPractica.classList.toggle('oculto', !mostrarComprobar);
+                btnComprobarPractica.disabled = !mostrarComprobar || seleccionActual.length === 0;
+            }
+        }
+
         const progreso = ((this.preguntaActual + 1) / this.preguntas.length) * 100;
         document.getElementById('progresoBarra').style.width = progreso + '%';
         document.getElementById('numeroPregunta').textContent = this.preguntaActual + 1;
         const totalPreguntasActual = document.getElementById('totalPreguntasActual');
         if (totalPreguntasActual) totalPreguntasActual.textContent = this.preguntas.length;
 
-        if (this.modo === 'practica') {
+        if (this.modo === 'practica' && this.practicaBloqueadas.has(this.preguntaActual)) {
             this.aplicarFeedback();
         }
     }
@@ -1078,14 +1098,56 @@ class SimuladorExamen {
     }
 
     responderPregunta(indice) {
-        const seleccionActual = this.normalizarSeleccion(this.respuestas[this.preguntaActual] || []);
-
-        if (seleccionActual.includes(indice)) {
-            this.respuestas[this.preguntaActual] = seleccionActual.filter(i => i !== indice);
-        } else {
-            this.respuestas[this.preguntaActual] = [...seleccionActual, indice].sort((a, b) => a - b);
+        const pregunta = this.preguntas[this.preguntaActual];
+        if (this.modo === 'practica' && this.practicaBloqueadas.has(this.preguntaActual)) {
+            return;
         }
 
+        const seleccionActual = this.normalizarSeleccion(this.respuestas[this.preguntaActual] || []);
+        const esMultiple = this.esPreguntaMultiple(pregunta);
+
+        if (!esMultiple) {
+            if (this.modo === 'practica') {
+                this.respuestas[this.preguntaActual] = [indice];
+                this.practicaBloqueadas.add(this.preguntaActual);
+            } else {
+                if (seleccionActual.length === 1 && seleccionActual[0] === indice) {
+                    this.respuestas[this.preguntaActual] = [];
+                } else {
+                    this.respuestas[this.preguntaActual] = [indice];
+                }
+            }
+        } else {
+            if (seleccionActual.includes(indice)) {
+                this.respuestas[this.preguntaActual] = seleccionActual.filter(i => i !== indice);
+            } else {
+                this.respuestas[this.preguntaActual] = [...seleccionActual, indice].sort((a, b) => a - b);
+            }
+        }
+
+        this.mostrarPregunta();
+    }
+
+    comprobarRespuestaPractica() {
+        if (this.modo !== 'practica') return;
+
+        const pregunta = this.preguntas[this.preguntaActual];
+        if (!this.esPreguntaMultiple(pregunta)) return;
+
+        const seleccion = this.normalizarSeleccion(this.respuestas[this.preguntaActual] || []);
+        if (seleccion.length === 0) {
+            alert('Selecciona al menos una opción antes de comprobar.');
+            return;
+        }
+
+        const aciertoTotal = this.esRespuestaCorrecta(pregunta, seleccion);
+        if (!aciertoTotal) {
+            this.practicaBloqueadas.add(this.preguntaActual);
+            this.mostrarPregunta();
+            return;
+        }
+
+        this.practicaBloqueadas.add(this.preguntaActual);
         this.mostrarPregunta();
     }
 
