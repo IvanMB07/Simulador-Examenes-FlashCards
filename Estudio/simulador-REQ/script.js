@@ -1040,10 +1040,19 @@ class SimuladorExamen {
         const indices = [];
         for (const letra of letras) {
             const objetivo = `${letra}.`;
-            const indice = pregunta.opciones.findIndex(op => {
+            let indice = pregunta.opciones.findIndex(op => {
                 const opcion = op.trim();
                 return opcion.startsWith(objetivo) || opcion.charAt(0).toUpperCase() === letra;
             });
+
+            // Si el texto de opción no incluye prefijo (A./B./C./D.), usar posición alfabética.
+            if (indice < 0) {
+                const indicePorLetra = letra.charCodeAt(0) - 65;
+                if (indicePorLetra >= 0 && indicePorLetra < pregunta.opciones.length) {
+                    indice = indicePorLetra;
+                }
+            }
+
             if (indice >= 0) indices.push(indice);
         }
         return [...new Set(indices)].sort((a, b) => a - b);
