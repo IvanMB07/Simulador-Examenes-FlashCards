@@ -296,6 +296,22 @@ button {
     transform: translateY(-2px);
 }
 
+.acciones-resultados {
+    display: flex;
+    gap: 10px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+}
+
+.acciones-resultados button {
+    flex: 1 1 220px;
+}
+
+.acciones-resultados .btn-reiniciar,
+.acciones-resultados .btn-siguiente {
+    flex-basis: auto;
+}
+
 .resultados {
     text-align: center;
     padding: 30px;
