@@ -1639,8 +1639,13 @@ function actualizarTemasUI() {
 }
 
 function iniciarModo(modo) {
-    if (app && app.detenerTiempo) {
-        app.detenerTiempo();
+    if (app) {
+        if (app.detenerTiempo) app.detenerTiempo();
+        if (app.ocultarToastConfirmacion) app.ocultarToastConfirmacion();
+        if (app.keyboardHandler) {
+            document.removeEventListener('keydown', app.keyboardHandler);
+            app.keyboardHandler = null;
+        }
     }
 
     document.getElementById('seleccionModo').classList.add('oculto');
