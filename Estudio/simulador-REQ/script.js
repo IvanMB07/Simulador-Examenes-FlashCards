@@ -282,6 +282,8 @@ class SimuladorExamen {
         this.keyboardHandler = null;
         this.opcionEnfocada = 0;
         this.focoActivo = false;
+        this.ultimoIntentoTerminar = 0;
+        this.toastTimer = null;
         this.inicializar();
     }
 
@@ -1177,11 +1179,76 @@ class SimuladorExamen {
             ? `¿Seguro que quieres terminar el examen?\n\nTe quedan ${sinResponder} preguntas sin responder.`
             : '¿Seguro que quieres terminar el examen?';
 
-        if (!confirm(mensaje)) {
-            return;
+        if (this.debeUsarConfirmacionMovil()) {
+            if (!this.confirmarConDobleToque(sinResponder)) {
+                return;
+            }
+        } else {
+            if (!confirm(mensaje)) {
+                return;
+            }
         }
 
         this.mostrarResultados();
+    }
+
+    debeUsarConfirmacionMovil() {
+        const tactil = typeof window.matchMedia === 'function' && window.matchMedia('(pointer: coarse)').matches;
+        const ua = navigator.userAgent || '';
+        const movil = /Android|iPhone|iPad|iPod|Mobile/i.test(ua);
+        return tactil || movil;
+    }
+
+    confirmarConDobleToque(sinResponder) {
+        const ahora = Date.now();
+        const ventanaMs = 3500;
+
+        if (ahora - this.ultimoIntentoTerminar <= ventanaMs) {
+            this.ultimoIntentoTerminar = 0;
+            this.ocultarToastConfirmacion();
+            return true;
+        }
+
+        this.ultimoIntentoTerminar = ahora;
+        const pendiente = sinResponder > 0
+            ? `Quedan ${sinResponder} sin responder. `
+            : '';
+        this.mostrarToastConfirmacion(`${pendiente}Pulsa "Terminar Examen" otra vez para confirmar.`);
+        return false;
+    }
+
+    mostrarToastConfirmacion(mensaje) {
+        let toast = document.getElementById('toastConfirmacionFinalizar');
+        if (!toast) {
+            toast = document.createElement('div');
+            toast.id = 'toastConfirmacionFinalizar';
+            toast.className = 'toast-confirmacion';
+            document.body.appendChild(toast);
+        }
+
+        toast.textContent = mensaje;
+        toast.classList.add('visible');
+
+        if (this.toastTimer) {
+            clearTimeout(this.toastTimer);
+        }
+
+        this.toastTimer = setTimeout(() => {
+            this.ultimoIntentoTerminar = 0;
+            this.ocultarToastConfirmacion();
+        }, 3500);
+    }
+
+    ocultarToastConfirmacion() {
+        const toast = document.getElementById('toastConfirmacionFinalizar');
+        if (toast) {
+            toast.classList.remove('visible');
+        }
+
+        if (this.toastTimer) {
+            clearTimeout(this.toastTimer);
+            this.toastTimer = null;
+        }
     }
 
     mostrarResultados() {
@@ -1308,6 +1375,8 @@ class SimuladorExamen {
 
     reiniciar() {
         this.detenerTiempo();
+        this.ocultarToastConfirmacion();
+        this.ultimoIntentoTerminar = 0;
         if (this.keyboardHandler) {
             document.removeEventListener('keydown', this.keyboardHandler);
             this.keyboardHandler = null;
