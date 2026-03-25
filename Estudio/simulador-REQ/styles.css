@@ -519,6 +519,11 @@ button {
     border-radius: 6px;
 }
 
+.config-option-examen {
+    margin-top: 12px;
+    margin-bottom: 10px;
+}
+
 .config-label {
     font-size: 14px;
     color: #e0e0e0;

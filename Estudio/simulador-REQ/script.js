@@ -220,6 +220,7 @@ class ConfiguracionApp {
             const data = localStorage.getItem('configApp');
             this.config = data ? JSON.parse(data) : {
                 ordenarPorTema: false,
+                autoAvanceExamen: false,
                 temasSeleccionados: [1, 2, 3, 4, 5, 6],
                 parcialExamen: 'parcial1',
                 perfilActual: 'default',
@@ -229,9 +230,11 @@ class ConfiguracionApp {
             if (!this.config.perfilActual) this.config.perfilActual = 'default';
             if (!this.config.perfiles) this.config.perfiles = {};
             if (!this.config.parcialExamen) this.config.parcialExamen = 'parcial1';
+            if (typeof this.config.autoAvanceExamen !== 'boolean') this.config.autoAvanceExamen = false;
         } catch (e) {
             this.config = {
                 ordenarPorTema: false,
+                autoAvanceExamen: false,
                 temasSeleccionados: [1, 2, 3, 4, 5, 6],
                 parcialExamen: 'parcial1',
                 perfilActual: 'default',
@@ -1136,6 +1139,18 @@ class SimuladorExamen {
             }
         }
 
+        const seleccionNueva = this.normalizarSeleccion(this.respuestas[this.preguntaActual] || []);
+        const debeAutoAvanzar =
+            this.modo === 'examen' &&
+            configuracion.get('autoAvanceExamen') === true &&
+            !esMultiple &&
+            seleccionNueva.length === 1 &&
+            this.preguntaActual < this.preguntas.length - 1;
+
+        if (debeAutoAvanzar) {
+            this.preguntaActual++;
+        }
+
         this.mostrarPregunta();
     }
 
@@ -1476,12 +1491,24 @@ function limpiarFallos() {
 
 function actualizarConfigUI() {
     const ordenarPorTema = configuracion.get('ordenarPorTema');
-    const toggle = document.getElementById('toggleOrdenTema');
+    const autoAvanceExamen = configuracion.get('autoAvanceExamen');
+    const toggleOrdenTema = document.getElementById('toggleOrdenTema');
+    const toggleAutoAvanceExamen = document.getElementById('toggleAutoAvanceExamen');
 
-    if (ordenarPorTema) {
-        toggle.classList.add('active');
-    } else {
-        toggle.classList.remove('active');
+    if (toggleOrdenTema) {
+        if (ordenarPorTema) {
+            toggleOrdenTema.classList.add('active');
+        } else {
+            toggleOrdenTema.classList.remove('active');
+        }
+    }
+
+    if (toggleAutoAvanceExamen) {
+        if (autoAvanceExamen) {
+            toggleAutoAvanceExamen.classList.add('active');
+        } else {
+            toggleAutoAvanceExamen.classList.remove('active');
+        }
     }
 }
 
