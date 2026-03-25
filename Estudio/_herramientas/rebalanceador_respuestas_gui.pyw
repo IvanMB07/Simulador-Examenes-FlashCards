@@ -1,9 +1,10 @@
 import argparse
 import json
 import os
+import re
 import shutil
 import tempfile
-from collections import Counter
+from collections import Counter, defaultdict
 from datetime import datetime
 from pathlib import Path
 import tkinter as tk
@@ -11,6 +12,7 @@ from tkinter import filedialog, messagebox, ttk
 from tkinter.scrolledtext import ScrolledText
 
 BALANCE_LETTERS = ["A", "B", "C", "D"]
+QUESTION_ID_RE = re.compile(r"^(?P<prefix>[A-Z0-9]+)-(?P<tema>T\d+)-(?P<num>\d+)(?P<suffix>-Pregunta:.*)$")
 WINDOW_BG = "#101828"
 PANEL_BG = "#1D2939"
 ACCENT = "#22C55E"
@@ -159,6 +161,34 @@ def rebalance_questions(questions):
     }
 
 
+def renumber_questions_by_topic(questions):
+    counters = defaultdict(int)
+    changed = 0
+
+    for q in questions:
+        cuestion = str(q.get("cuestion", ""))
+        match = QUESTION_ID_RE.match(cuestion)
+        if not match:
+            continue
+
+        tema = match.group("tema")
+        counters[tema] += 1
+
+        old_num = match.group("num")
+        width = max(1, len(old_num))
+        new_num = str(counters[tema]).zfill(width)
+
+        if new_num == old_num:
+            continue
+
+        q["cuestion"] = (
+            f"{match.group('prefix')}-{tema}-{new_num}{match.group('suffix')}"
+        )
+        changed += 1
+
+    return changed
+
+
 def is_candidate_json(path):
     lower_name = path.name.lower()
     if ".bak-" in lower_name:
@@ -187,6 +217,7 @@ def analyze_file(path):
     counts = get_solution_distribution(questions)
     eligible = 0
     skipped_multi = 0
+    renumberable = 0
     for q in questions:
         options = q.get("opciones")
         sol = str(q.get("solucion", "")).strip().upper()
@@ -196,15 +227,18 @@ def analyze_file(path):
             continue
         if isinstance(options, list) and len(options) >= 4 and sol in BALANCE_LETTERS:
             eligible += 1
+        if QUESTION_ID_RE.match(str(q.get("cuestion", ""))):
+            renumberable += 1
     return {
         "questions": len(questions),
         "eligible": eligible,
         "skipped_multi": skipped_multi,
+        "renumberable": renumberable,
         "counts": counts,
     }
 
 
-def rebalance_file(path, create_backup=True):
+def rebalance_file(path, create_backup=True, renumber_by_topic=True):
     payload, questions, wrapped = load_json_file(path)
     before = get_solution_distribution(questions)
 
@@ -215,6 +249,7 @@ def rebalance_file(path, create_backup=True):
         shutil.copy2(path, backup_path)
 
     result = rebalance_questions(questions)
+    renumbered = renumber_questions_by_topic(questions) if renumber_by_topic else 0
     save_json_file(path, questions, wrapped)
     after = get_solution_distribution(questions)
 
@@ -225,6 +260,7 @@ def rebalance_file(path, create_backup=True):
         "eligible": result["eligible"],
         "skipped_multi": result.get("skipped_multi", 0),
         "changed": result["changed"],
+        "renumbered": renumbered,
         "questions": len(questions),
     }
 
@@ -269,13 +305,14 @@ class RebalanceApp:
         self.file_path_var = tk.StringVar()
         self.folder_path_var = tk.StringVar()
         self.backup_var = tk.BooleanVar(value=True)
+        self.renumber_var = tk.BooleanVar(value=True)
 
         default_file = Path(__file__).with_name("preguntas.json")
         if default_file.exists():
             self.file_path_var.set(str(default_file))
             self.folder_path_var.set(str(default_file.parent))
         else:
-            self.folder_path_var.set(str(Path(__file__).resolve().parent))
+            self.folder_path_var.set(str(Path(__file__).resolve().parents[1]))
 
         self._build_ui()
         self._set_mode_ui()
@@ -347,6 +384,12 @@ class RebalanceApp:
             text="Crear copia de seguridad antes de modificar (.bak-YYYYMMDD-HHMMSS.json)",
             variable=self.backup_var,
         ).pack(anchor="w", pady=(8, 0))
+
+        ttk.Checkbutton(
+            config_card,
+            text="Renumerar numero de pregunta por tema (T1, T2, ...) empezando desde 1",
+            variable=self.renumber_var,
+        ).pack(anchor="w", pady=(6, 0))
 
         actions = ttk.Frame(main, style="Root.TFrame")
         actions.pack(fill="x", pady=10)
@@ -458,6 +501,7 @@ class RebalanceApp:
                 lines.append(
                     f"OK  {f}\n"
                     f"  Preguntas: {info['questions']} | Elegibles: {info['eligible']} | Omitidas por solucion multiple: {info['skipped_multi']}\n"
+                    f"  Renumerables por tema: {info['renumberable']}\n"
                     f"  Distribucion: {self._counts_line(info['counts'])}\n"
                 )
                 ok += 1
@@ -490,11 +534,15 @@ class RebalanceApp:
 
         for f in files:
             try:
-                result = rebalance_file(str(f), create_backup=self.backup_var.get())
+                result = rebalance_file(
+                    str(f),
+                    create_backup=self.backup_var.get(),
+                    renumber_by_topic=self.renumber_var.get(),
+                )
                 total_changed += result["changed"]
                 lines.append(
                     f"OK  {f}\n"
-                    f"  Preguntas: {result['questions']} | Elegibles: {result['eligible']} | Omitidas por solucion multiple: {result['skipped_multi']} | Modificadas: {result['changed']}\n"
+                    f"  Preguntas: {result['questions']} | Elegibles: {result['eligible']} | Omitidas por solucion multiple: {result['skipped_multi']} | Modificadas: {result['changed']} | Renumeradas: {result['renumbered']}\n"
                     f"  Antes:   {self._counts_line(result['before'])}\n"
                     f"  Despues: {self._counts_line(result['after'])}\n"
                 )

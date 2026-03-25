@@ -1,0 +1,9 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Tool-generated backups
+*.bak-*.json
+
+# Local exported wrong-answers files
+fallos_*.json
