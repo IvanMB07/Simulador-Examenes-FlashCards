@@ -34,10 +34,10 @@
     "opciones": [
       "A. Precisa, completa y con nivel de detalle adecuado al propósito.",
       "B. Oportuna, accesible, legible y comprensible.",
-      "C. Redundante en múltiples sistemas para garantizar disponibilidad.",
-      "D. Transmisible, procesable y adecuada a los objetivos."
+      "C. Transmisible, procesable y adecuada a los objetivos.",
+      "D. Redundante en múltiples sistemas para garantizar disponibilidad."
     ],
-    "solucion": "C"
+    "solucion": "D"
   },
   {
     "cuestion": "SIE-T1-05-Pregunta: ¿Qué elemento de un SI se considera su 'razón de ser'?",
@@ -52,12 +52,12 @@
   {
     "cuestion": "SIE-T1-06-Pregunta: ¿Qué comprende el 'Equipo de Soporte' o SIA?",
     "opciones": [
-      "A. Hardware, Software y Tecnologías de Comunicación en una solución integrada.",
-      "B. Solo los empleados de la empresa en roles técnicos.",
+      "A. Solo los empleados de la empresa en roles técnicos.",
+      "B. Hardware, Software y Tecnologías de Comunicación en una solución integrada.",
       "C. Los procedimientos manuales y documentación en papel.",
       "D. La infraestructura de telecomunicaciones únicamente."
     ],
-    "solucion": "A"
+    "solucion": "B"
   },
   {
     "cuestion": "SIE-T1-07-Pregunta: ¿Qué diferencia a un SI de un Sistema Informático?",
@@ -72,12 +72,12 @@
   {
     "cuestion": "SIE-T1-08-Pregunta: ¿Cuál es un ejemplo de 'Excelencia Operativa' como objetivo estratégico?",
     "opciones": [
-      "A. La mejora de la eficiencia para obtener mayor rentabilidad (ej. RetailLink de Wal-Mart).",
-      "B. Crear nuevos productos/servicios que ningún competidor tiene.",
-      "C. Mantener relaciones duraderas con clientes.",
-      "D. Lograr supervivencia adaptándose a cambios regulatorios."
+      "A. Crear nuevos productos/servicios que ningún competidor tiene.",
+      "B. Mantener relaciones duraderas con clientes.",
+      "C. Lograr supervivencia adaptándose a cambios regulatorios.",
+      "D. La mejora de la eficiencia para obtener mayor rentabilidad (ej. RetailLink de Wal-Mart)."
     ],
-    "solucion": "A"
+    "solucion": "D"
   },
   {
     "cuestion": "SIE-T1-09-Pregunta: ¿Qué objetivo estratégico persiguen los bancos al instalar cajeros automáticos para no perder clientes?",
@@ -92,32 +92,32 @@
   {
     "cuestion": "SIE-T1-10-Pregunta: ¿Qué característica de calidad de un SI se refiere a que la información llegue a tiempo para actuar?",
     "opciones": [
-      "A. Oportunidad.",
-      "B. Generalidad.",
+      "A. Generalidad.",
+      "B. Oportunidad.",
       "C. Fiabilidad.",
       "D. Exactitud."
     ],
-    "solucion": "A"
+    "solucion": "B"
   },
   {
     "cuestion": "SIE-T1-11-Pregunta: ¿A qué se refiere la 'Generalidad' en un SI?",
     "opciones": [
-      "A. La versatilidad para atender diferentes necesidades de información.",
-      "B. La velocidad de procesamiento del sistema.",
-      "C. La capacidad de estar disponible sin interrupciones.",
+      "A. La velocidad de procesamiento del sistema.",
+      "B. La capacidad de estar disponible sin interrupciones.",
+      "C. La versatilidad para atender diferentes necesidades de información.",
       "D. La facilidad de uso para empleados sin formación técnica."
     ],
-    "solucion": "A"
+    "solucion": "C"
   },
   {
     "cuestion": "SIE-T1-12-Pregunta: ¿Cuál es un inconveniente de los SIE 'no integrados'?",
     "opciones": [
-      "A. Duplicidades en el almacenamiento de información entre sistemas.",
-      "B. Mayor capacidad de procesamiento gracias a múltiples servidores.",
-      "C. Posibilidad de personalizar cada sistema a necesidades departamentales.",
-      "D. Reducción de costes operacionales al mantener sistemas antiguos."
+      "A. Mayor capacidad de procesamiento gracias a múltiples servidores.",
+      "B. Posibilidad de personalizar cada sistema a necesidades departamentales.",
+      "C. Reducción de costes operacionales al mantener sistemas antiguos.",
+      "D. Duplicidades en el almacenamiento de información entre sistemas."
     ],
-    "solucion": "A"
+    "solucion": "D"
   },
   {
     "cuestion": "SIE-T1-13-Pregunta: ¿Qué sistema abarca de forma integral la empresa?",
@@ -132,32 +132,32 @@
   {
     "cuestion": "SIE-T2-14-Pregunta: ¿Qué significan las siglas ERP?",
     "opciones": [
-      "A. Enterprise Resource Planning.",
-      "B. Electronic Relationship Process para gestión de clientes.",
+      "A. Electronic Relationship Process para gestión de clientes.",
+      "B. Enterprise Resource Planning.",
       "C. External Resource Planning integrado en la nube.",
       "D. Essential Resource Planning a nivel operacional."
     ],
-    "solucion": "A"
+    "solucion": "B"
   },
   {
     "cuestion": "SIE-T2-15-Pregunta: ¿Cuál es el propósito fundamental de un ERP?",
     "opciones": [
-      "A. Integrar todas las facetas de una operación en un solo sistema con base de datos única.",
-      "B. Crear interfaces separadas para cada departamento funcional de la empresa.",
-      "C. Implementar sistemas de transacciones independientes por área geográfica.",
+      "A. Crear interfaces separadas para cada departamento funcional de la empresa.",
+      "B. Implementar sistemas de transacciones independientes por área geográfica.",
+      "C. Integrar todas las facetas de una operación en un solo sistema con base de datos única.",
       "D. Mantener sistemas heredados (legacy) sin cambios significativos."
     ],
-    "solucion": "A"
+    "solucion": "C"
   },
   {
     "cuestion": "SIE-T2-16-Pregunta: En la evolución histórica, ¿qué caracterizó a los sistemas MRP de los años 70?",
     "opciones": [
-      "A. Programación de la producción y asignación de materiales de forma integrada.",
-      "B. Integración de módulos financieros y recursos humanos en la plataforma.",
-      "C. Implementación de interfaces web para acceso remoto de usuarios.",
-      "D. Análisis de cadena de suministro con proveedores externos."
+      "A. Integración de módulos financieros y recursos humanos en la plataforma.",
+      "B. Implementación de interfaces web para acceso remoto de usuarios.",
+      "C. Análisis de cadena de suministro con proveedores externos.",
+      "D. Programación de la producción y asignación de materiales de forma integrada."
     ],
-    "solucion": "A"
+    "solucion": "D"
   },
   {
     "cuestion": "SIE-T2-17-Pregunta: ¿En qué década aparecen los ERP integrando Finanzas, RRHH y Ventas en una plataforma unificada?",
@@ -172,12 +172,12 @@
   {
     "cuestion": "SIE-T2-18-Pregunta: ¿Cuál es la vida útil media estimada de un sistema ERP?",
     "opciones": [
-      "A. Aproximadamente 20 años, lo que implica que una mala decisión afecta largo plazo.",
-      "B. Entre 5 y 10 años antes de requierir actualizaciones mayores.",
+      "A. Entre 5 y 10 años antes de requierir actualizaciones mayores.",
+      "B. Aproximadamente 20 años, lo que implica que una mala decisión afecta largo plazo.",
       "C. Entre 2 y 3 años debido a cambios tecnológicos acelerados.",
       "D. Indefinida si se hace mantenimiento preventivo anual."
     ],
-    "solucion": "A"
+    "solucion": "B"
   },
   {
     "cuestion": "SIE-T2-19-Pregunta: ¿Qué es el 'Cuadrante Mágico de Gartner'?",
@@ -372,32 +372,32 @@
   {
     "cuestion": "SIE-T2-38-Pregunta: ¿Qué significa 'Cross-selling' o venta cruzada en el ámbito de CRM?",
     "opciones": [
-      "A. Ofrecer productos complementarios a los que el cliente ya compra.",
-      "B. Vender productos de baja calidad a bajo precio.",
+      "A. Vender productos de baja calidad a bajo precio.",
+      "B. Ofrecer productos complementarios a los que el cliente ya compra.",
       "C. Aumentar el ticket promedio sin valor adicional.",
       "D. Reducir el número de interacciones con clientes."
     ],
-    "solucion": "A"
+    "solucion": "B"
   },
   {
     "cuestion": "SIE-T2-39-Pregunta: ¿Qué es la 'Intimidad con clientes y proveedores' como objetivo estratégico?",
     "opciones": [
-      "A. Conocerlos mejor para ofrecer servicios personalizados y asegurar suministro.",
-      "B. Espiar sus correos electrónicos y estrategias comerciales.",
-      "C. Ser amigos personales de todos ellos.",
+      "A. Espiar sus correos electrónicos y estrategias comerciales.",
+      "B. Ser amigos personales de todos ellos.",
+      "C. Conocerlos mejor para ofrecer servicios personalizados y asegurar suministro.",
       "D. Comprar sus empresas para integrar verticalmente."
     ],
-    "solucion": "A"
+    "solucion": "C"
   },
   {
     "cuestion": "SIE-T2-40-Pregunta: ¿Qué es el ERP 'AdventureWorks' mencionado en clase?",
     "opciones": [
-      "A. Una base de datos de ejemplo de Microsoft para aprender procesos de negocio.",
-      "B. Un juego de rol para capacitación de empleados.",
-      "C. Un competidor empresarial de SAP en mercados latinoamericanos.",
-      "D. Una plataforma de e-commerce para venta en línea."
+      "A. Un juego de rol para capacitación de empleados.",
+      "B. Un competidor empresarial de SAP en mercados latinoamericanos.",
+      "C. Una plataforma de e-commerce para venta en línea.",
+      "D. Una base de datos de ejemplo de Microsoft para aprender procesos de negocio."
     ],
-    "solucion": "A"
+    "solucion": "D"
   },
   {
     "cuestion": "SIE-T2-41-Pregunta: ¿Qué caracteriza a los 'Niche Players' en el cuadrante de Gartner?",
@@ -412,32 +412,32 @@
   {
     "cuestion": "SIE-T2-42-Pregunta: ¿Qué es la 'Cadena de Valor' de Porter?",
     "opciones": [
-      "A. Un modelo de Porter que identifica actividades que crean valor.",
-      "B. Una joya de oro para premiar a empleados excepcionales.",
+      "A. Una joya de oro para premiar a empleados excepcionales.",
+      "B. Un modelo de Porter que identifica actividades que crean valor.",
       "C. Una lista de precios de proveedores y competidores.",
       "D. Un sistema de transporte de mercancías entre centros."
     ],
-    "solucion": "A"
+    "solucion": "B"
   },
   {
     "cuestion": "SIE-T2-43-Pregunta: ¿Cuál es un reto actual de los sistemas empresariales?",
     "opciones": [
-      "A. La integración de la nube (Cloud) y la movilidad.",
-      "B. Volver completamente al procesamiento manual y papel.",
-      "C. Usar menos memoria RAM y procesadores menos potentes.",
+      "A. Volver completamente al procesamiento manual y papel.",
+      "B. Usar menos memoria RAM y procesadores menos potentes.",
+      "C. La integración de la nube (Cloud) y la movilidad.",
       "D. Eliminar la conexión a internet para seguridad total."
     ],
-    "solucion": "A"
+    "solucion": "C"
   },
   {
     "cuestion": "SIE-T1-44-Pregunta: ¿Qué es la 'Exactitud' en un SI?",
     "opciones": [
-      "A. Que la información esté libre de errores.",
-      "B. Que sea comprensible y fácilmente interpretable.",
-      "C. Que se entregue en tiempo oportuno.",
-      "D. Que sea transmisible a otros usuarios del sistema."
+      "A. Que sea comprensible y fácilmente interpretable.",
+      "B. Que se entregue en tiempo oportuno.",
+      "C. Que sea transmisible a otros usuarios del sistema.",
+      "D. Que la información esté libre de errores."
     ],
-    "solucion": "A"
+    "solucion": "D"
   },
   {
     "cuestion": "SIE-T1-45-Pregunta: ¿Cuál es una característica de los SIE modernos?",
@@ -472,12 +472,12 @@
   {
     "cuestion": "SIE-T2-48-Pregunta: ¿Qué proveedor es el líder histórico del mercado ERP?",
     "opciones": [
-      "A. SAP como proveedor histórico y líder de mercado ERP.",
-      "B. Adobe especializado en soluciones creativas.",
-      "C. Spotify lider en servicios de música en línea.",
-      "D. WhatsApp en comunicaciones empresariales."
+      "A. Adobe especializado en soluciones creativas.",
+      "B. Spotify lider en servicios de música en línea.",
+      "C. WhatsApp en comunicaciones empresariales.",
+      "D. SAP como proveedor histórico y líder de mercado ERP."
     ],
-    "solucion": "A"
+    "solucion": "D"
   },
   {
     "cuestion": "SIE-T2-49-Pregunta: ¿Qué es el 'Total Cost of Ownership' (TCO) en un ERP?",
@@ -1252,32 +1252,32 @@
   {
     "cuestion": "SIE-T1-126-Pregunta: ¿Qué persigue el SI al suministrar información en la organización?",
     "opciones": [
-      "A. Entregar información adecuada, con calidad suficiente, a la persona apropiada, en momento y lugar oportunos.",
-      "B. Generar el mayor volumen posible de informes sin importar el receptor.",
+      "A. Generar el mayor volumen posible de informes sin importar el receptor.",
+      "B. Entregar información adecuada, con calidad suficiente, a la persona apropiada, en momento y lugar oportunos.",
       "C. Sustituir completamente a los procedimientos de trabajo.",
       "D. Priorizar siempre la velocidad frente a la exactitud."
     ],
-    "solucion": "A"
+    "solucion": "B"
   },
   {
     "cuestion": "SIE-T1-127-Pregunta: En calidad de SI, ¿qué implica el suministro selectivo de información?",
     "opciones": [
       "A. Entregar toda la información disponible a todos los usuarios.",
-      "B. Proveer información según necesidades concretas de cada receptor.",
-      "C. Evitar cualquier tipo de filtrado para no perder datos.",
+      "B. Evitar cualquier tipo de filtrado para no perder datos.",
+      "C. Proveer información según necesidades concretas de cada receptor.",
       "D. Limitarse a informes financieros."
     ],
-    "solucion": "B"
+    "solucion": "C"
   },
   {
     "cuestion": "SIE-T1-128-Pregunta: ¿Qué significa que un SI ofrezca variedad en la presentación de la información?",
     "opciones": [
-      "A. Que la misma información pueda mostrarse en distintos formatos útiles al usuario.",
-      "B. Que cada departamento use una base de datos distinta.",
-      "C. Que los informes se impriman siempre en papel.",
-      "D. Que solo existan visualizaciones gráficas."
+      "A. Que cada departamento use una base de datos distinta.",
+      "B. Que los informes se impriman siempre en papel.",
+      "C. Que solo existan visualizaciones gráficas.",
+      "D. Que la misma información pueda mostrarse en distintos formatos útiles al usuario."
     ],
-    "solucion": "A"
+    "solucion": "D"
   },
   {
     "cuestion": "SIE-T1-129-Pregunta: En la calidad del SI, el 'tiempo de respuesta' se relaciona con: ",
@@ -1292,32 +1292,32 @@
   {
     "cuestion": "SIE-T1-130-Pregunta: En los elementos del SI, los procedimientos incluyen: ",
     "opciones": [
-      "A. Reglas y prácticas habituales de trabajo que coordinan actividades.",
-      "B. Solo manuales técnicos de hardware.",
+      "A. Solo manuales técnicos de hardware.",
+      "B. Reglas y prácticas habituales de trabajo que coordinan actividades.",
       "C. Únicamente código fuente del ERP.",
       "D. Exclusivamente políticas de ciberseguridad."
     ],
-    "solucion": "A"
+    "solucion": "B"
   },
   {
     "cuestion": "SIE-T1-131-Pregunta: ¿Qué describe mejor al 'Personal' como elemento del SI?",
     "opciones": [
-      "A. Personas o unidades que introducen, manejan o usan información según procedimientos.",
-      "B. Solo directivos de alta dirección.",
-      "C. Proveedores externos de software.",
+      "A. Solo directivos de alta dirección.",
+      "B. Proveedores externos de software.",
+      "C. Personas o unidades que introducen, manejan o usan información según procedimientos.",
       "D. Técnicos de mantenimiento de red exclusivamente."
     ],
-    "solucion": "A"
+    "solucion": "C"
   },
   {
     "cuestion": "SIE-T1-132-Pregunta: ¿Por qué el equipo de soporte se considera la parte más visible del SI?",
     "opciones": [
-      "A. Porque constituye su realidad física y tangible (comunicación, procesamiento y almacenamiento).",
-      "B. Porque sustituye completamente a la información.",
-      "C. Porque define por sí solo la estrategia empresarial.",
-      "D. Porque elimina la necesidad de personal."
+      "A. Porque sustituye completamente a la información.",
+      "B. Porque define por sí solo la estrategia empresarial.",
+      "C. Porque elimina la necesidad de personal.",
+      "D. Porque constituye su realidad física y tangible (comunicación, procesamiento y almacenamiento)."
     ],
-    "solucion": "A"
+    "solucion": "D"
   },
   {
     "cuestion": "SIE-T1-133-Pregunta: Un flujo de información horizontal en la empresa ocurre: ",
@@ -1332,32 +1332,32 @@
   {
     "cuestion": "SIE-T1-134-Pregunta: Un flujo vertical de información en la empresa se da principalmente: ",
     "opciones": [
-      "A. Entre directivos y trabajadores en distintos niveles jerárquicos.",
-      "B. Entre competidores del mismo sector.",
+      "A. Entre competidores del mismo sector.",
+      "B. Entre directivos y trabajadores en distintos niveles jerárquicos.",
       "C. Entre clientes finales y distribuidores.",
       "D. Solo entre aplicaciones en la nube."
     ],
-    "solucion": "A"
+    "solucion": "B"
   },
   {
     "cuestion": "SIE-T1-135-Pregunta: En el flujo externo de información, el entorno incluye: ",
     "opciones": [
-      "A. Aspectos macroeconómicos y tecnológicos como la IA.",
-      "B. Solo inventarios internos de almacén.",
-      "C. Únicamente nóminas y gastos de personal.",
+      "A. Solo inventarios internos de almacén.",
+      "B. Únicamente nóminas y gastos de personal.",
+      "C. Aspectos macroeconómicos y tecnológicos como la IA.",
       "D. Solo datos de fabricación en planta."
     ],
-    "solucion": "A"
+    "solucion": "C"
   },
   {
     "cuestion": "SIE-T1-136-Pregunta: ¿Cuál es una secuencia correcta dentro del flujo de información empresarial?",
     "opciones": [
-      "A. Creación/obtención, almacenamiento, procesamiento, difusión y uso.",
-      "B. Difusión, borrado, impresión y archivo manual.",
-      "C. Compra de hardware, despido de personal y auditoría.",
-      "D. Pronóstico, marketing y distribución física."
+      "A. Difusión, borrado, impresión y archivo manual.",
+      "B. Compra de hardware, despido de personal y auditoría.",
+      "C. Pronóstico, marketing y distribución física.",
+      "D. Creación/obtención, almacenamiento, procesamiento, difusión y uso."
     ],
-    "solucion": "A"
+    "solucion": "D"
   },
   {
     "cuestion": "SIE-T1-137-Pregunta: La planificación estratégica se caracteriza por decisiones: ",
@@ -1372,32 +1372,32 @@
   {
     "cuestion": "SIE-T1-138-Pregunta: El control de gestión se enfoca en: ",
     "opciones": [
-      "A. Problemas cíclicos y estructurados con decisiones de corto plazo.",
-      "B. Decisiones únicas sin datos históricos.",
+      "A. Decisiones únicas sin datos históricos.",
+      "B. Problemas cíclicos y estructurados con decisiones de corto plazo.",
       "C. Transacciones operativas repetitivas de detalle máximo.",
       "D. Definir la arquitectura técnica del ERP."
     ],
-    "solucion": "A"
+    "solucion": "B"
   },
   {
     "cuestion": "SIE-T1-139-Pregunta: El control operativo está orientado a: ",
     "opciones": [
-      "A. Tareas específicas, repetitivas y bien estructuradas.",
-      "B. Innovación disruptiva de modelos de negocio.",
-      "C. Objetivos estratégicos de cinco años.",
+      "A. Innovación disruptiva de modelos de negocio.",
+      "B. Objetivos estratégicos de cinco años.",
+      "C. Tareas específicas, repetitivas y bien estructuradas.",
       "D. Comparativas entre proveedores ERP."
     ],
-    "solucion": "A"
+    "solucion": "C"
   },
   {
     "cuestion": "SIE-T1-140-Pregunta: En general, la información para planificación estratégica tiene origen principalmente: ",
     "opciones": [
-      "A. Externo.",
-      "B. Interno exclusivamente transaccional.",
-      "C. Solo en sistemas de RRHH.",
-      "D. Solo en auditorías contables."
+      "A. Interno exclusivamente transaccional.",
+      "B. Solo en sistemas de RRHH.",
+      "C. Solo en auditorías contables.",
+      "D. Externo."
     ],
-    "solucion": "A"
+    "solucion": "D"
   },
   {
     "cuestion": "SIE-T1-141-Pregunta: En nivel operativo, la información que se usa suele ser: ",
@@ -1412,32 +1412,32 @@
   {
     "cuestion": "SIE-T1-142-Pregunta: ¿Qué rasgo define mejor a un TPS?",
     "opciones": [
-      "A. Es intensivo en entradas y salidas de información del nivel operativo.",
-      "B. Está diseñado para decisiones estratégicas no rutinarias.",
+      "A. Está diseñado para decisiones estratégicas no rutinarias.",
+      "B. Es intensivo en entradas y salidas de información del nivel operativo.",
       "C. Reemplaza al ESS en alta dirección.",
       "D. Se alimenta solo de fuentes externas."
     ],
-    "solucion": "A"
+    "solucion": "B"
   },
   {
     "cuestion": "SIE-T1-143-Pregunta: Una limitación típica de los MIS es: ",
     "opciones": [
-      "A. Menor flexibilidad y habilidad analítica en preguntas no predefinidas.",
-      "B. Imposibilidad de usar datos de TPS.",
-      "C. Ausencia total de información resumida.",
+      "A. Imposibilidad de usar datos de TPS.",
+      "B. Ausencia total de información resumida.",
+      "C. Menor flexibilidad y habilidad analítica en preguntas no predefinidas.",
       "D. Orientación exclusiva a alta dirección."
     ],
-    "solucion": "A"
+    "solucion": "C"
   },
   {
     "cuestion": "SIE-T1-144-Pregunta: Los DSS, con frecuencia, combinan información de: ",
     "opciones": [
-      "A. Fuentes externas junto con TPS y MIS.",
-      "B. Solo libros de procedimiento interno.",
-      "C. Únicamente sensores IoT.",
-      "D. Solo encuestas de satisfacción."
+      "A. Solo libros de procedimiento interno.",
+      "B. Únicamente sensores IoT.",
+      "C. Solo encuestas de satisfacción.",
+      "D. Fuentes externas junto con TPS y MIS."
     ],
-    "solucion": "A"
+    "solucion": "D"
   },
   {
     "cuestion": "SIE-T1-145-Pregunta: Un DSS orientado a modelos analíticos se ejemplifica con: ",
@@ -1452,32 +1452,32 @@
   {
     "cuestion": "SIE-T1-146-Pregunta: Un DSS orientado a modelos informativos se centra en: ",
     "opciones": [
-      "A. Extraer información útil de grandes volúmenes de datos para decidir.",
-      "B. Sustituir todos los TPS operativos.",
+      "A. Sustituir todos los TPS operativos.",
+      "B. Extraer información útil de grandes volúmenes de datos para decidir.",
       "C. Generar únicamente informes impresos.",
       "D. Diseñar campañas de marketing sin datos."
     ],
-    "solucion": "A"
+    "solucion": "B"
   },
   {
     "cuestion": "SIE-T1-147-Pregunta: Un ESS ayuda a la alta dirección a: ",
     "opciones": [
-      "A. Vigilar organización, seguir competidores e identificar tendencias.",
-      "B. Registrar transacciones de caja diarias.",
-      "C. Parametrizar módulos de inventario.",
+      "A. Registrar transacciones de caja diarias.",
+      "B. Parametrizar módulos de inventario.",
+      "C. Vigilar organización, seguir competidores e identificar tendencias.",
       "D. Ejecutar mantenimiento preventivo de servidores."
     ],
-    "solucion": "A"
+    "solucion": "C"
   },
   {
     "cuestion": "SIE-T1-148-Pregunta: Respecto al ESS, es correcto afirmar que: ",
     "opciones": [
-      "A. Extrae información resumida de MIS y DSS, además de eventos externos.",
-      "B. Opera solo con datos de TPS sin agregación.",
-      "C. No permite visualización gráfica.",
-      "D. Es un sistema exclusivo para operarios."
+      "A. Opera solo con datos de TPS sin agregación.",
+      "B. No permite visualización gráfica.",
+      "C. Es un sistema exclusivo para operarios.",
+      "D. Extrae información resumida de MIS y DSS, además de eventos externos."
     ],
-    "solucion": "A"
+    "solucion": "D"
   },
   {
     "cuestion": "SIE-T1-149-Pregunta: En la interrelación de sistemas, los TPS suelen actuar como: ",
@@ -1492,32 +1492,32 @@
   {
     "cuestion": "SIE-T1-150-Pregunta: En la perspectiva funcional, el área de marketing se ocupa de: ",
     "opciones": [
-      "A. Identificar clientes, necesidades y promover productos/servicios.",
-      "B. Elaborar asientos contables y balances.",
+      "A. Elaborar asientos contables y balances.",
+      "B. Identificar clientes, necesidades y promover productos/servicios.",
       "C. Programar mantenimiento de maquinaria.",
       "D. Gestionar nóminas y formación."
     ],
-    "solucion": "A"
+    "solucion": "B"
   },
   {
     "cuestion": "SIE-T1-151-Pregunta: En ventas, una función típica del sistema es: ",
     "opciones": [
-      "A. Tomar pedidos y llevar registro de ventas.",
-      "B. Definir políticas macroeconómicas.",
-      "C. Gestionar cadena de suministro global.",
+      "A. Definir políticas macroeconómicas.",
+      "B. Gestionar cadena de suministro global.",
+      "C. Tomar pedidos y llevar registro de ventas.",
       "D. Sustituir al área financiera."
     ],
-    "solucion": "A"
+    "solucion": "C"
   },
   {
     "cuestion": "SIE-T1-152-Pregunta: En manufactura y producción, el 'control de máquinas' da servicio a: ",
     "opciones": [
-      "A. Gerencia de operaciones.",
-      "B. Alta dirección estratégica exclusivamente.",
-      "C. Clientes externos.",
-      "D. Proveedores internacionales."
+      "A. Alta dirección estratégica exclusivamente.",
+      "B. Clientes externos.",
+      "C. Proveedores internacionales.",
+      "D. Gerencia de operaciones."
     ],
-    "solucion": "A"
+    "solucion": "D"
   },
   {
     "cuestion": "SIE-T1-153-Pregunta: En sistemas financieros y contables, 'cuentas por cobrar' consiste en: ",
@@ -1532,32 +1532,32 @@
   {
     "cuestion": "SIE-T1-154-Pregunta: En RRHH, 'capacitación y desarrollo' se centra en: ",
     "opciones": [
-      "A. Seguimiento de evaluaciones de capacitación y desempeño.",
-      "B. Pronóstico de demanda de clientes.",
+      "A. Pronóstico de demanda de clientes.",
+      "B. Seguimiento de evaluaciones de capacitación y desempeño.",
       "C. Liquidación de impuestos corporativos.",
       "D. Planificación de transporte logístico."
     ],
-    "solucion": "A"
+    "solucion": "B"
   },
   {
     "cuestion": "SIE-T1-155-Pregunta: ¿Qué describe mejor la novedad de computación en la nube en SIE?",
     "opciones": [
-      "A. Colección flexible de ordenadores en internet para tareas antes corporativas.",
-      "B. Eliminación total de internet en la empresa.",
-      "C. Uso exclusivo de servidores locales.",
+      "A. Eliminación total de internet en la empresa.",
+      "B. Uso exclusivo de servidores locales.",
+      "C. Colección flexible de ordenadores en internet para tareas antes corporativas.",
       "D. Sustitución de software por procesos manuales."
     ],
-    "solucion": "A"
+    "solucion": "C"
   },
   {
     "cuestion": "SIE-T1-156-Pregunta: El crecimiento de SaaS implica que las aplicaciones de negocio: ",
     "opciones": [
-      "A. Se ofrecen en línea como servicio en vez de instalarse localmente.",
-      "B. Solo funcionan sin conexión a internet.",
-      "C. Requieren siempre hardware propietario.",
-      "D. No permiten actualizaciones."
+      "A. Solo funcionan sin conexión a internet.",
+      "B. Requieren siempre hardware propietario.",
+      "C. No permiten actualizaciones.",
+      "D. Se ofrecen en línea como servicio en vez de instalarse localmente."
     ],
-    "solucion": "A"
+    "solucion": "D"
   },
   {
     "cuestion": "SIE-T1-157-Pregunta: La emergencia de la plataforma móvil empresarial se asocia a: ",
@@ -1572,32 +1572,32 @@
   {
     "cuestion": "SIE-T1-158-Pregunta: En administración, el software colaborativo en línea se adopta para: ",
     "opciones": [
-      "A. Mejorar coordinación, colaboración y compartición de conocimiento.",
-      "B. Reemplazar todos los ERP por hojas de cálculo.",
+      "A. Reemplazar todos los ERP por hojas de cálculo.",
+      "B. Mejorar coordinación, colaboración y compartición de conocimiento.",
       "C. Eliminar perfiles personales de empleados.",
       "D. Reducir comunicación entre áreas."
     ],
-    "solucion": "A"
+    "solucion": "B"
   },
   {
     "cuestion": "SIE-T1-159-Pregunta: Los dashboards interactivos en inteligencia de negocio permiten: ",
     "opciones": [
-      "A. Información de desempeño en tiempo real para decidir mejor.",
-      "B. Solo almacenamiento histórico sin análisis.",
-      "C. Desactivar indicadores financieros.",
+      "A. Solo almacenamiento histórico sin análisis.",
+      "B. Desactivar indicadores financieros.",
+      "C. Información de desempeño en tiempo real para decidir mejor.",
       "D. Evitar cualquier toma de decisiones."
     ],
-    "solucion": "A"
+    "solucion": "C"
   },
   {
     "cuestion": "SIE-T1-160-Pregunta: El incremento de reuniones virtuales busca principalmente: ",
     "opciones": [
-      "A. Reducir tiempo y coste de viajes manteniendo colaboración.",
-      "B. Aumentar desplazamientos internacionales.",
-      "C. Eliminar por completo la comunicación síncrona.",
-      "D. Sustituir sistemas de información internos."
+      "A. Aumentar desplazamientos internacionales.",
+      "B. Eliminar por completo la comunicación síncrona.",
+      "C. Sustituir sistemas de información internos.",
+      "D. Reducir tiempo y coste de viajes manteniendo colaboración."
     ],
-    "solucion": "A"
+    "solucion": "D"
   },
   {
     "cuestion": "SIE-T1-161-Pregunta: La adopción de aplicaciones Web 2.0/3.0/4.0 en empresas favorece: ",
@@ -1612,32 +1612,32 @@
   {
     "cuestion": "SIE-T1-162-Pregunta: El impulso del teletrabajo se explica por: ",
     "opciones": [
-      "A. Conectividad e internet que permiten trabajar lejos de la oficina tradicional.",
-      "B. Falta de herramientas digitales en empresas.",
+      "A. Falta de herramientas digitales en empresas.",
+      "B. Conectividad e internet que permiten trabajar lejos de la oficina tradicional.",
       "C. Prohibición de acceso remoto a sistemas.",
       "D. Reducción de plataformas colaborativas."
     ],
-    "solucion": "A"
+    "solucion": "B"
   },
   {
     "cuestion": "SIE-T1-163-Pregunta: La cocreación de valor comercial implica que: ",
     "opciones": [
-      "A. Los clientes participan en definir nuevos productos y servicios.",
-      "B. Solo la empresa decide sin feedback externo.",
-      "C. Se abandona la colaboración con proveedores.",
+      "A. Solo la empresa decide sin feedback externo.",
+      "B. Se abandona la colaboración con proveedores.",
+      "C. Los clientes participan en definir nuevos productos y servicios.",
       "D. El valor se centra únicamente en producto físico."
     ],
-    "solucion": "A"
+    "solucion": "C"
   },
   {
     "cuestion": "SIE-T1-164-Pregunta: ¿Qué es un proceso de negocio?",
     "opciones": [
-      "A. Conjunto de tareas coordinadas por personas o sistemas para un objetivo del negocio.",
-      "B. Solo una secuencia técnica de base de datos.",
-      "C. Un informe financiero anual.",
-      "D. Una estructura jerárquica departamental."
+      "A. Solo una secuencia técnica de base de datos.",
+      "B. Un informe financiero anual.",
+      "C. Una estructura jerárquica departamental.",
+      "D. Conjunto de tareas coordinadas por personas o sistemas para un objetivo del negocio."
     ],
-    "solucion": "A"
+    "solucion": "D"
   },
   {
     "cuestion": "SIE-T1-165-Pregunta: Un proceso de negocio ejecutable se caracteriza por: ",
@@ -1652,32 +1652,32 @@
   {
     "cuestion": "SIE-T1-166-Pregunta: Entre las características de los procesos de negocio destaca que: ",
     "opciones": [
-      "A. Agrupan empleados de diferentes departamentos para completar trabajo.",
-      "B. Exigen aislamiento total por área funcional.",
+      "A. Exigen aislamiento total por área funcional.",
+      "B. Agrupan empleados de diferentes departamentos para completar trabajo.",
       "C. Solo participan directivos.",
       "D. No dependen de la estructura organizativa."
     ],
-    "solucion": "A"
+    "solucion": "B"
   },
   {
     "cuestion": "SIE-T1-167-Pregunta: Un problema típico de SIE no integrados es: ",
     "opciones": [
-      "A. Aumento de costes por mantener aplicaciones de distintos proveedores.",
-      "B. Exceso de comunicación universal de datos.",
-      "C. Reducción extrema de duplicidades.",
+      "A. Exceso de comunicación universal de datos.",
+      "B. Reducción extrema de duplicidades.",
+      "C. Aumento de costes por mantener aplicaciones de distintos proveedores.",
       "D. Adaptación inmediata a nuevas necesidades."
     ],
-    "solucion": "A"
+    "solucion": "C"
   },
   {
     "cuestion": "SIE-T1-168-Pregunta: Los SIE que abarcan integralmente la empresa se distinguen por: ",
     "opciones": [
-      "A. Incluir varias áreas funcionales y todos los niveles de administración.",
-      "B. Operar solo en un departamento concreto.",
-      "C. Excluir a la dirección operativa.",
-      "D. Evitar la ejecución de procesos transversales."
+      "A. Operar solo en un departamento concreto.",
+      "B. Excluir a la dirección operativa.",
+      "C. Evitar la ejecución de procesos transversales.",
+      "D. Incluir varias áreas funcionales y todos los niveles de administración."
     ],
-    "solucion": "A"
+    "solucion": "D"
   },
   {
     "cuestion": "SIE-T2-169-Pregunta: ¿Qué habilita la base de datos única en un ERP?",
@@ -1692,32 +1692,32 @@
   {
     "cuestion": "SIE-T2-170-Pregunta: Reducir el TCO en un ERP significa: ",
     "opciones": [
-      "A. Disminuir el coste total de operación asociado al sistema.",
-      "B. Reducir exclusivamente el coste eléctrico.",
+      "A. Reducir exclusivamente el coste eléctrico.",
+      "B. Disminuir el coste total de operación asociado al sistema.",
       "C. Eliminar cualquier gasto de formación.",
       "D. Comprar siempre el software más barato."
     ],
-    "solucion": "A"
+    "solucion": "B"
   },
   {
     "cuestion": "SIE-T2-171-Pregunta: Cuando se dice que un ERP es escalable, se refiere a que: ",
     "opciones": [
-      "A. Puede crecer y adaptarse a nuevas necesidades de la empresa.",
-      "B. Solo funciona en grandes multinacionales.",
-      "C. No admite parametrización.",
+      "A. Solo funciona en grandes multinacionales.",
+      "B. No admite parametrización.",
+      "C. Puede crecer y adaptarse a nuevas necesidades de la empresa.",
       "D. Depende de una única configuración fija."
     ],
-    "solucion": "A"
+    "solucion": "C"
   },
   {
     "cuestion": "SIE-T2-172-Pregunta: Una ventaja clave del ERP en decisiones es: ",
     "opciones": [
-      "A. Basarse en datos en tiempo real para responder mejor al negocio.",
-      "B. Reemplazar completamente el juicio directivo.",
-      "C. Evitar indicadores y KPIs.",
-      "D. Limitar el acceso a información histórica."
+      "A. Reemplazar completamente el juicio directivo.",
+      "B. Evitar indicadores y KPIs.",
+      "C. Limitar el acceso a información histórica.",
+      "D. Basarse en datos en tiempo real para responder mejor al negocio."
     ],
-    "solucion": "A"
+    "solucion": "D"
   },
   {
     "cuestion": "SIE-T2-173-Pregunta: En valor de negocio ERP, la 'transversalidad' implica: ",
@@ -1732,32 +1732,32 @@
   {
     "cuestion": "SIE-T2-174-Pregunta: En la evolución ERP de los 2000, el cambio principal fue: ",
     "opciones": [
-      "A. Soluciones basadas en web con acceso remoto y mayor colaboración.",
-      "B. Regreso a sistemas MRP iniciales.",
+      "A. Regreso a sistemas MRP iniciales.",
+      "B. Soluciones basadas en web con acceso remoto y mayor colaboración.",
       "C. Eliminación de conectividad externa.",
       "D. Sustitución de módulos financieros por hojas manuales."
     ],
-    "solucion": "A"
+    "solucion": "B"
   },
   {
     "cuestion": "SIE-T2-175-Pregunta: En la década de 2010, los ERP se caracterizan por: ",
     "opciones": [
-      "A. Nube y movilidad con acceso en tiempo real y menor mantenimiento.",
-      "B. Uso exclusivo en equipos de escritorio desconectados.",
-      "C. Eliminación de acceso remoto.",
+      "A. Uso exclusivo en equipos de escritorio desconectados.",
+      "B. Eliminación de acceso remoto.",
+      "C. Nube y movilidad con acceso en tiempo real y menor mantenimiento.",
       "D. Fin del análisis de datos empresariales."
     ],
-    "solucion": "A"
+    "solucion": "C"
   },
   {
     "cuestion": "SIE-T2-176-Pregunta: En la actualidad, la evolución de ERP incorpora sobre todo: ",
     "opciones": [
-      "A. IA y big data para insights, automatización y personalización.",
-      "B. Desaparición de analítica avanzada.",
-      "C. Abandono del cloud computing.",
-      "D. Exclusión de dispositivos móviles."
+      "A. Desaparición de analítica avanzada.",
+      "B. Abandono del cloud computing.",
+      "C. Exclusión de dispositivos móviles.",
+      "D. IA y big data para insights, automatización y personalización."
     ],
-    "solucion": "A"
+    "solucion": "D"
   },
   {
     "cuestion": "SIE-T2-177-Pregunta: ¿Por qué es crítica la selección inicial de un ERP?",
@@ -1772,32 +1772,32 @@
   {
     "cuestion": "SIE-T2-178-Pregunta: En el cuadrante de Gartner, los 'Visionarios' son proveedores que: ",
     "opciones": [
-      "A. Tienen visión fuerte e innovadora, con menor ejecución o presencia global.",
-      "B. Carecen de visión y ejecución.",
+      "A. Carecen de visión y ejecución.",
+      "B. Tienen visión fuerte e innovadora, con menor ejecución o presencia global.",
       "C. Se enfocan solo en nichos sin innovación.",
       "D. Dominan totalmente el mercado en todos los ejes."
     ],
-    "solucion": "A"
+    "solucion": "B"
   },
   {
     "cuestion": "SIE-T2-179-Pregunta: En Gartner, los 'Niche Players' pueden ser adecuados cuando: ",
     "opciones": [
-      "A. La empresa tiene necesidades específicas en un segmento concreto.",
-      "B. Se busca cobertura total multisector global.",
-      "C. Se requiere la mayor presencia internacional obligatoriamente.",
+      "A. Se busca cobertura total multisector global.",
+      "B. Se requiere la mayor presencia internacional obligatoriamente.",
+      "C. La empresa tiene necesidades específicas en un segmento concreto.",
       "D. Se quiere evitar especialización funcional."
     ],
-    "solucion": "A"
+    "solucion": "C"
   },
   {
     "cuestion": "SIE-T2-180-Pregunta: En informes 'Clash of the Titans', evaluar la duración de implementación permite: ",
     "opciones": [
-      "A. Comparar tiempo real frente a expectativas iniciales del proyecto.",
-      "B. Medir únicamente velocidad del servidor.",
-      "C. Estimar solo costes de electricidad.",
-      "D. Sustituir el análisis de riesgos."
+      "A. Medir únicamente velocidad del servidor.",
+      "B. Estimar solo costes de electricidad.",
+      "C. Sustituir el análisis de riesgos.",
+      "D. Comparar tiempo real frente a expectativas iniciales del proyecto."
     ],
-    "solucion": "A"
+    "solucion": "D"
   },
   {
     "cuestion": "SIE-T2-181-Pregunta: En 'Clash of the Titans', la satisfacción del cliente suele evaluar: ",
@@ -1812,32 +1812,32 @@
   {
     "cuestion": "SIE-T2-182-Pregunta: La visión de proceso en ERP frente a visión por departamentos busca: ",
     "opciones": [
-      "A. Mejorar comunicación e integración transversal de actividades.",
-      "B. Aumentar aislamiento entre áreas.",
+      "A. Aumentar aislamiento entre áreas.",
+      "B. Mejorar comunicación e integración transversal de actividades.",
       "C. Limitar acceso a datos compartidos.",
       "D. Reforzar silos de información."
     ],
-    "solucion": "A"
+    "solucion": "B"
   },
   {
     "cuestion": "SIE-T2-183-Pregunta: La parametrización de un ERP requiere especialmente: ",
     "opciones": [
-      "A. Conocimiento del producto, del negocio y esfuerzo de consultoría.",
-      "B. Eliminación de módulos estándar.",
-      "C. Evitar analizar necesidades de empresa.",
+      "A. Eliminación de módulos estándar.",
+      "B. Evitar analizar necesidades de empresa.",
+      "C. Conocimiento del producto, del negocio y esfuerzo de consultoría.",
       "D. Sustituir usuarios por automatización total."
     ],
-    "solucion": "A"
+    "solucion": "C"
   },
   {
     "cuestion": "SIE-T2-184-Pregunta: La integración ERP con otras aplicaciones se apoya en interfaces como: ",
     "opciones": [
-      "A. EDI, XML y JSON.",
-      "B. FTP, BIOS y DNS únicamente.",
-      "C. USB, HDMI y VGA.",
-      "D. HTML estático sin intercambio de datos."
+      "A. FTP, BIOS y DNS únicamente.",
+      "B. USB, HDMI y VGA.",
+      "C. HTML estático sin intercambio de datos.",
+      "D. EDI, XML y JSON."
     ],
-    "solucion": "A"
+    "solucion": "D"
   },
   {
     "cuestion": "SIE-T2-185-Pregunta: En un ERP, el módulo de ventas cubre actividades de: ",
@@ -1852,32 +1852,32 @@
   {
     "cuestion": "SIE-T2-186-Pregunta: Según el tema, el módulo de producción debe estar totalmente integrado con: ",
     "opciones": [
-      "A. Aprovisionamiento.",
-      "B. Marketing digital.",
+      "A. Marketing digital.",
+      "B. Aprovisionamiento.",
       "C. Gestión documental.",
       "D. Atención telefónica al cliente."
     ],
-    "solucion": "A"
+    "solucion": "B"
   },
   {
     "cuestion": "SIE-T2-187-Pregunta: En RRHH dentro del ERP, el control de presencia se relaciona especialmente con: ",
     "opciones": [
-      "A. Producción.",
-      "B. Campañas de marketing.",
-      "C. Gestión de proveedores.",
+      "A. Campañas de marketing.",
+      "B. Gestión de proveedores.",
+      "C. Producción.",
       "D. Distribución inversa."
     ],
-    "solucion": "A"
+    "solucion": "C"
   },
   {
     "cuestion": "SIE-T2-188-Pregunta: El Balanced Scorecard permite principalmente: ",
     "opciones": [
-      "A. Traducir la estrategia en objetivos concretos y medibles.",
-      "B. Sustituir toda la planificación estratégica.",
-      "C. Eliminar el uso de indicadores.",
-      "D. Reducir la empresa a objetivos financieros únicamente."
+      "A. Sustituir toda la planificación estratégica.",
+      "B. Eliminar el uso de indicadores.",
+      "C. Reducir la empresa a objetivos financieros únicamente.",
+      "D. Traducir la estrategia en objetivos concretos y medibles."
     ],
-    "solucion": "A"
+    "solucion": "D"
   },
   {
     "cuestion": "SIE-T2-189-Pregunta: En la integración BSC-ERP, la alineación estratégica exige que el ERP: ",
@@ -1892,32 +1892,32 @@
   {
     "cuestion": "SIE-T2-190-Pregunta: En la perspectiva financiera del BSC, el objetivo central es: ",
     "opciones": [
-      "A. Mejorar actuación financiera y generar valor para accionistas.",
-      "B. Medir únicamente satisfacción de empleados.",
+      "A. Medir únicamente satisfacción de empleados.",
+      "B. Mejorar actuación financiera y generar valor para accionistas.",
       "C. Gestionar incidencias de soporte técnico.",
       "D. Definir planes de formación interna."
     ],
-    "solucion": "A"
+    "solucion": "B"
   },
   {
     "cuestion": "SIE-T2-191-Pregunta: En BSC, la perspectiva de procesos internos destaca porque: ",
     "opciones": [
-      "A. Define cadena de valor en innovación, operación y postventa.",
-      "B. Se limita a indicadores de liquidez.",
-      "C. Excluye a la dirección de su definición.",
+      "A. Se limita a indicadores de liquidez.",
+      "B. Excluye a la dirección de su definición.",
+      "C. Define cadena de valor en innovación, operación y postventa.",
       "D. Solo mide clima laboral."
     ],
-    "solucion": "A"
+    "solucion": "C"
   },
   {
     "cuestion": "SIE-T2-192-Pregunta: Un KPI bien definido, según el tema, debe ser: ",
     "opciones": [
-      "A. Específico, medible, alcanzable, relevante y limitado en el tiempo.",
-      "B. General, cualitativo y sin horizonte temporal.",
-      "C. Solo financiero y anual.",
-      "D. Complejo aunque no sea accionable."
+      "A. General, cualitativo y sin horizonte temporal.",
+      "B. Solo financiero y anual.",
+      "C. Complejo aunque no sea accionable.",
+      "D. Específico, medible, alcanzable, relevante y limitado en el tiempo."
     ],
-    "solucion": "A"
+    "solucion": "D"
   },
   {
     "cuestion": "SIE-T2-193-Pregunta: Un paso clave en implementación del BSC es: ",
@@ -1932,32 +1932,32 @@
   {
     "cuestion": "SIE-T2-194-Pregunta: Para integrar culturalmente el BSC, se recomienda: ",
     "opciones": [
-      "A. Comunicar con reuniones, guías y capacitación continua.",
-      "B. Limitar la información del BSC a dirección general.",
+      "A. Limitar la información del BSC a dirección general.",
+      "B. Comunicar con reuniones, guías y capacitación continua.",
       "C. Evitar explicar beneficios al personal.",
       "D. Usarlo solo en auditorías externas."
     ],
-    "solucion": "A"
+    "solucion": "B"
   },
   {
     "cuestion": "SIE-T2-195-Pregunta: La SCM se define como flujo de: ",
     "opciones": [
-      "A. Materiales, información, dinero y servicios desde proveedor hasta cliente.",
-      "B. Solo dinero entre bancos y empresas.",
-      "C. Solo materias primas dentro de fábrica.",
+      "A. Solo dinero entre bancos y empresas.",
+      "B. Solo materias primas dentro de fábrica.",
+      "C. Materiales, información, dinero y servicios desde proveedor hasta cliente.",
       "D. Únicamente documentación legal."
     ],
-    "solucion": "A"
+    "solucion": "C"
   },
   {
     "cuestion": "SIE-T2-196-Pregunta: La meta principal de la cadena de suministro es: ",
     "opciones": [
-      "A. Cantidad correcta, del origen al consumo, en menor tiempo y costo.",
-      "B. Maximizar inventario de seguridad siempre.",
-      "C. Reducir visibilidad para evitar competencia.",
-      "D. Desvincular demanda y suministro."
+      "A. Maximizar inventario de seguridad siempre.",
+      "B. Reducir visibilidad para evitar competencia.",
+      "C. Desvincular demanda y suministro.",
+      "D. Cantidad correcta, del origen al consumo, en menor tiempo y costo."
     ],
-    "solucion": "A"
+    "solucion": "D"
   },
   {
     "cuestion": "SIE-T2-197-Pregunta: En la cadena de suministro, el flujo ascendente (upstream) incluye: ",
@@ -1972,31 +1972,31 @@
   {
     "cuestion": "SIE-T2-198-Pregunta: En sistemas de planificación SCM, la planificación de demanda utiliza: ",
     "opciones": [
-      "A. Herramientas estadísticas y técnicas de predicción.",
-      "B. Intuición sin datos históricos.",
+      "A. Intuición sin datos históricos.",
+      "B. Herramientas estadísticas y técnicas de predicción.",
       "C. Solo encuestas cualitativas sin series temporales.",
       "D. Únicamente datos de contabilidad general."
     ],
-    "solucion": "A"
+    "solucion": "B"
   },
   {
     "cuestion": "SIE-T2-199-Pregunta: En ejecución SCM, la distribución inversa se ocupa de: ",
     "opciones": [
-      "A. Seguimiento y contabilidad de productos devueltos.",
-      "B. Diseño de campañas de fidelización.",
-      "C. Definir estructura salarial.",
+      "A. Diseño de campañas de fidelización.",
+      "B. Definir estructura salarial.",
+      "C. Seguimiento y contabilidad de productos devueltos.",
       "D. Asignación de materiales en producción."
     ],
-    "solucion": "A"
+    "solucion": "C"
   },
   {
     "cuestion": "SIE-T2-200-Pregunta: El 'vendor lock-in' en aplicaciones empresariales alude a: ",
     "opciones": [
-      "A. Dependencia del proveedor y aumento de costes de cambio.",
-      "B. Mejora automática de interoperabilidad entre fabricantes.",
-      "C. Eliminación total de riesgos de implementación.",
-      "D. Estandarización de datos sin esfuerzo organizativo."
+      "A. Mejora automática de interoperabilidad entre fabricantes.",
+      "B. Eliminación total de riesgos de implementación.",
+      "C. Estandarización de datos sin esfuerzo organizativo.",
+      "D. Dependencia del proveedor y aumento de costes de cambio."
     ],
-    "solucion": "A"
+    "solucion": "D"
   }
 ]
