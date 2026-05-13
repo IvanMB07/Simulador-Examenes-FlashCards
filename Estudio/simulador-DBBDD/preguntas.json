@@ -1,0 +1,102 @@
+[
+  {
+    "cuestion": "DBD-T2-01-Pregunta: Según los apuntes, ¿qué define fundamentalmente a una transacción en una base de datos?",
+    "opciones": [
+      "A. Una única operación de escritura que no puede fallar.",
+      "B. Una secuencia de operaciones que forma una unidad lógica de trabajo y debe ser atómica.",
+      "C. El proceso de realizar copias de seguridad cada cierto tiempo.",
+      "D. Un lenguaje de consultas específico para sistemas no relacionales."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-02-Pregunta: Dentro de las propiedades ACID, ¿qué garantiza la 'Atomicidad'?",
+    "opciones": [
+      "A. Que los datos sean visibles para todos los usuarios en tiempo real.",
+      "B. Que si se confirma la transacción se ejecutan todas las operaciones, y si se cancela, no se ejecuta ninguna.",
+      "C. Que la base de datos sea escalable horizontalmente de forma automática.",
+      "D. Que los cambios sean permanentes incluso si hay un fallo de hardware."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-03-Pregunta: En el ciclo de vida de una transacción, ¿qué ocurre cuando se ejecuta un 'ROLLBACK'?",
+    "opciones": [
+      "A. Se confirman los cambios y se hacen permanentes.",
+      "B. Se detiene el sistema para realizar un checkpoint.",
+      "C. Se anula la transacción y no se aplica ninguna de sus operaciones.",
+      "D. Se limita el tiempo de CPU disponible para el usuario."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "DBD-T3-04-Pregunta: ¿Cuál de las siguientes opciones describe mejor a los datos semiestructurados?",
+    "opciones": [
+      "A. Datos que carecen de metadatos y solo pueden ser leídos por humanos.",
+      "B. Datos con un formato rígido de filas y columnas en una base de datos relacional.",
+      "C. Una mezcla que no tiene estructura perfectamente definida, pero usa metadatos como en XML o JSON.",
+      "D. Archivos multimedia como MP3 o videos de vigilancia que no tienen organización."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "DBD-T4-05-Pregunta: Según el Teorema de Brewer (CAP), ¿qué tres garantías es imposible ofrecer simultáneamente en un sistema distribuido?",
+    "opciones": [
+      "A. Atomicidad, Consistencia y Durabilidad.",
+      "B. Volumen, Velocidad y Variedad.",
+      "C. Consistencia, Disponibilidad y Tolerancia a la partición.",
+      "D. Autenticación, Autorización y Auditoría."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "DBD-T4-06-Pregunta: En el modelo BASE de las bases de datos NoSQL, ¿qué significa 'Soft state'?",
+    "opciones": [
+      "A. Que el sistema es vulnerable a ataques de inyección de código.",
+      "B. Que los almacenes de datos no tienen por qué ser consistentes en todo momento.",
+      "C. Que la base de datos se borra automáticamente al cerrar la sesión.",
+      "D. Que solo se permite una transacción a la vez para evitar bloqueos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-07-Pregunta: Dentro de las 5 V's del Big Data, ¿a qué se refiere el concepto de 'Valor'?",
+    "opciones": [
+      "A. Al coste económico de almacenar un Terabyte de información.",
+      "B. A la veracidad y limpieza de los datos duplicados.",
+      "C. A que los datos deben ser accionables y ayudar a tomar decisiones tras ser procesados.",
+      "D. Al tiempo que tarda un nodo en responder a una petición."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "DBD-T4-08-Pregunta: ¿Cuál es una característica común de las bases de datos NoSQL mencionada en los apuntes?",
+    "opciones": [
+      "A. Uso estricto del lenguaje SQL estándar para todas las consultas.",
+      "B. Esquema de datos fijo que no permite migraciones sin reiniciar.",
+      "C. Suelen tener un sistema de consultas propio y un esquema dinámico.",
+      "D. Garantizan consistencia fuerte en todo el clúster en milisegundos."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "DBD-T2-09-Pregunta: En términos de seguridad de BBDD, ¿qué permite controlar un 'Perfil' de usuario?",
+    "opciones": [
+      "A. Las inserciones y borrados realizados sobre tablas específicas.",
+      "B. El uso de recursos del sistema, como tiempo de CPU o memoria por sesión.",
+      "C. El cifrado de las contraseñas en el hardware del servidor.",
+      "D. La recuperación de transacciones tras un fallo catastrófico."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-10-Pregunta: ¿Qué tipo de base de datos NoSQL se describe como similar a mapas de datos donde se accede mediante una clave única?",
+    "opciones": [
+      "A. Almacenamiento de Grafos.",
+      "B. Almacenamiento de Documentos.",
+      "C. Almacenamiento de Familia de Columnas.",
+      "D. Almacenamiento Clave-Valor."
+    ],
+    "solucion": "D"
+  }
+]
