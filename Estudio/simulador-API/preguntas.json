@@ -3900,5 +3900,2005 @@
       "D. La reserva de gestión se tiene en cuenta en los cálculos del valor ganado."
     ],
     "solucion": "D"
+  },
+  {
+    "cuestion": "SIE-T7-01-Pregunta: Según los apuntes, ¿cuáles son las condiciones técnicas que debe cumplir un 'Documento Electrónico'?",
+    "opciones": [
+      "A. Formato digital, legibilidad electrónica y capacidad de almacenamiento y transmisión.",
+      "B. Únicamente debe ser un registro sonoro o visual.",
+      "C. Debe estar impreso en papel con un código de barras digital.",
+      "D. Solo requiere tener validez legal ante un notario."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SIE-T7-02-Pregunta: ¿Qué propiedad del documento electrónico indica que su contenido no ha sido modificado por nadie sin permiso?",
+    "opciones": [
+      "A. Confidencialidad.",
+      "B. Disponibilidad.",
+      "C. Integridad.",
+      "D. No repudio."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SIE-T7-03-Pregunta: ¿Cómo se define la propiedad de 'No repudio' en el contexto de la identificación electrónica?",
+    "opciones": [
+      "A. Garantía de que el mensaje solo sea leído por el destinatario.",
+      "B. Propiedad que garantiza que cuando alguien ha hecho algo no pueda demostrar que no lo ha hecho.",
+      "C. Capacidad de un sistema para estar siempre operativo.",
+      "D. Método para cifrar archivos grandes a alta velocidad."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-04-Pregunta: ¿Cuál de los siguientes es un requisito específico de la 'Firma electrónica avanzada' según los apuntes?",
+    "opciones": [
+      "A. Requiere obligatoriamente la presencia física de un testigo.",
+      "B. Debe ser creada bajo el control exclusivo del firmante con un alto nivel de confianza.",
+      "C. Solo puede ser utilizada en documentos de la Administración Pública.",
+      "D. No permite detectar modificaciones ulteriores de los datos firmados."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-05-Pregunta: En los fundamentos de criptografía, ¿qué biblioteca se menciona como estándar para implementar protocolos TLS/SSL?",
+    "opciones": [
+      "A. CryptoJS.",
+      "B. OpenSSL.",
+      "C. LibreSSL.",
+      "D. SSL-Secure."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-06-Pregunta: ¿Qué es OpenSSL de acuerdo con la introducción proporcionada en el material?",
+    "opciones": [
+      "A. Un sistema operativo diseñado exclusivamente para servidores web.",
+      "B. Un navegador web de código abierto con cifrado integrado.",
+      "C. Una biblioteca de código abierto utilizada para seguridad, cifrado de datos e implementación de TLS/SSL.",
+      "D. Una base de datos estructurada para certificados falsificados."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SIE-T7-07-Pregunta: Según la LSSI, ¿cómo se definen los 'Servicios de la Sociedad de la Información'?",
+    "opciones": [
+      "A. Servicios prestados solo de forma presencial por una autoridad pública.",
+      "B. Conjunto de servicios prestados a distancia por medios electrónicos y a petición individual de un usuario.",
+      "C. Cualquier actividad comercial realizada exclusivamente por teléfono fijo.",
+      "D. Aquellos servicios que no requieren conexión a internet para su funcionamiento."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-08-Pregunta: ¿En qué caso se considera que una cookie está exceptuada de la obligación de obtener consentimiento informado?",
+    "opciones": [
+      "A. Cuando se utiliza para rastrear el comportamiento publicitario del usuario.",
+      "B. Cuando es estrictamente para prestar un servicio expresamente solicitado por el usuario.",
+      "C. Si la cookie es de un tercero y se usa para análisis estadístico masivo.",
+      "D. Todas las cookies requieren consentimiento sin excepción."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-09-Pregunta: De acuerdo con el GDPR y la adaptación española, ¿a qué edad puede un niño dar su consentimiento para el tratamiento de datos?",
+    "opciones": [
+      "A. 12 años.",
+      "B. 16 años.",
+      "C. 14 años.",
+      "D. 18 años."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SIE-T7-10-Pregunta: Respecto a la Propiedad Intelectual, ¿cuándo terminan generalmente los derechos de explotación de una obra?",
+    "opciones": [
+      "A. A los 15 años de la creación de la obra.",
+      "B. En el momento del fallecimiento del autor.",
+      "C. A los 70 años del fallecimiento del último autor.",
+      "D. Son derechos eternos que nunca caducan."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SIE-T7-11-Pregunta: ¿Qué normativa europea define actualmente la 'Cartera Europea de Identidad Digital'?",
+    "opciones": [
+      "A. Reglamento UE 910/2014.",
+      "B. Reglamento UE 2024/1183.",
+      "C. Ley 6/2020.",
+      "D. Directiva de Comercio Electrónico."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-12-Pregunta: ¿Qué requisito adicional tiene la 'Firma electrónica cualificada' sobre la avanzada?",
+    "opciones": [
+      "A. Solo requiere una clave privada compartida.",
+      "B. Se basa en un certificado cualificado y se crea mediante un dispositivo cualificado.",
+      "C. Solo se puede usar en dispositivos móviles Android.",
+      "D. Debe ser validada por un notario cada vez que se usa."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-13-Pregunta: ¿Qué valor jurídico tiene la firma electrónica reconocida/cualificada según los apuntes?",
+    "opciones": [
+      "A. El mismo valor que un sello de correos.",
+      "B. El mismo valor jurídico que la firma manuscrita.",
+      "C. Un valor inferior a la firma avanzada.",
+      "D. Solo es válida si el documento es una factura."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-14-Pregunta: Según los apuntes, ¿cuál de estos NO es un concepto relacionado con los servicios de confianza?",
+    "opciones": [
+      "A. Sello electrónico.",
+      "B. Sello de tiempo electrónico.",
+      "C. Autenticación de sitios web.",
+      "D. Copia de seguridad automática en la nube."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "SIE-T7-15-Pregunta: En la LSSI, ¿qué debe indicar el prestador de servicios respecto a los precios de sus servicios?",
+    "opciones": [
+      "A. Solo el precio base sin impuestos.",
+      "B. El precio neto excluyendo gastos de envío.",
+      "C. Los precios con impuestos incluidos.",
+      "D. No tiene obligación de indicar precios hasta el pago final."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SIE-T7-16-Pregunta: ¿Cuándo son responsables los prestadores de hosting por contenidos ilegales generados por terceros?",
+    "opciones": [
+      "A. Siempre, desde el momento en que se sube el contenido.",
+      "B. Solo si tienen conocimiento efectivo de la ilegalidad y no actúan para eliminarlos.",
+      "C. Nunca, la responsabilidad es exclusiva del usuario final.",
+      "D. Solo si el contenido supera los 50.000 visualizaciones."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-17-Pregunta: ¿Cuál es la cuantía máxima de una sanción por infracción muy grave de la LSSI?",
+    "opciones": [
+      "A. Hasta 30.000 €.",
+      "B. Hasta 150.000 €.",
+      "C. Hasta 600.000 €.",
+      "D. Hasta 1.000.000 €."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SIE-T7-18-Pregunta: ¿Qué tipo de cookie permite a una web recordar el 'modo oscuro' sin intervención explícita del consentimiento del usuario por ser funcional?",
+    "opciones": [
+      "A. Cookie de rastreo publicitario.",
+      "B. Cookie de personalización de la interfaz de usuario.",
+      "C. Cookie de análisis estadístico de terceros.",
+      "D. Cookie de redes sociales."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-19-Pregunta: Si un usuario utiliza la barra de desplazamiento o comienza a navegar sin aceptar explícitamente, ¿se entiende que acepta las cookies?",
+    "opciones": [
+      "A. Sí, es un consentimiento tácito.",
+      "B. No, se entenderá que NO las acepta.",
+      "C. Sí, siempre que la web lo indique en el aviso legal.",
+      "D. Solo si permanece en la página más de 30 segundos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-20-Pregunta: ¿Qué entidades están exentas de cumplir los requisitos de accesibilidad de la Ley 11/2023?",
+    "opciones": [
+      "A. Todas las Administraciones Públicas.",
+      "B. Las Microempresas (menos de 10 empleados y menos de 2 millones de facturación).",
+      "C. Solo las ONGs sin ánimo de lucro.",
+      "D. Ninguna entidad está exenta."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-21-Pregunta: ¿Cuántos niveles de conformidad definen las pautas WCAG 2.0 (y la norma UNE 139803)?",
+    "opciones": [
+      "A. Dos niveles: Básico y Avanzado.",
+      "B. Tres niveles: A (mínimo), AA (recomendado) y AAA (máximo).",
+      "C. Cuatro niveles: 1, 2, 3 y 4.",
+      "D. Solo un nivel obligatorio para todos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-22-Pregunta: ¿Qué nivel de accesibilidad es el obligatorio (mínimo) según los estándares citados?",
+    "opciones": [
+      "A. Nivel A.",
+      "B. Nivel AA.",
+      "C. Nivel AAA.",
+      "D. Nivel A+."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SIE-T7-23-Pregunta: ¿Desde qué fecha es aplicable el GDPR en todos los países de la UE?",
+    "opciones": [
+      "A. 1 de enero de 2016.",
+      "B. 25 de mayo de 2018.",
+      "C. 15 de julio de 2020.",
+      "D. 12 de abril de 1996."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-24-Pregunta: ¿Qué artículo de la Constitución Española limita el uso de la informática para garantizar el honor y la intimidad?",
+    "opciones": [
+      "A. Artículo 10.",
+      "B. Artículo 18.4.",
+      "C. Artículo 24.",
+      "D. Artículo 155."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-25-Pregunta: ¿Cuál es el objetivo principal de la LOPDGDD respecto a los derechos digitales?",
+    "opciones": [
+      "A. Eliminar el uso de contraseñas.",
+      "B. Reforzar derechos como la desconexión digital y la privacidad online.",
+      "C. Permitir que las empresas vendan datos libremente.",
+      "D. Centralizar todos los datos en una base de datos pública."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-26-Pregunta: Según el Art. 4 del GDPR, ¿cuándo se considera que una persona física es 'identificable'?",
+    "opciones": [
+      "A. Solo cuando se conoce su nombre y apellidos.",
+      "B. Cuando su identidad puede determinarse directa o indirectamente mediante un identificador.",
+      "C. Únicamente si tiene un perfil en redes sociales.",
+      "D. Solo si dispone de un certificado digital cualificado."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-27-Pregunta: ¿Qué es la 'Seudonimización' según los apuntes?",
+    "opciones": [
+      "A. El borrado definitivo de todos los datos personales.",
+      "B. El tratamiento de datos de modo que no puedan atribuirse a un interesado sin utilizar información adicional.",
+      "C. El uso de nombres falsos en una base de datos de pruebas.",
+      "D. El cifrado de una base de datos completa con una sola clave."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-28-Pregunta: ¿Cómo se define 'Fichero' en el contexto del GDPR?",
+    "opciones": [
+      "A. Cualquier documento PDF almacenado en un ordenador.",
+      "B. Todo conjunto estructurado de datos personales accesibles con arreglo a criterios determinados.",
+      "C. Un armario lleno de papeles sin orden alguno.",
+      "D. Una carpeta de correo electrónico con más de 100 mensajes."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-29-Pregunta: ¿Quién es el 'Responsable del tratamiento' según el GDPR?",
+    "opciones": [
+      "A. El técnico informático que instala el software.",
+      "B. La persona física o jurídica que determina los fines y medios del tratamiento.",
+      "C. El usuario que acepta las cookies de una web.",
+      "D. El Delegado de Protección de Datos exclusivamente."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-30-Pregunta: ¿Qué constituye una 'Violación de la seguridad de los datos personales'?",
+    "opciones": [
+      "A. El olvido de una contraseña por parte del usuario.",
+      "B. Un incidente que ocasione la destrucción, pérdida o alteración accidental de datos personales.",
+      "C. El mantenimiento programado de un servidor de datos.",
+      "D. La actualización de la política de privacidad de una empresa."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-31-Pregunta: ¿Cuándo es obligatoria la designación de un Delegado de Protección de Datos (DPO)?",
+    "opciones": [
+      "A. En todas las empresas, sin excepción.",
+      "B. Cuando el tratamiento lo realiza un organismo público o hay observación sistemática a gran escala.",
+      "C. Solo si la empresa tiene más de 1.000 empleados.",
+      "D. Únicamente si la empresa ha sufrido un hackeo previo."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-32-Pregunta: ¿Cuál de estos es un principio relativo al tratamiento de datos personales?",
+    "opciones": [
+      "A. Recogida de datos con fines genéricos e ilimitados.",
+      "B. Conservación de datos de forma indefinida por si acaso.",
+      "C. Minimización de datos en relación con los fines.",
+      "D. Publicidad total de los datos recogidos."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SIE-T7-33-Pregunta: ¿Bajo qué condición el tratamiento de datos se considera lícito?",
+    "opciones": [
+      "A. Si los datos son públicos en internet.",
+      "B. Si el interesado dio su consentimiento o es necesario para la ejecución de un contrato.",
+      "C. Si la empresa necesita los datos para mejorar sus beneficios anuales.",
+      "D. El tratamiento siempre es lícito si se realiza de forma anónima."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-34-Pregunta: ¿Qué categorías de datos personales están generalmente prohibidas para su tratamiento?",
+    "opciones": [
+      "A. Nombre, apellidos y dirección postal.",
+      "B. Correo electrónico y número de teléfono.",
+      "C. Origen étnico, opiniones políticas, convicciones religiosas o datos genéticos.",
+      "D. Fecha de nacimiento y lugar de residencia."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SIE-T7-35-Pregunta: ¿Qué derecho permite al interesado obtener sus datos en un formato estructurado y transmitirlos a otro responsable?",
+    "opciones": [
+      "A. Derecho de Acceso.",
+      "B. Derecho de Rectificación.",
+      "C. Derecho a la Portabilidad de los datos.",
+      "D. Derecho de Oposición."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SIE-T7-36-Pregunta: ¿Cuál es el importe máximo de las sanciones por incumplimiento de los principios del GDPR?",
+    "opciones": [
+      "A. Hasta 100.000 €.",
+      "B. Hasta 600.000 €.",
+      "C. Hasta 20 M€ o el 4% del volumen de negocio anual.",
+      "D. No hay límite económico, solo penas de prisión."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SIE-T7-37-Pregunta: El GDPR sigue el principio de 'Seguridad basada en...':",
+    "opciones": [
+      "A. El coste de las licencias.",
+      "B. El riesgo.",
+      "C. La velocidad de la red.",
+      "D. La opinión del DPO."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-38-Pregunta: ¿Dónde se deben buscar medidas técnicas concretas para garantizar la seguridad según los apuntes?",
+    "opciones": [
+      "A. En el código fuente de Linux.",
+      "B. En el Esquema Nacional de Seguridad (ENS) u OWASP.",
+      "C. En las condiciones de uso de Google.",
+      "D. En los foros de Reddit."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-39-Pregunta: Respecto a la Propiedad Intelectual, ¿qué derechos corresponden al autor y son irrenunciables?",
+    "opciones": [
+      "A. Derechos de explotación.",
+      "B. Derecho moral.",
+      "C. Derechos de suscripción.",
+      "D. Derechos de distribución comercial."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-40-Pregunta: ¿Qué actividad NO requiere autorización del titular del software según la ley?",
+    "opciones": [
+      "A. Revender el software a terceros sin licencia.",
+      "B. Realizar copias de seguridad o corregir errores para interoperabilidad.",
+      "C. Publicar el código fuente en GitHub sin permiso.",
+      "D. Modificar el nombre del autor en los metadatos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-41-Pregunta: ¿Cuál es el plazo de protección de la organización estructural de una base de datos?",
+    "opciones": [
+      "A. 5 años.",
+      "B. 15 años.",
+      "C. 50 años.",
+      "D. 70 años."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-42-Pregunta: ¿Cómo define el Código Penal a los reos de 'Estafa'?",
+    "opciones": [
+      "A. Quienes entran en una propiedad privada sin permiso.",
+      "B. Quienes, con ánimo de lucro, utilizan engaño bastante para producir error en otro e inducirlo a un acto en perjuicio propio.",
+      "C. Quienes insultan a otros en redes sociales.",
+      "D. Quienes no pagan sus impuestos a tiempo."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-43-Pregunta: ¿Qué artículo del Código Penal regula el 'Fraude informático' (Phishing, tarjetas clonadas)?",
+    "opciones": [
+      "A. Art. 10.",
+      "B. Art. 248.2.",
+      "C. Art. 401.",
+      "D. Art. 197."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-44-Pregunta: ¿Qué pena se establece para la producción y distribución de malware según los apuntes?",
+    "opciones": [
+      "A. Solo una multa de 500 €.",
+      "B. Prisión de 6 meses a 2 años y multa de 12 a 24 meses.",
+      "C. Trabajos en beneficio de la comunidad durante 1 mes.",
+      "D. Inhabilitación permanente para usar ordenadores."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-45-Pregunta: ¿A qué se refiere la 'Suplantación de identidad' regulada en el Art. 401?",
+    "opciones": [
+      "A. A usar el ordenador de un compañero de trabajo.",
+      "B. A usar un perfil falso en redes sociales para engañar a usuarios y cometer fraudes.",
+      "C. A cambiar el nombre de una carpeta compartida.",
+      "D. A olvidar cerrar sesión en un cibercafé."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-46-Pregunta: ¿Qué norma adapta las pautas de accesibilidad WCAG 2.0 al contexto español?",
+    "opciones": [
+      "A. ISO 9001.",
+      "B. Norma UNE 139803/2012.",
+      "C. Ley de Propiedad Intelectual.",
+      "D. El Código de Comercio."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-47-Pregunta: En el GDPR, ¿qué figura actúa como punto de contacto con la autoridad de control?",
+    "opciones": [
+      "A. El CEO de la empresa.",
+      "B. El Delegado de Protección de Datos (DPO).",
+      "C. El Responsable del Fichero únicamente.",
+      "D. Cualquier empleado del departamento de IT."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-48-Pregunta: ¿Qué propiedad garantiza que un sistema esté operativo y accesible cuando se necesita?",
+    "opciones": [
+      "A. Confidencialidad.",
+      "B. Disponibilidad.",
+      "C. Autenticidad.",
+      "D. Integridad."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-49-Pregunta: ¿Qué tipo de servicios incluyen el comercio electrónico y las redes sociales según la LSSI?",
+    "opciones": [
+      "A. Servicios de la Sociedad de la Información.",
+      "B. Servicios de Radiodifusión Televisiva.",
+      "C. Servicios de Telecomunicaciones Básicas.",
+      "D. Servicios de Mensajería Postal."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SIE-T7-50-Pregunta: ¿Qué indica el principio de 'Responsabilidad Proactiva' para el responsable del tratamiento?",
+    "opciones": [
+      "A. Que solo debe actuar si hay una denuncia.",
+      "B. Que debe aplicar medidas técnicas y organizativas para demostrar el cumplimiento normativo.",
+      "C. Que la responsabilidad es compartida con el usuario al 50%.",
+      "D. Que los datos deben borrarse cada 24 horas automáticamente."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-51-Pregunta: ¿Qué normativa sustituyó al Reglamento UE 910/2014 (eIDAS) en materia de identificación electrónica?",
+    "opciones": [
+      "A. Ley 6/2020.",
+      "B. Reglamento UE 2024/1183.",
+      "C. Directiva de Comercio Electrónico 2000.",
+      "D. RGPD 2016/679."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-52-Pregunta: Según los apuntes, ¿cuál de estos NO es un requisito técnico del documento electrónico?",
+    "opciones": [
+      "A. Formato digital.",
+      "B. Legibilidad electrónica.",
+      "C. Obligación de estar almacenado en servidores dentro de España.",
+      "D. Capacidad de almacenamiento y transmisión."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SIE-T7-53-Pregunta: En criptografía de clave asimétrica, ¿qué clave se utiliza para cifrar un mensaje destinado a un usuario específico?",
+    "opciones": [
+      "A. La clave privada del emisor.",
+      "B. La clave pública del emisor.",
+      "C. La clave pública del destinatario.",
+      "D. Una clave simétrica generada al azar."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SIE-T7-54-Pregunta: ¿Qué funcionalidad de OpenSSL permite asegurar que un certificado digital no ha sido manipulado?",
+    "opciones": [
+      "A. La compresión de datos.",
+      "B. La verificación de certificados digitales (X.509).",
+      "C. El borrado seguro de claves privadas.",
+      "D. El diseño de interfaces de usuario seguras."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-55-Pregunta: Según la LSSI, ¿qué información debe incluir un prestador si ejerce una profesión regulada?",
+    "opciones": [
+      "A. El número de cuenta bancaria de la empresa.",
+      "B. El Colegio profesional al que pertenece y su título académico.",
+      "C. La lista de todos sus empleados y sus NIF.",
+      "D. Una copia del contrato de alquiler del local físico."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-56-Pregunta: ¿Cómo define la LSSI a los servicios prestados a distancia, por medios electrónicos y a petición individual?",
+    "opciones": [
+      "A. Servicios de la Sociedad de la Información.",
+      "B. Servicios de Radiodifusión Pública.",
+      "C. Servicios de Telecomunicaciones de Redes Conmutadas.",
+      "D. Servicios de Mensajería Certificada en Papel."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SIE-T7-57-Pregunta: ¿Cuál es el nombre técnico de la cabecera HTTP que un servidor utiliza para enviar una cookie al navegador?",
+    "opciones": [
+      "A. Get-Cookie.",
+      "B. Set-Cookie.",
+      "C. Header-Cookie.",
+      "D. Send-Data-Cookie."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-58-Pregunta: ¿Qué riesgo de seguridad se describe como el robo de una cookie para suplantar al usuario sin necesidad de contraseña?",
+    "opciones": [
+      "A. Ataque DDoS.",
+      "B. Inyección SQL.",
+      "C. Robo de sesión mediante XSS si no se usa HttpOnly.",
+      "D. Phishing por correo electrónico."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SIE-T7-59-Pregunta: ¿Cuál es la principal diferencia entre cookies de sesión y cookies persistentes?",
+    "opciones": [
+      "A. El tipo de datos que almacenan (cifrados o no).",
+      "B. La entidad que las gestiona.",
+      "C. El plazo de tiempo que permanecen activadas en el equipo.",
+      "D. Solo las de sesión requieren consentimiento."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SIE-T7-60-Pregunta: Según la normativa de cookies, ¿qué información debe contener la 'Capa de nivel 1'?",
+    "opciones": [
+      "A. El código fuente de la cookie.",
+      "B. Un resumen con lo esencial en el banner inicial.",
+      "C. Los datos personales del programador de la web.",
+      "D. Los detalles técnicos del servidor de hosting."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-61-Pregunta: ¿A qué principio de accesibilidad se refiere que el contenido sea compatible con tecnologías actuales y futuras?",
+    "opciones": [
+      "A. Perceptible.",
+      "B. Operable.",
+      "C. Comprensible.",
+      "D. Robusto."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "SIE-T7-62-Pregunta: ¿Qué nivel de conformidad de las pautas WCAG 2.0 es el máximo posible?",
+    "opciones": [
+      "A. Nivel A.",
+      "B. Nivel B.",
+      "C. Nivel AA.",
+      "D. Nivel AAA."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "SIE-T7-63-Pregunta: ¿Qué garantiza el Artículo 18.4 de la Constitución Española respecto al uso de la informática?",
+    "opciones": [
+      "A. El derecho a una conexión de banda ancha gratuita.",
+      "B. La limitación de la informática para garantizar el honor y la intimidad de los ciudadanos.",
+      "C. La prohibición absoluta de recopilar datos personales.",
+      "D. El derecho a acceder a cualquier base de datos pública."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-64-Pregunta: Según el GDPR, ¿quién es el 'Encargado del tratamiento'?",
+    "opciones": [
+      "A. La persona que decide para qué se usan los datos.",
+      "B. El interesado que cede sus datos personales.",
+      "C. La persona o entidad que trata datos personales por cuenta del responsable.",
+      "D. La autoridad de control que impone las sanciones."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SIE-T7-65-Pregunta: ¿Cómo se define 'Destinatario' en el contexto del tratamiento de datos personales?",
+    "opciones": [
+      "A. Exclusivamente el usuario final de una aplicación.",
+      "B. La persona física o jurídica a la que se comuniquen datos personales.",
+      "C. Solo los organismos públicos que solicitan datos por ley.",
+      "D. El técnico que repara el ordenador donde están los datos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-66-Pregunta: ¿En qué consiste el principio de 'Minimización de datos' del GDPR?",
+    "opciones": [
+      "A. En usar la fuente más pequeña posible en los formularios.",
+      "B. En tratar únicamente los datos adecuados y limitados a lo necesario para los fines.",
+      "C. En comprimir las bases de datos para que ocupen menos espacio en disco.",
+      "D. En borrar los datos cada semana sin excepción."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-67-Pregunta: ¿Cuál de estos NO es un motivo de licitud del tratamiento de datos según los apuntes?",
+    "opciones": [
+      "A. El interesado dio su consentimiento.",
+      "B. El tratamiento es necesario para la ejecución de un contrato.",
+      "C. El tratamiento es necesario para aumentar los ingresos publicitarios de la empresa.",
+      "D. El tratamiento es necesario por obligación legal del responsable."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SIE-T7-68-Pregunta: ¿Cuál es el derecho que permite al interesado pedir que se detenga el tratamiento de sus datos por motivos personales?",
+    "opciones": [
+      "A. Derecho de Rectificación.",
+      "B. Derecho de Oposición.",
+      "C. Derecho de Portabilidad.",
+      "D. Derecho de Limitación."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-69-Pregunta: Respecto a la seguridad basada en el riesgo, ¿qué ecosistema se menciona para pentesting, detección y respuesta?",
+    "opciones": [
+      "A. OWASP.",
+      "B. MITRE ATT&CK.",
+      "C. ENS Nivel Bajo.",
+      "D. ENISA Portal."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-70-Pregunta: ¿Qué tipo de obras protege la Propiedad Intelectual según los apuntes?",
+    "opciones": [
+      "A. Solo libros y cuadros físicos.",
+      "B. Creaciones literarias, artísticas o científicas expresadas por cualquier medio o soporte.",
+      "C. Únicamente inventos industriales patentados.",
+      "D. Marcas comerciales y logotipos de empresas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-71-Pregunta: ¿Cuál de los siguientes está excluido de la protección por Propiedad Intelectual?",
+    "opciones": [
+      "A. Un programa de ordenador (software).",
+      "B. Una base de datos estructurada.",
+      "C. Las disposiciones legales o reglamentarias y resoluciones judiciales.",
+      "D. Una composición musical original."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SIE-T7-72-Pregunta: ¿Qué derecho moral tiene un autor sobre su obra de forma irrenunciable?",
+    "opciones": [
+      "A. Derecho de venta a terceros.",
+      "B. Derecho a exigir el reconocimiento de su paternidad sobre la obra.",
+      "C. Derecho de alquiler comercial.",
+      "D. Derecho de distribución en mercados internacionales."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-73-Pregunta: ¿Cuánto tiempo dura la protección de la organización del contenido de una base de datos?",
+    "opciones": [
+      "A. 5 años.",
+      "B. 15 años.",
+      "C. 70 años.",
+      "D. Es perpetua."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-74-Pregunta: ¿Cómo se clasifican los delitos en el Código Penal según su gravedad?",
+    "opciones": [
+      "A. Únicos y Múltiples.",
+      "B. Graves, Menos graves y Leves.",
+      "C. Civiles, Administrativos y Penales.",
+      "D. Directos e Indirectos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-75-Pregunta: ¿Qué artículo del Código Penal regula el acceso ilegal a sistemas informáticos (Hacking)?",
+    "opciones": [
+      "A. Art. 197.",
+      "B. Art. 197 bis.",
+      "C. Art. 248.",
+      "D. Art. 264."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-76-Pregunta: ¿Cuál es la pena de prisión para el delito de descubrimiento y revelación de secretos?",
+    "opciones": [
+      "A. De 6 meses a 1 año.",
+      "B. De 1 a 4 años.",
+      "C. De 10 a 15 años.",
+      "D. Solo conlleva multa económica."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-77-Pregunta: Si un delito informático lo comete el 'responsable del fichero' o un 'responsable informático', ¿cuál es la pena de prisión?",
+    "opciones": [
+      "A. La misma que cualquier otro ciudadano.",
+      "B. De 3 a 5 años.",
+      "C. Queda exento por su cargo.",
+      "D. De 1 a 2 años."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-78-Pregunta: ¿Qué pena se aplica a una estafa informática si el fraude excede los 50.000 €?",
+    "opciones": [
+      "A. Prisión de 6 meses a 3 años.",
+      "B. Prisión de 1 a 6 años y multa de 6 a 12 meses.",
+      "C. Inhabilitación profesional por 10 años.",
+      "D. Arresto domiciliario de fin de semana."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-79-Pregunta: El delito de 'Daños' (Art. 264) incluye la acción de:",
+    "opciones": [
+      "A. Leer un correo ajeno sin permiso.",
+      "B. Borrar, dañar o hacer inaccesibles datos o programas sin autorización.",
+      "C. Usar un nombre falso en un chat.",
+      "D. No pagar la licencia de un software."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-80-Pregunta: ¿Qué tipo de ataque informático se menciona bajo el Art. 264.2 del Código Penal?",
+    "opciones": [
+      "A. Phishing.",
+      "B. Ataques de denegación de servicio (DDoS).",
+      "C. Suplantación de identidad.",
+      "D. Falsificación de certificados."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-81-Pregunta: ¿Qué delito comete quien fabrica programas destinados específicamente a la falsificación de tarjetas de crédito?",
+    "opciones": [
+      "A. Estafa básica.",
+      "B. Falsedades.",
+      "C. Daños informáticos.",
+      "D. Revelación de secretos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-82-Pregunta: En el Código Penal, ¿qué elemento es necesario para que exista el delito de 'Estafa'?",
+    "opciones": [
+      "A. Que el sistema informático se rompa físicamente.",
+      "B. Ánimo de lucro y utilización de engaño bastante.",
+      "C. Que la víctima sea menor de edad.",
+      "D. Que el ataque proceda del extranjero."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-83-Pregunta: ¿Qué propiedad garantiza que un mensaje digital proviene realmente de quien dice ser el remitente?",
+    "opciones": [
+      "A. Confidencialidad.",
+      "B. Autenticidad.",
+      "C. Disponibilidad.",
+      "D. Seudonimización."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-84-Pregunta: Según los apuntes, el sistema de claves pública y privada se basa frecuentemente en:",
+    "opciones": [
+      "A. Sumas de números pares.",
+      "B. Problemas matemáticos difíciles basados en números primos.",
+      "C. Diccionarios de palabras comunes.",
+      "D. La velocidad de rotación del disco duro."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-85-Pregunta: ¿Qué requisito debe cumplir el comercio electrónico respecto a la confirmación de la compra?",
+    "opciones": [
+      "A. Enviar una carta física por correo certificado.",
+      "B. Garantizar la confirmación electrónica (ej. email con resumen del pedido).",
+      "C. Realizar una llamada telefónica obligatoria al cliente.",
+      "D. No es necesaria ninguna confirmación si ya se ha pagado."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-86-Pregunta: ¿Cuándo es responsable un prestador de servicios por los contenidos que PUBLICA él mismo?",
+    "opciones": [
+      "A. Nunca, si tiene un descargo de responsabilidad.",
+      "B. Siempre es responsable de los contenidos que publica.",
+      "C. Solo si el contenido recibe más de 1.000 quejas.",
+      "D. Solo si el contenido es pornográfico."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-87-Pregunta: ¿Qué técnica se describe como la toma de 'huella digital' del navegador del usuario?",
+    "opciones": [
+      "A. Phishing.",
+      "B. Fingerprinting.",
+      "C. Spoofing.",
+      "D. Cookie Tampering."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-88-Pregunta: En el ataque CSRF (Cross-Site Request Forgery), ¿qué se aprovecha para realizar acciones no deseadas?",
+    "opciones": [
+      "A. La debilidad del hardware del usuario.",
+      "B. Que la cookie de sesión se envía automáticamente en cada petición al sitio legítimo.",
+      "C. El olvido de la contraseña por parte del administrador.",
+      "D. La falta de antivirus en el servidor."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-89-Pregunta: ¿Qué tipo de cookie permite distribuir el tráfico entre varios servidores para optimizar el rendimiento?",
+    "opciones": [
+      "A. Cookie de publicidad.",
+      "B. Cookie de balanceo de carga.",
+      "C. Cookie de análisis de terceros.",
+      "D. Cookie persistente de marketing."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-90-Pregunta: ¿Cuál es el objeto de la Ley 11/2023 de accesibilidad?",
+    "opciones": [
+      "A. Bajar los precios de los ordenadores.",
+      "B. Establecer requisitos de accesibilidad universal para productos y servicios.",
+      "C. Obligar a todas las personas a usar certificados digitales.",
+      "D. Regular la velocidad mínima de internet en zonas rurales."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-91-Pregunta: ¿Qué principio de accesibilidad exige que la navegación e interacción sea posible sin depender exclusivamente del ratón?",
+    "opciones": [
+      "A. Perceptible.",
+      "B. Operable.",
+      "C. Comprensible.",
+      "D. Estético."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-92-Pregunta: En España, ¿a partir de qué edad se considera que un menor puede consentir el tratamiento de sus datos según la LOPDGDD?",
+    "opciones": [
+      "A. 12 años.",
+      "B. 14 años.",
+      "C. 16 años.",
+      "D. 18 años."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-93-Pregunta: ¿Qué función de la AEPD consiste en fijar el importe de las multas por infracciones?",
+    "opciones": [
+      "A. Función de asesoramiento.",
+      "B. Imposición de sanciones.",
+      "C. Fomento de la cultura de privacidad.",
+      "D. Elaboración de leyes nuevas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-94-Pregunta: ¿Qué información adicional se requiere en la 'Seudonimización' para identificar al interesado?",
+    "opciones": [
+      "A. Ninguna, es un proceso irreversible.",
+      "B. Una información adicional que debe figurar por separado y estar sujeta a medidas técnicas.",
+      "C. El nombre real del usuario escrito en el mismo fichero.",
+      "D. Solo la clave pública del administrador."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-95-Pregunta: El Delegado de Protección de Datos (DPO) debe actuar como:",
+    "opciones": [
+      "A. Abogado defensor del usuario en juicios.",
+      "B. Punto de contacto con la autoridad de control (AEPD).",
+      "C. Director del departamento de ventas.",
+      "D. Auditor externo pagado por el Estado."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-96-Pregunta: ¿Qué principio obliga al responsable a poder DEMOSTRAR que cumple con el GDPR?",
+    "opciones": [
+      "A. Transparencia.",
+      "B. Responsabilidad proactiva.",
+      "C. Integridad.",
+      "D. Limitación de la finalidad."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-97-Pregunta: ¿Cuál de estas categorías se considera 'especial' y su tratamiento está generalmente prohibido?",
+    "opciones": [
+      "A. Dirección de correo electrónico profesional.",
+      "B. Opiniones políticas y convicciones religiosas.",
+      "C. Modelo de coche y matrícula.",
+      "D. Aficiones deportivas generales."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-98-Pregunta: ¿Qué derecho permite al interesado pedir que se corrijan datos inexactos o incompletos?",
+    "opciones": [
+      "A. Derecho de Acceso.",
+      "B. Derecho de Rectificación.",
+      "C. Derecho de Supresión.",
+      "D. Derecho de Limitación."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-99-Pregunta: Respecto al software, ¿para qué actividad NO se necesita autorización del titular de derechos?",
+    "opciones": [
+      "A. Publicar copias piratas en un foro.",
+      "B. Realizar copias de seguridad o corregir errores para interoperabilidad.",
+      "C. Cambiar el logo del autor por el propio para venderlo.",
+      "D. Traducir el software a otro idioma para distribuirlo comercialmente."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-100-Pregunta: ¿A cuánto asciende el importe de un 'día-multa' en el Código Penal español según los apuntes?",
+    "opciones": [
+      "A. Siempre 10 € fijos.",
+      "B. Entre 2 € y 400 € en función de la situación económica.",
+      "C. Entre 100 € y 1.000 € obligatoriamente.",
+      "D. Es una cifra que decide el DPO de la empresa."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-101-Pregunta: Según los apuntes, ¿qué elementos técnicos se mencionan para garantizar la integridad y validez legal de un documento electrónico?",
+    "opciones": [
+      "A. Firmas digitales, sellos de tiempo y certificados digitales.",
+      "B. Únicamente una contraseña de acceso al archivo.",
+      "C. Solo la marca de agua del fabricante del software.",
+      "D. La impresión física del documento en papel timbrado."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SIE-T7-102-Pregunta: ¿Qué normativa española complementa al Reglamento eIDAS en la regulación de servicios electrónicos de confianza?",
+    "opciones": [
+      "A. Ley 34/2002 (LSSI).",
+      "B. Ley 6/2020.",
+      "C. Real Decreto 1112/2018.",
+      "D. Ley Orgánica 3/2018."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-103-Pregunta: En la firma electrónica avanzada, ¿qué debe ocurrir con cualquier modificación ulterior de los datos firmados?",
+    "opciones": [
+      "A. Debe ser automáticamente corregida por el sistema.",
+      "B. Debe ser detectable.",
+      "C. El documento debe borrarse automáticamente.",
+      "D. No es necesario que sea detectable si la clave es privada."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-104-Pregunta: ¿Qué garantiza la 'Criptografía de clave asimétrica' respecto al uso de claves?",
+    "opciones": [
+      "A. Que emisor y receptor usen la misma clave secreta.",
+      "B. Que cada usuario tenga una pareja de claves: una pública y una privada.",
+      "C. Que las claves cambien cada 10 segundos de forma aleatoria.",
+      "D. Que no se necesiten claves para cifrar mensajes cortos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-105-Pregunta: En el proceso de cifrado asimétrico, ¿cuál es la función de la clave pública del destinatario?",
+    "opciones": [
+      "A. Descifrar el mensaje recibido.",
+      "B. Cifrar el mensaje enviado por el emisor.",
+      "C. Firmar digitalmente el documento.",
+      "D. Validar la identidad del emisor ante un notario."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-106-Pregunta: ¿En qué se basa la seguridad de los pares de claves según los fundamentos matemáticos citados?",
+    "opciones": [
+      "A. En la velocidad de la conexión de red.",
+      "B. En problemas matemáticos difíciles de resolver, como los basados en números primos.",
+      "C. En la longitud del nombre del archivo cifrado.",
+      "D. En el uso de algoritmos de compresión sin pérdida."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-107-Pregunta: ¿Qué es un 'Certificado electrónico' según la definición de los apuntes?",
+    "opciones": [
+      "A. Una factura digital emitida por un comercio online.",
+      "B. Una declaración electrónica que vincula datos de validación de firma con una persona física.",
+      "C. Un código QR impreso en el DNI físico.",
+      "D. Un mensaje de confirmación de lectura de un correo."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-108-Pregunta: ¿Cuál es una de las funcionalidades principales de OpenSSL mencionadas en el material?",
+    "opciones": [
+      "A. La creación de páginas web interactivas.",
+      "B. La gestión de certificados digitales (X.509).",
+      "C. La limpieza de virus en el sector de arranque.",
+      "D. El diseño de hardware criptográfico."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-109-Pregunta: Según la LSSI, ¿qué actividad se considera un Servicio de la Sociedad de la Información?",
+    "opciones": [
+      "A. La entrega de paquetes por mensajería física.",
+      "B. El suministro de información por vía telemática.",
+      "C. La reparación de ordenadores en un taller físico.",
+      "D. La venta de prensa en un quiosco de calle."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-110-Pregunta: Respecto a la identificación del prestador en la LSSI, ¿qué datos de contacto son obligatorios?",
+    "opciones": [
+      "A. Solo la dirección física de la sede social.",
+      "B. Dirección, email y teléfono.",
+      "C. Únicamente un formulario de contacto web.",
+      "D. El nombre de los administradores de la empresa."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-111-Pregunta: ¿Qué debe indicar el prestador de servicios electrónicos si necesita una autorización administrativa previa para su actividad?",
+    "opciones": [
+      "A. El nombre del funcionario que la concedió.",
+      "B. Los datos de dicha autorización.",
+      "C. El importe pagado por la tasa de la licencia.",
+      "D. No es necesario indicarlo si tiene el NIF visible."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-112-Pregunta: En el comercio electrónico, ¿qué obligación tiene el vendedor tras realizarse la compra?",
+    "opciones": [
+      "A. Llamar por teléfono al comprador en menos de 24 horas.",
+      "B. Garantizar la confirmación electrónica de la compra (ej. email con resumen).",
+      "C. Enviar una factura en papel por correo ordinario.",
+      "D. Publicar el nombre del comprador en su página web."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-113-Pregunta: ¿Cómo deben estar identificadas las comunicaciones comerciales electrónicas según la LSSI?",
+    "opciones": [
+      "A. Con un código de colores específico.",
+      "B. Claramente como tales, usando palabras como 'Publicidad' o 'Promoción'.",
+      "C. No necesitan identificación si el receptor es cliente previo.",
+      "D. Deben incluir el sello de la AEPD en el asunto."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-114-Pregunta: ¿Qué ocurre si un prestador de hosting tiene conocimiento efectivo de que aloja contenido ilegal y no actúa?",
+    "opciones": [
+      "A. Sigue sin ser responsable por la neutralidad de la red.",
+      "B. Pasa a ser responsable de dicho contenido.",
+      "C. Solo es responsable si el contenido es de carácter político.",
+      "D. La ley le obliga a cerrar toda la plataforma inmediatamente."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-115-Pregunta: Según la LSSI, ¿qué importe puede alcanzar una sanción por una infracción grave (ej. spam masivo)?",
+    "opciones": [
+      "A. Hasta 3.000 €.",
+      "B. Hasta 150.000 €.",
+      "C. Hasta 1.000.000 €.",
+      "D. Solo amonestación verbal la primera vez."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-116-Pregunta: ¿Cuál es el estándar técnico (RFC) que describe el mecanismo de gestión de cookies en HTTP?",
+    "opciones": [
+      "A. RFC 2616.",
+      "B. RFC 6265.",
+      "C. RFC 7230.",
+      "D. RFC 1918."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-117-Pregunta: ¿Qué cabecera HTTP usa el navegador para devolver una cookie al servidor?",
+    "opciones": [
+      "A. Set-Cookie.",
+      "B. Cookie.",
+      "C. Return-Cookie.",
+      "D. Response-Header."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-118-Pregunta: ¿Qué tipo de cookie se borra automáticamente al cerrar el navegador?",
+    "opciones": [
+      "A. Cookie de terceros.",
+      "B. Cookie de sesión.",
+      "C. Cookie persistente.",
+      "D. Cookie técnica de seguridad."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-119-Pregunta: ¿Qué riesgo de seguridad permite a un atacante robar cookies si no se utiliza el atributo 'HttpOnly'?",
+    "opciones": [
+      "A. Inyección SQL.",
+      "B. Ataques XSS (Cross-Site Scripting).",
+      "C. Ataque de fuerza bruta.",
+      "D. Desbordamiento de búfer."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-120-Pregunta: ¿Qué ataque consiste en que una página maliciosa haga que el navegador del usuario realice una petición no deseada a un sitio donde ya está autenticado?",
+    "opciones": [
+      "A. Phishing.",
+      "B. CSRF (Cross-Site Request Forgery).",
+      "C. Ransomware.",
+      "D. Fingerprinting."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-121-Pregunta: ¿Qué se entiende por 'Cookie Tampering' (manipulación de cookies)?",
+    "opciones": [
+      "A. Borrar las cookies del historial.",
+      "B. Modificar los datos sin cifrar de una cookie para cambiar el rol del usuario.",
+      "C. Bloquear la instalación de cookies desde el navegador.",
+      "D. Usar cookies para mejorar la velocidad de carga."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-122-Pregunta: ¿Cuál de estas cookies está exceptuada de solicitar consentimiento?",
+    "opciones": [
+      "A. Cookie de marketing comportamental.",
+      "B. Cookie de balanceo de carga para optimizar rendimiento.",
+      "C. Cookie de análisis estadístico de terceros.",
+      "D. Cookie de seguimiento de redes sociales."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-123-Pregunta: Según la normativa de transparencia en cookies, ¿qué debe contener la 'Capa de nivel 2'?",
+    "opciones": [
+      "A. Un resumen rápido en el banner.",
+      "B. La Política de Cookies con detalles completos y cómo desactivarlas.",
+      "C. El código fuente de las cookies.",
+      "D. Solo el nombre de la empresa."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-124-Pregunta: ¿Qué establece la LSSI si un usuario simplemente navega o usa la barra de desplazamiento sin aceptar cookies explícitamente?",
+    "opciones": [
+      "A. Que acepta tácitamente.",
+      "B. Que NO las acepta.",
+      "C. Que las acepta solo por esa sesión.",
+      "D. Que la web puede bloquear el acceso al contenido."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-125-Pregunta: ¿Qué define la 'Accesibilidad digital' según los apuntes?",
+    "opciones": [
+      "A. La velocidad de descarga de una web.",
+      "B. Capacidad de productos y servicios de ser usados por cualquier persona, sin importar sus capacidades.",
+      "C. El derecho a tener internet gratis en espacios públicos.",
+      "D. La protección contra hackers extranjeros."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-126-Pregunta: ¿Qué tipo de productos deben ser accesibles según la Ley 11/2023?",
+    "opciones": [
+      "A. Solo los libros de texto escolares.",
+      "B. Equipos informáticos de uso general y terminales de autoservicio.",
+      "C. Únicamente los teléfonos móviles de gama alta.",
+      "D. Toda máquina que funcione con electricidad."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-127-Pregunta: ¿Qué principio de accesibilidad establece que la información debe ser perceptible al menos con UN sentido?",
+    "opciones": [
+      "A. Operable.",
+      "B. Perceptible.",
+      "C. Robusto.",
+      "D. Comprensible."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-128-Pregunta: ¿Qué indica el nivel de conformidad 'AA' en accesibilidad web?",
+    "opciones": [
+      "A. Nivel mínimo y obligatorio.",
+      "B. Nivel recomendado y exigido en normas oficiales.",
+      "C. Nivel máximo y opcional.",
+      "D. Nivel obsoleto que ya no se usa."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-129-Pregunta: ¿Qué artículo de la Constitución garantiza el derecho al honor y la intimidad limitando el uso de la informática?",
+    "opciones": [
+      "A. Art. 14.",
+      "B. Art. 18.4.",
+      "C. Art. 24.",
+      "D. Art. 155."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-130-Pregunta: El GDPR aplica a organizaciones que ofrecen bienes o servicios a personas en la UE, incluso si la organización está:",
+    "opciones": [
+      "A. Dentro de la UE únicamente.",
+      "B. Fuera de la UE.",
+      "C. En paraísos fiscales exclusivamente.",
+      "D. Exenta de pagar impuestos en España."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-131-Pregunta: Según los objetivos de la LOPDGDD, ¿qué derecho digital se menciona específicamente reforzar?",
+    "opciones": [
+      "A. Derecho al olvido en Google únicamente.",
+      "B. Derecho a la desconexión digital.",
+      "C. Derecho a hackear sistemas con fines educativos.",
+      "D. Derecho a no pagar por software propietario."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-132-Pregunta: ¿En qué año se creó la Agencia Española de Protección de Datos (AEPD)?",
+    "opciones": [
+      "A. 1978.",
+      "B. 1993.",
+      "C. 2018.",
+      "D. 2002."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-133-Pregunta: Según el Art. 4 del GDPR, ¿qué es la 'Elaboración de perfiles'?",
+    "opciones": [
+      "A. Crear un currículum vitae online.",
+      "B. Tratamiento automatizado para evaluar aspectos personales de una persona física.",
+      "C. Poner una foto de perfil en una red social.",
+      "D. Organizar los archivos de un ordenador por carpetas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-134-Pregunta: ¿Qué requisito de seguridad exige la 'Seudonimización' para la información adicional?",
+    "opciones": [
+      "A. Que se borre inmediatamente.",
+      "B. Que figure por separado y esté sujeta a medidas técnicas y organizativas.",
+      "C. Que sea pública para mayor transparencia.",
+      "D. Que la guarde el propio interesado en su casa."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-135-Pregunta: En el GDPR, ¿quién trata los datos PERSONALES POR CUENTA del responsable?",
+    "opciones": [
+      "A. El Interesado.",
+      "B. El Encargado del tratamiento.",
+      "C. El Destinatario final.",
+      "D. El Tercero interesado."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-136-Pregunta: ¿Cuál es una de las funciones del Delegado de Protección de Datos (DPO)?",
+    "opciones": [
+      "A. Sancionar a los empleados que cometan errores.",
+      "B. Informar y asesorar al responsable o encargado del tratamiento.",
+      "C. Instalar el firewall de la empresa.",
+      "D. Pagar las multas de la AEPD."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-137-Pregunta: ¿Bajo qué principio del tratamiento de datos se exige que estos sean 'exactos y actualizados'?",
+    "opciones": [
+      "A. Licitud.",
+      "B. Exactitud.",
+      "C. Minimización.",
+      "D. Limitación del plazo de conservación."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-138-Pregunta: ¿Cuál es el principio que obliga a tratar los datos solo para fines determinados, explícitos y legítimos?",
+    "opciones": [
+      "A. Transparencia.",
+      "B. Limitación de la finalidad.",
+      "C. Integridad.",
+      "D. Portabilidad."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-139-Pregunta: ¿Es posible retirar el consentimiento para el tratamiento de datos según el GDPR?",
+    "opciones": [
+      "A. No, una vez dado es permanente.",
+      "B. Sí, en cualquier momento.",
+      "C. Solo tras una orden judicial.",
+      "D. Solo si la empresa lo permite en su contrato."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-140-Pregunta: ¿Qué ocurre con el tratamiento de datos sobre vida sexual según las categorías especiales del GDPR?",
+    "opciones": [
+      "A. Está permitido si son datos públicos.",
+      "B. Está generalmente prohibido.",
+      "C. No se considera dato personal.",
+      "D. Solo se protege si el interesado es menor."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-141-Pregunta: ¿Qué organismo de ciberseguridad de la UE se cita para buscar medidas técnicas de seguridad?",
+    "opciones": [
+      "A. OWASP.",
+      "B. ENISA.",
+      "C. NIST.",
+      "D. ISO."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-142-Pregunta: Respecto a la Propiedad Intelectual, ¿a qué categoría pertenecen las patentes y marcas?",
+    "opciones": [
+      "A. Derechos de Autor.",
+      "B. Propiedad Industrial.",
+      "C. Derechos Conexos.",
+      "D. Dominio Público."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-143-Pregunta: ¿Qué plazo de protección general tienen los derechos de explotación tras el fallecimiento del autor?",
+    "opciones": [
+      "A. 15 años.",
+      "B. 70 años.",
+      "C. 50 años.",
+      "D. 100 años."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-144-Pregunta: ¿Se necesita autorización para que un usuario legítimo corrija errores en un software para lograr interoperabilidad?",
+    "opciones": [
+      "A. Sí, siempre.",
+      "B. No se necesita autorización.",
+      "C. Solo si el software es Open Source.",
+      "D. Solo si el autor ha fallecido."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-145-Pregunta: ¿Qué escala de gravedad utiliza el Código Penal español para clasificar los delitos?",
+    "opciones": [
+      "A. Administrativos y Penales.",
+      "B. Graves, Menos graves y Leves.",
+      "C. Financieros y De sangre.",
+      "D. Locales e Internacionales."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-146-Pregunta: ¿Cuál es la pena para el delito de descubrimiento y revelación de secretos (Art. 197)?",
+    "opciones": [
+      "A. Solo una multa de 2 meses.",
+      "B. Prisión de 1 a 4 años y multa de 12 a 24 meses.",
+      "C. Inhabilitación de por vida.",
+      "D. Prisión de 10 a 20 años."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-147-Pregunta: Según los apuntes, ¿qué constituye el delito de 'Estafa'?",
+    "opciones": [
+      "A. Entrar en un servidor sin contraseña sin robar nada.",
+      "B. Utilizar engaño bastante para producir error en otro e inducirlo a un acto en perjuicio propio o ajeno con ánimo de lucro.",
+      "C. Insultar a una persona a través de un correo electrónico.",
+      "D. Olvidar pagar una suscripción mensual de un servicio web."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-148-Pregunta: ¿Qué artículo del Código Penal castiga la producción y distribución de malware?",
+    "opciones": [
+      "A. Art. 18.4.",
+      "B. Art. 197 ter.",
+      "C. Art. 248.2.",
+      "D. Art. 401."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-149-Pregunta: ¿A qué pena se enfrenta quien fabrique programas para falsificar tarjetas de crédito?",
+    "opciones": [
+      "A. A una multa simbólica.",
+      "B. A penas idénticas al infractor que usa el programa.",
+      "C. Solo a la retirada del programa de internet.",
+      "D. No es delito fabricarlo, solo usarlo."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-150-Pregunta: ¿Qué propiedad de la seguridad garantiza que la información solo sea accesible por las personas autorizadas?",
+    "opciones": [
+      "A. Disponibilidad.",
+      "B. Confidencialidad.",
+      "C. Integridad.",
+      "D. No repudio."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-151-Pregunta: Según los apuntes, ¿qué constituye el objeto de la propiedad intelectual?",
+    "opciones": [
+      "A. Solo los inventos industriales patentables.",
+      "B. Todas las creaciones literarias, artísticas o científicas expresadas por cualquier medio o soporte.",
+      "C. Únicamente el código binario de los programas de ordenador.",
+      "D. Las marcas comerciales y los logotipos de empresa."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-152-Pregunta: ¿Qué elemento está expresamente EXCLUIDO de la protección por propiedad intelectual?",
+    "opciones": [
+      "A. Los manuales de uso de un software.",
+      "B. Las disposiciones legales o reglamentarias y resoluciones judiciales.",
+      "C. Las composiciones musicales originales.",
+      "D. La documentación técnica de un programa."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-153-Pregunta: Si un trabajador asalariado crea un programa de ordenador en el ejercicio de sus funciones, ¿quién es el titular de los derechos de explotación?",
+    "opciones": [
+      "A. El trabajador exclusivamente.",
+      "B. El empresario, salvo pacto en contrario.",
+      "C. El Estado, por tratarse de propiedad intelectual.",
+      "D. Se reparte al 50% entre el trabajador y la empresa."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-154-Pregunta: ¿Qué aspecto del software NO queda amparado por el derecho de autor según las particularidades citadas?",
+    "opciones": [
+      "A. La documentación técnica.",
+      "B. Los manuales de uso.",
+      "C. Las ideas y principios en los que se basa la programación.",
+      "D. El código fuente."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SIE-T7-155-Pregunta: ¿Cuál es el plazo de protección para la organización estructural del contenido de una base de datos?",
+    "opciones": [
+      "A. 5 años.",
+      "B. 15 años.",
+      "C. 70 años.",
+      "D. Es perpetua mientras la base de datos se use."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-156-Pregunta: ¿Cómo clasifica el Código Penal los delitos según su gravedad?",
+    "opciones": [
+      "A. Civiles y Criminales.",
+      "B. Graves, Menos graves y Leves.",
+      "C. Financieros y De orden público.",
+      "D. Únicos y Reincidentes."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-157-Pregunta: ¿Qué artículo del Código Penal regula el acceso ilegal a sistemas informáticos (Hacking)?",
+    "opciones": [
+      "A. Art. 197.",
+      "B. Art. 197 bis.",
+      "C. Art. 248.",
+      "D. Art. 264."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-158-Pregunta: ¿Cuál es la pena de prisión para el delito de descubrimiento y revelación de secretos?",
+    "opciones": [
+      "A. De 6 meses a 1 año.",
+      "B. De 1 a 4 años.",
+      "C. De 5 a 10 años.",
+      "D. No tiene pena de prisión, solo multa."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-159-Pregunta: Si el delito de revelación de secretos lo comete el 'responsable informático', ¿cuál es la pena de prisión?",
+    "opciones": [
+      "A. De 1 a 2 años.",
+      "B. De 3 a 5 años.",
+      "C. La misma que cualquier otro usuario.",
+      "D. Queda exento de responsabilidad penal por su cargo."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-160-Pregunta: Según los apuntes, ¿cuándo se considera que una estafa informática es agravada y conlleva prisión de 1 a 6 años?",
+    "opciones": [
+      "A. Cuando el fraude excede los 400 €.",
+      "B. Cuando el fraude excede los 50.000 €.",
+      "C. Siempre que se use una tarjeta de crédito.",
+      "D. Solo si la víctima es un organismo público."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-161-Pregunta: El delito de 'Daños' informáticos (Art. 264) consiste fundamentalmente en:",
+    "opciones": [
+      "A. Robar físicamente el ordenador de la empresa.",
+      "B. Borrar, dañar o hacer inaccesibles datos o programas sin autorización.",
+      "C. No renovar las licencias de software a tiempo.",
+      "D. Vender copias de software sin permiso del autor."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-162-Pregunta: ¿Qué tipo de ataque se menciona explícitamente bajo el Art. 264.2 del Código Penal?",
+    "opciones": [
+      "A. Phishing.",
+      "B. Ataques de denegación de servicio (DDoS).",
+      "C. Suplantación de identidad en chats.",
+      "D. Envío masivo de spam publicitario."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-163-Pregunta: ¿A qué pena se enfrenta quien fabrique malware según el Art. 197 ter?",
+    "opciones": [
+      "A. Solo una multa administrativa.",
+      "B. Prisión de 6 meses a 2 años y multa de 12 a 24 meses.",
+      "C. Inhabilitación permanente para el uso de redes.",
+      "D. Trabajos para la comunidad durante 2 años."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-164-Pregunta: Respecto a las 'Falsedades', ¿qué pena recibe el autor de un programa destinado a falsificar tarjetas de crédito?",
+    "opciones": [
+      "A. Una pena reducida por no ser el que usa la tarjeta.",
+      "B. Penas idénticas al infractor que comete el delito con dicho programa.",
+      "C. Ninguna pena si el programa se publica con licencia libre.",
+      "D. Solo el decomiso del equipo informático."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-165-Pregunta: ¿Cómo se miden las sanciones económicas (multas) en el Código Penal español?",
+    "opciones": [
+      "A. Como un porcentaje fijo de la nómina.",
+      "B. En días-multa.",
+      "C. Siempre en tramos de 1.000 €.",
+      "D. Lo decide el Delegado de Protección de Datos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-166-Pregunta: ¿Cuál es el importe diario mínimo y máximo de una multa penal según los apuntes?",
+    "opciones": [
+      "A. Entre 1 € y 100 €.",
+      "B. Entre 2 € y 400 €.",
+      "C. Entre 10 € y 1.000 €.",
+      "D. No hay límites, depende de la gravedad del delito."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-167-Pregunta: ¿Qué propiedad garantiza que un mensaje no pueda ser negado por quien lo envió?",
+    "opciones": [
+      "A. Confidencialidad.",
+      "B. Disponibilidad.",
+      "C. No repudio.",
+      "D. Integridad."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SIE-T7-168-Pregunta: ¿Qué normativa sustituye al Reglamento eIDAS (UE 910/2014)?",
+    "opciones": [
+      "A. Ley 6/2020.",
+      "B. Reglamento UE 2024/1183.",
+      "C. GDPR 2016/679.",
+      "D. LSSI 34/2002."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-169-Pregunta: ¿Qué define la Cartera Europea de Identidad Digital según la nueva normativa de servicios de confianza?",
+    "opciones": [
+      "A. Una cuenta bancaria paneuropea.",
+      "B. El Reglamento UE 2024/1183.",
+      "C. La Ley Orgánica 3/2018.",
+      "D. Un registro de todas las firmas manuscritas escaneadas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-170-Pregunta: Según la LSSI, ¿qué se entiende por suministro de información por vía telemática?",
+    "opciones": [
+      "A. Un Servicio de la Sociedad de la Información.",
+      "B. Un Servicio de Telecomunicaciones básicas.",
+      "C. Un Servicio de Radiodifusión analógica.",
+      "D. Una actividad excluida de la ley."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SIE-T7-171-Pregunta: ¿Qué dato de inscripción es obligatorio mostrar en la web si el prestador está en el Registro Mercantil?",
+    "opciones": [
+      "A. El balance de cuentas anual.",
+      "B. Los datos de inscripción del registro.",
+      "C. El sueldo del administrador único.",
+      "D. La lista de accionistas mayoritarios."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-172-Pregunta: En el comercio electrónico, ¿qué información relativa a los gastos de envío debe facilitarse?",
+    "opciones": [
+      "A. Solo si superan los 10 €.",
+      "B. Información clara sobre los mismos antes de la contratación.",
+      "C. No es obligatorio indicarlos hasta la entrega del paquete.",
+      "D. Solo si el cliente los solicita por email."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-173-Pregunta: ¿Cuál es el requisito para enviar correos publicitarios según la LSSI?",
+    "opciones": [
+      "A. Que el receptor no haya dicho que no.",
+      "B. Obtener el consentimiento expreso previo.",
+      "C. Que la empresa tenga más de 20 años de antigüedad.",
+      "D. Ninguno, el correo electrónico es de libre acceso."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-174-Pregunta: ¿Cuándo son responsables las plataformas de hosting por el contenido subido por sus usuarios?",
+    "opciones": [
+      "A. Siempre, son los dueños de los servidores.",
+      "B. Si tienen conocimiento efectivo de la ilegalidad y no actúan.",
+      "C. Nunca, la responsabilidad es 100% del usuario.",
+      "D. Solo si el contenido genera más de 1 millón de visitas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-175-Pregunta: Una infracción por no informar sobre el uso de cookies se considera generalmente:",
+    "opciones": [
+      "A. Leve (hasta 30.000 €).",
+      "B. Grave (hasta 150.000 €).",
+      "C. Muy grave (hasta 600.000 €).",
+      "D. No es sancionable, solo requiere un aviso."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SIE-T7-176-Pregunta: ¿Qué estándar describe técnicamente el mecanismo de gestión de cookies en HTTP?",
+    "opciones": [
+      "A. RFC 2616.",
+      "B. RFC 6265.",
+      "C. RFC 1918.",
+      "D. RFC 7230."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-177-Pregunta: ¿Qué información debe dar la 'Capa de nivel 2' en la política de cookies?",
+    "opciones": [
+      "A. Solo un banner con un botón de 'Aceptar'.",
+      "B. Detalles del tipo de cookies, uso, identificación de quien las usa y cómo desactivarlas.",
+      "C. Los datos personales del CEO de la empresa.",
+      "D. El historial de navegación del usuario."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-178-Pregunta: Según la Guía de la AEPD, si un usuario solo hace 'scroll' en la página, ¿está aceptando las cookies?",
+    "opciones": [
+      "A. Sí, es una acción positiva de navegación.",
+      "B. No, no se considera una aceptación explícita.",
+      "C. Sí, siempre que el banner sea visible.",
+      "D. Solo si el scroll llega hasta el final de la página."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-179-Pregunta: ¿Cuál es el objeto de la Ley 11/2023 de accesibilidad?",
+    "opciones": [
+      "A. Garantizar internet gratuito para discapacitados.",
+      "B. Establecer requisitos de accesibilidad universal para optimizar la utilización autónoma de productos y servicios.",
+      "C. Obligar a comprar solo equipos informáticos fabricados en la UE.",
+      "D. Prohibir el uso de ratones en las administraciones públicas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-180-Pregunta: ¿Qué tipo de empresas están EXENTAS de cumplir los requisitos de accesibilidad de la Ley 11/2023?",
+    "opciones": [
+      "A. Todas las PYMES.",
+      "B. Las Microempresas (<10 empleados y <2M€ facturación).",
+      "C. Las empresas extranjeras que operan en España.",
+      "D. Las ONGs dedicadas a la tecnología."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-181-Pregunta: ¿Cuál de estos es un producto incluido en la normativa de accesibilidad?",
+    "opciones": [
+      "A. Maquinaria pesada de construcción.",
+      "B. Lectores de libros electrónicos.",
+      "C. Reproductores de DVD antiguos.",
+      "D. Cámaras fotográficas analógicas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-182-Pregunta: El principio de accesibilidad 'Operable' implica que:",
+    "opciones": [
+      "A. La información se pueda ver u oír.",
+      "B. La navegación e interacción no dependa exclusivamente del ratón.",
+      "C. El texto no tenga faltas de ortografía.",
+      "D. La web cargue en menos de 2 segundos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-183-Pregunta: ¿Qué nivel de conformidad WCAG es el 'recomendado' y exigido habitualmente en normas oficiales?",
+    "opciones": [
+      "A. Nivel A.",
+      "B. Nivel AA.",
+      "C. Nivel AAA.",
+      "D. Nivel B+."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-184-Pregunta: ¿Cuál es el número de criterios exigidos para alcanzar el nivel de accesibilidad 'AAA'?",
+    "opciones": [
+      "A. 25 criterios.",
+      "B. 13 criterios.",
+      "C. 23 criterios.",
+      "D. 50 criterios."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SIE-T7-185-Pregunta: La Norma UNE 139803/2012 es relevante porque:",
+    "opciones": [
+      "A. Es el estándar de accesibilidad web en España que adapta las WCAG.",
+      "B. Regula el precio de los dominios .es.",
+      "C. Establece las multas por phishing.",
+      "D. Es el manual de uso oficial de OpenSSL."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SIE-T7-186-Pregunta: ¿Qué establece el Artículo 18.4 de la Constitución Española?",
+    "opciones": [
+      "A. El derecho a una vivienda digna.",
+      "B. La limitación del uso de la informática para garantizar el honor y la intimidad.",
+      "C. El derecho a la huelga de los informáticos.",
+      "D. La obligatoriedad del DNI electrónico."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-187-Pregunta: ¿En qué año fue aprobada la Agencia Española de Protección de Datos (AEPD)?",
+    "opciones": [
+      "A. 1978.",
+      "B. 1993.",
+      "C. 2002.",
+      "D. 2018."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-188-Pregunta: Según el Art. 4 del GDPR, ¿qué es un identificador en línea?",
+    "opciones": [
+      "A. Solo el nombre real del usuario.",
+      "B. Un ejemplo de dato personal (como una IP o cookie).",
+      "C. Una contraseña de acceso.",
+      "D. Un número de serie de hardware."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-189-Pregunta: El principio de 'Limitación del plazo de conservación' obliga a:",
+    "opciones": [
+      "A. Borrar los datos nada más leerlos.",
+      "B. No conservar datos personales más tiempo del necesario para los fines del tratamiento.",
+      "C. Guardar copias de seguridad durante al menos 100 años.",
+      "D. Publicar la fecha de borrado en el BOE."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-190-Pregunta: ¿Cuál de estos es un motivo lícito para tratar datos sin consentimiento explícito en ciertos casos?",
+    "opciones": [
+      "A. La curiosidad estadística de la empresa.",
+      "B. La protección de intereses vitales de las personas.",
+      "C. El envío de spam para mejorar ventas.",
+      "D. No hay ningún caso, el consentimiento es siempre 100% obligatorio."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-191-Pregunta: ¿Qué derecho permite al interesado solicitar que NO se traten sus datos por motivos personales?",
+    "opciones": [
+      "A. Derecho de Acceso.",
+      "B. Derecho de Oposición.",
+      "C. Derecho de Portabilidad.",
+      "D. Derecho de Rectificación."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-192-Pregunta: ¿Cuál es la sanción máxima por incumplir los principios de protección del GDPR?",
+    "opciones": [
+      "A. 600.000 €.",
+      "B. 20 M€ o el 4% del volumen de negocio anual.",
+      "C. 10 M€ o el 2% del volumen de negocio anual.",
+      "D. No hay sanciones económicas, solo penas de prisión."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-193-Pregunta: ¿Cuál de estos ecosistemas se cita para buscar medidas técnicas de detección y respuesta?",
+    "opciones": [
+      "A. Wikipedia Security.",
+      "B. MITRE ATT&CK.",
+      "C. Google Cloud Docs.",
+      "D. Microsoft Support."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-194-Pregunta: ¿Qué tipo de propiedad protege las patentes y marcas?",
+    "opciones": [
+      "A. Propiedad Intelectual (Derechos de Autor).",
+      "B. Propiedad Industrial.",
+      "C. Propiedad Comunal.",
+      "D. Propiedad Digital Libre."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-195-Pregunta: ¿Qué derecho moral tiene el autor de una obra?",
+    "opciones": [
+      "A. Solo el derecho a cobrar por cada copia.",
+      "B. El derecho irrenunciable al reconocimiento de su autoría.",
+      "C. El derecho a prohibir que se lea la obra en bibliotecas.",
+      "D. El derecho a heredar la obra a sus tataranietos por siempre."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-196-Pregunta: Respecto al software, ¿qué actividad NO requiere autorización?",
+    "opciones": [
+      "A. Vender licencias falsas.",
+      "B. Realizar copias de seguridad por el usuario legítimo.",
+      "C. Cambiar el nombre del autor original.",
+      "D. Borrar los avisos de copyright."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-197-Pregunta: El delito de Hacking (Art. 197 bis) castiga:",
+    "opciones": [
+      "A. Olvidar la contraseña del correo.",
+      "B. El acceso ilegal a sistemas informáticos.",
+      "C. Comprar un ordenador de segunda mano.",
+      "D. Instalar un antivirus gratuito."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-198-Pregunta: ¿Qué constituye el delito de 'Suplantación de identidad' (Art. 401)?",
+    "opciones": [
+      "A. Usar el nombre de un personaje de ficción en un juego.",
+      "B. Usar un perfil falso en redes para engañar y cometer fraudes.",
+      "C. Perder el DNI físico.",
+      "D. Tener dos cuentas de correo electrónico."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-199-Pregunta: El principio de accesibilidad 'Robusto' busca que el contenido:",
+    "opciones": [
+      "A. Sea difícil de hackear.",
+      "B. Sea compatible con tecnologías actuales y futuras.",
+      "C. Tenga colores muy llamativos.",
+      "D. Use archivos de gran tamaño para no perder calidad."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SIE-T7-200-Pregunta: Según los apuntes, ¿cuál es la función de la Agencia de Ciberseguridad de la UE (ENISA)?",
+    "opciones": [
+      "A. Detener a ciberdelincuentes físicamente.",
+      "B. Ser una fuente de referencia para buscar medidas técnicas de seguridad.",
+      "C. Vender certificados digitales cualificados.",
+      "D. Gestionar el Registro de la Propiedad Intelectual."
+    ],
+    "solucion": "B"
   }
 ]
