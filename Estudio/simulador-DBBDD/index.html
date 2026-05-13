@@ -62,10 +62,6 @@
                     <div
                         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; max-width: 100%; overflow: hidden;">
                         <label class="tema-checkbox">
-                            <input type="checkbox" value="1" checked onchange="toggleTema(1)">
-                            <span>Tema 1</span>
-                        </label>
-                        <label class="tema-checkbox">
                             <input type="checkbox" value="2" checked onchange="toggleTema(2)">
                             <span>Tema 2</span>
                         </label>
@@ -77,10 +73,6 @@
                             <input type="checkbox" value="4" checked onchange="toggleTema(4)">
                             <span>Tema 4</span>
                         </label>
-                        <label class="tema-checkbox">
-                            <input type="checkbox" value="5" checked onchange="toggleTema(5)">
-                            <span>Tema 5</span>
-                        </label>
                     </div>
                     <div class="config-option" style="margin-top: 15px;">
                         <div>
@@ -91,18 +83,6 @@
                             <div class="toggle-slider"></div>
                         </div>
                     </div>
-                </div>
-
-                <div class="config-section">
-                    <div class="config-title">🧾 Parcial de Examen</div>
-                    <div class="config-description" style="margin-bottom: 10px; color: #888;">
-                        Limita temas en Modo Examen y Modo Práctica
-                    </div>
-                    <select id="parcialExamenSelect" class="perfil-select" onchange="cambiarParcialExamen()"
-                        style="width:100%;">
-                        <option value="parcial1">Parcial 1 (T1, T2)</option>
-                        <option value="parcial2">Parcial 2 (T3, T4, T5)</option>
-                    </select>
                 </div>
 
                 <div class="config-section">

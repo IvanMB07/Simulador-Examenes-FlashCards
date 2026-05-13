@@ -58,10 +58,7 @@ const TOTAL_PREGUNTAS_EXAMEN = 25;
 const TOTAL_PREGUNTAS_PRACTICA = 25;
 const PENALIZACION_ERROR = 1 / 3;
 const TIEMPO_EXAMEN_MINUTOS = 75;
-const PARCIALES_EXAMEN = {
-    parcial1: [1, 2],
-    parcial2: [3, 4, 5],
-};
+const TEMAS_DISPONIBLES = [2, 3, 4];
 
 // Sistema de almacenamiento de preguntas falladas
 class GestorFallos {
@@ -206,24 +203,27 @@ class ConfiguracionApp {
             const data = localStorage.getItem('configApp');
             this.config = data ? JSON.parse(data) : {
                 ordenarPorTema: false,
-                temasSeleccionados: [1, 2, 3, 4, 5],
-                parcialExamen: 'parcial1',
+                temasSeleccionados: [...TEMAS_DISPONIBLES],
                 perfilActual: 'default',
                 perfiles: {}
             };
             // Asegurar que existan las nuevas propiedades
             if (!this.config.perfilActual) this.config.perfilActual = 'default';
             if (!this.config.perfiles) this.config.perfiles = {};
-            if (!this.config.parcialExamen) this.config.parcialExamen = 'parcial1';
         } catch (e) {
             this.config = {
                 ordenarPorTema: false,
-                temasSeleccionados: [1, 2, 3, 4, 5],
-                parcialExamen: 'parcial1',
+                temasSeleccionados: [...TEMAS_DISPONIBLES],
                 perfilActual: 'default',
                 perfiles: {}
             };
         }
+
+        const temasGuardados = Array.isArray(this.config.temasSeleccionados)
+            ? this.config.temasSeleccionados
+            : [];
+        const temasValidos = temasGuardados.filter(tema => TEMAS_DISPONIBLES.includes(tema));
+        this.config.temasSeleccionados = temasValidos.length > 0 ? temasValidos : [...TEMAS_DISPONIBLES];
     }
 
     guardarConfig() {
@@ -303,7 +303,7 @@ class SimuladorExamen {
 
             this.preguntas = this.seleccionarPreguntasPractica(temasPractica, ordenarPorTema);
             if (!this.preguntas || this.preguntas.length === 0) {
-                alert('No hay preguntas disponibles para el parcial seleccionado.');
+                alert('No hay preguntas disponibles para los temas seleccionados.');
                 this.reiniciar();
                 return;
             }
@@ -467,7 +467,7 @@ class SimuladorExamen {
     }
 
     seleccionarPreguntas(cantidad, ordenarPorTema = false) {
-        return this.seleccionarPreguntasPractica([1, 2, 3, 4, 5], ordenarPorTema);
+        return this.seleccionarPreguntasPractica(TEMAS_DISPONIBLES, ordenarPorTema);
     }
 
     shuffleConSemilla(array, seed) {
@@ -691,8 +691,7 @@ class SimuladorExamen {
     }
 
     obtenerTemasExamen() {
-        const parcial = configuracion.get('parcialExamen') || 'parcial1';
-        return PARCIALES_EXAMEN[parcial] || PARCIALES_EXAMEN.parcial1;
+        return TEMAS_DISPONIBLES;
     }
 
     seleccionarTema3ConUnaTabla(preguntasTema3, cantidad) {
@@ -1354,7 +1353,11 @@ function importarFallosDesdeArchivo(event) {
 }
 
 function toggleTema(numeroTema) {
-    let temasSeleccionados = configuracion.get('temasSeleccionados') || [1, 2, 3, 4, 5];
+    let temasSeleccionados = configuracion.get('temasSeleccionados') || [...TEMAS_DISPONIBLES];
+
+    if (!TEMAS_DISPONIBLES.includes(numeroTema)) {
+        return;
+    }
 
     if (temasSeleccionados.includes(numeroTema)) {
         temasSeleccionados = temasSeleccionados.filter(t => t !== numeroTema);
@@ -1374,7 +1377,7 @@ function toggleTema(numeroTema) {
 }
 
 function actualizarDistribucion() {
-    const temasSeleccionados = configuracion.get('temasSeleccionados') || [1, 2, 3, 4, 5];
+    const temasSeleccionados = configuracion.get('temasSeleccionados') || [...TEMAS_DISPONIBLES];
     const totalPreguntas = TOTAL_PREGUNTAS_PRACTICA;
     const numTemas = temasSeleccionados.length;
     const preguntasPorTema = Math.floor(totalPreguntas / numTemas);
@@ -1396,34 +1399,19 @@ function actualizarDistribucion() {
     }
 }
 
-function cambiarParcialExamen() {
-    const select = document.getElementById('parcialExamenSelect');
-    if (!select) return;
-    configuracion.set('parcialExamen', select.value);
-    actualizarTemasUI();
-}
-
-function actualizarParcialExamenUI() {
-    const select = document.getElementById('parcialExamenSelect');
-    if (!select) return;
-    select.value = configuracion.get('parcialExamen') || 'parcial1';
-}
-
 function actualizarTemasUI() {
-    const parcial = configuracion.get('parcialExamen') || 'parcial1';
-    const temasParcial = PARCIALES_EXAMEN[parcial] || PARCIALES_EXAMEN.parcial1;
-    const temasSeleccionados = configuracion.get('temasSeleccionados') || [...temasParcial];
-    let temasCompatibles = temasSeleccionados.filter(tema => temasParcial.includes(tema));
+    const temasSeleccionados = configuracion.get('temasSeleccionados') || [...TEMAS_DISPONIBLES];
+    let temasCompatibles = temasSeleccionados.filter(tema => TEMAS_DISPONIBLES.includes(tema));
 
     if (temasCompatibles.length === 0) {
-        temasCompatibles = [...temasParcial];
+        temasCompatibles = [...TEMAS_DISPONIBLES];
         configuracion.set('temasSeleccionados', temasCompatibles);
     }
 
     for (let i = 1; i <= 5; i++) {
         const checkbox = document.querySelector(`input[type="checkbox"][value="${i}"]`);
         if (checkbox) {
-            const permitido = temasParcial.includes(i);
+            const permitido = TEMAS_DISPONIBLES.includes(i);
             checkbox.disabled = !permitido;
             checkbox.checked = permitido && temasCompatibles.includes(i);
 
@@ -1571,6 +1559,5 @@ window.addEventListener('DOMContentLoaded', async () => {
     cargarPerfiles();
     actualizarContadorFallos();
     actualizarConfigUI();
-    actualizarParcialExamenUI();
     actualizarTemasUI();
 });

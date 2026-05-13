@@ -30,57 +30,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "DBD-T3-04-Pregunta: ¿Cuál de las siguientes opciones describe mejor a los datos semiestructurados?",
-    "opciones": [
-      "A. Datos que carecen de metadatos y solo pueden ser leídos por humanos.",
-      "B. Datos con un formato rígido de filas y columnas en una base de datos relacional.",
-      "C. Una mezcla que no tiene estructura perfectamente definida, pero usa metadatos como en XML o JSON.",
-      "D. Archivos multimedia como MP3 o videos de vigilancia que no tienen organización."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "DBD-T4-05-Pregunta: Según el Teorema de Brewer (CAP), ¿qué tres garantías es imposible ofrecer simultáneamente en un sistema distribuido?",
-    "opciones": [
-      "A. Atomicidad, Consistencia y Durabilidad.",
-      "B. Volumen, Velocidad y Variedad.",
-      "C. Consistencia, Disponibilidad y Tolerancia a la partición.",
-      "D. Autenticación, Autorización y Auditoría."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "DBD-T4-06-Pregunta: En el modelo BASE de las bases de datos NoSQL, ¿qué significa 'Soft state'?",
-    "opciones": [
-      "A. Que el sistema es vulnerable a ataques de inyección de código.",
-      "B. Que los almacenes de datos no tienen por qué ser consistentes en todo momento.",
-      "C. Que la base de datos se borra automáticamente al cerrar la sesión.",
-      "D. Que solo se permite una transacción a la vez para evitar bloqueos."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "DBD-T3-07-Pregunta: Dentro de las 5 V's del Big Data, ¿a qué se refiere el concepto de 'Valor'?",
-    "opciones": [
-      "A. Al coste económico de almacenar un Terabyte de información.",
-      "B. A la veracidad y limpieza de los datos duplicados.",
-      "C. A que los datos deben ser accionables y ayudar a tomar decisiones tras ser procesados.",
-      "D. Al tiempo que tarda un nodo en responder a una petición."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "DBD-T4-08-Pregunta: ¿Cuál es una característica común de las bases de datos NoSQL mencionada en los apuntes?",
-    "opciones": [
-      "A. Uso estricto del lenguaje SQL estándar para todas las consultas.",
-      "B. Esquema de datos fijo que no permite migraciones sin reiniciar.",
-      "C. Suelen tener un sistema de consultas propio y un esquema dinámico.",
-      "D. Garantizan consistencia fuerte en todo el clúster en milisegundos."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "DBD-T2-09-Pregunta: En términos de seguridad de BBDD, ¿qué permite controlar un 'Perfil' de usuario?",
+    "cuestion": "DBD-T2-04-Pregunta: En términos de seguridad de BBDD, ¿qué permite controlar un 'Perfil' de usuario?",
     "opciones": [
       "A. Las inserciones y borrados realizados sobre tablas específicas.",
       "B. El uso de recursos del sistema, como tiempo de CPU o memoria por sesión.",
@@ -90,13 +40,4463 @@
     "solucion": "B"
   },
   {
-    "cuestion": "DBD-T4-10-Pregunta: ¿Qué tipo de base de datos NoSQL se describe como similar a mapas de datos donde se accede mediante una clave única?",
+    "cuestion": "DBD-T2-05-Pregunta: ¿Cómo deben definirse las transacciones según las recomendaciones de los apuntes?",
     "opciones": [
-      "A. Almacenamiento de Grafos.",
-      "B. Almacenamiento de Documentos.",
-      "C. Almacenamiento de Familia de Columnas.",
-      "D. Almacenamiento Clave-Valor."
+      "A. Tan grandes como sea posible para agrupar todo el trabajo del día.",
+      "B. Tan pequeñas como sea posible, pero asegurando la integridad.",
+      "C. Únicamente mediante sentencias SELECT para no alterar la consistencia.",
+      "D. Siempre de forma manual por el administrador de sistemas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-06-Pregunta: ¿Qué propiedad ACID asegura que una transacción lleve la base de datos de un estado consistente S0 a otro estado consistente S1?",
+    "opciones": [
+      "A. Aislamiento.",
+      "B. Durabilidad.",
+      "C. Consistencia.",
+      "D. Atomicidad."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "DBD-T2-07-Pregunta: Sobre la propiedad de 'Aislamiento' (Isolation), ¿qué se afirma en el material de estudio?",
+    "opciones": [
+      "A. Es la propiedad más desarrollada y eficiente en los SGBD actuales.",
+      "B. Permite que los estados intermedios sean visibles para otros usuarios.",
+      "C. La transacción se realiza como si fuera la única ejecutándose en la base de datos.",
+      "D. Garantiza que los datos se guarden físicamente en el disco duro."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "DBD-T2-08-Pregunta: ¿Cuál es el objetivo principal de la propiedad de 'Durabilidad'?",
+    "opciones": [
+      "A. Impedir que dos usuarios accedan al mismo dato a la vez.",
+      "B. Que los cambios confirmados sean permanentes incluso ante un fallo del sistema.",
+      "C. Reducir el tiempo de respuesta de las consultas SQL.",
+      "D. Asegurar que las contraseñas de los usuarios no caduquen."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-09-Pregunta: ¿Qué ocurre en el 'Problema de la actualización perdida'?",
+    "opciones": [
+      "A. Una transacción lee un dato que nunca llega a confirmarse.",
+      "B. Una transacción sobrescribe las actualizaciones realizadas por otra.",
+      "C. El sistema se queda sin espacio en disco durante un COMMIT.",
+      "D. Se obtienen resultados incoherentes al sumar registros."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-10-Pregunta: El problema de la 'Lectura sucia' también es conocido como:",
+    "opciones": [
+      "A. Problema de la lectura de datos no confirmados.",
+      "B. Problema del resumen incorrecto.",
+      "C. Problema de la actualización permanente.",
+      "D. Problema de la lectura fantasma."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "DBD-T2-11-Pregunta: ¿En qué consiste el 'Problema del resumen incorrecto'?",
+    "opciones": [
+      "A. Se lee un valor modificado por una transacción que luego hace ROLLBACK.",
+      "B. Se obtienen lecturas diferentes del mismo valor en una misma transacción.",
+      "C. Una transacción calcula una suma mientras otras actualizan esos mismos registros.",
+      "D. Un usuario borra accidentalmente el log de transacciones."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "DBD-T2-12-Pregunta: ¿Qué caracteriza al problema de la 'Lectura fantasma'?",
+    "opciones": [
+      "A. Se leen datos de una tabla que ha sido borrada.",
+      "B. Se obtienen lecturas diferentes de un conjunto de tuplas durante la misma transacción.",
+      "C. La base de datos muestra datos que no existen físicamente.",
+      "D. El servidor no responde a las peticiones de lectura."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-13-Pregunta: Para garantizar la consistencia en sistemas multi-usuario, ¿qué concepto deben asegurar los SGBD?",
+    "opciones": [
+      "A. Disponibilidad total.",
+      "B. Secuenciabilidad (plan de ejecución secuenciable).",
+      "C. Escalabilidad vertical.",
+      "D. Replicación síncrona."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-14-Pregunta: ¿Qué es un 'Gránulo' en el contexto de los bloqueos?",
+    "opciones": [
+      "A. El tiempo mínimo que dura una transacción.",
+      "B. Una unidad que puede ser bloqueada (tabla, fila, columna, etc.).",
+      "C. Un pequeño error en el código SQL.",
+      "D. El tamaño de los metadatos de un usuario."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-15-Pregunta: ¿Qué sucede si una transacción intenta bloquear un gránulo que ya está bloqueado por otra?",
+    "opciones": [
+      "A. Se cancela automáticamente la transacción.",
+      "B. Espera hasta que el gránulo sea liberado.",
+      "C. Borra el bloqueo anterior por prioridad de tiempo.",
+      "D. Crea una copia temporal del dato para seguir trabajando."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-16-Pregunta: Sobre los tipos de bloqueo, el bloqueo 'Exclusivo' se utiliza para:",
+    "opciones": [
+      "A. Operaciones de lectura por parte de varios usuarios.",
+      "B. Operaciones de escritura y solo permite una transacción a la vez.",
+      "C. El acceso de administradores de base de datos.",
+      "D. Consultas de auditoría que no modifican datos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-17-Pregunta: Según el estándar SQL-92, ¿cuál es el nivel de aislamiento que permite leer datos no confirmados?",
+    "opciones": [
+      "A. READ COMMITTED.",
+      "B. REPEATABLE READ.",
+      "C. SERIALIZABLE.",
+      "D. READ UNCOMMITTED."
     ],
     "solucion": "D"
+  },
+  {
+    "cuestion": "DBD-T2-18-Pregunta: ¿Cuál suele ser el nivel de aislamiento por defecto en muchos SGBD?",
+    "opciones": [
+      "A. SERIALIZABLE.",
+      "B. READ COMMITTED.",
+      "C. READ UNCOMMITTED.",
+      "D. REPEATABLE READ."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-19-Pregunta: ¿Qué nivel de aislamiento garantiza la secuenciabilidad total pero puede hacer fallar la transacción si no se cumple?",
+    "opciones": [
+      "A. READ COMMITTED.",
+      "B. SERIALIZABLE.",
+      "C. REPEATABLE READ.",
+      "D. FOR UPDATE."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-20-Pregunta: En SQL, ¿para qué se utiliza la cláusula 'FOR UPDATE' en una sentencia SELECT?",
+    "opciones": [
+      "A. Para actualizar los datos de la tabla automáticamente.",
+      "B. Para bloquear los registros seleccionados para escritura.",
+      "C. Para cambiar el nivel de aislamiento a SERIALIZABLE.",
+      "D. Para ver qué usuarios han modificado el dato anteriormente."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-21-Pregunta: ¿Qué relación existe generalmente entre el nivel de aislamiento y el rendimiento?",
+    "opciones": [
+      "A. A mayor nivel de aislamiento, mayor rendimiento.",
+      "B. El rendimiento no se ve afectado por el aislamiento.",
+      "C. A mayor nivel de aislamiento, menor rendimiento.",
+      "D. Solo afecta al rendimiento en bases de datos NoSQL."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "DBD-T2-22-Pregunta: En la gestión de fallos, ¿cuál es una causa común de 'Fallo de la transacción' (local)?",
+    "opciones": [
+      "A. Una avería en el disco duro.",
+      "B. Un error lógico en el programa o una violación de integridad.",
+      "C. Un desastre natural que apaga el servidor.",
+      "D. La caducidad de la contraseña del usuario."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-23-Pregunta: ¿Qué se pierde típicamente durante un 'Fallo del sistema'?",
+    "opciones": [
+      "A. Los datos almacenados permanentemente en disco.",
+      "B. El contenido de la memoria volátil (RAM) y registros de CPU.",
+      "C. Las cuentas de usuario de la base de datos.",
+      "D. El esquema físico de las tablas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-24-Pregunta: ¿Qué herramienta utiliza el SGBD para la recuperación tras un fallo del sistema?",
+    "opciones": [
+      "A. Bitácoras (logs) escritas en disco.",
+      "B. Perfiles de usuario restrictivos.",
+      "C. Niveles de aislamiento bajos.",
+      "D. Auditorías de sentencias SQL."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "DBD-T2-25-Pregunta: ¿Cuál es la regla de oro al escribir logs/bitácoras para asegurar la recuperación?",
+    "opciones": [
+      "A. Escribirlos solo si la transacción tiene éxito.",
+      "B. Escribirlos en disco antes que los datos de la transacción.",
+      "C. Escribirlos una vez por semana mediante un backup.",
+      "D. Almacenarlos únicamente en la memoria RAM."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-26-Pregunta: ¿Quién es el responsable de la recuperación ante un 'Fallo del medio' (hardware)?",
+    "opciones": [
+      "A. El propio SGBD de forma automática mediante logs.",
+      "B. Los administradores de la BBDD mediante copias de seguridad (backups).",
+      "C. El usuario que ejecutó la última transacción.",
+      "D. El sistema operativo mediante el archivo de paginación."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-27-Pregunta: ¿Qué es un 'Checkpoint' en los algoritmos de recuperación?",
+    "opciones": [
+      "A. Un punto donde el sistema verifica la contraseña de todos los usuarios.",
+      "B. Un momento en el que se vuelcan todos los datos de memoria al almacenamiento persistente.",
+      "C. Un tipo de bloqueo exclusivo sobre toda la base de datos.",
+      "D. Una auditoría de seguridad externa."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-28-Pregunta: ¿Cuál es el objetivo principal de la Confidencialidad en BBDD?",
+    "opciones": [
+      "A. Asegurar que el sistema esté disponible 24/7.",
+      "B. No desvelar ni dejar modificar datos a usuarios no autorizados.",
+      "C. Optimizar el tiempo de CPU por cada llamada SQL.",
+      "D. Evitar que se pierdan datos por fallos de hardware."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-29-Pregunta: En Oracle, ¿qué métodos de autenticación se mencionan para las cuentas de usuario?",
+    "opciones": [
+      "A. Solo mediante huella dactilar.",
+      "B. Código/Contraseña e identificación por Hardware.",
+      "C. Únicamente a través de certificados SSL.",
+      "D. No requiere autenticación si se accede desde la red local."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-30-Pregunta: Los privilegios que permiten realizar acciones como 'CREATE TABLE' o 'CREATE VIEW' se denominan:",
+    "opciones": [
+      "A. Privilegios de objeto.",
+      "B. Privilegios de sistema.",
+      "C. Roles de usuario.",
+      "D. Perfiles de recursos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-31-Pregunta: ¿Qué permite un privilegio de 'Objeto'?",
+    "opciones": [
+      "A. Crear nuevos usuarios en el sistema.",
+      "B. Ejecutar una acción específica (como SELECT o UPDATE) sobre un objeto concreto.",
+      "C. Modificar la configuración de memoria del servidor.",
+      "D. Cambiar el tablespace por defecto de un rol."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-32-Pregunta: ¿Qué es un 'Rol' en la gestión de seguridad?",
+    "opciones": [
+      "A. Un límite de tiempo de CPU para un usuario.",
+      "B. Un conjunto o grupo de privilegios que se puede asignar a usuarios.",
+      "C. Un tipo de ataque de denegación de servicio.",
+      "D. La descripción del puesto de trabajo de un empleado."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-33-Pregunta: ¿A qué nivel se pueden limitar los recursos del sistema mediante perfiles?",
+    "opciones": [
+      "A. Solo a nivel de hardware físico.",
+      "B. A nivel de sesión y a nivel de llamadas (órdenes SQL).",
+      "C. Únicamente a nivel de red externa.",
+      "D. A nivel de esquema de datos global."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-34-Pregunta: ¿Qué parámetro de un perfil limitaría el tiempo que un usuario puede estar conectado sin realizar actividad?",
+    "opciones": [
+      "A. CPU_PER_CALL.",
+      "B. IDLE_TIME.",
+      "C. SESSIONS_PER_USER.",
+      "D. PASSWORD_LIFE_TIME."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-35-Pregunta: En la seguridad de BBDD, ¿cuál es un perfil de atacante mencionado en los apuntes?",
+    "opciones": [
+      "A. Un antiguo empleado recientemente despedido.",
+      "B. Un fabricante de hardware de servidores.",
+      "C. Un auditor de cuentas anuales.",
+      "D. El propio sistema de gestión de transacciones."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "DBD-T2-36-Pregunta: ¿Para qué sirve una 'Auditoría' en una base de datos?",
+    "opciones": [
+      "A. Para acelerar la ejecución de las transacciones.",
+      "B. Para vigilar y registrar las acciones realizadas sobre la BBDD.",
+      "C. Para crear copias de seguridad de forma automática.",
+      "D. Para aumentar el límite de sesiones concurrentes."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-37-Pregunta: El nivel de auditoría que recoge operaciones realizadas sobre tablas o vistas específicas se llama:",
+    "opciones": [
+      "A. Auditoría de sentencias.",
+      "B. Auditoría de objetos.",
+      "C. Auditoría de privilegios.",
+      "D. Auditoría de sistema."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-38-Pregunta: ¿Cuál es el comando SQL para crear un nuevo usuario en Oracle según la chuleta?",
+    "opciones": [
+      "A. ADD USER usuario ...",
+      "B. CREATE USER usuario IDENTIFIED BY \"contraseña\";",
+      "C. NEW USER usuario PASSWORD ...",
+      "D. GRANT USER usuario IDENTIFIED BY ..."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-39-Pregunta: ¿Cómo se asigna un privilegio de sistema a un usuario?",
+    "opciones": [
+      "A. ASSIGN privilegio TO usuario;",
+      "B. GIVE privilegio TO usuario;",
+      "C. GRANT privilegio TO usuario;",
+      "D. PERMIT privilegio TO usuario;"
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "DBD-T2-40-Pregunta: ¿Qué comando se utiliza para quitar un privilegio previamente otorgado?",
+    "opciones": [
+      "A. REMOVE.",
+      "B. REVOKE.",
+      "C. DELETE.",
+      "D. DROP."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-41-Pregunta: Para que un usuario pueda dar un rol a otros usuarios, debe haberlo recibido con la opción:",
+    "opciones": [
+      "A. WITH GRANT OPTION.",
+      "B. WITH ADMIN OPTION.",
+      "C. WITH PUBLIC OPTION.",
+      "D. WITH ROLE OPTION."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-42-Pregunta: ¿Qué comando modificaría el tablespace por defecto de un usuario?",
+    "opciones": [
+      "A. UPDATE USER ... DEFAULT TABLESPACE ...",
+      "B. ALTER USER usuario DEFAULT TABLESPACE nombre;",
+      "C. CHANGE USER ... SET TABLESPACE ...",
+      "D. CREATE USER ... TABLESPACE ..."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-43-Pregunta: ¿Qué significa 'ACCOUNT LOCK' al crear un usuario?",
+    "opciones": [
+      "A. Que el usuario tiene privilegios de administrador.",
+      "B. Que la cuenta se crea bloqueada inicialmente.",
+      "C. Que la contraseña no puede ser cambiada.",
+      "D. Que solo puede acceder desde la consola del servidor."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-44-Pregunta: ¿Cómo se otorga un privilegio sobre una tabla a todos los usuarios de la base de datos?",
+    "opciones": [
+      "A. GRANT ... TO ALL;",
+      "B. GRANT ... TO PUBLIC;",
+      "C. GRANT ... TO EVERYONE;",
+      "D. GRANT ... TO USERS;"
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-45-Pregunta: En un perfil, ¿qué controla el parámetro 'SESSIONS_PER_USER'?",
+    "opciones": [
+      "A. El tiempo de CPU por cada sesión.",
+      "B. El número de sesiones concurrentes que puede abrir el usuario.",
+      "C. Cuántas tablas puede crear el usuario en una sesión.",
+      "D. El número total de logins realizados en un día."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-46-Pregunta: Según el gráfico del ciclo de vida de una transacción, los estados intermedios (I1..n):",
+    "opciones": [
+      "A. Deben ser consistentes siempre.",
+      "B. No son necesariamente consistentes.",
+      "C. Son visibles para todos los usuarios por defecto.",
+      "D. Solo existen si se hace un COMMIT."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-47-Pregunta: ¿Qué tipo de fallo se produce por una avería física o sabotaje del hardware de almacenamiento?",
+    "opciones": [
+      "A. Fallo de la transacción.",
+      "B. Fallo del sistema.",
+      "C. Fallo del medio.",
+      "D. Fallo de red."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "DBD-T2-48-Pregunta: ¿Cuál es la función del comando 'CREATE ROLE'?",
+    "opciones": [
+      "A. Definir los límites de CPU de un usuario.",
+      "B. Crear un contenedor de privilegios para facilitar su gestión.",
+      "C. Auditar las sentencias de modificación de datos.",
+      "D. Establecer el nivel de aislamiento de la sesión."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-49-Pregunta: El privilegio 'GRANT ALL ON tabla1 TO usuario' otorga:",
+    "opciones": [
+      "A. Permisos para borrar la base de datos completa.",
+      "B. Todos los privilegios de objeto sobre esa tabla específica.",
+      "C. Privilegios de administrador de sistema.",
+      "D. Acceso de lectura a todas las tablas del esquema."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-50-Pregunta: ¿Qué comando se usa para establecer el nivel de aislamiento al inicio de una transacción?",
+    "opciones": [
+      "A. SET ISOLATION ...",
+      "B. SET TRANSACTION ISOLATION LEVEL nivel;",
+      "C. ALTER SESSION SET ISOLATION ...",
+      "D. BEGIN TRANSACTION WITH LEVEL ..."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-51-Pregunta: ¿Qué indica el gráfico del ciclo de vida si una transacción llega al estado 'S1'?",
+    "opciones": [
+      "A. Que la transacción ha fallado y se ha hecho un ROLLBACK.",
+      "B. Que la transacción se ha confirmado mediante un COMMIT y la base de datos es consistente.",
+      "C. Que la transacción está en un estado intermedio no necesariamente consistente.",
+      "D. Que el sistema se ha parado para realizar un checkpoint."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-52-Pregunta: ¿Cuál es el efecto de un ROLLBACK en el diagrama de estados de una transacción?",
+    "opciones": [
+      "A. Avanzar del estado S0 al estado S1 directamente.",
+      "B. Regresar del proceso al estado inicial consistente S0.",
+      "C. Crear un nuevo estado consistente intermedio I2.",
+      "D. Forzar la escritura de los logs en el disco duro."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-53-Pregunta: Según los apuntes, ¿qué propiedad ACID se define como 'la menos desarrollada en los SGBD'?",
+    "opciones": [
+      "A. Atomicidad.",
+      "B. Consistencia.",
+      "C. Aislamiento (Isolation).",
+      "D. Durabilidad."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "DBD-T2-54-Pregunta: En el contexto de ACID, ¿qué son los estados intermedios I1...n?",
+    "opciones": [
+      "A. Estados que siempre deben respetar todas las reglas de integridad.",
+      "B. Estados que no son necesariamente consistentes durante la ejecución.",
+      "C. Puntos de guardado permanentes en el disco físico.",
+      "D. Copias de seguridad automáticas hechas por el ABD."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-55-Pregunta: ¿De qué es responsable el SGBD según la propiedad de Durabilidad?",
+    "opciones": [
+      "A. De que las transacciones nunca tarden más de un segundo.",
+      "B. De que los cambios confirmados sean permanentes incluso ante un fallo del sistema.",
+      "C. De impedir que dos usuarios lean el mismo dato a la vez.",
+      "D. De borrar los logs de transacciones cada hora."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-56-Pregunta: ¿Qué problema de concurrencia se describe como 'unas transacciones sobrescriben las actualizaciones de otras'?",
+    "opciones": [
+      "A. Lectura sucia.",
+      "B. Actualización perdida.",
+      "C. Resumen incorrecto.",
+      "D. Lectura fantasma."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-57-Pregunta: El problema de la 'actualización temporal' es un sinónimo de:",
+    "opciones": [
+      "A. Lectura no repetible.",
+      "B. Lectura sucia.",
+      "C. Resumen correcto.",
+      "D. Secuenciabilidad."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-58-Pregunta: En el problema del resumen incorrecto, ¿por qué se produce una 'discrepancia de n' en el ejemplo bancario?",
+    "opciones": [
+      "A. Porque se lee un valor antes de que otra transacción lo reste.",
+      "B. Porque se lee una cuenta tras restar 'n' pero la otra antes de sumar 'n'.",
+      "C. Porque el disco duro falla al escribir el resultado final.",
+      "D. Porque el usuario no tiene permisos de lectura."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-59-Pregunta: ¿Qué define la 'secuenciabilidad' en un plan de ejecución de transacciones?",
+    "opciones": [
+      "A. Que las transacciones deben ir una después de otra obligatoriamente.",
+      "B. Que el efecto final de transacciones concurrentes sea el mismo que si se ejecutaran secuencialmente.",
+      "C. Que el ABD debe aprobar cada operación manualmente.",
+      "D. Que la base de datos solo admite un usuario al día."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-60-Pregunta: ¿Qué mecanismo NO suele usar el SGBD para garantizar la secuenciabilidad según los apuntes?",
+    "opciones": [
+      "A. Bloqueos.",
+      "B. Marcas de tiempo (timestamps).",
+      "C. Versiones múltiples de los datos.",
+      "D. Borrado de tablas temporales."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "DBD-T2-61-Pregunta: Si una transacción intenta bloquear un gránulo ya bloqueado por otra, ¿cuál es el comportamiento por defecto?",
+    "opciones": [
+      "A. La transacción se cancela inmediatamente.",
+      "B. La transacción espera hasta que el gránulo sea liberado.",
+      "C. Se sobrescribe el bloqueo anterior si tiene mayor prioridad.",
+      "D. Se lanza un error de sintaxis SQL."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-62-Pregunta: ¿Qué permite el bloqueo de tipo 'Compartido'?",
+    "opciones": [
+      "A. Que varias transacciones lean el gránulo simultáneamente.",
+      "B. Que una transacción escriba mientras otras leen.",
+      "C. Que solo el ABD pueda acceder al dato.",
+      "D. Que los datos se compartan con bases de datos externas NoSQL."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "DBD-T2-63-Pregunta: En los niveles de aislamiento SQL-92, ¿cuál es el nivel más permisivo que permite leer datos no confirmados?",
+    "opciones": [
+      "A. READ COMMITTED.",
+      "B. READ UNCOMMITTED.",
+      "C. REPEATABLE READ.",
+      "D. SERIALIZABLE."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-64-Pregunta: ¿Qué garantiza el nivel de aislamiento 'SERIALIZABLE'?",
+    "opciones": [
+      "A. Que los datos se guarden en formato serie en el disco.",
+      "B. La secuenciabilidad total; si no se garantiza, la transacción falla.",
+      "C. Que solo se puedan usar tipos de datos 'Serial' en las tablas.",
+      "D. Que las contraseñas se cifren en serie."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-65-Pregunta: Según la tabla de bloqueos, ¿qué nivel mantiene bloqueos de lectura hasta el final de la transacción?",
+    "opciones": [
+      "A. READ COMMITTED.",
+      "B. REPEATABLE READ.",
+      "C. READ UNCOMMITTED.",
+      "D. Ninguno de los anteriores."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-66-Pregunta: ¿Para qué sirve el 'Bloqueo de Rango' según la tabla de niveles de aislamiento?",
+    "opciones": [
+      "A. Para evitar la actualización perdida.",
+      "B. Para evitar la lectura sucia únicamente.",
+      "C. Para evitar la lectura fantasma en el nivel SERIALIZABLE.",
+      "D. Para limitar el rango de IPs que acceden a la BBDD."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "DBD-T2-67-Pregunta: ¿Cómo se soluciona específicamente la 'actualización perdida' en nivel READ COMMITTED en algunos SGBD?",
+    "opciones": [
+      "A. Usando la cláusula FOR UPDATE en un SELECT.",
+      "B. Reiniciando el servidor cada 10 transacciones.",
+      "C. Eliminando el permiso de UPDATE a todos los usuarios.",
+      "D. Cambiando el tablespace a TEMP."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "DBD-T2-68-Pregunta: ¿Cuál es un ejemplo de 'Fallo de una orden al SGBD'?",
+    "opciones": [
+      "A. Una inundación en el centro de datos.",
+      "B. Un error de sintaxis o una división por cero.",
+      "C. La pérdida de alimentación eléctrica del servidor.",
+      "D. El sabotaje físico del disco duro."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-69-Pregunta: ¿Quién es el responsable del tratamiento (ROLLBACK) ante un fallo local de una transacción?",
+    "opciones": [
+      "A. La aplicación de usuario.",
+      "B. El SGBD.",
+      "C. El administrador de red.",
+      "D. El sistema operativo."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-70-Pregunta: ¿Qué elemento permanece intacto tras un 'Fallo del sistema' (caída de tensión)?",
+    "opciones": [
+      "A. El contenido de la memoria RAM.",
+      "B. Los registros internos de la CPU.",
+      "C. El medio de almacenamiento (disco).",
+      "D. El estado de las transacciones no confirmadas en memoria."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "DBD-T2-71-Pregunta: En la recuperación de un fallo del sistema, ¿por qué los logs se escriben en disco antes que las transacciones?",
+    "opciones": [
+      "A. Porque ocupan menos espacio.",
+      "B. Para poder recuperar las transacciones después del fallo.",
+      "C. Porque el disco duro solo acepta archivos .log.",
+      "D. Es una limitación del hardware de Oracle."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-72-Pregunta: Ante un 'Fallo del medio', ¿qué herramienta de recuperación es responsabilidad de los administradores?",
+    "opciones": [
+      "A. Los algoritmos de Checkpoint automáticos.",
+      "B. Las bitácoras (logs) en tiempo real.",
+      "C. Las copias de seguridad (backups).",
+      "D. El tratamiento de excepciones en PL/SQL."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "DBD-T2-73-Pregunta: Según el gráfico de recuperación, si una transacción (Tx 3) estaba incompleta en el momento del fallo:",
+    "opciones": [
+      "A. Se debe rehacer (redo).",
+      "B. Se debe deshacer (undo/rollback).",
+      "C. No se hace nada porque ya está en disco.",
+      "D. Se marca como finalizada con éxito."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-74-Pregunta: Según el gráfico de recuperación, si una transacción (Tx 2) se completó después del último checkpoint pero antes del fallo:",
+    "opciones": [
+      "A. No se hace nada.",
+      "B. Se debe rehacer (redo) porque los datos no están en disco.",
+      "C. Se debe deshacer por seguridad.",
+      "D. Se borra del log de transacciones."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-75-Pregunta: ¿Qué ocurre con la transacción 'Tx 1' que finalizó antes del último checkpoint según el gráfico?",
+    "opciones": [
+      "A. Se debe rehacer.",
+      "B. No se hace nada, ya está correctamente en disco.",
+      "C. Se borra de la base de datos.",
+      "D. Se le quitan los privilegios al usuario."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-76-Pregunta: ¿Cuál es el objetivo principal de la Confidencialidad en seguridad de BBDD?",
+    "opciones": [
+      "A. Garantizar que el servidor nunca se apague.",
+      "B. No desvelar ni dejar modificar datos a usuarios no autorizados.",
+      "C. Permitir que cualquier empleado vea los salarios de la empresa.",
+      "D. Aumentar la velocidad de las consultas en un 50%."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-77-Pregunta: ¿Qué define a un 'Usuario ABD' por defecto en Oracle?",
+    "opciones": [
+      "A. Usuarios como 'PEPE' o 'JUAN'.",
+      "B. Usuarios con altos privilegios como SYS o SYSTEM.",
+      "C. Usuarios que solo pueden usar SELECT.",
+      "D. Usuarios creados sin contraseña."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-78-Pregunta: En la autorización de acceso, ¿qué es un 'Rol'?",
+    "opciones": [
+      "A. Un conjunto de objetos del esquema.",
+      "B. Un conjunto o grupo de privilegios.",
+      "C. El nombre real de la persona que usa la BD.",
+      "D. Una tabla oculta que guarda logs."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-79-Pregunta: ¿Cuál de estos es un privilegio de sistema típico?",
+    "opciones": [
+      "A. SELECT sobre la tabla 'empleados'.",
+      "B. CREATE TABLE.",
+      "C. UPDATE sobre la vista 'ventas'.",
+      "D. EXECUTE sobre el procedimiento 'calcular_iva'."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-80-Pregunta: ¿A qué nivel se pueden limitar recursos mediante perfiles de usuario?",
+    "opciones": [
+      "A. Solo a nivel de hardware del servidor.",
+      "B. A nivel de sesión y a nivel de llamadas (órdenes SQL).",
+      "C. Únicamente por el número de tablas creadas.",
+      "D. A nivel de bytes enviados por la red."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-81-Pregunta: ¿Cuál es un perfil de atacante mencionado que busca obtener 'mayores privilegios'?",
+    "opciones": [
+      "A. Un antiguo empleado despedido.",
+      "B. Un usuario legítimo del sistema.",
+      "C. Un hacker externo sin cuenta.",
+      "D. Un fabricante de fuentes de alimentación."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-82-Pregunta: ¿Qué se registra en una auditoría de 'Sentencias'?",
+    "opciones": [
+      "A. Solo los errores de división por cero.",
+      "B. Operaciones genéricas sobre la BD (inserciones, borrados, etc.).",
+      "C. La temperatura física del procesador.",
+      "D. El tiempo que tarda el ABD en comer."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-83-Pregunta: Según los ejercicios, ¿cómo se crea un usuario con contraseña que expire?",
+    "opciones": [
+      "A. CREATE USER ... EXPIRE NOW;",
+      "B. CREATE USER ... PASSWORD EXPIRE;",
+      "C. CREATE USER ... IDENTIFIED BY EXPIRE;",
+      "D. ALTER USER ... SET EXPIRED;"
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-84-Pregunta: ¿Qué comando asigna un rol con privilegios de administración (opción de delegar)?",
+    "opciones": [
+      "A. GRANT rol TO usuario WITH GRANT OPTION;",
+      "B. GRANT rol TO usuario WITH ADMIN OPTION;",
+      "C. GRANT rol TO usuario AS ADMIN;",
+      "D. ASSIGN ADMIN TO usuario FOR rol;"
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-85-Pregunta: ¿Cómo se otorgan todos los privilegios sobre una tabla específica a un usuario?",
+    "opciones": [
+      "A. GRANT ALL PRIVILEGES TO usuario;",
+      "B. GRANT ALL ON tabla TO usuario;",
+      "C. GRANT * ON tabla TO usuario;",
+      "D. SET ALL PERMISSIONS ON tabla FOR usuario;"
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-86-Pregunta: Según los ejercicios, ¿qué comando impide que un usuario borre cualquier tabla del sistema?",
+    "opciones": [
+      "A. REVOKE DROP TABLE FROM usuario;",
+      "B. REVOKE DROP ANY TABLE FROM usuario;",
+      "C. DELETE DROP PRIVILEGE FROM usuario;",
+      "D. GRANT NO DROP TO usuario;"
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-87-Pregunta: En la creación de un perfil, ¿qué controla el parámetro 'IDLE_TIME'?",
+    "opciones": [
+      "A. El tiempo de CPU por cada llamada.",
+      "B. Los minutos de inactividad permitidos antes de desconectar.",
+      "C. Cuántos días dura la contraseña.",
+      "D. El número de sesiones por usuario."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-88-Pregunta: ¿Qué comando activa la auditoría para intentos fallidos sobre roles?",
+    "opciones": [
+      "A. AUDIT ROLE IF FAIL;",
+      "B. AUDIT ROLE WHENEVER NOT SUCCESSFUL;",
+      "C. AUDIT ROLE ONLY ON ERROR;",
+      "D. CHECK ROLE FAILURES;"
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-89-Pregunta: Según la chuleta, ¿cómo se borra un usuario y todos sus objetos (tablas, etc.)?",
+    "opciones": [
+      "A. DROP USER usuario;",
+      "B. DROP USER usuario CASCADE;",
+      "C. DELETE USER usuario INCLUDING CONTENTS;",
+      "D. REMOVE USER usuario ALL;"
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-90-Pregunta: ¿Qué vista del diccionario permite consultar los roles concedidos en Oracle?",
+    "opciones": [
+      "A. DBA_USERS.",
+      "B. DBA_ROLE_PRIVS.",
+      "C. DBA_TAB_PRIVS.",
+      "D. DBA_STMT_AUDIT_OPTS."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-91-Pregunta: ¿Qué comando SQL define el nivel de aislamiento al inicio de una transacción?",
+    "opciones": [
+      "A. SET TRANSACTION ISOLATION LEVEL nivel;",
+      "B. ALTER SESSION SET ISOLATION LEVEL nivel;",
+      "C. SET LEVEL aislamiento;",
+      "D. BEGIN TRANSACTION WITH LEVEL nivel;"
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "DBD-T2-92-Pregunta: El privilegio de objeto 'REFERENCES' permite:",
+    "opciones": [
+      "A. Consultar los datos de la tabla.",
+      "B. Definir restricciones de integridad referencial hacia esa tabla.",
+      "C. Ver quién ha referenciado a mi usuario.",
+      "D. Crear un enlace (link) a otra base de datos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-93-Pregunta: En Oracle, ¿qué significa 'QUOTA 10M ON SYSAUX'?",
+    "opciones": [
+      "A. Que el usuario tiene 10 MB de memoria RAM.",
+      "B. Que el usuario puede usar hasta 10 MB de espacio en el tablespace SYSAUX.",
+      "C. Que la sesión se corta tras 10 minutos de uso.",
+      "D. Que el usuario puede crear 10 millones de filas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-94-Pregunta: ¿Qué comando se usa para quitar un privilegio previamente concedido?",
+    "opciones": [
+      "A. DELETE.",
+      "B. REVOKE.",
+      "C. DROP.",
+      "D. REMOVE."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-95-Pregunta: En la auditoría de objetos, ¿qué comando auditaría el borrado en una tabla específica?",
+    "opciones": [
+      "A. AUDIT DELETE TABLE;",
+      "B. AUDIT DELETE ON esquema.tabla;",
+      "C. MONITOR DELETE ON tabla;",
+      "D. CHECK DELETE FROM tabla;"
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-96-Pregunta: Según la jerarquía de ACID, ¿qué propiedad asegura que la base de datos pase de un estado consistente S0 a otro S1?",
+    "opciones": [
+      "A. Atomicidad.",
+      "B. Consistencia.",
+      "C. Aislamiento.",
+      "D. Durabilidad."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-97-Pregunta: ¿Cuál es el nivel de aislamiento por defecto mencionado en SQL-92?",
+    "opciones": [
+      "A. SERIALIZABLE.",
+      "B. READ COMMITTED.",
+      "C. READ UNCOMMITTED.",
+      "D. REPEATABLE READ."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-98-Pregunta: ¿Qué comando SQL modificaría un usuario para bloquear su cuenta?",
+    "opciones": [
+      "A. CHANGE USER usuario LOCK;",
+      "B. ALTER USER usuario ACCOUNT LOCK;",
+      "C. UPDATE USER usuario SET LOCKED = 'Y';",
+      "D. MODIFY USER usuario STATE LOCK;"
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-99-Pregunta: El ataque de 'desbordamiento de memoria' (buffer overflow) permite:",
+    "opciones": [
+      "A. Aumentar el tamaño del disco.",
+      "B. Escribir en zonas de memoria no reservadas para el proceso.",
+      "C. Borrar el log de auditoría sin dejar rastro.",
+      "D. Ver las contraseñas en texto plano en la pantalla."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-100-Pregunta: ¿Qué vista permite ver las opciones de auditoría activas a nivel de sentencias?",
+    "opciones": [
+      "A. DBA_USERS.",
+      "B. DBA_STMT_AUDIT_OPTS.",
+      "C. DBA_PRIV_AUDIT.",
+      "D. DBA_AUDIT_EXISTS."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-101-Pregunta: ¿Cómo se define una transacción en el ámbito de las bases de datos?",
+    "opciones": [
+      "A. Una única instrucción SQL de tipo SELECT.",
+      "B. Una secuencia de operaciones que forman una unidad lógica de trabajo.",
+      "C. El proceso de instalación del SGBD en un servidor.",
+      "D. La creación de un índice para mejorar la velocidad."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-102-Pregunta: ¿Qué propiedad ACID asegura que si una transacción se cancela, no se ejecute ninguna de sus operaciones?",
+    "opciones": [
+      "A. Consistencia.",
+      "B. Atomicidad.",
+      "C. Aislamiento.",
+      "D. Durabilidad."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-103-Pregunta: Según las propiedades ACID, ¿qué significa que una transacción sea 'Consistente'?",
+    "opciones": [
+      "A. Que los datos nunca cambian de valor.",
+      "B. Que lleva a la base de datos de un estado íntegro S0 a otro estado íntegro S1.",
+      "C. Que la transacción se ejecuta en menos de un segundo.",
+      "D. Que los estados intermedios son visibles para todos los usuarios."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-104-Pregunta: Sobre la propiedad de 'Aislamiento', ¿qué se afirma respecto a los estados intermedios (I1..n)?",
+    "opciones": [
+      "A. Deben ser visibles para el ABD en todo momento.",
+      "B. No deben ser visibles para otras transacciones.",
+      "C. Deben guardarse en el log de forma permanente.",
+      "D. Son siempre consistentes con las reglas de integridad."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-105-Pregunta: ¿Cuál es la responsabilidad del SGBD según la propiedad de 'Durabilidad'?",
+    "opciones": [
+      "A. Asegurar que las consultas SELECT siempre devuelvan datos.",
+      "B. Garantizar que los cambios confirmados sean permanentes incluso ante fallos.",
+      "C. Impedir que los usuarios cambien su propia contraseña.",
+      "D. Borrar automáticamente las tablas que no se usan."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-106-Pregunta: ¿En qué consiste el 'Problema de la actualización perdida'?",
+    "opciones": [
+      "A. Una transacción borra por error el archivo de datos.",
+      "B. Unas transacciones sobrescriben las actualizaciones de otras de forma incontrolada.",
+      "C. El sistema no encuentra el registro buscado por ID.",
+      "D. Se pierde la conexión de red durante un commit."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-107-Pregunta: El problema de la 'Lectura sucia' también recibe el nombre de:",
+    "opciones": [
+      "A. Problema de la lectura no repetible.",
+      "B. Problema de la actualización temporal.",
+      "C. Problema de la lectura fantasma.",
+      "D. Problema de la integridad referencial."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-108-Pregunta: ¿Qué problema ocurre cuando una transacción calcula un sumatorio mientras otras actualizan esos mismos registros?",
+    "opciones": [
+      "A. Actualización perdida.",
+      "B. Problema del resumen incorrecto.",
+      "C. Lectura sucia.",
+      "D. División por cero."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-109-Pregunta: ¿Qué caracteriza al problema de la 'Lectura no repetible'?",
+    "opciones": [
+      "A. No se puede leer el mismo dato dos veces por falta de permisos.",
+      "B. Se obtienen lecturas diferentes del mismo valor durante una misma transacción.",
+      "C. El servidor devuelve un error de timeout al leer.",
+      "D. Se leen datos que han sido borrados físicamente."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-110-Pregunta: ¿Cómo se denomina el problema de obtener lecturas diferentes de un conjunto de tuplas en la misma transacción?",
+    "opciones": [
+      "A. Lectura fantasma.",
+      "B. Lectura sucia.",
+      "C. Resumen incorrecto.",
+      "D. Actualización temporal."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "DBD-T2-111-Pregunta: ¿Cuál es la principal desventaja de ejecutar las transacciones de forma puramente secuencial?",
+    "opciones": [
+      "A. Se producen muchas lecturas sucias.",
+      "B. Reduce mucho el rendimiento del SGBD.",
+      "C. Impide la creación de backups.",
+      "D. Obliga a usar hardware muy costoso."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-112-Pregunta: Para garantizar la secuenciabilidad en ejecuciones concurrentes, ¿qué herramientas suele usar el SGBD?",
+    "opciones": [
+      "A. Solo auditorías de sistema.",
+      "B. Bloqueos, marcas de tiempo o versiones múltiples.",
+      "C. Únicamente el comando ROLLBACK.",
+      "D. El borrado de perfiles de usuario."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-113-Pregunta: ¿Qué es un 'Gránulo de bloqueo'?",
+    "opciones": [
+      "A. El tiempo de espera de una transacción en milisegundos.",
+      "B. Una unidad que puede ser bloqueada (tabla, fila, etc.).",
+      "C. El tamaño en bytes del log de transacciones.",
+      "D. Una pequeña parte del código fuente del SGBD."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-114-Pregunta: Si una transacción intenta bloquear un gránulo ya bloqueado por otra, ¿qué sucede generalmente?",
+    "opciones": [
+      "A. Se cancela la transacción actual inmediatamente.",
+      "B. Espera hasta que el gránulo sea liberado.",
+      "C. Sobrescribe el bloqueo anterior por jerarquía.",
+      "D. Crea una tabla temporal con el contenido del gránulo."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-115-Pregunta: ¿Cuál es una característica del bloqueo 'Compartido' (para lectura)?",
+    "opciones": [
+      "A. Solo permite que una transacción lea el dato.",
+      "B. Permite que varias transacciones bloqueen el mismo gránulo para lectura.",
+      "C. Impide cualquier otra lectura hasta que se haga COMMIT.",
+      "D. Se activa automáticamente al crear un usuario."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-116-Pregunta: Sobre el bloqueo 'Exclusivo' (para escritura), se afirma que:",
+    "opciones": [
+      "A. Permite lecturas concurrentes pero no escrituras.",
+      "B. Solo puede estar bloqueado por una sola transacción.",
+      "C. Se libera automáticamente cada 10 segundos.",
+      "D. Solo lo puede aplicar el usuario SYSTEM."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-117-Pregunta: ¿Qué nivel de aislamiento SQL-92 permite leer datos no confirmados (lecturas sucias)?",
+    "opciones": [
+      "A. READ COMMITTED.",
+      "B. READ UNCOMMITTED.",
+      "C. REPEATABLE READ.",
+      "D. SERIALIZABLE."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-118-Pregunta: ¿Cuál es el nivel de aislamiento que suele venir configurado por defecto en la mayoría de SGBD?",
+    "opciones": [
+      "A. SERIALIZABLE.",
+      "B. READ COMMITTED.",
+      "C. READ UNCOMMITTED.",
+      "D. REPEATABLE READ."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-119-Pregunta: ¿Qué garantiza el nivel de aislamiento 'REPEATABLE READ'?",
+    "opciones": [
+      "A. Que la transacción siempre se repita al fallar.",
+      "B. Que solo se lean datos confirmados antes de que comience la transacción.",
+      "C. Que no existan lecturas fantasma.",
+      "D. Que el rendimiento sea el máximo posible."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-120-Pregunta: En el nivel 'SERIALIZABLE', ¿qué ocurre si el SGBD no puede garantizar la secuenciabilidad total?",
+    "opciones": [
+      "A. El sistema cambia automáticamente a un nivel inferior.",
+      "B. La transacción falla.",
+      "C. Se detiene el servidor para mantenimiento.",
+      "D. Se avisa al ABD mediante un log de prioridad alta."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-121-Pregunta: ¿Cuál es el comando SQL estándar para definir el nivel de aislamiento?",
+    "opciones": [
+      "A. ALTER SESSION SET ISOLATION...",
+      "B. SET TRANSACTION ISOLATION LEVEL nivel;",
+      "C. UPDATE ISOLATION TO nivel;",
+      "D. GRANT ISOLATION ON DATABASE..."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-122-Pregunta: En SQL, ¿para qué sirve la cláusula 'FOR UPDATE' en una consulta SELECT?",
+    "opciones": [
+      "A. Para actualizar la fecha del sistema.",
+      "B. Para bloquear para escritura los registros seleccionados.",
+      "C. Para ver quién ha modificado la tabla por última vez.",
+      "D. Para cambiar la contraseña del usuario actual."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-123-Pregunta: Un error de sintaxis o una división por cero es un ejemplo de:",
+    "opciones": [
+      "A. Fallo del sistema.",
+      "B. Fallo de una orden al SGBD.",
+      "C. Fallo del medio físico.",
+      "D. Ataque de denegación de servicio."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-124-Pregunta: ¿Quién debe tratar típicamente un 'Fallo de una orden al SGBD'?",
+    "opciones": [
+      "A. El hardware de forma autónoma.",
+      "B. La aplicación mediante tratamiento de excepciones.",
+      "C. El ABD reiniciando la base de datos.",
+      "D. El sistema operativo mediante el archivo swap."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-125-Pregunta: El tratamiento (ROLLBACK) ante un 'Fallo de transacción' (error de programación, interbloqueo) es responsabilidad de:",
+    "opciones": [
+      "A. El usuario final manualmente.",
+      "B. El SGBD.",
+      "C. La tarjeta de red.",
+      "D. El cortafuegos corporativo."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-126-Pregunta: En un 'Fallo del sistema' (caída de tensión), ¿qué se afirma sobre el medio de almacenamiento?",
+    "opciones": [
+      "A. Se formatea automáticamente.",
+      "B. No se ve afectado.",
+      "C. Pierde todos los datos guardados.",
+      "D. Cambia a modo de solo lectura."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-127-Pregunta: ¿Qué herramienta usa el SGBD para recuperarse de un fallo del sistema?",
+    "opciones": [
+      "A. Backups hechos en cintas magnéticas.",
+      "B. Bitácoras (logs) escritas en disco.",
+      "C. El manual de referencia del fabricante.",
+      "D. Los perfiles de recursos de usuario."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-128-Pregunta: ¿Cuál es la regla de escritura de los logs/bitácoras para asegurar la recuperación?",
+    "opciones": [
+      "A. Se escriben después de confirmar la transacción.",
+      "B. Se escriben siempre en disco antes que las transacciones.",
+      "C. Se almacenan solo en la memoria RAM.",
+      "D. Se borran automáticamente tras cada SELECT."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-129-Pregunta: Una avería física del disco duro o un desastre natural provoca un:",
+    "opciones": [
+      "A. Fallo de la transacción.",
+      "B. Fallo del medio.",
+      "C. Fallo de una orden simple.",
+      "D. Error de aislamiento SERIALIZABLE."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-130-Pregunta: Ante un 'Fallo del medio', la recuperación es responsabilidad de:",
+    "opciones": [
+      "A. El SGBD de forma totalmente automática.",
+      "B. Los administradores mediante copias de seguridad (backups).",
+      "C. La compañía eléctrica.",
+      "D. El desarrollador de la aplicación."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-131-Pregunta: ¿Qué ocurre durante un 'Checkpoint' en la gestión de transacciones?",
+    "opciones": [
+      "A. Se verifica la contraseña de todos los usuarios.",
+      "B. Se vuelcan todos los datos en memoria al almacenamiento persistente.",
+      "C. Se borran todos los privilegios concedidos.",
+      "D. El servidor se reinicia para liberar CPU."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-132-Pregunta: Según el gráfico de recuperación, si una transacción 'Tx 1' finalizó antes del último checkpoint:",
+    "opciones": [
+      "A. Debe rehacerse (redo).",
+      "B. No se hace nada, ya está correctamente en disco.",
+      "C. Debe deshacerse (rollback).",
+      "D. Se le debe cobrar una comisión extra."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-133-Pregunta: En el algoritmo de recuperación, una transacción completa que NO llegó al disco tras el último checkpoint debe:",
+    "opciones": [
+      "A. Deshacerse por precaución.",
+      "B. Rehacerse (redo).",
+      "C. Ignorarse por completo.",
+      "D. Consultarse al usuario que la lanzó."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-134-Pregunta: Una transacción que estaba incompleta en el momento del fallo del sistema debe:",
+    "opciones": [
+      "A. Rehacerse usando los logs.",
+      "B. Deshacerse (undo/rollback).",
+      "C. Marcarse como confirmada por el ABD.",
+      "D. Borrarse del diccionario de datos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-135-Pregunta: ¿Cuál es el objetivo principal de la Confidencialidad en bases de datos?",
+    "opciones": [
+      "A. Que el sistema sea lo más rápido posible.",
+      "B. No desvelar ni dejar modificar datos a usuarios no autorizados.",
+      "C. Permitir que cualquier empleado vea los logs del sistema.",
+      "D. Evitar el uso de transacciones atómicas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-136-Pregunta: ¿Qué métodos de autenticación de usuario menciona el material de Oracle?",
+    "opciones": [
+      "A. Solo comandos de voz.",
+      "B. Código/Contraseña e identificación por Hardware.",
+      "C. Únicamente reconocimiento facial.",
+      "D. No requiere autenticación en redes locales."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-137-Pregunta: ¿Cuál es la ventaja de los 'Usuarios de empresa' (globales)?",
+    "opciones": [
+      "A. Son gratis y no consumen CPU.",
+      "B. Permiten gestionar grupos en un directorio sin crear esquemas individuales en cada BD.",
+      "C. Tienen privilegios de SYS por defecto.",
+      "D. No pueden ser auditados."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-138-Pregunta: ¿Cuáles son los usuarios administradores (ABD) por defecto en Oracle?",
+    "opciones": [
+      "A. PEPE y JUAN.",
+      "B. SYS y SYSTEM.",
+      "C. ROOT y ADMIN.",
+      "D. DATABASE_OWNER."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-139-Pregunta: ¿Qué se define como 'Esquema' en el contexto de Oracle?",
+    "opciones": [
+      "A. El diagrama de red de la empresa.",
+      "B. La colección de objetos pertenecientes a un usuario.",
+      "C. El manual de instrucciones del SGBD.",
+      "D. El plan de recuperación ante desastres."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-140-Pregunta: ¿Qué es un 'Rol' en la gestión de seguridad?",
+    "opciones": [
+      "A. Un límite de tiempo de conexión.",
+      "B. Un conjunto o grupo de privilegios agrupados.",
+      "C. El nombre real de la persona que usa la cuenta.",
+      "D. Una tabla oculta que guarda las contraseñas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-141-Pregunta: Un privilegio que permite ejecutar una acción en CUALQUIER esquema del sistema se denomina:",
+    "opciones": [
+      "A. Privilegio de objeto.",
+      "B. Privilegio de sistema.",
+      "C. Privilegio global de tabla.",
+      "D. Privilegio de sesión única."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-142-Pregunta: ¿Qué acción permite el privilegio de objeto 'INSERT'?",
+    "opciones": [
+      "A. Crear nuevas relaciones (tablas) en el sistema.",
+      "B. Insertar nuevas tuplas en una relación específica.",
+      "C. Modificar la estructura de las columnas.",
+      "D. Eliminar usuarios del sistema."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-143-Pregunta: El privilegio de objeto 'REFERENCES' permite:",
+    "opciones": [
+      "A. Leer el contenido de todas las filas.",
+      "B. Especificar restricciones de integridad referencial hacia una tabla.",
+      "C. Ver quién ha accedido a la tabla en el pasado.",
+      "D. Crear sinónimos públicos para la tabla."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-144-Pregunta: ¿A qué niveles se pueden limitar los recursos mediante perfiles de usuario?",
+    "opciones": [
+      "A. Solo a nivel de hardware físico.",
+      "B. A nivel de sesión y a nivel de llamadas (órdenes SQL).",
+      "C. Únicamente por el número de tablas creadas.",
+      "D. A nivel de bytes de red por minuto."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-145-Pregunta: ¿Cuál de estos es un perfil de atacante mencionado en los apuntes?",
+    "opciones": [
+      "A. Un fabricante de servidores.",
+      "B. Un usuario legítimo que intenta obtener mayores privilegios.",
+      "C. El propio sistema de gestión de transacciones.",
+      "D. Un auditor de seguridad certificado."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-146-Pregunta: El ataque de 'Desbordamiento de memoria' (buffer overflow) permite:",
+    "opciones": [
+      "A. Aumentar la memoria RAM del servidor físicamente.",
+      "B. Escribir en una zona de memoria más allá de la reservada.",
+      "C. Que la base de datos funcione sin logs.",
+      "D. Borrar registros sin que el SGBD se entere."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-147-Pregunta: ¿En qué consiste el ataque de 'Inyección de Código SQL'?",
+    "opciones": [
+      "A. En inyectar virus en el kernel del SGBD.",
+      "B. En incluir o modificar comandos SQL al enviarlos al servidor.",
+      "C. En saturar la red con paquetes TCP falsos.",
+      "D. En robar los archivos .dbf del disco duro."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-148-Pregunta: ¿Qué elementos pueden centrar la recogida de información en una auditoría?",
+    "opciones": [
+      "A. Solo los errores de red.",
+      "B. Sentencias SQL, Privilegios y Objetos.",
+      "C. Únicamente los cambios de contraseña.",
+      "D. La temperatura del procesador del servidor."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-149-Pregunta: ¿Qué comando SQL activaría la auditoría para la creación o borrado de roles?",
+    "opciones": [
+      "A. MONITOR ROLE;",
+      "B. AUDIT ROLE;",
+      "C. CHECK ROLE PRIVS;",
+      "D. TRACE ROLE CHANGES;"
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T2-150-Pregunta: ¿Qué vista del diccionario de datos permite ver las opciones de auditoría de sentencias activas?",
+    "opciones": [
+      "A. DBA_USERS.",
+      "B. DBA_STMT_AUDIT_OPTS.",
+      "C. DBA_PRIV_AUDIT_TRAIL.",
+      "D. DBA_AUDIT_OBJECTS."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-01-Pregunta: Según la definición de los apuntes, ¿qué son los datos estructurados?",
+    "opciones": [
+      "A. Datos que carecen de formato y se almacenan de forma bruta.",
+      "B. Datos configurados de tal forma que extraer información de ellos es simple.",
+      "C. Archivos multimedia como MP3 y videos de vigilancia.",
+      "D. Datos que solo pueden ser procesados mediante Machine Learning."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-02-Pregunta: ¿Dónde se integran a menudo los datos estructurados?",
+    "opciones": [
+      "A. En sistemas de archivos distribuidos como Hadoop.",
+      "B. En una base de datos relacional.",
+      "C. En almacenes NoSQL de tipo grafo.",
+      "D. Exclusivamente en documentos PDF."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-03-Pregunta: ¿Cuál es una parte clave de los datos estructurados según el material?",
+    "opciones": [
+      "A. La falta de reglas en los campos.",
+      "B. El formateo, donde cada campo se adhiere a reglas particulares.",
+      "C. El uso de metadatos jerárquicos variables.",
+      "D. Su procedencia única de redes sociales."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-04-Pregunta: ¿Por qué los datos estructurados fueron la forma dominante de almacenamiento durante mucho tiempo?",
+    "opciones": [
+      "A. Porque no existían los datos desestructurados.",
+      "B. Porque eran más fáciles de leer por la tecnología disponible.",
+      "C. Porque ocupan menos espacio que un archivo JSON.",
+      "D. Porque los ABD no conocían otros lenguajes fuera de SQL."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-05-Pregunta: ¿Cuál de los siguientes es un ejemplo de datos estructurados?",
+    "opciones": [
+      "A. El resultado de cuestionarios de opción múltiple [4].",
+      "B. Una grabación de audio de una llamada de servicio.",
+      "C. Un mensaje de texto con emojis.",
+      "D. Una foto digital en formato JPEG."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "DBD-T3-06-Pregunta: ¿Qué ventaja ofrecen los datos estructurados al realizar búsquedas?",
+    "opciones": [
+      "A. Permiten encontrar información sin usar índices.",
+      "B. Vienen en un paquete uniforme y ordenado que facilita la manipulación [5, 6].",
+      "C. No requieren de un lenguaje de consultas.",
+      "D. Se adaptan automáticamente a cualquier formato nuevo."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-07-Pregunta: ¿Qué caracteriza a los datos no estructurados en comparación con los estructurados?",
+    "opciones": [
+      "A. Se organizan en campos concretos desde su creación.",
+      "B. Se encuentran con menos facilidad y requieren más procesamiento [7, 8].",
+      "C. Son ideales para bases de datos relacionales tradicionales.",
+      "D. Tienen un tamaño de registro fijo y limitado."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-08-Pregunta: ¿Cuál es una ventaja destacada de los datos no estructurados?",
+    "opciones": [
+      "A. Su facilidad de análisis con herramientas tradicionales.",
+      "B. La gran cantidad disponible dentro de las organizaciones [7, 9].",
+      "C. Que siempre vienen acompañados de metadatos relacionales.",
+      "D. Que no ocupan espacio en los servidores cloud."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-09-Pregunta: ¿Cuál de estos es un ejemplo de datos no estructurados generados por humanos?",
+    "opciones": [
+      "A. Imágenes satelitales.",
+      "B. Datos de sensores de tráfico.",
+      "C. Publicaciones en redes sociales [8, 10].",
+      "D. Registros de logs web automáticos."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "DBD-T3-10-Pregunta: Dentro de los datos generados por máquinas, ¿qué categoría incluye los datos meteorológicos?",
+    "opciones": [
+      "A. Vigilancia digital.",
+      "B. Datos científicos.",
+      "C. Imágenes satelitales.",
+      "D. Comunicaciones M2M."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "DBD-T3-11-Pregunta: ¿Cómo se definen los datos semiestructurados?",
+    "opciones": [
+      "A. Como una mezcla de datos estructurados y no estructurados.",
+      "B. Como datos que carecen totalmente de metadatos.",
+      "C. Como tablas SQL que tienen algunas celdas vacías.",
+      "D. Como información que solo se puede leer en papel."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "DBD-T3-12-Pregunta: ¿Qué elemento define la organización en los datos semiestructurados?",
+    "opciones": [
+      "A. Un esquema rígido on-write.",
+      "B. Sus metadatos, que describen los objetos y sus relaciones.",
+      "C. La posición física en el disco duro.",
+      "D. El nombre del archivo únicamente."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-13-Pregunta: ¿Cuál es un formato típico de datos semiestructurados?",
+    "opciones": [
+      "A. MP3.",
+      "B. JSON.",
+      "C. AVI.",
+      "D. WAV."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-14-Pregunta: ¿Qué porcentaje de los datos generados hoy en día se estima que son no estructurados?",
+    "opciones": [
+      "A. 20%.",
+      "B. 50%.",
+      "C. 80% .",
+      "D. 100%."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "DBD-T3-15-Pregunta: ¿Qué tipo de datos se consideran 'el punto intermedio' entre estructurados y no estructurados?",
+    "opciones": [
+      "A. Datos biométricos.",
+      "B. Datos semiestructurados.",
+      "C. Transacciones bancarias.",
+      "D. Datos de sensores IoT."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-16-Pregunta: En la procedencia de datos de Big Data, ¿qué incluye la categoría 'Biométrica'?",
+    "opciones": [
+      "A. Mensajes de WhatsApp y correos.",
+      "B. Datos de defensa y lectores como escáneres de retina o ADN.",
+      "C. Compras de artículos online.",
+      "D. Transmisiones GPS y Wi-Fi."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-17-Pregunta: ¿A qué se refiere el término 'Máquina a máquina' (M2M)?",
+    "opciones": [
+      "A. A personas enviando emails a servidores.",
+      "B. A tecnologías que comparten datos entre dispositivos como Wi-Fi o Bluetooth.",
+      "C. Al proceso de fabricación de hardware.",
+      "D. A la impresión de documentos desde un PC."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-18-Pregunta: ¿Qué ha generado un crecimiento potencial en los datos de 'Marketing electrónico y web'?",
+    "opciones": [
+      "A. La desaparición de las tiendas físicas.",
+      "B. La compra de artículos online gracias a Internet.",
+      "C. El uso de fax en las oficinas.",
+      "D. La televisión por cable tradicional."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-19-Pregunta: ¿Qué término se usa para sistemas de almacenamiento que no cumplen con el esquema entidad-relación?",
+    "opciones": [
+      "A. RDBMS.",
+      "B. NoSQL (Not Only SQL) [20, 21].",
+      "C. SQL estándar.",
+      "D. BBDD relacional clásica."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-20-Pregunta: En NoSQL, ¿cómo se accede al dato en un almacenamiento clave-valor?",
+    "opciones": [
+      "A. Mediante una consulta JOIN compleja.",
+      "B. A partir de una clave única [20, 22].",
+      "C. Navegando por un árbol de directorios.",
+      "D. Usando coordenadas de latitud y longitud."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-21-Pregunta: ¿Qué caracteriza al almacenamiento documental en NoSQL?",
+    "opciones": [
+      "A. Los datos se almacenan como documentos formateados (XML, JSON, etc.) [22].",
+      "B. Solo permite guardar texto plano sin formato.",
+      "C. No permite jerarquías o anidamientos.",
+      "D. Es idéntico al almacenamiento en disco de un PDF."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "DBD-T3-22-Pregunta: ¿En qué se basa el almacenamiento NoSQL 'En grafo'?",
+    "opciones": [
+      "A. En tablas conectadas por claves ajenas.",
+      "B. En la teoría de grafos, con nodos para la información y aristas para las relaciones [23, 24].",
+      "C. En una secuencia lineal de datos históricos.",
+      "D. En dibujos realizados por el usuario."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-23-Pregunta: ¿Para qué tipo de análisis es ideal el almacenamiento en grafo?",
+    "opciones": [
+      "A. Para sumar columnas de precios muy rápido.",
+      "B. Para redes sociales o detección de fraude [24].",
+      "C. Para guardar copias de seguridad de emails.",
+      "D. Para sistemas que no tienen relaciones entre datos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-24-Pregunta: ¿Qué permite el almacenamiento orientado a columnas?",
+    "opciones": [
+      "A. Guardar miles de atributos bajo una misma clave, optimizado para consultas analíticas [24].",
+      "B. Eliminar la necesidad de usar claves primarias.",
+      "C. Guardar solo una columna por cada base de datos.",
+      "D. Convertir automáticamente datos JSON en tablas SQL."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "DBD-T3-25-Pregunta: En las 5 V's del Big Data, ¿qué implica el 'Volumen'?",
+    "opciones": [
+      "A. La velocidad de la red Wi-Fi.",
+      "B. Ingent cantidades de datos que suponen retos técnicos y analíticos.",
+      "C. El nivel de ruido en el centro de datos.",
+      "D. El número de administradores de la base de datos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-26-Pregunta: ¿Cuál es el estándar más extendido para el tratamiento masivo de datos en Big Data?",
+    "opciones": [
+      "A. Oracle 12c.",
+      "B. Hadoop [25, 26].",
+      "C. Microsoft Excel.",
+      "D. MySQL."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-27-Pregunta: ¿Qué tipo de soluciones han proliferado para dar respuesta a la necesidad de 'elasticidad'?",
+    "opciones": [
+      "A. Discos duros externos USB.",
+      "B. Soluciones cloud (IaaS) [25, 27].",
+      "C. Servidores físicos de torre.",
+      "D. Cintas de backup."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-28-Pregunta: Respecto a la 'Velocidad' en Big Data, ¿qué exigen los datos hoy en día?",
+    "opciones": [
+      "A. Una respuesta veloz porque quedan obsoletos pronto [27, 28].",
+      "B. Ser almacenados durante años antes de ser leídos.",
+      "C. Que el proceso de carga se haga siempre por la noche.",
+      "D. No requieren procesamiento en tiempo real."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "DBD-T3-29-Pregunta: ¿Qué tipo de arquitectura se menciona como solución al reto de la Velocidad?",
+    "opciones": [
+      "A. Arquitecturas basadas en cinta magnética.",
+      "B. Arquitecturas In-Memory (almacenamiento en RAM) [24].",
+      "C. Arquitecturas de un solo hilo de ejecución.",
+      "D. Procesamiento manual por operarios."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-30-Pregunta: ¿Cuál es un ejemplo de aplicación que requiere alta 'Velocidad'?",
+    "opciones": [
+      "A. Detección de fraudes en transacciones bancarias [29].",
+      "B. Impresión de nóminas mensuales.",
+      "C. Archivo histórico de facturas de hace 10 años.",
+      "D. Creación de informes trimestrales."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "DBD-T3-31-Pregunta: ¿Qué reto plantea la 'Variedad' en Big Data?",
+    "opciones": [
+      "A. El tener que comprar servidores de distintos fabricantes.",
+      "B. Procesar simultáneamente múltiples formatos desestructurados e incompatibles [28, 30].",
+      "C. La obligación de usar siempre el mismo tipo de letra en los informes.",
+      "D. Que los usuarios hablen distintos idiomas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-32-Pregunta: Para el reto de la 'Variedad', ¿qué tecnología actúa como motor parser definitivo?",
+    "opciones": [
+      "A. Un compilador de C++.",
+      "B. Machine Learning / Deep Learning [24].",
+      "C. Una hoja de cálculo avanzada.",
+      "D. El protocolo FTP."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-33-Pregunta: ¿Qué garantiza la 'Veracidad' en el contexto de Big Data?",
+    "opciones": [
+      "A. Que los datos nunca sean borrados.",
+      "B. Un alto grado de confianza en los datos, con resultados de calidad y verificables [21, 31].",
+      "C. Que los datos sean siempre públicos.",
+      "D. Que el sistema sea gratuito para todos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-34-Pregunta: ¿Qué acción se incluye para descartar datos que NO son veraces?",
+    "opciones": [
+      "A. Aumentar el volumen de almacenamiento.",
+      "B. Eliminar duplicados y arreglar entradas parciales [30, 32].",
+      "C. Cambiar el nombre de las tablas.",
+      "D. Cifrar todos los archivos con clave privada."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-35-Pregunta: Para que los datos tengan 'Valor' real, deben ser:",
+    "opciones": [
+      "A. Almacenados en el formato más caro disponible.",
+      "B. Accionables, es decir, ayudar a tomar una decisión [30, 32].",
+      "C. Ocultos para la mayoría de empleados.",
+      "D. Borrados una vez analizados una sola vez."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-36-Pregunta: Además de las 5 V's clásicas, ¿qué otras se mencionan en los diagramas?",
+    "opciones": [
+      "A. Vacío y Ventilación.",
+      "B. Visualización, Viralidad y Viscosidad [24].",
+      "C. Ventaja y Victoria.",
+      "D. Velocidad de rotación y Voltaje."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-37-Pregunta: ¿Qué indica la matriz comparativa sobre la 'Flexibilidad del esquema' en datos estructurados?",
+    "opciones": [
+      "A. Es total.",
+      "B. Es nula (esquema estricto on-write).",
+      "C. Es alta.",
+      "D. Es dinámica y evolutiva."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-38-Pregunta: ¿Cuál es el nivel de complejidad de análisis para datos NO estructurados?",
+    "opciones": [
+      "A. Baja.",
+      "B. Alta (requiere algoritmos de IA/ML).",
+      "C. Media.",
+      "D. No requiere análisis."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-39-Pregunta: ¿Cómo se presentan los datos estructurados para facilitar el análisis?",
+    "opciones": [
+      "A. De manera desordenada en archivos de texto.",
+      "B. De manera ordenada.",
+      "C. Únicamente como imágenes.",
+      "D. Como una nube de etiquetas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-40-Pregunta: ¿Qué problema presenta ignorar los datos desestructurados?",
+    "opciones": [
+      "A. Ninguno, los datos estructurados bastan.",
+      "B. Perderse una parte importante de la fotografía general de la información.",
+      "C. Que el servidor relacional irá más lento.",
+      "D. Que la empresa ahorrará demasiado dinero."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-41-Pregunta: Según los contras de los datos estructurados, ¿qué limitación tienen?",
+    "opciones": [
+      "A. Que no todo cabe en una caja ordenada y uniforme.",
+      "B. Que son imposibles de leer por ordenadores.",
+      "C. Que requieren Machine Learning obligatoriamente.",
+      "D. Que no se pueden ordenar alfabéticamente."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "DBD-T3-42-Pregunta: ¿Cuál es un ejemplo de datos no estructurados producidos por humanos que requiere gramática y semántica?",
+    "opciones": [
+      "A. Archivos de registro (logs).",
+      "B. E-mails y mensajería.",
+      "C. Telemetría espacial.",
+      "D. Señales de GPS."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-43-Pregunta: ¿Qué tipo de datos son los archivos HTML o las hojas de cálculo según una de las clasificaciones de Big Data?",
+    "opciones": [
+      "A. Estructurados.",
+      "B. Semiestructurados.",
+      "C. No estructurados.",
+      "D. Datos nulos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-44-Pregunta: En el ecosistema Big Data, ¿para qué se utiliza Apache Spark o Flink?",
+    "opciones": [
+      "A. Para almacenamiento bruto únicamente.",
+      "B. Para procesamiento masivo y streaming en tiempo real.",
+      "C. Para crear máquinas virtuales IaaS.",
+      "D. Para diseñar el esquema Entidad-Relación."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-45-Pregunta: ¿Qué se concluye sobre el Modelo Relacional en los sistemas modernos de Big Data?",
+    "opciones": [
+      "A. Que es universal para cualquier carga de datos.",
+      "B. Que no es universal y forzar datos masivos en él puede resultar en fallo de arquitectura .",
+      "C. Que debe sustituir a todos los sistemas NoSQL.",
+      "D. Que es la única forma de garantizar el valor de los datos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-46-Pregunta: ¿Qué herramienta se menciona para la 'Analítica, Búsqueda y Machine Learning' en el ecosistema?",
+    "opciones": [
+      "A. Hadoop MapReduce.",
+      "B. Elasticsearch (motores de indexación) [24].",
+      "C. Discos SSD físicos.",
+      "D. El lenguaje COBOL."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-47-Pregunta: ¿Dónde reside la verdadera ventaja competitiva según las conclusiones?",
+    "opciones": [
+      "A. En tener el servidor más grande.",
+      "B. En la capacidad de procesar la semántica compleja de los datos no estructurados .",
+      "C. En usar únicamente datos estructurados.",
+      "D. En no realizar limpiezas de datos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-48-Pregunta: ¿Qué causa un crecimiento abrumador de datos en el Marketing electrónico?",
+    "opciones": [
+      "A. La llegada de Internet y la compra de artículos online.",
+      "B. El envío de cartas por correo postal.",
+      "C. El cierre de las redes sociales.",
+      "D. La reducción del uso de smartphones."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "DBD-T3-49-Pregunta: ¿Qué describe mejor al 'Ecosistema Big Data'?",
+    "opciones": [
+      "A. Una única aplicación que hace todo el trabajo.",
+      "B. Un conjunto diverso de frameworks, bases de datos y herramientas cloud interconectadas [24].",
+      "C. Un centro de datos sin conexión a la red.",
+      "D. Una biblioteca de libros físicos sobre bases de datos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-50-Pregunta: ¿Cuál es el lema de la arquitectura Big Data según las conclusiones?",
+    "opciones": [
+      "A. 'El hardware es lo único que importa'.",
+      "B. 'La arquitectura sigue a la V' (seleccionar la herramienta según el cuello de botella) .",
+      "C. 'SQL es siempre la mejor opción'.",
+      "D. 'Ignora el 80% de los datos'."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-51-Pregunta: ¿Qué característica técnica define el formateo de los datos estructurados?",
+    "opciones": [
+      "A. La ausencia de reglas fijas para los campos.",
+      "B. Que cada campo se adhiere a reglas particulares como fecha, porcentaje o moneda.",
+      "C. El uso exclusivo de archivos multimedia.",
+      "D. La imposibilidad de ser procesados por bases de datos relacionales."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-52-Pregunta: Según los apuntes, ¿por qué los datos estructurados fueron la forma dominante de almacenamiento?",
+    "opciones": [
+      "A. Porque eran más fáciles de leer por la tecnología disponible.",
+      "B. Porque no ocupaban espacio en los servidores.",
+      "C. Porque los datos desestructurados no existían hace años.",
+      "D. Porque no requerían el uso de SQL."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "DBD-T3-53-Pregunta: ¿Cuál de estos es un ejemplo de datos estructurados mencionado en los textos?",
+    "opciones": [
+      "A. El cuerpo de un correo electrónico.",
+      "B. Información de contacto del cliente recopilada de manera uniforme.",
+      "C. Grabaciones telefónicas de atención al cliente.",
+      "D. Imágenes de satélite meteorológicas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-54-Pregunta: ¿Qué ventaja tiene un analista al trabajar con un paquete de datos estructurados?",
+    "opciones": [
+      "A. Que no necesita software especializado para visualizarlos.",
+      "B. Que puede buscarlos y manipularlos fácilmente por su orden y uniformidad.",
+      "C. Que los datos se autolimpian sin intervención humana.",
+      "D. Que siempre incluyen metadatos jerárquicos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-55-Pregunta: En comparación con los estructurados, los datos no estructurados se caracterizan por:",
+    "opciones": [
+      "A. Estar organizados en campos concretos.",
+      "B. Requerir más procesamiento al no estar organizados en campos.",
+      "C. Ser siempre de tipo numérico.",
+      "D. Integrarse directamente en RDBMS tradicionales."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-56-Pregunta: Según el material, ¿qué riesgo conlleva ignorar los datos desestructurados?",
+    "opciones": [
+      "A. Perder una parte importante de la fotografía general de la información.",
+      "B. Aumentar el coste de las licencias de software.",
+      "C. Que la base de datos relacional deje de funcionar.",
+      "D. Ninguno, ya que los estructurados son los únicos útiles."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "DBD-T3-57-Pregunta: ¿Qué se afirma sobre la estructura interna de los correos electrónicos?",
+    "opciones": [
+      "A. Que carecen totalmente de estructura.",
+      "B. Que tienen cierta estructura interna gracias a sus metadatos.",
+      "C. Que son datos estructurados puros.",
+      "D. Que solo pueden ser analizados mediante SQL."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-58-Pregunta: ¿Cuál es un ejemplo de datos no estructurados generados por máquinas según los apuntes?",
+    "opciones": [
+      "A. Tuits de celebridades.",
+      "B. Datos de sensores oceanográficos.",
+      "C. Resultados de cuestionarios de opción múltiple.",
+      "D. Hojas de cálculo de Excel."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-59-Pregunta: Dentro de los datos generados por máquinas, ¿qué categoría incluye la exploración espacial?",
+    "opciones": [
+      "A. Vigilancia digital.",
+      "B. Datos científicos.",
+      "C. Imágenes satelitales.",
+      "D. Comunicaciones M2M."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-60-Pregunta: ¿Qué define la organización de los datos semiestructurados?",
+    "opciones": [
+      "A. Su disposición en filas y columnas estrictas.",
+      "B. Su organización definida en metadatos que describen objetos y relaciones.",
+      "C. La ausencia total de cualquier tipo de estructura.",
+      "D. Su almacenamiento exclusivo en cintas magnéticas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-61-Pregunta: ¿Qué término se utiliza para referirse a la procedencia de datos de operaciones bancarias o llamadas?",
+    "opciones": [
+      "A. Datos biométricos.",
+      "B. Transacciones de datos.",
+      "C. Marketing electrónico.",
+      "D. Datos generados por máquinas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-62-Pregunta: ¿Cuál es el motor del crecimiento abrumador de datos en 'Marketing electrónico y web'?",
+    "opciones": [
+      "A. El envío masivo de correos postales.",
+      "B. La compra de artículos online.",
+      "C. El uso de telefonía fija.",
+      "D. La impresión de catálogos en papel."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-63-Pregunta: ¿Qué tecnologías se agrupan bajo el concepto de 'Máquina a máquina' (M2M)?",
+    "opciones": [
+      "A. Impresoras láser conectadas por cable.",
+      "B. Wi-Fi, Bluetooth o transmisión GPS.",
+      "C. Escáneres de huellas dactilares.",
+      "D. Cuestionarios abiertos de usuarios."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-64-Pregunta: ¿De dónde proceden los datos agrupados en la categoría 'Biométrica'?",
+    "opciones": [
+      "A. De las redes sociales.",
+      "B. De la seguridad, defensa y servicios de inteligencia.",
+      "C. De las transferencias entre cuentas bancarias.",
+      "D. De los clics realizados en una página web."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-65-Pregunta: ¿Qué sistemas NO cumplen con el esquema entidad-relación según la definición de NoSQL?",
+    "opciones": [
+      "A. Los sistemas de almacenamiento de Big Data.",
+      "B. Las bases de datos relacionales tradicionales.",
+      "C. Los sistemas de gestión de archivos FAT32.",
+      "D. Las hojas de cálculo de Google."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "DBD-T3-66-Pregunta: ¿Qué característica define al almacenamiento NoSQL de tipo clave-valor?",
+    "opciones": [
+      "A. Uso intensivo de tablas relacionales.",
+      "B. Carencia de una estructura de datos clara y establecida.",
+      "C. Acceso al dato mediante un lenguaje SQL estándar.",
+      "D. Obligación de definir un esquema antes de la escritura."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-67-Pregunta: En el almacenamiento documental NoSQL, ¿cómo pueden estar formateados los documentos?",
+    "opciones": [
+      "A. Solo en texto plano .txt.",
+      "B. En XML, JSON o BinaryJSON.",
+      "C. Únicamente en formato propietario de Oracle.",
+      "D. Como archivos ejecutables .exe."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-68-Pregunta: ¿Qué representan las 'aristas' en una base de datos de grafos?",
+    "opciones": [
+      "A. La información o entidades.",
+      "B. Las relaciones entre la información.",
+      "C. Las claves primarias de la tabla.",
+      "D. Los logs de errores del sistema."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-69-Pregunta: Según la V de 'Volumen', ¿por qué los datos suponen un reto técnico?",
+    "opciones": [
+      "A. Porque son tantos que dificultan su almacenamiento y análisis.",
+      "B. Porque todos son de tipo multimedia.",
+      "C. Porque el coste de la electricidad es muy alto.",
+      "D. Porque requieren administradores con 20 años de experiencia."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "DBD-T3-70-Pregunta: ¿Qué tipo de soluciones proliferan para responder a las necesidades de elasticidad en Big Data?",
+    "opciones": [
+      "A. Servidores físicos de mayor tamaño (escalabilidad vertical).",
+      "B. Soluciones cloud de tipo IaaS.",
+      "C. Memorias USB de alta capacidad.",
+      "D. Procesadores de un solo núcleo."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-71-Pregunta: ¿Qué implica la V de 'Velocidad' respecto a la vigencia de los datos?",
+    "opciones": [
+      "A. Que los datos deben guardarse para siempre.",
+      "B. Que los datos quedan obsoletos pronto.",
+      "C. Que los datos nunca cambian.",
+      "D. Que la velocidad de la red no es importante."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-72-Pregunta: ¿Cuál de estos es un ejemplo de aplicación que requiere gestionar la 'Velocidad' en Big Data?",
+    "opciones": [
+      "A. Análisis de riesgos para la compra de acciones.",
+      "B. Archivo de registros de impuestos de la década pasada.",
+      "C. Impresión de manuales de usuario.",
+      "D. Copias de seguridad mensuales."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "DBD-T3-73-Pregunta: ¿Qué aumenta la complejidad en el almacenamiento y procesamiento según la V de 'Variedad'?",
+    "opciones": [
+      "A. La falta de espacio en disco.",
+      "B. Que los datos estén en varios formatos.",
+      "C. El uso de un solo tipo de base de datos.",
+      "D. Que todos los datos sean estructurados."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-74-Pregunta: Según el material, ¿qué tecnologías son especializadas en almacenar datos no estructurados producidos por humanos?",
+    "opciones": [
+      "A. SQL estándar.",
+      "B. NoSQL y NewSQL.",
+      "C. Sistemas de archivos FAT.",
+      "D. Microsoft Access."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-75-Pregunta: ¿Qué acciones se deben realizar debido a que muchos datos llegan incompletos en Big Data?",
+    "opciones": [
+      "A. Deben ser ignorados totalmente.",
+      "B. Deben ser limpiados y analizados.",
+      "C. Deben ser duplicados para evitar pérdidas.",
+      "D. Deben ser convertidos a formato papel."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-76-Pregunta: Dentro de la V de 'Veracidad', ¿qué conceptos se incluyen para establecer la confianza en los datos?",
+    "opciones": [
+      "A. El volumen y la velocidad.",
+      "B. La fiabilidad, la precisión y la confiabilidad.",
+      "C. El coste y el valor de mercado.",
+      "D. El nombre del autor y la fecha."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-77-Pregunta: ¿Qué significa que los datos deban ser 'accionables' para tener Valor?",
+    "opciones": [
+      "A. Que deben poder ser borrados rápidamente.",
+      "B. Que deben ayudarnos a tomar una decisión en base a ellos.",
+      "C. Que deben ser accesibles desde un teléfono móvil.",
+      "D. Que deben estar cifrados con algoritmos militares."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-78-Pregunta: En la matriz comparativa, ¿cómo es la complejidad de análisis de los datos estructurados?",
+    "opciones": [
+      "A. Alta.",
+      "B. Baja (consultas SQL directas).",
+      "C. Media.",
+      "D. Nula."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-79-Pregunta: ¿Qué flexibilidad de esquema tienen los datos estructurados según la matriz comparativa?",
+    "opciones": [
+      "A. Alta (esquema dinámico).",
+      "B. Nula (esquema estricto on-write).",
+      "C. Total (sin esquema definido).",
+      "D. Evolutiva."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-80-Pregunta: Según la matriz comparativa, ¿qué tipo de almacenamiento es típico de los datos semiestructurados?",
+    "opciones": [
+      "A. Bases de datos relacionales (RDBMS).",
+      "B. Sistemas NoSQL Documentales.",
+      "C. Data Lakes.",
+      "D. Archivos nativos PDF/MP4."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-81-Pregunta: ¿Qué porcentaje de los datos generados hoy en día se estima que son no estructurados según el diagrama?",
+    "opciones": [
+      "A. El 20%.",
+      "B. El 80%.",
+      "C. El 50%.",
+      "D. El 100%."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-82-Pregunta: ¿Cuál es un contra de los datos estructurados mencionado en los cuadros de texto?",
+    "opciones": [
+      "A. Que no todo cabe en una caja ordenada y uniforme.",
+      "B. Que son difíciles de leer por ordenadores.",
+      "C. Que requieren mucho tiempo de análisis.",
+      "D. Que hay menos datos desestructurados que estructurados."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "DBD-T3-83-Pregunta: Según los pros y contras, ¿para qué se pueden analizar los datos no estructurados?",
+    "opciones": [
+      "A. Para reducir el espacio en disco.",
+      "B. Para obtener una ventaja competitiva.",
+      "C. Para eliminar la necesidad de analistas.",
+      "D. Para simplificar el hardware necesario."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-84-Pregunta: ¿Qué herramientas se mencionan para procesar datos no estructurados ahora que están más adelantadas?",
+    "opciones": [
+      "A. Word y Excel.",
+      "B. Hadoop, NoSQL, Machine Learning o MapReduce.",
+      "C. SQL Server 2000.",
+      "D. Lectores de tarjetas perforadas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-85-Pregunta: ¿Qué tipo de arquitectura soluciona el cuello de botella de la latencia de disco (HDD/SSD) en Big Data?",
+    "opciones": [
+      "A. Bases de datos tradicionales.",
+      "B. Arquitecturas In-Memory (NoSQL/NewSQL).",
+      "C. Sistemas de archivos en red (NFS).",
+      "D. Almacenamiento en cinta."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-86-Pregunta: ¿Qué tecnología actúa como 'motor parser definitivo' para los datos generados por humanos?",
+    "opciones": [
+      "A. Un compilador de Java.",
+      "B. Machine Learning / Deep Learning.",
+      "C. Una hoja de cálculo avanzada.",
+      "D. El protocolo HTTP."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-87-Pregunta: En el ecosistema Big Data, ¿qué herramienta se asocia con el 'Procesamiento Masivo para volumen histórico'?",
+    "opciones": [
+      "A. Apache Spark.",
+      "B. Hadoop (MapReduce).",
+      "C. Redis.",
+      "D. Amazon AWS."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-88-Pregunta: ¿Qué componente del ecosistema se encarga de la 'Elasticidad y Almacenamiento Bruto'?",
+    "opciones": [
+      "A. Motores de indexación.",
+      "B. Infraestructura Cloud (IaaS).",
+      "C. Frameworks de IA.",
+      "D. Bases de datos de grafos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-89-Pregunta: Según las conclusiones, forzar datos masivos en un diagrama E-R estricto resultará en:",
+    "opciones": [
+      "A. Una mayor velocidad de consulta.",
+      "B. Un fallo de arquitectura.",
+      "C. Un ahorro de costes significativo.",
+      "D. Una mejora en la veracidad de los datos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-90-Pregunta: ¿Qué lema resume la selección de herramientas en Big Data según las conclusiones?",
+    "opciones": [
+      "A. 'El modelo relacional es universal'.",
+      "B. 'La arquitectura sigue a la V'.",
+      "C. 'Ignora el caos de los datos'.",
+      "D. 'Cuanto más hardware, mejor'."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-91-Pregunta: Según la V de 'Veracidad', ¿qué tipo de inconsistencias deben descartarse?",
+    "opciones": [
+      "A. Inconsistencias en el precio del hardware.",
+      "B. Inconsistencias en formato.",
+      "C. Inconsistencias en el número de empleados.",
+      "D. Inconsistencias en la ubicación física del servidor."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-92-Pregunta: ¿Cuál es un ejemplo de 'Procedencia de datos generados por personas'?",
+    "opciones": [
+      "A. Señales de GPS.",
+      "B. Uso de aplicaciones móviles de mensajería.",
+      "C. Lectores de cadenas de ADN.",
+      "D. Logs web automáticos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-93-Pregunta: ¿Qué ventaja competitiva reside en la capacidad de procesar semántica compleja?",
+    "opciones": [
+      "A. Reducir el número de servidores.",
+      "B. Extraer valor del caos de los datos sin estructura.",
+      "C. Usar únicamente bases de datos relacionales.",
+      "D. Eliminar los pipelines de limpieza."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-94-Pregunta: ¿Qué significa 'BinaryJSON' en el contexto de bases de datos documentales?",
+    "opciones": [
+      "A. Un tipo de dato estructurado relacional.",
+      "B. Un formato que puede aceptar la base de datos documental.",
+      "C. Un lenguaje de consulta similar a SQL.",
+      "D. Un error de formato en Big Data."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-95-Pregunta: En la V de 'Variedad', ¿por qué se trata cada tipo de información de manera distinta?",
+    "opciones": [
+      "A. Por una limitación legal.",
+      "B. Por el uso de herramientas específicas para datos desestructurados.",
+      "C. Porque el ABD así lo prefiere.",
+      "D. Porque los datos estructurados son muy caros."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-96-Pregunta: ¿Cuál es un ejemplo de 'Datos de imagen' según el esquema de Big Data?",
+    "opciones": [
+      "A. Hojas de cálculo.",
+      "B. Fotografías digitales (MP3 no, es audio).",
+      "C. Páginas Web.",
+      "D. Bases de datos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-97-Pregunta: ¿Qué tipo de datos son los archivos HTML según el texto?",
+    "opciones": [
+      "A. Estructurados.",
+      "B. Semiestructurados.",
+      "C. No estructurados.",
+      "D. Binarios puros."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-98-Pregunta: Según el gráfico de 'Las 10 V's', ¿cuál de estas NO es una de las 5 clásicas pero sí aparece allí?",
+    "opciones": [
+      "A. Volumen.",
+      "B. Viscosidad.",
+      "C. Valor.",
+      "D. Variedad."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-99-Pregunta: ¿Para qué sirve Apache Spark / Flink en el ecosistema Big Data?",
+    "opciones": [
+      "A. Para almacenamiento bruto únicamente.",
+      "B. Para procesamiento masivo y streaming en tiempo real.",
+      "C. Para crear máquinas virtuales.",
+      "D. Para diseñar el modelo relacional."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-100-Pregunta: ¿Qué unidad de latencia se consigue con arquitecturas In-Memory optimizadas?",
+    "opciones": [
+      "A. Milisegundos/Segundos.",
+      "B. Microsegundos.",
+      "C. Minutos.",
+      "D. Horas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-101-Pregunta: ¿Qué característica técnica define el formateo de los datos estructurados?",
+    "opciones": [
+      "A. La ausencia de reglas fijas para los campos.",
+      "B. Que cada campo se adhiere a reglas particulares como fecha, porcentaje o moneda.",
+      "C. El uso exclusivo de archivos multimedia.",
+      "D. La imposibilidad de ser procesados por bases de datos relacionales."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-102-Pregunta: ¿Por qué los datos estructurados fueron la forma dominante de almacenamiento según los apuntes?",
+    "opciones": [
+      "A. Porque eran más fáciles de leer por la tecnología disponible.",
+      "B. Porque no ocupaban espacio en los servidores.",
+      "C. Porque los datos desestructurados no existían históricamente.",
+      "D. Porque no requerían el uso de lenguajes como SQL."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "DBD-T3-103-Pregunta: ¿Cuál de estos es un ejemplo de datos estructurados mencionado en los textos?",
+    "opciones": [
+      "A. El cuerpo de un correo electrónico.",
+      "B. Información de contacto del cliente recopilada de manera uniforme.",
+      "C. Grabaciones telefónicas de atención al cliente.",
+      "D. Imágenes de satélite meteorológicas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-104-Pregunta: ¿Qué ventaja tiene un analista al trabajar con un paquete de datos estructurados?",
+    "opciones": [
+      "A. Que no necesita software especializado para visualizarlos.",
+      "B. Que puede buscarlos y manipularlos fácilmente por su orden y uniformidad.",
+      "C. Que los datos se autolimpian sin intervención humana.",
+      "D. Que siempre incluyen metadatos jerárquicos variables."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-105-Pregunta: En comparación con los estructurados, los datos no estructurados se caracterizan por:",
+    "opciones": [
+      "A. Estar organizados en campos concretos desde su origen.",
+      "B. Requerir más procesamiento al no estar organizados en campos.",
+      "C. Ser siempre de tipo numérico o booleano.",
+      "D. Integrarse directamente en RDBMS tradicionales sin cambios."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-106-Pregunta: Según el material, ¿qué riesgo conlleva ignorar los datos desestructurados?",
+    "opciones": [
+      "A. Perder una parte importante de la fotografía general de la información.",
+      "B. Aumentar el coste de las licencias de software relacional.",
+      "C. Que la base de datos relacional de la empresa deje de funcionar.",
+      "D. Ninguno, ya que los estructurados son los únicos con valor real."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "DBD-T3-107-Pregunta: ¿Qué se afirma sobre la estructura interna de los correos electrónicos?",
+    "opciones": [
+      "A. Que carecen totalmente de cualquier tipo de estructura.",
+      "B. Que tienen cierta estructura interna gracias a sus metadatos.",
+      "C. Que son datos estructurados puros y relacionales.",
+      "D. Que solo pueden ser analizados mediante el lenguaje SQL estándar."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-108-Pregunta: ¿Cuál es un ejemplo de datos no estructurados generados por máquinas según los apuntes?",
+    "opciones": [
+      "A. Tuits de celebridades en redes sociales.",
+      "B. Datos de sensores oceanográficos.",
+      "C. Resultados de cuestionarios de opción múltiple.",
+      "D. Hojas de cálculo de Excel formateadas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-109-Pregunta: Dentro de los datos generados por máquinas, ¿qué categoría incluye la exploración del terreno?",
+    "opciones": [
+      "A. Vigilancia digital.",
+      "B. Datos científicos.",
+      "C. Imágenes satelitales.",
+      "D. Comunicaciones M2M inalámbricas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-110-Pregunta: ¿Qué define la organización de los datos semiestructurados?",
+    "opciones": [
+      "A. Su disposición exclusiva en filas y columnas estrictas.",
+      "B. Una organización definida en sus metadatos que describen objetos y relaciones.",
+      "C. La ausencia total y absoluta de cualquier tipo de marcador.",
+      "D. Su almacenamiento obligatorio en soportes físicos como cintas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-111-Pregunta: ¿Qué término se utiliza para referirse a la procedencia de datos de operaciones bancarias o transferencias?",
+    "opciones": [
+      "A. Datos biométricos de seguridad.",
+      "B. Transacciones de datos.",
+      "C. Marketing electrónico masivo.",
+      "D. Datos generados por máquinas inteligentes."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-112-Pregunta: ¿Cuál es el motor del crecimiento abrumador de datos en 'Marketing electrónico y web'?",
+    "opciones": [
+      "A. El envío masivo de correos postales tradicionales.",
+      "B. La compra de artículos online a través de Internet.",
+      "C. El aumento del uso de la telefonía fija cableada.",
+      "D. La impresión de catálogos publicitarios en papel."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-113-Pregunta: ¿Qué tecnologías se agrupan bajo el concepto de 'Máquina a máquina' (M2M)?",
+    "opciones": [
+      "A. Impresoras láser conectadas por puerto paralelo.",
+      "B. Wi-Fi, Bluetooth o transmisión por GPS.",
+      "C. Escáneres de huellas dactilares para control de acceso.",
+      "D. Cuestionarios de respuesta abierta de usuarios finales."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-114-Pregunta: ¿De dónde proceden los datos agrupados en la categoría 'Biométrica'?",
+    "opciones": [
+      "A. Del rastreo de clics en redes sociales.",
+      "B. De la seguridad, defensa y servicios de inteligencia.",
+      "C. De las transferencias entre cuentas bancarias personales.",
+      "D. De los comentarios realizados en blogs corporativos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-115-Pregunta: ¿Qué sistemas NO cumplen con el esquema entidad-relación según la definición de NoSQL?",
+    "opciones": [
+      "A. Los sistemas de almacenamiento de Big Data tipo NoSQL.",
+      "B. Las bases de datos relacionales tradicionales como Oracle.",
+      "C. Los sistemas de gestión de archivos locales FAT32.",
+      "D. Las hojas de cálculo compartidas en la nube."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "DBD-T3-116-Pregunta: ¿Qué característica define al almacenamiento NoSQL de tipo clave-valor?",
+    "opciones": [
+      "A. Uso intensivo de tablas relacionales normalizadas.",
+      "B. Carece de una estructura de datos clara y establecida.",
+      "C. Acceso al dato mediante un lenguaje SQL estándar estricto.",
+      "D. Obligación de definir un esquema rígido antes de la escritura."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-117-Pregunta: En el almacenamiento documental NoSQL, ¿cómo se presentan habitualmente los datos?",
+    "opciones": [
+      "A. Solo en formato de texto plano sin etiquetas.",
+      "B. Como documentos estructurados tipo XML, JSON o BinaryJSON.",
+      "C. Únicamente como archivos binarios propietarios.",
+      "D. Como secuencias de registros de longitud fija."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-118-Pregunta: ¿Qué representan las 'aristas' en una base de datos de grafos?",
+    "opciones": [
+      "A. La información o entidades básicas.",
+      "B. Las relaciones entre la información.",
+      "C. Las claves primarias únicas de la tabla.",
+      "D. Los registros de auditoría del sistema."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-119-Pregunta: Según la V de 'Volumen', ¿por qué los datos suponen un reto técnico?",
+    "opciones": [
+      "A. Porque dificultan su almacenamiento y análisis debido a su cantidad.",
+      "B. Porque todos son de tipo multimedia de alta definición.",
+      "C. Porque el consumo eléctrico de los servidores es excesivo.",
+      "D. Porque requieren administradores con perfiles de ingeniería."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "DBD-T3-120-Pregunta: ¿Qué tipo de soluciones proliferan para responder a las necesidades de elasticidad en Big Data?",
+    "opciones": [
+      "A. Servidores físicos de mayor capacidad (escalabilidad vertical).",
+      "B. Soluciones cloud de tipo infraestructura como servicio (IaaS).",
+      "C. Memorias USB de alta velocidad para transporte de datos.",
+      "D. Microprocesadores de un solo núcleo optimizados."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-121-Pregunta: ¿Qué implica la V de 'Velocidad' respecto a la vigencia de la información?",
+    "opciones": [
+      "A. Que los datos deben ser archivados indefinidamente.",
+      "B. Que los datos quedan obsoletos con gran rapidez.",
+      "C. Que el valor de los datos es constante en el tiempo.",
+      "D. Que la velocidad de transmisión por red es el único factor."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-122-Pregunta: ¿Cuál de estos es un ejemplo de aplicación que requiere gestionar la 'Velocidad' en Big Data?",
+    "opciones": [
+      "A. Análisis de riesgos en tiempo real para compra de acciones.",
+      "B. Archivo de registros fiscales de décadas anteriores.",
+      "C. Impresión periódica de manuales técnicos de usuario.",
+      "D. Generación de copias de seguridad de forma mensual."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "DBD-T3-123-Pregunta: ¿Qué aumenta la complejidad en el procesamiento según la V de 'Variedad'?",
+    "opciones": [
+      "A. La escasez de espacio físico en los centros de datos.",
+      "B. El hecho de que los datos se presenten en múltiples formatos.",
+      "C. El uso exclusivo de un único tipo de motor de base de datos.",
+      "D. Que la totalidad de los datos recibidos sean estructurados."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-124-Pregunta: Según los apuntes, ¿qué tecnologías se especializan en almacenar datos no estructurados de humanos?",
+    "opciones": [
+      "A. El lenguaje SQL estándar tradicional.",
+      "B. Bases de datos NoSQL y NewSQL.",
+      "C. Sistemas de archivos locales tipo FAT o NTFS.",
+      "D. Aplicaciones de escritorio como Microsoft Access."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-125-Pregunta: ¿Qué acciones se requieren debido a que muchos datos llegan incompletos en entornos de Big Data?",
+    "opciones": [
+      "A. Deben ser descartados e ignorados sistemáticamente.",
+      "B. Deben ser sometidos a procesos de limpieza y análisis.",
+      "C. Deben ser duplicados para garantizar que no se pierdan.",
+      "D. Deben ser transcritos manualmente a formato papel."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-126-Pregunta: Dentro de la V de 'Veracidad', ¿qué conceptos se asocian con la confianza en los datos?",
+    "opciones": [
+      "A. El volumen total y la velocidad de carga.",
+      "B. La fiabilidad, la precisión y la confiabilidad.",
+      "C. El coste de adquisición y el valor de reventa.",
+      "D. La identidad del autor y la fecha de creación."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-127-Pregunta: ¿Qué significa que los datos deban ser 'accionables' para poseer Valor?",
+    "opciones": [
+      "A. Que deben poder eliminarse de forma automática.",
+      "B. Que deben facilitar la toma de decisiones basada en ellos.",
+      "C. Que deben estar disponibles en dispositivos móviles.",
+      "D. Que deben protegerse con algoritmos de cifrado simétrico."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-128-Pregunta: En la matriz comparativa de los apuntes, ¿cómo es la complejidad de análisis de datos estructurados?",
+    "opciones": [
+      "A. Extremadamente alta y costosa.",
+      "B. Baja, mediante consultas SQL directas.",
+      "C. Media, requiriendo pre-procesamiento complejo.",
+      "D. Inexistente, ya que no se analizan."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-129-Pregunta: ¿Qué flexibilidad de esquema caracteriza a los datos estructurados?",
+    "opciones": [
+      "A. Alta, permitiendo cambios en tiempo de ejecución.",
+      "B. Nula, con un esquema estricto de tipo 'on-write'.",
+      "C. Total, al carecer de un esquema definido previamente.",
+      "D. Evolutiva y autogestionada por el sistema."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-130-Pregunta: Según la matriz comparativa, ¿qué almacenamiento es típico para datos semiestructurados?",
+    "opciones": [
+      "A. Bases de datos relacionales clásicas (RDBMS).",
+      "B. Sistemas NoSQL Documentales.",
+      "C. Grandes repositorios brutos tipo Data Lakes.",
+      "D. Archivos nativos multimedia como PDF o MP4."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-131-Pregunta: ¿Qué porcentaje de los datos mundiales generados hoy se estima no estructurado?",
+    "opciones": [
+      "A. Alrededor del 20%.",
+      "B. Aproximadamente el 80%.",
+      "C. Exactamente el 50%.",
+      "D. El 100% de la información digital."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-132-Pregunta: ¿Cuál es un contra de los datos estructurados mencionado en los cuadros informativos?",
+    "opciones": [
+      "A. Que la realidad no siempre cabe en cajas ordenadas y uniformes.",
+      "B. Que resultan imposibles de interpretar por sistemas informáticos.",
+      "C. Que requieren una inversión excesiva en tiempo de análisis inicial.",
+      "D. Que su volumen es mayor que el de los datos desestructurados."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "DBD-T3-133-Pregunta: Según los pros y contras, ¿para qué se analizan hoy los datos no estructurados?",
+    "opciones": [
+      "A. Para ahorrar espacio de almacenamiento físico.",
+      "B. Para obtener una ventaja competitiva en el mercado.",
+      "C. Para prescindir de los equipos de analistas de datos.",
+      "D. Para simplificar la infraestructura de hardware necesaria."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-134-Pregunta: ¿Qué herramientas se citan para procesar datos no estructurados en la actualidad?",
+    "opciones": [
+      "A. Editores de texto y hojas de cálculo simples.",
+      "B. Hadoop, NoSQL, Machine Learning o MapReduce.",
+      "C. Gestores de bases de datos de principios de los 2000.",
+      "D. Dispositivos de lectura de tarjetas perforadas físicas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-135-Pregunta: ¿Qué arquitectura técnica mitiga el cuello de botella de la latencia de disco (I/O)?",
+    "opciones": [
+      "A. Servidores de bases de datos relacionales tradicionales.",
+      "B. Arquitecturas 'In-Memory' basadas en NoSQL o NewSQL.",
+      "C. Sistemas de almacenamiento compartido por red (NFS).",
+      "D. Centros de datos basados en copias sobre cinta magnética."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-136-Pregunta: ¿Qué tecnología actúa como el 'motor parser definitivo' para datos humanos?",
+    "opciones": [
+      "A. Un compilador de código fuente tipo Java.",
+      "B. Los marcos de trabajo de Machine Learning y Deep Learning.",
+      "C. Una hoja de cálculo con macros avanzadas.",
+      "D. El protocolo de transferencia de hipertexto (HTTP)."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-137-Pregunta: En el ecosistema Big Data, ¿qué herramienta se vincula con el volumen histórico masivo?",
+    "opciones": [
+      "A. El motor de procesamiento Apache Spark.",
+      "B. El ecosistema Hadoop mediante MapReduce.",
+      "C. Sistemas de caché de alta velocidad como Redis.",
+      "D. Plataformas de servicios web como Amazon AWS."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-138-Pregunta: ¿Qué componente del ecosistema proporciona elasticidad y almacenamiento bruto?",
+    "opciones": [
+      "A. Motores de búsqueda e indexación avanzada.",
+      "B. La infraestructura Cloud basada en modelos IaaS.",
+      "C. Entornos de desarrollo para inteligencia artificial.",
+      "D. Bases de datos especializadas en topologías de grafos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-139-Pregunta: Según las conclusiones, forzar datos masivos en diagramas E-R estrictos provocará:",
+    "opciones": [
+      "A. Una mejora sustancial en la velocidad de acceso.",
+      "B. Un fallo de arquitectura del sistema.",
+      "C. Una reducción drástica de los costes operativos.",
+      "D. Un incremento en la veracidad de la información analizada."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-140-Pregunta: ¿Qué principio rige la selección de herramientas según las conclusiones del tema?",
+    "opciones": [
+      "A. El modelo relacional debe considerarse siempre universal.",
+      "B. La arquitectura técnica debe seguir a la 'V' del Big Data.",
+      "C. Se debe ignorar el caos inherente a los datos modernos.",
+      "D. El rendimiento solo depende de la potencia bruta del hardware."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-141-Pregunta: En el marco de la 'Veracidad', ¿qué tipo de discrepancias deben ser eliminadas?",
+    "opciones": [
+      "A. Las variaciones en los precios del hardware de servidor.",
+      "B. Las inconsistencias detectadas en el formato de los datos.",
+      "C. Los cambios en el número de empleados de la organización.",
+      "D. Las actualizaciones de la ubicación física de los nodos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-142-Pregunta: ¿Cuál es un ejemplo de dato generado por personas citado en el origen de datos?",
+    "opciones": [
+      "A. Las señales emitidas por balizas de posicionamiento GPS.",
+      "B. El uso de aplicaciones móviles de mensajería instantánea.",
+      "C. Los sensores de secuencia para cadenas de ADN humano.",
+      "D. Los registros automáticos de servidores web (logs)."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-143-Pregunta: ¿Dónde se localiza la verdadera ventaja competitiva según el material final?",
+    "opciones": [
+      "A. En la reducción del número total de servidores activos.",
+      "B. En la capacidad de procesar la semántica compleja del dato.",
+      "C. En el uso restrictivo de bases de datos relacionales clásicas.",
+      "D. En la eliminación de los flujos de limpieza de datos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-144-Pregunta: ¿Qué representa el término 'BinaryJSON' en bases de datos documentales?",
+    "opciones": [
+      "A. Un formato de datos estructurado de tipo relacional.",
+      "B. Un formato de almacenamiento que acepta el sistema documental.",
+      "C. Un lenguaje de manipulación de datos heredero de SQL.",
+      "D. Un error común de codificación en entornos de Big Data."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-145-Pregunta: En la V de 'Variedad', ¿por qué se procesa la información con distintas herramientas?",
+    "opciones": [
+      "A. Por imposiciones de la normativa legal vigente.",
+      "B. Porque los datos desestructurados requieren software específico.",
+      "C. Por una preferencia personal del administrador del sistema.",
+      "D. Porque los datos estructurados resultan demasiado onerosos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-146-Pregunta: ¿Cuál es un ejemplo de 'Datos de imagen' en la clasificación de Big Data?",
+    "opciones": [
+      "A. Archivos de hojas de cálculo operativas.",
+      "B. Fotografías digitales de alta resolución.",
+      "C. Páginas Web con contenido textual dinámico.",
+      "D. Estructuras de bases de datos preexistentes."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-147-Pregunta: ¿Cómo se clasifican los archivos HTML según su grado de estructura?",
+    "opciones": [
+      "A. Como datos totalmente estructurados.",
+      "B. Como datos semiestructurados.",
+      "C. Como datos no estructurados brutos.",
+      "D. Como archivos binarios puros."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-148-Pregunta: En el gráfico de 'Las 10 V's', ¿cuál es una de las adicionales a las 5 básicas?",
+    "opciones": [
+      "A. Volumen masivo.",
+      "B. Viscosidad de los datos.",
+      "C. Valor estratégico.",
+      "D. Variedad de fuentes."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-149-Pregunta: ¿Qué función desempeñan Apache Spark o Flink en el ecosistema?",
+    "opciones": [
+      "A. Se limitan al almacenamiento de datos brutos a largo plazo.",
+      "B. Realizan procesamiento masivo y streaming en tiempo real.",
+      "C. Gestionan exclusivamente la creación de máquinas virtuales.",
+      "D. Sirven para el diseño lógico del modelo entidad-relación."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T3-150-Pregunta: ¿Qué nivel de latencia permiten alcanzar las arquitecturas In-Memory?",
+    "opciones": [
+      "A. Tiempos de respuesta de varios segundos.",
+      "B. Latencias medidas en microsegundos.",
+      "C. Intervalos de procesamiento de minutos.",
+      "D. Ciclos de actualización de varias horas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-01-Pregunta: ¿Qué significa el término NoSQL según los apuntes?",
+    "opciones": [
+      "A. No SQL (Sin SQL).",
+      "B. Not Only SQL (No sólo SQL).",
+      "C. New Optimized SQL (SQL nuevo optimizado).",
+      "D. Network Oriented SQL (SQL orientado a red)."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-02-Pregunta: ¿Cuál de los siguientes es un desafío de los sistemas de información modernos mencionado en el tema?",
+    "opciones": [
+      "A. Bajos volúmenes de datos.",
+      "B. Datos a escala web (web-scale).",
+      "C. Esquemas de datos rígidos e inamovibles.",
+      "D. Baja frecuencia de lecturas y escrituras."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-03-Pregunta: Según el material, ¿qué tipo de aplicaciones NO suelen necesitar el mismo nivel de ACID que los sistemas tradicionales?",
+    "opciones": [
+      "A. Aplicaciones bancarias.",
+      "B. Sistemas de facturación.",
+      "C. Aplicaciones sociales.",
+      "D. Control de tráfico aéreo."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "DBD-T4-04-Pregunta: ¿Qué característica de las BBDD NoSQL facilita la escalabilidad horizontal?",
+    "opciones": [
+      "A. El uso de un único servidor muy potente.",
+      "B. Ser fáciles de usar en clústers de balanceo de carga convencionales.",
+      "C. El uso estricto del lenguaje SQL estándar.",
+      "D. La obligación de realizar joins complejos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-05-Pregunta: ¿Cómo se describe la naturaleza del esquema en una base de datos NoSQL?",
+    "opciones": [
+      "A. Esquema fijo on-write.",
+      "B. Esquema dinámico que permite migración sin reiniciar el sistema.",
+      "C. Esquema relacional normalizado.",
+      "D. Ausencia total de metadatos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-06-Pregunta: ¿Por qué generalmente no hay operaciones 'join' en los sistemas NoSQL?",
+    "opciones": [
+      "A. Porque son operaciones demasiado rápidas.",
+      "B. Porque son complejas, requieren esquemas fijos y consistencia fuerte.",
+      "C. Porque el lenguaje NoSQL no soporta la palabra clave JOIN.",
+      "D. Porque los datos están siempre en un solo nodo."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-07-Pregunta: En el clúster de una BBDD NoSQL, ¿cómo suele ser la consistencia?",
+    "opciones": [
+      "A. Consistencia fuerte en todos los nodos.",
+      "B. Eventualmente consistente.",
+      "C. Inconsistente de forma permanente.",
+      "D. Solo consistente para el administrador."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-08-Pregunta: ¿Qué garantiza la 'Consistencia' según el Teorema CAP?",
+    "opciones": [
+      "A. Que el sistema siempre responde a las peticiones.",
+      "B. Que todos los nodos ven los mismos datos al mismo tiempo.",
+      "C. Que el sistema funciona aunque fallen los nodos.",
+      "D. Que los datos se almacenan en formato relacional."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-09-Pregunta: En el Teorema CAP, ¿qué es la 'Disponibilidad' (Availability)?",
+    "opciones": [
+      "A. Garantía de que cada petición recibe una respuesta sobre si tuvo éxito o no.",
+      "B. Garantía de que los datos no se pierden nunca.",
+      "C. Capacidad de los nodos para dividirse en subredes.",
+      "D. El acceso de los usuarios a la versión más antigua del dato."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "DBD-T4-10-Pregunta: ¿Qué significa la 'Tolerancia a la partición' en un sistema distribuido?",
+    "opciones": [
+      "A. El sistema se detiene si un nodo es inaccesible.",
+      "B. El sistema puede seguir funcionando aunque algunos nodos sean inaccesibles.",
+      "C. Los datos se borran si la red falla.",
+      "D. El sistema solo tiene un nodo central."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-11-Pregunta: ¿Cuál es la conclusión principal del Teorema de Brewer (CAP)?",
+    "opciones": [
+      "A. Es posible ofrecer las tres garantías simultáneamente.",
+      "B. Es imposible ofrecer simultáneamente Consistencia, Disponibilidad y Tolerancia a la partición.",
+      "C. Solo se puede ofrecer una de las tres garantías.",
+      "D. Las bases de datos relacionales cumplen las tres garantías en la nube."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-12-Pregunta: ¿Qué tipo de sistemas suelen priorizar la Consistencia y Disponibilidad (CA)?",
+    "opciones": [
+      "A. Cassandra y Riak.",
+      "B. RDBMS tradicionales (MySQL, Postgres).",
+      "C. MongoDB y Redis.",
+      "D. BigTable y HBase."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-13-Pregunta: Según la guía visual de sistemas NoSQL, ¿cuál es un ejemplo de sistema que prioriza Consistencia y Tolerancia a la partición (CP)?",
+    "opciones": [
+      "A. CouchDB.",
+      "B. MongoDB.",
+      "C. Dynamo.",
+      "D. Aster Data."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-14-Pregunta: ¿Qué sistema se menciona como ejemplo de priorizar Disponibilidad y Tolerancia a la partición (AP)?",
+    "opciones": [
+      "A. BigTable.",
+      "B. Cassandra.",
+      "C. Vertica.",
+      "D. Scalaris."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-15-Pregunta: ¿A qué siglas corresponde el modelo BASE?",
+    "opciones": [
+      "A. Basic Availability, Soft state, Eventual consistency.",
+      "B. Binary Access, Secure Entity.",
+      "C. Backup Always, Standard Environment.",
+      "D. Basic Atomic, Soft Entry."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "DBD-T4-16-Pregunta: En el modelo BASE, ¿qué implica el 'Soft state'?",
+    "opciones": [
+      "A. Que el sistema es físicamente frágil.",
+      "B. Que los almacenes y réplicas no tienen por qué ser consistentes en todo momento.",
+      "C. Que el software es de código abierto.",
+      "D. Que las transacciones se ejecutan en la memoria RAM únicamente."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-17-Pregunta: ¿Qué caracteriza a la 'Eventual consistency'?",
+    "opciones": [
+      "A. Que los datos nunca llegan a ser consistentes.",
+      "B. Que si no hay nuevas actualizaciones, todos los usuarios acabarán viendo la versión más actual.",
+      "C. Que el administrador debe forzar la consistencia cada día.",
+      "D. Que solo los nodos maestros son consistentes."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-18-Pregunta: Comparando ACID vs BASE, ¿cuál es una característica de BASE?",
+    "opciones": [
+      "A. Fuerte coherencia.",
+      "B. Enfoque a commits.",
+      "C. Más optimista y respuestas aproximadas.",
+      "D. Evolución complicada del esquema."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "DBD-T4-19-Pregunta: ¿Cuál es un precursor mencionado de los almacenes de Clave-Valor?",
+    "opciones": [
+      "A. Google BigTable.",
+      "B. Lotus Notes.",
+      "C. Amazon Dynamo.",
+      "D. Neo4j."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "DBD-T4-20-Pregunta: ¿En qué tecnología se basan las BBDD de Clave-Valor?",
+    "opciones": [
+      "A. Tablas hash distribuidas (DHT).",
+      "B. Álgebra relacional de Codd.",
+      "C. Teoría de grafos de Euler.",
+      "D. Documentos JSON jerárquicos."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "DBD-T4-21-Pregunta: ¿Qué nota importante se da sobre la recuperación de registros en sistemas Clave-Valor?",
+    "opciones": [
+      "A. Solo se puede recuperar por el valor del dato.",
+      "B. En general, no hay forma de recuperar un registro basándose en el contenido de su valor.",
+      "C. Es obligatorio usar lenguaje SQL para filtrar por valor.",
+      "D. El valor siempre debe ser una imagen binaria."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-22-Pregunta: ¿Cuál fue el precursor de las BBDD orientadas a Columnas?",
+    "opciones": [
+      "A. MongoDB.",
+      "B. Amazon S3.",
+      "C. Google BigTable.",
+      "D. CouchDB."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "DBD-T4-23-Pregunta: ¿Cómo guardan los datos las BBDD orientadas a columnas en comparación con las tradicionales?",
+    "opciones": [
+      "A. Por filas, igual que las tradicionales.",
+      "B. Por columnas, optimizando operaciones como contar o sumar.",
+      "C. En archivos de texto plano sin orden.",
+      "D. Como documentos anidados."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-24-Pregunta: ¿Qué permite el modelo tabular de familia de columnas?",
+    "opciones": [
+      "A. Que todas las filas tengan exactamente las mismas columnas.",
+      "B. Que cada fila pueda tener una configuración diferente de columnas.",
+      "C. La eliminación total de las claves de fila.",
+      "D. El uso de joins automáticos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-25-Pregunta: ¿Cuál fue la precursora de las BBDD orientadas a Documentos?",
+    "opciones": [
+      "A. Lotus Notes.",
+      "B. Facebook Cassandra.",
+      "C. Oracle 11g.",
+      "D. Apache Lucene."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "DBD-T4-26-Pregunta: ¿Qué formatos de documentos suelen manejar las BBDD orientadas a documentos?",
+    "opciones": [
+      "A. XLS y DOC.",
+      "B. JSON, XML y BSON.",
+      "C. JPG y PNG.",
+      "D. MP3 y WAV."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-27-Pregunta: ¿Con qué se corresponde la manera de modelar de las BBDD documentales?",
+    "opciones": [
+      "A. Con el modelo jerárquico de los años 70.",
+      "B. Con el modelado de objetos y propiedades en lenguajes orientados a objetos (OO).",
+      "C. Con el sistema de archivos de Linux.",
+      "D. Con tablas relacionales estrictamente normalizadas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-28-Pregunta: ¿En qué teoría se inspiran las BBDD orientadas a Grafos?",
+    "opciones": [
+      "A. Teoría de la relatividad.",
+      "B. Teoría de grafos de Euler.",
+      "C. Teoría de conjuntos de Zermelo.",
+      "D. Teoría de la información de Shannon."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-29-Pregunta: ¿En qué contextos son fundamentales las BBDD de grafos?",
+    "opciones": [
+      "A. Donde las relaciones son fundamentales (ej: redes sociales).",
+      "B. Donde solo importa el volumen de datos numéricos.",
+      "C. Para el almacenamiento de logs históricos sin conexión.",
+      "D. Para realizar copias de seguridad de imágenes."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "DBD-T4-30-Pregunta: ¿Cuál es un ejemplo de empresa que usa Neo4j mencionado en el tema?",
+    "opciones": [
+      "A. Facebook.",
+      "B. Instagram.",
+      "C. Infojobs.",
+      "D. Adobe."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "DBD-T4-31-Pregunta: ¿Qué empresa utiliza Cassandra según los apuntes?",
+    "opciones": [
+      "A. Flickr.",
+      "B. Twitter.",
+      "C. Github.",
+      "D. SourceForge."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-32-Pregunta: ¿Qué empresas se asocian con el uso de Redis?",
+    "opciones": [
+      "A. Yahoo y Adobe.",
+      "B. Flickr, Instagram y Github.",
+      "C. CERN y FourSquare.",
+      "D. Facebook y Google."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-33-Pregunta: Según los apuntes, ¿cuándo es la opción correcta quedarse con un RDBMS?",
+    "opciones": [
+      "A. Cuando el tráfico es muy alto.",
+      "B. Si tus datos son relacionales.",
+      "C. Siempre que se trabaje en la nube.",
+      "D. Si se requiere escalabilidad horizontal barata."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-34-Pregunta: ¿Cuál es un motivo para necesitar NoSQL relacionado con el rendimiento?",
+    "opciones": [
+      "A. La BBDD relacional ha sido normalizada al máximo.",
+      "B. La BBDD ha sido desnormalizada por razones de rendimiento.",
+      "C. Se usan transacciones ACID con bloqueos sofisticados.",
+      "D. El volumen de datos es muy pequeño."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-35-Pregunta: ¿Para qué tipo de datos es útil NoSQL si el dataset es muy grande?",
+    "opciones": [
+      "A. Solo enteros cortos.",
+      "B. Grandes cantidades de texto o imágenes (BLOB).",
+      "C. Tablas de máximo 100 filas.",
+      "D. Datos que no cambian nunca."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-36-Pregunta: ¿Qué se recomienda evitar al elegir una base de datos NoSQL?",
+    "opciones": [
+      "A. El uso de clústers.",
+      "B. El hype (elegir NoSQL porque esté de moda).",
+      "C. Los datos semiestructurados.",
+      "D. El almacenamiento persistente."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-37-Pregunta: Un ejemplo de consulta difícil para relacionales pero buena para NoSQL es:",
+    "opciones": [
+      "A. 'Seleccionar el nombre de un usuario por su ID'.",
+      "B. 'Toda la gente en una red social que no ha comprado un libro este año que ha dejado de seguir a gente que si ha comprado un libro'.",
+      "C. 'Sumar el total de una factura'.",
+      "D. 'Actualizar la contraseña de un empleado'."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-38-Pregunta: En la comparativa ACID vs BASE, ¿qué modelo tiene 'Evolución más sencilla'?",
+    "opciones": [
+      "A. ACID.",
+      "B. BASE.",
+      "C. Ambos igual.",
+      "D. Ninguno de los dos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-39-Pregunta: ¿Qué significa 'Basic availability' en BASE?",
+    "opciones": [
+      "A. Que el sistema nunca falla.",
+      "B. Que el almacén funciona la mayoría del tiempo incluso ante fallos gracias a la replicación.",
+      "C. Que solo los servicios básicos están disponibles.",
+      "D. Que la base de datos es gratuita."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-40-Pregunta: Según el gráfico de NoSQL, ¿qué bases de datos se asocian con el modelo Clave-Valor (Key-Value)?",
+    "opciones": [
+      "A. Riak y Voldemort.",
+      "B. Neo4j y AllegroGraph.",
+      "C. MongoDB y CouchDB.",
+      "D. BigTable y HBase."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "DBD-T4-41-Pregunta: ¿Qué indica la arquitectura distribuida de NoSQL respecto a los fallos?",
+    "opciones": [
+      "A. Es muy vulnerable a fallos de un solo nodo.",
+      "B. Es tolerante a fallos porque los datos se guardan de modo redundante.",
+      "C. Requiere que todos los servidores sean idénticos físicamente.",
+      "D. No permite el uso de tablas hash."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-42-Pregunta: ¿Qué unidad lógica de trabajo garantiza ACID en NoSQL?",
+    "opciones": [
+      "A. Transacciones en todo el clúster.",
+      "B. Propiedades ACID en un nodo del clúster.",
+      "C. ACID en las comunicaciones de red únicamente.",
+      "D. No garantiza ACID en ningún nivel."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-43-Pregunta: ¿Qué tipo de operaciones están optimizadas en las BBDD de columnas?",
+    "opciones": [
+      "A. Operaciones a nivel de columna como sumar o promediar.",
+      "B. Búsquedas por nombre de usuario únicamente.",
+      "C. Borrado de tablas enteras.",
+      "D. Inserciones de filas con 1000 columnas vacías."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "DBD-T4-44-Pregunta: ¿Qué permiten los documentos anidados en BBDD documentales?",
+    "opciones": [
+      "A. Guardar solo un dato por archivo.",
+      "B. Trabajar con datos más complejos representándolos como objetos.",
+      "C. Reducir la velocidad de lectura.",
+      "D. Eliminar la necesidad de usar claves."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-45-Pregunta: ¿Qué elemento gráfico representa las relaciones en una BBDD de grafos?",
+    "opciones": [
+      "A. Los nodos.",
+      "B. Las aristas (o relaciones con pares clave-valor).",
+      "C. Las tablas.",
+      "D. Los documentos JSON."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-46-Pregunta: ¿Cuál de estos es un ejemplo de 'datos temporales' que justifican el uso de NoSQL?",
+    "opciones": [
+      "A. Historial de empleados de 20 años.",
+      "B. Carritos de compra y personalización de portales.",
+      "C. Registros de la propiedad inmobiliaria.",
+      "D. Actas de reuniones de la directiva."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-47-Pregunta: ¿Cuál es un ejemplo de transacción local que no necesita ser durable (e.j. en aplicaciones sociales)?",
+    "opciones": [
+      "A. Transferencia bancaria.",
+      "B. Un 'Like'.",
+      "C. Pago de impuestos.",
+      "D. Registro civil de nacimiento."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-48-Pregunta: En la comparativa ACID vs BASE, ¿quién ofrece 'Fuerte coherencia'?",
+    "opciones": [
+      "A. BASE.",
+      "B. ACID.",
+      "C. Ninguno.",
+      "D. NoSQL Clave-Valor."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-49-Pregunta: ¿Qué sistema NoSQL es mencionado como precursora por basarse en colecciones de documentos JSON/XML?",
+    "opciones": [
+      "A. Redis.",
+      "B. Lotus Notes.",
+      "C. Dynamo.",
+      "D. HBase."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-50-Pregunta: ¿Qué característica de NoSQL permite que el sistema funcione ante fallos de hardware?",
+    "opciones": [
+      "A. Esquema rígido.",
+      "B. Almacenamiento distribuido y replicado.",
+      "C. Uso de una sola base de datos central.",
+      "D. Desactivación de las consultas SQL."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-51-Pregunta: ¿Qué consecuencia ha tenido la aparición de nuevos dispositivos 'smart' según el contexto del Tema 4?",
+    "opciones": [
+      "A. La reducción de la cantidad de usuarios en red.",
+      "B. Un crecimiento vertiginoso en el volumen de datos y usuarios concurrentes.",
+      "C. El fin del uso de datos no estructurados.",
+      "D. La simplificación de los esquemas relacionales."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-52-Pregunta: ¿Cuál es una característica clave de las bases de datos NoSQL para facilitar la escalabilidad horizontal?",
+    "opciones": [
+      "A. El uso de esquemas rígidos on-write.",
+      "B. Ser 'fáciles' de usar en clústers de balanceo de carga convencionales.",
+      "C. La obligación de usar servidores centrales de gran tamaño.",
+      "D. La eliminación del almacenamiento persistente."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-53-Pregunta: ¿Qué permite el 'esquema dinámico' de las bases de datos NoSQL?",
+    "opciones": [
+      "A. Cambiar la base de datos a relacional cada 24 horas.",
+      "B. La migración del esquema sin necesidad de reiniciar o parar el sistema.",
+      "C. Que el usuario final defina las claves primarias manualmente.",
+      "D. El borrado automático de los metadatos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-54-Pregunta: Según los apuntes, ¿por qué los sistemas NoSQL generalmente no implementan la operación 'join'?",
+    "opciones": [
+      "A. Porque el lenguaje SQL lo prohíbe explícitamente.",
+      "B. Porque es una operación compleja que requiere esquemas fijos y consistencia fuerte.",
+      "C. Porque no existen relaciones entre los datos en NoSQL.",
+      "D. Porque los clústeres no soportan tablas múltiples."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-55-Pregunta: ¿Cómo se garantiza la consistencia en el clúster de una base de datos NoSQL?",
+    "opciones": [
+      "A. Mediante consistencia fuerte inmediata en todos los nodos.",
+      "B. A través de propiedades 'eventualmente consistentes'.",
+      "C. No se garantiza ningún tipo de consistencia.",
+      "D. Solo mediante bloqueos manuales por parte del ABD."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-56-Pregunta: El Teorema de Brewer afirma que un sistema computacional distribuido NO puede ofrecer simultáneamente:",
+    "opciones": [
+      "A. Atomicidad, Aislamiento y Durabilidad.",
+      "B. Consistencia, Disponibilidad y Tolerancia a la partición.",
+      "C. Volumen, Velocidad y Valor.",
+      "D. Seguridad, Autenticación y Auditoría."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-57-Pregunta: En el Teorema CAP, ¿qué significa la 'Consistencia'?",
+    "opciones": [
+      "A. Que el sistema responde siempre sin demora.",
+      "B. Que todos los nodos ven los mismos datos al mismo tiempo.",
+      "C. Que el sistema es tolerante a fallos físicos.",
+      "D. Que los datos están guardados en formato BSON."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-58-Pregunta: ¿Qué garantiza la 'Disponibilidad' (Availability) según Brewer?",
+    "opciones": [
+      "A. Que los datos están replicados en 3 continentes.",
+      "B. Que cada petición recibe una respuesta sobre si tuvo éxito o no, sin demora.",
+      "C. Que la base de datos es accesible solo mediante SQL.",
+      "D. Que los usuarios pueden entrar sin contraseña."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-59-Pregunta: Según el Teorema CAP, la 'Tolerancia a la partición' implica que:",
+    "opciones": [
+      "A. El sistema se apaga si la red se divide.",
+      "B. El sistema puede seguir funcionando aunque algunos nodos sean inaccesibles.",
+      "C. La base de datos solo puede tener un nodo.",
+      "D. Los datos se borran si hay un fallo de comunicación."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-60-Pregunta: ¿Qué tipo de sistemas suelen priorizar la Consistencia y Disponibilidad (CA)?",
+    "opciones": [
+      "A. Sistemas NoSQL como Cassandra.",
+      "B. RDBMS tradicionales como MySQL o Postgres.",
+      "C. Sistemas de archivos como Hadoop.",
+      "D. Almacenes Clave-Valor como Riak."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-61-Pregunta: ¿Cuál es un ejemplo de sistema que prioriza la Consistencia y Tolerancia a la partición (CP)?",
+    "opciones": [
+      "A. CouchDB.",
+      "B. MongoDB.",
+      "C. Dynamo.",
+      "D. Aster Data."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-62-Pregunta: ¿Qué sistemas se mencionan como ejemplos de priorizar Disponibilidad y Tolerancia a la partición (AP)?",
+    "opciones": [
+      "A. BigTable y HBase.",
+      "B. Dynamo, Cassandra y CouchDB.",
+      "C. Oracle y SQL Server.",
+      "D. Redis y Memcached."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-63-Pregunta: La frase 'Pick Two' aplicada al teorema CAP significa que:",
+    "opciones": [
+      "A. Solo se pueden elegir dos bases de datos para una empresa.",
+      "B. Solo es posible garantizar dos de las tres propiedades simultáneamente.",
+      "C. Solo dos usuarios pueden acceder a la vez.",
+      "D. Solo hay dos tipos de NoSQL válidos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-64-Pregunta: En el modelo BASE, ¿qué significa 'Basic availability'?",
+    "opciones": [
+      "A. Que el sistema es gratuito.",
+      "B. Que el almacén funciona la mayoría del tiempo incluso ante fallos por replicación.",
+      "C. Que solo están disponibles los datos básicos.",
+      "D. Que el sistema solo funciona en modo local."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-65-Pregunta: Dentro de BASE, el concepto 'Soft state' indica que:",
+    "opciones": [
+      "A. El hardware es muy flexible.",
+      "B. Los almacenes y réplicas no tienen por qué ser consistentes en todo momento.",
+      "C. El software se actualiza automáticamente.",
+      "D. La base de datos es vulnerable a ataques físicos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-66-Pregunta: ¿Qué afirma la 'Eventual consistency' sobre el acceso a los datos?",
+    "opciones": [
+      "A. Que los usuarios nunca verán el dato actualizado.",
+      "B. Que si no hay nuevas actualizaciones, todos acabarán viendo la versión más actual.",
+      "C. Que el dato se vuelve consistente solo cuando el ABD lo aprueba.",
+      "D. Que los datos se borran eventualmente para mantener el sistema."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-67-Pregunta: Comparando ACID vs BASE, ¿cuál ofrece una 'Fuerte coherencia'?",
+    "opciones": [
+      "A. BASE.",
+      "B. ACID.",
+      "C. NoSQL Clave-Valor.",
+      "D. Almacenes de grafos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-68-Pregunta: En la comparativa ACID vs BASE, ¿cuál se describe como un enfoque enfocado a 'commits'?",
+    "opciones": [
+      "A. BASE.",
+      "B. ACID.",
+      "C. Ambos.",
+      "D. Ninguno."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-69-Pregunta: ¿Qué modelo tiene una 'Evolución más sencilla' del esquema según la comparativa?",
+    "opciones": [
+      "A. ACID.",
+      "B. BASE.",
+      "C. El modelo relacional.",
+      "D. Los sistemas con reglas rígidas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-70-Pregunta: ¿Cuál fue el precursor de los almacenes NoSQL de Clave-Valor?",
+    "opciones": [
+      "A. Google BigTable.",
+      "B. Amazon Dynamo.",
+      "C. Lotus Notes.",
+      "D. Neo4j."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-71-Pregunta: Los almacenes de Clave-Valor están basados tecnológicamente en:",
+    "opciones": [
+      "A. Álgebra de Codd.",
+      "B. DHT (Distributed Hash Tables).",
+      "C. Teoría de conjuntos.",
+      "D. Documentos XML."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-72-Pregunta: ¿Qué limitación importante tienen los sistemas de Clave-Valor en general?",
+    "opciones": [
+      "A. No permiten guardar imágenes.",
+      "B. No hay forma de recuperar un registro basándose en el contenido de su valor.",
+      "C. Son muy lentos en lectura.",
+      "D. Requieren esquemas fijos de 10 columnas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-73-Pregunta: ¿Cuál fue el precursor de las bases de datos orientadas a Columnas?",
+    "opciones": [
+      "A. Amazon Dynamo.",
+      "B. Google BigTable.",
+      "C. Lotus Notes.",
+      "D. Neo4j."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-74-Pregunta: ¿Qué caracteriza al modelo tabular de 'familia de columnas'?",
+    "opciones": [
+      "A. Todas las filas tienen obligatoriamente las mismas columnas.",
+      "B. Cada fila puede tener una configuración diferente de columnas.",
+      "C. No se permiten más de 2 columnas por tabla.",
+      "D. Los datos se guardan por filas como en las BBDD tradicionales."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-75-Pregunta: ¿Para qué tipo de operaciones están optimizadas las BBDD de columnas?",
+    "opciones": [
+      "A. Inserción de una sola fila muy pesada.",
+      "B. Operaciones a nivel de columnas como contar, sumar o promediar.",
+      "C. Relacionar tablas mediante muchos JOINs.",
+      "D. Almacenar únicamente texto plano."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-76-Pregunta: ¿Cuál fue la precursora de las bases de datos orientadas a Documentos?",
+    "opciones": [
+      "A. Google BigTable.",
+      "B. Lotus Notes.",
+      "C. Amazon Dynamo.",
+      "D. Facebook Cassandra."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-77-Pregunta: ¿En qué formatos suelen presentarse los datos en las BBDD documentales?",
+    "opciones": [
+      "A. XLS, CSV, TXT.",
+      "B. JSON, XML, BSON.",
+      "C. MP3, MP4, AVI.",
+      "D. PDF, DOCX, PPTX."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-78-Pregunta: El modelado de las BBDD documentales se corresponde con la manera de modelar de:",
+    "opciones": [
+      "A. El modelo jerárquico clásico.",
+      "B. Los lenguajes orientados a objetos (OO).",
+      "C. Las hojas de cálculo relacionales.",
+      "D. Los sistemas de archivos FAT32."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-79-Pregunta: ¿Qué ventaja ofrecen los documentos en NoSQL respecto a datos complejos?",
+    "opciones": [
+      "A. Obligan a aplanar todos los datos.",
+      "B. Permiten documentos (objetos) anidados.",
+      "C. Prohíben el uso de claves-valor.",
+      "D. Reducen el tamaño del disco automáticamente."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-80-Pregunta: ¿En qué teoría se inspiran las bases de datos orientadas a Grafos?",
+    "opciones": [
+      "A. Teoría de la Relatividad.",
+      "B. Teoría de grafos de Euler.",
+      "C. Teoría de la Información de Shannon.",
+      "D. Álgebra Relacional de Codd."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-81-Pregunta: En una base de datos de grafos, los elementos fundamentales son:",
+    "opciones": [
+      "A. Tablas y Claves Ajenas.",
+      "B. Nodos interrelacionados y relaciones con pares clave-valor.",
+      "C. Documentos y Colecciones.",
+      "D. Columnas y Familias."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-82-Pregunta: ¿Para qué tipo de contextos son ideales las bases de datos de grafos?",
+    "opciones": [
+      "A. Donde el volumen es lo único que importa.",
+      "B. Donde las relaciones son fundamentales (ej: redes sociales).",
+      "C. Para almacenamiento histórico de logs en frío.",
+      "D. Para realizar backups de bases de datos relacionales."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-83-Pregunta: ¿Qué grandes empresas utilizan Cassandra según el material?",
+    "opciones": [
+      "A. Yahoo y Adobe.",
+      "B. Facebook y Twitter.",
+      "C. Flickr e Instagram.",
+      "D. Infojobs."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-84-Pregunta: Según los apuntes, ¿qué empresas se asocian con el uso de HBase?",
+    "opciones": [
+      "A. Facebook y Twitter.",
+      "B. Yahoo y Adobe.",
+      "C. Flickr y Github.",
+      "D. CERN."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-85-Pregunta: ¿Qué empresas hacen uso de Redis?",
+    "opciones": [
+      "A. Infojobs.",
+      "B. Flickr, Instagram y Github.",
+      "C. Facebook y Yahoo.",
+      "D. SourceForge."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-86-Pregunta: ¿Qué empresa se menciona específicamente como usuaria de Neo4j?",
+    "opciones": [
+      "A. Twitter.",
+      "B. Infojobs.",
+      "C. Facebook.",
+      "D. Google."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-87-Pregunta: ¿Qué organizaciones utilizan MongoDB según la lista proporcionada?",
+    "opciones": [
+      "A. Yahoo y Adobe.",
+      "B. FourSquare, SourceForge y CERN.",
+      "C. Instagram y Github.",
+      "D. Twitter y Facebook."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-88-Pregunta: En la equivalencia RDBMS vs MongoDB, una 'Table' equivale a:",
+    "opciones": [
+      "A. Database.",
+      "B. Collection.",
+      "C. Document.",
+      "D. Field."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-89-Pregunta: En la equivalencia RDBMS vs MongoDB, una 'Row' equivale a:",
+    "opciones": [
+      "A. Table.",
+      "B. Document.",
+      "C. Field.",
+      "D. Collection."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-90-Pregunta: En la equivalencia RDBMS vs MongoDB, una 'Column' equivale a:",
+    "opciones": [
+      "A. Collection.",
+      "B. Field.",
+      "C. Database.",
+      "D. Document."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-91-Pregunta: Según los apuntes, ¿cuándo es la opción correcta quedarse con un RDBMS?",
+    "opciones": [
+      "A. Cuando el tráfico es inasumible económicamente.",
+      "B. Si tus datos son relacionales.",
+      "C. Si necesitas esquemas dinámicos.",
+      "D. Si quieres escalabilidad horizontal barata."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-92-Pregunta: Un motivo para elegir NoSQL es tener un dataset con grandes cantidades de:",
+    "opciones": [
+      "A. Números enteros cortos.",
+      "B. Texto o imágenes, BLOB.",
+      "C. Tablas de menos de 10 filas.",
+      "D. Fechas históricas fijas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-93-Pregunta: ¿Por qué una BBDD relacional podría haber sido desnormalizada favoreciendo el paso a NoSQL?",
+    "opciones": [
+      "A. Por error del ABD.",
+      "B. Por razones de rendimiento.",
+      "C. Para cumplir con el estándar SQL.",
+      "D. Para ahorrar espacio en disco."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-94-Pregunta: ¿Qué tipo de consultas son un desafío para RDBMS pero buenas para NoSQL?",
+    "opciones": [
+      "A. Seleccionar por clave primaria.",
+      "B. Consultas que no implican relaciones jerárquicas sencillas (ej: lógica de red social).",
+      "C. Sumar dos columnas numéricas.",
+      "D. Cambiar el nombre de un usuario."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-95-Pregunta: Un ejemplo de transacción que NO necesita ser durable (e.j. en aplicaciones sociales) es:",
+    "opciones": [
+      "A. Transferencia bancaria.",
+      "B. Un 'Like'.",
+      "C. Un pago de impuestos.",
+      "D. Una firma de contrato digital."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-96-Pregunta: ¿Qué requieren las transacciones ACID relacionales para garantizar estabilidad?",
+    "opciones": [
+      "A. Esquemas dinámicos.",
+      "B. Lockings/cerrojos sofisticados.",
+      "C. Consistencia eventual.",
+      "D. Escalabilidad horizontal barata."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-97-Pregunta: ¿Qué tecnología ha facilitado el acceso a servicios que explotan inmensos volúmenes de datos?",
+    "opciones": [
+      "A. Los disquetes.",
+      "B. La computación en la nube (Cloud computing).",
+      "C. Los módems telefónicos.",
+      "D. Las cintas magnéticas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-98-Pregunta: ¿A qué se refiere el desafío 'web-scale' en los sistemas modernos?",
+    "opciones": [
+      "A. A datos que caben en una sola página web.",
+      "B. A datos a escala masiva de la web.",
+      "C. Al diseño visual de las páginas.",
+      "D. Al uso de navegadores antiguos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-99-Pregunta: ¿Qué se afirma sobre la persistencia de datos en NoSQL?",
+    "opciones": [
+      "A. Que solo sirven para guardar cachés temporales.",
+      "B. Que guardan datos persistentes.",
+      "C. Que borran los datos al cerrar la sesión.",
+      "D. Que los datos solo existen en la memoria RAM del usuario."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-100-Pregunta: ¿Cuál es el límite principal de las RDBMS tradicionales mencionado en las gráficas?",
+    "opciones": [
+      "A. Que son demasiado baratas.",
+      "B. Que están diseñadas para escalar verticalmente (comprar servidor más grande).",
+      "C. Que no soportan lenguaje SQL.",
+      "D. Que no tienen esquemas rígidos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-101-Pregunta: ¿Cuál es el precursor mencionado de los almacenes NoSQL de Clave-Valor?",
+    "opciones": [
+      "A. Google BigTable.",
+      "B. Amazon Dynamo.",
+      "C. Lotus Notes.",
+      "D. Facebook Cassandra."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-102-Pregunta: ¿En qué tecnología se basan fundamentalmente las bases de datos de Clave-Valor?",
+    "opciones": [
+      "A. Álgebra relacional de Codd.",
+      "B. DHT (Distributed Hash Tables).",
+      "C. Teoría de grafos de Euler.",
+      "D. Sistemas de archivos jerárquicos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-103-Pregunta: Sobre la recuperación de registros en sistemas Clave-Valor, los apuntes destacan que:",
+    "opciones": [
+      "A. Se recuperan siempre mediante lenguaje SQL estándar.",
+      "B. No hay forma de recuperar un registro basándose en el contenido de su valor.",
+      "C. Solo se pueden recuperar si el valor es de tipo numérico.",
+      "D. El sistema realiza una búsqueda semántica automática."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-104-Pregunta: ¿Cuál fue el sistema precursor de las bases de datos orientadas a Columnas?",
+    "opciones": [
+      "A. Amazon Dynamo.",
+      "B. Google BigTable.",
+      "C. Lotus Notes.",
+      "D. Neo4j."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-105-Pregunta: ¿Qué caracteriza al modelo tabular de 'familia de columnas'?",
+    "opciones": [
+      "A. Todas las filas deben compartir obligatoriamente el mismo esquema.",
+      "B. Cada fila puede tener una configuración diferente de columnas.",
+      "C. El número máximo de columnas por fila es 255.",
+      "D. No se permiten nulos en ninguna columna."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-106-Pregunta: ¿Para qué tipo de operaciones están optimizadas las BBDD de columnas?",
+    "opciones": [
+      "A. Borrado masivo de filas individuales por ID.",
+      "B. Operaciones a nivel de columnas como contar, sumar o promediar.",
+      "C. Creación de JOINS entre 10 o más tablas relacionales.",
+      "D. Almacenamiento exclusivo de metadatos de usuario."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-107-Pregunta: ¿Cuál fue la precursora de las bases de datos orientadas a Documentos?",
+    "opciones": [
+      "A. Amazon Dynamo.",
+      "B. Lotus Notes.",
+      "C. Google BigTable.",
+      "D. Facebook Cassandra."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-108-Pregunta: ¿Con qué se corresponde la manera de modelar de las BBDD documentales?",
+    "opciones": [
+      "A. Con el modelo jerárquico de los años 70.",
+      "B. Con el modelado de objetos y propiedades en lenguajes orientados a objetos.",
+      "C. Con el diseño de tablas normalizadas en 3FN.",
+      "D. Con el almacenamiento físico en bloques de disco."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-109-Pregunta: ¿En qué teoría se inspiran las bases de datos orientadas a Grafos?",
+    "opciones": [
+      "A. Teoría de la Relatividad.",
+      "B. Teoría de grafos de Euler.",
+      "C. Teoría de conjuntos de Zermelo.",
+      "D. Teoría de la información de Shannon."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-110-Pregunta: Según el Teorema CAP, ¿qué garantiza la 'Consistencia'?",
+    "opciones": [
+      "A. Que el sistema responde siempre sin demora.",
+      "B. Que todos los nodos ven los mismos datos al mismo tiempo.",
+      "C. Que el sistema es tolerante a fallos físicos de red.",
+      "D. Que los datos se almacenan en formato JSON."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-111-Pregunta: En el Teorema CAP, la 'Disponibilidad' (Availability) se define como:",
+    "opciones": [
+      "A. La garantía de que todos los nodos están activos el 100% del tiempo.",
+      "B. La garantía de que cada petición recibe una respuesta sobre si tuvo éxito o no.",
+      "C. La capacidad de duplicar el tamaño de la base de datos en minutos.",
+      "D. El acceso de los usuarios mediante cualquier dispositivo móvil."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-112-Pregunta: Según el Teorema CAP, ¿qué significa la 'Tolerancia a la partición'?",
+    "opciones": [
+      "A. Que el sistema divide las tablas en partes iguales.",
+      "B. Que el sistema puede seguir funcionando aunque algunos nodos sean inaccesibles.",
+      "C. Que el sistema se apaga automáticamente si falla la red.",
+      "D. Que los usuarios están divididos por departamentos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-113-Pregunta: ¿Qué tipo de sistemas suelen priorizar la Consistencia y Disponibilidad (CA)?",
+    "opciones": [
+      "A. Sistemas NoSQL como Cassandra.",
+      "B. RDBMS tradicionales (MySQL, Postgres).",
+      "C. Almacenes de Grafos como Neo4j.",
+      "D. Sistemas de archivos distribuidos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-114-Pregunta: Según la guía visual, ¿qué sistema se menciona como ejemplo de priorizar Consistencia y Tolerancia a la partición (CP)?",
+    "opciones": [
+      "A. CouchDB.",
+      "B. MongoDB.",
+      "C. Dynamo.",
+      "D. Riak."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-115-Pregunta: ¿Qué sistema se menciona como ejemplo de priorizar Disponibilidad y Tolerancia a la partición (AP)?",
+    "opciones": [
+      "A. BigTable.",
+      "B. Cassandra.",
+      "C. Vertica.",
+      "D. HBase."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-116-Pregunta: En el modelo BASE, ¿qué implica el concepto de 'Soft state'?",
+    "opciones": [
+      "A. Que el hardware del sistema es flexible.",
+      "B. Que los almacenes no tienen por qué ser consistentes en todo momento.",
+      "C. Que el sistema operativo es de código abierto.",
+      "D. Que los datos se borran tras cada sesión."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-117-Pregunta: ¿Qué significa 'Eventual consistency' en el modelo BASE?",
+    "opciones": [
+      "A. Que los datos nunca serán realmente consistentes.",
+      "B. Que si no hay nuevas actualizaciones, todos acabarán viendo la versión más actual.",
+      "C. Que la consistencia solo existe en el nodo maestro.",
+      "D. Que los datos se vuelven consistentes solo una vez al día."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-118-Pregunta: Comparando ACID vs BASE, ¿cuál se describe como un enfoque enfocado a 'commits'?",
+    "opciones": [
+      "A. BASE.",
+      "B. ACID.",
+      "C. Ambos igual.",
+      "D. Ninguno."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-119-Pregunta: ¿Qué modelo tiene una 'Evolución más sencilla' del esquema según la comparativa?",
+    "opciones": [
+      "A. ACID.",
+      "B. BASE.",
+      "C. El modelo relacional.",
+      "D. Los sistemas con reglas rígidas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-120-Pregunta: En la equivalencia RDBMS vs MongoDB, una 'Table' equivale a:",
+    "opciones": [
+      "A. Database.",
+      "B. Collection.",
+      "C. Document.",
+      "D. Field."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-121-Pregunta: En la equivalencia RDBMS vs MongoDB, una 'Row' equivale a:",
+    "opciones": [
+      "A. Collection.",
+      "B. Document.",
+      "C. Table.",
+      "D. Field."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-122-Pregunta: En la equivalencia RDBMS vs MongoDB, una 'Column' equivale a:",
+    "opciones": [
+      "A. Collection.",
+      "B. Field.",
+      "C. Document.",
+      "D. Database."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-123-Pregunta: Según los apuntes, ¿cuándo es la opción correcta quedarse con un RDBMS?",
+    "opciones": [
+      "A. Cuando el tráfico es masivo y web-scale.",
+      "B. Si tus datos son relacionales.",
+      "C. Si necesitas esquemas dinámicos.",
+      "D. Para ahorrar costes de escalabilidad horizontal."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-124-Pregunta: ¿Para qué tipo de dataset es útil NoSQL según los desafíos mencionados?",
+    "opciones": [
+      "A. Dataset con solo números enteros.",
+      "B. Dataset con grandes cantidades de texto o imágenes (BLOB).",
+      "C. Dataset de menos de 100 registros.",
+      "D. Dataset exclusivamente de fechas históricas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-125-Pregunta: ¿Cuál de estos es un ejemplo de 'datos temporales' que justifican el uso de NoSQL?",
+    "opciones": [
+      "A. Listado de facturas de los últimos 20 años.",
+      "B. Carritos de compra y personalización de portales.",
+      "C. Registro de la propiedad inmobiliaria.",
+      "D. Actas de constitución de empresas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-126-Pregunta: Según los apuntes, ¿qué tipo de transacciones en aplicaciones sociales podrían no necesitar ser durables?",
+    "opciones": [
+      "A. Transferencias bancarias.",
+      "B. Un 'Like'.",
+      "C. Un pago de impuestos.",
+      "D. Un registro de contrato."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-127-Pregunta: ¿Qué requieren las transacciones ACID relacionales para garantizar estabilidad?",
+    "opciones": [
+      "A. Esquemas dinámicos.",
+      "B. Lockings/cerrojos sofisticados.",
+      "C. Consistencia eventual.",
+      "D. Escalabilidad horizontal barata."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-128-Pregunta: ¿Qué indica la arquitectura distribuida de NoSQL respecto a los fallos?",
+    "opciones": [
+      "A. Es muy vulnerable a la caída de un solo servidor.",
+      "B. Es tolerante a fallos porque los datos se guardan de modo redundante.",
+      "C. Requiere que todos los nodos se reinicien si uno falla.",
+      "D. No permite el almacenamiento persistente."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-129-Pregunta: ¿Qué unidad lógica de trabajo garantiza ACID en un sistema NoSQL típico?",
+    "opciones": [
+      "A. Transacciones en todo el clúster global.",
+      "B. Propiedades ACID en un nodo del clúster.",
+      "C. No se garantiza ACID en ningún nivel.",
+      "D. Solo ACID para operaciones de lectura."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-130-Pregunta: ¿Qué empresa se asocia específicamente con el uso de Neo4j en el material?",
+    "opciones": [
+      "A. Facebook.",
+      "B. Infojobs.",
+      "C. Twitter.",
+      "D. Instagram."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-131-Pregunta: ¿Qué organizaciones utilizan MongoDB según los ejemplos proporcionados?",
+    "opciones": [
+      "A. Yahoo y Adobe.",
+      "B. FourSquare, SourceForge y CERN.",
+      "C. Instagram y Github.",
+      "D. Twitter y Facebook."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-132-Pregunta: ¿Qué empresa utiliza Cassandra según los apuntes?",
+    "opciones": [
+      "A. Flickr.",
+      "B. Twitter.",
+      "C. SourceForge.",
+      "D. CERN."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-133-Pregunta: ¿Qué compañías se mencionan como usuarias de Redis?",
+    "opciones": [
+      "A. Yahoo y Adobe.",
+      "B. Flickr, Instagram y Github.",
+      "C. Facebook y Google.",
+      "D. Oracle y IBM."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-134-Pregunta: ¿Qué empresas se asocian con el uso de HBase?",
+    "opciones": [
+      "A. Yahoo y Adobe.",
+      "B. Facebook y Twitter.",
+      "C. Instagram y Github.",
+      "D. FourSquare y CERN."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-135-Pregunta: ¿A qué se refiere el desafío 'web-scale' en los sistemas modernos?",
+    "opciones": [
+      "A. A datos que caben en una sola página web.",
+      "B. A datos a escala masiva de la web.",
+      "C. Al diseño visual de las páginas.",
+      "D. Al uso de protocolos de red antiguos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-136-Pregunta: ¿Qué tecnología ha facilitado el acceso a servicios que explotan inmensos volúmenes de datos?",
+    "opciones": [
+      "A. Los disquetes de alta capacidad.",
+      "B. La computación en la nube (Cloud computing).",
+      "C. La telefonía fija cableada.",
+      "D. El uso de cintas magnéticas locales."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-137-Pregunta: ¿Cuál es el límite principal de las RDBMS tradicionales mencionado en el tema?",
+    "opciones": [
+      "A. Están diseñadas para escalar verticalmente (comprar un servidor más grande).",
+      "B. No permiten el uso del lenguaje SQL.",
+      "C. Son gratuitas y sin soporte.",
+      "D. No garantizan las propiedades ACID."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "DBD-T4-138-Pregunta: ¿Qué se afirma sobre la persistencia de datos en las BBDD NoSQL?",
+    "opciones": [
+      "A. Solo sirven para guardar cachés temporales.",
+      "B. Guardan datos persistentes.",
+      "C. Borran los datos automáticamente al reiniciar.",
+      "D. Los datos solo existen en la memoria RAM del cliente."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-139-Pregunta: En una base de datos de grafos, ¿qué elementos representan la información y sus conexiones?",
+    "opciones": [
+      "A. Tablas y Claves Ajenas.",
+      "B. Nodos (información) y Aristas (relaciones).",
+      "C. Documentos y Colecciones.",
+      "D. Filas y Familias de Columnas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-140-Pregunta: ¿Qué permite el 'esquema dinámico' de las bases de datos NoSQL?",
+    "opciones": [
+      "A. Cambiar la base de datos a relacional cada 24 horas.",
+      "B. La migración del esquema sin necesidad de reiniciar o parar el sistema.",
+      "C. Que el usuario final defina el esquema mediante voz.",
+      "D. El borrado automático de los metadatos de integridad."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-141-Pregunta: ¿Por qué generalmente NO hay operaciones 'join' en los sistemas NoSQL?",
+    "opciones": [
+      "A. Porque son operaciones demasiado rápidas para el sistema.",
+      "B. Porque son complejas, requieren esquemas fijos y consistencia fuerte.",
+      "C. Porque el estándar NoSQL prohíbe el uso de más de una tabla.",
+      "D. Porque los datos están cifrados y no se pueden combinar."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-142-Pregunta: La frase 'Pick Two' aplicada al teorema CAP significa que:",
+    "opciones": [
+      "A. Solo se pueden elegir dos bases de datos para toda la empresa.",
+      "B. Solo es posible ofrecer dos de las tres garantías simultáneamente.",
+      "C. Solo dos usuarios pueden acceder al mismo nodo a la vez.",
+      "D. Solo existen dos tipos de sistemas NoSQL válidos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-143-Pregunta: En el modelo BASE, ¿qué significa 'Basic availability'?",
+    "opciones": [
+      "A. Que el sistema es gratuito para uso básico.",
+      "B. Que el almacén funciona la mayoría del tiempo incluso ante fallos por replicación.",
+      "C. Que solo los servicios mínimos están disponibles en red.",
+      "D. Que el sistema solo funciona si hay un administrador presente."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-144-Pregunta: ¿Qué ventaja ofrecen los documentos anidados en BBDD documentales?",
+    "opciones": [
+      "A. Obligan a simplificar todos los datos a formato texto plano.",
+      "B. Permiten trabajar con datos complejos representándolos como objetos.",
+      "C. Reducen el tamaño del disco duro físicamente.",
+      "D. Eliminan la necesidad de realizar copias de seguridad."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-145-Pregunta: Según los apuntes, ¿qué tipo de consultas son un desafío para RDBMS pero buenas para NoSQL?",
+    "opciones": [
+      "A. Seleccionar un registro por su clave primaria única.",
+      "B. Consultas que no implican relaciones jerárquicas sencillas (ej: lógica de red social).",
+      "C. Sumar el total de una columna de precios.",
+      "D. Actualizar el nombre de un usuario por su ID."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-146-Pregunta: ¿Qué consecuencia ha tenido la aparición de nuevos dispositivos 'smart' según el contexto?",
+    "opciones": [
+      "A. La reducción de la cantidad de usuarios conectados.",
+      "B. Un crecimiento vertiginoso en el volumen de datos y usuarios concurrentes.",
+      "C. El fin definitivo del uso de bases de datos relacionales.",
+      "D. La simplificación de los esquemas de datos globales."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-147-Pregunta: ¿Cuál es un motivo para necesitar NoSQL relacionado con el rendimiento de RDBMS?",
+    "opciones": [
+      "A. La base de datos relacional está perfectamente normalizada.",
+      "B. La base de datos ha sido desnormalizada por razones de rendimiento.",
+      "C. Se usan transacciones ACID muy sencillas sin bloqueos.",
+      "D. El volumen de datos es muy pequeño y fácil de gestionar."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-148-Pregunta: ¿Cómo guardan los datos las BBDD orientadas a columnas comparadas con las tradicionales?",
+    "opciones": [
+      "A. Por filas, igual que todas las BBDD relacionales.",
+      "B. Por columnas, optimizando operaciones de agregación analítica.",
+      "C. En archivos de texto plano sin ningún tipo de orden.",
+      "D. Como documentos anidados en formato BSON."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-149-Pregunta: En la comparativa ACID vs BASE, ¿cuál ofrece una 'Fuerte coherencia'?",
+    "opciones": [
+      "A. BASE.",
+      "B. ACID.",
+      "C. NoSQL Clave-Valor.",
+      "D. Almacenes de grafos distribuidos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "DBD-T4-150-Pregunta: ¿Qué indica el acrónimo NoSQL según la definición de los apuntes?",
+    "opciones": [
+      "A. No SQL (Sin SQL).",
+      "B. Not Only SQL (No sólo SQL).",
+      "C. Network Optimized SQL (SQL orientado a red).",
+      "D. New Optimized SQL (SQL nuevo optimizado)."
+    ],
+    "solucion": "B"
   }
 ]
