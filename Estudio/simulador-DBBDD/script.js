@@ -2,7 +2,7 @@
 let PREGUNTAS_COMPLETAS = [];
 
 // URL de respaldo del archivo JSON en GitHub (RAW)
-const URL_PREGUNTAS = 'https://raw.githubusercontent.com/IvanMB07/Simulador-Examenes-FlashCards/main/Estudio/simulador-DBBDD/preguntas.json';
+const URL_PREGUNTAS = 'https://raw.githubusercontent.com/IvanMB07/Simulador-Examenes-FlashCards/refs/heads/main/Estudio/simulador-DBBDD/preguntas.json';
 
 async function fetchConTimeout(url, timeoutMs = 12000) {
     const controller = new AbortController();
