@@ -1542,7 +1542,7 @@
   {
     "cuestion": "DBD-T3-05-Pregunta: ¿Cuál de los siguientes es un ejemplo de datos estructurados?",
     "opciones": [
-      "A. El resultado de cuestionarios de opción múltiple [4].",
+      "A. El resultado de cuestionarios de opción múltiple.",
       "B. Una grabación de audio de una llamada de servicio.",
       "C. Un mensaje de texto con emojis.",
       "D. Una foto digital en formato JPEG."
@@ -1553,7 +1553,7 @@
     "cuestion": "DBD-T3-06-Pregunta: ¿Qué ventaja ofrecen los datos estructurados al realizar búsquedas?",
     "opciones": [
       "A. Permiten encontrar información sin usar índices.",
-      "B. Vienen en un paquete uniforme y ordenado que facilita la manipulación [5, 6].",
+      "B. Vienen en un paquete uniforme y ordenado que facilita la manipulación.",
       "C. No requieren de un lenguaje de consultas.",
       "D. Se adaptan automáticamente a cualquier formato nuevo."
     ],
@@ -1563,7 +1563,7 @@
     "cuestion": "DBD-T3-07-Pregunta: ¿Qué caracteriza a los datos no estructurados en comparación con los estructurados?",
     "opciones": [
       "A. Se organizan en campos concretos desde su creación.",
-      "B. Se encuentran con menos facilidad y requieren más procesamiento [7, 8].",
+      "B. Se encuentran con menos facilidad y requieren más procesamiento.",
       "C. Son ideales para bases de datos relacionales tradicionales.",
       "D. Tienen un tamaño de registro fijo y limitado."
     ],
@@ -1573,7 +1573,7 @@
     "cuestion": "DBD-T3-08-Pregunta: ¿Cuál es una ventaja destacada de los datos no estructurados?",
     "opciones": [
       "A. Su facilidad de análisis con herramientas tradicionales.",
-      "B. La gran cantidad disponible dentro de las organizaciones [7, 9].",
+      "B. La gran cantidad disponible dentro de las organizaciones.",
       "C. Que siempre vienen acompañados de metadatos relacionales.",
       "D. Que no ocupan espacio en los servidores cloud."
     ],
@@ -1584,7 +1584,7 @@
     "opciones": [
       "A. Imágenes satelitales.",
       "B. Datos de sensores de tráfico.",
-      "C. Publicaciones en redes sociales [8, 10].",
+      "C. Publicaciones en redes sociales.",
       "D. Registros de logs web automáticos."
     ],
     "solucion": "C"
@@ -1683,7 +1683,7 @@
     "cuestion": "DBD-T3-19-Pregunta: ¿Qué término se usa para sistemas de almacenamiento que no cumplen con el esquema entidad-relación?",
     "opciones": [
       "A. RDBMS.",
-      "B. NoSQL (Not Only SQL) [20, 21].",
+      "B. NoSQL (Not Only SQL).",
       "C. SQL estándar.",
       "D. BBDD relacional clásica."
     ],
@@ -1693,7 +1693,7 @@
     "cuestion": "DBD-T3-20-Pregunta: En NoSQL, ¿cómo se accede al dato en un almacenamiento clave-valor?",
     "opciones": [
       "A. Mediante una consulta JOIN compleja.",
-      "B. A partir de una clave única [20, 22].",
+      "B. A partir de una clave única.",
       "C. Navegando por un árbol de directorios.",
       "D. Usando coordenadas de latitud y longitud."
     ],
@@ -1702,7 +1702,7 @@
   {
     "cuestion": "DBD-T3-21-Pregunta: ¿Qué caracteriza al almacenamiento documental en NoSQL?",
     "opciones": [
-      "A. Los datos se almacenan como documentos formateados (XML, JSON, etc.) [22].",
+      "A. Los datos se almacenan como documentos formateados (XML, JSON, etc.).",
       "B. Solo permite guardar texto plano sin formato.",
       "C. No permite jerarquías o anidamientos.",
       "D. Es idéntico al almacenamiento en disco de un PDF."
@@ -1713,7 +1713,7 @@
     "cuestion": "DBD-T3-22-Pregunta: ¿En qué se basa el almacenamiento NoSQL 'En grafo'?",
     "opciones": [
       "A. En tablas conectadas por claves ajenas.",
-      "B. En la teoría de grafos, con nodos para la información y aristas para las relaciones [23, 24].",
+      "B. En la teoría de grafos, con nodos para la información y aristas para las relaciones.",
       "C. En una secuencia lineal de datos históricos.",
       "D. En dibujos realizados por el usuario."
     ],
@@ -1723,7 +1723,7 @@
     "cuestion": "DBD-T3-23-Pregunta: ¿Para qué tipo de análisis es ideal el almacenamiento en grafo?",
     "opciones": [
       "A. Para sumar columnas de precios muy rápido.",
-      "B. Para redes sociales o detección de fraude [24].",
+      "B. Para redes sociales o detección de fraude.",
       "C. Para guardar copias de seguridad de emails.",
       "D. Para sistemas que no tienen relaciones entre datos."
     ],
@@ -1732,7 +1732,7 @@
   {
     "cuestion": "DBD-T3-24-Pregunta: ¿Qué permite el almacenamiento orientado a columnas?",
     "opciones": [
-      "A. Guardar miles de atributos bajo una misma clave, optimizado para consultas analíticas [24].",
+      "A. Guardar miles de atributos bajo una misma clave, optimizado para consultas analíticas.",
       "B. Eliminar la necesidad de usar claves primarias.",
       "C. Guardar solo una columna por cada base de datos.",
       "D. Convertir automáticamente datos JSON en tablas SQL."
@@ -1753,7 +1753,7 @@
     "cuestion": "DBD-T3-26-Pregunta: ¿Cuál es el estándar más extendido para el tratamiento masivo de datos en Big Data?",
     "opciones": [
       "A. Oracle 12c.",
-      "B. Hadoop [25, 26].",
+      "B. Hadoop.",
       "C. Microsoft Excel.",
       "D. MySQL."
     ],
@@ -1763,7 +1763,7 @@
     "cuestion": "DBD-T3-27-Pregunta: ¿Qué tipo de soluciones han proliferado para dar respuesta a la necesidad de 'elasticidad'?",
     "opciones": [
       "A. Discos duros externos USB.",
-      "B. Soluciones cloud (IaaS) [25, 27].",
+      "B. Soluciones cloud (IaaS).",
       "C. Servidores físicos de torre.",
       "D. Cintas de backup."
     ],
@@ -1772,7 +1772,7 @@
   {
     "cuestion": "DBD-T3-28-Pregunta: Respecto a la 'Velocidad' en Big Data, ¿qué exigen los datos hoy en día?",
     "opciones": [
-      "A. Una respuesta veloz porque quedan obsoletos pronto [27, 28].",
+      "A. Una respuesta veloz porque quedan obsoletos pronto.",
       "B. Ser almacenados durante años antes de ser leídos.",
       "C. Que el proceso de carga se haga siempre por la noche.",
       "D. No requieren procesamiento en tiempo real."
@@ -1783,7 +1783,7 @@
     "cuestion": "DBD-T3-29-Pregunta: ¿Qué tipo de arquitectura se menciona como solución al reto de la Velocidad?",
     "opciones": [
       "A. Arquitecturas basadas en cinta magnética.",
-      "B. Arquitecturas In-Memory (almacenamiento en RAM) [24].",
+      "B. Arquitecturas In-Memory (almacenamiento en RAM).",
       "C. Arquitecturas de un solo hilo de ejecución.",
       "D. Procesamiento manual por operarios."
     ],
@@ -1792,7 +1792,7 @@
   {
     "cuestion": "DBD-T3-30-Pregunta: ¿Cuál es un ejemplo de aplicación que requiere alta 'Velocidad'?",
     "opciones": [
-      "A. Detección de fraudes en transacciones bancarias [29].",
+      "A. Detección de fraudes en transacciones bancarias.",
       "B. Impresión de nóminas mensuales.",
       "C. Archivo histórico de facturas de hace 10 años.",
       "D. Creación de informes trimestrales."
@@ -1803,7 +1803,7 @@
     "cuestion": "DBD-T3-31-Pregunta: ¿Qué reto plantea la 'Variedad' en Big Data?",
     "opciones": [
       "A. El tener que comprar servidores de distintos fabricantes.",
-      "B. Procesar simultáneamente múltiples formatos desestructurados e incompatibles [28, 30].",
+      "B. Procesar simultáneamente múltiples formatos desestructurados e incompatibles.",
       "C. La obligación de usar siempre el mismo tipo de letra en los informes.",
       "D. Que los usuarios hablen distintos idiomas."
     ],
@@ -1813,7 +1813,7 @@
     "cuestion": "DBD-T3-32-Pregunta: Para el reto de la 'Variedad', ¿qué tecnología actúa como motor parser definitivo?",
     "opciones": [
       "A. Un compilador de C++.",
-      "B. Machine Learning / Deep Learning [24].",
+      "B. Machine Learning / Deep Learning.",
       "C. Una hoja de cálculo avanzada.",
       "D. El protocolo FTP."
     ],
@@ -1823,7 +1823,7 @@
     "cuestion": "DBD-T3-33-Pregunta: ¿Qué garantiza la 'Veracidad' en el contexto de Big Data?",
     "opciones": [
       "A. Que los datos nunca sean borrados.",
-      "B. Un alto grado de confianza en los datos, con resultados de calidad y verificables [21, 31].",
+      "B. Un alto grado de confianza en los datos, con resultados de calidad y verificables.",
       "C. Que los datos sean siempre públicos.",
       "D. Que el sistema sea gratuito para todos."
     ],
@@ -1833,7 +1833,7 @@
     "cuestion": "DBD-T3-34-Pregunta: ¿Qué acción se incluye para descartar datos que NO son veraces?",
     "opciones": [
       "A. Aumentar el volumen de almacenamiento.",
-      "B. Eliminar duplicados y arreglar entradas parciales [30, 32].",
+      "B. Eliminar duplicados y arreglar entradas parciales.",
       "C. Cambiar el nombre de las tablas.",
       "D. Cifrar todos los archivos con clave privada."
     ],
@@ -1843,7 +1843,7 @@
     "cuestion": "DBD-T3-35-Pregunta: Para que los datos tengan 'Valor' real, deben ser:",
     "opciones": [
       "A. Almacenados en el formato más caro disponible.",
-      "B. Accionables, es decir, ayudar a tomar una decisión [30, 32].",
+      "B. Accionables, es decir, ayudar a tomar una decisión.",
       "C. Ocultos para la mayoría de empleados.",
       "D. Borrados una vez analizados una sola vez."
     ],
@@ -1853,7 +1853,7 @@
     "cuestion": "DBD-T3-36-Pregunta: Además de las 5 V's clásicas, ¿qué otras se mencionan en los diagramas?",
     "opciones": [
       "A. Vacío y Ventilación.",
-      "B. Visualización, Viralidad y Viscosidad [24].",
+      "B. Visualización, Viralidad y Viscosidad.",
       "C. Ventaja y Victoria.",
       "D. Velocidad de rotación y Voltaje."
     ],
@@ -1953,7 +1953,7 @@
     "cuestion": "DBD-T3-46-Pregunta: ¿Qué herramienta se menciona para la 'Analítica, Búsqueda y Machine Learning' en el ecosistema?",
     "opciones": [
       "A. Hadoop MapReduce.",
-      "B. Elasticsearch (motores de indexación) [24].",
+      "B. Elasticsearch (motores de indexación).",
       "C. Discos SSD físicos.",
       "D. El lenguaje COBOL."
     ],
@@ -1983,7 +1983,7 @@
     "cuestion": "DBD-T3-49-Pregunta: ¿Qué describe mejor al 'Ecosistema Big Data'?",
     "opciones": [
       "A. Una única aplicación que hace todo el trabajo.",
-      "B. Un conjunto diverso de frameworks, bases de datos y herramientas cloud interconectadas [24].",
+      "B. Un conjunto diverso de frameworks, bases de datos y herramientas cloud interconectadas.",
       "C. Un centro de datos sin conexión a la red.",
       "D. Una biblioteca de libros físicos sobre bases de datos."
     ],
