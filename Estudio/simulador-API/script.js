@@ -205,18 +205,21 @@ class ConfiguracionApp {
             const data = localStorage.getItem('configApp');
             this.config = data ? JSON.parse(data) : {
                 ordenarPorTema: false,
+                autoAvanceExamen: false,
                 temasSeleccionados: [1, 2, 3, 4, 5, 6, 7],
                 parcialExamen: 'parcial1',
                 perfilActual: 'default',
                 perfiles: {}
             };
             // Asegurar que existan las nuevas propiedades
+            if (typeof this.config.autoAvanceExamen !== 'boolean') this.config.autoAvanceExamen = false;
             if (!this.config.perfilActual) this.config.perfilActual = 'default';
             if (!this.config.perfiles) this.config.perfiles = {};
             if (!this.config.parcialExamen) this.config.parcialExamen = 'parcial1';
         } catch (e) {
             this.config = {
                 ordenarPorTema: false,
+                autoAvanceExamen: false,
                 temasSeleccionados: [1, 2, 3, 4, 5, 6, 7],
                 parcialExamen: 'parcial1',
                 perfilActual: 'default',
@@ -1099,6 +1102,16 @@ class SimuladorExamen {
                 this.respuestas[this.preguntaActual] = indice;
             }
         }
+
+        const debeAutoAvanzar =
+            this.modo === 'examen' &&
+            configuracion.get('autoAvanceExamen') === true &&
+            this.preguntaActual < this.preguntas.length - 1;
+
+        if (debeAutoAvanzar) {
+            this.preguntaActual++;
+        }
+
         this.mostrarPregunta();
     }
 
@@ -1421,11 +1434,21 @@ function limpiarFallos() {
 function actualizarConfigUI() {
     const ordenarPorTema = configuracion.get('ordenarPorTema');
     const toggle = document.getElementById('toggleOrdenTema');
+    const autoAvanceExamen = configuracion.get('autoAvanceExamen');
+    const toggleAutoAvanceExamen = document.getElementById('toggleAutoAvanceExamen');
 
     if (ordenarPorTema) {
         toggle.classList.add('active');
     } else {
         toggle.classList.remove('active');
+    }
+
+    if (toggleAutoAvanceExamen) {
+        if (autoAvanceExamen) {
+            toggleAutoAvanceExamen.classList.add('active');
+        } else {
+            toggleAutoAvanceExamen.classList.remove('active');
+        }
     }
 }
 
