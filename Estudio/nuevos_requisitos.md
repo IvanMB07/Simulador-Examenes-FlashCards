@@ -1,5 +1,6 @@
 Nuevos requisitos:
-- Añadir un historial de examenes para ver los resultados anteriores.
+- Al finalizar un examen, que permita ver las preguntas de nuevo con las opciones correctas e incorrectas.
+- Añadir un historial de examenes para ver los resultados anteriores, junto con el resumen por preguntas.
 - Mejorar la GUI
 - Crear un modelo universal o algo asi con herencia quiza que cambie segun lo que necesite
 

@@ -2000,7 +2000,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "REQ-T3-51-Pregunta: ¿A qué sección del estándar IEEE 830 corresponde el apartado 1.1 'Purpose'?",
+    "cuestion": "REQ-T3-01-Pregunta: ¿A qué sección del estándar IEEE 830 corresponde el apartado 1.1 'Purpose'?",
     "opciones": [
       "A. Overall Description.",
       "B. Introduction.",
@@ -2010,7 +2010,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "REQ-T3-52-Pregunta: El uso de términos como 'fácil', 'rápido' o 'eficiente' sin métricas asociadas atenta directamente contra el criterio de calidad de:",
+    "cuestion": "REQ-T3-02-Pregunta: El uso de términos como 'fácil', 'rápido' o 'eficiente' sin métricas asociadas atenta directamente contra el criterio de calidad de:",
     "opciones": [
       "A. Completitud.",
       "B. Trazabilidad.",
@@ -2020,7 +2020,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "REQ-T3-53-Pregunta: ¿Qué tipo de ambigüedad se produce cuando una sentencia tiene más de una estructura gramatical posible?",
+    "cuestion": "REQ-T3-03-Pregunta: ¿Qué tipo de ambigüedad se produce cuando una sentencia tiene más de una estructura gramatical posible?",
     "opciones": [
       "A. Ambigüedad léxica.",
       "B. Ambigüedad semántica.",
@@ -2030,7 +2030,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "REQ-T3-54-Pregunta: En la IEEE 830, la sección 2.4 'Constraints' se refiere a:",
+    "cuestion": "REQ-T3-04-Pregunta: En la IEEE 830, la sección 2.4 'Constraints' se refiere a:",
     "opciones": [
       "A. Limitaciones como políticas operativas, hardware o seguridad.",
       "B. El presupuesto total asignado al desarrollo.",
@@ -2040,7 +2040,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "REQ-T3-55-Pregunta: ¿Cuál es la principal ventaja de utilizar un 'Lenguaje Restringido' frente al Lenguaje Natural puro?",
+    "cuestion": "REQ-T3-05-Pregunta: ¿Cuál es la principal ventaja de utilizar un 'Lenguaje Restringido' frente al Lenguaje Natural puro?",
     "opciones": [
       "A. Permite una mayor creatividad literaria del analista.",
       "B. Es semánticamente verificable gracias a su gramática formal.",
@@ -2050,7 +2050,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "REQ-T3-56-Pregunta: En un modelo de 'Goals', ¿qué indica un enlace de descomposición tipo 'AND'?",
+    "cuestion": "REQ-T3-06-Pregunta: En un modelo de 'Goals', ¿qué indica un enlace de descomposición tipo 'AND'?",
     "opciones": [
       "A. Que solo uno de los subobjetivos es necesario.",
       "B. Que el objetivo es opcional y puede ser descartado.",
@@ -2060,7 +2060,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "REQ-T3-57-Pregunta: La relación de trazabilidad 'background' se utiliza para conectar un requisito con:",
+    "cuestion": "REQ-T3-07-Pregunta: La relación de trazabilidad 'background' se utiliza para conectar un requisito con:",
     "opciones": [
       "A. El código fuente donde se implementa.",
       "B. Otros requisitos que tienen una lógica similar.",
@@ -2070,7 +2070,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "REQ-T3-58-Pregunta: ¿Cuál de estos NO es un elemento constitutivo de un 'Escenario' según tus modelos?",
+    "cuestion": "REQ-T3-08-Pregunta: ¿Cuál de estos NO es un elemento constitutivo de un 'Escenario' según tus modelos?",
     "opciones": [
       "A. Diagramas de Gantt.",
       "B. Actores.",
@@ -2080,7 +2080,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "REQ-T3-59-Pregunta: El criterio de 'Consistencia' de la IEEE 830 exige que:",
+    "cuestion": "REQ-T3-09-Pregunta: El criterio de 'Consistencia' de la IEEE 830 exige que:",
     "opciones": [
       "A. El documento se imprima en el mismo tipo de papel.",
       "B. No existan conflictos entre requisitos (ej. términos distintos para un mismo objeto).",
@@ -2090,7 +2090,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "REQ-T3-60-Pregunta: ¿Qué información se incluye habitualmente en la sección 3.1 'External Interfaces' de una ERS?",
+    "cuestion": "REQ-T3-10-Pregunta: ¿Qué información se incluye habitualmente en la sección 3.1 'External Interfaces' de una ERS?",
     "opciones": [
       "A. La biografía de los ingenieros de sistemas.",
       "B. El plan de marketing del producto.",
@@ -2100,7 +2100,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "REQ-T3-61-Pregunta: Un requisito es 'Modificable' si su estructura permite hacer cambios de forma:",
+    "cuestion": "REQ-T3-11-Pregunta: Un requisito es 'Modificable' si su estructura permite hacer cambios de forma:",
     "opciones": [
       "A. Automática mediante el uso de IA.",
       "B. Verbal, sin necesidad de actualizar el documento.",
@@ -2110,7 +2110,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "REQ-T3-62-Pregunta: La relación 'refines' entre un modelo y un requisito textual indica que:",
+    "cuestion": "REQ-T3-12-Pregunta: La relación 'refines' entre un modelo y un requisito textual indica que:",
     "opciones": [
       "A. El modelo añade detalles o una vista más específica del requisito.",
       "B. El modelo es una copia exacta de las palabras del texto.",
@@ -2120,7 +2120,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "REQ-T3-63-Pregunta: En la descripción de un Escenario, la 'Postcondición' define:",
+    "cuestion": "REQ-T3-13-Pregunta: En la descripción de un Escenario, la 'Postcondición' define:",
     "opciones": [
       "A. Los requisitos de hardware necesarios para empezar.",
       "B. El estado del sistema tras la ejecución exitosa de la interacción.",
@@ -2130,7 +2130,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "REQ-T3-64-Pregunta: Según tus apuntes, ¿qué riesgo conlleva NO mantener un glosario de términos?",
+    "cuestion": "REQ-T3-14-Pregunta: Según tus apuntes, ¿qué riesgo conlleva NO mantener un glosario de términos?",
     "opciones": [
       "A. Que el software consuma más memoria RAM.",
       "B. Que el presupuesto del proyecto se agote antes.",
@@ -2140,7 +2140,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "REQ-T3-65-Pregunta: ¿Cuál es un beneficio de la documentación para el mantenimiento del sistema?",
+    "cuestion": "REQ-T3-15-Pregunta: ¿Cuál es un beneficio de la documentación para el mantenimiento del sistema?",
     "opciones": [
       "A. Evita que el software se degrade físicamente.",
       "B. Garantiza que el sistema nunca requerirá actualizaciones.",
@@ -2150,7 +2150,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "REQ-T3-66-Pregunta: La sección '2.5 Assumptions and dependencies' de la IEEE 830 trata sobre:",
+    "cuestion": "REQ-T3-16-Pregunta: La sección '2.5 Assumptions and dependencies' de la IEEE 830 trata sobre:",
     "opciones": [
       "A. Factores externos que si cambian, afectarían a los requisitos.",
       "B. La lista de empleados que dependen del jefe de proyecto.",
@@ -2160,7 +2160,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "REQ-T3-67-Pregunta: ¿Qué tipo de trazabilidad conecta requisitos que comparten una lógica o estructura similar?",
+    "cuestion": "REQ-T3-17-Pregunta: ¿Qué tipo de trazabilidad conecta requisitos que comparten una lógica o estructura similar?",
     "opciones": [
       "A. Satisfies.",
       "B. Similar.",
@@ -2170,7 +2170,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "REQ-T3-68-Pregunta: ¿Cuál de estos es un atributo de calidad propio del software según la IEEE 830 (sección 3)?",
+    "cuestion": "REQ-T3-18-Pregunta: ¿Cuál de estos es un atributo de calidad propio del software según la IEEE 830 (sección 3)?",
     "opciones": [
       "A. Color de la caja del servidor.",
       "B. Nombre del CEO de la empresa.",
@@ -2180,7 +2180,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "REQ-T3-69-Pregunta: El uso de 'Patrones Sintácticos' en la redacción de requisitos busca:",
+    "cuestion": "REQ-T3-19-Pregunta: El uso de 'Patrones Sintácticos' en la redacción de requisitos busca:",
     "opciones": [
       "A. Reducir la libertad creativa del programador.",
       "B. Aumentar el número de páginas del documento final.",
@@ -2190,7 +2190,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "REQ-T3-70-Pregunta: En la validación, ¿qué significa la 'Dimensión del Contenido'?",
+    "cuestion": "REQ-T3-20-Pregunta: En la validación, ¿qué significa la 'Dimensión del Contenido'?",
     "opciones": [
       "A. Que los requisitos sean entendidos por todos los stakeholders relevantes.",
       "B. El peso físico del documento impreso.",
@@ -2200,7 +2200,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "REQ-T3-71-Pregunta: Un requisito es 'Trazable' si tiene un origen claro y podemos seguir su rastro hacia:",
+    "cuestion": "REQ-T3-21-Pregunta: Un requisito es 'Trazable' si tiene un origen claro y podemos seguir su rastro hacia:",
     "opciones": [
       "A. Solo hacia los documentos de la competencia.",
       "B. El pasado (fuente) y el futuro (uso/implementación).",
@@ -2210,7 +2210,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "REQ-T3-72-Pregunta: La sección '2.1 Product Perspective' explica:",
+    "cuestion": "REQ-T3-22-Pregunta: La sección '2.1 Product Perspective' explica:",
     "opciones": [
       "A. El precio de venta al público del sistema.",
       "B. La biografía del sastre que diseñó los uniformes del equipo.",
@@ -2220,7 +2220,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "REQ-T3-73-Pregunta: ¿Cuál de estos NO es un riesgo de usar lenguaje natural en la IR?",
+    "cuestion": "REQ-T3-23-Pregunta: ¿Cuál de estos NO es un riesgo de usar lenguaje natural en la IR?",
     "opciones": [
       "A. Ambigüedad referencial.",
       "B. Vaguedad.",
@@ -2230,7 +2230,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "REQ-T3-74-Pregunta: En un diagrama de Goals, el 'OR-decomposition' se utiliza para:",
+    "cuestion": "REQ-T3-24-Pregunta: En un diagrama de Goals, el 'OR-decomposition' se utiliza para:",
     "opciones": [
       "A. Mostrar alternativas para satisfacer un mismo objetivo.",
       "B. Indicar que el requisito es erróneo.",
@@ -2240,7 +2240,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "REQ-T3-75-Pregunta: ¿A qué se refiere la 'Ambigüedad Léxica'?",
+    "cuestion": "REQ-T3-25-Pregunta: ¿A qué se refiere la 'Ambigüedad Léxica'?",
     "opciones": [
       "A. A frases que tienen varias interpretaciones gramaticales.",
       "B. A palabras que tienen más de un significado (polisemia).",
@@ -2250,7 +2250,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "REQ-T3-76-Pregunta: La sección 3.4 'Logical Database Requirements' define:",
+    "cuestion": "REQ-T3-26-Pregunta: La sección 3.4 'Logical Database Requirements' define:",
     "opciones": [
       "A. El código SQL exacto de todas las tablas.",
       "B. La dirección IP del servidor de datos.",
@@ -2260,7 +2260,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "REQ-T3-77-Pregunta: ¿Qué significa que un requisito sea 'Correcto' según la IEEE 830?",
+    "cuestion": "REQ-T3-27-Pregunta: ¿Qué significa que un requisito sea 'Correcto' según la IEEE 830?",
     "opciones": [
       "A. Que no tiene faltas de ortografía.",
       "B. Que está escrito en el lenguaje de programación elegido.",
@@ -2270,7 +2270,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "REQ-T3-78-Pregunta: La relación 'satisfies' entre un modelo y el texto vincula:",
+    "cuestion": "REQ-T3-28-Pregunta: La relación 'satisfies' entre un modelo y el texto vincula:",
     "opciones": [
       "A. Un elemento del modelo con el requisito textual que cumple.",
       "B. Un elemento de diseño con un requisito de negocio.",
@@ -2280,7 +2280,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "REQ-T3-79-Pregunta: En la estructura de la ERS, la sección 2.3 'User Characteristics' describe:",
+    "cuestion": "REQ-T3-29-Pregunta: En la estructura de la ERS, la sección 2.3 'User Characteristics' describe:",
     "opciones": [
       "A. El nombre y DNI de cada usuario del sistema.",
       "B. Atributos como nivel de educación, experiencia y pericia técnica.",
@@ -2290,7 +2290,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "REQ-T3-80-Pregunta: Un beneficio de documentar requisitos es servir como 'Línea Base' (Baseline), lo cual es esencial para:",
+    "cuestion": "REQ-T3-30-Pregunta: Un beneficio de documentar requisitos es servir como 'Línea Base' (Baseline), lo cual es esencial para:",
     "opciones": [
       "A. Comprar el hardware más barato.",
       "B. Despedir a los programadores lentos.",
@@ -2300,7 +2300,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "REQ-T3-81-Pregunta: ¿Qué es el 'Glosario' en el contexto de la documentación estructurada?",
+    "cuestion": "REQ-T3-31-Pregunta: ¿Qué es el 'Glosario' en el contexto de la documentación estructurada?",
     "opciones": [
       "A. Una lista de precios de proveedores externos.",
       "B. El índice de autores del documento.",
@@ -2310,7 +2310,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "REQ-T3-82-Pregunta: ¿Cuál es el objetivo de los 'Requisitos de Rendimiento' (Performance)?",
+    "cuestion": "REQ-T3-32-Pregunta: ¿Cuál es el objetivo de los 'Requisitos de Rendimiento' (Performance)?",
     "opciones": [
       "A. Establecer límites numéricos de tiempo de respuesta o capacidad.",
       "B. Definir la estética de los botones en pantalla.",
@@ -2320,7 +2320,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "REQ-T3-83-Pregunta: La relación de trazabilidad 'example_of' conecta habitualmente:",
+    "cuestion": "REQ-T3-33-Pregunta: La relación de trazabilidad 'example_of' conecta habitualmente:",
     "opciones": [
       "A. Dos manuales de usuario de diferentes versiones.",
       "B. Un requisito abstracto con un escenario de uso concreto.",
@@ -2330,7 +2330,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "REQ-T3-84-Pregunta: ¿Qué sección de la IEEE 830 contiene las 'Referencias' a otros documentos?",
+    "cuestion": "REQ-T3-34-Pregunta: ¿Qué sección de la IEEE 830 contiene las 'Referencias' a otros documentos?",
     "opciones": [
       "A. Sección 2.1.",
       "B. Sección 3.5.",
@@ -2340,7 +2340,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "REQ-T3-85-Pregunta: El criterio de 'Completitud' significa que el documento:",
+    "cuestion": "REQ-T3-35-Pregunta: El criterio de 'Completitud' significa que el documento:",
     "opciones": [
       "A. Tiene al menos 500 páginas de texto.",
       "B. Contiene todas las figuras y diagramas en color.",
@@ -2350,7 +2350,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "REQ-T3-86-Pregunta: En la documentación basada en modelos, un 'Actor' se define como:",
+    "cuestion": "REQ-T3-36-Pregunta: En la documentación basada en modelos, un 'Actor' se define como:",
     "opciones": [
       "A. Una entidad externa que interactúa con el sistema.",
       "B. Una persona contratada para hacer anuncios del software.",
@@ -2360,7 +2360,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "REQ-T3-87-Pregunta: ¿Qué tipo de requisito se encuentra en el apartado 3.2 'Functional Requirements'?",
+    "cuestion": "REQ-T3-37-Pregunta: ¿Qué tipo de requisito se encuentra en el apartado 3.2 'Functional Requirements'?",
     "opciones": [
       "A. Los requisitos de seguridad lógica.",
       "B. Las acciones que el sistema debe ser capaz de realizar.",
@@ -2370,7 +2370,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "REQ-T3-88-Pregunta: La IEEE 830 recomienda clasificar los requisitos por 'Importancia y Estabilidad' para:",
+    "cuestion": "REQ-T3-38-Pregunta: La IEEE 830 recomienda clasificar los requisitos por 'Importancia y Estabilidad' para:",
     "opciones": [
       "A. Saber cuáles se pueden ignorar si no hay tiempo.",
       "B. Cobrar más por los requisitos más difíciles.",
@@ -2380,7 +2380,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "REQ-T3-89-Pregunta: ¿Cuál es un riesgo de documentar requisitos SOLO con modelos conceptuales?",
+    "cuestion": "REQ-T3-39-Pregunta: ¿Cuál es un riesgo de documentar requisitos SOLO con modelos conceptuales?",
     "opciones": [
       "A. Que los programadores se distraigan con los dibujos.",
       "B. Que el documento sea demasiado corto y parezca poco profesional.",
@@ -2390,7 +2390,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "REQ-T3-90-Pregunta: En la sección 2.2 'Product Functions', ¿qué nivel de detalle se espera?",
+    "cuestion": "REQ-T3-40-Pregunta: En la sección 2.2 'Product Functions', ¿qué nivel de detalle se espera?",
     "opciones": [
       "A. Un resumen de alto nivel de las funciones principales.",
       "B. Una lista exhaustiva de cada línea de código.",
@@ -2400,7 +2400,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "REQ-T3-91-Pregunta: ¿A qué se refiere el atributo 'Ranked for importance'?",
+    "cuestion": "REQ-T3-41-Pregunta: ¿A qué se refiere el atributo 'Ranked for importance'?",
     "opciones": [
       "A. A ordenar los requisitos por el sueldo de quien los pidió.",
       "B. A distinguir entre requisitos esenciales, deseables y opcionales.",
@@ -2410,7 +2410,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "REQ-T3-92-Pregunta: En la documentación de Escenarios, las 'Interacciones' describen:",
+    "cuestion": "REQ-T3-42-Pregunta: En la documentación de Escenarios, las 'Interacciones' describen:",
     "opciones": [
       "A. La vida social de los empleados fuera de la oficina.",
       "B. El intercambio de correos electrónicos entre jefes.",
@@ -2420,7 +2420,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "REQ-T3-93-Pregunta: ¿Qué sección de la IEEE 830 define el 'Scope' (Alcance) del producto?",
+    "cuestion": "REQ-T3-43-Pregunta: ¿Qué sección de la IEEE 830 define el 'Scope' (Alcance) del producto?",
     "opciones": [
       "A. 2.5.",
       "B. 3.1.",
@@ -2430,7 +2430,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "REQ-T3-94-Pregunta: ¿Cuál de estos es un beneficio de usar plantillas de requisitos?",
+    "cuestion": "REQ-T3-44-Pregunta: ¿Cuál de estos es un beneficio de usar plantillas de requisitos?",
     "opciones": [
       "A. Asegurar que no se olviden atributos importantes (autor, versión, etc.).",
       "B. Que el documento se escriba automáticamente sin intervención humana.",
@@ -2440,7 +2440,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "REQ-T3-95-Pregunta: El criterio de 'Verificabilidad' garantiza que:",
+    "cuestion": "REQ-T3-45-Pregunta: El criterio de 'Verificabilidad' garantiza que:",
     "opciones": [
       "A. El cliente siempre tiene la razón.",
       "B. Existe un proceso finito y coste-efectivo para comprobar que el sistema cumple el requisito.",
@@ -2450,7 +2450,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "REQ-T3-96-Pregunta: ¿Qué información NO suele aparecer en la sección 3 'Specific Requirements'?",
+    "cuestion": "REQ-T3-46-Pregunta: ¿Qué información NO suele aparecer en la sección 3 'Specific Requirements'?",
     "opciones": [
       "A. Requisitos de rendimiento.",
       "B. Atributos de calidad como seguridad o portabilidad.",
@@ -2460,7 +2460,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "REQ-T3-97-Pregunta: En el modelo de Goals, un 'Source' puede ser:",
+    "cuestion": "REQ-T3-47-Pregunta: En el modelo de Goals, un 'Source' puede ser:",
     "opciones": [
       "A. Solo un stakeholder con poder de firma.",
       "B. Únicamente el manual de usuario del competidor.",
@@ -2470,7 +2470,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "REQ-T3-98-Pregunta: ¿Cuál es el propósito del apartado 1.3 'Definitions, acronyms, and abbreviations'?",
+    "cuestion": "REQ-T3-48-Pregunta: ¿Cuál es el propósito del apartado 1.3 'Definitions, acronyms, and abbreviations'?",
     "opciones": [
       "A. Asegurar que todos los lectores interpreten los términos técnicos del mismo modo.",
       "B. Enseñar a leer a los usuarios.",
@@ -2480,7 +2480,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "REQ-T3-99-Pregunta: Un documento de requisitos estructurado es superior a uno desordenado porque:",
+    "cuestion": "REQ-T3-49-Pregunta: Un documento de requisitos estructurado es superior a uno desordenado porque:",
     "opciones": [
       "A. Se puede vender como un libro de texto.",
       "B. Permite localizar información rápidamente y detectar omisiones basadas en la experiencia.",
@@ -2490,7 +2490,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "REQ-T3-100-Pregunta: El objetivo final de la actividad de documentación es generar un conjunto de:",
+    "cuestion": "REQ-T3-050-Pregunta: El objetivo final de la actividad de documentación es generar un conjunto de:",
     "opciones": [
       "A. Capturas de pantalla de la competencia.",
       "B. Correos electrónicos informales con el cliente.",
@@ -3000,7 +3000,7 @@
     "solucion": "ABD"
   },
   {
-    "cuestion": "REQ-T3-101-Pregunta: Según tus apuntes, ¿cuáles son beneficios directos de documentar los requisitos?",
+    "cuestion": "REQ-T3-051-Pregunta: Según tus apuntes, ¿cuáles son beneficios directos de documentar los requisitos?",
     "opciones": [
       "A. Ayuda al entrenamiento de nuevos empleados.",
       "B. Preserva el conocimiento experto de los interesados.",
@@ -3010,7 +3010,7 @@
     "solucion": "ABCD"
   },
   {
-    "cuestion": "REQ-T3-102-Pregunta: ¿Qué criterios de calidad debe cumplir un artefacto de requisitos según el estándar IEEE 830?",
+    "cuestion": "REQ-T3-052-Pregunta: ¿Qué criterios de calidad debe cumplir un artefacto de requisitos según el estándar IEEE 830?",
     "opciones": [
       "A. Corrección (Correctness).",
       "B. Verificabilidad (Capacidad de prueba).",
@@ -3020,7 +3020,7 @@
     "solucion": "ABC"
   },
   {
-    "cuestion": "REQ-T3-103-Pregunta: Respecto al uso del Lenguaje Natural en la documentación, ¿qué afirmaciones son correctas?",
+    "cuestion": "REQ-T3-053-Pregunta: Respecto al uso del Lenguaje Natural en la documentación, ¿qué afirmaciones son correctas?",
     "opciones": [
       "A. Es una forma universal de comunicación que no requiere entrenamiento especial.",
       "B. Su principal ventaja es que elimina la ambigüedad semántica.",
@@ -3030,7 +3030,7 @@
     "solucion": "ACD"
   },
   {
-    "cuestion": "REQ-T3-104-Pregunta: ¿Qué tipos de ambigüedad se mencionan específicamente como problemas del lenguaje natural?",
+    "cuestion": "REQ-T3-054-Pregunta: ¿Qué tipos de ambigüedad se mencionan específicamente como problemas del lenguaje natural?",
     "opciones": [
       "A. Léxica: una palabra con varios significados.",
       "B. Sintáctica: una sentencia con más de una estructura gramatical.",
@@ -3040,7 +3040,7 @@
     "solucion": "ABC"
   },
   {
-    "cuestion": "REQ-T3-105-Pregunta: Sobre los 'Lenguajes restringidos' y el uso de patrones sintácticos:",
+    "cuestion": "REQ-T3-055-Pregunta: Sobre los 'Lenguajes restringidos' y el uso de patrones sintácticos:",
     "opciones": [
       "A. Son semánticamente verificables si cuentan con una gramática formal.",
       "B. Buscan estandarizar la forma en que se escriben las frases.",
@@ -3050,7 +3050,7 @@
     "solucion": "ABC"
   },
   {
-    "cuestion": "REQ-T3-106-Pregunta: En la estructura de la IEEE 830-1998, ¿qué apartados pertenecen a la sección '1. Introduction'?",
+    "cuestion": "REQ-T3-056-Pregunta: En la estructura de la IEEE 830-1998, ¿qué apartados pertenecen a la sección '1. Introduction'?",
     "opciones": [
       "A. 1.2 Scope (Alcance).",
       "B. 1.3 Definitions, acronyms, and abbreviations.",
@@ -3060,7 +3060,7 @@
     "solucion": "ABCD"
   },
   {
-    "cuestion": "REQ-T3-107-Pregunta: ¿Qué información se incluye en la sección '2. Overall Description' de una ERS según el estándar?",
+    "cuestion": "REQ-T3-057-Pregunta: ¿Qué información se incluye en la sección '2. Overall Description' de una ERS según el estándar?",
     "opciones": [
       "A. Product Perspective (Perspectiva del producto).",
       "B. User Characteristics (Características de los usuarios).",
@@ -3070,7 +3070,7 @@
     "solucion": "ABD"
   },
   {
-    "cuestion": "REQ-T3-108-Pregunta: Dentro de la sección '3. Specific Requirements' de la IEEE 830, se deben detallar:",
+    "cuestion": "REQ-T3-058-Pregunta: Dentro de la sección '3. Specific Requirements' de la IEEE 830, se deben detallar:",
     "opciones": [
       "A. External Interfaces (Interfaces de usuario, hardware, software).",
       "B. Functional Requirements (Requisitos funcionales).",
@@ -3080,7 +3080,7 @@
     "solucion": "ABCD"
   },
   {
-    "cuestion": "REQ-T3-109-Pregunta: Un requisito es 'Trazable' (rastreable) si permite identificar:",
+    "cuestion": "REQ-T3-059-Pregunta: Un requisito es 'Trazable' (rastreable) si permite identificar:",
     "opciones": [
       "A. Su fuente original (trazabilidad hacia atrás).",
       "B. Su evolución a lo largo del ciclo de vida.",
@@ -3090,7 +3090,7 @@
     "solucion": "ABC"
   },
   {
-    "cuestion": "REQ-T3-110-Pregunta: Sobre el criterio de calidad 'Consistencia', una ERS es inconsistente si:",
+    "cuestion": "REQ-T3-060-Pregunta: Sobre el criterio de calidad 'Consistencia', una ERS es inconsistente si:",
     "opciones": [
       "A. Dos o más requisitos describen el mismo objeto con términos diferentes.",
       "B. Existe un conflicto de características entre requisitos.",
@@ -3100,7 +3100,7 @@
     "solucion": "AB"
   },
   {
-    "cuestion": "REQ-T3-111-Pregunta: ¿Qué elementos son fundamentales en un modelo de 'Escenarios'?",
+    "cuestion": "REQ-T3-061-Pregunta: ¿Qué elementos son fundamentales en un modelo de 'Escenarios'?",
     "opciones": [
       "A. Actores (entidades externas).",
       "B. Interacciones (secuencia de pasos).",
@@ -3110,7 +3110,7 @@
     "solucion": "ABC"
   },
   {
-    "cuestion": "REQ-T3-112-Pregunta: En el modelo de 'Goals' (objetivos), ¿qué significa la descomposición?",
+    "cuestion": "REQ-T3-062-Pregunta: En el modelo de 'Goals' (objetivos), ¿qué significa la descomposición?",
     "opciones": [
       "A. AND-decomposition: el objetivo padre se cumple si se satisfacen todos los subobjetivos.",
       "B. OR-decomposition: el objetivo padre se cumple si se satisface al menos una alternativa.",
@@ -3120,7 +3120,7 @@
     "solucion": "ABD"
   },
   {
-    "cuestion": "REQ-T3-113-Pregunta: ¿Qué tipos de trazabilidad vinculan modelos con requisitos textuales?",
+    "cuestion": "REQ-T3-063-Pregunta: ¿Qué tipos de trazabilidad vinculan modelos con requisitos textuales?",
     "opciones": [
       "A. refines: el modelo ofrece una vista más específica de un requisito textual.",
       "B. example_of: el modelo ilustra un caso concreto de un requisito abstracto.",
@@ -3130,7 +3130,7 @@
     "solucion": "ABCD"
   },
   {
-    "cuestion": "REQ-T3-114-Pregunta: Sobre las plantillas de requisitos, ¿qué atributos son habituales para dotar de calidad a la documentación?",
+    "cuestion": "REQ-T3-064-Pregunta: Sobre las plantillas de requisitos, ¿qué atributos son habituales para dotar de calidad a la documentación?",
     "opciones": [
       "A. Identificador único.",
       "B. Estado (ej. analizado, aceptado).",
@@ -3140,7 +3140,7 @@
     "solucion": "ABCD"
   },
   {
-    "cuestion": "REQ-T3-115-Pregunta: El criterio de 'Verificabilidad' (capacidad de prueba) implica que:",
+    "cuestion": "REQ-T3-065-Pregunta: El criterio de 'Verificabilidad' (capacidad de prueba) implica que:",
     "opciones": [
       "A. No deben usarse términos subjetivos como 'fácil' o 'rápido' sin métricas.",
       "B. Existe un proceso finito y coste-efectivo para comprobar el cumplimiento.",
@@ -3150,7 +3150,7 @@
     "solucion": "ABC"
   },
   {
-    "cuestion": "REQ-T3-116-Pregunta: En la sección '3.2 Functional Requirements' de la IEEE 830, ¿cómo se pueden organizar los requisitos?",
+    "cuestion": "REQ-T3-066-Pregunta: En la sección '3.2 Functional Requirements' de la IEEE 830, ¿cómo se pueden organizar los requisitos?",
     "opciones": [
       "A. Por modo de operación del sistema.",
       "B. Por clases de usuario.",
@@ -3160,7 +3160,7 @@
     "solucion": "ABC"
   },
   {
-    "cuestion": "REQ-T3-117-Pregunta: ¿A qué sección del estándar IEEE 830 corresponden las 'Assumptions and dependencies' (Suposiciones y dependencias)?",
+    "cuestion": "REQ-T3-067-Pregunta: ¿A qué sección del estándar IEEE 830 corresponden las 'Assumptions and dependencies' (Suposiciones y dependencias)?",
     "opciones": [
       "A. 1. Introduction.",
       "B. 2. Overall Description.",
@@ -3170,7 +3170,7 @@
     "solucion": "BD"
   },
   {
-    "cuestion": "REQ-T3-118-Pregunta: Sobre el criterio de 'Completitud' (Completeness):",
+    "cuestion": "REQ-T3-068-Pregunta: Sobre el criterio de 'Completitud' (Completeness):",
     "opciones": [
       "A. El documento debe incluir todos los requisitos significativos.",
       "B. Se deben definir las respuestas a todas las entradas posibles.",
@@ -3180,7 +3180,7 @@
     "solucion": "ABCD"
   },
   {
-    "cuestion": "REQ-T3-119-Pregunta: ¿Qué riesgos existen al documentar requisitos SOLO con modelos conceptuales?",
+    "cuestion": "REQ-T3-069-Pregunta: ¿Qué riesgos existen al documentar requisitos SOLO con modelos conceptuales?",
     "opciones": [
       "A. Falta de comprensión por parte de stakeholders no técnicos.",
       "B. Omisión de detalles que no se pueden representar gráficamente.",
@@ -3190,7 +3190,7 @@
     "solucion": "AB"
   },
   {
-    "cuestion": "REQ-T3-120-Pregunta: La sección '3.1 External Interfaces' debe incluir requisitos sobre:",
+    "cuestion": "REQ-T3-070-Pregunta: La sección '3.1 External Interfaces' debe incluir requisitos sobre:",
     "opciones": [
       "A. User Interfaces (Interfaces de usuario).",
       "B. Hardware Interfaces.",
@@ -3200,7 +3200,7 @@
     "solucion": "ABCD"
   },
   {
-    "cuestion": "REQ-T3-121-Pregunta: ¿Qué tareas comprende la subactividad de 'Documentación de requisitos'?",
+    "cuestion": "REQ-T3-071-Pregunta: ¿Qué tareas comprende la subactividad de 'Documentación de requisitos'?",
     "opciones": [
       "A. Aplicar reglas generales de diseño de documentos (encabezados, autores, etc.).",
       "B. Documentar de acuerdo con reglas específicas para cada artefacto.",
@@ -3210,7 +3210,7 @@
     "solucion": "ABD"
   },
   {
-    "cuestion": "REQ-T3-122-Pregunta: Según la IEEE 830, ¿qué atributos del sistema software se detallan en la sección 3.5?",
+    "cuestion": "REQ-T3-072-Pregunta: Según la IEEE 830, ¿qué atributos del sistema software se detallan en la sección 3.5?",
     "opciones": [
       "A. Fiabilidad (Reliability).",
       "B. Disponibilidad (Availability).",
@@ -3220,7 +3220,7 @@
     "solucion": "ABCD"
   },
   {
-    "cuestion": "REQ-T3-123-Pregunta: Un glosario de términos es vital para:",
+    "cuestion": "REQ-T3-073-Pregunta: Un glosario de términos es vital para:",
     "opciones": [
       "A. Definir términos específicos del dominio del problema.",
       "B. Reducir la ambigüedad léxica.",
@@ -3230,7 +3230,7 @@
     "solucion": "ABC"
   },
   {
-    "cuestion": "REQ-T3-124-Pregunta: ¿Qué significa que una ERS sea 'Modificable'?",
+    "cuestion": "REQ-T3-074-Pregunta: ¿Qué significa que una ERS sea 'Modificable'?",
     "opciones": [
       "A. Que tiene una organización coherente y fácil de usar.",
       "B. Que no es redundante (un mismo requisito no aparece en varios sitios).",
@@ -3240,7 +3240,7 @@
     "solucion": "ABC"
   },
   {
-    "cuestion": "REQ-T3-125-Pregunta: En la relación entre modelos y texto, la trazabilidad 'similar' se aplica a:",
+    "cuestion": "REQ-T3-075-Pregunta: En la relación entre modelos y texto, la trazabilidad 'similar' se aplica a:",
     "opciones": [
       "A. Requisitos que tienen una lógica o contenido parecido.",
       "B. Elementos de modelo que representan la misma función.",
@@ -3250,7 +3250,7 @@
     "solucion": "AB"
   },
   {
-    "cuestion": "REQ-T4-06-Pregunta: ¿Cuál es el escenario ideal en la resolución de un conflicto donde todos ven satisfechas sus necesidades?",
+    "cuestion": "REQ-T4-01-Pregunta: ¿Cuál es el escenario ideal en la resolución de un conflicto donde todos ven satisfechas sus necesidades?",
     "opciones": [
       "A. Estrategia de decisión por mayoría.",
       "B. Diferenciación de producto.",
@@ -3260,7 +3260,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "REQ-T4-07-Pregunta: La estructura de 'núcleo común y módulos variables' es característica de la estrategia de:",
+    "cuestion": "REQ-T4-02-Pregunta: La estructura de 'núcleo común y módulos variables' es característica de la estrategia de:",
     "opciones": [
       "A. Diferenciación de producto.",
       "B. Negociación.",
@@ -3270,7 +3270,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "REQ-T4-08-Pregunta: ¿Qué desventaja técnica menciona el material sobre la 'Estrategia de Negociación'?",
+    "cuestion": "REQ-T4-03-Pregunta: ¿Qué desventaja técnica menciona el material sobre la 'Estrategia de Negociación'?",
     "opciones": [
       "A. Que siempre requiere un moderador externo muy caro.",
       "B. Que el compromiso alcanzado puede ser una solución política y no la óptima técnicamente.",
@@ -3280,7 +3280,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "REQ-T4-09-Pregunta: Cuando un conflicto se resuelve mediante un proceso de votación, estamos aplicando una:",
+    "cuestion": "REQ-T4-04-Pregunta: Cuando un conflicto se resuelve mediante un proceso de votación, estamos aplicando una:",
     "opciones": [
       "A. Estrategia de diferenciación.",
       "B. Estrategia de solución creativa.",
@@ -3290,7 +3290,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "REQ-T4-10-Pregunta: ¿Cuál es el objetivo principal de documentar los acuerdos alcanzados en la negociación?",
+    "cuestion": "REQ-T4-05-Pregunta: ¿Cuál es el objetivo principal de documentar los acuerdos alcanzados en la negociación?",
     "opciones": [
       "A. Cobrar suplementos por cada reunión realizada.",
       "B. Sustituir al documento de requisitos del sistema.",
@@ -3300,7 +3300,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "REQ-T4-11-Pregunta: ¿A qué tipo de conflicto corresponde una discrepancia sobre los objetivos de negocio del sistema?",
+    "cuestion": "REQ-T4-06-Pregunta: ¿A qué tipo de conflicto corresponde una discrepancia sobre los objetivos de negocio del sistema?",
     "opciones": [
       "A. Conflicto de intereses.",
       "B. Conflicto de datos.",
@@ -3310,7 +3310,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "REQ-T4-12-Pregunta: ¿Qué técnica busca fomentar la innovación mediante la sinergia grupal en la resolución de conflictos?",
+    "cuestion": "REQ-T4-07-Pregunta: ¿Qué técnica busca fomentar la innovación mediante la sinergia grupal en la resolución de conflictos?",
     "opciones": [
       "A. El prototipado de alta fidelidad.",
       "B. El uso de Workshops.",
@@ -3320,7 +3320,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "REQ-T4-13-Pregunta: Una ventaja clave de la 'Estrategia de Negociación' es que:",
+    "cuestion": "REQ-T4-08-Pregunta: Una ventaja clave de la 'Estrategia de Negociación' es que:",
     "opciones": [
       "A. Es la más rápida de ejecutar en situaciones de crisis.",
       "B. Evita tener que hablar con los stakeholders conflictivos.",
@@ -3330,7 +3330,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "REQ-T4-14-Pregunta: La 'Estrategia de Decisión' se caracteriza habitualmente por la intervención de:",
+    "cuestion": "REQ-T4-09-Pregunta: La 'Estrategia de Decisión' se caracteriza habitualmente por la intervención de:",
     "opciones": [
       "A. Un programador junior.",
       "B. El sastre de la empresa.",
@@ -3340,7 +3340,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "REQ-T4-15-Pregunta: ¿Qué riesgo principal presenta la negociación si las discusiones se alargan demasiado?",
+    "cuestion": "REQ-T4-10-Pregunta: ¿Qué riesgo principal presenta la negociación si las discusiones se alargan demasiado?",
     "opciones": [
       "A. El consumo excesivo de tiempo del proyecto.",
       "B. Que el software se vuelva demasiado rápido.",
@@ -3350,7 +3350,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "REQ-T4-16-Pregunta: En la tipología de conflictos, ¿cuál se debe a interpretaciones diferentes de la información disponible?",
+    "cuestion": "REQ-T4-11-Pregunta: En la tipología de conflictos, ¿cuál se debe a interpretaciones diferentes de la información disponible?",
     "opciones": [
       "A. Conflicto de valores.",
       "B. Conflicto de datos.",
@@ -3360,7 +3360,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "REQ-T4-17-Pregunta: La estrategia que permite al sistema soportar múltiples opciones simultáneamente es:",
+    "cuestion": "REQ-T4-12-Pregunta: La estrategia que permite al sistema soportar múltiples opciones simultáneamente es:",
     "opciones": [
       "A. Estrategia de decisión.",
       "B. Solución creativa.",
@@ -3370,7 +3370,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "REQ-T4-18-Pregunta: Según tus fuentes, ¿qué autor es la referencia principal para los fundamentos de la IR mencionados en la bibliografía del tema 4?",
+    "cuestion": "REQ-T4-13-Pregunta: Según tus fuentes, ¿qué autor es la referencia principal para los fundamentos de la IR mencionados en la bibliografía del tema 4?",
     "opciones": [
       "A. Karl Wiegers.",
       "B. Phillip Laplante.",
@@ -3380,7 +3380,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "REQ-T4-19-Pregunta: El escenario Win-Win implica que las necesidades se satisfacen:",
+    "cuestion": "REQ-T4-14-Pregunta: El escenario Win-Win implica que las necesidades se satisfacen:",
     "opciones": [
       "A. Parcial o totalmente para todos los interesados.",
       "B. Solo para el desarrollador.",
@@ -3390,7 +3390,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "REQ-T4-20-Pregunta: ¿Qué tipo de conflicto surge de diferencias en las creencias personales o éticas de los stakeholders?",
+    "cuestion": "REQ-T4-15-Pregunta: ¿Qué tipo de conflicto surge de diferencias en las creencias personales o éticas de los stakeholders?",
     "opciones": [
       "A. Conflicto de materia.",
       "B. Conflicto de valores.",
@@ -3400,7 +3400,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "REQ-T4-21-Pregunta: ¿Cuál de las siguientes es una actividad de negociación mencionada en el índice del tema?",
+    "cuestion": "REQ-T4-16-Pregunta: ¿Cuál de las siguientes es una actividad de negociación mencionada en el índice del tema?",
     "opciones": [
       "A. Programación de prototipos.",
       "B. Validación de interfaces.",
@@ -3410,7 +3410,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "REQ-T4-22-Pregunta: Una solución creativa (tercera vía) busca:",
+    "cuestion": "REQ-T4-17-Pregunta: Una solución creativa (tercera vía) busca:",
     "opciones": [
       "A. Elegir la opción más barata.",
       "B. Imponer la visión del analista jefe.",
@@ -3420,7 +3420,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "REQ-T4-23-Pregunta: ¿Qué subactividad se encarga de identificar qué o quién originó una disputa?",
+    "cuestion": "REQ-T4-18-Pregunta: ¿Qué subactividad se encarga de identificar qué o quién originó una disputa?",
     "opciones": [
       "A. Analizar las causas subyacentes.",
       "B. Documentación de acuerdos.",
@@ -3430,7 +3430,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "REQ-T4-24-Pregunta: En la diferenciación de producto, los elementos que varían según la necesidad se denominan:",
+    "cuestion": "REQ-T4-19-Pregunta: En la diferenciación de producto, los elementos que varían según la necesidad se denominan:",
     "opciones": [
       "A. Núcleo base.",
       "B. Módulos variables o variantes.",
@@ -3440,7 +3440,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "REQ-T4-25-Pregunta: ¿Qué beneficio aporta la negociación a la relación de trabajo?",
+    "cuestion": "REQ-T4-20-Pregunta: ¿Qué beneficio aporta la negociación a la relación de trabajo?",
     "opciones": [
       "A. Permite despedir a los empleados menos productivos.",
       "B. Reduce el número de correos electrónicos.",
@@ -3450,7 +3450,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "REQ-T4-26-Pregunta: ¿Cuál es una característica de la 'Estrategia de Decisión'?",
+    "cuestion": "REQ-T4-21-Pregunta: ¿Cuál es una característica de la 'Estrategia de Decisión'?",
     "opciones": [
       "A. Se basa en el consenso absoluto de todos los stakeholders.",
       "B. Requiere crear dos sistemas diferentes.",
@@ -3460,7 +3460,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "REQ-T4-27-Pregunta: ¿Qué tipo de comunicación debe fomentarse para resolver conflictos satisfactoriamente?",
+    "cuestion": "REQ-T4-22-Pregunta: ¿Qué tipo de comunicación debe fomentarse para resolver conflictos satisfactoriamente?",
     "opciones": [
       "A. Comunicación constructiva.",
       "B. Comunicación unidireccional y jerárquica.",
@@ -3470,7 +3470,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "REQ-T4-28-Pregunta: Los conflictos de 'relación' suelen estar causados por:",
+    "cuestion": "REQ-T4-23-Pregunta: Los conflictos de 'relación' suelen estar causados por:",
     "opciones": [
       "A. Errores en la base de datos SQL.",
       "B. Percepciones negativas o falta de química entre personas.",
@@ -3480,7 +3480,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "REQ-T4-29-Pregunta: ¿Qué se debe hacer tras alcanzar un acuerdo en una sesión de negociación?",
+    "cuestion": "REQ-T4-24-Pregunta: ¿Qué se debe hacer tras alcanzar un acuerdo en una sesión de negociación?",
     "opciones": [
       "A. Irse a casa inmediatamente.",
       "B. Borrar todos los borradores anteriores.",
@@ -3490,7 +3490,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "REQ-T4-30-Pregunta: La estrategia de 'Solución Creativa' es especialmente idónea para conflictos de:",
+    "cuestion": "REQ-T4-25-Pregunta: La estrategia de 'Solución Creativa' es especialmente idónea para conflictos de:",
     "opciones": [
       "A. Presupuesto hardware.",
       "B. Versiones de compilador.",
@@ -3500,7 +3500,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "REQ-T4-31-Pregunta: ¿Cuál es un objetivo fundamental del Tema 4?",
+    "cuestion": "REQ-T4-26-Pregunta: ¿Cuál es un objetivo fundamental del Tema 4?",
     "opciones": [
       "A. Identificar y resolver conflictos entre los stakeholders.",
       "B. Aprender a programar en Java.",
@@ -3510,7 +3510,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "REQ-T4-32-Pregunta: Un conflicto de 'Materia' se refiere a desacuerdos sobre:",
+    "cuestion": "REQ-T4-27-Pregunta: Un conflicto de 'Materia' se refiere a desacuerdos sobre:",
     "opciones": [
       "A. La religión de los desarrolladores.",
       "B. Los requisitos u objetos del sistema en sí mismos.",
@@ -3520,7 +3520,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "REQ-T4-33-Pregunta: ¿Qué permite la 'Estrategia de Diferenciación de Producto'?",
+    "cuestion": "REQ-T4-28-Pregunta: ¿Qué permite la 'Estrategia de Diferenciación de Producto'?",
     "opciones": [
       "A. Ignorar las peticiones del cliente minoritario.",
       "B. Elegir una sola opción y descartar la otra para ahorrar costes.",
@@ -3530,7 +3530,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "REQ-T4-34-Pregunta: ¿Qué autor co-escribió 'Requirements Engineering for Software and Systems' mencionado en la bibliografía?",
+    "cuestion": "REQ-T4-29-Pregunta: ¿Qué autor co-escribió 'Requirements Engineering for Software and Systems' mencionado en la bibliografía?",
     "opciones": [
       "A. Klaus Pohl.",
       "B. Mario Muñoz.",
@@ -3540,7 +3540,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "REQ-T4-35-Pregunta: ¿Qué significa que una negociación resulte en un 'escenario Win-Win'?",
+    "cuestion": "REQ-T4-30-Pregunta: ¿Qué significa que una negociación resulte en un 'escenario Win-Win'?",
     "opciones": [
       "A. Que todos los interesados ven satisfechas sus necesidades de alguna forma.",
       "B. Que el desarrollador gana y el cliente pierde.",
@@ -3550,7 +3550,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "REQ-T4-36-Pregunta: En la negociación, una 'solución de compromiso' es frecuentemente una:",
+    "cuestion": "REQ-T4-31-Pregunta: En la negociación, una 'solución de compromiso' es frecuentemente una:",
     "opciones": [
       "A. Solución técnica óptima.",
       "B. Solución política.",
@@ -3560,7 +3560,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "REQ-T4-37-Pregunta: El análisis de conflictos debe considerar factores:",
+    "cuestion": "REQ-T4-32-Pregunta: El análisis de conflictos debe considerar factores:",
     "opciones": [
       "A. Solo presentes.",
       "B. Únicamente económicos.",
@@ -3570,7 +3570,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "REQ-T4-38-Pregunta: ¿A qué categoría de conflicto pertenece el desacuerdo por 'poder desequilibrado'?",
+    "cuestion": "REQ-T4-33-Pregunta: ¿A qué categoría de conflicto pertenece el desacuerdo por 'poder desequilibrado'?",
     "opciones": [
       "A. Conflicto de datos.",
       "B. Conflicto de materia.",
@@ -3580,7 +3580,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "REQ-T4-39-Pregunta: La estrategia de 'Decisión' es útil cuando:",
+    "cuestion": "REQ-T4-34-Pregunta: La estrategia de 'Decisión' es útil cuando:",
     "opciones": [
       "A. El consenso es imposible o se requiere una resolución rápida.",
       "B. Todos están de acuerdo al 100%.",
@@ -3590,7 +3590,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "REQ-T4-40-Pregunta: ¿Cuál es un beneficio de aplicar una 'Estrategia de Solución Creativa'?",
+    "cuestion": "REQ-T4-35-Pregunta: ¿Cuál es un beneficio de aplicar una 'Estrategia de Solución Creativa'?",
     "opciones": [
       "A. Es la técnica más barata.",
       "B. Puede resolver conflictos de valores que parecen irreconciliables.",
@@ -3600,7 +3600,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "REQ-T4-41-Pregunta: En la IR, la negociación es una actividad principal (core activity) situada entre:",
+    "cuestion": "REQ-T4-36-Pregunta: En la IR, la negociación es una actividad principal (core activity) situada entre:",
     "opciones": [
       "A. Diseño y Pruebas.",
       "B. Venta y Despliegue.",
@@ -3610,7 +3610,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "REQ-T4-42-Pregunta: Un conflicto de 'Intereses' suele centrarse en:",
+    "cuestion": "REQ-T4-37-Pregunta: Un conflicto de 'Intereses' suele centrarse en:",
     "opciones": [
       "A. Errores gramaticales en el texto.",
       "B. El color de la interfaz de usuario.",
@@ -3620,7 +3620,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "REQ-T4-43-Pregunta: ¿Qué elemento define el 'objetivo de la estrategia' en el material del Tema 4?",
+    "cuestion": "REQ-T4-38-Pregunta: ¿Qué elemento define el 'objetivo de la estrategia' en el material del Tema 4?",
     "opciones": [
       "A. Lo que se pretende lograr al aplicar dicha técnica de resolución.",
       "B. El precio final del contrato.",
@@ -3630,7 +3630,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "REQ-T4-44-Pregunta: En la estrategia de negociación, ¿cuál es un factor limitante?",
+    "cuestion": "REQ-T4-39-Pregunta: En la estrategia de negociación, ¿cuál es un factor limitante?",
     "opciones": [
       "A. La falta de herramientas CASE.",
       "B. El tiempo disponible para las reuniones.",
@@ -3640,7 +3640,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "REQ-T4-45-Pregunta: ¿Qué tipo de conflicto surge de la mala interpretación de requisitos elicitados?",
+    "cuestion": "REQ-T4-40-Pregunta: ¿Qué tipo de conflicto surge de la mala interpretación de requisitos elicitados?",
     "opciones": [
       "A. Conflicto de relación.",
       "B. Conflicto de valores.",
@@ -3650,7 +3650,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "REQ-T4-46-Pregunta: La diferenciación de producto es ideal cuando:",
+    "cuestion": "REQ-T4-41-Pregunta: La diferenciación de producto es ideal cuando:",
     "opciones": [
       "A. El presupuesto es muy bajo.",
       "B. Solo hay un stakeholder involucrado.",
@@ -3660,7 +3660,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "REQ-T4-47-Pregunta: Una ventaja de la intervención de autoridad en la 'Estrategia de Decisión' es:",
+    "cuestion": "REQ-T4-42-Pregunta: Una ventaja de la intervención de autoridad en la 'Estrategia de Decisión' es:",
     "opciones": [
       "A. La rapidez en la toma de la decisión.",
       "B. La mejora de la relación entre empleados.",
@@ -3670,7 +3670,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "REQ-T4-48-Pregunta: ¿Qué técnica se menciona para capturar opiniones subjetivas y resolver percepciones?",
+    "cuestion": "REQ-T4-43-Pregunta: ¿Qué técnica se menciona para capturar opiniones subjetivas y resolver percepciones?",
     "opciones": [
       "A. Auditoría de código.",
       "B. Focus Groups.",
@@ -3680,7 +3680,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "REQ-T4-49-Pregunta: En la tipología de conflictos, ¿cuál se asocia a las 'creencias'?",
+    "cuestion": "REQ-T4-44-Pregunta: En la tipología de conflictos, ¿cuál se asocia a las 'creencias'?",
     "opciones": [
       "A. Materia.",
       "B. Estructura.",
@@ -3690,7 +3690,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "REQ-T4-50-Pregunta: ¿Cuál es un riesgo de NO analizar las causas de los conflictos?",
+    "cuestion": "REQ-T4-45-Pregunta: ¿Cuál es un riesgo de NO analizar las causas de los conflictos?",
     "opciones": [
       "A. Que el servidor consuma menos energía.",
       "B. Que el cliente pague la factura antes.",
@@ -3700,7 +3700,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "REQ-T4-51-Pregunta: ¿Qué estrategia de resolución es más probable que debilite la confianza de los 'perdedores' de una votación?",
+    "cuestion": "REQ-T4-46-Pregunta: ¿Qué estrategia de resolución es más probable que debilite la confianza de los 'perdedores' de una votación?",
     "opciones": [
       "A. Estrategia de Decisión.",
       "B. Solución creativa.",
@@ -3710,7 +3710,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "REQ-T4-52-Pregunta: El 'compromiso' (trade-off) es el elemento central de:",
+    "cuestion": "REQ-T4-47-Pregunta: El 'compromiso' (trade-off) es el elemento central de:",
     "opciones": [
       "A. La estrategia de decisión por autoridad.",
       "B. La estrategia de negociación.",
@@ -3720,7 +3720,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "REQ-T4-53-Pregunta: ¿Qué sección del material del Tema 4 aborda las ventajas y desventajas de las estrategias?",
+    "cuestion": "REQ-T4-48-Pregunta: ¿Qué sección del material del Tema 4 aborda las ventajas y desventajas de las estrategias?",
     "opciones": [
       "A. Introducción.",
       "B. Bibliografía.",
@@ -3730,7 +3730,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "REQ-T4-54-Pregunta: ¿Qué tipo de conflicto se soluciona mejor aclarando la información técnica?",
+    "cuestion": "REQ-T4-49-Pregunta: ¿Qué tipo de conflicto se soluciona mejor aclarando la información técnica?",
     "opciones": [
       "A. Conflicto de relación.",
       "B. Conflicto de valores.",
@@ -3740,7 +3740,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "REQ-T4-55-Pregunta: La diferenciación de producto requiere definir un 'núcleo común' para:",
+    "cuestion": "REQ-T4-50-Pregunta: La diferenciación de producto requiere definir un 'núcleo común' para:",
     "opciones": [
       "A. Maximizar la reutilización y consistencia del sistema base.",
       "B. Aumentar el coste del sistema.",
@@ -3750,7 +3750,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "REQ-T4-56-Pregunta: ¿Qué técnica es ideal para obtener un 'compromiso compartido sobre el sistema'?",
+    "cuestion": "REQ-T4-51-Pregunta: ¿Qué técnica es ideal para obtener un 'compromiso compartido sobre el sistema'?",
     "opciones": [
       "A. Entrevista estructurada por separado.",
       "B. Workshop grupal.",
@@ -3760,7 +3760,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "REQ-T4-57-Pregunta: Un conflicto sobre 'quién tiene la última palabra' es un conflicto:",
+    "cuestion": "REQ-T4-52-Pregunta: Un conflicto sobre 'quién tiene la última palabra' es un conflicto:",
     "opciones": [
       "A. De datos.",
       "B. De materia funcional.",
@@ -3770,7 +3770,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "REQ-T4-58-Pregunta: La 'tercera vía' es sinónimo de:",
+    "cuestion": "REQ-T4-53-Pregunta: La 'tercera vía' es sinónimo de:",
     "opciones": [
       "A. Decisión por mayoría.",
       "B. Ignorar el problema.",
@@ -3780,7 +3780,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "REQ-T4-59-Pregunta: ¿Qué actividad rodea a la negociación en el marco de trabajo de la IR?",
+    "cuestion": "REQ-T4-54-Pregunta: ¿Qué actividad rodea a la negociación en el marco de trabajo de la IR?",
     "opciones": [
       "A. Validación (actividad transversal).",
       "B. Programación técnica.",
@@ -3790,7 +3790,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "REQ-T4-60-Pregunta: ¿Qué estrategia de resolución es más técnica y menos 'política' en su origen estructural?",
+    "cuestion": "REQ-T4-55-Pregunta: ¿Qué estrategia de resolución es más técnica y menos 'política' en su origen estructural?",
     "opciones": [
       "A. Decisión por autoridad.",
       "B. Diferenciación de producto.",
@@ -3800,7 +3800,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "REQ-T4-61-Pregunta: ¿A qué dimensión de los objetivos de la IR corresponde 'resolver conflictos'?",
+    "cuestion": "REQ-T4-56-Pregunta: ¿A qué dimensión de los objetivos de la IR corresponde 'resolver conflictos'?",
     "opciones": [
       "A. Documentación.",
       "B. Contenido.",
@@ -3810,7 +3810,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "REQ-T4-62-Pregunta: Un desacuerdo sobre 'cuántos libros puede prestar la biblioteca' es un conflicto de:",
+    "cuestion": "REQ-T4-57-Pregunta: Un desacuerdo sobre 'cuántos libros puede prestar la biblioteca' es un conflicto de:",
     "opciones": [
       "A. Valores personales.",
       "B. Datos técnicos erróneos.",
@@ -3820,7 +3820,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "REQ-T4-63-Pregunta: ¿Qué estrategia puede generar un sistema más complejo de mantener al tener múltiples variantes?",
+    "cuestion": "REQ-T4-58-Pregunta: ¿Qué estrategia puede generar un sistema más complejo de mantener al tener múltiples variantes?",
     "opciones": [
       "A. Diferenciación de producto.",
       "B. Decisión.",
@@ -3830,7 +3830,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "REQ-T4-64-Pregunta: El análisis de conflictos busca identificar causas:",
+    "cuestion": "REQ-T4-59-Pregunta: El análisis de conflictos busca identificar causas:",
     "opciones": [
       "A. Superciales.",
       "B. Subyacentes.",
@@ -3840,7 +3840,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "REQ-T4-65-Pregunta: ¿Cuál es la bibliografía 'complementaria' citada irónicamente en tus fuentes?",
+    "cuestion": "REQ-T4-60-Pregunta: ¿Cuál es la bibliografía 'complementaria' citada irónicamente en tus fuentes?",
     "opciones": [
       "A. Klaus Pohl.",
       "B. Phillip Laplante.",
@@ -3850,7 +3850,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "REQ-T4-66-Pregunta: ¿Qué estrategia de resolución se basa en que 'el tiempo es oro'?",
+    "cuestion": "REQ-T4-61-Pregunta: ¿Qué estrategia de resolución se basa en que 'el tiempo es oro'?",
     "opciones": [
       "A. Negociación lenta.",
       "B. Diferenciación compleja.",
@@ -3860,7 +3860,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "REQ-T4-67-Pregunta: En la tipología de Pohl, los conflictos de 'Valores' son:",
+    "cuestion": "REQ-T4-62-Pregunta: En la tipología de Pohl, los conflictos de 'Valores' son:",
     "opciones": [
       "A. Difíciles de resolver porque tocan convicciones personales.",
       "B. Los más fáciles de resolver.",
@@ -3870,7 +3870,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "REQ-T4-68-Pregunta: ¿Qué permite transformar las diferencias en soluciones integradoras?",
+    "cuestion": "REQ-T4-63-Pregunta: ¿Qué permite transformar las diferencias en soluciones integradoras?",
     "opciones": [
       "A. El uso de la fuerza.",
       "B. La comunicación constructiva.",
@@ -3880,7 +3880,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "REQ-T4-69-Pregunta: La estrategia de solución creativa es 'creativa' porque:",
+    "cuestion": "REQ-T4-64-Pregunta: La estrategia de solución creativa es 'creativa' porque:",
     "opciones": [
       "A. El analista usa muchos colores en los diagramas.",
       "B. El código fuente es muy original.",
@@ -3890,7 +3890,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "REQ-T4-70-Pregunta: El éxito de la 'Negociación' depende en gran medida de:",
+    "cuestion": "REQ-T4-65-Pregunta: El éxito de la 'Negociación' depende en gran medida de:",
     "opciones": [
       "A. La velocidad de la CPU.",
       "B. El lenguaje de programación utilizado.",
@@ -3900,7 +3900,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "REQ-T4-71-Pregunta: ¿Qué autor propone el marco de tres dimensiones (Contenido, Documentación, Acuerdo)?",
+    "cuestion": "REQ-T4-66-Pregunta: ¿Qué autor propone el marco de tres dimensiones (Contenido, Documentación, Acuerdo)?",
     "opciones": [
       "A. Klaus Pohl.",
       "B. Karl Wiegers.",
@@ -3910,7 +3910,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "REQ-T4-72-Pregunta: ¿Cuál es un riesgo de la 'Diferenciación de Producto'?",
+    "cuestion": "REQ-T4-67-Pregunta: ¿Cuál es un riesgo de la 'Diferenciación de Producto'?",
     "opciones": [
       "A. Que el sistema sea demasiado sencillo.",
       "B. El aumento de costes de desarrollo y mantenimiento.",
@@ -3920,7 +3920,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "REQ-T4-73-Pregunta: Un conflicto sobre 'si el sistema debe ser web o escritorio' es típicamente de:",
+    "cuestion": "REQ-T4-68-Pregunta: Un conflicto sobre 'si el sistema debe ser web o escritorio' es típicamente de:",
     "opciones": [
       "A. Valores religiosos.",
       "B. Relación personal.",
@@ -3930,7 +3930,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "REQ-T4-74-Pregunta: ¿Qué estrategia de resolución es la MENOS participativa?",
+    "cuestion": "REQ-T4-69-Pregunta: ¿Qué estrategia de resolución es la MENOS participativa?",
     "opciones": [
       "A. Negociación.",
       "B. Solución creativa.",
@@ -3940,7 +3940,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "REQ-T4-75-Pregunta: ¿A qué subactividad de la validación pertenece 'comprobar si hay conflictos identificados'?",
+    "cuestion": "REQ-T4-70-Pregunta: ¿A qué subactividad de la validación pertenece 'comprobar si hay conflictos identificados'?",
     "opciones": [
       "A. Validación de los artefactos creados.",
       "B. Validación del contexto.",
@@ -3950,7 +3950,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "REQ-T4-76-Pregunta: El objetivo de la estrategia de negociación es lograr un acuerdo:",
+    "cuestion": "REQ-T4-71-Pregunta: El objetivo de la estrategia de negociación es lograr un acuerdo:",
     "opciones": [
       "A. Forzado.",
       "B. Mutuamente aceptable.",
@@ -3960,7 +3960,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "REQ-T4-77-Pregunta: ¿Qué tipo de conflicto surge si un usuario odia al ingeniero de requisitos por un motivo personal previo?",
+    "cuestion": "REQ-T4-72-Pregunta: ¿Qué tipo de conflicto surge si un usuario odia al ingeniero de requisitos por un motivo personal previo?",
     "opciones": [
       "A. Conflicto de materia.",
       "B. Conflicto de datos.",
@@ -3970,7 +3970,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "REQ-T4-78-Pregunta: La diferenciación de producto permite evitar:",
+    "cuestion": "REQ-T4-73-Pregunta: La diferenciación de producto permite evitar:",
     "opciones": [
       "A. Pagar licencias de software.",
       "B. Escribir código fuente.",
@@ -3980,7 +3980,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "REQ-T4-79-Pregunta: ¿Quiénes suelen participar en una votación dentro de la 'Estrategia de Decisión'?",
+    "cuestion": "REQ-T4-74-Pregunta: ¿Quiénes suelen participar en una votación dentro de la 'Estrategia de Decisión'?",
     "opciones": [
       "A. Los stakeholders afectados por el conflicto.",
       "B. Personas ajenas a la empresa.",
@@ -3990,7 +3990,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "REQ-T4-80-Pregunta: Un beneficio colateral de la negociación es que:",
+    "cuestion": "REQ-T4-75-Pregunta: Un beneficio colateral de la negociación es que:",
     "opciones": [
       "A. Hace que el hardware dure más años.",
       "B. Mejora la comprensión del dominio del problema por parte de todos.",
@@ -4000,7 +4000,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "REQ-T4-81-Pregunta: ¿Qué autor menciona que la IR cuesta un 15% del desarrollo en el Tema 1 (repasado en el T4)?",
+    "cuestion": "REQ-T4-76-Pregunta: ¿Qué autor menciona que la IR cuesta un 15% del desarrollo en el Tema 1 (repasado en el T4)?",
     "opciones": [
       "A. Klaus Pohl.",
       "B. Karl Wiegers.",
@@ -4010,7 +4010,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "REQ-T4-82-Pregunta: ¿Qué tipo de conflicto se asocia a 'metas incompatibles'?",
+    "cuestion": "REQ-T4-77-Pregunta: ¿Qué tipo de conflicto se asocia a 'metas incompatibles'?",
     "opciones": [
       "A. Conflicto de datos.",
       "B. Conflicto de relación.",
@@ -4020,7 +4020,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "REQ-T4-83-Pregunta: La estrategia de solución creativa se considera una:",
+    "cuestion": "REQ-T4-78-Pregunta: La estrategia de solución creativa se considera una:",
     "opciones": [
       "A. Solución integradora (integrative solution).",
       "B. Rendición incondicional.",
@@ -4030,7 +4030,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "REQ-T4-84-Pregunta: ¿Qué documento se ve afectado directamente por los resultados de la negociación?",
+    "cuestion": "REQ-T4-79-Pregunta: ¿Qué documento se ve afectado directamente por los resultados de la negociación?",
     "opciones": [
       "A. La nómina del sastre.",
       "B. La especificación de requisitos del sistema (ERS).",
@@ -4040,7 +4040,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "REQ-T4-85-Pregunta: ¿Cuál es el primer paso antes de intentar resolver un conflicto?",
+    "cuestion": "REQ-T4-80-Pregunta: ¿Cuál es el primer paso antes de intentar resolver un conflicto?",
     "opciones": [
       "A. Firmar la aceptación final.",
       "B. Implementar la solución en Java.",
@@ -4050,7 +4050,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "REQ-T4-86-Pregunta: Un conflicto sobre 'la precisión de una estadística de uso' es de:",
+    "cuestion": "REQ-T4-81-Pregunta: Un conflicto sobre 'la precisión de una estadística de uso' es de:",
     "opciones": [
       "A. Valores.",
       "B. Materia.",
@@ -4060,7 +4060,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "REQ-T4-87-Pregunta: La estrategia de decisión suele generar:",
+    "cuestion": "REQ-T4-82-Pregunta: La estrategia de decisión suele generar:",
     "opciones": [
       "A. Ganadores y perdedores claros.",
       "B. Escenarios Win-Win puros.",
@@ -4070,7 +4070,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "REQ-T4-88-Pregunta: El objetivo de la 'comunicación constructiva' es:",
+    "cuestion": "REQ-T4-83-Pregunta: El objetivo de la 'comunicación constructiva' es:",
     "opciones": [
       "A. Hablar el menor tiempo posible.",
       "B. Transformar las diferencias en soluciones positivas para el proyecto.",
@@ -4080,7 +4080,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "REQ-T4-89-Pregunta: ¿Cuál de estos es un 'stakeholder' habitual en la negociación?",
+    "cuestion": "REQ-T4-84-Pregunta: ¿Cuál de estos es un 'stakeholder' habitual en la negociación?",
     "opciones": [
       "A. El fabricante de los cables de red.",
       "B. Los familiares de los desarrolladores.",
@@ -4090,7 +4090,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "REQ-T4-90-Pregunta: En la negociación, el 'moderador neutral' es vital para:",
+    "cuestion": "REQ-T4-85-Pregunta: En la negociación, el 'moderador neutral' es vital para:",
     "opciones": [
       "A. Elegir siempre la opción más barata.",
       "B. Castigar a los que no están de acuerdo.",
@@ -4100,7 +4100,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "REQ-T4-91-Pregunta: Un conflicto sobre 'la prioridad de un requisito de seguridad' es de:",
+    "cuestion": "REQ-T4-86-Pregunta: Un conflicto sobre 'la prioridad de un requisito de seguridad' es de:",
     "opciones": [
       "A. Intereses/Materia.",
       "B. Datos numéricos.",
@@ -4110,7 +4110,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "REQ-T4-92-Pregunta: ¿Qué estrategia requiere una mayor capacidad analítica para encontrar la 'tercera vía'?",
+    "cuestion": "REQ-T4-87-Pregunta: ¿Qué estrategia requiere una mayor capacidad analítica para encontrar la 'tercera vía'?",
     "opciones": [
       "A. Decisión.",
       "B. Solución creativa.",
@@ -4120,7 +4120,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "REQ-T4-93-Pregunta: ¿Qué significa 'integrar' en el contexto de soluciones para el proyecto?",
+    "cuestion": "REQ-T4-88-Pregunta: ¿Qué significa 'integrar' en el contexto de soluciones para el proyecto?",
     "opciones": [
       "A. Borrar una de las dos opciones.",
       "B. Instalar el software en Windows.",
@@ -4130,7 +4130,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "REQ-T4-94-Pregunta: Un conflicto estructural se resuelve habitualmente:",
+    "cuestion": "REQ-T4-89-Pregunta: Un conflicto estructural se resuelve habitualmente:",
     "opciones": [
       "A. Comprando más RAM.",
       "B. Usando un glosario de términos.",
@@ -4140,7 +4140,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "REQ-T4-95-Pregunta: ¿Cuál de estos NO es un resultado de resolución de conflictos mencionado?",
+    "cuestion": "REQ-T4-90-Pregunta: ¿Cuál de estos NO es un resultado de resolución de conflictos mencionado?",
     "opciones": [
       "A. Cancelación definitiva del hardware.",
       "B. Win-Win.",
@@ -4150,7 +4150,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "REQ-T4-96-Pregunta: ¿Qué tipo de conflicto se produce si hay dos normas legales contradictorias?",
+    "cuestion": "REQ-T4-91-Pregunta: ¿Qué tipo de conflicto se produce si hay dos normas legales contradictorias?",
     "opciones": [
       "A. Datos.",
       "B. Materia/Normativa.",
@@ -4160,7 +4160,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "REQ-T4-97-Pregunta: En la negociación, el 'tiempo de personal' se considera un:",
+    "cuestion": "REQ-T4-92-Pregunta: En la negociación, el 'tiempo de personal' se considera un:",
     "opciones": [
       "A. Beneficio gratuito.",
       "B. Atributo de calidad del código.",
@@ -4170,7 +4170,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "REQ-T4-98-Pregunta: La estrategia de diferenciación permite 'permitir que el sistema soporte ambas' opciones mediante:",
+    "cuestion": "REQ-T4-93-Pregunta: La estrategia de diferenciación permite 'permitir que el sistema soporte ambas' opciones mediante:",
     "opciones": [
       "A. Copias de seguridad diarias.",
       "B. Diferentes lenguajes de programación.",
@@ -4180,7 +4180,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "REQ-T4-99-Pregunta: ¿Cuál es la principal motivación para negociar los requisitos?",
+    "cuestion": "REQ-T4-94-Pregunta: ¿Cuál es la principal motivación para negociar los requisitos?",
     "opciones": [
       "A. Evitar el fracaso del sistema por falta de acuerdo entre los interesados.",
       "B. Cumplir con la ley de protección de datos.",
@@ -4190,7 +4190,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "REQ-T4-100-Pregunta: Según el material, ¿qué actividad es 'ideal para resolver conflictos' de forma grupal?",
+    "cuestion": "REQ-T4-095-Pregunta: Según el material, ¿qué actividad es 'ideal para resolver conflictos' de forma grupal?",
     "opciones": [
       "A. La observación pasiva.",
       "B. El Workshop.",
@@ -4200,7 +4200,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "REQ-T4-101-Pregunta: ¿A qué sección de la ERS afecta el resultado de la negociación según el estándar IEEE 830?",
+    "cuestion": "REQ-T4-096-Pregunta: ¿A qué sección de la ERS afecta el resultado de la negociación según el estándar IEEE 830?",
     "opciones": [
       "A. Introducción.",
       "B. Bibliografía.",
@@ -4210,7 +4210,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "REQ-T4-102-Pregunta: Un conflicto sobre 'la estética del logo' es típicamente de:",
+    "cuestion": "REQ-T4-097-Pregunta: Un conflicto sobre 'la estética del logo' es típicamente de:",
     "opciones": [
       "A. Datos.",
       "B. Valores éticos.",
@@ -4220,7 +4220,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "REQ-T4-103-Pregunta: ¿Qué estrategia de resolución es más probable que deje a una de las partes insatisfecha?",
+    "cuestion": "REQ-T4-098-Pregunta: ¿Qué estrategia de resolución es más probable que deje a una de las partes insatisfecha?",
     "opciones": [
       "A. Estrategia de Decisión (por autoridad).",
       "B. Diferenciación de producto.",
@@ -4230,7 +4230,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "REQ-T4-104-Pregunta: La sinergia grupal es un beneficio directo de:",
+    "cuestion": "REQ-T4-099-Pregunta: La sinergia grupal es un beneficio directo de:",
     "opciones": [
       "A. El trabajo individual en casa.",
       "B. Las técnicas grupales como Workshops o Focus Groups.",
@@ -4240,7 +4240,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "REQ-T4-105-Pregunta: ¿Cuál es el resultado final de una negociación exitosa?",
+    "cuestion": "REQ-T4-100-Pregunta: ¿Cuál es el resultado final de una negociación exitosa?",
     "opciones": [
       "A. El despido del programador.",
       "B. La compra de un nuevo servidor.",
@@ -4250,7 +4250,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "REQ-T4-106-Pregunta: Según los objetivos del Tema 4, ¿qué tareas se deben realizar respecto a los conflictos?",
+    "cuestion": "REQ-T4-101-Pregunta: Según los objetivos del Tema 4, ¿qué tareas se deben realizar respecto a los conflictos?",
     "opciones": [
       "A. Identificarlos.",
       "B. Analizar sus causas subyacentes.",
@@ -4260,7 +4260,7 @@
     "solucion": "ABC"
   },
   {
-    "cuestion": "REQ-T4-107-Pregunta: ¿Cuáles son tipologías de conflicto mencionadas en tus fuentes?",
+    "cuestion": "REQ-T4-102-Pregunta: ¿Cuáles son tipologías de conflicto mencionadas en tus fuentes?",
     "opciones": [
       "A. Conflicto de materia.",
       "B. Conflicto de datos.",
@@ -4270,7 +4270,7 @@
     "solucion": "ABCD"
   },
   {
-    "cuestion": "REQ-T4-108-Pregunta: Sobre la 'Estrategia de Negociación', ¿qué afirmaciones son correctas?",
+    "cuestion": "REQ-T4-103-Pregunta: Sobre la 'Estrategia de Negociación', ¿qué afirmaciones son correctas?",
     "opciones": [
       "A. Suele resultar en un escenario Win-Win.",
       "B. Fortalece las relaciones de trabajo y la confianza.",
@@ -4280,7 +4280,7 @@
     "solucion": "ABC"
   },
   {
-    "cuestion": "REQ-T4-109-Pregunta: ¿Qué caracteriza a la 'Estrategia de Diferenciación de Producto'?",
+    "cuestion": "REQ-T4-104-Pregunta: ¿Qué caracteriza a la 'Estrategia de Diferenciación de Producto'?",
     "opciones": [
       "A. Resuelve el conflicto creando variantes del producto.",
       "B. El sistema soporta ambas opciones mediante configuraciones.",
@@ -4290,7 +4290,7 @@
     "solucion": "ABC"
   },
   {
-    "cuestion": "REQ-T4-110-Pregunta: En la 'Estrategia de Decisión', el conflicto puede resolverse mediante:",
+    "cuestion": "REQ-T4-105-Pregunta: En la 'Estrategia de Decisión', el conflicto puede resolverse mediante:",
     "opciones": [
       "A. Intervención de una autoridad superior.",
       "B. Proceso de votación entre los afectados.",
@@ -4300,7 +4300,7 @@
     "solucion": "AB"
   },
   {
-    "cuestion": "REQ-T4-111-Pregunta: ¿Qué beneficios aportan los Workshops en el contexto de la negociación?",
+    "cuestion": "REQ-T4-106-Pregunta: ¿Qué beneficios aportan los Workshops en el contexto de la negociación?",
     "opciones": [
       "A. Consenso rápido entre diversos interesados.",
       "B. Validación colectiva de ideas en tiempo real.",
@@ -4310,7 +4310,7 @@
     "solucion": "ABC"
   },
   {
-    "cuestion": "REQ-T4-112-Pregunta: Un conflicto de 'Datos' puede originarse por:",
+    "cuestion": "REQ-T4-107-Pregunta: Un conflicto de 'Datos' puede originarse por:",
     "opciones": [
       "A. Falta de información.",
       "B. Información errónea.",
@@ -4320,7 +4320,7 @@
     "solucion": "ABC"
   },
   {
-    "cuestion": "REQ-T4-113-Pregunta: Sobre el escenario 'Win-Win', ¿qué es cierto?",
+    "cuestion": "REQ-T4-108-Pregunta: Sobre el escenario 'Win-Win', ¿qué es cierto?",
     "opciones": [
       "A. Es el escenario ideal de resolución.",
       "B. Todos los interesados ven satisfechas sus necesidades.",
@@ -4330,7 +4330,7 @@
     "solucion": "ABC"
   },
   {
-    "cuestion": "REQ-T4-114-Pregunta: ¿Qué elementos debe describir una estrategia de resolución de conflictos según el material?",
+    "cuestion": "REQ-T4-109-Pregunta: ¿Qué elementos debe describir una estrategia de resolución de conflictos según el material?",
     "opciones": [
       "A. El objetivo de la estrategia.",
       "B. Un ejemplo ilustrativo.",
@@ -4340,7 +4340,7 @@
     "solucion": "ABCD"
   },
   {
-    "cuestion": "REQ-T4-115-Pregunta: ¿Qué aspectos definen a los 'Conflictos de Valores'?",
+    "cuestion": "REQ-T4-110-Pregunta: ¿Qué aspectos definen a los 'Conflictos de Valores'?",
     "opciones": [
       "A. Son discrepancias sobre creencias o criterios éticos.",
       "B. Son frecuentemente muy difíciles de resolver.",
@@ -4350,7 +4350,7 @@
     "solucion": "ABD"
   },
   {
-    "cuestion": "REQ-T4-116-Pregunta: Respecto a las causas de los conflictos, se deben analizar factores:",
+    "cuestion": "REQ-T4-111-Pregunta: Respecto a las causas de los conflictos, se deben analizar factores:",
     "opciones": [
       "A. Pasados.",
       "B. Presentes.",
@@ -4360,7 +4360,7 @@
     "solucion": "ABC"
   },
   {
-    "cuestion": "REQ-T4-117-Pregunta: La 'Estrategia de Solución Creativa' implica:",
+    "cuestion": "REQ-T4-112-Pregunta: La 'Estrategia de Solución Creativa' implica:",
     "opciones": [
       "A. Una 'tercera vía'.",
       "B. Transformar el conflicto en una nueva solución integradora.",
@@ -4370,7 +4370,7 @@
     "solucion": "ABD"
   },
   {
-    "cuestion": "REQ-T4-118-Pregunta: ¿Qué riesgos presenta un Workshop de resolución de conflictos?",
+    "cuestion": "REQ-T4-113-Pregunta: ¿Qué riesgos presenta un Workshop de resolución de conflictos?",
     "opciones": [
       "A. Fenómeno del 'pensamiento de grupo'.",
       "B. Demanda un esfuerzo muy alto en logística y tiempo.",
@@ -4380,7 +4380,7 @@
     "solucion": "ABD"
   },
   {
-    "cuestion": "REQ-T4-119-Pregunta: ¿Qué se pretende lograr con la actividad transversal de 'Validación' en la negociación?",
+    "cuestion": "REQ-T4-114-Pregunta: ¿Qué se pretende lograr con la actividad transversal de 'Validación' en la negociación?",
     "opciones": [
       "A. Que los acuerdos sean entendidos y aceptados.",
       "B. Que el documento de acuerdos cumpla las reglas de formato.",
@@ -4390,7 +4390,7 @@
     "solucion": "ABC"
   },
   {
-    "cuestion": "REQ-T4-120-Pregunta: Son actividades principales (Core Activities) mencionadas en el marco de la IR:",
+    "cuestion": "REQ-T4-115-Pregunta: Son actividades principales (Core Activities) mencionadas en el marco de la IR:",
     "opciones": [
       "A. Elicitation (Elicitación).",
       "B. Documentation (Documentación).",
@@ -4400,7 +4400,7 @@
     "solucion": "ABC"
   },
   {
-    "cuestion": "REQ-T4-121-Pregunta: ¿Cuáles de estas son 'desventajas' citadas de la negociación?",
+    "cuestion": "REQ-T4-116-Pregunta: ¿Cuáles de estas son 'desventajas' citadas de la negociación?",
     "opciones": [
       "A. Las discusiones pueden alargarse indefinidamente.",
       "B. El compromiso no siempre es la solución técnica óptima.",
@@ -4410,7 +4410,7 @@
     "solucion": "ABD"
   },
   {
-    "cuestion": "REQ-T4-122-Pregunta: ¿Qué fuentes bibliográficas se citan en el Tema 4?",
+    "cuestion": "REQ-T4-117-Pregunta: ¿Qué fuentes bibliográficas se citan en el Tema 4?",
     "opciones": [
       "A. Klaus Pohl (2010 o 2022).",
       "B. Phillip A. Laplante (2009).",
@@ -4420,7 +4420,7 @@
     "solucion": "ABC"
   },
   {
-    "cuestion": "REQ-T4-123-Pregunta: Un conflicto 'Estructural' puede deberse a:",
+    "cuestion": "REQ-T4-118-Pregunta: Un conflicto 'Estructural' puede deberse a:",
     "opciones": [
       "A. Poder desequilibrado.",
       "B. Límites de tiempo u organización.",
@@ -4430,7 +4430,7 @@
     "solucion": "ABC"
   },
   {
-    "cuestion": "REQ-T4-124-Pregunta: Para que una sesión de negociación sea efectiva, se requiere:",
+    "cuestion": "REQ-T4-119-Pregunta: Para que una sesión de negociación sea efectiva, se requiere:",
     "opciones": [
       "A. Metas claras.",
       "B. Agenda estructurada.",
@@ -4440,7 +4440,7 @@
     "solucion": "ABC"
   },
   {
-    "cuestion": "REQ-T4-125-Pregunta: ¿Qué facetas del sistema deben estar representadas en un workshop de negociación?",
+    "cuestion": "REQ-T4-120-Pregunta: ¿Qué facetas del sistema deben estar representadas en un workshop de negociación?",
     "opciones": [
       "A. Dominio y Uso.",
       "B. Técnica y Desarrollo.",
@@ -4450,7 +4450,7 @@
     "solucion": "AB"
   },
   {
-    "cuestion": "REQ-T4-126-Pregunta: La documentación de requisitos (repaso necesario para negociar) debe ser:",
+    "cuestion": "REQ-T4-121-Pregunta: La documentación de requisitos (repaso necesario para negociar) debe ser:",
     "opciones": [
       "A. Correcta y completa.",
       "B. Consistente y no ambigua.",
@@ -4460,7 +4460,7 @@
     "solucion": "ABCD"
   },
   {
-    "cuestion": "REQ-T4-127-Pregunta: ¿Qué busca el principio de 'Comunicación Constructiva'?",
+    "cuestion": "REQ-T4-122-Pregunta: ¿Qué busca el principio de 'Comunicación Constructiva'?",
     "opciones": [
       "A. Fomentar el respeto mutuo.",
       "B. Escuchar activamente a los clientes.",
@@ -4470,7 +4470,7 @@
     "solucion": "ABC"
   },
   {
-    "cuestion": "REQ-T4-128-Pregunta: La diferenciación de producto se estructura mediante:",
+    "cuestion": "REQ-T4-123-Pregunta: La diferenciación de producto se estructura mediante:",
     "opciones": [
       "A. Un núcleo común (common core).",
       "B. Variantes o módulos opcionales.",
@@ -4480,7 +4480,7 @@
     "solucion": "ABD"
   },
   {
-    "cuestion": "REQ-T4-129-Pregunta: El análisis de causas de conflictos identifica factores como:",
+    "cuestion": "REQ-T4-124-Pregunta: El análisis de causas de conflictos identifica factores como:",
     "opciones": [
       "A. Diferencias culturales.",
       "B. Objetivos de negocio contrapuestos.",
@@ -4490,7 +4490,7 @@
     "solucion": "ABCD"
   },
   {
-    "cuestion": "REQ-T4-130-Pregunta: En la tipología de conflictos de materia, se incluyen desacuerdos sobre:",
+    "cuestion": "REQ-T4-125-Pregunta: En la tipología de conflictos de materia, se incluyen desacuerdos sobre:",
     "opciones": [
       "A. Requisitos funcionales.",
       "B. Requisitos de calidad.",
