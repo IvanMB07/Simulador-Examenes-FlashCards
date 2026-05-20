@@ -5902,7 +5902,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T7- 1: No es una obligación de un prestador de servicios de la sociedad de la información, según la LSSI, de informar sobre:",
+    "cuestion": "API-T7-201-Pregunta: No es una obligación de un prestador de servicios de la sociedad de la información, según la LSSI, de informar sobre:",
     "opciones": [
       "A. Las medidas de seguridad utilizadas para gestionar el servicio",
       "B. El número de identificación fiscal del prestador de servicios",
@@ -5912,7 +5912,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T7- 2: Los ordenadores portátiles de una organización sindical que contengan datos personales sobre sus afiliados",
+    "cuestion": "API-T7-202-Pregunta: Los ordenadores portátiles de una organización sindical que contengan datos personales sobre sus afiliados",
     "opciones": [
       "A. No pueden utilizar una contraseña como mecanismo de identificación de usuarios",
       "B. No pueden tener los archivos que contengan dichos datos personales sin cifrar.",
@@ -5922,7 +5922,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T7- 3: NO es necesario el consentimiento de las personas para comunicar datos personales a terceros",
+    "cuestion": "API-T7-203-Pregunta: NO es necesario el consentimiento de las personas para comunicar datos personales a terceros",
     "opciones": [
       "A. Si el tercero cumple toda la legislación relativa a la protección de datos de carácter personal.",
       "B. Si se ha declarado en la Agencia Española de Protección de Datos",
@@ -5932,7 +5932,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T7- 4: Una empresa tiene un listado de todas las empresas de fontanería y fontaneros de una localidad. Esta empresa está obligada",
+    "cuestion": "API-T7-204-Pregunta: Una empresa tiene un listado de todas las empresas de fontanería y fontaneros de una localidad. Esta empresa está obligada",
     "opciones": [
       "A. Aplicar medidas de seguridad de nivel medio",
       "B. Aplicar medidas de seguridad de nivel básico",
@@ -5942,7 +5942,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T7- 5: Un trabajador en una clínica privada utiliza datos personales de los pacientes de la clínica, sin consentimiento de los pacientes ni de la clínica, para realizar un estudio de investigación. Los resultados de la investigación son publicados en una revista científica sin revelar la identidad de los pacientes. En este caso, la Agencia Española de Protección de Datos podría sancionar:",
+    "cuestion": "API-T7-205-Pregunta: Un trabajador en una clínica privada utiliza datos personales de los pacientes de la clínica, sin consentimiento de los pacientes ni de la clínica, para realizar un estudio de investigación. Los resultados de la investigación son publicados en una revista científica sin revelar la identidad de los pacientes. En este caso, la Agencia Española de Protección de Datos podría sancionar:",
     "opciones": [
       "A. La clínica privada",
       "B. La revista científica",
@@ -5952,7 +5952,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T7- 9: El documento de seguridad de un fichero con datos de carácter personal es necesario cuando",
+    "cuestion": "API-T7-206-Pregunta: El documento de seguridad de un fichero con datos de carácter personal es necesario cuando",
     "opciones": [
       "A. El nivel de medidas de seguridad a aplicar en el fichero es básico.",
       "B. Siempre es necesario el documento de seguridad",
@@ -5962,7 +5962,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T7- 7: Una forma INCORRECTA de obtener el consentimiento para la instalación de cookies en un cliente web (suponiendo que se ha informado previamente sobre esa instalación) es",
+    "cuestion": "API-T7-207-Pregunta: Una forma INCORRECTA de obtener el consentimiento para la instalación de cookies en un cliente web (suponiendo que se ha informado previamente sobre esa instalación) es",
     "opciones": [
       "A. Esperar a que el usuario utilice la barra de desplazamiento de una página web",
       "B. Esperar a que el usuario pulse un botón de aceptación la página web",
@@ -5972,7 +5972,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T7- 8: Se incumple el principio de calidad de datos según la LOPD",
+    "cuestion": "API-T7-208-Pregunta: Se incumple el principio de calidad de datos según la LOPD",
     "opciones": [
       "A. If no se informa de la finalidad en la recogida de los datos",
       "B. Si no se aplican las medidas de seguridad adecuadas.",
@@ -5982,7 +5982,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T7- 9_2: Una asociación nacional, sin ánimo de lucro, de apoyo a los enfermos de SIDA y sus familias tiene un registro automatizado de sus afiliados y de los trabajadores de esa asociación. Esa asociación, como mínimo, tiene tratamientos de datos personales que exigen medidas de seguridad de",
+    "cuestion": "API-T7-9-2-Pregunta: Una asociación nacional, sin ánimo de lucro, de apoyo a los enfermos de SIDA y sus familias tiene un registro automatizado de sus afiliados y de los trabajadores de esa asociación. Esa asociación, como mínimo, tiene tratamientos de datos personales que exigen medidas de seguridad de",
     "opciones": [
       "A. Nivel alto",
       "B. Nivel medio",
@@ -5992,7 +5992,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T7- 10: Si una administración pública realiza un tratamiento de datos de carácter personal, cuyo ÚNICO soporte es papel",
+    "cuestion": "API-T7-209-Pregunta: Si una administración pública realiza un tratamiento de datos de carácter personal, cuyo ÚNICO soporte es papel",
     "opciones": [
       "A. De forma obligatoria, debe existir un responsable de seguridad de dicho tratamiento.",
       "B. Debe dar de alta dicho tratamiento en la Agencia Española de Protección de Datos indicando dicha circunstancia.",
@@ -6002,7 +6002,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T7- 11: En una base de datos que contiene programas de ordenador, los derechos de explotación de estos programas expiran",
+    "cuestion": "API-T7-210-Pregunta: En una base de datos que contiene programas de ordenador, los derechos de explotación de estos programas expiran",
     "opciones": [
       "A. A los 85 años",
       "B. Nunca",
@@ -6012,7 +6012,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T7- 12: Un balneario especializado en tratamientos médicos de larga duración está ubicado en medio de una sierra. Por motivos naturales se ha producido un incendio in la sierra que ha destruido completamente el balneario incluyendo todos los sistemas de información, y por tanto, ha perdido todos los datos personales de los pacientes incluyendo copias de seguridad que también estaban en el balneario. En este caso, la Agencia Español de Protección de Datos podría sancionar al balneario",
+    "cuestion": "API-T7-211-Pregunta: Un balneario especializado en tratamientos médicos de larga duración está ubicado en medio de una sierra. Por motivos naturales se ha producido un incendio in la sierra que ha destruido completamente el balneario incluyendo todos los sistemas de información, y por tanto, ha perdido todos los datos personales de los pacientes incluyendo copias de seguridad que también estaban en el balneario. En este caso, la Agencia Español de Protección de Datos podría sancionar al balneario",
     "opciones": [
       "A. Por incumplir las medidas de seguridad de nivel medio",
       "B. No puede sancionar pues ha sido por motivos naturales",
@@ -6022,7 +6022,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T7- 13: Si se utilizan mensajes de correo electrónico que aparentan ser de un banco para que el receptor revele sus credenciales de acceso al banco de forma electrónica y así transferir dinero a otras cuentas, se está cometiendo un delito de",
+    "cuestion": "API-T7-212-Pregunta: Si se utilizan mensajes de correo electrónico que aparentan ser de un banco para que el receptor revele sus credenciales de acceso al banco de forma electrónica y así transferir dinero a otras cuentas, se está cometiendo un delito de",
     "opciones": [
       "A. Estafa",
       "B. Falsedades",
@@ -6032,7 +6032,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T7- 14: La comunicación de datos a terceros NO se puede realizar",
+    "cuestion": "API-T7-213-Pregunta: La comunicación de datos a terceros NO se puede realizar",
     "opciones": [
       "A. Si está autorizado por una ley",
       "B. Al padre de una persona mayor de edad",
@@ -6042,7 +6042,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T7- 15: El responsable de seguridad de un fichero con datos de carácter personal según la LOPD",
+    "cuestion": "API-T7-214-Pregunta: El responsable de seguridad de un fichero con datos de carácter personal según la LOPD",
     "opciones": [
       "A. Debe estar registrado en la Agencia Española de Protección de Datos",
       "B. Debe tener estudios universitarios relacionados con esta materia",
@@ -6052,7 +6052,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T7- 16: El derecho de rectificación a los datos personales tratados por una empresa",
+    "cuestion": "API-T7-215-Pregunta: El derecho de rectificación a los datos personales tratados por una empresa",
     "opciones": [
       "A. No exige que se responda si no tienen datos de carácter personal del solicitante.",
       "B. Exige que la empresa responda antes de 3 meses de la fecha de la solicitud.",
@@ -6062,7 +6062,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T7- 17: Un mensaje de correo electrónico bien formado (de cualquier tipo de mensajería electrónica) es un ejemplo de documento electrónico con",
+    "cuestion": "API-T7-216-Pregunta: Un mensaje de correo electrónico bien formado (de cualquier tipo de mensajería electrónica) es un ejemplo de documento electrónico con",
     "opciones": [
       "A. Firma electrónica",
       "B. Firma electrónica reconocida",
@@ -6072,7 +6072,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T7- 18: Un fichero de datos de carácter personal debe tener, como mínimo, medidas de seguridad de nivel si trata datos de",
+    "cuestion": "API-T7-217-Pregunta: Un fichero de datos de carácter personal debe tener, como mínimo, medidas de seguridad de nivel si trata datos de",
     "opciones": [
       "A. Llamadas telefónicas realizadas desde los teléfonos fijos y móviles de una empresa",
       "B. Penas privativas de libertad",
@@ -6082,7 +6082,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T7- 19: El deber de secreto en el tratamiento de datos de carácter personal",
+    "cuestion": "API-T7-218-Pregunta: El deber de secreto en el tratamiento de datos de carácter personal",
     "opciones": [
       "A. No es exigible a menores de edad",
       "B. Es exigible en ficheros con un nivel medio de medidas de seguridad.",
@@ -6092,7 +6092,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T7- 20: En una página web donde sólo se recogen el nombre, apellidos y dirección de correo electrónico, NO es necesario informar sobre el tratamiento de datos personales",
+    "cuestion": "API-T7-219-Pregunta: En una página web donde sólo se recogen el nombre, apellidos y dirección de correo electrónico, NO es necesario informar sobre el tratamiento de datos personales",
     "opciones": [
       "A. Si el prestador de servicios de la página web es un particular.",
       "B. Si no supone una actividad económica al prestador de servidos de la página web.",
@@ -6102,7 +6102,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T7-201-Pregunta: En una aplicación que trata datos de salud, el cambio de contraseñas de los usuarios debe",
+    "cuestion": "API-T7-220-Pregunta: En una aplicación que trata datos de salud, el cambio de contraseñas de los usuarios debe",
     "opciones": [
       "A. Cambiarse al menos una vez al año",
       "B. Cambiarse al menos una vez cada dos años",
@@ -6112,7 +6112,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T7-202-Pregunta: Una vez que se ha realizado una auditoria según el Reglamento de Desarrollo de la LOPD",
+    "cuestion": "API-T7-221-Pregunta: Una vez que se ha realizado una auditoria según el Reglamento de Desarrollo de la LOPD",
     "opciones": [
       "A. No es necesario una nueva auditoría hasta que no se realicen modificaciones sustanciales en los sistemas de información con repercusiones en seguridad.",
       "B. Ninguna de las otras respuestas es correcta",
@@ -6122,7 +6122,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T7-203-Pregunta: ¿Qué falta en el siguiente texto de una papeleta para participar en el sorteo de un coche encontrado a la puerta de un supermercado? Texto: Los datos personales recogidos serán utilizados para comunicarse con el participante en caso de resultar ganador o para ofrecerles servicios y productos de su interés",
+    "cuestion": "API-T7-222-Pregunta: ¿Qué falta en el siguiente texto de una papeleta para participar en el sorteo de un coche encontrado a la puerta de un supermercado? Texto: Los datos personales recogidos serán utilizados para comunicarse con el participante en caso de resultar ganador o para ofrecerles servicios y productos de su interés",
     "opciones": [
       "A. Ninguna de las antes respuestas es correcta",
       "B. El valor monetario del premio",
@@ -6132,7 +6132,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T7-204-Pregunta: El ayuntamiento de una capital de provincia ha implementado un sistema con sensores de paso de vehículos en la calzada de las calles y videocámaras en los semáforos para mejorar la gestión del tráfico en el municipio. En este caso, el ayuntamiento",
+    "cuestion": "API-T7-223-Pregunta: El ayuntamiento de una capital de provincia ha implementado un sistema con sensores de paso de vehículos en la calzada de las calles y videocámaras en los semáforos para mejorar la gestión del tráfico en el municipio. En este caso, el ayuntamiento",
     "opciones": [
       "A. Debe implementar medidas de seguridad de nivel alto",
       "B. No tiene que hacer nada pues es una administración pública y la finalidad es mejorar la seguridad vial.",
@@ -6142,7 +6142,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T7-205-Pregunta: El documento de seguridad según el Reglamento de la Ley Orgánica de Protección de Datos de Carácter Personal",
+    "cuestion": "API-T7-224-Pregunta: El documento de seguridad según el Reglamento de la Ley Orgánica de Protección de Datos de Carácter Personal",
     "opciones": [
       "A. Cuando sea de aplicación la LOPD",
       "B. Con tratamiento de datos de nivel medio",
@@ -6152,7 +6152,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T7-206-Pregunta: NO es exigible en un sistema de gestión de la asistencia de personas que participan voluntariamente en un concurso de televisión (nombre, apellidos, DNI, edad, teléfono, sexo, fecha de participación)",
+    "cuestion": "API-T7-225-Pregunta: NO es exigible en un sistema de gestión de la asistencia de personas que participan voluntariamente en un concurso de televisión (nombre, apellidos, DNI, edad, teléfono, sexo, fecha de participación)",
     "opciones": [
       "A. Identificación personalizada de los usuarios con acceso a esos datos.",
       "B. Control de acceso físico a los locales donde se encuentran ubicados esos datos.",
@@ -6162,7 +6162,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T7-207-Pregunta: Si un documento electrónico necesita garantizar la integridad del propio documento, se necesita utilizar",
+    "cuestion": "API-T7-226-Pregunta: Si un documento electrónico necesita garantizar la integridad del propio documento, se necesita utilizar",
     "opciones": [
       "A. Firma electrónica",
       "B. Firma electrónica o firma electrónica avanzada",
@@ -6172,7 +6172,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T7-208-Pregunta: Las exigencias de la LSSI a la utilización de las cookies se exceptúan en el caso de",
+    "cuestion": "API-T7-227-Pregunta: Las exigencias de la LSSI a la utilización de las cookies se exceptúan en el caso de",
     "opciones": [
       "A. Cookies publicitarias anónimas",
       "B. Cookies persistentes",
@@ -6182,7 +6182,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T7-209-Pregunta: En una aplicación web que tate datos de salud, las copias de seguridad de los datos del servidor",
+    "cuestion": "API-T7-228-Pregunta: En una aplicación web que tate datos de salud, las copias de seguridad de los datos del servidor",
     "opciones": [
       "A. Deben estar en un lugar distinto a dónde se encuentre el servidor",
       "B. Deben realizarse a diario",
@@ -6192,7 +6192,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T7-210-Pregunta: Todo software debe incluir en su descripción técnica",
+    "cuestion": "API-T7-229-Pregunta: Todo software debe incluir en su descripción técnica",
     "opciones": [
       "A. El número de inscripción del software en la Agencia Española de Protección de Datos",
       "B. El nivel de medidas de seguridad que permite alcanzar ese software cuando se traten datos de carácter personal.",
@@ -6202,7 +6202,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T7-211-Pregunta: Según la LOPD, el principio de calidad de los datos se cumple cuando (elija la respuesta)",
+    "cuestion": "API-T7-230-Pregunta: Según la LOPD, el principio de calidad de los datos se cumple cuando (elija la respuesta)",
     "opciones": [
       "A. Se actualizan los datos, aunque no sea a petición del afectado.",
       "B. Se cancelan los datos, aunque no sea a petición del afectado.",
@@ -6212,7 +6212,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T7-212-Pregunta: Una empresa utiliza un sistema integrado de autenticación de usuarios donde todas sus aplicaciones utilizan un servidor corporativo para autenticar los usuarios utilizan una única contraseña para cada usuario independientemente del nº de aplicaciones que use cada usuario. Indique cual es la respuesta INCORRECTA.",
+    "cuestion": "API-T7-231-Pregunta: Una empresa utiliza un sistema integrado de autenticación de usuarios donde todas sus aplicaciones utilizan un servidor corporativo para autenticar los usuarios utilizan una única contraseña para cada usuario independientemente del nº de aplicaciones que use cada usuario. Indique cual es la respuesta INCORRECTA.",
     "opciones": [
       "A. El servidor y/o las aplicaciones deben obligar a los usuarios a cambiar las contraseñas, al menos, una vez al año.",
       "B. Las contraseñas deben ser únicas por usuario, aunque sean iguales para todas las aplicaciones.",
@@ -6222,7 +6222,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T7-213-Pregunta: La funeraria de un pueblo ha creado un sitio web donde publica el nombre, apellidos y fecha del fallecimiento de personas residentes en ese pueblo. En este caso:",
+    "cuestion": "API-T7-232-Pregunta: La funeraria de un pueblo ha creado un sitio web donde publica el nombre, apellidos y fecha del fallecimiento de personas residentes en ese pueblo. En este caso:",
     "opciones": [
       "A. No es necesario dar de alta ese tratamiento en la Agencia Española de Protección de Datos.",
       "B. Incumple la LOPD si no tiene el consentimiento de las personas fallecidas.",
@@ -6232,7 +6232,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T7-214-Pregunta: Para la entrada de una discoteca, el personal de seguridad solicita que se muestre el DNI para exclusivamente comprobar que somos mayores de edad. En este caso, el propietario de la discoteca:",
+    "cuestion": "API-T7-233-Pregunta: Para la entrada de una discoteca, el personal de seguridad solicita que se muestre el DNI para exclusivamente comprobar que somos mayores de edad. En este caso, el propietario de la discoteca:",
     "opciones": [
       "A. Debe dar de alta un fichero en la Agencia Española de Protección de Datos",
       "B. No tiene que hacer nada pues no sigue tratamiento de datos de carácter personal.",
@@ -6242,7 +6242,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T7-215-Pregunta: Según la LOPD, la infracción más grave es",
+    "cuestion": "API-T7-234-Pregunta: Según la LOPD, la infracción más grave es",
     "opciones": [
       "A. Tratar datos de carácter personal sin registrar el correspondiente fichero en la Agencia Española de Datos",
       "B. No informar adecuadamente en la recogida de datos de carácter personal",
@@ -6252,7 +6252,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T7-216-Pregunta: La empresa X ha diseñado un software, que utiliza bajo su control, de análisis de grandes volúmenes de información de operadores de telecomunicaciones (empresa Z) con el objetivo de analizar las necesidades de los clientes (personas físicas W) de los operadores de telecomunicaciones. La empresa X contrata los servicios de computación (clúster de servidores) a la empresa Y. En este caso:",
+    "cuestion": "API-T7-235-Pregunta: La empresa X ha diseñado un software, que utiliza bajo su control, de análisis de grandes volúmenes de información de operadores de telecomunicaciones (empresa Z) con el objetivo de analizar las necesidades de los clientes (personas físicas W) de los operadores de telecomunicaciones. La empresa X contrata los servicios de computación (clúster de servidores) a la empresa Y. En este caso:",
     "opciones": [
       "A. La empresa X y Z son responsables de ficheros de los datos de las personas físicas W.",
       "B. La empresa Y es cualquier encargada del tratamiento de la empresa X",
@@ -6262,7 +6262,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T7-217-Pregunta: En una empresa de desarrollo de software, se encarga a un programador junior la elaboración del manual de uso de un programa que ha desarrollado un equipo de la empresa. Los derechos de explotación del manual de uso…",
+    "cuestion": "API-T7-236-Pregunta: En una empresa de desarrollo de software, se encarga a un programador junior la elaboración del manual de uso de un programa que ha desarrollado un equipo de la empresa. Los derechos de explotación del manual de uso…",
     "opciones": [
       "A. Por defecto son de la empresa",
       "B. Terminan a los 15 años de la puesta en explotación del programa",
@@ -6272,7 +6272,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T7-218-Pregunta: Una empresa de venta de teléfonos móviles informa a sus clientes por SMS de las novedades mensuales de estos productos. Se podrá realizar este envío",
+    "cuestion": "API-T7-237-Pregunta: Una empresa de venta de teléfonos móviles informa a sus clientes por SMS de las novedades mensuales de estos productos. Se podrá realizar este envío",
     "opciones": [
       "A. Sólo si el receptor ha dado su consentimiento o es un cliente de la empresa.",
       "B. Todas las respuestas son correctas",
@@ -6282,7 +6282,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T7-219-Pregunta: Quien desarrolla un programa de ordenador para falsificar tarjetas de crédito inteligentes",
+    "cuestion": "API-T7-238-Pregunta: Quien desarrolla un programa de ordenador para falsificar tarjetas de crédito inteligentes",
     "opciones": [
       "A. Comete un delito contra la propiedad intelectual",
       "B. Comete un delito de estafa",
@@ -6292,7 +6292,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T7-220-Pregunta: No es necesario el documento de seguridad según el Reglamento de desarrollo de la LOPD",
+    "cuestion": "API-T7-239-Pregunta: No es necesario el documento de seguridad según el Reglamento de desarrollo de la LOPD",
     "opciones": [
       "A. Cuando solo se tengan datos de fuente accesible al público",
       "B. Cuando no se exija la existencia de un responsable de seguridad",
@@ -6302,7 +6302,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T7-221-Pregunta: ¿Quién puede realizar una auditoria según el reglamento de la LOPD?",
+    "cuestion": "API-T7-240-Pregunta: ¿Quién puede realizar una auditoria según el reglamento de la LOPD?",
     "opciones": [
       "A. Ninguna de las otras respuestas es correcta.",
       "B. El responsable de seguridad.",
@@ -6312,7 +6312,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T7-222-Pregunta: La tutela de los derechos recogidos en la LOPD",
+    "cuestion": "API-T7-241-Pregunta: La tutela de los derechos recogidos en la LOPD",
     "opciones": [
       "A. La ejerce el Ministerio de justifica.",
       "B. La ejerce la agencia española de protección de datos.",
@@ -6322,7 +6322,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T7-223-Pregunta: Una aplicación para un teléfono inteligente almacena, de forma continua, en el sistema de archivos del teléfono la posición geográfica para su posterior recuperación por parte del usuario del teléfono. En este caso.",
+    "cuestion": "API-T7-242-Pregunta: Una aplicación para un teléfono inteligente almacena, de forma continua, en el sistema de archivos del teléfono la posición geográfica para su posterior recuperación por parte del usuario del teléfono. En este caso.",
     "opciones": [
       "A. Es de aplicación exclusivamente la LSSI.",
       "B. Es de aplicación la LOPD y la LSSI.",
@@ -6332,7 +6332,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T7-224-Pregunta: Un certificado electrónico",
+    "cuestion": "API-T7-243-Pregunta: Un certificado electrónico",
     "opciones": [
       "A. Permite comprobar la integridad del documento firmado con dicho certificado.",
       "B. Sólo es necesario cuando se utiliza una pareja de claves (cifrado asimétrico) para generar la firma electrónica.",
@@ -6342,7 +6342,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T7-225-Pregunta: Quien desarrolla un programa de ordenador que realiza transacciones bancarias y en cada operación transfiere un céntimo de euro a una cuenta sin conocimiento del usuario.",
+    "cuestion": "API-T7-244-Pregunta: Quien desarrolla un programa de ordenador que realiza transacciones bancarias y en cada operación transfiere un céntimo de euro a una cuenta sin conocimiento del usuario.",
     "opciones": [
       "A. Comete un delito de estafa.",
       "B. Comete un delito de revelación de secretos.",
@@ -6352,7 +6352,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T7-226-Pregunta: Toda aplicación que trate datos de carácter personal debe incluir en su descripción técnica el nivel de medidas de seguridad que permite alcanzar dicho software excepto:",
+    "cuestion": "API-T7-245-Pregunta: Toda aplicación que trate datos de carácter personal debe incluir en su descripción técnica el nivel de medidas de seguridad que permite alcanzar dicho software excepto:",
     "opciones": [
       "A. Si los datos personales son tratados exclusivamente de personas de la empresa u organización usuaria de la aplicación.",
       "B. Ninguna de las otras respuestas es correcta.",
@@ -6362,7 +6362,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T7-227-Pregunta: Una persona física crea un sitio web con publicidad sobre material fotográfico e incorpora propias para ilustrar el uso de ciertas técnicas fotográficas. Asimismo, se permite la descarga y el uso sin restricciones de dichas fotografías. En este caso:",
+    "cuestion": "API-T7-246-Pregunta: Una persona física crea un sitio web con publicidad sobre material fotográfico e incorpora propias para ilustrar el uso de ciertas técnicas fotográficas. Asimismo, se permite la descarga y el uso sin restricciones de dichas fotografías. En este caso:",
     "opciones": [
       "A. No es de aplicación la LSSI pues es una persona física quien crea el sitio web.",
       "B. Es de aplicación la LSSI si recogen datos personales de las personas que descargan fotografías.",
@@ -6372,7 +6372,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T7-228-Pregunta: Una empresa de desarrollo software ha diseñado la estructura de una base de datos la legislación nacional para un equipo de abogados. En este caso, los derechos de autor son:",
+    "cuestion": "API-T7-247-Pregunta: Una empresa de desarrollo software ha diseñado la estructura de una base de datos la legislación nacional para un equipo de abogados. En este caso, los derechos de autor son:",
     "opciones": [
       "A. Por defecto, de la empresa de desarrollo de software y del equipo de abogados.",
       "B. Del equipo de abogados.",
@@ -6382,7 +6382,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T7-229-Pregunta: Quien realiza un acceso a los datos de carácter por cuenta de terceros se denomina.",
+    "cuestion": "API-T7-248-Pregunta: Quien realiza un acceso a los datos de carácter por cuenta de terceros se denomina.",
     "opciones": [
       "A. Encargado de tratamiento.",
       "B. Usuario de los datos.",
@@ -6392,7 +6392,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T7-230-Pregunta: Las comunicaciones en una red deben ser cifradas cuando se transmitan datos de carácter personal relativos a:",
+    "cuestion": "API-T7-249-Pregunta: Las comunicaciones en una red deben ser cifradas cuando se transmitan datos de carácter personal relativos a:",
     "opciones": [
       "A. Infracciones penales.",
       "B. Creencias.",
@@ -6402,7 +6402,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T7-231-Pregunta: ¿Quién debe realizar la inscripción de un fichero en el Registro General de Protección de Datos?",
+    "cuestion": "API-T7-250-Pregunta: ¿Quién debe realizar la inscripción de un fichero en el Registro General de Protección de Datos?",
     "opciones": [
       "A. El encargado del tratamiento.",
       "B. Todas las respuestas son correctas.",
@@ -6412,7 +6412,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T7-232-Pregunta: Aunque no se tenga el consentimiento de la persona, se puede realizar una comunicación de datos de dicha persona (elegir incorrecta).",
+    "cuestion": "API-T7-251-Pregunta: Aunque no se tenga el consentimiento de la persona, se puede realizar una comunicación de datos de dicha persona (elegir incorrecta).",
     "opciones": [
       "A. A un hospital en caso de urgencia médica.",
       "B. Jueces y tribunales.",
@@ -6422,7 +6422,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T7-233-Pregunta: ¿Quién puede acceder al Registro General de Protección de Datos?",
+    "cuestion": "API-T7-252-Pregunta: ¿Quién puede acceder al Registro General de Protección de Datos?",
     "opciones": [
       "A. Cualquier persona u organización.",
       "B. Exclusivamente los responsables de ficheros y responsables de seguridad.",
@@ -6432,7 +6432,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T7-234-Pregunta: Una empresa trata datos de carácter personal siendo exigible un responsable de seguridad. En este caso.",
+    "cuestion": "API-T7-253-Pregunta: Una empresa trata datos de carácter personal siendo exigible un responsable de seguridad. En este caso.",
     "opciones": [
       "A. El responsable del fichero ha delegado en el responsable de seguridad todas las tareas de gestión de datos personales.",
       "B. Se tratan los datos que requieren un nivel medio o alto de medias de seguridad.",
@@ -6442,7 +6442,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T7-235-Pregunta: Las exigencias de la LSSI a la utilización de las cookies se exceptúan en el caso de:",
+    "cuestion": "API-T7-254-Pregunta: Las exigencias de la LSSI a la utilización de las cookies se exceptúan en el caso de:",
     "opciones": [
       "A. Cookies propias.",
       "B. Ninguna de las anteriores es correcta.",
@@ -6451,7 +6451,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T7-236-Pregunta: Según la LOPD, No es una fuente accesible al público",
+    "cuestion": "API-T7-255-Pregunta: Según la LOPD, No es una fuente accesible al público",
     "opciones": [
       "A. Diario Oficial de Castilla-La Mancha.",
       "B. Sitio web del periódico Lanza.",
@@ -6461,7 +6461,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T7-237-Pregunta: Un frigorífico conectado a Internet registra la entrada y salida y, cuando procede, pide los alimentos necesarios a un supermercado para su envío al domicilio del propietario del frigorífico. En este caso.",
+    "cuestion": "API-T7-256-Pregunta: Un frigorífico conectado a Internet registra la entrada y salida y, cuando procede, pide los alimentos necesarios a un supermercado para su envío al domicilio del propietario del frigorífico. En este caso.",
     "opciones": [
       "A. Es de aplicación exclusivamente la LOPD.",
       "B. Es de aplicación exclusivamente la LSSI.",
@@ -6471,7 +6471,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T7-238-Pregunta: ¿Qué dato no es especialmente protegido según la LOPD?",
+    "cuestion": "API-T7-257-Pregunta: ¿Qué dato no es especialmente protegido según la LOPD?",
     "opciones": [
       "A. Datos financieros.",
       "B. Origen racial.",
@@ -6481,7 +6481,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T7-239-Pregunta: En una aplicación que trate datos de carácter personal",
+    "cuestion": "API-T7-258-Pregunta: En una aplicación que trate datos de carácter personal",
     "opciones": [
       "A. Siempre es necesario limitar el nº de intentos reiterados de acceso no autorizado.",
       "B. No es posible utilizar cuentas genéricas de acceso a la aplicación para su uso por varias personas.",
@@ -6491,7 +6491,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T7-240-Pregunta: Un sitio web tiene la información de contacto de todas las empresas de fontanería y fontaneros que trabajan de forma autónoma en una provincia. Las medidas de seguridad a aplicar según el reglamento de la LOPD son:",
+    "cuestion": "API-T7-259-Pregunta: Un sitio web tiene la información de contacto de todas las empresas de fontanería y fontaneros que trabajan de forma autónoma en una provincia. Las medidas de seguridad a aplicar según el reglamento de la LOPD son:",
     "opciones": [
       "A. De nivel medio.",
       "B. De nivel básico.",
@@ -6501,7 +6501,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T7-241-Pregunta: No es una obligación de un prestador de servicios de la sociedad de la información, según la LSSI, de informar sobre:",
+    "cuestion": "API-T7-260-Pregunta: No es una obligación de un prestador de servicios de la sociedad de la información, según la LSSI, de informar sobre:",
     "opciones": [
       "A. El número de identificación fiscal del prestador de servicios",
       "B. La dirección postal del prestador de servicios",
@@ -6511,7 +6511,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T7-242-Pregunta: Los ordenadores portátiles de una organización sindical que contengan datos personales sobre sus afiliados",
+    "cuestion": "API-T7-261-Pregunta: Los ordenadores portátiles de una organización sindical que contengan datos personales sobre sus afiliados",
     "opciones": [
       "A. No pueden tener los archivos que contengan dichos datos personales sin cifrar.",
       "B. No pueden utilizar una contraseña como mecanismo de identificación de usuarios",
@@ -6521,7 +6521,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T7-243-Pregunta: NO es necesario el consentimiento de las personas para comunicar datos personales a terceros",
+    "cuestion": "API-T7-262-Pregunta: NO es necesario el consentimiento de las personas para comunicar datos personales a terceros",
     "opciones": [
       "A. Si el tercero cumple toda la legislación relativa a la protección de datos de carácter personal.",
       "B. Si el tercero es un encargado de tratamiento según consta en un escrito firmado por el responsable del fichero y el tercero.",
@@ -6531,7 +6531,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T7-244-Pregunta: Una empresa tiene un listado de todas las empresas de fontanería y fontaneros de una localidad. Esta empresa está obligada",
+    "cuestion": "API-T7-263-Pregunta: Una empresa tiene un listado de todas las empresas de fontanería y fontaneros de una localidad. Esta empresa está obligada",
     "opciones": [
       "A. Aplicar medidas de seguridad de nivel medio",
       "B. Aplicar medidas de seguridad de nivel básico",
@@ -6541,7 +6541,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T7-245-Pregunta: Un trabajador en una clínica privada utiliza datos personales de los pacientes de la clínica, sin consentimiento de los pacientes ni de la clínica, para realizar un estudio de investigación. Los resultados de la investigación son publicados en una revista científica sin revelar la identidad de los pacientes. En este caso, la Agencia Española de Protección de Datos podría sancionar:",
+    "cuestion": "API-T7-264-Pregunta: Un trabajador en una clínica privada utiliza datos personales de los pacientes de la clínica, sin consentimiento de los pacientes ni de la clínica, para realizar un estudio de investigación. Los resultados de la investigación son publicados en una revista científica sin revelar la identidad de los pacientes. En este caso, la Agencia Española de Protección de Datos podría sancionar:",
     "opciones": [
       "A. La revista científica",
       "B. A nadie pues se han publicado los datos de forma anónima",
@@ -6551,7 +6551,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T7-246-Pregunta: El documento de seguridad de un fichero con datos de carácter personal es necesario cuando",
+    "cuestion": "API-T7-265-Pregunta: El documento de seguridad de un fichero con datos de carácter personal es necesario cuando",
     "opciones": [
       "A. Siempre es necesario el documento de seguridad",
       "B. El nivel de medidas de seguridad a aplicar en el fichero es básico.",
@@ -6561,7 +6561,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T7-247-Pregunta: Una forma INCORRECTA de obtener el consentimiento para la instalación de cookies en un cliente web (suponiendo que se ha informado previamente sobre esa instalación) es",
+    "cuestion": "API-T7-266-Pregunta: Una forma INCORRECTA de obtener el consentimiento para la instalación de cookies en un cliente web (suponiendo que se ha informado previamente sobre esa instalación) es",
     "opciones": [
       "A. Esperar a que el usuario utilice la barra de desplazamiento de una página web",
       "B. Esperar un mínimo de 15 segundos en una página web a que el usuario cierre la página web si no da su consentimiento",
@@ -6571,7 +6571,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T7-248-Pregunta: Se incumple el principio de calidad de datos según la LOPD",
+    "cuestion": "API-T7-267-Pregunta: Se incumple el principio de calidad de datos según la LOPD",
     "opciones": [
       "A. Si no se informa de la finalidad en la recogida de los datos",
       "B. Si no se aplican las medidas de seguridad adecuadas.",
@@ -6591,7 +6591,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T7-249-Pregunta: Si una administración pública realiza un tratamiento de datos de carácter personal, cuyo ÚNICO soporte es papel",
+    "cuestion": "API-T7-268-Pregunta: Si una administración pública realiza un tratamiento de datos de carácter personal, cuyo ÚNICO soporte es papel",
     "opciones": [
       "A. Debe dar de alta dicho tratamiento en la Agencia Española de Protección de Datos indicando dicha circunstancia.",
       "B. De forma obligatoria, debe existir un responsable de seguridad de dicho tratamiento.",
@@ -6601,7 +6601,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T7-250-Pregunta: En una base de datos que contiene programas de ordenador, los derechos de explotación de estos programas expiran",
+    "cuestion": "API-T7-269-Pregunta: En una base de datos que contiene programas de ordenador, los derechos de explotación de estos programas expiran",
     "opciones": [
       "A. A los 85 años",
       "B. A los 70 años",
@@ -6611,7 +6611,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T7-251-Pregunta: Un balneario especializado en tratamientos médicos de larga duración está ubicado en medio de una sierra. Por motivos naturales se ha producido un incendio en la sierra que ha destruido completamente el balneario incluyendo todos los sistemas de información, y por tanto, ha perdido todos los datos personales de los pacientes incluyendo copias de seguridad que también estaban en el balneario. En este caso, la Agencia Español de Protección de Datos podría sancionar al balneario",
+    "cuestion": "API-T7-270-Pregunta: Un balneario especializado en tratamientos médicos de larga duración está ubicado en medio de una sierra. Por motivos naturales se ha producido un incendio en la sierra que ha destruido completamente el balneario incluyendo todos los sistemas de información, y por tanto, ha perdido todos los datos personales de los pacientes incluyendo copias de seguridad que también estaban en el balneario. En este caso, la Agencia Español de Protección de Datos podría sancionar al balneario",
     "opciones": [
       "A. Por incumplir las medidas de seguridad de nivel medio",
       "B. No puede sancionar pues ha sido por motivos naturales",
@@ -6621,7 +6621,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T7-252-Pregunta: Si se utilizan mensajes de correo electrónico que aparentan ser de un banco para que el receptor revele sus credenciales de acceso al banco de forma electrónica y así transferir dinero a otras cuentas, se está cometiendo un delito de",
+    "cuestion": "API-T7-271-Pregunta: Si se utilizan mensajes de correo electrónico que aparentan ser de un banco para que el receptor revele sus credenciales de acceso al banco de forma electrónica y así transferir dinero a otras cuentas, se está cometiendo un delito de",
     "opciones": [
       "A. Falsedades",
       "B. Descubrimiento y revelación de secretos",
@@ -6631,7 +6631,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T7-253-Pregunta: La comunicación de datos a terceros NO se puede realizar",
+    "cuestion": "API-T7-272-Pregunta: La comunicación de datos a terceros NO se puede realizar",
     "opciones": [
       "A. Al padre de una persona mayor de edad",
       "B. Si está autorizado por una ley",
@@ -6641,7 +6641,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T7-254-Pregunta: El responsable de seguridad de un fichero con datos de carácter personal según la LOPD",
+    "cuestion": "API-T7-273-Pregunta: El responsable de seguridad de un fichero con datos de carácter personal según la LOPD",
     "opciones": [
       "A. Debe estar registrado en la Agencia Española de Protección de Datos",
       "B. No es el máximo responsable del fichero.",
@@ -6651,7 +6651,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T7-255-Pregunta: El derecho de rectificación a los datos personales tratados por una empresa",
+    "cuestion": "API-T7-274-Pregunta: El derecho de rectificación a los datos personales tratados por una empresa",
     "opciones": [
       "A. No exige que se responda si no tienen datos de carácter personal del solicitante.",
       "B. Exige que la empresa responda antes de 3 meses de la fecha de la solicitud.",
@@ -6661,7 +6661,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T7-256-Pregunta: Un mensaje de correo electrónico bien formado (de cualquier tipo de mensajería electrónica) es un ejemplo de documento electrónico con",
+    "cuestion": "API-T7-275-Pregunta: Un mensaje de correo electrónico bien formado (de cualquier tipo de mensajería electrónica) es un ejemplo de documento electrónico con",
     "opciones": [
       "A. Firma electrónica reconocida",
       "B. Ninguna de las antes respuestas es correcta",
@@ -6671,7 +6671,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T7-257-Pregunta: Un fichero de datos de carácter personal debe tener, como mínimo, medidas de seguridad de nivel si trata datos de",
+    "cuestion": "API-T7-276-Pregunta: Un fichero de datos de carácter personal debe tener, como mínimo, medidas de seguridad de nivel si trata datos de",
     "opciones": [
       "A. Penas privativas de libertad",
       "B. Llamadas telefónicas realizadas desde los teléfonos fijos y móviles de una empresa",
@@ -6681,7 +6681,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T7-258-Pregunta: El deber de secreto en el tratamiento de datos de carácter personal",
+    "cuestion": "API-T7-277-Pregunta: El deber de secreto en el tratamiento de datos de carácter personal",
     "opciones": [
       "A. No es exigible a menores de edad",
       "B. No es exigible cuando han pasado 70 años desde el fallecimiento de la última persona cuyos datos se han tratado.",
@@ -6691,7 +6691,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T7-259-Pregunta: En una página web donde sólo se recogen el nombre, apellidos y dirección de correo electrónico, NO es necesario informar sobre el tratamiento de datos personales",
+    "cuestion": "API-T7-278-Pregunta: En una página web donde sólo se recogen el nombre, apellidos y dirección de correo electrónico, NO es necesario informar sobre el tratamiento de datos personales",
     "opciones": [
       "A. Si el prestador de servicios de la página web es un particular.",
       "B. Si no supone una actividad económica al prestador de servidos de la página web.",
@@ -6701,7 +6701,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T7-260-Pregunta: En una aplicación que trata datos de salud, el cambio de contraseñas de los usuarios debe",
+    "cuestion": "API-T7-279-Pregunta: En una aplicación que trata datos de salud, el cambio de contraseñas de los usuarios debe",
     "opciones": [
       "A. Cambiarse al menos una vez cada dos años",
       "B. Cambiarse al menos una vez al semestre",
@@ -6711,7 +6711,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T7-261-Pregunta: Una vez que se ha realizado una auditoria según el Reglamento de Desarrollo de la LOPD",
+    "cuestion": "API-T7-280-Pregunta: Una vez que se ha realizado una auditoria según el Reglamento de Desarrollo de la LOPD",
     "opciones": [
       "A. Ninguna de las otras respuestas es correcta",
       "B. No es necesario una nueva auditoría hasta que no se realicen modificaciones sustanciales en los sistemas de información con repercusiones en seguridad.",
@@ -6721,7 +6721,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T7-262-Pregunta: ¿Qué falta en el siguiente texto de una papeleta para participar en el sorteo de un coche encontrado a la puerta de un supermercado? Texto: Los datos personales recogidos serán utilizados para comunicarse con el participante en caso de resultar ganador o para ofrecerles servicios y productos de su interés",
+    "cuestion": "API-T7-281-Pregunta: ¿Qué falta en el siguiente texto de una papeleta para participar en el sorteo de un coche encontrado a la puerta de un supermercado? Texto: Los datos personales recogidos serán utilizados para comunicarse con el participante en caso de resultar ganador o para ofrecerles servicios y productos de su interés",
     "opciones": [
       "A. Ninguna de las otras respuestas es correcta",
       "B. La identidad, dirección del responsable de tratamiento y donde se ejercen los derechos.",
@@ -6731,7 +6731,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T7-263-Pregunta: El ayuntamiento de una capital de provincia ha implementado un sistema con sensores de paso de vehículos en la calzada de las calles y videocámaras en los semáforos para mejorar la gestión del tráfico en el municipio. En este caso, el ayuntamiento",
+    "cuestion": "API-T7-282-Pregunta: El ayuntamiento de una capital de provincia ha implementado un sistema con sensores de paso de vehículos en la calzada de las calles y videocámaras en los semáforos para mejorar la gestión del tráfico en el municipio. En este caso, el ayuntamiento",
     "opciones": [
       "A. Debe implementar medidas de seguridad de nivel alto",
       "B. No tiene que hacer nada pues es una administración pública y la finalidad es mejorar la seguridad vial.",
@@ -6741,7 +6741,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T7-264-Pregunta: El documento de seguridad según el Reglamento de la Ley Orgánica de Protección de Datos de Carácter Personal",
+    "cuestion": "API-T7-283-Pregunta: El documento de seguridad según el Reglamento de la Ley Orgánica de Protección de Datos de Carácter Personal",
     "opciones": [
       "A. Con tratamiento de datos de nivel medio",
       "B. Con tratamiento de datos de nivel alto.",
@@ -6751,7 +6751,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T7-265-Pregunta: NO es exigible en un sistema de gestión de la asistencia de personas que participan voluntariamente en un concurso de televisión (nombre, apellidos, DNI, edad, teléfono, sexo, fecha de participación)",
+    "cuestion": "API-T7-284-Pregunta: NO es exigible en un sistema de gestión de la asistencia de personas que participan voluntariamente en un concurso de televisión (nombre, apellidos, DNI, edad, teléfono, sexo, fecha de participación)",
     "opciones": [
       "A. Control de acceso físico a los locales donde se encuentran ubicados esos datos.",
       "B. Identificación personalizada de los usuarios con acceso a esos datos.",
@@ -6761,7 +6761,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T7-266-Pregunta: Si un documento electrónico necesita garantizar la integridad del propio documento, se necesita utilizar",
+    "cuestion": "API-T7-285-Pregunta: Si un documento electrónico necesita garantizar la integridad del propio documento, se necesita utilizar",
     "opciones": [
       "A. Firma electrónica",
       "B. Firma electrónica avanzada o firma electrónica reconocida.",
@@ -6771,7 +6771,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T7-267-Pregunta: Las exigencias de la LSSI a la utilización de las cookies se exceptúan en el caso de",
+    "cuestion": "API-T7-286-Pregunta: Las exigencias de la LSSI a la utilización de las cookies se exceptúan en el caso de",
     "opciones": [
       "A. Cookies publicitarias anónimas",
       "B. Cookies persistentes",
@@ -6781,7 +6781,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T7-268-Pregunta: En una aplicación web que tate datos de salud, las copias de seguridad de los datos del servidor",
+    "cuestion": "API-T7-287-Pregunta: En una aplicación web que tate datos de salud, las copias de seguridad de los datos del servidor",
     "opciones": [
       "A. Deben realizarse a diario",
       "B. Deben cifrarse",
@@ -6791,7 +6791,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T7-269-Pregunta: Todo software debe incluir en su descripción técnica",
+    "cuestion": "API-T7-288-Pregunta: Todo software debe incluir en su descripción técnica",
     "opciones": [
       "A. El nivel de medidas de seguridad que permite alcanzar ese software cuando se traten datos de carácter personal.",
       "B. El número de inscripción del software en la Agencia Española de Protección de Datos",
@@ -6801,7 +6801,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T7-270-Pregunta: Según la LOPD, el principio de calidad de los datos se cumple cuando (elija la respuesta)",
+    "cuestion": "API-T7-289-Pregunta: Según la LOPD, el principio de calidad de los datos se cumple cuando (elija la respuesta)",
     "opciones": [
       "A. Se actualizan los datos, aunque no sea a petición del afectado.",
       "B. Se recogen datos adicionales a los estrictamente necesarios para una finalidad para ser tratados por una administración pública.",
@@ -6811,7 +6811,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T7-271-Pregunta: Una empresa utiliza un sistema integrado de autenticación de usuarios donde todas sus aplicaciones utilizan un servidor corporativo para autenticar los usuarios utilizan una única contraseña para cada usuario independientemente del nº de aplicaciones que use cada usuario. Indique cual es la respuesta INCORRECTA.",
+    "cuestion": "API-T7-290-Pregunta: Una empresa utiliza un sistema integrado de autenticación de usuarios donde todas sus aplicaciones utilizan un servidor corporativo para autenticar los usuarios utilizan una única contraseña para cada usuario independientemente del nº de aplicaciones que use cada usuario. Indique cual es la respuesta INCORRECTA.",
     "opciones": [
       "A. El servidor y/o las aplicaciones deben obligar a los usuarios a cambiar las contraseñas, al menos, una vez al año.",
       "B. Las contraseñas deben ser únicas por usuario, aunque sean iguales para todas las aplicaciones.",
@@ -6821,7 +6821,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T7-272-Pregunta: La funeraria de un pueblo ha creado un sitio web donde publica el nombre, apellidos y fecha del fallecimiento de personas residentes en ese pueblo. En este caso:",
+    "cuestion": "API-T7-291-Pregunta: La funeraria de un pueblo ha creado un sitio web donde publica el nombre, apellidos y fecha del fallecimiento de personas residentes en ese pueblo. En este caso:",
     "opciones": [
       "A. Incumple la LOPD si no tiene el consentimiento de las personas fallecidas.",
       "B. Debe cumplir las medidas de seguridad de nivel medio.",
@@ -6831,7 +6831,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T7-273-Pregunta: Para la entrada de una discoteca, el personal de seguridad solicita que se muestre el DNI para exclusivamente comprobar que somos mayores de edad. En este caso, el propietario de la discoteca:",
+    "cuestion": "API-T7-292-Pregunta: Para la entrada de una discoteca, el personal de seguridad solicita que se muestre el DNI para exclusivamente comprobar que somos mayores de edad. En este caso, el propietario de la discoteca:",
     "opciones": [
       "A. No tiene que hacer nada pues no sigue tratamiento de datos de carácter personal.",
       "B. Debe dar de alta un fichero en la Agencia Española de Protección de Datos",
@@ -6841,7 +6841,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T7-274-Pregunta: Según la LOPD, la infracción más grave es",
+    "cuestion": "API-T7-293-Pregunta: Según la LOPD, la infracción más grave es",
     "opciones": [
       "A. Tratar datos de carácter personal sin registrar el correspondiente fichero en la Agencia Española de Datos",
       "B. Realizar una transferencia internacional sin consentimiento",
@@ -6851,7 +6851,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T7-275-Pregunta: La empresa X ha diseñado un software, que utiliza bajo su control, de análisis de grandes volúmenes de información de operadores de telecomunicaciones (empresa Z) con el objetivo de analizar las necesidades de los clientes (personas físicas W) de los operadores de telecomunicaciones. La empresa X contrata los servicios de computación (clúster de servidores) a la empresa Y. En este caso:",
+    "cuestion": "API-T7-294-Pregunta: La empresa X ha diseñado un software, que utiliza bajo su control, de análisis de grandes volúmenes de información de operadores de telecomunicaciones (empresa Z) con el objetivo de analizar las necesidades de los clientes (personas físicas W) de los operadores de telecomunicaciones. La empresa X contrata los servicios de computación (clúster de servidores) a la empresa Y. En este caso:",
     "opciones": [
       "A. La empresa X y Z son responsables de ficheros de los datos de las personas físicas W.",
       "B. La empresa Y es cualquier encargada del tratamiento de la empresa X",
@@ -6861,7 +6861,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T7-276-Pregunta: En una empresa de desarrollo de software, se encarga a un programador junior la elaboración del manual de uso de un programa que ha desarrollado un equipo de la empresa. Los derechos de explotación del manual de uso…",
+    "cuestion": "API-T7-295-Pregunta: En una empresa de desarrollo de software, se encarga a un programador junior la elaboración del manual de uso de un programa que ha desarrollado un equipo de la empresa. Los derechos de explotación del manual de uso…",
     "opciones": [
       "A. Terminan a los 15 años de la puesta en explotación del programa",
       "B. Siempre son del programador junior.",
@@ -6871,7 +6871,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T7-277-Pregunta: Una empresa de venta de teléfonos móviles informa a sus clientes por SMS de las novedades mensuales de estos productos. Se podrá realizar este envío",
+    "cuestion": "API-T7-296-Pregunta: Una empresa de venta de teléfonos móviles informa a sus clientes por SMS de las novedades mensuales de estos productos. Se podrá realizar este envío",
     "opciones": [
       "A. Todas las respuestas son correctas",
       "B. Sólo si el receptor ha dado su consentimiento o es un cliente de la empresa.",
@@ -6881,7 +6881,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T7-278-Pregunta: Quien desarrolla un programa de ordenador para falsificar tarjetas de crédito inteligentes",
+    "cuestion": "API-T7-297-Pregunta: Quien desarrolla un programa de ordenador para falsificar tarjetas de crédito inteligentes",
     "opciones": [
       "A. Comete un delito contra la propiedad intelectual",
       "B. Comente un delito de falsedades",
@@ -6891,7 +6891,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T7-279-Pregunta: No es necesario el documento de seguridad según el Reglamento de desarrollo de la LOPD",
+    "cuestion": "API-T7-298-Pregunta: No es necesario el documento de seguridad según el Reglamento de desarrollo de la LOPD",
     "opciones": [
       "A. Cuando solo se tengan datos de fuente accesible al público",
       "B. Cuando no se exija la existencia de un responsable de seguridad",
@@ -6901,7 +6901,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T7-280-Pregunta: ¿Quién puede realizar una auditoria según el reglamento de la LOPD?",
+    "cuestion": "API-T7-299-Pregunta: ¿Quién puede realizar una auditoria según el reglamento de la LOPD?",
     "opciones": [
       "A. El responsable de seguridad.",
       "B. Las personas certificadas por la Agencia Española de protección de datos.",
@@ -6911,7 +6911,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T7-281-Pregunta: La tutela de los derechos recogidos en la LOPD",
+    "cuestion": "API-T7-300-Pregunta: La tutela de los derechos recogidos en la LOPD",
     "opciones": [
       "A. La ejerce la agencia española de protección de datos.",
       "B. La ejerce el Ministerio de justifica.",
@@ -6921,7 +6921,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T7-282-Pregunta: Una aplicación para un teléfono inteligente almacena, de forma continua, en el sistema de archivos del teléfono la posición geográfica para su posterior recuperación por parte del usuario del teléfono. En este caso.",
+    "cuestion": "API-T7-301-Pregunta: Una aplicación para un teléfono inteligente almacena, de forma continua, en el sistema de archivos del teléfono la posición geográfica para su posterior recuperación por parte del usuario del teléfono. En este caso.",
     "opciones": [
       "A. Es de aplicación exclusivamente la LSSI.",
       "B. No es aplicable ni la LOPD ni la LSSI.",
@@ -6931,7 +6931,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T7-283-Pregunta: Un certificado electrónico",
+    "cuestion": "API-T7-302-Pregunta: Un certificado electrónico",
     "opciones": [
       "A. Permite comprobar la integridad del documento firmado con dicho certificado.",
       "B. Sólo es necesario cuando se utiliza una pareja de claves (cifrado asimétrico) para generar la firma electrónica.",
@@ -6941,7 +6941,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T7-284-Pregunta: Quien desarrolla un programa de ordenador que realiza transacciones bancarias y en cada operación transfiere un céntimo de euro a una cuenta sin conocimiento del usuario.",
+    "cuestion": "API-T7-303-Pregunta: Quien desarrolla un programa de ordenador que realiza transacciones bancarias y en cada operación transfiere un céntimo de euro a una cuenta sin conocimiento del usuario.",
     "opciones": [
       "A. Comete un delito de revelación de secretos.",
       "B. Comete un delito de daños.",
@@ -6951,7 +6951,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T7-285-Pregunta: Toda aplicación que trate datos de carácter personal debe incluir en su descripción técnica el nivel de medidas de seguridad que permite alcanzar dicho software excepto:",
+    "cuestion": "API-T7-304-Pregunta: Toda aplicación que trate datos de carácter personal debe incluir en su descripción técnica el nivel de medidas de seguridad que permite alcanzar dicho software excepto:",
     "opciones": [
       "A. Ninguna de las otras respuestas es correcta.",
       "B. Si los datos personales son tratados exclusivamente de personas de la empresa u organización usuaria de la aplicación.",
@@ -6961,7 +6961,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T7-286-Pregunta: Una persona física crea un sitio web con publicidad sobre material fotográfico e incorpora propias para ilustrar el uso de ciertas técnicas fotográficas. Asimismo, se permite la descarga y el uso sin restricciones de dichas fotografías. En este caso:",
+    "cuestion": "API-T7-305-Pregunta: Una persona física crea un sitio web con publicidad sobre material fotográfico e incorpora propias para ilustrar el uso de ciertas técnicas fotográficas. Asimismo, se permite la descarga y el uso sin restricciones de dichas fotografías. En este caso:",
     "opciones": [
       "A. No es de aplicación la LSSI pues es una persona física quien crea el sitio web.",
       "B. Es de aplicación la LSSI.",
@@ -6971,7 +6971,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T7-287-Pregunta: Una empresa de desarrollo software ha diseñado la estructura de una base de datos la legislación nacional para un equipo de abogados. En este caso, los derechos de autor son:",
+    "cuestion": "API-T7-306-Pregunta: Una empresa de desarrollo software ha diseñado la estructura de una base de datos la legislación nacional para un equipo de abogados. En este caso, los derechos de autor son:",
     "opciones": [
       "A. Por defecto, de la empresa de desarrollo de software y del equipo de abogados.",
       "B. Del equipo de abogados.",
@@ -6981,7 +6981,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T7-288-Pregunta: Quien realiza un acceso a los datos de carácter por cuenta de terceros se denomina.",
+    "cuestion": "API-T7-307-Pregunta: Quien realiza un acceso a los datos de carácter por cuenta de terceros se denomina.",
     "opciones": [
       "A. Usuario de los datos.",
       "B. Responsable del fichero.",
@@ -6991,7 +6991,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T7-289-Pregunta: Las comunicaciones en una red deben ser cifradas cuando se transmitan datos de carácter personal relativos a:",
+    "cuestion": "API-T7-308-Pregunta: Las comunicaciones en una red deben ser cifradas cuando se transmitan datos de carácter personal relativos a:",
     "opciones": [
       "A. Creencias.",
       "B. Infracciones penales.",
@@ -7001,7 +7001,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T7-290-Pregunta: ¿Quién debe realizar la inscripción de un fichero en el Registro General de Protección de Datos?",
+    "cuestion": "API-T7-309-Pregunta: ¿Quién debe realizar la inscripción de un fichero en el Registro General de Protección de Datos?",
     "opciones": [
       "A. El encargado del tratamiento.",
       "B. El responsable del tratamiento.",
@@ -7011,7 +7011,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T7-291-Pregunta: Aunque no se tenga el consentimiento de la persona, se puede realizar una comunicación de datos de dicha persona (elegir incorrecta).",
+    "cuestion": "API-T7-310-Pregunta: Aunque no se tenga el consentimiento de la persona, se puede realizar una comunicación de datos de dicha persona (elegir incorrecta).",
     "opciones": [
       "A. A un hospital en caso de urgencia médica.",
       "B. Jueces y tribunales.",
@@ -7021,7 +7021,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T7-292-Pregunta: ¿Quién puede acceder al Registro General de Protección de Datos?",
+    "cuestion": "API-T7-311-Pregunta: ¿Quién puede acceder al Registro General de Protección de Datos?",
     "opciones": [
       "A. Exclusivamente los responsables de ficheros y responsables de seguridad.",
       "B. Exclusivamente los responsables de ficheros.",
@@ -7031,7 +7031,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T7-293-Pregunta: Una empresa trata datos de carácter personal siendo exigible un responsable de seguridad. En este caso.",
+    "cuestion": "API-T7-312-Pregunta: Una empresa trata datos de carácter personal siendo exigible un responsable de seguridad. En este caso.",
     "opciones": [
       "A. Se tratan los datos que requieren un nivel medio o alto de medias de seguridad.",
       "B. El responsable del fichero ha delegado en el responsable de seguridad todas las tareas de gestión de datos personales.",
@@ -7041,7 +7041,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T7-294-Pregunta: Las exigencias de la LSSI a la utilización de las cookies se exceptúan en el caso de:",
+    "cuestion": "API-T7-313-Pregunta: Las exigencias de la LSSI a la utilización de las cookies se exceptúan en el caso de:",
     "opciones": [
       "A. Cookies propias.",
       "B. Ninguna de las anteriores es correcta.",
@@ -7050,7 +7050,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T7-295-Pregunta: Según la LOPD, No es una fuente accesible al público",
+    "cuestion": "API-T7-314-Pregunta: Según la LOPD, No es una fuente accesible al público",
     "opciones": [
       "A. Diario Oficial de Castilla-La Mancha.",
       "B. Sitio web de la Junta de comunidades de Castilla-La Mancha.",
@@ -7060,7 +7060,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T7-296-Pregunta: Un frigorífico conectado a Internet registra la entrada y salida y, cuando procede, pide los alimentos necesarios a un supermercado para su envío al domicilio del propietario del frigorífico. En este caso.",
+    "cuestion": "API-T7-315-Pregunta: Un frigorífico conectado a Internet registra la entrada y salida y, cuando procede, pide los alimentos necesarios a un supermercado para su envío al domicilio del propietario del frigorífico. En este caso.",
     "opciones": [
       "A. Es de aplicación exclusivamente la LOPD.",
       "B. Es de aplicación exclusivamente la LSSI.",
@@ -7070,7 +7070,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T7-297-Pregunta: ¿Qué dato no es especialmente protegido según la LOPD?",
+    "cuestion": "API-T7-316-Pregunta: ¿Qué dato no es especialmente protegido según la LOPD?",
     "opciones": [
       "A. Origen racial.",
       "B. Ideología.",
@@ -7080,7 +7080,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T7-298-Pregunta: En una aplicación que trate datos de carácter personal",
+    "cuestion": "API-T7-317-Pregunta: En una aplicación que trate datos de carácter personal",
     "opciones": [
       "A. No es posible utilizar cuentas genéricas de acceso a la aplicación para su uso por varias personas.",
       "B. Siempre es necesario limitar el nº de intentos reiterados de acceso no autorizado.",
@@ -7090,7 +7090,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T7-299-Pregunta: Un sitio web tiene la información de contacto de todas las empresas de fontanería y fontaneros que trabajan de forma autónoma en una provincia. Las medidas de seguridad a aplicar según el reglamento de la LOPD son:",
+    "cuestion": "API-T7-318-Pregunta: Un sitio web tiene la información de contacto de todas las empresas de fontanería y fontaneros que trabajan de forma autónoma en una provincia. Las medidas de seguridad a aplicar según el reglamento de la LOPD son:",
     "opciones": [
       "A. De nivel medio.",
       "B. Ninguna pues no es de aplicación la LOPD",
@@ -7100,7 +7100,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T7-300-Pregunta: Una aplicación móvil de salud rastrea la frecuencia cardíaca de los usuarios y almacena el historial localmente en el dispositivo sin transmitirlo. Respecto a la normativa de protección de datos (RGPD):",
+    "cuestion": "API-T7-319-Pregunta: Una aplicación móvil de salud rastrea la frecuencia cardíaca de los usuarios y almacena el historial localmente en el dispositivo sin transmitirlo. Respecto a la normativa de protección de datos (RGPD):",
     "opciones": [
       "A. No es de aplicación el RGPD porque los datos no se transmiten a ningún servidor externo.",
       "B. Solo se aplica la LSSI porque se trata de un servicio de la sociedad de la información basado en software móvil.",
@@ -7110,7 +7110,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T7-301-Pregunta: Un programador firma un contrato de prestación de servicios de desarrollo de software con una empresa utilizando un sistema web que captura sus rasgos biométricos de tecleo y su dirección IP. ¿Qué tipo de firma electrónica se está empleando?",
+    "cuestion": "API-T7-320-Pregunta: Un programador firma un contrato de prestación de servicios de desarrollo de software con una empresa utilizando un sistema web que captura sus rasgos biométricos de tecleo y su dirección IP. ¿Qué tipo de firma electrónica se está empleando?",
     "opciones": [
       "A. Firma electrónica simple.",
       "B. Firma electrónica cualificada.",
@@ -7120,7 +7120,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T7-302-Pregunta: Un portal web inmobiliario instala una cookie persistente de terceros para analizar el comportamiento de navegación del usuario y ofrecerle publicidad personalizada. El banner inicial de la web permite seguir navegando sin hacer clic en ninguna opción. En este caso:",
+    "cuestion": "API-T7-321-Pregunta: Un portal web inmobiliario instala una cookie persistente de terceros para analizar el comportamiento de navegación del usuario y ofrecerle publicidad personalizada. El banner inicial de la web permite seguir navegando sin hacer clic en ninguna opción. En este caso:",
     "opciones": [
       "A. La web infringe la LSSI al no obtener un consentimiento expreso y previo antes de instalar dicha cookie.",
       "B. El consentimiento es válido porque la navegación continuada constituye un acto inequívoco según la LSSI.",
@@ -7130,7 +7130,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T7-303-Pregunta: Una startup de desarrollo web tiene una plantilla de 8 trabajadores y una facturación anual de 1.5 millones de euros. Desarrolla un e-commerce para la venta de cursos online. Respecto a la Ley 11/2023 de accesibilidad universal:",
+    "cuestion": "API-T7-322-Pregunta: Una startup de desarrollo web tiene una plantilla de 8 trabajadores y una facturación anual de 1.5 millones de euros. Desarrolla un e-commerce para la venta de cursos online. Respecto a la Ley 11/2023 de accesibilidad universal:",
     "opciones": [
       "A. Está obligada a cumplir los requisitos de accesibilidad por ofrecer un servicio de comercio electrónico.",
       "B. Está exenta de cumplir los requisitos de accesibilidad al tener la condición legal de microempresa.",
@@ -7140,7 +7140,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T7-304-Pregunta: Un ingeniero informático contratado por cuenta ajena desarrolla un nuevo algoritmo de compresión de vídeo extremadamente eficiente para la plataforma de streaming de su empresa. Los derechos de explotación de este software correspondientes al código fuente:",
+    "cuestion": "API-T7-323-Pregunta: Un ingeniero informático contratado por cuenta ajena desarrolla un nuevo algoritmo de compresión de vídeo extremadamente eficiente para la plataforma de streaming de su empresa. Los derechos de explotación de este software correspondientes al código fuente:",
     "opciones": [
       "A. Pertenecen en exclusiva al ingeniero informático por ser el autor material de la obra.",
       "B. Son de dominio público desde el momento de su creación por haberse desarrollado bajo un contrato laboral.",
@@ -7150,7 +7150,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T7-305-Pregunta: Un analista de ciberseguridad descubre que un empleado descontento ha modificado el código de producción de la empresa para desviar céntimos de transacciones bancarias a una cuenta puente personal de forma automatizada. ¿Qué delito penal se ha cometido?",
+    "cuestion": "API-T7-324-Pregunta: Un analista de ciberseguridad descubre que un empleado descontento ha modificado el código de producción de la empresa para desviar céntimos de transacciones bancarias a una cuenta puente personal de forma automatizada. ¿Qué delito penal se ha cometido?",
     "opciones": [
       "A. Un delito contra la propiedad intelectual.",
       "B. Un delito de falsedad documental.",
@@ -7160,7 +7160,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T7-306-Pregunta: Un ayuntamiento implanta una plataforma web para que los ciudadanos voten sobre los presupuestos municipales utilizando certificados electrónicos del DNIe. Esta firma digital:",
+    "cuestion": "API-T7-325-Pregunta: Un ayuntamiento implanta una plataforma web para que los ciudadanos voten sobre los presupuestos municipales utilizando certificados electrónicos del DNIe. Esta firma digital:",
     "opciones": [
       "A. Se clasifica como firma electrónica cualificada y tiene el mismo valor jurídico que la firma manuscrita.",
       "B. Se clasifica como firma electrónica avanzada debido al cifrado asimétrico utilizado.",
@@ -7170,7 +7170,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T7-307-Pregunta: Una empresa de desarrollo de software utiliza OpenSSL para generar un par de claves corporativas. El administrador cifra una base de datos interna utilizando la clave pública de la entidad. Para recuperar el contenido original legible de la base de datos de forma directa:",
+    "cuestion": "API-T7-326-Pregunta: Una empresa de desarrollo de software utiliza OpenSSL para generar un par de claves corporativas. El administrador cifra una base de datos interna utilizando la clave pública de la entidad. Para recuperar el contenido original legible de la base de datos de forma directa:",
     "opciones": [
       "A. Se puede descifrar utilizando la misma clave pública mediante un proceso matemático inverso.",
       "B. Es necesario utilizar obligatoriamente la clave privada correspondiente a ese par de claves.",
@@ -7180,7 +7180,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T7-308-Pregunta: Un concesionario de coches compra un listado que contiene únicamente datos de contacto comerciales de empresas de transporte de su provincia para enviarles un folleto publicitario por email. Respecto a la LSSI y el envío de correos comerciales:",
+    "cuestion": "API-T7-327-Pregunta: Un concesionario de coches compra un listado que contiene únicamente datos de contacto comerciales de empresas de transporte de su provincia para enviarles un folleto publicitario por email. Respecto a la LSSI y el envío de correos comerciales:",
     "opciones": [
       "A. Puede realizar el envío masivo libremente porque los datos de contacto corporativos están excluidos del ámbito de aplicación de la LSSI.",
       "B. El envío es legal si incluye la palabra \"Publicidad\" en el asunto, sin importar el consentimiento previo.",
@@ -7190,7 +7190,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T7-309-Pregunta: Una plataforma web de reservas de hoteles utiliza un script oculto para recolectar información sobre la resolución de pantalla, el sistema operativo, los plugins y la zona horaria del navegador del visitante sin almacenar archivos en su equipo. Esta técnica:",
+    "cuestion": "API-T7-328-Pregunta: Una plataforma web de reservas de hoteles utiliza un script oculto para recolectar información sobre la resolución de pantalla, el sistema operativo, los plugins y la zona horaria del navegador del visitante sin almacenar archivos en su equipo. Esta técnica:",
     "opciones": [
       "A. Está exenta de la LSSI por no descargar ningún archivo o dispositivo en el terminal del usuario.",
       "B. Es una cookie técnica exceptuada del consentimiento por garantizar la seguridad de la sesión de reserva.",
@@ -7200,7 +7200,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T7-310-Pregunta: Un desarrollador freelance diseña un sitio web corporativo estático para mostrar sus servicios de consultoría. El sitio web no realiza ninguna actividad de comercio electrónico directa ni vende publicidad, pero incluye sus datos de contacto. Según la LSSI:",
+    "cuestion": "API-T7-329-Pregunta: Un desarrollador freelance diseña un sitio web corporativo estático para mostrar sus servicios de consultoría. El sitio web no realiza ninguna actividad de comercio electrónico directa ni vende publicidad, pero incluye sus datos de contacto. Según la LSSI:",
     "opciones": [
       "A. Está obligado a cumplir con el deber de información de la LSSI (Nombre, NIF, datos de contacto) por representar el ejercicio de una actividad económica indirecta.",
       "B. No está sujeto a la LSSI porque no genera ingresos económicos directos en la propia plataforma web.",
@@ -7210,7 +7210,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T7-311-Pregunta: Un programador web diseña un script para un e-commerce que almacena los artículos que el cliente añade a su cesta de la compra mediante una cookie que expira al cerrar el navegador. ¿Cuál es el estatus legal de esta cookie?",
+    "cuestion": "API-T7-330-Pregunta: Un programador web diseña un script para un e-commerce que almacena los artículos que el cliente añade a su cesta de la compra mediante una cookie que expira al cerrar el navegador. ¿Cuál es el estatus legal de esta cookie?",
     "opciones": [
       "A. Requiere consentimiento expreso mediante un banner antes de poder instalarse.",
       "B. Está exceptuada del deber de consentimiento informado por ser una cookie de \"entrada del usuario\" estrictamente necesaria para prestar un servicio solicitado.",
@@ -7220,7 +7220,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T7-312-Pregunta: Una universidad pública rediseña su campus virtual para estudiantes. Siguiendo el Real Decreto 1112/2018 y las directrices WCAG 2.2 de la WAI, el nivel mínimo de conformidad en accesibilidad web que debe garantizar es:",
+    "cuestion": "API-T7-331-Pregunta: Una universidad pública rediseña su campus virtual para estudiantes. Siguiendo el Real Decreto 1112/2018 y las directrices WCAG 2.2 de la WAI, el nivel mínimo de conformidad en accesibilidad web que debe garantizar es:",
     "opciones": [
       "A. Nivel A.",
       "B. Nivel AAA.",
@@ -7230,7 +7230,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T7-313-Pregunta: Un ingeniero crea una estructura de base de datos relacional para un despacho de abogados que organiza las sentencias por tipología penal y penalizaciones aplicadas. La originalidad radica puramente en la disposición, ordenación y selección de los datos. Esta base de datos:",
+    "cuestion": "API-T7-332-Pregunta: Un ingeniero crea una estructura de base de datos relacional para un despacho de abogados que organiza las sentencias por tipología penal y penalizaciones aplicadas. La originalidad radica puramente en la disposición, ordenación y selección de los datos. Esta base de datos:",
     "opciones": [
       "A. Está excluida de la Ley de Propiedad Intelectual porque las sentencias judiciales son textos oficiales públicos.",
       "B. Otorga al programador derechos morales inalienables sobre el contenido textual de las sentencias almacenadas.",
@@ -7240,7 +7240,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T7-314-Pregunta: Un desarrollador web malintencionado modifica el código de una página de banca electrónica legítima introduciendo código JavaScript que extrae las credenciales del usuario de los campos de texto del formulario y las envía a un servidor externo. ¿Ante qué ataque nos encontramos y qué riesgo mitiga la cabecera HttpOnly?",
+    "cuestion": "API-T7-333-Pregunta: Un desarrollador web malintencionado modifica el código de una página de banca electrónica legítima introduciendo código JavaScript que extrae las credenciales del usuario de los campos de texto del formulario y las envía a un servidor externo. ¿Ante qué ataque nos encontramos y qué riesgo mitiga la cabecera HttpOnly?",
     "opciones": [
       "A. Es un ataque XSS (Cross-Site Scripting); HttpOnly evita el acceso al valor de las cookies de autenticación desde JavaScript.",
       "B. Es un ataque CSRF; HttpOnly impide que se altere el rol de administrador en el servidor.",
@@ -7250,7 +7250,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T7-315-Pregunta: Un hacker ético descubre que un competidor comercial ha descargado, copiado y descompilado sin autorización el binario compilado de un software de gestión corporativa con derechos de autor para lanzar un clon idéntico al mercado. ¿Qué tipo de infracción se ha materializado?",
+    "cuestion": "API-T7-334-Pregunta: Un hacker ético descubre que un competidor comercial ha descargado, copiado y descompilado sin autorización el binario compilado de un software de gestión corporativa con derechos de autor para lanzar un clon idéntico al mercado. ¿Qué tipo de infracción se ha materializado?",
     "opciones": [
       "A. Una falsedad informática en documento público.",
       "B. Un delito contra la propiedad intelectual recogido en el Código Penal.",
@@ -7260,7 +7260,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T7-316-Pregunta: Una empresa tecnológica sufre un ciberataque de ransomware que cifra las bases de datos de clientes, perdiendo el acceso a datos personales de 50.000 clientes. Según el RGPD, la empresa:",
+    "cuestion": "API-T7-335-Pregunta: Una empresa tecnológica sufre un ciberataque de ransomware que cifra las bases de datos de clientes, perdiendo el acceso a datos personales de 50.000 clientes. Según el RGPD, la empresa:",
     "opciones": [
       "A. Solo debe notificar el incidente si los atacantes publican los datos de forma efectiva en Internet.",
       "B. Está exenta de notificar si cuenta con un Delegado de Protección de Datos (DPD) certificado.",
@@ -7270,7 +7270,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T7-317-Pregunta: Un banco online implementa un sistema automatizado para verificar la validez técnica de los documentos electrónicos que firman sus usuarios. El sistema comprueba que el documento electrónico no ha sufrido modificaciones desde su firma. ¿Qué propiedad de la seguridad se está validando directamente?",
+    "cuestion": "API-T7-336-Pregunta: Un banco online implementa un sistema automatizado para verificar la validez técnica de los documentos electrónicos que firman sus usuarios. El sistema comprueba que el documento electrónico no ha sufrido modificaciones desde su firma. ¿Qué propiedad de la seguridad se está validando directamente?",
     "opciones": [
       "A. Confidencialidad.",
       "B. Disponibilidad.",
@@ -7280,7 +7280,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T7-318-Pregunta: Un programador informático distribuye un software malicioso a través de foros especializados que está específicamente diseñado para automatizar ataques distribuidos de denegación de servicio (DDoS) contra servidores web corporativos. Según el Código Penal, este acto constituye:",
+    "cuestion": "API-T7-337-Pregunta: Un programador informático distribuye un software malicioso a través de foros especializados que está específicamente diseñado para automatizar ataques distribuidos de denegación de servicio (DDoS) contra servidores web corporativos. Según el Código Penal, este acto constituye:",
     "opciones": [
       "A. Un delito de daños informáticos por la producción y distribución de malware.",
       "B. Un delito de estafa informática simple.",
@@ -7290,7 +7290,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T7-319-Pregunta: Una plataforma web de streaming de vídeo introduce una cookie para recordar que un usuario ha configurado el volumen al 80% y ha activado los subtítulos en castellano durante su sesión actual. Según las pautas de la LSSI:",
+    "cuestion": "API-T7-338-Pregunta: Una plataforma web de streaming de vídeo introduce una cookie para recordar que un usuario ha configurado el volumen al 80% y ha activado los subtítulos en castellano durante su sesión actual. Según las pautas de la LSSI:",
     "opciones": [
       "A. Requiere el consentimiento mediante bloqueo del contenido multimedia hasta su aceptación.",
       "B. Está exenta del deber de consentimiento informado por ser una cookie de personalización de la interfaz de usuario de sesión.",
@@ -7300,7 +7300,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T7-320-Pregunta: Un perito informático analiza una firma digital aplicada sobre una factura. Constata que se utilizó un certificado cualificado emitido por la Fábrica Nacional de Moneda y Timbre (FNMT) guardado en una tarjeta criptográfica externa y que el firmante tiene el control exclusivo. Legalmente, esta firma:",
+    "cuestion": "API-T7-339-Pregunta: Un perito informático analiza una firma digital aplicada sobre una factura. Constata que se utilizó un certificado cualificado emitido por la Fábrica Nacional de Moneda y Timbre (FNMT) guardado en una tarjeta criptográfica externa y que el firmante tiene el control exclusivo. Legalmente, esta firma:",
     "opciones": [
       "A. Es una firma avanzada y puede ser repudiada de forma directa sin pruebas adicionales.",
       "B. No es válida si el documento electrónico no se redactó originalmente en formato PDF.",
@@ -7310,7 +7310,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T7-321-Pregunta: Un portal de comercio electrónico de electrodomésticos no incluye en su aviso legal el número de inscripción en el Registro Mercantil ni el Número de Identificación Fiscal (NIF), imposibilitando la identificación del prestador. ¿Qué tipo de infracción de la LSSI supone?",
+    "cuestion": "API-T7-340-Pregunta: Un portal de comercio electrónico de electrodomésticos no incluye en su aviso legal el número de inscripción en el Registro Mercantil ni el Número de Identificación Fiscal (NIF), imposibilitando la identificación del prestador. ¿Qué tipo de infracción de la LSSI supone?",
     "opciones": [
       "A. Infracción leve.",
       "B. Infracción grave.",
@@ -7320,7 +7320,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T7-322-Pregunta: Un programador autónomo publica un juego web interactivo. En la pantalla de carga, incluye un aviso que dice: \"Al jugar en este sitio web, usted acepta implícitamente el uso de cookies de seguimiento publicitario\". El usuario cierra el aviso mediante scroll de pantalla y comienza a jugar. El consentimiento:",
+    "cuestion": "API-T7-341-Pregunta: Un programador autónomo publica un juego web interactivo. En la pantalla de carga, incluye un aviso que dice: \"Al jugar en este sitio web, usted acepta implícitamente el uso de cookies de seguimiento publicitario\". El usuario cierra el aviso mediante scroll de pantalla y comienza a jugar. El consentimiento:",
     "opciones": [
       "A. Es inválido porque el consentimiento para cookies de seguimiento debe ser expreso y previo; el scroll no implica aceptación.",
       "B. Es válido porque el scroll y la interacción con el juego representan una acción afirmativa clara.",
@@ -7330,7 +7330,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T7-323-Pregunta: Una mutua médica privada que gestiona historiales de salud electrónicos de sus pacientes decide cambiar la periodicidad de actualización de las contraseñas de acceso de los facultativos informáticos. De acuerdo con las mejores prácticas derivadas de los reglamentos clásicos de seguridad de datos de salud:",
+    "cuestion": "API-T7-342-Pregunta: Una mutua médica privada que gestiona historiales de salud electrónicos de sus pacientes decide cambiar la periodicidad de actualización de las contraseñas de acceso de los facultativos informáticos. De acuerdo con las mejores prácticas derivadas de los reglamentos clásicos de seguridad de datos de salud:",
     "opciones": [
       "A. Deben cambiarse al menos una vez al año.",
       "B. Deben cambiarse al menos una vez al semestre.",
@@ -7340,7 +7340,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T7-324-Pregunta: Una empresa proveedora de almacenamiento en la nube (hosting) aloja un sitio web administrado por terceros donde se distribuyen copias piratas de software comercial. La empresa de hosting recibe una notificación oficial legal notificando la ilegalidad del contenido, pero decide no intervenir. En este caso:",
+    "cuestion": "API-T7-343-Pregunta: Una empresa proveedora de almacenamiento en la nube (hosting) aloja un sitio web administrado por terceros donde se distribuyen copias piratas de software comercial. La empresa de hosting recibe una notificación oficial legal notificando la ilegalidad del contenido, pero decide no intervenir. En este caso:",
     "opciones": [
       "A. El proveedor de hosting está exento de responsabilidad penal y civil de forma permanente según la LSSI.",
       "B. La responsabilidad recae al 100% en el operador de red de telecomunicaciones que da acceso a la IP.",
@@ -7350,7 +7350,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T7-325-Pregunta: Un desarrollador crea una app de mensajería cifrada. Para la transmisión de los mensajes, el software cifra el cuerpo del texto con una clave simétrica aleatoria de sesión y, posteriormente, cifra dicha clave con la clave pública del destinatario. Este método criptográfico es:",
+    "cuestion": "API-T7-344-Pregunta: Un desarrollador crea una app de mensajería cifrada. Para la transmisión de los mensajes, el software cifra el cuerpo del texto con una clave simétrica aleatoria de sesión y, posteriormente, cifra dicha clave con la clave pública del destinatario. Este método criptográfico es:",
     "opciones": [
       "A. Criptografía simétrica pura.",
       "B. Criptografía asimétrica pura.",
@@ -7360,7 +7360,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T7-326-Pregunta: Un graduado en ingeniería informática abre un canal público en una plataforma de vídeos donde analiza vulnerabilidades informáticas reales de empresas españolas sin su autorización. En sus vídeos incluye publicidad programática con la que genera ingresos mensuales. Este canal web:",
+    "cuestion": "API-T7-345-Pregunta: Un graduado en ingeniería informática abre un canal público en una plataforma de vídeos donde analiza vulnerabilidades informáticas reales de empresas españolas sin su autorización. En sus vídeos incluye publicidad programática con la que genera ingresos mensuales. Este canal web:",
     "opciones": [
       "A. Está sujeto a las obligaciones de la LSSI por representar una actividad económica directa derivada de los ingresos publicitarios.",
       "B. Está excluido de la LSSI al tratarse de un contenido puramente educativo y divulgativo.",
@@ -7370,7 +7370,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T7-327-Pregunta: El responsable del tratamiento de datos de una cadena de supermercados contrata a una empresa externa de desarrollo de software para migrar su base de datos de clientes. Ambas entidades firman un acuerdo escrito donde la empresa externa se compromete a tratar los datos solo bajo instrucciones del supermercado. Legalmente, la empresa externa actúa como:",
+    "cuestion": "API-T7-346-Pregunta: El responsable del tratamiento de datos de una cadena de supermercados contrata a una empresa externa de desarrollo de software para migrar su base de datos de clientes. Ambas entidades firman un acuerdo escrito donde la empresa externa se compromete a tratar los datos solo bajo instrucciones del supermercado. Legalmente, la empresa externa actúa como:",
     "opciones": [
       "A. Responsable del tratamiento.",
       "B. Encargado del tratamiento.",
@@ -7380,7 +7380,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T7-328-Pregunta: Un ciberdelincuente genera de forma masiva miles de certificados falsificados imitando entidades bancarias reales para montar un servidor web malicioso de robo de credenciales. ¿Qué delito tipificado en el Código Penal se le imputará directamente al autor del programa?",
+    "cuestion": "API-T7-347-Pregunta: Un ciberdelincuente genera de forma masiva miles de certificados falsificados imitando entidades bancarias reales para montar un servidor web malicioso de robo de credenciales. ¿Qué delito tipificado en el Código Penal se le imputará directamente al autor del programa?",
     "opciones": [
       "A. Delito contra la propiedad intelectual.",
       "B. Delito de estafa informática.",
@@ -7390,7 +7390,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T7-329-Pregunta: Una empresa de telecomunicaciones envía SMS masivos a sus clientes informando sobre un cambio técnico obligatorio en las bandas de frecuencia de sus enrutadores caseros, indicando un enlace web con el procedimiento. El envío incluye los pasos detallados para oponerse a futuros envíos de cualquier tipo. Este envío por SMS es:",
+    "cuestion": "API-T7-348-Pregunta: Una empresa de telecomunicaciones envía SMS masivos a sus clientes informando sobre un cambio técnico obligatorio en las bandas de frecuencia de sus enrutadores caseros, indicando un enlace web con el procedimiento. El envío incluye los pasos detallados para oponerse a futuros envíos de cualquier tipo. Este envío por SMS es:",
     "opciones": [
       "A. Ilegal porque los SMS comerciales están totalmente prohibidos en la legislación española actual.",
       "B. Ilegal si no incorpora de forma obligatoria la palabra \"publi\" explícitamente en los primeros caracteres del SMS.",
@@ -7400,7 +7400,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T7-330-Pregunta: Durante una auditoría de seguridad informática bajo la legislación de protección de datos española aplicable a un sistema crítico de bases de datos médicas, ¿quién está habilitado legalmente para ejecutar formalmente dicha auditoría externa o interna de los sistemas?",
+    "cuestion": "API-T7-349-Pregunta: Durante una auditoría de seguridad informática bajo la legislación de protección de datos española aplicable a un sistema crítico de bases de datos médicas, ¿quién está habilitado legalmente para ejecutar formalmente dicha auditoría externa o interna de los sistemas?",
     "opciones": [
       "A. El responsable de seguridad del fichero o auditores cualificados internos/externos, no existiendo monopolio de certificación de la AEPD.",
       "B. Únicamente personas certificadas de manera expresa por la Agencia Española de Protección de Datos.",
@@ -7410,7 +7410,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T7-331-Pregunta: Un diseñador frontend utiliza una herramienta automatizada para comprobar que el contraste de color del texto de una plataforma de comercio electrónico de energía para consumidores cumple con los requisitos del principio \"Perceptible\" establecidos por las directrices WCAG 2.2. ¿Qué norma internacional de referencia y nivel se está evaluando prioritariamente en España?",
+    "cuestion": "API-T7-350-Pregunta: Un diseñador frontend utiliza una herramienta automatizada para comprobar que el contraste de color del texto de una plataforma de comercio electrónico de energía para consumidores cumple con los requisitos del principio \"Perceptible\" establecidos por las directrices WCAG 2.2. ¿Qué norma internacional de referencia y nivel se está evaluando prioritariamente en España?",
     "opciones": [
       "A. Estándar ISO 27001 a nivel organizativo.",
       "B. Pautas WCAG de la WAI/W3C, exigidas generalmente en su nivel de conformidad AA.",
@@ -7420,7 +7420,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T7-332-Pregunta: Una empresa de software comercializa una aplicación que permite descifrar y saltarse las medidas tecnológicas de protección (DRM) implementadas por los creadores de videojuegos para evitar la copia no autorizada de sus programas. Según la Ley de Propiedad Intelectual y el Código Penal, comercializar este software de neutralización:",
+    "cuestion": "API-T7-351-Pregunta: Una empresa de software comercializa una aplicación que permite descifrar y saltarse las medidas tecnológicas de protección (DRM) implementadas por los creadores de videojuegos para evitar la copia no autorizada de sus programas. Según la Ley de Propiedad Intelectual y el Código Penal, comercializar este software de neutralización:",
     "opciones": [
       "A. Es legal por ampararse en el derecho a la ingeniería inversa de los consumidores de software.",
       "B. Es una infracción menor que solo conlleva una multa de tráfico de datos de la LSSI.",
@@ -7430,7 +7430,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T7-333-Pregunta: Una compañía de seguros diseña un portal web donde solicita exclusivamente el nombre y el correo electrónico de los visitantes para enviar un boletín técnico de noticias sobre prevención de accidentes domésticos. En el formulario de recogida:",
+    "cuestion": "API-T7-352-Pregunta: Una compañía de seguros diseña un portal web donde solicita exclusivamente el nombre y el correo electrónico de los visitantes para enviar un boletín técnico de noticias sobre prevención de accidentes domésticos. En el formulario de recogida:",
     "opciones": [
       "A. No es necesario informar sobre protección de datos personales al recoger solo el correo electrónico y el nombre.",
       "B. Solo se debe informar si el prestador del servicio es una administración pública estatal.",
@@ -7440,7 +7440,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T7-334-Pregunta: Un desarrollador web configura la cabecera HTTP \"Set-Cookie\" desde su servidor para enviar un identificador de sesión al navegador del usuario. Quiere asegurar que el navegador devuelva automáticamente dicha cookie al servidor en las solicitudes de recursos subsiguientes de forma transparente según el estándar de red. ¿Qué cabecera enviará de vuelta el navegador del usuario?",
+    "cuestion": "API-T7-353-Pregunta: Un desarrollador web configura la cabecera HTTP \"Set-Cookie\" desde su servidor para enviar un identificador de sesión al navegador del usuario. Quiere asegurar que el navegador devuelva automáticamente dicha cookie al servidor en las solicitudes de recursos subsiguientes de forma transparente según el estándar de red. ¿Qué cabecera enviará de vuelta el navegador del usuario?",
     "opciones": [
       "A. Cabecera HTTP \"Cookie\".",
       "B. Cabecera HTTP \"Set-Cookie-Response\".",
@@ -7450,7 +7450,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T7-335-Pregunta: Un ingeniero informático de sistemas de una organización sindical almacena de manera temporal en su ordenador portátil corporativo las solicitudes de afiliación de nuevos miembros que contienen ideología, datos de afiliación sindical y salud de los trabajadores. Según la normativa técnica de protección de datos, este ordenador portátil corporativo:",
+    "cuestion": "API-T7-354-Pregunta: Un ingeniero informático de sistemas de una organización sindical almacena de manera temporal en su ordenador portátil corporativo las solicitudes de afiliación de nuevos miembros que contienen ideología, datos de afiliación sindical y salud de los trabajadores. Según la normativa técnica de protección de datos, este ordenador portátil corporativo:",
     "opciones": [
       "A. No puede salir de las dependencias de la organización sindical bajo ninguna circunstancia.",
       "B. No puede almacenar dichos archivos de datos personales altamente protegidos sin cifrar.",
@@ -7460,7 +7460,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T7-336-Pregunta: Un programador distribuye un software comercial propietario bajo una licencia de uso anual. Al finalizar los 12 meses de contrato de un cliente, el programador accede de manera remota al servidor de dicho cliente sin su autorización y borra por completo los datos operativos del sistema informático alegando impago. Este acto se clasifica penalmente como:",
+    "cuestion": "API-T7-355-Pregunta: Un programador distribuye un software comercial propietario bajo una licencia de uso anual. Al finalizar los 12 meses de contrato de un cliente, el programador accede de manera remota al servidor de dicho cliente sin su autorización y borra por completo los datos operativos del sistema informático alegando impago. Este acto se clasifica penalmente como:",
     "opciones": [
       "A. Un ejercicio legítimo de los derechos de propiedad intelectual del desarrollador de software.",
       "B. Una suplantación de identidad digital regulada de forma administrativa por el eIDAS.",
@@ -7470,7 +7470,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T7-337-Pregunta: Una corporación municipal instala sensores de proximidad y cámaras de reconocimiento de matrículas de vehículos en los accesos de las calles del centro histórico para sancionar a infractores de tráfico. Respecto al principio de protección de datos denominado 'responsabilidad proactiva' recogido en el RGPD, el ayuntamiento debe:",
+    "cuestion": "API-T7-356-Pregunta: Una corporación municipal instala sensores de proximidad y cámaras de reconocimiento de matrículas de vehículos en los accesos de las calles del centro histórico para sancionar a infractores de tráfico. Respecto al principio de protección de datos denominado 'responsabilidad proactiva' recogido en el RGPD, el ayuntamiento debe:",
     "opciones": [
       "A. Solicitar de manera presencial y escrita la firma cualificada de cada conductor antes de registrar su matrícula.",
       "B. Guardar todos los datos de forma indefinida en servidores públicos sin límite temporal.",
@@ -7480,7 +7480,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T7-338-Pregunta: Un administrador de redes configura un servidor web apache utilizando la biblioteca de software libre OpenSSL. Su objetivo principal es asegurar las comunicaciones de la pasarela de pago del e-commerce frente a interceptaciones de terceros maliciosos en la red. ¿Qué protocolos web implementa directamente OpenSSL para este fin?",
+    "cuestion": "API-T7-357-Pregunta: Un administrador de redes configura un servidor web apache utilizando la biblioteca de software libre OpenSSL. Su objetivo principal es asegurar las comunicaciones de la pasarela de pago del e-commerce frente a interceptaciones de terceros maliciosos en la red. ¿Qué protocolos web implementa directamente OpenSSL para este fin?",
     "opciones": [
       "A. Protocolos TLS/SSL para establecer conexiones seguras HTTPS.",
       "B. Protocolos FTP y SSH cifrados con algoritmos puramente simétricos de bloque corto.",
@@ -7490,7 +7490,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T7-339-Pregunta: Un ciudadano español desea ejercer sus derechos de acceso, rectificación o supresión de sus datos personales tratados por la Agencia Estatal de la Administración Tributaria. ¿A quién encomienda la Constitución Española y la ley la tutela de estos derechos de protección de datos si la entidad no responde?",
+    "cuestion": "API-T7-358-Pregunta: Un ciudadano español desea ejercer sus derechos de acceso, rectificación o supresión de sus datos personales tratados por la Agencia Estatal de la Administración Tributaria. ¿A quién encomienda la Constitución Española y la ley la tutela de estos derechos de protección de datos si la entidad no responde?",
     "opciones": [
       "A. Al Ministerio de Industria, Comercio y Turismo a través de la LSSI.",
       "B. A la Agencia Española de Protección de Datos (AEPD).",
@@ -7500,7 +7500,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T7-340-Pregunta: Un desarrollador web crea una plataforma en línea de venta de billetes de autobús. Durante el proceso de pago con tarjeta, la web utiliza una cookie técnica de balanceo de carga para distribuir el tráfico de usuarios de manera óptima entre tres servidores de aplicaciones paralelos de la empresa. Respecto al consentimiento de esta cookie:",
+    "cuestion": "API-T7-359-Pregunta: Un desarrollador web crea una plataforma en línea de venta de billetes de autobús. Durante el proceso de pago con tarjeta, la web utiliza una cookie técnica de balanceo de carga para distribuir el tráfico de usuarios de manera óptima entre tres servidores de aplicaciones paralelos de la empresa. Respecto al consentimiento de esta cookie:",
     "opciones": [
       "A. Requiere el consentimiento informado previo y explícito en el banner de cookies de primera capa.",
       "B. Es ilegal según la LSSI por recopilar datos técnicos de enrutamiento del equipo terminal.",
@@ -7510,7 +7510,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T7-341-Pregunta: Un ingeniero informático monta una tienda online de ropa. Al finalizar un proceso de compra por parte de un usuario, el sistema informático envía automáticamente un correo electrónico al comprador confirmando los artículos adquiridos, el precio total pagado y los detalles de entrega en un plazo menor a 24 horas. Esta acción cumple con la obligación de la LSSI referente a:",
+    "cuestion": "API-T7-360-Pregunta: Un ingeniero informático monta una tienda online de ropa. Al finalizar un proceso de compra por parte de un usuario, el sistema informático envía automáticamente un correo electrónico al comprador confirmando los artículos adquiridos, el precio total pagado y los detalles de entrega en un plazo menor a 24 horas. Esta acción cumple con la obligación de la LSSI referente a:",
     "opciones": [
       "A. El derecho de desistimiento obligatorio de 14 días naturales.",
       "B. Informar sobre las medidas de ciberseguridad físicas utilizadas en el servidor de base de datos.",
@@ -7520,7 +7520,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T7-342-Pregunta: Un usuario se da de alta en una aplicación móvil bancaria introduciendo sus datos. Durante la configuración inicial, la app le obliga a rellenar obligatoriamente una casilla premarcada que dice: 'Acepto recibir ofertas sobre seguros de coche asociados a la entidad y empresas terceras socias comerciales'. Según el RGPD y la LSSI, este consentimiento de comunicaciones comerciales es:",
+    "cuestion": "API-T7-361-Pregunta: Un usuario se da de alta en una aplicación móvil bancaria introduciendo sus datos. Durante la configuración inicial, la app le obliga a rellenar obligatoriamente una casilla premarcada que dice: 'Acepto recibir ofertas sobre seguros de coche asociados a la entidad y empresas terceras socias comerciales'. Según el RGPD y la LSSI, este consentimiento de comunicaciones comerciales es:",
     "opciones": [
       "A. Inválido porque las casillas premarcadas no constituyen una manifestación de voluntad libre, específica, informada e inequívoca.",
       "B. Válido porque el usuario completa el registro general de manera voluntaria.",
@@ -7530,7 +7530,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T7-343-Pregunta: Un estudiante de informática desarrolla un programa para su ordenador personal que automatiza el descifrado de contraseñas por fuerza bruta. Utiliza el programa exclusivamente en su entorno local con fines de aprendizaje y pruebas con máquinas virtuales propias creadas por él. Respecto al Código Penal español:",
+    "cuestion": "API-T7-362-Pregunta: Un estudiante de informática desarrolla un programa para su ordenador personal que automatiza el descifrado de contraseñas por fuerza bruta. Utiliza el programa exclusivamente en su entorno local con fines de aprendizaje y pruebas con máquinas virtuales propias creadas por él. Respecto al Código Penal español:",
     "opciones": [
       "A. Comete un delito informático grave de daños y producción de software ilícito de espionaje.",
       "B. No comete delito penal al no existir una ejecución ilegítima o acceso no autorizado a sistemas informáticos ajenos ni distribución de malware.",
@@ -7540,7 +7540,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T7-344-Pregunta: Un consultor informático asesora a una multinacional que quiere desplegar una red social interna para sus empleados. Se plantea si la empresa está obligada por ley a designar formalmente a un Delegado de Protección de Datos (DPD/DPO). De acuerdo con el RGPD y la legislación española:",
+    "cuestion": "API-T7-363-Pregunta: Un consultor informático asesora a una multinacional que quiere desplegar una red social interna para sus empleados. Se plantea si la empresa está obligada por ley a designar formalmente a un Delegado de Protección de Datos (DPD/DPO). De acuerdo con el RGPD y la legislación española:",
     "opciones": [
       "A. Toda organización sin excepción que trate datos personales debe disponer obligatoriamente de un DPD.",
       "B. Solo las administraciones públicas sanitarias están obligadas a nombrar un DPD en sus organigramas informáticos.",
@@ -7550,7 +7550,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T7-345-Pregunta: Un desarrollador web crea una página corporativa para una pequeña gestoría de contabilidad de su ciudad. En la parte inferior de la web añade un enlace visible denominado 'Política de Privacidad y Cookies' que redirige a un documento técnico extenso de 40 páginas redactado en inglés jurídico de alta complejidad. Los usuarios de la web son ciudadanos locales de avanzada edad. Este formato informativo infringe el principio de:",
+    "cuestion": "API-T7-364-Pregunta: Un desarrollador web crea una página corporativa para una pequeña gestoría de contabilidad de su ciudad. En la parte inferior de la web añade un enlace visible denominado 'Política de Privacidad y Cookies' que redirige a un documento técnico extenso de 40 páginas redactado en inglés jurídico de alta complejidad. Los usuarios de la web son ciudadanos locales de avanzada edad. Este formato informativo infringe el principio de:",
     "opciones": [
       "A. No repudio y validez legal del documento electrónico.",
       "B. Integridad de la cabecera HTTP de la sociedad de la información.",
@@ -7560,7 +7560,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "API-T7-346-Pregunta: Una empresa de desarrollo de videojuegos distribuye un parche de actualización para un juego multijugador online. Un jugador experto analiza el tráfico de red UDP y descubre que los datos de autenticación del usuario se transmiten en texto claro sin ningún tipo de cifrado. ¿Qué principio fundamental de seguridad del tratamiento del RGPD se está descuidando directamente en este diseño de software?",
+    "cuestion": "API-T7-365-Pregunta: Una empresa de desarrollo de videojuegos distribuye un parche de actualización para un juego multijugador online. Un jugador experto analiza el tráfico de red UDP y descubre que los datos de autenticación del usuario se transmiten en texto claro sin ningún tipo de cifrado. ¿Qué principio fundamental de seguridad del tratamiento del RGPD se está descuidando directamente en este diseño de software?",
     "opciones": [
       "A. Integridad y confidencialidad de los datos personales tratados mediante medidas técnicas apropiadas.",
       "B. Limitación del plazo de conservación de los datos de juego.",
@@ -7570,7 +7570,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T7-347-Pregunta: Un ingeniero informático de una empresa eléctrica diseña un sistema inteligente que analiza los patrones de consumo eléctrico minutados de los hogares para predecir si los propietarios están de vacaciones o durmiendo, compartiendo estos análisis con terceras agencias de marketing socias. Respecto al RGPD y los principios esenciales de protección de datos:",
+    "cuestion": "API-T7-366-Pregunta: Un ingeniero informático de una empresa eléctrica diseña un sistema inteligente que analiza los patrones de consumo eléctrico minutados de los hogares para predecir si los propietarios están de vacaciones o durmiendo, compartiendo estos análisis con terceras agencias de marketing socias. Respecto al RGPD y los principios esenciales de protección de datos:",
     "opciones": [
       "A. Es totalmente lícito al no tratarse de datos nominativos como el DNI de forma directa.",
       "B. Requiere evaluar el impacto y contar con una base legal válida (como el consentimiento explícito del usuario) al tratarse de un tratamiento automatizado con elaboración de perfiles de la vida privada.",
@@ -7580,7 +7580,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "API-T7-348-Pregunta: Un informático descontento modifica las líneas de código de producción de una plataforma web médica de un hospital público, provocando de manera intencionada que el sistema de asignación de citas de urgencia quede totalmente inaccesible durante un fin de semana completo, colapsando el servicio físico. Penalmente, este sabotaje de denegación de servicio constituye:",
+    "cuestion": "API-T7-367-Pregunta: Un informático descontento modifica las líneas de código de producción de una plataforma web médica de un hospital público, provocando de manera intencionada que el sistema de asignación de citas de urgencia quede totalmente inaccesible durante un fin de semana completo, colapsando el servicio físico. Penalmente, este sabotaje de denegación de servicio constituye:",
     "opciones": [
       "A. Una estafa informática agravada por el sector sanitario.",
       "B. Una suplantación de identidad corporativa en la red municipal.",
@@ -7590,7 +7590,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "API-T7-349-Pregunta: Una tienda online de venta de componentes electrónicos sufre una caída de sus servidores durante 4 horas debido a un fallo técnico de hardware en su proveedor de hosting. No se produce fuga de información ni borrado de datos personales, solo una indisponibilidad temporal del servicio. En el marco de la normativa de notificación de violaciones de seguridad a la AEPD, la empresa:",
+    "cuestion": "API-T7-368-Pregunta: Una tienda online de venta de componentes electrónicos sufre una caída de sus servidores durante 4 horas debido a un fallo técnico de hardware en su proveedor de hosting. No se produce fuga de información ni borrado de datos personales, solo una indisponibilidad temporal del servicio. En el marco de la normativa de notificación de violaciones de seguridad a la AEPD, la empresa:",
     "opciones": [
       "A. Debe notificar obligatoriamente el fallo técnico a la AEPD antes de 72 horas al verse afectada la disponibilidad.",
       "B. Debe solicitar la firma electrónica cualificada de todos los ingenieros de guardia para justificar el fallo de red.",
