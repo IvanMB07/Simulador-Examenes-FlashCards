@@ -6572,16 +6572,6 @@
     "solucion": "A"
   },
   {
-    "cuestion": "API-T7-279-Pregunta: Una mutua médica privada que gestiona historiales de salud electrónicos de sus pacientes decide cambiar la periodicidad de actualización de las contraseñas de acceso de los facultativos informáticos. De acuerdo con las mejores prácticas derivadas de los reglamentos clásicos de seguridad de datos de salud:",
-    "opciones": [
-      "A. Deben cambiarse al menos una vez al año.",
-      "B. Deben cambiarse al menos una vez al semestre.",
-      "C. Deben cambiarse al menos una vez cada dos años.",
-      "D. Deben cambiarse al menos una vez al trimestre."
-    ],
-    "solucion": "B"
-  },
-  {
     "cuestion": "API-T7-280-Pregunta: Una empresa proveedora de almacenamiento en la nube (hosting) aloja un sitio web administrado por terceros donde se distribuyen copias piratas de software comercial. La empresa de hosting recibe una notificación oficial legal notificando la ilegalidad del contenido, pero decide no intervenir. En este caso:",
     "opciones": [
       "A. El proveedor de hosting está exento de responsabilidad penal y civil de forma permanente según la LSSI.",
