@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Hole Carabanchel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ── MENÚ PRINCIPAL ── -->
+    <div id="menu">
+        <div class="menu-title">Bujero Carabanchel</div>
+        <div class="menu-sub">Bujero Carabanchel</div>
+
+        <div class="menu-card">
+            <div class="info-row">
+                <span>HIGH SCORE <b id="menuHighScore">0</b></span>
+                <span>MAX NIVEL <b id="menuMaxLevel">1</b></span>
+            </div>
+
+            <div class="level-selector">
+                <label>Nivel</label>
+                <select id="levelSelect"></select>
+            </div>
+
+            <button class="btn-play" id="btnPlay">▶ JUGAR</button>
+
+            <div class="toggle-row">
+                <button class="toggle-btn active" id="btnAudio">
+                    <span class="icon">🔊</span> Audio
+                </button>
+                <button class="toggle-btn active" id="btnVibrate">
+                    <span class="icon">📳</span> Vibración
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── HUD ── -->
+    <div id="hud">
+        <div class="hud-chip" id="hud-quota">
+            <span class="lbl">🎯</span>
+            <span class="val" id="hud-quota-val">0/10</span>
+        </div>
+
+        <div class="hud-chip" id="hud-score">
+            <span class="lbl">★</span>
+            <span class="val" id="hud-score-val">0</span>
+        </div>
+
+        <div class="hud-chip" id="hud-time">
+            <span class="lbl">⏱</span>
+            <span class="val" id="hud-time-val">60</span>
+        </div>
+
+        <div class="hud-spacer"></div>
+
+        <button class="hud-btn active" id="hudAudio">🔊</button>
+        <button class="hud-btn" id="hudPause">⏸</button>
+    </div>
+
+    <!-- POWERUPS -->
+    <div id="powerup-bar"></div>
+
+    <!-- CANVAS -->
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- PAUSE -->
+    <div class="overlay" id="pauseOverlay">
+        <div class="overlay-title pause">PAUSA</div>
+        <div class="overlay-sub">El reloj está detenido</div>
+        <div class="overlay-btns">
+            <button class="btn-secondary" id="btnPauseMenu">↩ Menú</button>
+            <button class="btn-primary" id="btnResume">▶ Continuar</button>
+        </div>
+    </div>
+
+    <!-- END -->
+    <div class="overlay" id="endOverlay">
+        <div class="overlay-title" id="endTitle">FIN</div>
+        <div class="overlay-sub" id="endSub"></div>
+        <div class="overlay-btns">
+            <button class="btn-secondary" id="btnEndMenu">↩ Menú</button>
+            <button class="btn-primary" id="btnReplay">↺ Repetir</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
