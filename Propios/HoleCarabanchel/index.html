@@ -13,7 +13,6 @@
     <!-- ── MENÚ PRINCIPAL ── -->
     <div id="menu">
         <div class="menu-title">Bujero Carabanchel</div>
-        <div class="menu-sub">Bujero Carabanchel</div>
 
         <div class="menu-card">
             <div class="info-row">
@@ -24,6 +23,11 @@
             <div class="level-selector">
                 <label>Nivel</label>
                 <select id="levelSelect"></select>
+            </div>
+
+            <div class="level-selector" style="margin-top: 10px;">
+                <label>Cargar Música (CSV)</label>
+                <input type="file" id="csvFileInput" accept=".csv">
             </div>
 
             <button class="btn-play" id="btnPlay">▶ JUGAR</button>
@@ -84,6 +88,7 @@
         <div class="overlay-sub" id="endSub"></div>
         <div class="overlay-btns">
             <button class="btn-secondary" id="btnEndMenu">↩ Menú</button>
+            <button class="btn-primary" id="btnNextLevel">▶ Siguiente nivel</button>
             <button class="btn-primary" id="btnReplay">↺ Repetir</button>
         </div>
     </div>
