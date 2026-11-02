@@ -1,0 +1,3002 @@
+[
+  {
+    "cuestion": "SegSisSw-T1-01-Pregunta: ¿Cómo se definen los 'Datos' en el contexto de la seguridad de la información?",
+    "opciones": [
+      "A. Término que se refiere a hechos, eventos o transacciones registrados, constituyendo la entrada sin procesar.",
+      "B. Datos procesados y comunicados de forma que pueden ser entendidos por el ser humano.",
+      "C. El conjunto de programas, protocolos y sistemas operativos instalados.",
+      "D. La información protegida exclusivamente mediante firmas digitales."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-02-Pregunta: ¿Qué es la 'Información' según la jerarquía y conceptos de la seguridad informática?",
+    "opciones": [
+      "A. Hechos o eventos en bruto sin ningún tipo de tratamiento o procesamiento.",
+      "B. Datos que han sido procesados y comunicados de tal manera que pueden ser entendidos e interpretados por el receptor.",
+      "C. El conjunto de hardware y cableado de red de un centro de datos.",
+      "D. El conjunto de vulnerabilidades detectadas en un pipeline."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-03-Pregunta: ¿Cómo se define un Sistema de Información (SI)?",
+    "opciones": [
+      "A. Exclusivamente como los servidores físicos y dispositivos de almacenamiento de la empresa.",
+      "B. Como un conjunto de elementos organizados y coordinados (información, personal, recursos) para lograr los objetivos de la empresa.",
+      "C. Como una red aislada sin comunicación con el exterior.",
+      "D. Como los algoritmos de cifrado simétrico utilizados para proteger mensajes."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-04-Pregunta: ¿Qué elementos constituyen un Sistema Informático?",
+    "opciones": [
+      "A. Únicamente la documentación física y el archivo de papel.",
+      "B. Elementos físicos (hardware), lógicos (software) y con frecuencia elementos humanos (personal experto).",
+      "C. Solo los servidores de bases de datos relacionales.",
+      "D. Las normativas legales aprobadas por organismos internacionales."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-05-Pregunta: ¿Sobre cuál de los elementos de un sistema informático son los ataques más sencillos de practicar y donde más se necesita aplicar políticas de seguridad?",
+    "opciones": [
+      "A. El Hardware del centro de procesamiento de datos.",
+      "B. Los Datos.",
+      "C. El cableado físico de red.",
+      "D. Los sistemas de alimentación ininterrumpida (SAI)."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-06-Pregunta: ¿Qué propiedad de la seguridad garantiza que la información y los recursos estén accesibles para el personal autorizado siempre que sea necesaria?",
+    "opciones": [
+      "A. Confidencialidad.",
+      "B. Integridad.",
+      "C. Disponibilidad.",
+      "D. No repudio."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SegSisSw-T1-07-Pregunta: ¿Qué propiedad de la seguridad exige conservar la totalidad de la información inalterada a menos que sea modificada por personal autorizado?",
+    "opciones": [
+      "A. Integridad.",
+      "B. Confidencialidad.",
+      "C. Disponibilidad.",
+      "D. Trazabilidad."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-08-Pregunta: ¿Qué propiedad evita que personas o terceros no autorizados puedan acceder o conocer la información?",
+    "opciones": [
+      "A. Disponibilidad.",
+      "B. Integridad.",
+      "C. Confidencialidad.",
+      "D. Resiliencia."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SegSisSw-T1-09-Pregunta: ¿En qué nivel de clasificación de las medidas de seguridad se delimitan las responsabilidades (publicando la política de seguridad) si se produce una violación?",
+    "opciones": [
+      "A. Nivel Físico.",
+      "B. Nivel Lógico.",
+      "C. Nivel Administrativo.",
+      "D. Nivel Legal."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SegSisSw-T1-10-Pregunta: ¿A qué nivel pertenecen las leyes y reglamentos fijados por gobiernos o instituciones internacionales que trascienden el ámbito empresarial?",
+    "opciones": [
+      "A. Nivel Legal.",
+      "B. Nivel Administrativo.",
+      "C. Nivel Lógico.",
+      "D. Nivel Físico."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-11-Pregunta: ¿Qué caracteriza al conjunto de medidas de la Seguridad Activa?",
+    "opciones": [
+      "A. Actuar tras la producción del incidente para minimizar daños y recuperar el sistema.",
+      "B. Evitar o reducir los riesgos que amenazan al sistema actuando antes de que ocurra el percance.",
+      "C. Basarse exclusivamente en la restauración de copias de seguridad de los datos.",
+      "D. Fijar sanciones judiciales tras demostrarse un delito."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-12-Pregunta: ¿Cuál de los siguientes es un ejemplo claro de Seguridad Pasiva o de corrección?",
+    "opciones": [
+      "A. Utilizar nombres de usuario y contraseñas.",
+      "B. Tener siempre al día copias de seguridad (backup) de los datos.",
+      "C. Instalar un software cortafuegos (firewall).",
+      "D. Cifrar las comunicaciones de la red."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-13-Pregunta: ¿Cuál es el objetivo principal de la Seguridad Física?",
+    "opciones": [
+      "A. Proteger digitalmente la información de manera directa mediante algoritmos.",
+      "B. Proteger el hardware frente a desastres naturales, incendios, inundaciones, robos o fallos eléctricos.",
+      "C. Prevenir ataques de SQL injection en servidores web.",
+      "D. Definir las responsabilidades administrativas del personal."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-14-Pregunta: ¿Cuál de las siguientes es una medida o herramienta propia de la Seguridad Lógica?",
+    "opciones": [
+      "A. Detectores de humo y extintores.",
+      "B. Antivirus, cortafuegos, encriptación y control de acceso por usuario/contraseña.",
+      "C. Pararrayos y antisuertes en antenas externas.",
+      "D. Guardias de seguridad física con detección de metales."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-15-Pregunta: ¿Qué establece el 'Principio de menor privilegio'?",
+    "opciones": [
+      "A. Que los administradores no deben someterse a controles de seguridad.",
+      "B. Que cualquier objeto (usuario, programa, sistema) debe tener tan solo los privilegios necesarios para su tarea y solo durante el tiempo necesario.",
+      "C. Que la seguridad debe basarse en ocultar los agujeros del sistema.",
+      "D. Que en caso de fallo el sistema debe conceder acceso total a los ingenieros."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-16-Pregunta: ¿Qué postula el principio 'La seguridad no equivale a oscuridad'?",
+    "opciones": [
+      "A. Que un sistema no es más seguro por esconder sus fallos, sino por conocerlos y corregirlos adecuadamente.",
+      "B. Que los algoritmos criptográficos deben guardarse en secreto para ser válidos.",
+      "C. Que es recomendable basar la seguridad en que el atacante desconozca las vulnerabilidades.",
+      "D. Que la iluminación física del centro de procesamiento debe ser permanente."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-17-Pregunta: ¿Qué sostiene el 'Principio del eslabón más débil'?",
+    "opciones": [
+      "A. Que el máximo grado de seguridad de un sistema es el que tiene su eslabón más débil.",
+      "B. Que basta con implementar un mecanismo hipercomplejo en un único punto.",
+      "C. Que los usuarios no influyen en la seguridad global.",
+      "D. Que el software siempre es más débil que el hardware."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-18-Pregunta: ¿En qué se basa la estrategia de 'Defensa en profundidad'?",
+    "opciones": [
+      "A. En confiar la seguridad a un único cortafuegos infranqueable.",
+      "B. En no depender de un solo mecanismo, sino establecer varios mecanismos sucesivos que el atacante deba superar.",
+      "C. En almacenar copias de seguridad en bóvedas subterráneas.",
+      "D. En aplicar seguridad únicamente en el entorno de producción."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-19-Pregunta: ¿Cuál es la ventaja del principio de 'Punto de control centralizado'?",
+    "opciones": [
+      "A. Establecer un único punto de acceso al sistema que simplifica la defensa y permite concentrar la monitorización.",
+      "B. Multiplicar las entradas para distribuir la carga de los atacantes.",
+      "C. Evitar el registro de auditorías en el servidor central.",
+      "D. Descentralizar el control de contraseñas entre todos los usuarios."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-20-Pregunta: ¿Qué exige el principio de 'Seguridad en caso de fallo' (fail-safe)?",
+    "opciones": [
+      "A. Que ante el fallo de un mecanismo de seguridad, el sistema debe quedar en un estado seguro (ej. restringiendo accesos).",
+      "B. Que si el control de acceso falla, debe dejar pasar a cualquier usuario para evitar interrupciones.",
+      "C. Que se notifique de inmediato al atacante del fallo ocurrido.",
+      "D. Que el sistema elimine automáticamente los registros de eventos."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-21-Pregunta: ¿Por qué es fundamental el principio de 'Simplicidad' en seguridad?",
+    "opciones": [
+      "A. Porque la complejidad permite esconder múltiples fallos y los programas complejos son propensos a contener puntos débiles.",
+      "B. Porque los diseños simples son imposibles de auditar.",
+      "C. Porque reduce la necesidad de usar contraseñas.",
+      "D. Porque elimina la necesidad de contar con copias de seguridad."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-22-Pregunta: ¿Cómo se define una 'Vulnerabilidad'?",
+    "opciones": [
+      "A. Un fallo técnico, deficiencia o debilidad en un sistema de información que puede permitir a un atacante comprometer la seguridad.",
+      "B. La ocurrencia confirmada de un desastre natural.",
+      "C. El impacto financiero definitivo tras un robo de datos.",
+      "D. Un script automatizado de protección en Git."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-23-Pregunta: ¿Qué es una 'Amenaza'?",
+    "opciones": [
+      "A. Toda acción o suceso que aprovecha una vulnerabilidad para atentar contra la seguridad de un sistema.",
+      "B. Un parche de seguridad recién aplicado.",
+      "C. La ausencia total de fallos en el software.",
+      "D. Un mecanismo corrector legal ante delitos."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-24-Pregunta: ¿Cuál es la diferencia entre impactos cuantitativos y cualitativos?",
+    "opciones": [
+      "A. Los cuantitativos se cuantifican económicamente; los cualitativos suponen daños no cuantificables monetariamente (como contra derechos fundamentales).",
+      "B. Los cualitativos afectan al hardware y los cuantitativos al software.",
+      "C. Los cuantitativos ocurren antes del ataque y los cualitativos después.",
+      "D. No hay diferencia; ambos se miden en euros."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-25-Pregunta: ¿Cuándo existe formalmente un 'Riesgo'?",
+    "opciones": [
+      "A. Cuando existe la posibilidad de que una amenaza se materialice aprovechando una vulnerabilidad determinada.",
+      "B. Siempre que exista una vulnerabilidad aunque no haya ninguna amenaza para ella.",
+      "C. Siempre que exista una amenaza aunque no haya ninguna vulnerabilidad.",
+      "D. Únicamente cuando ya se ha producido la pérdida económica."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-26-Pregunta: ¿Qué tres alternativas puede tomar una organización ante un determinado riesgo?",
+    "opciones": [
+      "A. Asumirlo, aplicar medidas para disminuirlo/anularlo, o transferirlo (ej. con un seguro).",
+      "B. Ignorarlo, hacerlo público o cambiar de sede.",
+      "C. Cifrarlo, auditarlo o duplicarlo.",
+      "D. Bloquearlo, sancionarlo o venderlo."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-27-Pregunta: Según la alteración o daño producido sobre la información, ¿qué tipo de amenaza deshabilita el acceso a los datos o destruye componentes?",
+    "opciones": [
+      "A. Amenaza de Intercepción.",
+      "B. Amenaza de Modificación.",
+      "C. Amenaza de Interrupción.",
+      "D. Amenaza de Fabricación."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SegSisSw-T1-28-Pregunta: ¿Qué tipo de amenaza atenta directamente contra la Confidencialidad al captar información no autorizada?",
+    "opciones": [
+      "A. Interrupción.",
+      "B. Interceptación.",
+      "C. Modificación.",
+      "D. Fabricación."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-29-Pregunta: ¿En qué consiste una amenaza de 'Fabricación'?",
+    "opciones": [
+      "A. En agregar información falsa en el conjunto de información del sistema (ej. incorporar registros falsos a un fichero).",
+      "B. En destruir discos duros físicos.",
+      "C. En captar la contraseña del usuario al vuelo.",
+      "D. En modificar un valor existente en la base de datos."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-30-Pregunta: ¿Cómo se dividen las amenazas provocadas por personas en función de su comportamiento?",
+    "opciones": [
+      "A. En atacantes pasivos (fisgonean sin modificar) y activos (dañan o modifican en su favor).",
+      "B. En desarrolladores y administradores.",
+      "C. En usuarios con contrato y exempleados.",
+      "D. En hackers éticos y crackers con animo de lucro."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-31-Pregunta: ¿Cómo se clasifican los mecanismos de seguridad según el momento y la función que desempeñan?",
+    "opciones": [
+      "A. Preventivos (evitan el ataque), Detectores (lo revelan al ocurrir) y Correctores (corrigen daños tras el ataque).",
+      "B. Simétricos, Asimétricos y Mixtos.",
+      "C. Físicos, Lógicos y Biométricos.",
+      "D. Internos, Externos y Perimetrales."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-32-Pregunta: ¿Qué servicio de seguridad fortalece de manera directa el mecanismo de 'Hashing'?",
+    "opciones": [
+      "A. Confidencialidad.",
+      "B. Integridad.",
+      "C. Disponibilidad.",
+      "D. No repudio."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-33-Pregunta: ¿Qué técnica de ataque consiste en la manipulación psicológica de las personas para que revelen información confidencial?",
+    "opciones": [
+      "A. Sniffing.",
+      "B. Ingeniería Social.",
+      "C. Password cracking.",
+      "D. Dumpster diving."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-34-Pregunta: ¿Qué técnica se utiliza para interceptar y capturar el tráfico de red en tiempo real extrayendo datos no cifrados?",
+    "opciones": [
+      "A. Spoofing.",
+      "B. Sniffing.",
+      "C. Pharming.",
+      "D. Scam."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-35-Pregunta: ¿Qué distingue al 'Pharming' de otros ataques?",
+    "opciones": [
+      "A. Manipula el tráfico web (hosts o envenenamiento DNS) para redirigir al usuario a un sitio falso aun escribiendo la URL correcta.",
+      "B. Consiste en la búsqueda física de documentos en la basura de la empresa.",
+      "C. Envía correos masivos publicitarios no solicitados.",
+      "D. Suplanta la dirección MAC de la tarjeta de red."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-36-Pregunta: ¿Qué es una 'Botnet'?",
+    "opciones": [
+      "A. Una red de equipos infectados y controlados remotamente por un atacante (botmaster) para ejecutar acciones a gran escala.",
+      "B. Un servidor de integración continua para proyectos Java.",
+      "C. Un conjunto de detectores de humo conectados en red.",
+      "D. Un tipo de cifrado simétrico por bloques."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-37-Pregunta: En DevSecOps, ¿a qué se refiere el concepto 'Desplazar la seguridad a la izquierda' (Shift Left)?",
+    "opciones": [
+      "A. A comprobar la existencia de vulnerabilidades en las primeras fases del ciclo de desarrollo de software.",
+      "B. A posponer la seguridad hasta que la aplicación esté operando en producción.",
+      "C. A delegar la seguridad únicamente en el equipo de sistemas u operaciones.",
+      "D. A realizar pruebas de penetración exclusivamente una vez finalizado el desarrollo."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-38-Pregunta: ¿Cuál es una ventaja principal de integrar seguridad tempranamente en el pipeline DevOps (Escenario 2 vs Escenario 1)?",
+    "opciones": [
+      "A. Permitir corregir vulnerabilidades (ej. SQL injection) en fases iniciales evitando tener que repetir todo el pipeline tras el despliegue.",
+      "B. Evitar por completo la necesidad de escribir código fuente.",
+      "C. Eliminar el uso de repositorios de código centralizados.",
+      "D. Aumentar el coste de desarrollo de forma exponencial."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-39-Pregunta: ¿A qué se refiere 'Desplazar la seguridad a la derecha' (Shift Right) en DevSecOps?",
+    "opciones": [
+      "A. A centrarse en la seguridad y monitorización una vez que la aplicación ya se encuentra desplegada en producción.",
+      "B. A realizar el análisis de código estático antes del primer commit.",
+      "C. A eliminar las comprobaciones automatizadas del CI/CD.",
+      "D. A sustituir las pruebas dinámicas por pruebas unitarias exclusivamente."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-40-Pregunta: En la Fase 1 de DevSecOps, ¿qué son los 'Hooks' de Git y cómo ayudan a la seguridad (ej. Talisman)?",
+    "opciones": [
+      "A. Mecanismos para ejecutar scripts antes del commit/push evitando la filtración accidental de credenciales, claves SSH o tokens.",
+      "B. Herramientas para escanear redes wifi públicas.",
+      "C. Certificados digitales emitidos por la Autoridad Certificadora.",
+      "D. Servidores para el empaquetado de artefactos binarios."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-41-Pregunta: En la Fase 2 de DevSecOps, ¿cuál es el objetivo de herramientas de 'Secrets Management' como HashiCorp Vault?",
+    "opciones": [
+      "A. Almacenar y gestionar credenciales (secretos) de forma segregada para su uso programático sin exponerlas en archivos o configuraciones.",
+      "B. Realizar auditorías de licencias de software de código abierto.",
+      "C. Ejecutar ataques simulados de fuerza bruta contra el servidor.",
+      "D. Detectar humo e incendios en el centro de datos."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-42-Pregunta: ¿Cuál es la función principal de las herramientas SAST (Static Application Security Testing) como FindSecBugs en la Fase 3?",
+    "opciones": [
+      "A. Analizar y encontrar vulnerabilidades en el código fuente propio sin necesidad de ejecutar la aplicación.",
+      "B. Simular ataques desde fuera de la red contra la aplicación desplegada.",
+      "C. Monitorizar la disponibilidad de los servidores mediante pings periódicos.",
+      "D. Cifrar las copias de seguridad de las bases de datos."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-43-Pregunta: ¿Qué automatizan las herramientas SCA (Software Composition Analysis) como Dependency-Check en la Fase 3?",
+    "opciones": [
+      "A. La visibilidad del uso de librerías de código abierto (OSS) para gestionar riesgos, vulnerabilidades y licencias.",
+      "B. La asignación de privilegios de usuario en el sistema operativo.",
+      "C. El escaneo de puertos físicos en los switches de red.",
+      "D. La creación de planes de contingencia ante inundaciones."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-44-Pregunta: ¿Qué caracteriza a las herramientas DAST (Dynamic Application Security Testing) como OWASP ZAP en la Fase 4 (QA/Staging)?",
+    "opciones": [
+      "A. Probar la seguridad de la aplicación en ejecución desde el exterior, imitando el comportamiento de un hacker.",
+      "B. Inspeccionar el código fuente estático dentro del IDE del desarrollador.",
+      "C. Verificar la firma digital de los mensajes de correo electrónico.",
+      "D. Gestionar las políticas legales de protección de datos."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-45-Pregunta: ¿Por qué es crucial usar herramientas como 'Clair' en la seguridad de Infraestructura como Código (Fase 4)?",
+    "opciones": [
+      "A. Para escanear imágenes base de Docker y detectar vulnerabilidades o malware antes de desplegar los contenedores.",
+      "B. Para reemplazar el servidor de integración continua Jenkins.",
+      "C. Para firmar electrónicamente los ejecutables compilados.",
+      "D. Para calcular el coste de las licencias de software comercial."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-46-Pregunta: ¿Qué realiza el proceso de 'Vulnerability Assessment' (VA) con herramientas como OpenVAS en la Fase 4?",
+    "opciones": [
+      "A. Identificar servicios en ejecución en el entorno y evaluar las vulnerabilidades asociadas en los sistemas/hosts.",
+      "B. Medir la velocidad de compilación del código fuente.",
+      "C. Eliminar los registros de logs de auditoría en producción.",
+      "D. Cifrar los mensajes en tránsito entre cliente y servidor."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-47-Pregunta: En la Fase 5 de DevSecOps, ¿qué persigue 'Compliance as Code' (CaC) utilizando herramientas como InSpec?",
+    "opciones": [
+      "A. Definir e implementar comprobaciones automatizadas por código para asegurar el cumplimiento de estándares y regulaciones (ej. PCI DSS, HIPAA).",
+      "B. Redactar contratos de trabajo para el equipo de seguridad.",
+      "C. Generar certificados digitales autofirmados de forma masiva.",
+      "D. Monitorear el consumo de CPU de los servidores."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-48-Pregunta: ¿Cuál es el papel de un WAF (Web Application Firewall) como ModSecurity en la Fase 6 (Monitoring)?",
+    "opciones": [
+      "A. Detectar y prevenir en tiempo real ataques contra vulnerabilidades web principales (como OWASP Top 10) en producción.",
+      "B. Analizar librerías OSS durante la fase de compilación.",
+      "C. Gestionar las credenciales secretas del entorno de desarrollo.",
+      "D. Realizar copias de seguridad de las imágenes Docker."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-49-Pregunta: ¿Por qué son indispensables las soluciones de gestión de vulnerabilidades como ArcherySec en DevSecOps?",
+    "opciones": [
+      "A. Porque centralizan, unifican y ayudan a examinar la gran cantidad de vulnerabilidades de distintos formatos generadas por el pipeline.",
+      "B. Porque impiden la realización de commits en Git.",
+      "C. Porque reemplazan la necesidad de formar al personal en seguridad.",
+      "D. Porque sustituyen la encriptación de datos en tránsito."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-50-Pregunta: Además de las herramientas automatizadas, ¿qué elemento es imprescindible para el éxito de DevSecOps?",
+    "opciones": [
+      "A. Un cambio cultural que promueva la 'seguridad por defecto' y la responsabilidad compartida entre todos los equipos.",
+      "B. Prohibir totalmente el uso de herramientas de código abierto (OSS).",
+      "C. Desconectar los servidores de producción de cualquier red.",
+      "D. Eliminar las pruebas de penetración finales."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-51-Pregunta: Según la cita de Eugene H. Spafford sobre la seguridad informática, ¿cuál es el único sistema verdaderamente seguro?",
+    "opciones": [
+      "A. Aquel que utiliza cifrado asimétrico de 4096 bits.",
+      "B. Aquel que está apagado, desconectado, en una caja fuerte de titanio enterrada en cemento y bajo custodia armada.",
+      "C. Un sistema respaldado diariamente mediante copias de seguridad en cinta magnética.",
+      "D. Un servidor Linux sin puertos abiertos expuestos a Internet."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-52-Pregunta: ¿Qué principio o filosofía clásica se cita en los apuntes del Tema 1 para indicar que debemos estar siempre preparados ante posibles ataques?",
+    "opciones": [
+      "A. 'Si vis pacem, para bellum' (Si quieres la paz, prepara la guerra).",
+      "B. 'Alea iacta est' (La suerte está echada).",
+      "C. 'Divide et impera' (Divide y vencerás).",
+      "D. 'In dubio pro reo' (Ante la duda, a favor del acusado)."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-53-Pregunta: En la comparación entre 'Sistema Informático' y 'Sistema de Información', ¿cuál de los siguientes elementos pertenece al Sistema Informático pero NO al ámbito exclusivo del procesamiento de datos?",
+    "opciones": [
+      "A. Los objetivos estratégicos de la empresa.",
+      "B. Los componentes físicos como hardware, cableado y dispositivos periféricos.",
+      "C. La estructura organizativa y de recursos humanos del negocio.",
+      "D. La legislación y normativas gubernamentales aplicables."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-54-Pregunta: Utilizando la analogía de la cocina citada en los materiales de la asignatura, si la 'Información' es el plato cocinado, ¿qué representan los 'Datos'?",
+    "opciones": [
+      "A. Las recetas de cocina escritas en papel.",
+      "B. Los utensilios y electrodomésticos de la cocina.",
+      "C. Los ingredientes en bruto antes de ser procesados.",
+      "D. Los comensales que acuden a comer al restaurante."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SegSisSw-T1-55-Pregunta: ¿Cuál de las siguientes propiedades define que un dato se considera 'dato de carácter personal'?",
+    "opciones": [
+      "A. Que esté almacenado exclusivamente en formato digital cifrado.",
+      "B. Que corresponda a cualquier información concerniente a personas físicas identificadas o identificables.",
+      "C. Que pertenezca únicamente a empleados con contrato indefinido en la empresa.",
+      "D. Que haya sido publicado en el Boletín Oficial del Estado."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-56-Pregunta: ¿Cuál de los siguientes NO es uno de los cuatro objetivos principales de la seguridad informática expuestos en la teoría?",
+    "opciones": [
+      "A. Detectar los posibles problemas y amenazas.",
+      "B. Garantizar el uso adecuado de recursos y aplicaciones.",
+      "C. Garantizar el secreto absoluto de los algoritmos de software utilizados.",
+      "D. Limitar las pérdidas y conseguir una adecuada recuperación tras un incidente."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SegSisSw-T1-57-Pregunta: En la clasificación de las medidas de seguridad por niveles, ¿a qué nivel corresponde delimitar las responsabilidades organizativas tras una violación de seguridad?",
+    "opciones": [
+      "A. Nivel Físico.",
+      "B. Nivel Lógico.",
+      "C. Nivel Administrativo.",
+      "D. Nivel Legal."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SegSisSw-T1-58-Pregunta: ¿A qué nivel de seguridad corresponden las leyes y reglamentos fijados por gobiernos o instituciones internacionales que trascienden el ámbito empresarial?",
+    "opciones": [
+      "A. Nivel Administrativo.",
+      "B. Nivel Legal.",
+      "C. Nivel Lógico.",
+      "D. Nivel Físico."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-59-Pregunta: Según el momento preciso de actuación, ¿cómo se definen las medidas de seguridad 'pasivas' o de corrección?",
+    "opciones": [
+      "A. Medidas que actúan antes de que se produzca el incidente para prevenir daños.",
+      "B. Medidas que se implantan para minimizar la repercusión y facilitar la recuperación una vez producido el incidente.",
+      "C. Medidas que impiden el acceso físico al Centro de Procesamiento de Datos.",
+      "D. Algoritmos criptográficos aplicados durante la transmisión de mensajes."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-60-Pregunta: ¿Cuál de las siguientes opciones se considera una medida de seguridad física preventiva contra incendios?",
+    "opciones": [
+      "A. Instalación de detectores de humo y sistemas de extinción en el CPD.",
+      "B. Realización de copias de seguridad incrementales en la nube.",
+      "C. Uso de autenticación multifactor (MFA) para el acceso al servidor.",
+      "D. Configuración de reglas de filtrado en el cortafuegos principal."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-61-Pregunta: ¿Cuál de los siguientes es un mecanismo de seguridad lógica diseñado para proteger la información directamente en formato digital?",
+    "opciones": [
+      "A. Instalación de pararrayos y conexiones a tierra.",
+      "B. Guardias de seguridad con detectores de metales.",
+      "C. Cifrado de datos y firmas digitales.",
+      "D. Sistemas de aire acondicionado de precisión para el CPD."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SegSisSw-T1-62-Pregunta: El principio de seguridad que establece que un sistema debe conceder solo los permisos indispensables a un usuario y únicamente durante el tiempo estrictamente necesario se conoce como:",
+    "opciones": [
+      "A. Principio de la seguridad por oscuridad.",
+      "B. Principio de menor privilegio.",
+      "C. Principio del eslabón más débil.",
+      "D. Principio de defensa en profundidad."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-63-Pregunta: ¿Qué afirma el principio de 'La seguridad no equivale a oscuridad'?",
+    "opciones": [
+      "A. Que ocultar las vulnerabilidades del código es suficiente para proteger el sistema.",
+      "B. Que un sistema no es más seguro por esconder sus fallos, sino por conocerlos y corregirlos adecuadamente.",
+      "C. Que nunca debe publicarse la arquitectura física de los servidores.",
+      "D. Que las claves privadas deben mantenerse visibles para auditorías."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-64-Pregunta: ¿Qué establece el principio del 'Eslabón más débil' en la seguridad informática?",
+    "opciones": [
+      "A. Que el sistema es tan seguro como el componente o punto de ataque menos protegido.",
+      "B. Que los componentes de hardware siempre fallan antes que el software.",
+      "C. Que los ataques externos siempre son más débiles que las amenazas internas.",
+      "D. Que la seguridad debe ser implementada por un único especialista."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-65-Pregunta: La estrategia de seguridad que consiste en establecer barreras de protección sucesivas de modo que el atacante deba superar múltiples niveles se llama:",
+    "opciones": [
+      "A. Punto de control centralizado.",
+      "B. Defensa en profundidad.",
+      "C. Seguridad en caso de fallo.",
+      "D. Participación universal."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-66-Pregunta: ¿Qué ventaja ofrece el principio del 'Punto de control centralizado'?",
+    "opciones": [
+      "A. Permite descentralizar los registros de auditoría entre varios administradores.",
+      "B. Simplifica la defensa y la monitorización al obligar a cualquier acceso a pasar por un único canal de entrada.",
+      "C. Garantiza que si falla la autenticación, todos los usuarios obtengan acceso de administrador.",
+      "D. Elimina la necesidad de utilizar contraseñas en la red interna."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-67-Pregunta: Si un mecanismo de control de acceso a un sistema falla y, como consecuencia, bloquea el paso a todos los usuarios en lugar de permitir la entrada libre, ¿qué principio está aplicando?",
+    "opciones": [
+      "A. Seguridad en caso de fallo (Fail Safe).",
+      "B. Menor privilegio.",
+      "C. Defensa en profundidad.",
+      "D. Simplicidad de diseño."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-68-Pregunta: ¿Por qué es fundamental el principio de 'Simplicidad' en los sistemas de software seguros?",
+    "opciones": [
+      "A. Porque los programas más simples ejecutan más rápido las funciones de cifrado.",
+      "B. Porque la complejidad permite esconder fallos y los programas extensos son más propensos a contener vulnerabilidades.",
+      "C. Porque evita la necesidad de realizar pruebas de software antes de producción.",
+      "D. Porque elimina la necesidad de contar con una política de seguridad administrativa."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-69-Pregunta: ¿Cómo se define técnicamente una 'Vulnerabilidad' en el contexto de la seguridad informática?",
+    "opciones": [
+      "A. La materialización efectiva de un ataque informático sobre un servidor.",
+      "B. Un fallo técnico, debilidad o deficiencia en un programa o sistema que puede ser aprovechado por un atacante.",
+      "C. La pérdida económica derivada de la interrupción del servicio.",
+      "D. Una catástrofe natural que destruye el centro de procesamiento de datos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-70-Pregunta: ¿Qué es una 'Amenaza' según los fundamentos de la asignatura?",
+    "opciones": [
+      "A. El impacto cuantitativo medido en euros tras un incidente.",
+      "B. Toda acción o suceso que aprovecha una vulnerabilidad para atentar contra la seguridad de un sistema.",
+      "C. El parche de seguridad lanzado por el fabricante.",
+      "D. La auditoría realizada por expertos éticos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-71-Pregunta: ¿Cuál es la diferencia fundamental entre un ataque 'Activo' y uno 'Pasivo'?",
+    "opciones": [
+      "A. El ataque activo solo curiosea los datos, mientras que el pasivo elimina los servidores.",
+      "B. El ataque activo modifica, daña o satura recursos; el pasivo accede sin autorización a los datos sin alterarlos.",
+      "C. El ataque activo es provocado por errores humanos y el pasivo por virus informáticos.",
+      "D. El ataque activo ocurre en fase de desarrollo y el pasivo en producción."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-72-Pregunta: En el análisis de riesgos, ¿cómo se clasifican los 'Impactos' cuando afectan a daños no cuantificables económicamente, como los derechos fundamentales de las personas?",
+    "opciones": [
+      "A. Impactos cuantitativos.",
+      "B. Impactos cualitativos.",
+      "C. Impactos pasivos.",
+      "D. Impactos administrativos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-73-Pregunta: ¿Qué constituye formalmente un 'Riesgo' en la gestión de seguridad?",
+    "opciones": [
+      "A. La mera existencia de una amenaza aunque no haya ninguna vulnerabilidad susceptible.",
+      "B. La posibilidad de que una amenaza se materialice aprovechando una vulnerabilidad de un activo.",
+      "C. La contratación de una póliza de seguros cibernéticos.",
+      "D. El conjunto de líneas de código de una aplicación web."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-74-Pregunta: Frente a un riesgo identificado, una organización decide contratar un seguro para cubrir las pérdidas potenciales. ¿Qué opción de gestión del riesgo está aplicando?",
+    "opciones": [
+      "A. Asumir el riesgo sin hacer nada.",
+      "B. Transferir el riesgo.",
+      "C. Anular el riesgo mediante control lógico.",
+      "D. Ignorar la vulnerabilidad."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-75-Pregunta: ¿Qué propiedad de la seguridad se ve directamente amenazada por un ataque de tipo 'Interrupción' (como un DoS o la destrucción de un disco duro)?",
+    "opciones": [
+      "A. Confidencialidad.",
+      "B. Integridad.",
+      "C. Disponibilidad.",
+      "D. No repudio."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SegSisSw-T1-76-Pregunta: Si un atacante intercepta una línea de comunicación y copia ilegítimamente archivos confidenciales en tránsito sin alterarlos, ¿qué tipo de amenaza ha ejecutado y qué propiedad viola?",
+    "opciones": [
+      "A. Amenaza de Interrupción que viola la Disponibilidad.",
+      "B. Amenaza de Interceptación que viola la Confidencialidad.",
+      "C. Amenaza de Modificación que viola la Integridad.",
+      "D. Amenaza de Fabricación que viola el No repudio."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-77-Pregunta: ¿En qué consiste una amenaza de 'Fabricación'?",
+    "opciones": [
+      "A. En deshabilitar los canales de comunicación físicos.",
+      "B. En agregar datos o registros falsos dentro del sistema de información.",
+      "C. En interceptar y leer las contraseñas guardadas en texto plano.",
+      "D. En modificar la configuración del servidor web."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-78-Pregunta: ¿Cuál de las siguientes sanciones se considera un mecanismo de seguridad CORRECTIVO aplicado ante fallos de riesgo humano?",
+    "opciones": [
+      "A. Cifrado de archivos adjuntos.",
+      "B. Aplicación de sanciones legales o disciplinarias tras un incidente.",
+      "C. Instalación de un software antivirus.",
+      "D. Realización de pruebas SAST en el código fuente."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-79-Pregunta: ¿Qué término describe a una red de computadoras infectadas con malware (zombies) que ejecutan órdenes remotas y coordinadas de un atacante?",
+    "opciones": [
+      "A. Rootkit.",
+      "B. Botnet.",
+      "C. Exploit.",
+      "D. Keylogger."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-80-Pregunta: ¿Qué es un 'Zero Day' (Día Cero)?",
+    "opciones": [
+      "A. El primer día del año en el que se ejecuta una prueba de penetración.",
+      "B. Una vulnerabilidad desconocida por el fabricante o recien descubierta para la que aún no existe parche defensivo.",
+      "C. Un ataque masivo de spam que dura exactamente 24 horas.",
+      "D. El tiempo que tarda un antimalware en analizar un sistema completo."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-81-Pregunta: ¿Qué diferencia principal existe entre un 'Virus' informático y un 'Gusano' (Worm)?",
+    "opciones": [
+      "A. El virus solo infecta servidores Linux y el gusano afecta a Windows.",
+      "B. El gusano tiene la capacidad de autorreplicarse y propagarse de forma autónoma por la red sin necesitar un archivo anfitrión ni intervención humana.",
+      "C. El virus no requiere ejecución por parte del usuario, mientras que el gusano sí.",
+      "D. El gusano es una medida de seguridad pasiva y el virus es una amenaza física."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-82-Pregunta: ¿En qué consiste la técnica de ataque conocida como 'Trashing' o 'Dumpster Diving'?",
+    "opciones": [
+      "A. Inundar el servidor con peticiones HTTP hasta provocar su caída.",
+      "B. Búsqueda física en la basura de documentos o soportes desechados para recopilar información sensible.",
+      "C. Modificar las tablas de enrutamiento DNS para redirigir a webs falsas.",
+      "D. Capturar paquetes cifrados usando placas Wi-Fi en modo promiscuo."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-83-Pregunta: ¿Qué diferencia existe entre 'Phishing' y 'Pharming'?",
+    "opciones": [
+      "A. El Phishing envía correos engañosos suplantando identidades; el Pharming manipula el tráfico (DNS/hosts) para redirigir al usuario a una web falsa aun escribiendo la URL correcta.",
+      "B. El Phishing destruye discos duros y el Pharming roba contraseñas de correo.",
+      "C. El Phishing solo ataca a teléfonos móviles y el Pharming a servidores de bases de datos.",
+      "D. El Pharming es una herramienta de DevSecOps para analizar contenedores Docker."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-84-Pregunta: ¿Qué es un 'Rootkit'?",
+    "opciones": [
+      "A. Un script de Git que impide subir claves de AWS al repositorio.",
+      "B. Un conjunto de herramientas diseñado para ocultar la presencia de malware y mantener acceso con privilegios de nivel de sistema (root) alterando el SO.",
+      "C. Un plugin de Jenkins usado para compilar proyectos Java.",
+      "D. Un ataque de denegación de servicio distribuido contra servidores DNS."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-85-Pregunta: ¿En qué se diferencia un ataque DoS de un ataque DDoS?",
+    "opciones": [
+      "A. El DoS modifica datos y el DDoS destruye el hardware.",
+      "B. El DoS proviene de una única fuente atacante, mientras que el DDoS es distribuido desde múltiples equipos simultáneamente.",
+      "C. El DoS ataca la confidencialidad y el DDoS la integridad.",
+      "D. El DoS se ejecuta en entornos de desarrollo y el DDoS en contenedores Docker."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-86-Pregunta: En el flujo de trabajo DevOps tradicional de 6 etapas, ¿cuál es el rol del servidor de CI/CD (como Jenkins)?",
+    "opciones": [
+      "A. Escribir el código fuente de las aplicaciones automáticamente.",
+      "B. Descargar el código del repositorio centralizado y paquetizar los artefactos o binarios construidos.",
+      "C. Gestionar las altas y bajas físicas de los empleados en la oficina.",
+      "D. Reemplazar los firewalls perimetrales en producción."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-87-Pregunta: ¿Qué problema principal presenta el 'Escenario 1' (planificar test de penetración solo al final del pipeline en producción)?",
+    "opciones": [
+      "A. Que impide publicar la aplicación en repositorios públicos de código.",
+      "B. Que si se detecta una vulnerabilidad grave como SQLi en producción, se debe reiniciar todo el pipeline DevOps, requiriendo mucho tiempo y esfuerzo.",
+      "C. Que deshabilita el uso de contenedores Docker.",
+      "D. Que invalida las firmas digitales de los certificados SSL."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-88-Pregunta: ¿Qué se logra con la estrategia de 'Shift Left' (Desplazar la seguridad a la izquierda) en DevSecOps?",
+    "opciones": [
+      "A. Comprobar la existencia de vulnerabilidades en las primeras fases del desarrollo para solucionarlas de forma temprana.",
+      "B. Delegar toda la seguridad exclusivamente en el equipo de operaciones al finalizar la entrega.",
+      "C. Eliminar las pruebas de código y sustituirlas por auditorías legales.",
+      "D. Mover los servidores de producción a redes privadas virtuales sin acceso a Internet."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-89-Pregunta: ¿Qué abarca el concepto de 'Shift Right' (Desplazar la seguridad a la derecha)?",
+    "opciones": [
+      "A. Realizar únicamente pruebas estáticas en las máquinas de los desarrolladores.",
+      "B. Centrarse en la seguridad una vez desplegada la aplicación en producción (monitorización, gestión de vulnerabilidades y detección en tiempo de ejecución).",
+      "C. Eliminar el uso de claves SSH en la gestión de servidores.",
+      "D. Desarrollar software sin utilizar librerías de código abierto."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-90-Pregunta: ¿Cuál es el cambio cultural fundamental que promueve la metodología DevSecOps?",
+    "opciones": [
+      "A. Que la seguridad sea responsabilidad exclusiva de un único departamento aislado.",
+      "B. Fomentar una cultura de 'seguridad por defecto' donde la seguridad sea una responsabilidad compartida por todos los equipos.",
+      "C. Prohibir el despliegue acelerado de cambios en entornos de producción.",
+      "D. Exigir que los desarrolladores programen sin usar entornos de desarrollo (IDE)."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-91-Pregunta: En la Fase 1 del pipeline DevSecOps (Desarrollo), ¿qué herramienta permite buscar información sensible (como tokens o claves AWS) en los archivos ANTES de hacer commit o push?",
+    "opciones": [
+      "A. OpenVAS.",
+      "B. Talisman.",
+      "C. ArcherySec.",
+      "D. ModSecurity."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-92-Pregunta: ¿Qué riesgo evita el uso de un servicio de 'Gestión de Secretos' como Hashicorp Vault en la Fase 2?",
+    "opciones": [
+      "A. Evita la exposición de credenciales, tokens y API keys al eliminar la práctica de harcodearlas en archivos de configuración o código.",
+      "B. Evita ataques de denegación de servicio distribuido (DDoS) en la capa de red.",
+      "C. Impide que los discos duros sufran fallos mecánicos.",
+      "D. Automatiza la traducción de requisitos legales a diagramas UML."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-93-Pregunta: ¿Para qué se utiliza la herramienta 'OWASP Dependency-Check' en la Fase 3 de DevSecOps?",
+    "opciones": [
+      "A. Para simular ataques desde fuera de la red contra servidores web activos.",
+      "B. Para realizar el análisis de composición de software (SCA) y detectar dependencias de código abierto con vulnerabilidades conocidas.",
+      "C. Para crear imágenes de contenedores Docker desde cero.",
+      "D. Para cifrar el tráfico de red mediante protocolos SSL v3."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-94-Pregunta: ¿Qué tipo de análisis realiza la herramienta 'FindSecBugs' integrada en el servidor de CI/CD para aplicaciones Java?",
+    "opciones": [
+      "A. Análisis estático de seguridad (SAST) sobre el código fuente en busca de fallos como SQLi o XSS.",
+      "B. Análisis dinámico (DAST) inyectando tráfico malicioso en producción.",
+      "C. Escaneo de vulnerabilidades físicas en los armarios del CPD.",
+      "D. Verificación de licencias de software comercial."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-95-Pregunta: ¿En qué entorno del pipeline se suelen ejecutar los escáneres DAST como OWASP ZAP para probar la aplicación desde fuera imitando a un hacker?",
+    "opciones": [
+      "A. En la máquina local del desarrollador antes de compilar.",
+      "B. En el entorno de QA / Staging (escenificación).",
+      "C. En el repositorio de código fuente Git.",
+      "D. En el servidor DNS del proveedor de Internet."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-96-Pregunta: ¿Qué función cumple la herramienta 'Clair' en la seguridad de infraestructuras como código?",
+    "opciones": [
+      "A. Gestionar las firmas digitales de los correos electrónicos.",
+      "B. Escanear las imágenes base de contenedores Docker para detectar vulnerabilidades antes de desplegarlas en producción.",
+      "C. Prevenir ataques de ingeniería social por teléfono.",
+      "D. Generar informes cualitativos para el departamento legal."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-97-Pregunta: Para realizar una evaluación de vulnerabilidades (Vulnerability Assessment) que detecte los servicios reales corriendo dentro de una red Docker, ¿qué herramienta de escaneo se menciona en la teoría?",
+    "opciones": [
+      "A. OpenVAS.",
+      "B. Talisman.",
+      "C. Hashicorp Vault.",
+      "D. FindSecBugs."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-98-Pregunta: ¿Qué herramienta facilita la verificación de 'Compliance as Code' (CaC) mediante archivos Ruby para comprobar el cumplimiento normativo (PCI DSS, HIPAA) en la infraestructura desplegada?",
+    "opciones": [
+      "A. InSpec.",
+      "B. OWASP ZAP.",
+      "C. Dependency-Check.",
+      "D. SonarQube."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-99-Pregunta: ¿Qué problema resuelve una herramienta de gestión de vulnerabilidades como 'ArcherySec'?",
+    "opciones": [
+      "A. Centraliza, unifica y monitoriza los datos de vulnerabilidades generados por múltiples herramientas heterogéneas del pipeline.",
+      "B. Sustituye la necesidad de utilizar contraseñas en las bases de datos.",
+      "C. Elimina automáticamente todo el código duplicado de la aplicación.",
+      "D. Garantiza la disponibilidad física ante cortes del suministro eléctrico."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-100-Pregunta: ¿Qué solución open source se menciona en la Fase 6 (Monitoring) para detectar y mitigar ataques en tiempo de ejecución en producción contra las 10 principales vulnerabilidades de OWASP?",
+    "opciones": [
+      "A. ModSecurity WAF (Web Application Firewall).",
+      "B. Git Pre-commit Hooks.",
+      "C. Hashicorp Vault.",
+      "D. OWASP Dependency-Check."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-101-Pregunta: ¿Qué nivel de la jerarquía DIKW (Datos, Información, Conocimiento, Sabiduría) transforma la información al combinarla con experiencia y contexto humano?",
+    "opciones": [
+      "A. Datos.",
+      "B. Información.",
+      "C. Conocimiento.",
+      "D. Sabiduría."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SegSisSw-T1-102-Pregunta: En la tríada CIA, ¿qué dimensión se ve directamente comprometida durante un ataque de Denegación de Servicio (DoS)?",
+    "opciones": [
+      "A. Confidencialidad.",
+      "B. Integridad.",
+      "C. Disponibilidad.",
+      "D. Autenticidad."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SegSisSw-T1-103-Pregunta: ¿Qué propiedad de la seguridad garantiza que el emisor de un mensaje no pueda negar haberlo enviado?",
+    "opciones": [
+      "A. Trazabilidad.",
+      "B. No repudio.",
+      "C. Confidencialidad.",
+      "D. Disponibilidad."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-104-Pregunta: Si un atacante modifica de forma no autorizada el saldo de una cuenta bancaria en la base de datos, ¿qué pilar de la seguridad ha sido violado?",
+    "opciones": [
+      "A. Confidencialidad.",
+      "B. Integridad.",
+      "C. Disponibilidad.",
+      "D. No repudio."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-105-Pregunta: ¿Cómo se clasifica el uso de sistemas de alimentación ininterrumpida (SAI/UPS) y generadores eléctricos en la tipología de seguridad?",
+    "opciones": [
+      "A. Seguridad lógica pasiva.",
+      "B. Seguridad física pasiva o preventiva.",
+      "C. Seguridad administrativa activa.",
+      "D. Seguridad legal activa."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-106-Pregunta: La instalación de un firewall de red para filtrar tráfico no deseado es un ejemplo de:",
+    "opciones": [
+      "A. Seguridad física activa.",
+      "B. Seguridad lógica activa.",
+      "C. Seguridad lógica pasiva.",
+      "D. Seguridad legal pasiva."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-107-Pregunta: ¿Qué tipo de medida de seguridad representan los planes de recuperación ante desastres (DRP) y la restauración de copias de seguridad?",
+    "opciones": [
+      "A. Medidas activas preventivas.",
+      "B. Medidas pasivas o correctivas.",
+      "C. Medidas de seguridad por oscuridad.",
+      "D. Medidas exclusivamente legales."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-108-Pregunta: ¿Qué principio de diseño seguro establece que cada módulo o usuario debe poseer únicamente los permisos mínimos necesarios para realizar su tarea?",
+    "opciones": [
+      "A. Principio del menor privilegio.",
+      "B. Principio de defensa en profundidad.",
+      "C. Principio de mediación completa.",
+      "D. Principio de diseño abierto."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-109-Pregunta: El principio de Kerckhoffs o 'Diseño Abierto' sostiene que:",
+    "opciones": [
+      "A. La seguridad de un sistema debe depender del secreto del algoritmo.",
+      "B. La seguridad no debe depender del secreto del diseño o algoritmo, sino de la clave.",
+      "C. Todo el código fuente debe ser privado para evitar vulnerabilidades.",
+      "D. Los usuarios deben tener acceso ilimitado al código ejecutable."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-110-Pregunta: ¿A qué principio responde la estrategia de colocar un Firewall, un WAF, un IDS y controles de acceso locales en el mismo servidor?",
+    "opciones": [
+      "A. Economía de mecanismo.",
+      "B. Defensa en profundidad (capas de seguridad).",
+      "C. Punto de control centralizado.",
+      "D. Fallo seguro por defecto."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-111-Pregunta: ¿Qué principio indica que los mecanismos de seguridad deben ser lo más simples y pequeños posibles para facilitar su verificación?",
+    "opciones": [
+      "A. Economía de mecanismo (Simplicidad).",
+      "B. Separación de privilegios.",
+      "C. Menor mecanismo compartido.",
+      "D. Aceptabilidad psicológica."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-112-Pregunta: Si un sistema de control de acceso falla y, por defecto, deniega todos los accesos en lugar de permitirlos, está aplicando:",
+    "opciones": [
+      "A. Factor de fallo seguro (Fail-safe defaults).",
+      "B. Seguridad por oscuridad.",
+      "C. Separación de deberes.",
+      "D. Aceptabilidad del usuario."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-113-Pregunta: ¿Cómo se define una 'Vulnerabilidad' en la gestión de riesgos de TI?",
+    "opciones": [
+      "A. Un evento potencial que puede causar daño al sistema.",
+      "B. Una debilidad o fallo en el diseño, implementación o configuración que puede ser aprovechado.",
+      "C. El impacto económico tras la pérdida de datos.",
+      "D. La persona o grupo que lleva a cabo un ciberataque."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-114-Pregunta: ¿Qué es una 'Amenaza' (Threat) en el contexto de la seguridad de la información?",
+    "opciones": [
+      "A. Una falla de programación en el software.",
+      "B. Cualquier causa potencial de un incidente no deseado que puede dañar un activo.",
+      "C. El coste económico de reemplazar un servidor.",
+      "D. Un parche de seguridad no instalado."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-115-Pregunta: La fórmula conceptual básica para estimar el Riesgo en seguridad es:",
+    "opciones": [
+      "A. Riesgo = Amenaza x Vulnerabilidad x Impacto.",
+      "B. Riesgo = Hardware + Software + Datos.",
+      "C. Riesgo = Confidencialidad / Integridad.",
+      "D. Riesgo = Vulnerabilidad - Parches."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-116-Pregunta: Un ataque que aprovecha una vulnerabilidad en el software para la cual aún no existe parche ni solución pública se denomina:",
+    "opciones": [
+      "A. Ataque Man-in-the-Middle.",
+      "B. Ataque de día cero (Zero-Day).",
+      "C. Ataque de denegación de servicio distribuido.",
+      "D. Ataque de fuerza bruta."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-117-Pregunta: ¿Qué diferencia principal existe entre un 'Virus' informático y un 'Gusano' (Worm)?",
+    "opciones": [
+      "A. El virus infecta redes y el gusano solo infecta discos duros.",
+      "B. El virus requiere la intervención del usuario o un archivo anfitrión para propagarse, mientras que el gusano se propaga automáticamente por la red.",
+      "C. El gusano es software benévolo y el virus es maligno.",
+      "D. No existe diferencia alguna; son sinónimos exactos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-118-Pregunta: ¿Qué tipo de malware oculta su presencia y la de otros procesos infectando partes profundas del sistema operativo (Kernel)?",
+    "opciones": [
+      "A. Spyware.",
+      "B. Rootkit.",
+      "C. Adware.",
+      "D. Ransomware."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-119-Pregunta: El malware que cifra los archivos de la víctima y exige un pago a cambio de la clave de descifrado se conoce como:",
+    "opciones": [
+      "A. Ransomware.",
+      "B. Keylogger.",
+      "C. Trojan Horse.",
+      "D. Scareware."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-120-Pregunta: ¿Qué técnica de ingeniería social consiste en buscar documentos confidenciales e información en los contenedores de basura de una empresa?",
+    "opciones": [
+      "A. Shoulder Surfing.",
+      "B. Dumpster Diving (o Trashing).",
+      "C. Phishing.",
+      "D. Smishing."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-121-Pregunta: Si un atacante observa discretamente sobre el hombro de un usuario para capturar su contraseña mientras la teclea, está realizando:",
+    "opciones": [
+      "A. Spear Phishing.",
+      "B. Shoulder Surfing.",
+      "C. Man-in-the-Browser.",
+      "D. Eavesdropping."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-122-Pregunta: Un correo electrónico fraudulento altamente personalizado dirigido específicamente al director financiero de una empresa se clasifica como:",
+    "opciones": [
+      "A. Phishing genérico.",
+      "B. Spear Phishing (o Whaling).",
+      "C. Spam masivo.",
+      "D. Pharming."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-123-Pregunta: La manipulación del servicio de resolución de nombres (DNS) para redirigir a los usuarios a un sitio web falso sin que noten la alteración en el navegador se conoce como:",
+    "opciones": [
+      "A. Pharming.",
+      "B. Smishing.",
+      "C. Vishing.",
+      "D. Dumpster Diving."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-124-Pregunta: ¿Qué caracteriza a un ataque de suplantación de identidad conocido como 'IP Spoofing'?",
+    "opciones": [
+      "A. Alterar la dirección IP de origen en los paquetes para hacerse pasar por un equipo de confianza.",
+      "B. Descifrar la contraseña de un servidor mediante un diccionario.",
+      "C. Infectar la BIOS con un rootkit.",
+      "D. Modificar el código fuente de una aplicación Java."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-125-Pregunta: Un conjunto de ordenadores infectados (zombies) controlados remotamente por un atacante (Botmaster) para lanzar ataques coordinados se denomina:",
+    "opciones": [
+      "A. Botnet.",
+      "B. Honeypot.",
+      "C. Firewall de aplicación.",
+      "D. Clúster de alta disponibilidad."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-126-Pregunta: ¿En qué consiste un ataque de denegación de servicio distribuido (DDoS)?",
+    "opciones": [
+      "A. En interceptar y modificar un mensaje en tránsito entre dos nodos.",
+      "B. En saturar los recursos o el ancho de banda de un servidor objetivo desde múltiples fuentes coordinadas.",
+      "C. En instalar un keylogger en la máquina del administrador.",
+      "D. En adivinar claves RSA mediante ingeniería inversa."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-127-Pregunta: ¿Qué tipo de ataque intercepta la comunicación entre dos partes sin que ninguna de ellas note la presencia del atacante?",
+    "opciones": [
+      "A. Man-in-the-Middle (MitM).",
+      "B. Denegación de servicio (DoS).",
+      "C. Ataque de fuerza bruta.",
+      "D. Inyección SQL de segundo orden."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-128-Pregunta: Un programa aparentemente inofensivo o útil que esconde código malicioso en su interior se clasifica como:",
+    "opciones": [
+      "A. Caballo de Troya (Troyano).",
+      "B. Gusano de red.",
+      "C. Exploit ejecutable.",
+      "D. Antivirus falso."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-129-Pregunta: La técnica en la que un atacante deja un pendrive USB infectado en el aparcamiento de una empresa esperando que un empleado lo conecte se denomina:",
+    "opciones": [
+      "A. Baiting (Cebo).",
+      "B. Pretexting.",
+      "C. Vishing.",
+      "D. Smishing."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-130-Pregunta: ¿Qué pilar de la seguridad se rompe cuando un atacante realiza escuchas clandestinas (Sniffing) en una red sin cifrar?",
+    "opciones": [
+      "A. Disponibilidad.",
+      "B. Confidencialidad.",
+      "C. Trazabilidad.",
+      "D. No repudio."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-131-Pregunta: ¿Cuál es el objetivo primordial del paradigma DevSecOps en comparación con el modelo DevOps tradicional?",
+    "opciones": [
+      "A. Delegar toda la seguridad exclusivamente al equipo de auditoría externa al final del año.",
+      "B. Integrar la seguridad de manera automatizada y continua en todas las fases del ciclo de vida del software.",
+      "C. Eliminar los entornos de prueba para desplegar código directamente a producción.",
+      "D. Reemplazar las herramientas de CI/CD por revisiones manuales en papel."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-132-Pregunta: ¿Qué significa la estrategia 'Shift Left' (Desplazar a la izquierda) en DevSecOps?",
+    "opciones": [
+      "A. Mover las pruebas de seguridad a la fase final de despliegue en producción.",
+      "B. Introducir análisis y controles de seguridad lo antes posible en las fases iniciales de desarrollo y diseño.",
+      "C. Asignar la responsabilidad de seguridad únicamente a los administradores de sistemas.",
+      "D. Cancelar los pipelines automáticos para realizar auditorías manuales."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-133-Pregunta: ¿En qué consiste la estrategia 'Shift Right' en DevSecOps?",
+    "opciones": [
+      "A. Monitorear y probar la seguridad de forma continua en entornos de producción y post-despliegue.",
+      "B. Ignorar las vulnerabilidades de producción para enfocarse solo en el código fuente.",
+      "C. Desplazar a los desarrolladores fuera del equipo de seguridad.",
+      "D. Ejecutar pruebas unitarias en la máquina local del programador."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-134-Pregunta: ¿Qué herramienta se utiliza en los hooks de pre-commit de Git para evitar que los desarrolladores suban claves o secretos al repositorio por descuido?",
+    "opciones": [
+      "A. Talisman.",
+      "B. OWASP ZAP.",
+      "C. OpenVAS.",
+      "D. ModSecurity."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-135-Pregunta: ¿Cuál es la función principal de una herramienta de gestión de secretos como HashiCorp Vault?",
+    "opciones": [
+      "A. Compilar código ejecutable C++.",
+      "B. Almacenar, gestionar y proporcionar acceso seguro y cifrado a tokens, contraseñas y claves API.",
+      "C. Analizar páginas web en busca de ataques XSS.",
+      "D. Escanear imágenes de contenedores Docker."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-136-Pregunta: Las pruebas SAST (Static Application Security Testing) se caracterizan por:",
+    "opciones": [
+      "A. Analizar el código fuente o binario en reposo sin necesidad de ejecutar la aplicación.",
+      "B. Atacar la aplicación web en ejecución enviando peticiones HTTP maliciosas.",
+      "C. Escanear los puertos abiertos de la red corporativa.",
+      "D. Monitorizar los logs de producción en tiempo real."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-137-Pregunta: ¿Qué herramienta SAST está especializada en encontrar patrones de vulnerabilidad en aplicaciones Java y lenguajes JVM?",
+    "opciones": [
+      "A. FindSecBugs.",
+      "B. Clair.",
+      "C. ModSecurity.",
+      "D. Chef InSpec."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-138-Pregunta: El análisis SCA (Software Composition Analysis) mediante herramientas como OWASP Dependency-Check sirve para:",
+    "opciones": [
+      "A. Identificar vulnerabilidades conocidas (CVEs) en las librerías y dependencias de terceros utilizadas por el proyecto.",
+      "B. Encontrar errores de sintaxis en el código HTML.",
+      "C. Medir la velocidad de compilación del código Java.",
+      "D. Encriptar las bases de datos de producción."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-139-Pregunta: ¿En qué fase del pipeline DevSecOps se suelen ejecutar las herramientas DAST (Dynamic Application Security Testing) como OWASP ZAP?",
+    "opciones": [
+      "A. En la fase de escritura de código en el IDE.",
+      "B. En entornos de staging/QA donde la aplicación está desplegada y en ejecución.",
+      "C. Únicamente tras una caída completa del servidor de producción.",
+      "D. Antes de crear el repositorio de Git."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T1-140-Pregunta: ¿Qué tipo de análisis realiza la herramienta Clair en un pipeline DevSecOps?",
+    "opciones": [
+      "A. Análisis de vulnerabilidades conocidas en las capas de las imágenes de contenedores Docker.",
+      "B. Decodificación de certificados TLS 1.3.",
+      "C. Bloqueo de ataques DDoS en la capa 7.",
+      "D. Generación de firmas digitales RSA."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-141-Pregunta: ¿Para qué se utiliza la herramienta OpenVAS en la seguridad de infraestructuras?",
+    "opciones": [
+      "A. Para realizar escaneos completos de vulnerabilidades en servicios y puertos de red.",
+      "B. Para escribir pruebas unitarias en Python.",
+      "C. Para gestionar repositorios de código de Git.",
+      "D. Para cifrar el tráfico entre navegador y servidor."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-142-Pregunta: ¿Qué concepto define la práctica de automatizar la validación del cumplimiento de políticas de seguridad e infraestructura mediante código (Compliance as Code)?",
+    "opciones": [
+      "A. InSpec (Chef InSpec).",
+      "B. Telnet.",
+      "C. Polybios Cipher.",
+      "D. Dumpster Diving."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-143-Pregunta: ¿Qué función cumple la plataforma ArcherySec en un entorno DevSecOps?",
+    "opciones": [
+      "A. Centralizar y gestionar los hallazgos de vulnerabilidades de múltiples herramientas (SAST, DAST, SCA) en un único cuadro de mando.",
+      "B. Reemplazar al servidor web Apache.",
+      "C. Firmar digitalmente las llamadas a API.",
+      "D. Generar contraseñas aleatorias para usuarios."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-144-Pregunta: ModSecurity se clasifica como un:",
+    "opciones": [
+      "A. Web Application Firewall (WAF) de código abierto para proteger aplicaciones en producción.",
+      "B. Analizador estático de código fuente.",
+      "C. Servidor de licencias de software.",
+      "D. Cliente de correo electrónico seguro."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-145-Pregunta: ¿Por qué es problemático probar la seguridad únicamente al final del ciclo tradicional en cascada (Escenario 1)?",
+    "opciones": [
+      "A. Porque solucionar fallos en producción es extremadamente caro, complejo y retrasa los lanzamientos.",
+      "B. Porque las herramientas automatizadas no funcionan al final.",
+      "C. Porque los desarrolladores no pueden escribir código si hay seguridad.",
+      "D. Porque los servidores de producción no admiten parches de software."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-146-Pregunta: En DevSecOps, la filosofía 'Security as Code' implica:",
+    "opciones": [
+      "A. Tratar las configuraciones y políticas de seguridad como código ejecutable, versionable y revisable en el repositorio.",
+      "B. Escribir las contraseñas directamente en el código fuente.",
+      "C. Evitar el uso de librerías de terceros.",
+      "D. Imprimir las reglas de firewall en documentos físicos."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-147-Pregunta: ¿Qué tipo de herramienta de seguridad analiza el tráfico HTTP/HTTPS entrante hacia la aplicación en tiempo real para bloquear inyecciones SQL y XSS en producción?",
+    "opciones": [
+      "A. WAF (Web Application Firewall).",
+      "B. SAST.",
+      "C. Hook de pre-commit.",
+      "D. Analizador de dependencias (SCA)."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-148-Pregunta: ¿Qué ventaja ofrece la automatización de escaneos de seguridad en un pipeline de integración continua (CI)?",
+    "opciones": [
+      "A. Proporcionar feedback rápido al desarrollador tras cada commit para corregir vulnerabilidades inmediatamente.",
+      "B. Garantizar el 100% de inmunidad absoluta frente a cualquier ciberataque.",
+      "C. Eliminar por completo la necesidad de realizar pruebas unitarias.",
+      "D. Reemplazar la necesidad de utilizar contraseñas seguras."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-149-Pregunta: ¿Qué representa la 'Cultura DevSecOps' dentro de una organización de desarrollo de software?",
+    "opciones": [
+      "A. La responsabilidad compartida de la seguridad entre los equipos de Desarrollo, Operaciones y Seguridad.",
+      "B. La exclusión del equipo de operaciones de las decisiones de arquitectura.",
+      "C. La obligación de que solo los auditores puedan corregir fallos en el código.",
+      "D. El uso exclusivo de herramientas propietarias de pago."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T1-150-Pregunta: Si un pipeline CI/CD detiene automáticamente un despliegue porque OWASP Dependency-Check detectó una vulnerabilidad crítica en una librería, se está aplicando el principio de:",
+    "opciones": [
+      "A. Puerta de calidad de seguridad (Security Quality Gate) y Shift Left.",
+      "B. Ataque Man-in-the-Middle.",
+      "C. Cifrado asimétrico por bloques.",
+      "D. Fallo por indisponibilidad del usuario."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-01-Pregunta: ¿De qué términos griegos proviene la palabra 'Criptografía' y cuál es su significado etimológico?",
+    "opciones": [
+      "A. De 'Kriptos' (oculto) y 'Grafo' (escritura), significando 'arte de escribir con clave secreta'.",
+      "B. De 'Crypto' (código) y 'Graphia' (dibujo), significando 'representación gráfica de códigos'.",
+      "C. De 'Kriptos' (protegido) y 'Logos' (tratado), significando 'estudio de la protección de datos'.",
+      "D. De 'Chronos' (tiempo) y 'Grafo' (escritura), significando 'escritura a lo largo del tiempo'."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-02-Pregunta: En los cifradores históricos, ¿en qué consiste el cifrador de Polybios?",
+    "opciones": [
+      "A. En desplazar cada letra tres posiciones a la derecha en el alfabeto.",
+      "B. En sustituir cada letra del mensaje original por el par de letras o números que indican su fila y columna en una tabla.",
+      "C. En escribir el texto en una matriz y leerlo columna por columna.",
+      "D. En aplicar dos alfabetos distintos alternando entre posiciones pares e impares."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-03-Pregunta: ¿Cuál es el funcionamiento característico del clásico cifrador del César?",
+    "opciones": [
+      "A. Reorganizar las letras mediante una clave de transposición.",
+      "B. Sustituir cada carácter por el resultado de desplazarlo tres posiciones hacia la derecha en el alfabeto.",
+      "C. Utilizar una clave simétrica de 256 bits para alterar bloques de texto.",
+      "D. Generar un resumen hash de longitud fija a partir del texto claro."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-04-Pregunta: ¿Cómo se obtiene el texto cifrado mediante la técnica de Transposición Columnar?",
+    "opciones": [
+      "A. Sustituyendo cada carácter según una tabla de frecuencias.",
+      "B. Escribiendo el texto claro en una tabla por filas y extrayendo el cifrado leyendo sucesivamente columna por columna.",
+      "C. Cifrando cada letra con la clave pública del destinatario.",
+      "D. Aplicando una función hash no reversible a cada palabra."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-05-Pregunta: En un cifrado por sustitución polialfabética sencillo con dos alfabetos, ¿cómo se eligen los alfabetos de cifrado?",
+    "opciones": [
+      "A. Un alfabeto para las letras en posiciones pares y otro para las posiciones impares.",
+      "B. Un alfabeto para las vocales y otro para las consonantes.",
+      "C. Un alfabeto para el emisor y otro para el receptor.",
+      "D. Un alfabeto para la primera mitad del mensaje y otro para la segunda mitad."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-06-Pregunta: Según la definición formal de un Criptosistema o Sistema Criptográfico CS = (M, C, K, Ei, Di), ¿qué representa el conjunto K?",
+    "opciones": [
+      "A. El espacio de mensajes en claro.",
+      "B. El espacio de textos cifrados o criptogramas.",
+      "C. El espacio de claves.",
+      "D. La familia de transformaciones de cifrado."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SegSisSw-T2-07-Pregunta: ¿En qué principio práctico se basa la seguridad de un criptosistema moderno (Principio de Kerckhoffs)?",
+    "opciones": [
+      "A. En mantener en secreto el algoritmo y las funciones de cifrado y descifrado E y D.",
+      "B. La seguridad debe depender exclusivamente del secreto de las claves (k) y no del secreto de los algoritmos E y D.",
+      "C. En utilizar claves públicas para cifrar y no requerir clave para descifrar.",
+      "D. En que la clave cambie automáticamente cada segundo sin intervención humana."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-08-Pregunta: ¿Qué significa que determinar la clave k de un sistema criptográfico sea 'computacionalmente imposible'?",
+    "opciones": [
+      "A. Que es matemáticamente imposible de resolver incluso con tiempo infinito.",
+      "B. Que conociendo E, D y múltiples parejas mensaje-cifrado, determinar k requiere un esfuerzo y tiempo de cálculo extremadamente costoso e inasumible.",
+      "C. Que la clave k se destruye inmediatamente después de usarse.",
+      "D. Que el sistema no utiliza claves para transformar el mensaje."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-09-Pregunta: En el ámbito de la criptografía, ¿qué implica que un criptoanalista consiga 'romper la autenticidad' de un sistema?",
+    "opciones": [
+      "A. Reconstruir el texto en claro a partir del texto cifrado.",
+      "B. Hacer que el receptor acepte como legítimos mensajes que no han sido generados por un emisor autorizado.",
+      "C. Bloquear el canal de comunicación mediante un ataque DoS.",
+      "D. Alterar la temperatura física de los servidores de autenticación."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-10-Pregunta: ¿Cuál es la diferencia fundamental entre un esquema criptográfico reversible y uno irreversible?",
+    "opciones": [
+      "A. El reversible usa clave pública y el irreversible usa clave privada.",
+      "B. Del mensaje cifrado en un esquema reversible se puede recuperar el mensaje en claro original, mientras que en el irreversible (hash) no es posible.",
+      "C. El reversible solo sirve para autenticación y el irreversible para confidencialidad.",
+      "D. El reversible se ejecuta en el servidor y el irreversible en el cliente."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-11-Pregunta: ¿Qué caracteriza fundamentalmente a un Criptosistema Simétrico (o de clave única)?",
+    "opciones": [
+      "A. Emplea dos claves matemáticamente vinculadas: una pública y una privada.",
+      "B. Emplea la misma clave secreta K tanto para el proceso de cifrado como para el de descifrado.",
+      "C. No requiere ningún tipo de clave para descifrar el mensaje.",
+      "D. Genera un resumen hash no invertible del mensaje."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-12-Pregunta: ¿Cuál es el mayor inconveniente operacional que presentan los sistemas criptográficos simétricos?",
+    "opciones": [
+      "A. Su elevada lentitud y alto coste computacional al cifrar grandes volúmenes de datos.",
+      "B. La necesidad de contar con un canal seguro para la transmisión y distribución previa de la clave secreta compartida.",
+      "C. Que no pueden garantizar la confidencialidad de la información.",
+      "D. Que requieren el uso obligatorio de una Autoridad Certificadora (CA)."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-13-Pregunta: Para una red exclusivamente simétrica de 1.000 usuarios que desean comunicarse de forma privada entre sí, ¿cuántas claves secretas compartidas independientes se necesitan en total?",
+    "opciones": [
+      "A. 1.000 claves.",
+      "B. 2.000 claves.",
+      "C. 499.500 claves (N*(N-1)/2).",
+      "D. 1.000.000 de claves."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SegSisSw-T2-14-Pregunta: Cuando dos entidades legítimas comparten una clave simétrica secreta, ¿qué tres servicios de seguridad quedan garantizados al cifrar un mensaje?",
+    "opciones": [
+      "A. Confidencialidad, Integridad y Autenticidad.",
+      "B. Disponibilidad, No repudio y Criptoagilidad.",
+      "C. Anonimato, Inmunidad y Disponibilidad.",
+      "D. Resistencia cuántica, Trazabilidad y Cumplimiento."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-15-Pregunta: ¿Cuáles de los siguientes son algoritmos estándares representativos de la criptografía simétrica?",
+    "opciones": [
+      "A. RSA, Diffie-Hellman y DSA.",
+      "B. DES, TripleDES y AES.",
+      "C. MD5, SHA1 y SHA256.",
+      "D. ML-KEM, ECDHE y X.509."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-16-Pregunta: ¿Qué herramienta clásica de auditoría y prueba de contraseñas permite extraer y romper hashes de archivos cifrados (.rar, .pdf, .docx) mediante fuerza bruta o diccionario?",
+    "opciones": [
+      "A. FindSecBugs.",
+      "B. John the Ripper (junto con utilidades como rar2john o pdf2john).",
+      "C. OWASP ZAP.",
+      "D. ModSecurity WAF."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-17-Pregunta: ¿Qué famosa lista de contraseñas filtradas (que contiene más de 14 millones de credenciales) se utiliza habitualmente en ataques de diccionario?",
+    "opciones": [
+      "A. Rockyou.txt.",
+      "B. Talisman.json.",
+      "C. Inspec.rb.",
+      "D. Archery.log."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-18-Pregunta: En un criptosistema asimétrico o de clave pública, cada usuario U dispone de:",
+    "opciones": [
+      "A. Una única clave secreta compartida con el servidor central.",
+      "B. Dos claves: una clave pública (KP o ub) conocida por todos y una clave privada (Kp o uv) conocida solo por U.",
+      "C. Una lista de tokens temporales de un solo uso.",
+      "D. Tres claves de sesión simétricas dinámicas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-19-Pregunta: ¿Cuál de las siguientes afirmaciones describe una propiedad fundamental de la criptografía asimétrica?",
+    "opciones": [
+      "A. La clave privada se utiliza para cifrar y la clave pública no sirve para descifrar.",
+      "B. Una información cifrada con la clave pública solo puede ser descifrada con su correspondiente clave privada (y viceversa), siendo computacionalmente inviable deducir la privada a partir de la pública.",
+      "C. Es imposible utilizar la criptografía asimétrica para la firma digital.",
+      "D. Las claves pública y privada deben ser exactamente idénticas en longitud a la contraseña del usuario."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-20-Pregunta: ¿Cuál es la gran ventaja operacional de la criptografía asimétrica frente a la simétrica?",
+    "opciones": [
+      "A. Que es mucho más rápida y consume menos recursos de cómputo.",
+      "B. Permite el envío cifrado de datos sin necesidad de intercambiar previamente claves secretas por un canal seguro.",
+      "C. Que no requiere el uso de funciones matemáticas de número primo.",
+      "D. Que garantiza automáticamente la disponibilidad del servidor ante ataques DoS."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-21-Pregunta: Si el emisor A quiere enviar un mensaje confidencial al receptor B usando criptografía asimétrica, ¿con qué clave debe cifrar A el mensaje?",
+    "opciones": [
+      "A. Con la clave privada de A.",
+      "B. Con la clave pública de A.",
+      "C. Con la clave pública de B.",
+      "D. Con la clave privada de B."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SegSisSw-T2-22-Pregunta: Si el emisor A cifra un mensaje utilizando su propia clave privada (Kp_A), ¿qué servicio de seguridad está garantizando ante el receptor B?",
+    "opciones": [
+      "A. Confidencialidad total ante terceros.",
+      "B. Autenticidad de origen ( e integridad), ya que solo A posee su clave privada y cualquiera con la clave pública de A puede verificarlo.",
+      "C. Disponibilidad de los servidores de destino.",
+      "D. Ocultación del canal de transmisión."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-23-Pregunta: ¿Por qué en la práctica actual se emplean 'sistemas mixtos o híbridos' para el cifrado de datos?",
+    "opciones": [
+      "A. Porque la criptografía asimétrica es computacionalmente costosa y lenta para mensajes largos; por ello se cifra el mensaje con un algoritmo simétrico rápido y la clave simétrica se cifra con criptografía asimétrica.",
+      "B. Porque los algoritmos simétricos no pueden procesar textos en español.",
+      "C. Porque la ley exige usar tres claves distintas por cada comunicación.",
+      "D. Porque los hashes reemplazan por completo a los algoritmos de clave pública."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-24-Pregunta: ¿Cuáles son algoritmos representativos de la criptografía asimétrica o de clave pública?",
+    "opciones": [
+      "A. DES, AES y TripleDES.",
+      "B. RSA, Diffie-Hellman y DSA.",
+      "C. MD5, SHA1 y HMAC.",
+      "D. WAF, SAST y DAST."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-25-Pregunta: Al comparar la longitud de claves entre esquemas simétricos y asimétricos, ¿cuál de las siguientes opciones ofrece un nivel de seguridad equivalente o superior con claves sensiblemente más cortas?",
+    "opciones": [
+      "A. RSA requiere claves de 1024-2048 bits, mientras que la criptografía de Curvas Elípticas logra seguridad equivalente con claves de ~172-256 bits.",
+      "B. DES de 56 bits es más seguro que RSA de 4096 bits.",
+      "C. Las funciones hash requieren claves de 8 bits.",
+      "D. AES necesita claves de 10.000 bits para ser seguro."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-26-Pregunta: ¿Qué es una función Hash en el contexto criptográfico?",
+    "opciones": [
+      "A. Un algoritmo simétrico de cifrado de bloques reversibles.",
+      "B. Una función matemática matemática no invertible que, dado un mensaje de longitud variable, proporciona un resumen representativo de longitud fija.",
+      "C. Un protocolo para intercambiar certificados digitales entre navegador y servidor.",
+      "D. Un software para detectar malware en imágenes Docker."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-27-Pregunta: ¿Cuál de las siguientes NO es una propiedad requerida en una función de hash segura?",
+    "opciones": [
+      "A. Que sea fácil y rápido de calcular a partir del mensaje.",
+      "B. Que sea fácil recuperar el mensaje original a partir únicamente del valor hash obtenido.",
+      "C. Que sea extremadamente difícil encontrar dos mensajes diferentes que produzcan el mismo hash (resistencia a colisiones).",
+      "D. Que un pequeño cambio en el mensaje altere drásticamente el valor hash resultante."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-28-Pregunta: ¿Qué dos algoritmos hash históricos se mencionan explícitamente en los materiales docentes de la asignatura?",
+    "opciones": [
+      "A. MD5 y SHA1.",
+      "B. RSA y AES.",
+      "C. DES y Blowfish.",
+      "D. TLS y SSL."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-29-Pregunta: ¿Cuál es la utilidad primordial de enviar un resumen hash junto con un mensaje o archivo enviado a través de la red?",
+    "opciones": [
+      "A. Garantizar la confidencialidad para que nadie lea el mensaje.",
+      "B. Proporcionar integridad de la información, permitiendo al receptor recomputar el hash y verificar que los datos no sufrieron alteraciones.",
+      "C. Evitar que el servidor sufra saturación de memoria RAM.",
+      "D. Ocultar la dirección IP del remitente."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-30-Pregunta: ¿Cómo se genera técnicamente una Firma Digital sobre un documento o mensaje?",
+    "opciones": [
+      "A. Cifrando todo el documento completo con la clave pública de la Autoridad Certificadora.",
+      "B. Generando un hash representativo del mensaje y cifrando dicho hash con la clave privada del emisor.",
+      "C. Añadiendo una imagen escaneada de la rúbrica del usuario al final del archivo.",
+      "D. Cifrando el mensaje con una clave simétrica AES no compartida."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-31-Pregunta: ¿Qué tres propiedades esenciales de seguridad garantiza el proceso de verificación de una Firma Digital?",
+    "opciones": [
+      "A. Autenticación, Integridad y No Repudio.",
+      "B. Confidencialidad, Disponibilidad y Anonimato.",
+      "C. Criptoagilidad, Redundancia y Velocidad.",
+      "D. Aislamiento físico, Tolerancia a fallos y Reversibilidad."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-32-Pregunta: En la recepción de un documento firmado digitalmente, ¿cómo verifica el receptor que la firma es válida?",
+    "opciones": [
+      "A. Descifra la firma con la clave pública del emisor para obtener el hash original y lo compara con el hash que él mismo calcula sobre el documento recibido.",
+      "B. Envía la clave privada del emisor a la policía cibernética.",
+      "C. Cifra de nuevo el documento con la clave privada del receptor.",
+      "D. Solicita al servidor web que reinicie el handshake TLS."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-33-Pregunta: Por sí sola, la firma digital no evita la suplantación de identidad si un atacante intercepta la clave pública (Man-in-the-Middle). ¿Qué mecanismo resuelve este problema de confianza?",
+    "opciones": [
+      "A. El uso de contraseñas de más de 30 caracteres.",
+      "B. La intervención de una tercera parte de confianza (Autoridad de Certificación / PKI) o redes de confianza (PGP).",
+      "C. El reinicio periódico del sistema operativo.",
+      "D. La conversión del código a lenguaje ensamblador."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-34-Pregunta: ¿Qué es una Infraestructura de Clave Pública (PKI)?",
+    "opciones": [
+      "A. Un conjunto de cables submarinos protegidos físicamente por gobiernos.",
+      "B. El conjunto de hardware, software, personal, políticas y procedimientos para crear, gestionar, almacenar, distribuir y revocar certificados digitales.",
+      "C. Un repositorio abierto donde cualquier usuario puede modificar las claves privadas de terceros.",
+      "D. Un plugin de desarrollo estático para detectar fallos SQLi."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-35-Pregunta: Dentro de una PKI, ¿cuál es la función principal de la Autoridad Certificadora (CA)?",
+    "opciones": [
+      "A. Analizar el código fuente en busca de vulnerabilidades de deserialización.",
+      "B. Expedir, verificar y firmar digitalmente certificados digitales que vinculen claves públicas a la identidad de sus titulares.",
+      "C. Almacenar copias de seguridad de las contraseñas personales de los usuarios.",
+      "D. Filtrar el tráfico de red actuando como cortafuegos WAF."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-36-Pregunta: ¿Qué rol desempeña la Autoridad de Registro (RA) en una PKI?",
+    "opciones": [
+      "A. Actúa como verificador de la identidad del solicitante antes de que la Autoridad Certificadora (CA) le expida un certificado.",
+      "B. Reemplaza al servidor DNS en la traducción de nombres de dominio.",
+      "C. Cifra las bases de datos de producción mediante AES-256.",
+      "D. Ejecuta los scripts de pre-commit en los repositorios Git."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-37-Pregunta: ¿Qué protocolo y estándar de directorio se utiliza habitualmente en las PKI para almacenar y consultar certificados digitales?",
+    "opciones": [
+      "A. Estándar X.500 con acceso LDAP.",
+      "B. Estándar HTTP/2 con acceso REST API.",
+      "C. Protocolo Telnet sobre puerto 23.",
+      "D. Archivos de texto plano (.txt) compartidos vía FTP."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-38-Pregunta: ¿Cuál es el formato estándar internacional para certificados digitales de clave pública?",
+    "opciones": [
+      "A. Especificación ITU-T X.509.",
+      "B. Estándar IEEE 802.11X.",
+      "C. Formato PKCS#13 binario.",
+      "D. Especificación ISO-9001."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-39-Pregunta: ¿Cuáles de los siguientes campos forman parte de la estructura de un certificado digital X.509?",
+    "opciones": [
+      "A. Versión, Número de serie, Datos de la CA emisora, Período de validez, Nombre del titular, Clave pública del titular y Firma de la CA.",
+      "B. Código fuente de la aplicación, Contraseña del usuario en texto claro y Dirección MAC del router.",
+      "C. Registro de pulsaciones de teclado, Reglas del WAF y Tokens de API de AWS.",
+      "D. Historial de navegación del cliente y dirección física del CPD."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-40-Pregunta: ¿Cuál de las siguientes actividades NO requiere o aprovecha el uso de certificados digitales X.509?",
+    "opciones": [
+      "A. Acceso seguro mediante HTTPS a sitios web restringidos.",
+      "B. Envío y recepción de correo electrónico firmado y cifrado (S/MIME / PGP).",
+      "C. Formateo y desfragmentación física de discos duros locales.",
+      "D. Firma digital de código software y documentos digitales oficiales."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SegSisSw-T2-41-Pregunta: Entre los protocolos de seguridad actuales, ¿cuál se utiliza como reemplazo seguro del antiguo e inseguro comando 'telnet' para sesiones remotas?",
+    "opciones": [
+      "A. SSH (Secure Shell).",
+      "B. PGP (Pretty Good Privacy).",
+      "C. HTTPS (Hypertext Transfer Protocol Secure).",
+      "D. SSL Record Protocol."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-42-Pregunta: ¿Qué subprotocolo de la arquitectura SSL/TLS se encarga de definir la forma de encapsular y fragmentar los datos transmitidos y recibidos?",
+    "opciones": [
+      "A. SSL/TLS Handshake Protocol.",
+      "B. SSL/TLS Record Protocol.",
+      "C. SSL Alert Protocol.",
+      "D. SSL Change Cipher Spec Protocol."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-43-Pregunta: ¿Cuál es la misión principal del SSL/TLS Handshake Protocol?",
+    "opciones": [
+      "A. Facilitar la negociación de parámetros de seguridad (autenticación, intercambio de claves y algoritmos) para la comunicación cliente/servidor.",
+      "B. Realizar copias de seguridad incrementales de la base de datos.",
+      "C. Escanear imágenes de contenedores Docker en busca de parches faltantes.",
+      "D. Asignar direcciones IP dinámicas mediante DHCP."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-44-Pregunta: En el establecimiento de conexión en TLS Clásico (basado en RSA), ¿cómo obtiene el servidor la clave de sesión simétrica?",
+    "opciones": [
+      "A. El navegador genera una clave de sesión aleatoria, la cifra con la clave pública del servidor (X.509) y se la envía; el servidor la descifra con su clave privada.",
+      "B. El servidor envía su clave privada al navegador para que cifre la clave de sesión.",
+      "C. Ambas partes envían la clave de sesión en texto claro durante el ClientHello.",
+      "D. Se lee desde un archivo local guardado en el directorio /tmp."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-45-Pregunta: ¿Cuál era el problema o vulnerabilidad crítica del modelo TLS clásico basado en intercambio RSA?",
+    "opciones": [
+      "A. Ausencia de Forward Secrecy: si un atacante robaba la clave privada del servidor en el futuro, podía descifrar todas las comunicaciones pasadas almacenadas.",
+      "B. Imposibilidad de cifrar imágenes o archivos adjuntos.",
+      "C. Incompatibilidad absoluta con el protocolo TCP/IP.",
+      "D. Requerir la instalación de un cliente en lenguaje Java."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-46-Pregunta: ¿Cómo soluciona TLS 1.3 la ausencia de Forward Secrecy y reduce la latencia en la negociación?",
+    "opciones": [
+      "A. Eliminando la autenticación del servidor por completo.",
+      "B. Adoptando claves efímeras temporales mediante ECDHE (Elliptic Curve Diffie-Hellman Ephemeral), calculando el secreto compartido localmente en cada extremo sin enviarlo por la red.",
+      "C. Aumentando el tamaño de la clave RSA a 16.384 bits.",
+      "D. Obligando a enviar la clave de sesión grabada en un soporte físico USB."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-47-Pregunta: ¿En qué consiste la amenaza cibernética conocida como 'Harvest Now, Decrypt Later' (HNDL) impulsada por la computación cuántica?",
+    "opciones": [
+      "A. En infectar ordenadores para minar criptomonedas mientras el usuario duerme.",
+      "B. En que los atacantes capturan y almacenan hoy tráfico cifrado clásico para descifrarlo en el futuro cuando dispongan de ordenadores cuánticos con suficiente potencia.",
+      "C. En borrar remotamente los discos duros de servidores en producción.",
+      "D. En suplantar la firma de un certificado vencido mediante fuerza bruta inmediata."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-48-Pregunta: ¿Qué mecanismo de establecimiento de claves poscuántico fue estandarizado por el NIST en agosto de 2024 (FIPS 203) basado en la dificultad de problemas sobre retículos (lattices)?",
+    "opciones": [
+      "A. ML-KEM (Module-Lattice-Based Key Encapsulation Mechanism).",
+      "B. RSA-4096.",
+      "C. SHA3-512.",
+      "D. AES-GCM-256."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-49-Pregunta: En la transición hacia la era poscuántica (RFC 10024), ¿qué enfoque práctico se adopta para garantizar resistencia tanto clásica como poscuántica en TLS?",
+    "opciones": [
+      "A. Combinaciones híbridas que unifican algoritmos clásicos (ej. ECDHE / X25519) con encapsulación poscuántica (ej. ML-KEM-768).",
+      "B. Regresar al uso exclusivo de tarjetas perforadas y claves manuales.",
+      "C. Eliminar el cifrado simétrico y usar únicamente funciones de hash.",
+      "D. Desactivar los certificados digitales X.509 en todos los navegadores."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-50-Pregunta: En los planes de migración criptográfica futura a partir de 2027, ¿qué se entiende por 'Criptoagilidad'?",
+    "opciones": [
+      "A. La capacidad de un programa para ejecutar la encriptación sin consumir batería en dispositivos móviles.",
+      "B. La capacidad de los sistemas para identificar qué algoritmos utilizan y sustituirlos rápidamente por alternativas seguras sin necesidad de rediseñar o reconstruir toda la aplicación (apoyado en inventarios CBOM).",
+      "C. La velocidad de transferencia de datos en redes de fibra óptica de última generación.",
+      "D. La aceleración por hardware de las instrucciones del procesador central."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-51-Pregunta: En la matriz de 5x5 del cifrador de Polybios adaptado al español, ¿qué solución se adopta para incluir todas las letras del alfabeto?",
+    "opciones": [
+      "A. Se eliminan las consonantes menos utilizadas.",
+      "B. Se comparten celdas en pares de letras como I/J y N/Ñ debido a la restricción de espacio.",
+      "C. Se crea una matriz especial de 6x6 con números negativos.",
+      "D. Se sustituyen las vocales por símbolos matemáticos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-52-Pregunta: Al realizar un análisis estadístico de frecuencia sobre un texto en castellano cifrado por desplazamiento (tipo César), ¿cuál es la vocal que muestra la mayor frecuencia de aparición (aprox. 15%)?",
+    "opciones": [
+      "A. La letra 'A'.",
+      "B. La letra 'E'.",
+      "C. La letra 'O'.",
+      "D. La letra 'I'."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-53-Pregunta: En el cifrado por Transposición Columnar con Clave, ¿cómo se determina el orden en que se leen las columnas para formar el criptograma?",
+    "opciones": [
+      "A. Mediante el desplazamiento fijo de tres posiciones del alfabeto.",
+      "B. A partir del orden alfabético de las letras que forman la palabra clave (sin caracteres repetidos).",
+      "C. Mediante una función hash unidireccional de 128 bits.",
+      "D. Escribiendo el texto de abajo hacia arriba en diagonal."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-54-Pregunta: En un cifrador polialfabético basado en dos alfabetos de sustitución, ¿qué criterio se sigue para seleccionar el alfabeto de cifrado de cada letra?",
+    "opciones": [
+      "A. Un alfabeto se aplica a las vocales y el otro a las consonantes.",
+      "B. Se utiliza un alfabeto para las letras en posiciones impares del mensaje y el otro para las posiciones pares.",
+      "C. Se alterna de alfabeto solo al encontrar un punto y seguido.",
+      "D. Se selecciona el alfabeto según la hora del día."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-55-Pregunta: En la definición formal de un Criptosistema CS = (M, C, K, Ek, Dk), ¿qué representa el conjunto 'M'?",
+    "opciones": [
+      "A. El espacio de claves privadas de la entidad certificadora.",
+      "B. El espacio de mensajes en claro originales.",
+      "C. El espacio de textos cifrados o criptogramas.",
+      "D. La familia de funciones de verificación de firma."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-56-Pregunta: En la tupla de un Criptosistema CS = (M, C, K, Ek, Dk), ¿qué representa el término 'Ek'?",
+    "opciones": [
+      "A. La clave pública de autenticación del receptor.",
+      "B. Una familia de transformaciones de cifrado M -> C parametrizada por la clave k perteneciente a K.",
+      "C. El algoritmo de resumen hash de longitud constante.",
+      "D. El identificador del protocolo de transporte."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-57-Pregunta: Según los principios criptográficos fundamentales (Principio de Kerckhoffs), ¿de qué debe depender exclusivamente la seguridad de un criptosistema?",
+    "opciones": [
+      "A. Del secreto del código fuente del software utilizado.",
+      "B. Del secreto de la clave k, mientras que las funciones de cifrado y descifrado pueden ser públicas.",
+      "C. De la imposibilidad física de interceptar la red de comunicaciones.",
+      "D. Del uso exclusivo de algoritmos propietarios no documentados."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-58-Pregunta: En criptoanálisis, ¿qué significa la acción de 'romper el secreto' de un criptosistema?",
+    "opciones": [
+      "A. Lograr que el receptor acepte mensajes falsificados.",
+      "B. Reconstruir el texto en claro original a partir del texto cifrado sin conocer la clave.",
+      "C. Revocar el certificado digital del servidor web.",
+      "D. Apagar el servidor de autenticación de forma remota."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-59-Pregunta: En criptoanálisis, ¿qué significa la acción de 'romper la autenticidad' de un criptosistema?",
+    "opciones": [
+      "A. Obtener la clave privada mediante un análisis de frecuencia.",
+      "B. Hacer que el receptor acepte como legítimos mensajes que no fueron generados por el emisor autorizado.",
+      "C. Cambiar el formato de la base de datos de usuarios.",
+      "D. Interrumpir el canal de comunicación en la capa de red."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-60-Pregunta: Un criptosistema se considera 'computacionalmente imposible' de romper cuando:",
+    "opciones": [
+      "A. Es matemáticamente inatacable sin importar el tiempo o recursos disponibles.",
+      "B. Conociendo las funciones públicas y múltiples pares de mensaje-cifrado, determinar la clave exige un coste computacional e inasumible en tiempo.",
+      "C. No utiliza ningún tipo de ordenador para procesar los datos.",
+      "D. Cambia de clave cada microsegundo mediante un reloj atómico."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-61-Pregunta: Según los apuntes, ¿cómo se dividen los esquemas de cifrado atendiendo a si es posible recuperar el mensaje original a partir del cifrado?",
+    "opciones": [
+      "A. En cifrados activos y pasivos.",
+      "B. En reversibles (simétricos y asimétricos) e irreversibles (funciones hash / resumen).",
+      "C. En físicos y lógicos.",
+      "D. En estáticos y dinámicos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-62-Pregunta: En el cifrado simétrico o de clave única, ¿cuál es su principal inconveniente práctico?",
+    "opciones": [
+      "A. Su baja velocidad al procesar grandes volúmenes de datos.",
+      "B. La necesidad de transmitir la clave secreta compartida a través de un canal seguro antes de iniciar la comunicación.",
+      "C. La exigencia de emitir un certificado X.509 por cada mensaje enviado.",
+      "D. Que requiere claves con una longitud mínima de 4096 bits."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-63-Pregunta: Para una red de N usuarios que desean comunicarse de forma simétrica punto a punto de manera segura, ¿cuántas claves compartidas en total se requieren?",
+    "opciones": [
+      "A. N claves en total.",
+      "B. N * (N - 1) / 2 claves.",
+      "C. 2 * N claves.",
+      "D. N^2 claves."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-64-Pregunta: Aplicando la fórmula de claves simétricas para N = 1.000 usuarios en una organización, ¿cuántas claves compartidas individuales se necesitarían?",
+    "opciones": [
+      "A. 1.000 claves.",
+      "B. 499.500 claves.",
+      "C. 2.000 claves.",
+      "D. 1.000.000 de claves."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-65-Pregunta: En comparación, si esos mismos 1.000 usuarios emplean criptografía asimétrica de doble clave, ¿cuántos pares de claves (o 'cajas') se gestionan en total?",
+    "opciones": [
+      "A. 499.500 pares.",
+      "B. 1.000 pares de claves (un par por cada usuario).",
+      "C. 2.000.000 de pares.",
+      "D. Una única clave para toda la red."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-66-Pregunta: El uso de un algoritmo de cifrado simétrico garantiza simultáneamente tres criterios de seguridad fundamentales:",
+    "opciones": [
+      "A. Disponibilidad, No Repudio y Auditoría.",
+      "B. Confidencialidad, Integridad y Autenticidad.",
+      "C. Aislamiento físico, Resistencia Cuántica y Fail-Safe.",
+      "D. Anonimato, Escalabilidad y Trazabilidad."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-67-Pregunta: En un esquema de clave pública o asimétrica, si el emisor cifra la información con la clave PÚBLICA del receptor, ¿qué servicio de seguridad se satisface?",
+    "opciones": [
+      "A. No repudio del emisor.",
+      "B. Confidencialidad (solo el receptor puede descifrarla con su clave privada).",
+      "C. Autenticidad del emisor.",
+      "D. Disponibilidad del servicio."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-68-Pregunta: Si el emisor cifra un mensaje utilizando su propia clave PRIVADA, ¿qué servicios se proporcionan al receptor que descifre con la clave pública del emisor?",
+    "opciones": [
+      "A. Confidencialidad absoluta frente a cualquier observador.",
+      "B. Autenticidad de origen e Integridad del contenido.",
+      "C. Anonimato del emisor y del receptor.",
+      "D. Protección contra ataques físicos al CPD."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-69-Pregunta: En la práctica actual se emplean sistemas criptográficos combinados (híbridos) debido a que:",
+    "opciones": [
+      "A. Los algoritmos simétricos son inseguros por definición.",
+      "B. Los algoritmos asimétricos son computacionalmente más costosos y lentos, por lo que se cifra el mensaje con un sistema simétrico y la clave simétrica con asimétrico.",
+      "C. Las funciones hash han reemplazado a las claves simétricas.",
+      "D. Permiten prescindir de la Autoridad de Certificación."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-70-Pregunta: Comparando la longitud de las claves entre sistemas simétricos y asimétricos (RSA) para obtener un nivel equivalente de seguridad:",
+    "opciones": [
+      "A. El cifrado simétrico requiere 2048 bits y RSA 56 bits.",
+      "B. El cifrado simétrico requiere 128-256 bits, mientras que RSA requiere longitudes de 1024-2048 bits.",
+      "C. Ambos sistemas utilizan exactamente claves de 64 bits.",
+      "D. RSA utiliza claves de 8 bits y el simétrico de 1024 bits."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-71-Pregunta: En el taller práctico de auditoría de contraseñas de los apuntes, ¿qué herramienta se utiliza junto con utilidades como rar2john o pdf2john para recuperar contraseñas de archivos cifrados?",
+    "opciones": [
+      "A. Wireshark.",
+      "B. John the Ripper.",
+      "C. ModSecurity.",
+      "D. OWASP ZAP."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-72-Pregunta: Entre los diccionarios de contraseñas filtradas mencionados en la materia, ¿cuál contiene más de 14 millones de contraseñas provenientes de una brecha en 2009?",
+    "opciones": [
+      "A. SecLists.",
+      "B. RockYou.txt.",
+      "C. Kaonashi.txt.",
+      "D. WeakPass."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-73-Pregunta: Entre los recursos de diccionarios para auditoría a gran escala, ¿cuál destaca por contener más de 1.5 mil millones de contraseñas organizadas por patrones comunes?",
+    "opciones": [
+      "A. RockYou.txt.",
+      "B. CrackStation.",
+      "C. Kaonashi.txt.",
+      "D. 10 Million Password List."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-74-Pregunta: Una función Hash o de resumen matemático transforma un mensaje de longitud variable en:",
+    "opciones": [
+      "A. Un texto cifrado del mismo tamaño exacto que el archivo original.",
+      "B. Un resultado o valor resumen de tamaño fijo y significativamente menor que el mensaje.",
+      "C. Una pareja de claves pública y privada X.509.",
+      "D. Un certificado digital firmado por la Autoridad Certificadora."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-75-Pregunta: La propiedad de 'Unidireccionalidad' (resistencia a la primera preimagen) en una función hash establece que:",
+    "opciones": [
+      "A. Es fácil recuperar el mensaje original a partir de su hash.",
+      "B. Es extremadamente difícil construir o averiguar el mensaje original a partir de un valor hash determinado.",
+      "C. El hash cambia de tamaño según la longitud de entrada.",
+      "D. Dos mensajes iguales producen hashes diferentes."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-76-Pregunta: La propiedad de 'Resistencia a Colisiones' en una función hash implica que:",
+    "opciones": [
+      "A. Es sencillo generar dos mensajes distintos con el mismo hash.",
+      "B. Es extremadamente difícil encontrar dos mensajes diferentes que produzcan exactamente el mismo valor hash.",
+      "C. El valor hash se cifra con la clave privada del servidor.",
+      "D. La función hash sólo puede aplicarse a archivos de texto plano."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-77-Pregunta: Los dos algoritmos de función hash clásicos explicados en la asignatura son:",
+    "opciones": [
+      "A. AES y DES.",
+      "B. MD5 y SHA1.",
+      "C. RSA y Diffie-Hellman.",
+      "D. SSH y HTTPS."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-78-Pregunta: Para resolver el problema de la Integridad de la información, el emisor envía el mensaje junto con su hash. ¿Cómo verifica el receptor la integridad?",
+    "opciones": [
+      "A. Descifrando el mensaje con la clave privada de la CA.",
+      "B. Calculando por su cuenta el hash del mensaje recibido y comprobando que coincide con el hash adjunto.",
+      "C. Enviando una solicitud al servidor DNS local.",
+      "D. Ejecutando un escaneo dinámico con OWASP ZAP."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-79-Pregunta: En la técnica de Firma Digital, ¿por qué se cifra únicamente el hash del mensaje y no el documento completo con la clave privada?",
+    "opciones": [
+      "A. Porque la clave privada no puede procesar textos de más de 1 KB.",
+      "B. Porque cifrar el documento entero es computacionalmente costoso e ineficiente; cifrar solo el hash optimiza el rendimiento.",
+      "C. Porque los navegadores web rechazan los archivos cifrados por completo.",
+      "D. Porque la clave pública del receptor se destruiría durante el proceso."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-80-Pregunta: La verificación exitosa de una Firma Digital (coincidencia de hashes) garantiza al receptor tres servicios de seguridad:",
+    "opciones": [
+      "A. Disponibilidad, Redundancia y Escalabilidad.",
+      "B. Autenticidad, Integridad y No Repudio.",
+      "C. Anonimato, Cifrado simétrico y Tolerancia a fallos.",
+      "D. Control de accesos físico, AIS y SAIs."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-81-Pregunta: El uso de la Firma Digital por sí sola no evita completamente la suplantación de identidad en el intercambio de claves debido a:",
+    "opciones": [
+      "A. La lentitud de los procesadores actuales.",
+      "B. La posibilidad de un ataque de tipo Man-in-the-Middle (MitM), donde un tercero intercepta y sustituye las claves públicas.",
+      "C. Que las funciones hash MD5 no son compatibles con TCP/IP.",
+      "D. Que las claves públicas son secretas y no se pueden transmitir."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-82-Pregunta: Para resolver el problema de la suplantación de clave pública (MitM), en la práctica se utilizan:",
+    "opciones": [
+      "A. Entidades de Certificación (tercera parte de confianza) o anillos de confianza (como en PGP).",
+      "B. Claves simétricas fijas grabadas en el código fuente.",
+      "C. Conexiones exclusivas por el protocolo Telnet.",
+      "D. Cifrado de disco mediante algoritmos de transposición."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-83-Pregunta: Una Infraestructura de Clave Pública (PKI) se define como:",
+    "opciones": [
+      "A. Un programa antivirus instalado en el servidor de correo.",
+      "B. El conjunto de hardware, software, personas, políticas y procedimientos necesarios para crear, gestionar, guardar, distribuir y revocar certificados basados en criptografía asimétrica.",
+      "C. Una base de datos SQL para almacenar contraseñas en texto claro.",
+      "D. Un conmutador de red para segmentar el tráfico de voz."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-84-Pregunta: En la estructura de una PKI, la Autoridad Certificadora (CA) es la encargada de:",
+    "opciones": [
+      "A. Revisar el código fuente en busca de vulnerabilidades.",
+      "B. Expedir, firmar y verificar certificados digitales que contienen las claves públicas de usuarios o servidores.",
+      "C. Filtrar el tráfico no deseado en el nivel de red.",
+      "D. Descifrar el tráfico confidencial de los usuarios."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-85-Pregunta: En una PKI, ¿cuál es la función específica de la Autoridad de Registro (RA)?",
+    "opciones": [
+      "A. Cifrar el canal de transmisión mediante AES-256.",
+      "B. Verificar la identidad del solicitante ante la CA antes de que esta expida un certificado digital.",
+      "C. Ejecutar los escaneos de vulnerabilidades de red.",
+      "D. Almacenar los repositorios de binarios en Artifactory."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-86-Pregunta: Los certificados digitales y sus claves públicas se almacenan en repositorios que siguen habitualmente:",
+    "opciones": [
+      "A. El estándar X.500 con acceso mediante el protocolo LDAP.",
+      "B. Archivos de texto plano accesibles vía FTP sin credenciales.",
+      "C. Tablas dinámicas dentro del navegador cliente.",
+      "D. Archivos comprimidos protegidos con clave fija."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-87-Pregunta: El formato estándar de certificado digital reconocido internacionalmente y utilizado en la Web es el definido por la especificación:",
+    "opciones": [
+      "A. ISO 27001.",
+      "B. ITU-T X.509.",
+      "C. RFC 8446.",
+      "D. FIPS 203."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-88-Pregunta: En la estructura de un certificado digital X.509, ¿qué clave se utiliza para firmar el documento electrónico y otorgarle validez?",
+    "opciones": [
+      "A. La clave pública del usuario certificado.",
+      "B. La clave privada de la Autoridad de Certificación (CA).",
+      "C. La clave simétrica de sesión del navegador.",
+      "D. La clave secreta de la autoridad de registro."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-89-Pregunta: Dentro de los campos contenidos en un certificado digital X.509 se encuentran explícitamente:",
+    "opciones": [
+      "A. El código fuente completo de la aplicación.",
+      "B. La versión, número de serie, algoritmo de firma, datos del emisor (CA), período de validez, nombre del usuario y su clave pública.",
+      "C. La clave privada del sujeto titular del certificado.",
+      "D. El historial de navegación web del usuario."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-90-Pregunta: Contar con certificados digitales X.509 permite realizar diversas acciones seguras en red, EXCEPTO:",
+    "opciones": [
+      "A. Autenticarse en sitios web restringidos mediante HTTPS.",
+      "B. Firmar y cifrar mensajes de correo electrónico.",
+      "C. Eliminar la necesidad de utilizar antivirus en los puestos de trabajo.",
+      "D. Firmar digitalmente software ejecutable para su distribución en Internet."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SegSisSw-T2-91-Pregunta: El protocolo criptográfico utilizado como reemplazo seguro del antiguo comando 'telnet' para establecer sesiones remotas cifradas es:",
+    "opciones": [
+      "A. HTTP.",
+      "B. SSH (Secure Shell).",
+      "C. PGP.",
+      "D. Kerberos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-92-Pregunta: El protocolo de autenticación en red desarrollado por el MIT que utiliza criptografía de clave simétrica para permitir la autenticación única (Single Sign-On) en servidores es:",
+    "opciones": [
+      "A. Kerberos.",
+      "B. PGP.",
+      "C. TLS 1.3.",
+      "D. Clair."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-93-Pregunta: El criptosistema orientado a proteger información y correo electrónico en Internet mediante criptografía de clave pública y firma digital es:",
+    "opciones": [
+      "A. PGP (Pretty Good Privacy).",
+      "B. Telnet.",
+      "C. ModSecurity.",
+      "D. Dependency-Check."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-94-Pregunta: El protocolo criptográfico cliente/servidor SSL (Secure Socket Layer) fue creado en la década de los 90 por la empresa:",
+    "opciones": [
+      "A. Microsoft.",
+      "B. Netscape Communication.",
+      "C. Google.",
+      "D. HashiCorp."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-95-Pregunta: Dentro de la arquitectura de SSL/TLS, el subprotocolo encargado de especificar la forma de encapsular y proteger los datos transmitidos es:",
+    "opciones": [
+      "A. SSL/TLS Handshake Protocol.",
+      "B. SSL/TLS Record Protocol.",
+      "C. DNSSEC Protocol.",
+      "D. Border Gateway Protocol."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-96-Pregunta: El subprotocolo 'SSL/TLS Handshake Protocol' tiene como misión principal:",
+    "opciones": [
+      "A. Facilitar la negociación previa de parámetros de seguridad (autenticación, algoritmos y claves de sesión) entre cliente y servidor.",
+      "B. Monitorear la memoria RAM del servidor de base de datos.",
+      "C. Generar informes de cumplimiento legislativo PCI-DSS.",
+      "D. Empaquetar los binarios creados por el servidor CI/CD."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-97-Pregunta: El protocolo TLS (Transport Layer Security) está diseñado para proporcionar seguridad en la capa del modelo OSI denominada:",
+    "opciones": [
+      "A. Capa de Enlace de Datos.",
+      "B. Capa de Transporte.",
+      "C. Capa Física.",
+      "D. Capa de Red exclusivamente."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-98-Pregunta: En el establecimiento de conexión segura en TLS Clásico (SSL/TLS 1.2 o inferior), ¿cómo se transmite la clave de sesión simétrica?",
+    "opciones": [
+      "A. El servidor la envía en texto claro en la respuesta ServerHello.",
+      "B. El cliente la genera, la cifra con la clave pública RSA del servidor enviada en el certificado y el servidor la descifra con su clave privada RSA.",
+      "C. Ambas partes la descargan de un repositorio LDAP público.",
+      "D. La clave de sesión se obtiene a partir del número de puerto TCP."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-99-Pregunta: El modelo clásico de negociación TLS basado en RSA presenta un problema grave conocido como:",
+    "opciones": [
+      "A. Incapacidad para cifrar imágenes GIF.",
+      "B. Ausencia de Forward Secrecy: si en el futuro se compromete la clave privada del servidor, se pueden descifrar todas las comunicaciones pasadas interceptadas.",
+      "C. Incompatibilidad con los servidores web Linux.",
+      "D. Obligatoriedad de usar claves simétricas de 8 bits."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-100-Pregunta: Entre las vulnerabilidades y ataques conocidos contra las implementaciones de cifrado RSA en TLS clásico se encuentran:",
+    "opciones": [
+      "A. Ataques de tipo Bleichenbacher, incluidos los conocidos como ROBOT.",
+      "B. Ataques de suplantación mediante troyanos en macros de Word.",
+      "C. Ataques de denegación de servicio por inundación de correo spam.",
+      "D. Ataques físicos a la toma de corriente del servidor."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-101-Pregunta: Para solucionar la falta de Forward Secrecy y los ataques contra RSA, el protocolo TLS 1.3 adopta de forma habitual:",
+    "opciones": [
+      "A. El uso obligatorio de contraseñas de 50 caracteres.",
+      "B. El intercambio de claves efímeras y temporales mediante ECDHE (Elliptic Curve Diffie-Hellman Ephemeral).",
+      "C. La eliminación de la capa de transporte en las comunicaciones.",
+      "D. El almacenamiento de claves secretas en tarjetas SD."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-102-Pregunta: En TLS 1.3 con intercambio ECDHE, ¿cómo se obtiene el secreto compartido entre cliente y servidor?",
+    "opciones": [
+      "A. El secreto viaja cifrado en el mensaje ClientHello.",
+      "B. Cada extremo calcula el secreto compartido localmente combinando su clave privada efímera con la clave pública efímera recibida; el secreto NUNCA viaja por la red.",
+      "C. La CA genera el secreto y se lo envía a ambos extremos.",
+      "D. El secreto se extrae de la cabecera HTTP de la petición."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-103-Pregunta: En TLS 1.3, para reducir el tiempo de negociación (menor latencia RTT), el cliente envía en su mensaje inicial:",
+    "opciones": [
+      "A. ClientHello junto con su 'Key Share' (su clave pública efímera temporal).",
+      "B. Únicamente la versión del navegador sin parámetros criptográficos.",
+      "C. El archivo de base de datos de usuarios.",
+      "D. Una solicitud de certificado a la Autoridad de Registro."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-104-Pregunta: ¿Qué garantiza la propiedad de 'Forward Secrecy' (Secreto Hacia Adelante) en una comunicación segura?",
+    "opciones": [
+      "A. Que las contraseñas futuras serán elegidas por una inteligencia artificial.",
+      "B. Que si la clave privada del certificado del servidor se compromete en el futuro, no se podrán descifrar las sesiones pasadas intercambiadas.",
+      "C. Que el código fuente no puede ser modificado por los desarrolladores.",
+      "D. Que el tráfico cifrado no ocupa espacio en disco."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-105-Pregunta: En TLS 1.3, una vez calculado el secreto compartido localmente, ¿qué función se utiliza para derivar las claves simétricas de sesión?",
+    "opciones": [
+      "A. HKDF.",
+      "B. MD5.",
+      "C. DES.",
+      "D. Polybios."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-106-Pregunta: Dos de los algoritmos de cifrado simétrico autenticado (AEAD) estándar utilizados en el canal de datos de TLS 1.3 son:",
+    "opciones": [
+      "A. AES-GCM y ChaCha20-Poly1305.",
+      "B. DES y TripleDES.",
+      "C. Polybios y César.",
+      "D. MD5 y SHA1."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-107-Pregunta: ¿Qué relación existe entre los conceptos 'ClientHello' y 'Handshake' en TLS?",
+    "opciones": [
+      "A. Son términos idénticos que se pueden usar de forma indistinta.",
+      "B. ClientHello es el mensaje inicial específico con el que arranca el cliente; Handshake es la fase completa de negociación entre cliente y servidor.",
+      "C. ClientHello es el cierre de la conexión y Handshake la apertura.",
+      "D. Handshake es un protocolo de capa física y ClientHello de capa de red."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-108-Pregunta: Respecto a la selección de algoritmos criptográficos, ¿qué cambio relevante introduce TLS 1.3 respecto a versiones anteriores?",
+    "opciones": [
+      "A. Añadió compatibilidad con cifradores por bloques de 40 bits.",
+      "B. Eliminó mecanismos criptográficos antiguos e inseguros y redujo las opciones de configuración potencialmente vulnerables.",
+      "C. Prohibió el uso de curvas elípticas.",
+      "D. Obliga a utilizar claves simétricas fijas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-109-Pregunta: Si la clave privada del servidor web es robada en un entorno protegido con TLS 1.3 y ECDHE, las comunicaciones históricas almacenadas:",
+    "opciones": [
+      "A. Se pueden descifrar de forma inmediata.",
+      "B. Permanecen totalmente seguras gracias al uso de claves efímeras por conexión (Forward Secrecy).",
+      "C. Se borran automáticamente de los servidores.",
+      "D. Son enviadas por correo electrónico a la CA."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-110-Pregunta: El tiempo de negociación para establecer un canal seguro en TLS 1.3 se reduce habitualmente a:",
+    "opciones": [
+      "A. 1-RTT (un ida y vuelta de mensajes) o incluso 0-RTT en reconexiones.",
+      "B. 10-RTT debido a los dobles controles de seguridad.",
+      "C. 30 segundos de espera fija obligatoria.",
+      "D. Un proceso síncrono que requiere la intervención manual del usuario."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-111-Pregunta: En el marco de las amenazas de la era poscuántica, la técnica de ataque 'Harvest Now, Decrypt Later' (HNDL) consiste en:",
+    "opciones": [
+      "A. Infectar servidores con ransomware para cobrar rescates en criptomonedas.",
+      "B. Capturar y almacenar hoy tráfico cifrado para descifrarlo en el futuro cuando se disponga de ordenadores cuánticos o mayor capacidad de cálculo.",
+      "C. Adivinar contraseñas cortas mediante ataques de diccionario en tiempo real.",
+      "D. Sabotear la fuente de alimentación de los centros de datos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-112-Pregunta: ¿Por qué la amenaza HNDL es especialmente preocupante para datos médicos, secretos industriales o información gubernamental?",
+    "opciones": [
+      "A. Porque esta información pierde todo su valor tras 24 horas.",
+      "B. Porque requiere mantener la confidencialidad durante muchos años, y el tráfico grabado hoy podría ser revelado en el futuro.",
+      "C. Porque no se puede almacenar información en servidores en la nube.",
+      "D. Porque fuerza el reinicio diario de las bases de datos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-113-Pregunta: ¿Qué mecanismo de establecimiento de claves poscuántico fue estandarizado por el NIST en agosto de 2024 mediante la norma FIPS 203?",
+    "opciones": [
+      "A. RSA-2048.",
+      "B. ML-KEM (Module-Lattice-Based Key Encapsulation Mechanism).",
+      "C. DES-EDE3.",
+      "D. MD5-HMAC."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-114-Pregunta: El algoritmo poscuántico ML-KEM basa su seguridad en la dificultad matemática de resolver problemas sobre:",
+    "opciones": [
+      "A. Factorización de números primos grandes.",
+      "B. Retículos (lattices), considerados resistentes a ataques de ordenadores cuánticos.",
+      "C. Logaritmos discretos sobre cuerpos finitos tradicionales.",
+      "D. Tablas de frecuencias alfabéticas."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-115-Pregunta: Según la especificación RFC 10024 (agosto de 2026), ¿cuál es la combinación híbrida estándar propuesta como opción práctica para TLS?",
+    "opciones": [
+      "A. X25519MLKEM768 (X25519 + ML-KEM-768).",
+      "B. SecP384r1MLKEM1024.",
+      "C. RSA_MD5_HYBRID.",
+      "D. AES_256_CBC."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-116-Pregunta: En la RFC 10024, la combinación híbrida 'SecP256r1MLKEM768' (ECDHE P-256 + ML-KEM-768) está indicada para:",
+    "opciones": [
+      "A. Juegos en línea sin requisitos de seguridad.",
+      "B. Entornos con requisitos normativos FIPS.",
+      "C. Transferencias de archivos sin cifrado.",
+      "D. Conexiones exclusivas por cable de red local."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-117-Pregunta: En la RFC 10024, la combinación híbrida 'SecP384r1MLKEM1024' (ECDHE P-384 + ML-KEM-1024) se reserva para:",
+    "opciones": [
+      "A. Servidores web domésticos de bajo tráfico.",
+      "B. Entornos de alta seguridad.",
+      "C. Pruebas de concepto en entornos de desarrollo local.",
+      "D. Dispositivos IoT con limitaciones extremas de memoria."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-118-Pregunta: La ventaja principal de desplegar algoritmos híbridos (clásico + poscuántico, como ECDHE + ML-KEM) durante el periodo de transición es que:",
+    "opciones": [
+      "A. Reducen el tamaño de las cabeceras HTTP.",
+      "B. Combinan dos secretos; si uno de los algoritmos sigue siendo seguro, el acuerdo de claves permanece protegido.",
+      "C. Eliminan la necesidad de usar memoria RAM en los servidores.",
+      "D. Impiden la ejecución de pruebas DAST en QA."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-119-Pregunta: Una limitación o peaje computacional asociado al uso de esquemas híbridos poscuánticos en TLS es:",
+    "opciones": [
+      "A. Que no permiten cifrar datos en tránsito mediante AES.",
+      "B. El mayor tamaño de los mensajes de negociación iniciales y el incremento del trabajo de procesamiento.",
+      "C. Que solo funcionan en sistemas operativos de 16 bits.",
+      "D. Que obligan a revocar todos los certificados X.509 anteriores a 2020."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-120-Pregunta: En la evolución de la criptografía hacia 2027 y años posteriores, tras proteger el intercambio de claves con ML-KEM, la siguiente prioridad es:",
+    "opciones": [
+      "A. Migrar la autenticación de servidores y las firmas digitales a estándares poscuánticos (PQC).",
+      "B. Volver al uso del cifrador de Polybios.",
+      "C. Desactivar los protocolos HTTPS en Internet.",
+      "D. Bancorrotar las Autoridades de Certificación."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-121-Pregunta: El concepto de 'Criptoagilidad' en las organizaciones hace referencia a:",
+    "opciones": [
+      "A. La velocidad a la que un atacante adivina contraseñas débiles.",
+      "B. La capacidad de los sistemas para identificar qué algoritmos utilizan y sustituirlos rápidamente sin tener que reconstruir la aplicación.",
+      "C. El número de transacciones por segundo de un cortafuegos WAF.",
+      "D. La frecuencia de actualización del sistema operativo."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-122-Pregunta: ¿Qué representa las siglas CBOM en los planes de migración criptográfica?",
+    "opciones": [
+      "A. Cryptographic Bill of Materials (Inventario Criptográfico Automatizado).",
+      "B. Central Base of Object Models.",
+      "C. Certificate Backup Operation Method.",
+      "D. Cipher Block Order Mode."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-123-Pregunta: Dos de los algoritmos de firma digital poscuántica (PQC) citados en la hoja de ruta tecnológica son:",
+    "opciones": [
+      "A. ML-DSA y SLH-DSA.",
+      "B. MD5 y SHA1.",
+      "C. DES y 3DES.",
+      "D. Polybios y César."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-124-Pregunta: La tecnología criptográfica avanzada que permite procesar y realizar operaciones matemáticas sobre datos cifrados sin necesidad de desencriptarlos previamente es:",
+    "opciones": [
+      "A. Cifrado Homomórfico.",
+      "B. Transposición Columnar con Clave.",
+      "C. Fuerza bruta con diccionarios.",
+      "D. Protocolo Telnet."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-125-Pregunta: La tecnología criptográfica que permite a una parte demostrar a otra que una afirmación es cierta sin revelar ninguna otra información adicional se denomina:",
+    "opciones": [
+      "A. Pruebas de Conocimiento Cero (Zero-Knowledge Proofs).",
+      "B. Cifrado simétrico AES en modo GCM.",
+      "C. Auditoría de código con FindSecBugs.",
+      "D. Escaneo de red con OpenVAS."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-126-Pregunta: Si un atacante modifica el valor de una transacción financiera mientras esta viaja por la red, ¿qué principio del triángulo CIA ha violado?",
+    "opciones": [
+      "A. Confidencialidad.",
+      "B. Integridad.",
+      "C. Disponibilidad.",
+      "D. Trazabilidad."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-127-Pregunta: Si un atacante realiza un sniffing no autorizado y lee las credenciales que viajaban sin cifrar por la red, ¿qué principio de seguridad se ha vulnerado?",
+    "opciones": [
+      "A. Confidencialidad.",
+      "B. Integridad.",
+      "C. Disponibilidad.",
+      "D. No Repudio."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-128-Pregunta: Si una empresa necesita garantizar que un cliente no pueda negar haber firmado un contrato digital enviado por la red, debe implementar:",
+    "opciones": [
+      "A. Firma digital basada en criptografía asimétrica e infraestructura PKI (No Repudio).",
+      "B. Un cifrado de transposición simple.",
+      "C. Un análisis estático de código con FindSecBugs.",
+      "D. Un cortafuegos ModSecurity WAF."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-129-Pregunta: En la relación entre las barreras de seguridad lógica y la Criptografía, la criptografía actúa como:",
+    "opciones": [
+      "A. Un sustituto completo del sistema operativo.",
+      "B. Una barrera defensiva en profundidad que protege la información en caso de que se superen los controles de acceso.",
+      "C. Un mecanismo exclusivamente físico de protección de servidores.",
+      "D. Un sustituto del cortafuegos de red."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-130-Pregunta: ¿Por qué la Criptografía no puede garantizar por sí misma la Disponibilidad de un sistema?",
+    "opciones": [
+      "A. Porque no utiliza claves de cifrado de 256 bits.",
+      "B. Porque si un atacante destruye el soporte físico o bloquea el canal de comunicación (DoS), los datos cifrados no estarán accesibles.",
+      "C. Porque los certificados X.509 caducan anualmente.",
+      "D. Porque los navegadores web bloquean el tráfico cifrado."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-131-Pregunta: En una comunicación mediante firma digital, si el hash calculado por el receptor NO coincide con el hash descifrado de la firma, se concluye que:",
+    "opciones": [
+      "A. El mensaje es completamente válido e inalterado.",
+      "B. El mensaje ha sido modificado durante la transmisión o la firma fue generada con una clave privada distinta.",
+      "C. La Autoridad Certificadora ha renovado sus claves.",
+      "D. El navegador ha activado el protocolo TLS 1.3."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-132-Pregunta: ¿Cuál es el rol de la Autoridad de Certificación (CA) en la prevención del ataque Man-in-the-Middle durante el intercambio de clave pública?",
+    "opciones": [
+      "A. Descifrar el mensaje confidencial antes de entregarlo al receptor.",
+      "B. Garantizar mediante su firma digital que una clave pública pertenece legítimamente a la entidad identificada en el certificado.",
+      "C. Bloquear la dirección IP del atacante mediante reglas de cortafuegos.",
+      "D. Guardar las contraseñas de los usuarios en texto plano."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-133-Pregunta: ¿Qué diferencia existe entre un certificado digital revocable y uno caducado?",
+    "opciones": [
+      "A. El caducado ha superado su período de validez; el revocado ha sido anulado explícitamente antes de su caducidad por sospecha de compromiso de clave o cambio de datos.",
+      "B. El revocado es siempre válido para navegar por la web.",
+      "C. El caducado se firma con clave simétrica y el revocado con asimétrica.",
+      "D. No existe ninguna diferencia entre ambos términos."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-134-Pregunta: ¿Qué protocolo de aplicación seguro utiliza SSL/TLS en la capa inferior para cifrar las comunicaciones web habitualmente en el puerto 443?",
+    "opciones": [
+      "A. HTTP de texto claro.",
+      "B. HTTPS (Hypertext Transfer Protocol Secure).",
+      "C. FTP anónimo.",
+      "D. Telnet remoto."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-135-Pregunta: ¿En qué se diferencia el algoritmo RSA frente al algoritmo Diffie-Hellman efímero (ECDHE) en protocolos de transporte?",
+    "opciones": [
+      "A. RSA se basa en cifrado simétrico y ECDHE en funciones hash.",
+      "B. RSA clásico se utilizaba para cifrar y transmitir directamente la clave de sesión; ECDHE permite derivar un secreto compartido efímero en ambos extremos sin enviarlo.",
+      "C. ECDHE no utiliza matemáticas y RSA sí.",
+      "D. RSA solo se utiliza en redes de área local sin Internet."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-136-Pregunta: En la tabla comparativa entre criptografía simétrica y asimétrica, ¿cuál es el uso principal del cifrado simétrico?",
+    "opciones": [
+      "A. Intercambio inicial de claves y firma digital.",
+      "B. Cifrado eficiente de grandes volúmenes de datos almacenados o en tránsito.",
+      "C. Emisión de certificados digitales X.509.",
+      "D. Identificación biométrica de usuarios."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-137-Pregunta: En la misma tabla comparativa, ¿cuál es el uso principal de la criptografía asimétrica?",
+    "opciones": [
+      "A. Cifrado masivo de discos duros de varios terabytes.",
+      "B. Intercambio seguro de claves simétricas y generación de firmas digitales.",
+      "C. Compresión de archivos zip.",
+      "D. Limpieza de archivos temporales del sistema operativo."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-138-Pregunta: El estándar de cifrado simétrico actual recomendado para la protección de datos por su alta seguridad (longitud de clave de 256 bits) es:",
+    "opciones": [
+      "A. DES (56 bits).",
+      "B. AES (Advanced Encryption Standard).",
+      "C. Polybios.",
+      "D. César."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-139-Pregunta: Entre los estándares de cifrado asimétrico tradicionales explicados en la materia se incluyen:",
+    "opciones": [
+      "A. DES, TripleDES y AES.",
+      "B. RSA, Diffie-Hellman y DSA.",
+      "C. MD5, SHA1 y SHA256.",
+      "D. SSH, SSL y HTTPS."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-140-Pregunta: ¿Qué herramienta de auditoría de seguridad se menciona para la captura de contraseñas de red mediante la interceptación de tráfico (sniffing)?",
+    "opciones": [
+      "A. Aircrack-ng / Wireshark.",
+      "B. Eclipse IDE.",
+      "C. Jenkins.",
+      "D. JFrog Artifactory."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-141-Pregunta: El ataque mediante el cual un atacante redirige el tráfico web alterando el archivo hosts o el servidor DNS para llevar a la víctima a una web falsa se llama:",
+    "opciones": [
+      "A. Phishing.",
+      "B. Pharming.",
+      "C. Dumpster Diving.",
+      "D. Shoulder Surfing."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-142-Pregunta: En la firma digital, si un tercero intenta alterar el contenido del documento firmado en tránsito:",
+    "opciones": [
+      "A. La firma digital se modifica automáticamente para coincidir con el nuevo texto.",
+      "B. El resumen hash recalculado por el receptor será diferente del hash descifrado de la firma, detectando la manipulación.",
+      "C. El navegador enviará una contraseña al atacante.",
+      "D. El certificado X.509 de la CA se renovará solo."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-143-Pregunta: ¿Qué elemento del certificado X.509 permite verificar que el certificado no ha sido alterado ni falsificado?",
+    "opciones": [
+      "A. La firma digital de la Autoridad de Certificación (CA) impresa en el certificado.",
+      "B. El nombre de usuario en texto claro.",
+      "C. La dirección IP del cliente web.",
+      "D. El puerto TCP utilizado por el navegador."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-144-Pregunta: En TLS 1.3, el mecanismo 'HKDF' corresponde a:",
+    "opciones": [
+      "A. HMAC-based Extract-and-Expand Key Derivation Function (Función de derivación de claves basada en HMAC).",
+      "B. Host Key Data Filter.",
+      "C. Hypertext Kernel Data Format.",
+      "D. Hash Key Distribution Framework."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-145-Pregunta: Si un servidor web utiliza un certificado autofirmado (no emitido por una CA raíz confiable), ¿qué advertencia muestra habitualmente el navegador?",
+    "opciones": [
+      "A. Adverte de que la conexión no es de confianza porque la entidad emisora no es reconocida por el navegador.",
+      "B. Informa de que el procesador está sobrecalentado.",
+      "C. Muestra una alerta de virus en el disco duro local.",
+      "D. Desconecta el cable de red del usuario."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-146-Pregunta: ¿Qué diferencia existe entre confidencialidad e integridad en el contexto de los canales TLS?",
+    "opciones": [
+      "A. La confidencialidad impide que terceros lean el contenido (cifrado); la integridad impide o detecta que terceros modifiquen el contenido (MAC/AEAD).",
+      "B. La confidencialidad borra los mensajes y la integridad los duplica.",
+      "C. La integridad es física y la confidencialidad es administrativa.",
+      "D. No hay diferencia, significan lo mismo en seguridad."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-147-Pregunta: ¿Qué componente de una PKI es responsable de publicar la lista de certificados revocados (CRL)?",
+    "opciones": [
+      "A. La Autoridad Certificadora (CA) o el servidor de repositorio de la PKI.",
+      "B. El navegador cliente.",
+      "C. El entorno de desarrollo Eclipse.",
+      "D. El contenedor Docker de QA."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-148-Pregunta: En la hoja de ruta de la criptografía poscuántica, la fase de 'Despliegue Híbrido' previa a la era predominantemente poscuántica comprende:",
+    "opciones": [
+      "A. El uso simultáneo de TLS híbrido (ECDHE + ML-KEM) y la migración gradual de servicios y PKIs.",
+      "B. El abandono del cifrado en Internet durante 5 años.",
+      "C. La sustitución de todos los ordenadores del planeta.",
+      "D. El retorno a la transmisión de datos por correo postal."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-149-Pregunta: ¿Cuál de los siguientes no es un servicio provisto por una PKI completa con sus mecanismos?",
+    "opciones": [
+      "A. Autenticación mediante certificados digitales.",
+      "B. Confidencialidad mediante cifrado asimétrico/simétrico.",
+      "C. Prevención de desastres naturales como terremotos o inundaciones en la sede.",
+      "D. Integridad y No Repudio mediante firmas digitales."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SegSisSw-T2-150-Pregunta: En síntesis, ¿cuál es la ventaja clave del paso de la criptografía clásica a la criptografía poscuántica híbrida (ECDHE + ML-KEM) en TLS?",
+    "opciones": [
+      "A. Proteger las comunicaciones tanto frente al robo de claves pasadas (Forward Secrecy clásico) como frente al descifrado futuro por ordenadores cuánticos (HNDL).",
+      "B. Permitir conexiones a Internet sin necesidad de usar router ni proveedor de servicios.",
+      "C. Aumentar la velocidad de carga de las páginas web en un 500%.",
+      "D. Eliminar la necesidad de utilizar contraseñas de usuario."
+    ],
+    "solucion": "A"
+  }
+]
