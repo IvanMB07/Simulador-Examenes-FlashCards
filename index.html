@@ -1,42 +1,302 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Espacio Digital</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', sans-serif; height: 100vh; display: flex; background: #000; overflow: hidden; }
-        .opcion { 
-            flex: 1; display: flex; flex-direction: column; align-items: center; 
-            justify-content: center; text-decoration: none; transition: 0.6s all cubic-bezier(0.2, 1, 0.3, 1);
-            position: relative; filter: grayscale(40%);
-        }
-        .opcion:hover { flex: 1.4; filter: grayscale(0%); }
-        .estudio { background: #1a1a1a; border-right: 1px solid #333; }
-        .propios { background: #2c1e1a; } /* Tono más cálido para lo hogareño */
-        
-        h2 { color: white; font-size: 3.5rem; letter-spacing: 5px; text-transform: uppercase; z-index: 2; }
-        span { color: rgba(255,255,255,0.5); margin-top: 15px; z-index: 2; font-weight: 300; }
-        
-        .opcion::after {
-            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
-            opacity: 0; transition: 0.5s;
-        }
-        .opcion:hover::after { opacity: 1; }
 
-        @media (max-width: 768px) { body { flex-direction: column; } .opcion { width: 100%; } }
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            height: 100vh;
+            display: flex;
+            background: #000;
+            overflow: hidden;
+        }
+
+        .opcion {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: 0.6s all cubic-bezier(0.2, 1, 0.3, 1);
+            position: relative;
+            filter: grayscale(40%);
+            cursor: pointer;
+        }
+
+        .opcion:hover {
+            flex: 1.4;
+            filter: grayscale(0%);
+        }
+
+        .estudio {
+            background: #1a1a1a;
+            border-right: 1px solid #333;
+        }
+
+        .propios {
+            background: #2c1e1a;
+            border: none;
+        }
+
+        h2 {
+            color: white;
+            font-size: 3.5rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            z-index: 2;
+        }
+
+        span {
+            color: rgba(255,255,255,0.5);
+            margin-top: 15px;
+            z-index: 2;
+            font-weight: 300;
+        }
+
+        .opcion::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+            opacity: 0;
+            transition: 0.5s;
+        }
+
+        .opcion:hover::after {
+            opacity: 1;
+        }
+
+        /* Modal de contraseña */
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(8px);
+            z-index: 10;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal.activo {
+            display: flex;
+        }
+
+        .modal-contenido {
+            width: 100%;
+            max-width: 380px;
+            background: #1c1c1c;
+            border: 1px solid #444;
+            border-radius: 16px;
+            padding: 35px;
+            text-align: center;
+            animation: aparecer 0.3s ease;
+        }
+
+        .modal-contenido h3 {
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .modal-contenido p {
+            color: #999;
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+        }
+
+        .modal-contenido input {
+            width: 100%;
+            padding: 14px;
+            border-radius: 8px;
+            border: 1px solid #444;
+            background: #111;
+            color: white;
+            font-size: 1.1rem;
+            text-align: center;
+            letter-spacing: 5px;
+            outline: none;
+            margin-bottom: 15px;
+        }
+
+        .modal-contenido input:focus {
+            border-color: #b77b5c;
+        }
+
+        .botones {
+            display: flex;
+            gap: 10px;
+        }
+
+        .botones button {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: 0.2s;
+        }
+
+        .btn-acceder {
+            background: #a66b4d;
+            color: white;
+        }
+
+        .btn-acceder:hover {
+            background: #bd8060;
+        }
+
+        .btn-cancelar {
+            background: #333;
+            color: white;
+        }
+
+        .btn-cancelar:hover {
+            background: #444;
+        }
+
+        .error {
+            color: #ff6b6b;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+            display: none;
+        }
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            .opcion {
+                width: 100%;
+            }
+
+            h2 {
+                font-size: 2.5rem;
+            }
+        }
     </style>
 </head>
+
 <body>
+
     <a href="Estudio/index.html" class="opcion estudio">
         <h2>Estudio</h2>
         <span>Simuladores y Exámenes</span>
     </a>
-    <a href="Propios/index.html" class="opcion propios">
+
+    <button class="opcion propios" onclick="abrirModal()">
         <h2>Propios</h2>
         <span>Proyectos Personales</span>
-    </a>
+    </button>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-contenido">
+            <h3>Acceso privado</h3>
+            <p>Introduce la contraseña para acceder a tus proyectos personales.</p>
+
+            <form onsubmit="comprobarPassword(event)">
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Contraseña"
+                    autocomplete="off"
+                    autofocus
+                    required
+                >
+
+                <div class="error" id="error">
+                    Contraseña incorrecta. Inténtalo de nuevo.
+                </div>
+
+                <div class="botones">
+                    <button type="button" class="btn-cancelar" onclick="cerrarModal()">
+                        Cancelar
+                    </button>
+
+                    <button type="submit" class="btn-acceder">
+                        Acceder
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const PASSWORD = "88632005";
+
+        function abrirModal() {
+            const modal = document.getElementById("modal");
+            modal.classList.add("activo");
+
+            document.getElementById("password").value = "";
+            document.getElementById("error").style.display = "none";
+
+            setTimeout(() => {
+                document.getElementById("password").focus();
+            }, 100);
+        }
+
+        function cerrarModal() {
+            document.getElementById("modal").classList.remove("activo");
+        }
+
+        function comprobarPassword(event) {
+            event.preventDefault();
+
+            const password = document.getElementById("password").value;
+
+            if (password === PASSWORD) {
+                window.location.href = "Propios/index.html";
+            } else {
+                document.getElementById("error").style.display = "block";
+                document.getElementById("password").value = "";
+                document.getElementById("password").focus();
+            }
+        }
+
+        // Cerrar al pulsar fuera del modal
+        document.getElementById("modal").addEventListener("click", function(event) {
+            if (event.target === this) {
+                cerrarModal();
+            }
+        });
+
+        // Cerrar con Escape
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "Escape") {
+                cerrarModal();
+            }
+        });
+    </script>
+
 </body>
 </html>
