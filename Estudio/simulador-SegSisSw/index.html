@@ -3,9 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#0b1020">
+    <meta name="description" content="Simulador de exámenes de Seguridad de Sistemas Software.">
+    <meta name="color-scheme" content="dark">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>Simulador de Examen</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 </head>
 
 <body>
@@ -25,6 +31,10 @@
             </div>
         </div>
 
+        <div id="avisoSesion" class="aviso-sesion oculto" role="status" aria-live="polite">
+            <div><strong>Hay una sesión sin terminar</strong><p id="avisoSesionTexto">Puedes continuar donde lo dejaste.</p></div>
+            <div class="aviso-sesion-acciones"><button type="button" class="btn-sesion-continuar" id="btnReanudarSesion">Continuar</button><button type="button" class="btn-sesion-descartar" id="btnDescartarSesion">Descartar</button></div>
+        </div>
         <div id="seleccionModo">
             <div class="resultados">
                 <div class="titulo-resultados">Elige modo</div>
@@ -48,6 +58,40 @@
                     </div>
                     <div class="perfil-stats" id="perfilStats">
                         Cargando estadísticas...
+                    </div>
+                    <section class="cloud-panel" id="cloudLoginPanel" aria-labelledby="cloudTitle">
+                        <div class="cloud-panel-head">
+                            <div>
+                                <div class="config-label" id="cloudTitle">☁️ Sincronizar móvil y ordenador</div>
+                                <div class="config-description">Usa el mismo nombre y código personal en tus dispositivos. No necesitas correo.</div>
+                            </div>
+                            <span id="cloudBadge" class="cloud-badge">Solo en este dispositivo</span>
+                        </div>
+                        <label class="cloud-field">Nombre de usuario
+                            <input id="cloudName" type="text" autocomplete="username" maxlength="24" placeholder="Por ejemplo: ivan" autocapitalize="none" spellcheck="false">
+                        </label>
+                        <label class="cloud-field">Código personal (mínimo 8 caracteres)
+                            <input id="cloudPin" type="password" autocomplete="current-password" minlength="8" maxlength="72" placeholder="Elige un código que recuerdes">
+                        </label>
+                        <div class="cloud-actions">
+                            <button type="button" class="btn-perfil" id="btnCloudCreate">Crear cuenta</button>
+                            <button type="button" class="btn-perfil" id="btnCloudLogin">Entrar</button>
+                            <button type="button" class="btn-perfil danger" id="btnCloudLogout" hidden>Cerrar sesión</button>
+                        </div>
+                        <div id="cloudIdentity" class="cloud-identity" aria-live="polite"></div>
+                        <p id="cloudStatus" class="cloud-status" role="status" aria-live="polite">Sincronización pendiente de configurar. El simulador sigue funcionando en local.</p>
+                    </section>
+                    <div class="config-option backup-panel" style="margin-top:12px;">
+                        <div style="flex:1;min-width:0;">
+                            <div class="config-label">Progreso y copia de seguridad</div>
+                            <div class="config-description">Guarda perfiles, configuración, fallos, historial y sesiones para trasladarlos entre dispositivos.</div>
+                            <div class="backup-actions">
+                                <button type="button" class="btn-perfil" id="btnExportarTodo">Exportar todo</button>
+                                <button type="button" class="btn-perfil" id="btnImportarTodo">Importar copia</button>
+                                <input type="file" id="importarCopiaCompleta" accept="application/json,.json" hidden>
+                            </div>
+                            <div class="backup-status" id="backupStatus" role="status" aria-live="polite"></div>
+                        </div>
                     </div>
                 </div>
 
@@ -140,8 +184,8 @@
         <div id="examen" class="oculto">
             <div class="pregunta-contenedor">
                 <div class="pregunta-numero" id="preguntaNumero"></div>
-                <div class="pregunta-texto" id="preguntaTexto"></div>
-                <div class="opciones" id="opcionesContenedor"></div>
+                <div class="pregunta-texto" id="preguntaTexto" tabindex="-1"></div>
+                <div class="opciones" id="opcionesContenedor" role="group" aria-label="Opciones de respuesta"></div>
             </div>
 
             <div class="atajos-teclado">
@@ -187,7 +231,11 @@
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="cloud-config.js"></script>
+    <script src="cloud-sync.js"></script>
     <script src="script.js"></script>
+    <script>if ("serviceWorker" in navigator && location.protocol !== "file:") { window.addEventListener("load", () => navigator.serviceWorker.register("./sw.js").catch(err => console.warn("PWA no disponible:", err))); }</script>
 </body>
 
 </html>

@@ -1,0 +1,12 @@
+{
+  "name": "Simulador SegSisSw",
+  "short_name": "SegSisSw",
+  "description": "Simulador de exámenes de Seguridad de Sistemas Software",
+  "lang": "es",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0b1020",
+  "theme_color": "#0b1020",
+  "icons": []
+}

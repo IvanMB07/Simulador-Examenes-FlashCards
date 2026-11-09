@@ -1,0 +1,29 @@
+SIMULADOR SEGSISSW — EDICIÓN MEJORADA (BASE LOCAL)
+
+CONTENIDO
+- index.html, script.js, styles.css: aplicación principal.
+- manifest.webmanifest y sw.js: base PWA e infraestructura de caché del navegador.
+- cloud-sync.js y cloud-config.js: sincronización entre dispositivos mediante nombre + código personal.
+- supabase-setup.sql y CONFIGURACION-NUBE.md: creación de la tabla segura y pasos de conexión.
+
+PARA USARLO
+1. Descomprime todos los archivos en la misma carpeta.
+2. Mantén preguntas.json en esa misma carpeta si ya dispones de él. Si no está, el simulador intentará cargar la copia remota configurada en script.js.
+3. Para que el modo PWA y el Service Worker funcionen, publica la carpeta en un hosting HTTPS (por ejemplo, GitHub Pages). Abrir index.html mediante file:// no permite registrar el Service Worker.
+4. En móvil, abre la URL en el navegador. Desde el menú del navegador puedes añadirla a la pantalla de inicio cuando el hosting y el navegador lo permitan.
+
+MEJORAS INCLUIDAS EN ESTA ENTREGA
+- Diseño responsive con controles de navegación adaptados a móvil.
+- Recuperación de sesión local tras recargar o cerrar el navegador.
+- Persistencia local de respuestas, pregunta actual y tiempo transcurrido.
+- Copia de seguridad completa de la configuración, perfiles, fallos, historial y sesión guardada.
+- Importación de esa copia en otro navegador/dispositivo.
+- Manifest y Service Worker para cachear la aplicación y las preguntas después de una carga correcta.
+
+IMPORTANTE SOBRE LA SINCRONIZACIÓN
+Esta edición todavía no sincroniza automáticamente entre dispositivos. La exportación/importación permite trasladar el progreso manualmente. La sincronización automática requiere configurar un backend en la nube y un acceso con nombre + código personal; no basta con guardar un nombre en el navegador. No se incluye una falsa conexión cloud ni se afirma que esté activa.
+
+VALIDACIÓN REALIZADA
+- `node --check` en script.js, cloud-sync.js, cloud-config.js y sw.js: sintaxis correcta.
+- Se ha validado el JSON del manifest y la presencia de los controles de acceso cloud en el HTML.
+- No se ha podido probar la sincronización real ni E2E en dos dispositivos porque aún no hay un proyecto Supabase conectado.

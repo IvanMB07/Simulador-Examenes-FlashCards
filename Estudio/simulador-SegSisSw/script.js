@@ -250,9 +250,55 @@ class ConfiguracionApp {
 
 const configuracion = new ConfiguracionApp();
 
+
+// Sesiones: persistencia local por perfil y recuperación tras recargar/cerrar.
+function obtenerClaveSesion() {
+    return `simuladorSesion:v2:${configuracion.get('perfilActual') || 'default'}`;
+}
+function guardarSesionActiva() {
+    if (!app || !app.preguntas?.length || app.finalizado) return;
+    try {
+        localStorage.setItem(obtenerClaveSesion(), JSON.stringify({
+            version: 2, modo: app.modo, preguntas: app.preguntas,
+            preguntaActual: app.preguntaActual, respuestas: app.respuestas,
+            elapsedMs: Math.max(0, Date.now() - app.tiempoInicio),
+            updatedAt: new Date().toISOString()
+        }));
+    } catch (error) { console.warn('No se pudo guardar la sesión:', error); }
+}
+function obtenerSesionGuardada() {
+    try {
+        const raw = localStorage.getItem(obtenerClaveSesion());
+        if (!raw) return null;
+        const s = JSON.parse(raw);
+        if (s?.version !== 2 || !Array.isArray(s.preguntas) || !s.preguntas.length ||
+            !['practica','examen','fallos'].includes(s.modo)) {
+            localStorage.removeItem(obtenerClaveSesion()); return null;
+        }
+        return s;
+    } catch (error) { console.warn('Sesión guardada inválida:', error); return null; }
+}
+function descartarSesionGuardada() {
+    try { localStorage.removeItem(obtenerClaveSesion()); } catch (_) {}
+    document.getElementById('avisoSesion')?.classList.add('oculto');
+}
+function mostrarAvisoSesion(s) {
+    const aviso = document.getElementById('avisoSesion');
+    if (!aviso || !s) return;
+    const modo = s.modo === 'examen' ? 'Examen' : s.modo === 'fallos' ? 'Test de fallos' : 'Práctica';
+    const respondidas = Object.keys(s.respuestas || {}).length;
+    const fecha = s.updatedAt ? new Date(s.updatedAt).toLocaleString() : '';
+    document.getElementById('avisoSesionTexto').textContent = `${modo} · ${respondidas}/${s.preguntas.length} respondidas${fecha ? ` · Guardado: ${fecha}` : ''}`;
+    aviso.classList.remove('oculto');
+    document.getElementById('btnReanudarSesion').onclick = () => iniciarModo(s.modo, s);
+    document.getElementById('btnDescartarSesion').onclick = descartarSesionGuardada;
+}
+
 class SimuladorExamen {
-    constructor(modo) {
+    constructor(modo, sesionGuardada = null) {
         this.modo = modo;
+        this.sesionGuardada = sesionGuardada;
+        this.finalizado = false;
         this.preguntas = [];
         this.preguntaActual = 0;
         this.respuestas = {};
@@ -278,7 +324,13 @@ class SimuladorExamen {
             gestorHistorial.registrarPreguntas(this.preguntas);
         }
 
-        if (this.modo === 'examen') {
+        if (this.sesionGuardada) {
+            this.preguntas = this.sesionGuardada.preguntas;
+            this.respuestas = this.sesionGuardada.respuestas || {};
+            this.preguntaActual = Math.min(Math.max(0, Number(this.sesionGuardada.preguntaActual) || 0), this.preguntas.length - 1);
+            this.tiempoInicio = Date.now() - Math.max(0, Number(this.sesionGuardada.elapsedMs) || 0);
+            this.sesionGuardada = null;
+        } else if (this.modo === 'examen') {
             this.preguntas = this.seleccionarPreguntasExamen();
             if (!this.preguntas || this.preguntas.length < TOTAL_PREGUNTAS_EXAMEN) {
                 alert('No hay suficientes preguntas para generar este parcial de examen.');
@@ -306,11 +358,12 @@ class SimuladorExamen {
                 return;
             }
         }
-        this.respuestas = {};
+        if (!this.respuestas) this.respuestas = {};
         this.sinResponder = new Set();
-        this.preguntaActual = 0;
-        this.tiempoInicio = Date.now();
+        if (!this.tiempoInicio || this.tiempoInicio > Date.now()) this.tiempoInicio = Date.now();
+        if (!this.preguntas.length) return;
         this.mostrarPregunta();
+        guardarSesionActiva();
         this.iniciarTiempo();
         this.iniciarNavegacionTeclado();
     }
@@ -1027,12 +1080,14 @@ class SimuladorExamen {
             }
         }
         this.mostrarPregunta();
+        guardarSesionActiva();
     }
 
     siguiente() {
         if (this.preguntaActual < this.preguntas.length - 1) {
             this.preguntaActual++;
             this.mostrarPregunta();
+            guardarSesionActiva();
         }
     }
 
@@ -1040,6 +1095,7 @@ class SimuladorExamen {
         if (this.preguntaActual > 0) {
             this.preguntaActual--;
             this.mostrarPregunta();
+            guardarSesionActiva();
         }
     }
 
@@ -1063,6 +1119,11 @@ class SimuladorExamen {
     }
 
     mostrarResultados() {
+        if (this.finalizado) return;
+        this.finalizado = true;
+        this.detenerTiempo();
+        if (this.keyboardHandler) { document.removeEventListener('keydown', this.keyboardHandler); this.keyboardHandler = null; }
+        try { localStorage.removeItem(obtenerClaveSesion()); } catch (_) {}
         let correctas = 0;
         this.erroresDelTest = [];
 
@@ -1121,14 +1182,12 @@ class SimuladorExamen {
 
     mostrarDetalleErrores() {
         const contenedor = document.getElementById('erroresDetalle');
+        contenedor.replaceChildren();
 
         const preguntasNoRespondidas = [];
         this.preguntas.forEach((pregunta, indice) => {
-            if (!this.respuestas.hasOwnProperty(indice)) {
-                preguntasNoRespondidas.push({
-                    pregunta: pregunta.cuestion,
-                    indice: indice
-                });
+            if (!Object.prototype.hasOwnProperty.call(this.respuestas, indice)) {
+                preguntasNoRespondidas.push({ pregunta: pregunta.cuestion, indice });
             }
         });
 
@@ -1136,52 +1195,65 @@ class SimuladorExamen {
             contenedor.classList.add('oculto');
             return;
         }
-
         contenedor.classList.remove('oculto');
-        let html = '';
+
+        const crearTitulo = (texto, color) => {
+            const titulo = document.createElement('h3');
+            titulo.textContent = texto;
+            titulo.style.color = color;
+            titulo.style.margin = '12px 0 15px';
+            contenedor.appendChild(titulo);
+        };
+        const crearItem = (pregunta, respuestaUsuario, respuestaCorrecta, indice, sinResponder = false) => {
+            const item = document.createElement('article');
+            item.className = 'error-item';
+            if (sinResponder) item.style.borderLeftColor = '#8b5cf6';
+
+            const textoPregunta = document.createElement('div');
+            textoPregunta.className = 'error-pregunta';
+            textoPregunta.textContent = `${indice + 1}. ${pregunta}`;
+            item.appendChild(textoPregunta);
+
+            if (respuestaUsuario !== null) {
+                const tuRespuesta = document.createElement('div');
+                tuRespuesta.className = 'error-respuesta respuesta-tu';
+                tuRespuesta.textContent = `Tu respuesta: ${respuestaUsuario}`;
+                item.appendChild(tuRespuesta);
+            }
+
+            const correcta = document.createElement('div');
+            correcta.className = 'error-respuesta respuesta-correcta';
+            correcta.textContent = `Respuesta correcta: ${respuestaCorrecta}`;
+            item.appendChild(correcta);
+            contenedor.appendChild(item);
+        };
 
         if (this.erroresDelTest.length > 0) {
-            html += '<h3 style="color: #ef4444; margin-bottom: 15px;">📋 Preguntas Falladas</h3>';
+            crearTitulo('Preguntas falladas', '#ff7185');
             this.erroresDelTest.forEach((error, index) => {
-                html += `
-                    <div class="error-item">
-                        <div class="error-pregunta">${index + 1}. ${error.pregunta}</div>
-                        <div class="error-respuesta respuesta-tu">
-                            ❌ Tu respuesta: ${error.respuestaUsuario}
-                        </div>
-                        <div class="error-respuesta respuesta-correcta">
-                            ✓ Respuesta correcta: ${error.respuestaCorrecta}
-                        </div>
-                    </div>
-                `;
+                crearItem(error.pregunta, error.respuestaUsuario, error.respuestaCorrecta, index);
             });
         }
 
         if (preguntasNoRespondidas.length > 0) {
-            if (this.erroresDelTest.length > 0) {
-                html += '<hr style="border: none; border-top: 1px solid #3a3a3a; margin: 20px 0;">';
-            }
-            html += '<h3 style="color: #8b5cf6; margin-bottom: 15px; margin-top: 20px;">⭕ Preguntas No Respondidas</h3>';
-            html += '<div style="font-size: 12px; color: #888; margin-bottom: 15px;">Se han agregado al test de fallos para que las repases</div>';
-
+            crearTitulo('Preguntas sin responder', '#a78bfa');
+            const ayuda = document.createElement('p');
+            ayuda.className = 'config-description';
+            ayuda.textContent = 'Se han añadido al test de fallos para que puedas repasarlas.';
+            contenedor.appendChild(ayuda);
             preguntasNoRespondidas.forEach((item, index) => {
-                const respuestaCorrecta = this.preguntas[item.indice].opciones[this.obtenerIndiceCorrecto(this.preguntas[item.indice])];
-                html += `
-                    <div class="error-item" style="border-left-color: #8b5cf6;">
-                        <div class="error-pregunta">⭕ ${index + 1}. ${item.pregunta}</div>
-                        <div class="error-respuesta respuesta-correcta">
-                            ✓ Respuesta correcta: ${respuestaCorrecta}
-                        </div>
-                    </div>
-                `;
+                const pregunta = this.preguntas[item.indice];
+                const indiceCorrecto = this.obtenerIndiceCorrecto(pregunta);
+                const respuestaCorrecta = pregunta.opciones[indiceCorrecto] ?? 'No disponible';
+                crearItem(item.pregunta, null, respuestaCorrecta, index, true);
             });
         }
-
-        contenedor.innerHTML = html;
     }
 
     reiniciar() {
+        this.finalizado = true;
         this.detenerTiempo();
+        try { localStorage.removeItem(obtenerClaveSesion()); } catch (_) {}
         if (this.keyboardHandler) {
             document.removeEventListener('keydown', this.keyboardHandler);
             this.keyboardHandler = null;
@@ -1198,6 +1270,8 @@ class SimuladorExamen {
         this.timerId = setInterval(() => {
             const ahora = Date.now();
             const transcurridoMs = ahora - this.tiempoInicio;
+            const tick = Math.floor(transcurridoMs / 5000);
+            if (tick !== this.ultimoGuardadoTick) { this.ultimoGuardadoTick = tick; guardarSesionActiva(); }
 
             if (this.modo === 'examen' && this.tiempoLimiteMs != null) {
                 const restanteMs = Math.max(0, this.tiempoLimiteMs - transcurridoMs);
@@ -1434,7 +1508,7 @@ function actualizarTemasUI() {
     actualizarDistribucion();
 }
 
-function iniciarModo(modo) {
+function iniciarModo(modo, sesionGuardada = null) {
     if (app && app.detenerTiempo) {
         app.detenerTiempo();
     }
@@ -1449,7 +1523,9 @@ function iniciarModo(modo) {
 
     document.getElementById('modoActual').textContent = textoModo;
 
-    app = new SimuladorExamen(modo);
+    document.getElementById('avisoSesion')?.classList.add('oculto');
+    app = new SimuladorExamen(modo, sesionGuardada);
+    guardarSesionActiva();
 }
 
 function cargarPerfiles() {
@@ -1501,6 +1577,14 @@ function crearNuevoPerfil() {
 }
 
 function cambiarPerfil() {
+    if (app && !app.finalizado) {
+        if (!confirm('Cambiar de perfil guardará la sesión actual. ¿Continuar?')) { cargarPerfiles(); return; }
+        guardarSesionActiva(); app.detenerTiempo();
+        if (app.keyboardHandler) document.removeEventListener('keydown', app.keyboardHandler);
+        app = null;
+        document.getElementById('examen')?.classList.add('oculto');
+        document.getElementById('seleccionModo')?.classList.remove('oculto');
+    }
     const select = document.getElementById('perfilSelect');
     if (!select) return;
     configuracion.set('perfilActual', select.value);
@@ -1548,7 +1632,74 @@ function actualizarEstadisticasPerfil() {
     statsDiv.textContent = texto;
 }
 
+
+
+// Copia completa portable: permite mover el progreso entre navegadores sin cuenta.
+// La copia contiene únicamente datos locales del simulador y se genera bajo demanda.
+function exportarCopiaCompleta() {
+    const datos = {};
+    const prefijos = ['preguntasFalladas:', 'historialPreguntas:', 'simuladorSesion:'];
+    for (let i = 0; i < localStorage.length; i++) {
+        const clave = localStorage.key(i);
+        if (clave === 'configApp' || prefijos.some(p => clave.startsWith(p))) {
+            try { datos[clave] = JSON.parse(localStorage.getItem(clave)); }
+            catch (_) { datos[clave] = localStorage.getItem(clave); }
+        }
+    }
+    const copia = { app: 'SegSisSw-Simulador', schemaVersion: 1, exportedAt: new Date().toISOString(), data: datos };
+    const blob = new Blob([JSON.stringify(copia, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = `backup-segsissw-${new Date().toISOString().slice(0,10)}.json`;
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+    const status = document.getElementById('backupStatus');
+    if (status) status.textContent = 'Copia descargada. Guárdala y ábrela desde el otro dispositivo para importar tu progreso.';
+}
+
+function importarCopiaCompleta(file) {
+    if (!file) return;
+    const status = document.getElementById('backupStatus');
+    const reader = new FileReader();
+    reader.onload = () => {
+        try {
+            const copia = JSON.parse(reader.result);
+            if (copia?.app !== 'SegSisSw-Simulador' || copia?.schemaVersion !== 1 || !copia.data || typeof copia.data !== 'object') {
+                throw new Error('El archivo no es una copia válida de este simulador.');
+            }
+            const clavesPermitidas = key => key === 'configApp' ||
+                key.startsWith('preguntasFalladas:') || key.startsWith('historialPreguntas:') || key.startsWith('simuladorSesion:');
+            const entradas = Object.entries(copia.data).filter(([key]) => clavesPermitidas(key));
+            if (!entradas.length) throw new Error('La copia no contiene datos del simulador.');
+            if (!confirm(`Se van a importar ${entradas.length} elementos de datos. Los elementos con la misma clave se sustituirán en este navegador. ¿Continuar?`)) return;
+            // Si hay una sesión activa, conservarla antes de cambiar de estado.
+            if (app && !app.finalizado) { guardarSesionActiva(); app.detenerTiempo(); }
+            for (const [key, value] of entradas) localStorage.setItem(key, typeof value === 'string' ? value : JSON.stringify(value));
+            if (status) status.textContent = 'Copia importada. Recargando el simulador…';
+            setTimeout(() => location.reload(), 450);
+        } catch (error) {
+            if (status) status.textContent = error.message || 'No se pudo importar la copia.';
+            else alert(error.message || 'No se pudo importar la copia.');
+        }
+    };
+    reader.onerror = () => { if (status) status.textContent = 'No se pudo leer el archivo.'; };
+    reader.readAsText(file);
+}
+
+document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') guardarSesionActiva(); });
+window.addEventListener('pagehide', guardarSesionActiva);
+window.addEventListener('beforeunload', guardarSesionActiva);
+
 window.addEventListener('DOMContentLoaded', async () => {
+    const exportBtn = document.getElementById('btnExportarTodo');
+    const importBtn = document.getElementById('btnImportarTodo');
+    const importInput = document.getElementById('importarCopiaCompleta');
+    exportBtn?.addEventListener('click', exportarCopiaCompleta);
+    importBtn?.addEventListener('click', () => importInput?.click());
+    importInput?.addEventListener('change', event => {
+        importarCopiaCompleta(event.target.files?.[0]);
+        event.target.value = '';
+    });
     const cargaExitosa = await cargarPreguntasDesdeJSON();
 
     if (!cargaExitosa) {
@@ -1570,4 +1721,6 @@ window.addEventListener('DOMContentLoaded', async () => {
     actualizarConfigUI();
     actualizarParcialExamenUI();
     actualizarTemasUI();
+    const sesionGuardada = obtenerSesionGuardada();
+    if (sesionGuardada) mostrarAvisoSesion(sesionGuardada);
 });
