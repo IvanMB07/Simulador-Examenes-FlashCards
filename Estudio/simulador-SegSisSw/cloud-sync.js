@@ -45,6 +45,11 @@
     }
     return data;
   }
+  function snapshotsEqual(a, b) {
+    // Las claves se ordenan para comparar snapshots sin depender del orden de localStorage.
+    const normalize = value => JSON.stringify(Object.fromEntries(Object.entries(value || {}).sort(([ka], [kb]) => ka.localeCompare(kb))));
+    return normalize(a) === normalize(b);
+  }
   function applySnapshot(data) {
     applying = true;
     try {
@@ -90,16 +95,26 @@
     } catch (error) {
       console.error('Cloud sync:', error);
       status(`No se pudo sincronizar: ${error.message || 'error de conexión'}. Tus datos siguen guardados en este navegador.`, 'error');
-    } finally { syncing = false; }
+    } finally {
+      syncing = false;
+      // Si hubo más cambios mientras la petición estaba en curso, enviar el snapshot más reciente.
+      if (dirty && user && navigator.onLine) {
+        clearTimeout(syncTimer);
+        syncTimer = setTimeout(pushSnapshot, 500);
+      }
+    }
   }
   async function resolveRemoteConflict() {
     const remote = await fetchRemote();
     if (remote) {
-      applySnapshot(remote.payload);
+      const changed = !snapshotsEqual(snapshot(), remote.payload);
+      if (changed) applySnapshot(remote.payload);
       revision = remote.revision;
       lastRemoteAt = remote.updated_at;
-      status('Otro dispositivo había guardado cambios. Se ha cargado la versión más reciente de la nube. Si tenías cambios sin sincronizar, revisa el progreso.', 'error');
-      window.setTimeout(() => location.reload(), 900);
+      status(changed
+        ? 'Conflicto de sincronización: se ha descargado la última versión de la nube. La página se actualizará una sola vez.'
+        : 'Sincronización reconciliada con la nube.', 'error');
+      if (changed) window.setTimeout(() => location.reload(), 500);
     }
   }
   function schedulePush() {
@@ -116,10 +131,13 @@
     }, payload => {
       const row = payload.new;
       if (!row || row.revision <= revision || dirty) return;
-      applySnapshot(row.payload);
+      const changed = !snapshotsEqual(snapshot(), row.payload);
       revision = row.revision; lastRemoteAt = row.updated_at;
-      status('Progreso actualizado desde el otro dispositivo. Recargando…', 'ok');
-      setTimeout(() => location.reload(), 700);
+      if (!changed) { status('Sincronizado con el otro dispositivo.', 'ok'); return; }
+      applySnapshot(row.payload);
+      status('Cambios recibidos del otro dispositivo. Actualizando una sola vez…', 'ok');
+      // Tras recargar, restoreSession compara snapshots y no vuelve a recargar si ya coinciden.
+      setTimeout(() => location.reload(), 500);
     }).subscribe();
   }
   async function connect(name, pin, create) {
@@ -155,11 +173,12 @@
   async function loadCloudState() {
     const remote = await fetchRemote();
     if (remote?.payload && Object.keys(remote.payload).length) {
-      applySnapshot(remote.payload);
+      const changed = !snapshotsEqual(snapshot(), remote.payload);
+      if (changed) applySnapshot(remote.payload);
       revision = remote.revision || 0;
       lastRemoteAt = remote.updated_at;
       status(`Progreso recuperado de la nube · ${new Date(remote.updated_at).toLocaleString()}`, 'ok');
-      setTimeout(() => location.reload(), 600);
+      if (changed) setTimeout(() => location.reload(), 500);
     } else {
       revision = 0;
       dirty = true;
@@ -185,13 +204,14 @@
       user = data.session.user;
       const remote = await fetchRemote();
       if (remote?.payload && Object.keys(remote.payload).length) {
-        // Al recuperar una sesión existente, hidratar también los datos desde la nube.
-        // Antes solo se recuperaba la revisión, dejando el navegador con datos locales antiguos.
-        applySnapshot(remote.payload);
+        // Solo recargar si el snapshot remoto difiere del local. Así se evita el bucle
+        // de recargas que ocurría al volver a restaurar la misma sesión.
+        const changed = !snapshotsEqual(snapshot(), remote.payload);
+        if (changed) applySnapshot(remote.payload);
         revision = remote.revision || 0;
         lastRemoteAt = remote.updated_at;
         status(`Progreso recuperado de la nube · ${new Date(remote.updated_at).toLocaleString()}`, 'ok');
-        window.setTimeout(() => location.reload(), 600);
+        if (changed) window.setTimeout(() => location.reload(), 500);
       } else {
         revision = 0;
         dirty = true;
@@ -203,7 +223,7 @@
       $('cloudPin').placeholder = 'Código guardado en este dispositivo';
       $('btnCloudCreate').hidden = true; $('btnCloudLogin').hidden = true; $('btnCloudLogout').hidden = false;
       $('cloudIdentity').textContent = `Cuenta: ${user.user_metadata?.display_name || 'Conectada'}`;
-      status('Cuenta conectada. Sincronización automática activa.', 'ok');
+      if (!dirty) status('Cuenta conectada. Sincronización automática activa.', 'ok');
     } catch (error) { status(`No se pudo recuperar la sesión cloud: ${error.message}`, 'error'); }
   }
   function installStorageHooks() {

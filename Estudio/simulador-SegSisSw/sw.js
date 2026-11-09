@@ -1,4 +1,4 @@
-const CACHE_NAME = 'segsissw-shell-v3';
+const CACHE_NAME = 'segsissw-shell-v4';
 const APP_SHELL = ['./', './index.html', './styles.css', './script.js', './cloud-config.js', './cloud-sync.js', './manifest.webmanifest'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(APP_SHELL)).then(() => self.skipWaiting()));
@@ -15,7 +15,16 @@ self.addEventListener('fetch', event => {
     event.respondWith(fetch(request, { cache: 'no-store' }).catch(() => caches.match(request)));
     return;
   }
-  // El JSON de preguntas se cachea tras una carga correcta; el resto del shell usa cache-first.
+  // Los recursos de interfaz usan network-first para publicar CSS/JS nuevos sin quedar
+  // atrapados en una caché antigua; si no hay red, se usa la última copia disponible.
+  if (url.origin === self.location.origin && /\.(?:html|css|js)$/.test(url.pathname)) {
+    event.respondWith(fetch(request, { cache: 'no-store' }).then(response => {
+      if (response.ok) { const copy = response.clone(); caches.open(CACHE_NAME).then(cache => cache.put(request, copy)); }
+      return response;
+    }).catch(() => caches.match(request)));
+    return;
+  }
+  // El JSON de preguntas se cachea tras una carga correcta; otros recursos usan cache-first.
   if (url.pathname.endsWith('/preguntas.json') || url.pathname.endsWith('preguntas.json')) {
     event.respondWith(fetch(request).then(response => {
       if (response.ok) { const copy = response.clone(); caches.open(CACHE_NAME).then(cache => cache.put(request, copy)); }
