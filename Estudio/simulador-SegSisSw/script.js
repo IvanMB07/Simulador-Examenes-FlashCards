@@ -80,7 +80,7 @@ class GestorFallos {
         try {
             localStorage.setItem(this.getStorageKey(), JSON.stringify(this.fallos));
         } catch (e) {
-            console.error('Error al guardar fallos:', e);
+            mostrarErrorAlmacenamientoLocal(e, 'guardar las preguntas falladas');
         }
     }
 
@@ -148,7 +148,7 @@ class GestorHistorial {
         try {
             localStorage.setItem(this.getStorageKey(), JSON.stringify(this.historial));
         } catch (e) {
-            console.error('Error al guardar historial:', e);
+            mostrarErrorAlmacenamientoLocal(e, 'guardar el historial');
         }
     }
 
@@ -207,19 +207,22 @@ class ConfiguracionApp {
                 temasSeleccionados: [1, 2, 3, 4, 5],
                 parcialExamen: 'parcial1',
                 perfilActual: 'default',
-                perfiles: {}
+                perfiles: {},
+                avanceAutomatico: false
             };
             // Asegurar que existan las nuevas propiedades
             if (!this.config.perfilActual) this.config.perfilActual = 'default';
             if (!this.config.perfiles) this.config.perfiles = {};
             if (!this.config.parcialExamen) this.config.parcialExamen = 'parcial1';
+            if (typeof this.config.avanceAutomatico !== 'boolean') this.config.avanceAutomatico = false;
         } catch (e) {
             this.config = {
                 ordenarPorTema: false,
                 temasSeleccionados: [1, 2, 3, 4, 5],
                 parcialExamen: 'parcial1',
                 perfilActual: 'default',
-                perfiles: {}
+                perfiles: {},
+                avanceAutomatico: false
             };
         }
     }
@@ -228,7 +231,7 @@ class ConfiguracionApp {
         try {
             localStorage.setItem('configApp', JSON.stringify(this.config));
         } catch (e) {
-            console.error('Error al guardar configuración:', e);
+            mostrarErrorAlmacenamientoLocal(e, 'guardar la configuración');
         }
     }
 
@@ -264,7 +267,7 @@ function guardarSesionActiva() {
             elapsedMs: Math.max(0, Date.now() - app.tiempoInicio),
             updatedAt: new Date().toISOString()
         }));
-    } catch (error) { console.warn('No se pudo guardar la sesión:', error); }
+    } catch (error) { mostrarErrorAlmacenamientoLocal(error, 'guardar la sesión actual'); }
 }
 function obtenerSesionGuardada() {
     try {
@@ -309,6 +312,7 @@ class SimuladorExamen {
         this.bloqueadoPorTiempo = false;
         this.erroresDelTest = [];
         this.keyboardHandler = null;
+        this.autoAdvanceTimerId = null;
         this.opcionEnfocada = 0;
         this.focoActivo = false;
         this.inicializar();
@@ -1070,6 +1074,7 @@ class SimuladorExamen {
     }
 
     responderPregunta(indice) {
+        if (this.finalizado || !this.preguntas[this.preguntaActual]) return;
         if (this.modo === 'practica') {
             this.respuestas[this.preguntaActual] = indice;
         } else {
@@ -1081,9 +1086,32 @@ class SimuladorExamen {
         }
         this.mostrarPregunta();
         guardarSesionActiva();
+
+        // Modo turbo: tras responder, avanza automáticamente. El tiempo permite
+        // ver el feedback antes de pasar a la siguiente pregunta.
+        if (configuracion.get('avanceAutomatico') &&
+            Object.prototype.hasOwnProperty.call(this.respuestas, this.preguntaActual)) {
+            this.cancelarAvanceAutomatico();
+            const preguntaRespondida = this.preguntaActual;
+            this.autoAdvanceTimerId = window.setTimeout(() => {
+                this.autoAdvanceTimerId = null;
+                if (this.finalizado || this.preguntaActual !== preguntaRespondida ||
+                    !Object.prototype.hasOwnProperty.call(this.respuestas, preguntaRespondida)) return;
+                if (this.preguntaActual < this.preguntas.length - 1) this.siguiente();
+                else this.mostrarResultados();
+            }, 950);
+        }
+    }
+
+    cancelarAvanceAutomatico() {
+        if (this.autoAdvanceTimerId !== null) {
+            clearTimeout(this.autoAdvanceTimerId);
+            this.autoAdvanceTimerId = null;
+        }
     }
 
     siguiente() {
+        this.cancelarAvanceAutomatico();
         if (this.preguntaActual < this.preguntas.length - 1) {
             this.preguntaActual++;
             this.mostrarPregunta();
@@ -1092,6 +1120,7 @@ class SimuladorExamen {
     }
 
     anterior() {
+        this.cancelarAvanceAutomatico();
         if (this.preguntaActual > 0) {
             this.preguntaActual--;
             this.mostrarPregunta();
@@ -1100,6 +1129,7 @@ class SimuladorExamen {
     }
 
     terminar() {
+        this.cancelarAvanceAutomatico();
         if (this.bloqueadoPorTiempo) {
             this.mostrarResultados();
             return;
@@ -1175,9 +1205,16 @@ class SimuladorExamen {
         document.getElementById('puntuacionFinal').textContent = puntuacionFinal.toFixed(2) + '/10';
 
         this.mostrarDetalleErrores();
+        const btnOtroIntento = document.getElementById('btnOtroIntento');
+        if (btnOtroIntento) {
+            btnOtroIntento.textContent = this.modo === 'examen' ? 'Hacer otro examen' :
+                this.modo === 'fallos' ? 'Repetir test de fallos' : 'Empezar otra práctica';
+            btnOtroIntento.onclick = () => iniciarModo(this.modo);
+        }
 
         document.getElementById('examen').classList.add('oculto');
         document.getElementById('resultados').classList.remove('oculto');
+        window.dispatchEvent(new Event('simulador:runtime-idle'));
     }
 
     mostrarDetalleErrores() {
@@ -1252,6 +1289,7 @@ class SimuladorExamen {
 
     reiniciar() {
         this.finalizado = true;
+        this.cancelarAvanceAutomatico();
         this.detenerTiempo();
         try { localStorage.removeItem(obtenerClaveSesion()); } catch (_) {}
         if (this.keyboardHandler) {
@@ -1263,6 +1301,7 @@ class SimuladorExamen {
         document.getElementById('seleccionModo').classList.remove('oculto');
         document.getElementById('modoActual').textContent = '-';
         actualizarContadorFallos();
+        window.dispatchEvent(new Event('simulador:runtime-idle'));
     }
 
     iniciarTiempo() {
@@ -1307,6 +1346,68 @@ class SimuladorExamen {
 }
 
 let app;
+let estadoCloudPendiente = false;
+
+function mostrarErrorAlmacenamientoLocal(error, contexto = 'guardar los datos') {
+    console.error(`No se pudo ${contexto}:`, error);
+    const el = document.getElementById('localStorageStatus');
+    if (el) {
+        el.textContent = `Problema de almacenamiento local: ${error?.message || 'el navegador rechazó la operación'}`;
+        el.dataset.kind = 'error';
+    }
+}
+
+function comprobarAlmacenamientoLocal() {
+    const el = document.getElementById('localStorageStatus');
+    const key = '__segsissw_storage_check__';
+    try {
+        localStorage.setItem(key, 'ok');
+        if (localStorage.getItem(key) !== 'ok') throw new Error('No se pudo leer el dato recién guardado.');
+        localStorage.removeItem(key);
+        if (el) {
+            el.textContent = 'Guardado local operativo en este navegador.';
+            el.dataset.kind = 'ok';
+        }
+        return true;
+    } catch (error) {
+        mostrarErrorAlmacenamientoLocal(error, 'comprobar el almacenamiento local');
+        return false;
+    }
+}
+
+function refrescarEstadoDesdeLocalStorage() {
+    configuracion.cargarConfig();
+    gestorFallos.cambiarUsuario();
+    gestorHistorial.cambiarUsuario();
+    actualizarContadorFallos();
+    actualizarConfigUI();
+    actualizarParcialExamenUI();
+    actualizarTemasUI();
+    actualizarEstadisticasPerfil();
+    cargarPerfiles();
+    const sesion = obtenerSesionGuardada();
+    if (sesion) mostrarAvisoSesion(sesion);
+    else document.getElementById('avisoSesion')?.classList.add('oculto');
+}
+
+window.addEventListener('simulador:cloud-state-applied', () => {
+    // Los gestores de fallos e historial se pueden recargar sin alterar la sesión activa.
+    gestorFallos.cambiarUsuario();
+    gestorHistorial.cambiarUsuario();
+    if (app && !app.finalizado) {
+        estadoCloudPendiente = true;
+        actualizarContadorFallos();
+        return;
+    }
+    refrescarEstadoDesdeLocalStorage();
+    estadoCloudPendiente = false;
+});
+
+window.addEventListener('simulador:runtime-idle', () => {
+    if (!estadoCloudPendiente) return;
+    refrescarEstadoDesdeLocalStorage();
+    estadoCloudPendiente = false;
+});
 
 function mostrarTotalPreguntas() {
     const totalElement = document.getElementById('totalPreguntasInfo');
@@ -1348,10 +1449,13 @@ function actualizarConfigUI() {
     const ordenarPorTema = configuracion.get('ordenarPorTema');
     const toggle = document.getElementById('toggleOrdenTema');
 
-    if (ordenarPorTema) {
-        toggle.classList.add('active');
-    } else {
-        toggle.classList.remove('active');
+    if (toggle) toggle.classList.toggle('active', Boolean(ordenarPorTema));
+
+    const turbo = document.getElementById('toggleTurbo');
+    if (turbo) {
+        const activo = Boolean(configuracion.get('avanceAutomatico'));
+        turbo.classList.toggle('active', activo);
+        turbo.setAttribute('aria-checked', String(activo));
     }
 }
 
@@ -1691,6 +1795,7 @@ window.addEventListener('pagehide', guardarSesionActiva);
 window.addEventListener('beforeunload', guardarSesionActiva);
 
 window.addEventListener('DOMContentLoaded', async () => {
+    comprobarAlmacenamientoLocal();
     const exportBtn = document.getElementById('btnExportarTodo');
     const importBtn = document.getElementById('btnImportarTodo');
     const importInput = document.getElementById('importarCopiaCompleta');

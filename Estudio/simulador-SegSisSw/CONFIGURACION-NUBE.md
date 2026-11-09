@@ -30,5 +30,7 @@ No pongas nunca una `service_role` ni una secret key en este archivo. La tabla a
 - No es necesario facilitar un correo electrónico.
 - El código personal funciona como contraseña: guárdalo en un lugar seguro. No hay recuperación por correo en este diseño.
 - El proyecto Supabase y su configuración son necesarios para habilitar la sincronización real. Sin ellos, el simulador continúa funcionando localmente.
-- La sincronización usa control de revisión para detectar escrituras simultáneas; si otro dispositivo ha guardado antes, se recupera la versión remota y se muestra un aviso.
+- La sincronización usa control de revisión y una fusión de cambios cuando dos dispositivos escriben casi a la vez. Los errores de red no bloquean el guardado local.
+- Las comparaciones de datos ignoran el orden de las propiedades JSON; esto evita tratar el mismo contenido como distinto por el orden de serialización de JSONB.
+- Los cambios recibidos no fuerzan una recarga completa de la aplicación.
 - El contenido de preguntas no se sube: solo se sincronizan configuración, perfiles, fallos, historial y sesiones del simulador.

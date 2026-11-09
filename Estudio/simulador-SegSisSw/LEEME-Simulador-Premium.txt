@@ -1,4 +1,4 @@
-SIMULADOR SEGSISSW — EDICIÓN MEJORADA (BASE LOCAL)
+SIMULADOR SEGSISSW — EDICIÓN RESPONSIVE CON SINCRONIZACIÓN
 
 CONTENIDO
 - index.html, script.js, styles.css: aplicación principal.
@@ -15,15 +15,22 @@ PARA USARLO
 MEJORAS INCLUIDAS EN ESTA ENTREGA
 - Diseño responsive con controles de navegación adaptados a móvil.
 - Recuperación de sesión local tras recargar o cerrar el navegador.
+- Modo turbo configurable: avance automático tras responder.
+- Botón para iniciar otro examen inmediatamente desde los resultados.
+- Diagnóstico visible del almacenamiento local.
 - Persistencia local de respuestas, pregunta actual y tiempo transcurrido.
 - Copia de seguridad completa de la configuración, perfiles, fallos, historial y sesión guardada.
 - Importación de esa copia en otro navegador/dispositivo.
 - Manifest y Service Worker para cachear la aplicación y las preguntas después de una carga correcta.
 
-IMPORTANTE SOBRE LA SINCRONIZACIÓN
-Esta edición todavía no sincroniza automáticamente entre dispositivos. La exportación/importación permite trasladar el progreso manualmente. La sincronización automática requiere configurar un backend en la nube y un acceso con nombre + código personal; no basta con guardar un nombre en el navegador. No se incluye una falsa conexión cloud ni se afirma que esté activa.
+SINCRONIZACIÓN
+- La aplicación guarda los cambios en localStorage y los replica en Supabase cuando hay sesión y conexión.
+- Los conflictos usan revisión de fila y fusión de cambios; los errores de red dejan los datos en local y aplican reintentos espaciados.
+- Los cambios remotos se aplican sin recargar la página.
+- La configuración de Supabase está en cloud-config.js. No sustituyas ese archivo por una plantilla vacía.
 
-VALIDACIÓN REALIZADA
-- `node --check` en script.js, cloud-sync.js, cloud-config.js y sw.js: sintaxis correcta.
-- Se ha validado el JSON del manifest y la presencia de los controles de acceso cloud en el HTML.
-- No se ha podido probar la sincronización real ni E2E en dos dispositivos porque aún no hay un proyecto Supabase conectado.
+VALIDACIÓN REALIZADA EN ESTA ENTREGA
+- `node --check` en script.js, cloud-sync.js y sw.js: sintaxis correcta.
+- Se validó la estructura del JSON de preguntas y del manifest.
+- Se comprobó que el HTML contiene el panel cloud, el diagnóstico local, el control turbo y la acción de otro examen.
+- No se ha ejecutado una prueba E2E real entre dos dispositivos ni una escritura real contra tu proyecto Supabase; esa verificación requiere abrir la web con tu cuenta.

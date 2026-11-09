@@ -76,10 +76,12 @@
                         <div class="cloud-actions">
                             <button type="button" class="btn-perfil" id="btnCloudCreate">Crear cuenta</button>
                             <button type="button" class="btn-perfil" id="btnCloudLogin">Entrar</button>
+                            <button type="button" class="btn-perfil" id="btnCloudSync" hidden>Sincronizar ahora</button>
                             <button type="button" class="btn-perfil danger" id="btnCloudLogout" hidden>Cerrar sesión</button>
                         </div>
                         <div id="cloudIdentity" class="cloud-identity" aria-live="polite"></div>
                         <p id="cloudStatus" class="cloud-status" role="status" aria-live="polite">Sincronización pendiente de configurar. El simulador sigue funcionando en local.</p>
+                        <p id="localStorageStatus" class="cloud-status" role="status" aria-live="polite">Comprobando almacenamiento local…</p>
                     </section>
                     <div class="config-option backup-panel" style="margin-top:12px;">
                         <div style="flex:1;min-width:0;">
@@ -131,7 +133,16 @@
                             <div class="config-label">Ordenar por temas</div>
                             <div class="config-description">Las preguntas se agrupan por tema secuencialmente</div>
                         </div>
-                        <div class="toggle-switch" id="toggleOrdenTema" onclick="toggleConfig('ordenarPorTema')">
+                        <div class="toggle-switch" id="toggleOrdenTema" role="switch" aria-checked="false" tabindex="0" onclick="toggleConfig('ordenarPorTema')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleConfig('ordenarPorTema')}">
+                            <div class="toggle-slider"></div>
+                        </div>
+                    </div>
+                    <div class="config-option">
+                        <div>
+                            <div class="config-label">Modo turbo · Avance automático</div>
+                            <div class="config-description">Pasa a la siguiente pregunta 0,95 s después de responder. Al terminar la última, muestra los resultados.</div>
+                        </div>
+                        <div class="toggle-switch" id="toggleTurbo" role="switch" aria-checked="false" tabindex="0" onclick="toggleConfig('avanceAutomatico')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleConfig('avanceAutomatico')}">
                             <div class="toggle-slider"></div>
                         </div>
                     </div>
@@ -226,7 +237,10 @@
 
                 <div id="erroresDetalle" class="errores-detalle oculto"></div>
 
-                <button class="btn-reiniciar" onclick="app.reiniciar()">Reiniciar Examen</button>
+                <div class="result-actions">
+                    <button type="button" class="btn-siguiente" id="btnOtroIntento">Hacer otro examen</button>
+                    <button type="button" class="btn-anterior" onclick="app.reiniciar()">Volver al menú</button>
+                </div>
             </div>
         </div>
     </div>

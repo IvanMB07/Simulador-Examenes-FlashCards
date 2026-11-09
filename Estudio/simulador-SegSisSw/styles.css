@@ -31,3 +31,10 @@
 .cloud-status[data-kind="error"]{color:#fca5a5}
 .cloud-panel.cloud-connected{border-color:rgba(74,222,128,.38)}
 @media(max-width:560px){.cloud-panel{padding:13px}.cloud-panel-head{display:block}.cloud-badge{display:inline-block;margin-top:8px}.cloud-actions{display:grid;grid-template-columns:1fr 1fr}.cloud-actions button{width:100%}}
+
+/* Opciones de reintento y diagnóstico de almacenamiento local */
+.result-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.result-actions button{flex:1 1 190px}
+#localStorageStatus[data-kind="ok"]{color:var(--success)}
+#localStorageStatus[data-kind="error"]{color:var(--danger)}
+#toggleTurbo{flex:0 0 auto}
