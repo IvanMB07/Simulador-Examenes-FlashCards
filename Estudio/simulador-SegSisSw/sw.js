@@ -1,4 +1,4 @@
-const CACHE_NAME = 'segsissw-shell-v2';
+const CACHE_NAME = 'segsissw-shell-v3';
 const APP_SHELL = ['./', './index.html', './styles.css', './script.js', './cloud-config.js', './cloud-sync.js', './manifest.webmanifest'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(APP_SHELL)).then(() => self.skipWaiting()));

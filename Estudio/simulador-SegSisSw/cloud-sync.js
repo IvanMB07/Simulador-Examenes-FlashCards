@@ -184,7 +184,19 @@
       if (!data.session) { status('No has conectado una cuenta. El progreso se guarda en este dispositivo.'); return; }
       user = data.session.user;
       const remote = await fetchRemote();
-      if (remote) { revision = remote.revision; lastRemoteAt = remote.updated_at; }
+      if (remote?.payload && Object.keys(remote.payload).length) {
+        // Al recuperar una sesión existente, hidratar también los datos desde la nube.
+        // Antes solo se recuperaba la revisión, dejando el navegador con datos locales antiguos.
+        applySnapshot(remote.payload);
+        revision = remote.revision || 0;
+        lastRemoteAt = remote.updated_at;
+        status(`Progreso recuperado de la nube · ${new Date(remote.updated_at).toLocaleString()}`, 'ok');
+        window.setTimeout(() => location.reload(), 600);
+      } else {
+        revision = 0;
+        dirty = true;
+        await pushSnapshot();
+      }
       subscribe();
       $('cloudLoginPanel')?.classList.add('cloud-connected');
       $('cloudName').value = user.user_metadata?.display_name || '';
