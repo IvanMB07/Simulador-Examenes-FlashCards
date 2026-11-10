@@ -1742,80 +1742,80 @@
   {
     "cuestion": "SegSisSw-T2-030-Pregunta: ¿Cómo se genera técnicamente una Firma Digital sobre un documento o mensaje?",
     "opciones": [
-      "A. Crear ca.key → emitir ca.crt → crear client.key → generar client.csr → firmar la solicitud.",
-      "B. Crear ca.crt → generar client.csr → crear ca.key → firmar el certificado → crear client.key.",
-      "C. Crear client.key → emitir client.crt → crear ca.key → generar ca.csr → exportar ca.p12.",
-      "D. Crear ca.key → crear client.key → firmar client.csr → emitir ca.crt → exportar client.crt."
+      "A. Se calcula el hash del mensaje y se cifra ese resumen con la clave privada del firmante.",
+      "B. Se cifra el documento completo con la clave pública del receptor y se adjunta el certificado.",
+      "C. Se calcula un hash y se cifra con una clave simétrica compartida entre todos los receptores.",
+      "D. Se codifica el documento en Base64 y se añade la clave pública del emisor."
     ],
-    "solucion": "D"
+    "solucion": "A"
   },
   {
     "cuestion": "SegSisSw-T2-031-Pregunta: ¿Qué tres propiedades esenciales de seguridad garantiza el proceso de verificación de una Firma Digital?",
     "opciones": [
-      "A. Crear client.csr → generar client.key → exportar client.p12 → firmar client.crt.",
-      "B. Generar client.key → crear client.csr → firmar la solicitud con la CA → obtener client.crt.",
-      "C. Firmar client.key → crear client.crt → generar client.csr → exportar client.p12.",
-      "D. Generar client.crt → crear client.key → verificar client.csr → firmar ca.crt."
+      "A. Autenticación, Integridad y No Repudio.",
+      "B. Confidencialidad, Disponibilidad y Anonimato.",
+      "C. Criptoagilidad, Redundancia y Velocidad.",
+      "D. Aislamiento físico, Tolerancia a fallos y Reversibilidad."
     ],
     "solucion": "A"
   },
   {
     "cuestion": "SegSisSw-T2-032-Pregunta: En la recepción de un documento firmado digitalmente, ¿cómo verifica el receptor que la firma es válida?",
     "opciones": [
-      "A. Crear client.p12 → generar client.csr → firmar client.key → incorporar ca.crt.",
-      "B. Crear client.csr → exportar client.p12 → generar client.key → firmar client.crt.",
-      "C. Crear client.key → generar client.csr → obtener client.crt firmado → exportar el PKCS#12 con la CA.",
-      "D. Crear ca.p12 → generar client.crt → exportar client.csr → verificar client.key."
+      "A. Compara el certificado con la dirección IP y comprueba que ambos datos coinciden.",
+      "B. Descifra el documento completo con la clave pública y compara su tamaño con el original.",
+      "C. Recuperar el hash de la firma con la clave pública y compararlo con el hash del documento.",
+      "D. Calcula un nuevo par de claves y comprueba que la clave privada coincide con la firma."
     ],
-    "solucion": "B"
+    "solucion": "C"
   },
   {
     "cuestion": "SegSisSw-T2-033-Pregunta: Por sí sola, la firma digital no evita la suplantación de identidad si un atacante intercepta la clave pública (Man-in-the-Middle). ¿Qué mecanismo resuelve este problema de confianza?",
     "opciones": [
-      "A. Importar client.csr → crear ca.key → exportar client.crt → generar client.p12.",
-      "B. Verificar client.key → generar client.csr → importar ca.key → consultar el certificado.",
-      "C. Crear client.p12 → retirar client.crt → importar client.key → firmar ca.crt.",
-      "D. Crear client.p12 → consultar su contenido → verificar client.crt con ca.crt → importar el archivo en el navegador."
+      "A. El uso de contraseñas de más de 30 caracteres.",
+      "B. El reinicio periódico del sistema operativo.",
+      "C. Una PKI o red de confianza.",
+      "D. La conversión del código a lenguaje ensamblador."
     ],
     "solucion": "C"
   },
   {
     "cuestion": "SegSisSw-T2-034-Pregunta: ¿Qué es una Infraestructura de Clave Pública (PKI)?",
     "opciones": [
-      "A. Generar la clave privada → crear el CSR → emitir el certificado con openssl x509 y -signkey.",
-      "B. Crear el certificado → generar la clave privada → crear el CSR → verificar el resultado.",
-      "C. Crear el CSR → exportarlo a PKCS#12 → generar la clave privada → firmarlo con una CA.",
-      "D. Obtener la clave pública → verificarla → crear el CSR → exportar el certificado."
+      "A. Un repositorio que almacena únicamente las claves privadas de los usuarios.",
+      "B. Gestión de claves y certificados con políticas y entidades de confianza.",
+      "C. Un algoritmo de cifrado simétrico que sustituye los certificados por contraseñas.",
+      "D. Un protocolo de transporte que cifra directamente todos los paquetes de una red."
     ],
-    "solucion": "D"
+    "solucion": "B"
   },
   {
     "cuestion": "SegSisSw-T2-035-Pregunta: Dentro de una PKI, ¿cuál es la función principal de la Autoridad Certificadora (CA)?",
     "opciones": [
-      "A. Descifrar el original → calcular su hash → cifrar el resultado con openssl verify.",
-      "B. Preparar la contraseña → cifrar con openssl enc → descifrar con openssl enc -d.",
-      "C. Crear un certificado X.509 → generar un CSR → cifrar el fichero con openssl pkcs12.",
-      "D. Obtener una clave pública → firmar el fichero → descifrarlo con openssl req."
+      "A. Emitir y firmar certificados que vinculan las claves públicas con sus titulares.",
+      "B. Analizar el código fuente en busca de vulnerabilidades de deserialización.",
+      "C. Almacenar copias de seguridad de las contraseñas personales de los usuarios.",
+      "D. Filtrar el tráfico de red actuando como cortafuegos WAF."
     ],
     "solucion": "A"
   },
   {
     "cuestion": "SegSisSw-T2-036-Pregunta: ¿Qué rol desempeña la Autoridad de Registro (RA) en una PKI?",
     "opciones": [
-      "A. Cifrar con la privada → crear un CSR → descifrar con el certificado de la CA.",
-      "B. Crear un PKCS#12 → cifrar con la privada → verificar el resultado con openssl dgst.",
-      "C. Generar el par de claves → extraer la pública → cifrar con ella → descifrar con la privada.",
-      "D. Extraer la pública → descifrar con ella → crear una privada → cifrar con la CA."
+      "A. Reemplaza al servidor DNS en la traducción de nombres de dominio.",
+      "B. Verificar la identidad del solicitante antes de emitir el certificado.",
+      "C. Cifra las bases de datos de producción mediante AES-256.",
+      "D. Ejecuta los scripts de pre-commit en los repositorios Git."
     ],
     "solucion": "B"
   },
   {
     "cuestion": "SegSisSw-T2-037-Pregunta: ¿Qué protocolo y estándar de directorio se utiliza habitualmente en las PKI para almacenar y consultar certificados digitales?",
     "opciones": [
-      "A. Crear un certificado X.509 → verificarlo → guardar el certificado como resumen.",
-      "B. Generar una privada → cifrar el fichero → exportar el resultado como PKCS#12.",
-      "C. Crear un CSR → firmarlo → calcular el resumen con openssl req.",
-      "D. Elegir fichero y algoritmo → ejecutar openssl dgst → indicar el archivo donde guardar el resumen."
+      "A. Estándar HTTP/2 con acceso REST API.",
+      "B. Protocolo Telnet sobre puerto 23.",
+      "C. Estándar X.500 con acceso LDAP.",
+      "D. Archivos de texto plano (.txt) compartidos vía FTP."
     ],
     "solucion": "C"
   },
