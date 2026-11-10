@@ -3268,5 +3268,285 @@
       "D. Es equivalente a una CSR y no puede utilizarse para firmar certificados de cliente."
     ],
     "solucion": "C"
+  },
+  {
+    "cuestion": "SegSisSw-T2-155-Pregunta: En el procedimiento de autenticación de clientes, ¿qué comando genera la clave privada RSA de la Autoridad Certificadora con un tamaño de 2048 bits?",
+    "opciones": [
+      "A. openssl req -new -x509 -key ca.key -out ca.crt -days 3650",
+      "B. openssl genpkey -algorithm RSA -out ca.key -pkeyopt rsa_keygen_bits:2048",
+      "C. openssl x509 -req -in ca.key -out ca.crt -days 2048",
+      "D. openssl pkcs12 -export -in ca.key -out ca.p12"
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-156-Pregunta: Una vez generada la clave privada ca.key, ¿qué comando permite crear el certificado autofirmado de la Autoridad Certificadora?",
+    "opciones": [
+      "A. openssl req -new -x509 -key ca.key -out ca.crt -days 3650",
+      "B. openssl x509 -req -in ca.key -CA ca.crt -out ca.crt",
+      "C. openssl genpkey -algorithm RSA -out ca.crt -pkeyopt rsa_keygen_bits:2048",
+      "D. openssl verify -CAfile ca.key ca.crt"
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-157-Pregunta: En el comando openssl req -new -key client.key -out client.csr, ¿qué representa el archivo client.csr?",
+    "opciones": [
+      "A. El certificado definitivo firmado por la Autoridad Certificadora.",
+      "B. El archivo PKCS#12 que contiene la clave privada y el certificado.",
+      "C. La solicitud de firma de certificado generada a partir de la clave privada del cliente.",
+      "D. El certificado autofirmado de la Autoridad Certificadora."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SegSisSw-T2-158-Pregunta: ¿Qué comando del procedimiento del documento permite firmar la solicitud client.csr utilizando la CA creada previamente?",
+    "opciones": [
+      "A. openssl req -new -key ca.key -out client.crt",
+      "B. openssl verify -CAfile ca.crt client.csr",
+      "C. openssl pkcs12 -export -in client.csr -out client.crt",
+      "D. openssl x509 -req -in client.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out client.crt -days 365"
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "SegSisSw-T2-159-Pregunta: En el comando de firma de un certificado, ¿para qué se utiliza la opción -CAcreateserial?",
+    "opciones": [
+      "A. Para generar automáticamente un número de serie para el certificado emitido.",
+      "B. Para crear una nueva clave privada RSA para el cliente.",
+      "C. Para exportar el certificado a formato PKCS#12.",
+      "D. Para comprobar la fecha de caducidad de la CA."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-160-Pregunta: ¿Qué función cumple el parámetro -CAkey ca.key al firmar el certificado de un cliente?",
+    "opciones": [
+      "A. Indicar la clave pública que se incluirá en el certificado del cliente.",
+      "B. Identificar el archivo que contiene la clave privada de la Autoridad Certificadora utilizada para firmar.",
+      "C. Establecer la contraseña del archivo PKCS#12.",
+      "D. Especificar el certificado que debe instalarse en el navegador."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-161-Pregunta: ¿Qué comando permite reunir el certificado del cliente, su clave privada y el certificado de la CA en un archivo PKCS#12?",
+    "opciones": [
+      "A. openssl verify -CAfile ca.crt client.crt",
+      "B. openssl req -new -key client.key -out client.p12",
+      "C. openssl pkcs12 -export -in client.crt -inkey client.key -out client.p12 -certfile ca.crt",
+      "D. openssl x509 -req -in client.p12 -out client.crt"
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SegSisSw-T2-162-Pregunta: En el comando de exportación PKCS#12, ¿qué archivo se indica mediante -certfile ca.crt?",
+    "opciones": [
+      "A. La clave privada del cliente.",
+      "B. La solicitud de firma del cliente.",
+      "C. El certificado definitivo del cliente.",
+      "D. El certificado de la Autoridad Certificadora que firmó el certificado del cliente."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "SegSisSw-T2-163-Pregunta: Durante la creación de un archivo PKCS#12 mediante openssl pkcs12 -export, ¿qué sucede con la contraseña?",
+    "opciones": [
+      "A. OpenSSL solicita establecer una contraseña para proteger el archivo resultante.",
+      "B. Se utiliza obligatoriamente la contraseña de la clave privada de la CA.",
+      "C. Se obtiene automáticamente del certificado X.509.",
+      "D. Se establece mediante el parámetro -CAcreateserial."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-164-Pregunta: ¿Qué comando aparece en el documento para comprobar que client.crt ha sido firmado correctamente por la CA?",
+    "opciones": [
+      "A. openssl req -new -key client.crt -out ca.crt",
+      "B. openssl verify -CAfile ca.crt client.crt",
+      "C. openssl pkcs12 -export -in ca.crt -out client.crt",
+      "D. openssl genpkey -algorithm RSA -out client.crt"
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-165-Pregunta: ¿Qué información permite consultar el comando certutil -p TU_PASSWORD -dump client.p12?",
+    "opciones": [
+      "A. Los parámetros utilizados para generar la clave RSA de la CA.",
+      "B. El contenido de una solicitud CSR sin firmar.",
+      "C. El contenido y los datos del archivo PKCS#12 protegido mediante contraseña.",
+      "D. El estado de ejecución del servidor web."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SegSisSw-T2-166-Pregunta: ¿Cuál es la secuencia correcta para generar y preparar un certificado de cliente según el procedimiento de las páginas 20 a 22?",
+    "opciones": [
+      "A. Exportar PKCS#12, generar la clave de la CA, crear el CSR y firmarlo.",
+      "B. Crear el CSR, exportarlo a PKCS#12, generar la CA y crear la clave del cliente.",
+      "C. Firmar el certificado, generar el CSR, crear la CA y exportarlo.",
+      "D. Crear la CA, generar la clave del cliente, crear su CSR, firmar el CSR y exportar el certificado a PKCS#12."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "SegSisSw-T2-167-Pregunta: Para generar un resumen hash de un fichero utilizando el comando mostrado en el documento, ¿qué subcomando de OpenSSL debe utilizarse?",
+    "opciones": [
+      "A. openssl dgst",
+      "B. openssl req",
+      "C. openssl pkcs12",
+      "D. openssl verify"
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-168-Pregunta: En el comando openssl dgst -md5 -out mensaje.hsh mensaje.txt, ¿qué representa mensaje.hsh?",
+    "opciones": [
+      "A. El fichero original que se va a resumir.",
+      "B. El fichero donde se almacena el resumen hash generado.",
+      "C. La clave privada utilizada para calcular el hash.",
+      "D. El certificado X.509 del emisor."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-169-Pregunta: ¿Qué comando del documento permite obtener la clave pública a partir del archivo privada.key?",
+    "opciones": [
+      "A. openssl req -new -key privada.key -out publica.key",
+      "B. openssl dgst -md5 -out publica.key privada.key",
+      "C. openssl rsa -in privada.key -out publica.key -pubout",
+      "D. openssl verify -CAfile privada.key publica.key"
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SegSisSw-T2-170-Pregunta: En el comando openssl enc -aes-256-cbc -pbkdf2 -iter 10000 -pass file:key.txt -in mensaje.txt -out mensaje.txt.encrypted, ¿qué función tiene -pbkdf2?",
+    "opciones": [
+      "A. Descifrar el fichero de entrada.",
+      "B. Seleccionar la clave pública del destinatario.",
+      "C. Generar un certificado autofirmado.",
+      "D. Derivar una clave a partir de una contraseña utilizando PBKDF2."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "SegSisSw-T2-171-Pregunta: Si se desea descifrar el fichero mensaje.txt.encrypted utilizando el mismo procedimiento simétrico del documento, ¿qué opción debe añadirse al comando enc?",
+    "opciones": [
+      "A. -d",
+      "B. -pubin",
+      "C. -CAcreateserial",
+      "D. -x509"
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-172-Pregunta: En el comando openssl pkeyutl -encrypt -in key.txt -out key_enc -inkey publica.key -pubin, ¿qué indica la opción -pubin?",
+    "opciones": [
+      "A. Que el fichero de entrada contiene una solicitud CSR.",
+      "B. Que la clave indicada mediante -inkey es una clave pública.",
+      "C. Que se debe utilizar una clave privada para descifrar.",
+      "D. Que el resultado debe guardarse en formato PKCS#12."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-173-Pregunta: ¿Qué opción del comando openssl pkeyutl permite realizar la operación inversa al cifrado asimétrico mostrado en el documento?",
+    "opciones": [
+      "A. -encrypt",
+      "B. -pubin",
+      "C. -decrypt",
+      "D. -new"
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SegSisSw-T2-174-Pregunta: En el comando openssl x509 -req -days 365 -in peticioncertificado.csr -signkey privada.key -out certificado_auto.crt, ¿qué indica -signkey?",
+    "opciones": [
+      "A. Que se debe incluir el certificado de la CA en un archivo PKCS#12.",
+      "B. Que se debe verificar la cadena de certificados.",
+      "C. Que se debe generar una clave pública independiente.",
+      "D. Que la solicitud se firmará utilizando la clave privada indicada."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "SegSisSw-T2-175-Pregunta: ¿Cuál es el orden correcto de los comandos para crear una Autoridad Certificadora (CA) y generar posteriormente un certificado para un cliente?",
+    "opciones": [
+      "A. Generar ca.key → Crear ca.crt → Generar client.key → Crear client.csr → Firmar client.csr para obtener client.crt.",
+      "B. Crear ca.crt → Generar client.csr → Crear ca.key → Firmar client.crt → Generar client.key.",
+      "C. Generar client.key → Crear client.crt → Generar ca.key → Crear ca.csr → Exportar ca.p12.",
+      "D. Generar ca.key → Crear client.key → Firmar client.csr → Crear ca.crt → Exportar client.crt."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-176-Pregunta: Para generar un certificado de cliente firmado por una CA, ¿qué secuencia de operaciones es correcta después de disponer de ca.key y ca.crt?",
+    "opciones": [
+      "A. Crear client.csr → Generar client.key → Exportar client.p12 → Firmar client.crt.",
+      "B. Generar client.key → Crear client.csr → Firmar la solicitud con la CA para obtener client.crt.",
+      "C. Firmar client.key → Crear client.crt → Generar client.csr → Exportar client.p12.",
+      "D. Generar client.crt → Crear client.key → Verificar client.csr → Firmar ca.crt."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-177-Pregunta: ¿Qué secuencia corresponde al proceso completo de creación de un archivo PKCS#12 para el cliente?",
+    "opciones": [
+      "A. Generar client.p12 → Crear client.csr → Firmar client.key → Incorporar ca.crt.",
+      "B. Crear client.csr → Exportar client.p12 → Generar client.key → Firmar client.crt.",
+      "C. Generar client.key → Crear client.csr → Obtener client.crt firmado → Exportar client.crt y client.key a client.p12, incluyendo ca.crt.",
+      "D. Crear ca.p12 → Generar client.crt → Exportar client.csr → Verificar client.key."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SegSisSw-T2-178-Pregunta: ¿Cuál es la secuencia adecuada para comprobar el certificado de cliente y preparar su instalación en el navegador?",
+    "opciones": [
+      "A. Importar client.csr → Crear ca.key → Exportar client.crt → Generar client.p12.",
+      "B. Ejecutar openssl verify sobre client.key → Generar client.csr → Importar ca.key.",
+      "C. Crear client.p12 → Eliminar client.crt → Importar client.key → Firmar ca.crt.",
+      "D. Generar client.p12 → Consultar su contenido con certutil → Verificar client.crt utilizando ca.crt → Importar el archivo PKCS#12 en el navegador."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "SegSisSw-T2-179-Pregunta: Para obtener un certificado autofirmado a partir de una solicitud CSR y una clave privada propia, ¿qué secuencia de operaciones se debe seguir?",
+    "opciones": [
+      "A. Generar la clave privada → Crear la solicitud CSR → Ejecutar openssl x509 -req utilizando -signkey para generar el certificado.",
+      "B. Crear el certificado → Generar la clave privada → Crear el CSR → Verificar el certificado.",
+      "C. Generar el CSR → Exportarlo a PKCS#12 → Crear la clave privada → Firmarlo con una CA externa.",
+      "D. Crear la clave pública → Ejecutar openssl verify → Generar el CSR → Exportar el certificado."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-180-Pregunta: ¿Qué secuencia representa correctamente el proceso de cifrado y posterior descifrado simétrico de un fichero utilizando OpenSSL?",
+    "opciones": [
+      "A. Descifrar el fichero original → Generar el hash → Cifrar el resultado utilizando openssl verify.",
+      "B. Disponer de la contraseña → Cifrar el fichero con openssl enc → Descifrar el fichero cifrado utilizando openssl enc -d.",
+      "C. Generar un certificado X.509 → Crear una solicitud CSR → Cifrar el fichero mediante openssl pkcs12.",
+      "D. Generar una clave pública → Firmar el fichero → Descifrarlo mediante openssl req."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-181-Pregunta: En el procedimiento de cifrado asimétrico mostrado en el documento, ¿qué secuencia de operaciones permite cifrar un dato con la clave pública y recuperarlo con la clave privada?",
+    "opciones": [
+      "A. Cifrar con la clave privada → Generar una CSR → Descifrar con el certificado de la CA.",
+      "B. Generar un archivo PKCS#12 → Cifrar con la clave privada → Verificar con openssl dgst.",
+      "C. Generar el par de claves → Obtener la clave pública → Cifrar con la clave pública → Descifrar con la clave privada.",
+      "D. Obtener la clave pública → Descifrar con ella → Generar una clave privada → Cifrar con la CA."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SegSisSw-T2-182-Pregunta: ¿Cuál es el orden correcto para calcular el resumen hash de un fichero y guardar el resultado en otro archivo?",
+    "opciones": [
+      "A. Crear un certificado X.509 → Ejecutar openssl verify → Guardar el certificado como fichero hash.",
+      "B. Generar una clave privada → Cifrar el fichero → Exportar el resultado mediante openssl pkcs12.",
+      "C. Crear una solicitud CSR → Firmarla → Utilizar openssl req para obtener el resumen.",
+      "D. Seleccionar el fichero original y el algoritmo hash → Ejecutar openssl dgst indicando el archivo de salida para almacenar el resumen."
+    ],
+    "solucion": "D"
   }
 ]
