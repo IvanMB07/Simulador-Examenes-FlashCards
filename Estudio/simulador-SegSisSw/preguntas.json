@@ -1462,30 +1462,30 @@
   {
     "cuestion": "SegSisSw-T2-002-Pregunta: En los cifradores históricos, ¿en qué consiste el cifrador de Polybios?",
     "opciones": [
-      "A. En desplazar cada letra tres posiciones a la derecha en el alfabeto.",
-      "B. En escribir el texto en una matriz y leerlo columna por columna.",
-      "C. En aplicar dos alfabetos distintos alternando entre posiciones pares e impares.",
-      "D. En sustituir cada letra del mensaje original por el par de letras o números que indican su fila y columna en una tabla."
+      "A. Consiste en sustituir cada letra por otra situada a una distancia fija del alfabeto.",
+      "B. Consiste en ordenar las letras del mensaje mediante una palabra clave.",
+      "C. Consiste en combinar pares de letras mediante una matriz de sustitución.",
+      "D. Consiste en asignar a cada letra un par de coordenadas dentro de una cuadrícula."
     ],
     "solucion": "D"
   },
   {
     "cuestion": "SegSisSw-T2-003-Pregunta: ¿Cuál es el funcionamiento característico del clásico cifrador del César?",
     "opciones": [
-      "A. Sustituir cada carácter por el resultado de desplazarlo tres posiciones hacia la derecha en el alfabeto.",
-      "B. Reorganizar las letras mediante una clave de transposición.",
-      "C. Utilizar una clave simétrica de 256 bits para alterar bloques de texto.",
-      "D. Generar un resumen hash de longitud fija a partir del texto claro."
+      "A. Cada letra se sustituye por otra situada un número fijo de posiciones más adelante en el alfabeto.",
+      "B. Cada letra se reemplaza por su posición numérica dentro del alfabeto.",
+      "C. Las letras se agrupan en bloques y se intercambian según una clave.",
+      "D. El mensaje se transforma mediante una función hash de longitud fija."
     ],
     "solucion": "A"
   },
   {
     "cuestion": "SegSisSw-T2-004-Pregunta: ¿Cómo se obtiene el texto cifrado mediante la técnica de Transposición Columnar?",
     "opciones": [
-      "A. Sustituyendo cada carácter según una tabla de frecuencias.",
-      "B. Escribiendo el texto claro en una tabla por filas y extrayendo el cifrado leyendo sucesivamente columna por columna.",
-      "C. Cifrando cada letra con la clave pública del destinatario.",
-      "D. Aplicando una función hash no reversible a cada palabra."
+      "A. Se sustituyen las letras por símbolos elegidos al azar para cada mensaje.",
+      "B. Se escribe el texto en una matriz y se leen las columnas según el orden de la clave.",
+      "C. Se reemplaza cada carácter por su equivalente en código hexadecimal.",
+      "D. Se invierte el orden de los caracteres sin utilizar ninguna clave."
     ],
     "solucion": "B"
   },
@@ -1522,30 +1522,30 @@
   {
     "cuestion": "SegSisSw-T2-008-Pregunta: ¿Qué significa que determinar la clave k de un sistema criptográfico sea 'computacionalmente imposible'?",
     "opciones": [
-      "A. Que es matemáticamente imposible de resolver incluso con tiempo infinito.",
-      "B. Que conociendo E, D y múltiples parejas mensaje-cifrado, determinar k requiere un esfuerzo y tiempo de cálculo extremadamente costoso e inasumible.",
-      "C. Que la clave k se destruye inmediatamente después de usarse.",
-      "D. Que el sistema no utiliza claves para transformar el mensaje."
+      "A. Que el algoritmo debe ocultarse para que nadie pueda analizarlo.",
+      "B. Que conocer el algoritmo y algunos pares de texto claro/cifrado no permite obtener la clave con recursos computacionales viables.",
+      "C. Que el sistema solo puede utilizarse con mensajes de longitud fija.",
+      "D. Que la clave debe cambiar después de cifrar cada bloque de datos."
     ],
     "solucion": "B"
   },
   {
     "cuestion": "SegSisSw-T2-009-Pregunta: En el ámbito de la criptografía, ¿qué implica que un criptoanalista consiga 'romper la autenticidad' de un sistema?",
     "opciones": [
-      "A. Reconstruir el texto en claro a partir del texto cifrado.",
-      "B. Bloquear el canal de comunicación mediante un ataque DoS.",
-      "C. Hacer que el receptor acepte como legítimos mensajes que no han sido generados por un emisor autorizado.",
-      "D. Alterar la temperatura física de los servidores de autenticación."
+      "A. Que el análisis solo puede realizarse si se conoce la clave privada.",
+      "B. Que el texto cifrado debe ser más largo que el mensaje original.",
+      "C. Que se estudia cómo recuperar información protegida o vulnerar propiedades del sistema sin disponer de la clave legítima.",
+      "D. Que el algoritmo se ejecuta únicamente sobre hardware especializado."
     ],
     "solucion": "C"
   },
   {
     "cuestion": "SegSisSw-T2-010-Pregunta: ¿Cuál es la diferencia fundamental entre un esquema criptográfico reversible y uno irreversible?",
     "opciones": [
-      "A. El reversible usa clave pública y el irreversible usa clave privada.",
-      "B. El reversible solo sirve para autenticación y el irreversible para confidencialidad.",
-      "C. El reversible se ejecuta en el servidor y el irreversible en el cliente.",
-      "D. Del mensaje cifrado en un esquema reversible se puede recuperar el mensaje en claro original, mientras que en el irreversible (hash) no es posible."
+      "A. Los esquemas reversibles permiten recuperar el mensaje mediante una clave; los irreversibles producen resúmenes no recuperables.",
+      "B. Los esquemas reversibles utilizan hashes y los irreversibles emplean dos claves relacionadas.",
+      "C. Los esquemas reversibles solo sirven para autenticar y los irreversibles para cifrar archivos.",
+      "D. Los esquemas reversibles requieren certificados y los irreversibles utilizan contraseñas compartidas."
     ],
     "solucion": "D"
   },
@@ -1562,10 +1562,10 @@
   {
     "cuestion": "SegSisSw-T2-012-Pregunta: ¿Cuál es el mayor inconveniente operacional que presentan los sistemas criptográficos simétricos?",
     "opciones": [
-      "A. Su elevada lentitud y alto coste computacional al cifrar grandes volúmenes de datos.",
-      "B. La necesidad de contar con un canal seguro para la transmisión y distribución previa de la clave secreta compartida.",
-      "C. Que no pueden garantizar la confidencialidad de la información.",
-      "D. Que requieren el uso obligatorio de una Autoridad Certificadora (CA)."
+      "A. La necesidad de mantener en secreto el algoritmo de cifrado frente a todos los usuarios.",
+      "B. La distribución y custodia de una clave compartida por cada pareja de entidades que desea comunicarse.",
+      "C. La imposibilidad de procesar mensajes de longitud variable con una misma clave.",
+      "D. La obligación de generar un certificado X.509 para cada bloque cifrado."
     ],
     "solucion": "B"
   },
@@ -1602,10 +1602,10 @@
   {
     "cuestion": "SegSisSw-T2-016-Pregunta: ¿Qué herramienta clásica de auditoría y prueba de contraseñas permite extraer y romper hashes de archivos cifrados (.rar, .pdf, .docx) mediante fuerza bruta o diccionario?",
     "opciones": [
-      "A. FindSecBugs.",
-      "B. John the Ripper (junto con utilidades como rar2john o pdf2john).",
-      "C. OWASP ZAP.",
-      "D. ModSecurity WAF."
+      "A. Wireshark, que captura paquetes y recupera directamente las claves privadas de los archivos.",
+      "B. John the Ripper, que procesa hashes obtenidos con herramientas auxiliares para probar candidatos de contraseña.",
+      "C. OpenVAS, que identifica servicios vulnerables y restablece las contraseñas de los documentos.",
+      "D. ModSecurity, que analiza peticiones HTTP y descifra archivos protegidos."
     ],
     "solucion": "B"
   },
@@ -1622,20 +1622,20 @@
   {
     "cuestion": "SegSisSw-T2-018-Pregunta: En un criptosistema asimétrico o de clave pública, cada usuario U dispone de:",
     "opciones": [
-      "A. Una única clave secreta compartida con el servidor central.",
-      "B. Una lista de tokens temporales de un solo uso.",
-      "C. Tres claves de sesión simétricas dinámicas.",
-      "D. Dos claves: una clave pública (KP o ub) conocida por todos y una clave privada (Kp o uv) conocida solo por U."
+      "A. Una clave pública compartida y una clave privada que se publica en un directorio.",
+      "B. Una única clave secreta que se distribuye entre todos los usuarios del sistema.",
+      "C. Dos claves privadas independientes que se intercambian antes de cada comunicación.",
+      "D. Una clave pública que puede distribuirse y una clave privada que conserva exclusivamente su titular."
     ],
     "solucion": "D"
   },
   {
     "cuestion": "SegSisSw-T2-019-Pregunta: ¿Cuál de las siguientes afirmaciones describe una propiedad fundamental de la criptografía asimétrica?",
     "opciones": [
-      "A. Una información cifrada con la clave pública solo puede ser descifrada con su correspondiente clave privada (y viceversa), siendo computacionalmente inviable deducir la privada a partir de la pública.",
-      "B. La clave privada se utiliza para cifrar y la clave pública no sirve para descifrar.",
-      "C. Es imposible utilizar la criptografía asimétrica para la firma digital.",
-      "D. Las claves pública y privada deben ser exactamente idénticas en longitud a la contraseña del usuario."
+      "A. El par de claves está relacionado: la pública permite ciertas operaciones y la privada las complementarias, pero no resulta viable deducir la privada a partir de la pública.",
+      "B. Ambas claves son idénticas y se alternan según el tamaño del mensaje.",
+      "C. La clave privada se obtiene aplicando una función hash a la clave pública.",
+      "D. La clave pública debe mantenerse secreta y la privada debe publicarse para verificar los mensajes."
     ],
     "solucion": "A"
   },
@@ -1672,10 +1672,10 @@
   {
     "cuestion": "SegSisSw-T2-023-Pregunta: ¿Por qué en la práctica actual se emplean 'sistemas mixtos o híbridos' para el cifrado de datos?",
     "opciones": [
-      "A. Porque la criptografía asimétrica es computacionalmente costosa y lenta para mensajes largos; por ello se cifra el mensaje con un algoritmo simétrico rápido y la clave simétrica se cifra con criptografía asimétrica.",
-      "B. Porque los algoritmos simétricos no pueden procesar textos en español.",
-      "C. Porque la ley exige usar tres claves distintas por cada comunicación.",
-      "D. Porque los hashes reemplazan por completo a los algoritmos de clave pública."
+      "A. Porque la criptografía simétrica es lenta y la asimétrica permite cifrar grandes volúmenes sin coste adicional.",
+      "B. Porque ambos tipos de algoritmo necesitan compartir previamente la misma clave secreta.",
+      "C. Porque el cifrado simétrico es eficiente para los datos y el asimétrico facilita proteger la clave de sesión.",
+      "D. Porque los sistemas híbridos sustituyen el cifrado por firmas digitales en todos los mensajes."
     ],
     "solucion": "A"
   },
@@ -1702,10 +1702,10 @@
   {
     "cuestion": "SegSisSw-T2-026-Pregunta: ¿Qué es una función Hash en el contexto criptográfico?",
     "opciones": [
-      "A. Un algoritmo simétrico de cifrado de bloques reversibles.",
-      "B. Un protocolo para intercambiar certificados digitales entre navegador y servidor.",
-      "C. Un software para detectar malware en imágenes Docker.",
-      "D. Una función matemática matemática no invertible que, dado un mensaje de longitud variable, proporciona un resumen representativo de longitud fija."
+      "A. Un procedimiento que cifra un mensaje y permite recuperarlo con la misma clave.",
+      "B. Un algoritmo que genera una clave pública y otra privada a partir del texto original.",
+      "C. Un mecanismo que comprime los datos y conserva siempre la posibilidad de reconstruirlos.",
+      "D. Una función que transforma entradas de longitud variable en resúmenes de longitud fija."
     ],
     "solucion": "D"
   },
@@ -1742,10 +1742,10 @@
   {
     "cuestion": "SegSisSw-T2-030-Pregunta: ¿Cómo se genera técnicamente una Firma Digital sobre un documento o mensaje?",
     "opciones": [
-      "A. Cifrando todo el documento completo con la clave pública de la Autoridad Certificadora.",
-      "B. Añadiendo una imagen escaneada de la rúbrica del usuario al final del archivo.",
-      "C. Cifrando el mensaje con una clave simétrica AES no compartida.",
-      "D. Generando un hash representativo del mensaje y cifrando dicho hash con la clave privada del emisor."
+      "A. Se calcula el hash del mensaje y se cifra ese resumen con la clave privada del firmante.",
+      "B. Se cifra el documento completo con la clave pública del receptor y se adjunta el certificado.",
+      "C. Se calcula un hash y se cifra con una clave simétrica compartida entre todos los receptores.",
+      "D. Se codifica el documento en Base64 y se añade la clave pública del emisor."
     ],
     "solucion": "D"
   },
@@ -1762,10 +1762,10 @@
   {
     "cuestion": "SegSisSw-T2-032-Pregunta: En la recepción de un documento firmado digitalmente, ¿cómo verifica el receptor que la firma es válida?",
     "opciones": [
-      "A. Envía la clave privada del emisor a la policía cibernética.",
-      "B. Descifra la firma con la clave pública del emisor para obtener el hash original y lo compara con el hash que él mismo calcula sobre el documento recibido.",
-      "C. Cifra de nuevo el documento con la clave privada del receptor.",
-      "D. Solicita al servidor web que reinicie el handshake TLS."
+      "A. Compara el certificado con la dirección IP y comprueba que ambos datos coinciden.",
+      "B. Descifra el documento completo con la clave pública y compara su tamaño con el original.",
+      "C. Obtiene el hash incluido en la firma con la clave pública del emisor y lo compara con el hash calculado sobre el documento recibido.",
+      "D. Calcula un nuevo par de claves y comprueba que la clave privada coincide con la firma."
     ],
     "solucion": "B"
   },
@@ -1782,10 +1782,10 @@
   {
     "cuestion": "SegSisSw-T2-034-Pregunta: ¿Qué es una Infraestructura de Clave Pública (PKI)?",
     "opciones": [
-      "A. Un conjunto de cables submarinos protegidos físicamente por gobiernos.",
-      "B. Un repositorio abierto donde cualquier usuario puede modificar las claves privadas de terceros.",
-      "C. Un plugin de desarrollo estático para detectar fallos SQLi.",
-      "D. El conjunto de hardware, software, personal, políticas y procedimientos para crear, gestionar, almacenar, distribuir y revocar certificados digitales."
+      "A. Un repositorio que almacena únicamente las claves privadas de los usuarios.",
+      "B. Una estructura de gestión de claves y certificados que incluye componentes, políticas, procedimientos y entidades de confianza.",
+      "C. Un algoritmo de cifrado simétrico que sustituye los certificados por contraseñas.",
+      "D. Un protocolo de transporte que cifra directamente todos los paquetes de una red."
     ],
     "solucion": "D"
   },
@@ -1832,10 +1832,10 @@
   {
     "cuestion": "SegSisSw-T2-039-Pregunta: ¿Cuáles de los siguientes campos forman parte de la estructura de un certificado digital X.509?",
     "opciones": [
-      "A. Versión, Número de serie, Datos de la CA emisora, Período de validez, Nombre del titular, Clave pública del titular y Firma de la CA.",
-      "B. Código fuente de la aplicación, Contraseña del usuario en texto claro y Dirección MAC del router.",
-      "C. Registro de pulsaciones de teclado, Reglas del WAF y Tokens de API de AWS.",
-      "D. Historial de navegación del cliente y dirección física del CPD."
+      "A. Versión, número de serie, emisor, validez, titular, clave pública y firma de la autoridad emisora.",
+      "B. Dirección IP, puerto TCP, contraseña del titular y algoritmo de compresión.",
+      "C. Nombre del navegador, sistema operativo, ruta del servidor y clave simétrica de sesión.",
+      "D. Huella digital del equipo, usuario administrador, clave privada y registro de conexiones."
     ],
     "solucion": "A"
   },
@@ -1882,10 +1882,10 @@
   {
     "cuestion": "SegSisSw-T2-044-Pregunta: En el establecimiento de conexión en TLS Clásico (basado en RSA), ¿cómo obtiene el servidor la clave de sesión simétrica?",
     "opciones": [
-      "A. El servidor envía su clave privada al navegador para que cifre la clave de sesión.",
-      "B. El navegador genera una clave de sesión aleatoria, la cifra con la clave pública del servidor (X.509) y se la envía; el servidor la descifra con su clave privada.",
-      "C. Ambas partes envían la clave de sesión en texto claro durante el ClientHello.",
-      "D. Se lee desde un archivo local guardado en el directorio /tmp."
+      "A. El servidor genera la clave y la transmite en claro dentro del mensaje ServerHello.",
+      "B. El cliente deriva la clave a partir del certificado y la envía mediante una función hash.",
+      "C. Ambos extremos obtienen la clave mediante ECDHE sin transmitir un secreto cifrado con RSA.",
+      "D. El cliente genera el secreto de sesión, lo cifra con la clave pública RSA del servidor y este lo recupera con su clave privada."
     ],
     "solucion": "B"
   },
@@ -1902,10 +1902,10 @@
   {
     "cuestion": "SegSisSw-T2-046-Pregunta: ¿Cómo soluciona TLS 1.3 la ausencia de Forward Secrecy y reduce la latencia en la negociación?",
     "opciones": [
-      "A. Eliminando la autenticación del servidor por completo.",
-      "B. Aumentando el tamaño de la clave RSA a 16.384 bits.",
-      "C. Obligando a enviar la clave de sesión grabada en un soporte físico USB.",
-      "D. Adoptando claves efímeras temporales mediante ECDHE (Elliptic Curve Diffie-Hellman Ephemeral), calculando el secreto compartido localmente en cada extremo sin enviarlo por la red."
+      "A. Utilizando una contraseña compartida que el navegador envía al servidor en cada petición.",
+      "B. Mediante claves efímeras ECDHE, con las que ambos extremos calculan localmente el secreto compartido.",
+      "C. Enviando la clave privada del cliente dentro del certificado X.509.",
+      "D. Cifrando todos los datos de aplicación con RSA antes de negociar la sesión."
     ],
     "solucion": "D"
   },
@@ -2986,6 +2986,286 @@
       "B. La fecha de caducidad.",
       "C. La firma digital de la entidad emisora.",
       "D. El número de puerto del servicio."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SegSisSw-T2-155-Pregunta: ¿Qué subcomando de OpenSSL se utiliza en los apuntes para generar una clave privada RSA?",
+    "opciones": [
+      "A. `openssl req`, que crea una solicitud de certificado a partir de una clave existente.",
+      "B. `openssl genrsa`, que genera una clave privada RSA y permite indicar su tamaño.",
+      "C. `openssl dgst`, que calcula un resumen hash del contenido de un fichero.",
+      "D. `openssl x509`, que inspecciona o genera certificados en formato X.509."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-156-Pregunta: En el ejemplo de generación de claves RSA de los apuntes, ¿qué función cumple `-out privada.key`?",
+    "opciones": [
+      "A. Indica el tamaño de la clave RSA que se va a generar.",
+      "B. Especifica el fichero que contiene la clave pública del servidor.",
+      "C. Establece el nombre del fichero donde se guardará la clave privada generada.",
+      "D. Define el certificado X.509 que firmará la clave recién creada."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SegSisSw-T2-157-Pregunta: Una vez generada `privada.key`, ¿qué comando de los apuntes permite extraer la clave pública correspondiente?",
+    "opciones": [
+      "A. `openssl rsa -in privada.key -out publica.key -pubout`.",
+      "B. `openssl req -new -in privada.key -out publica.key`.",
+      "C. `openssl dgst -sha256 -in privada.key -out publica.key`.",
+      "D. `openssl x509 -req -in privada.key -out publica.key`."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-158-Pregunta: ¿Qué operación realiza el comando `openssl dgst -md5 -out mensaje.hsh mensaje.txt`?",
+    "opciones": [
+      "A. Cifra el contenido de `mensaje.txt` con una clave privada RSA.",
+      "B. Convierte el mensaje a un certificado X.509 autofirmado.",
+      "C. Genera una solicitud CSR con los datos del propietario del fichero.",
+      "D. Calcula el resumen MD5 de `mensaje.txt` y lo guarda en `mensaje.hsh`."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "SegSisSw-T2-159-Pregunta: ¿Qué información se introduce al generar una solicitud de certificado mediante `openssl req -new`?",
+    "opciones": [
+      "A. Los datos de identificación que se incorporarán a la solicitud y la clave privada asociada.",
+      "B. La lista de certificados revocados y la dirección del servidor LDAP.",
+      "C. La contraseña con la que el navegador importará el archivo PKCS#12.",
+      "D. El contenido del mensaje que se cifrará posteriormente con AES."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-160-Pregunta: En el comando `openssl req -new -key privada.key -out peticioncertificado.csr`, ¿qué representa el fichero `.csr`?",
+    "opciones": [
+      "A. El certificado final ya firmado por una autoridad certificadora.",
+      "B. La clave pública exportada en formato PEM.",
+      "C. La solicitud de firma de certificado que contiene los datos del solicitante.",
+      "D. El almacén PKCS#12 que incluye certificado y clave privada."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SegSisSw-T2-161-Pregunta: ¿Para qué sirve `openssl req -in peticioncertificado.csr -text -noout`?",
+    "opciones": [
+      "A. Para firmar la solicitud utilizando la clave privada de la CA.",
+      "B. Para mostrar el contenido y los campos de la CSR sin generar otro fichero.",
+      "C. Para cifrar la solicitud y convertirla en un archivo `.p12`.",
+      "D. Para comprobar que el certificado ya está instalado en el navegador."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-162-Pregunta: En el ejemplo de cifrado simétrico con `openssl enc -aes-256-cbc`, ¿qué función cumple `-in`?",
+    "opciones": [
+      "A. Identifica el fichero de salida que contendrá los datos cifrados.",
+      "B. Selecciona el algoritmo de derivación de claves utilizado por PBKDF2.",
+      "C. Indica el fichero del que se obtiene la contraseña de cifrado.",
+      "D. Señala el fichero de entrada cuyo contenido se va a cifrar."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "SegSisSw-T2-163-Pregunta: En el comando de cifrado simétrico de los apuntes, ¿qué aporta la opción `-pbkdf2`?",
+    "opciones": [
+      "A. Deriva la clave a partir de la contraseña mediante PBKDF2.",
+      "B. Convierte el cifrado AES-CBC en un algoritmo de clave pública.",
+      "C. Añade automáticamente el certificado de la autoridad certificadora.",
+      "D. Calcula un hash del fichero y lo utiliza como firma digital."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-164-Pregunta: ¿Qué indica la opción `-pass file:key.txt` en el comando `openssl enc`?",
+    "opciones": [
+      "A. Que `key.txt` contiene el texto cifrado que se va a descifrar.",
+      "B. Que la clave privada RSA debe almacenarse dentro de `key.txt`.",
+      "C. Que OpenSSL debe leer la contraseña desde el fichero `key.txt`.",
+      "D. Que el certificado de la CA se encuentra en el fichero `key.txt`."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SegSisSw-T2-165-Pregunta: ¿Qué opción del subcomando `openssl enc` activa el descifrado en el ejemplo de los apuntes?",
+    "opciones": [
+      "A. `-pubin`, que indica que se utiliza una clave pública.",
+      "B. `-d`, que selecciona la operación de descifrado.",
+      "C. `-req`, que interpreta la entrada como una CSR.",
+      "D. `-x509`, que genera un certificado autofirmado."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-166-Pregunta: Para cifrar `key.txt` mediante criptografía asimétrica usando `publica.key`, ¿qué combinación de opciones es necesaria en el ejemplo?",
+    "opciones": [
+      "A. `-decrypt` y `-inkey privada.key`, porque el emisor cifra con su clave privada.",
+      "B. `-sign` y `-CAkey ca.key`, porque todo cifrado asimétrico requiere una CA.",
+      "C. `-encrypt`, `-inkey publica.key` y `-pubin`, para indicar que la entrada de clave es pública.",
+      "D. `-req`, `-in key.txt` y `-out publica.key`, para generar una solicitud."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SegSisSw-T2-167-Pregunta: Después de cifrar un fichero con la clave pública del destinatario, ¿qué clave debe utilizarse para descifrarlo?",
+    "opciones": [
+      "A. La clave privada correspondiente a la clave pública utilizada en el cifrado.",
+      "B. La clave pública del emisor, que permite recuperar el texto original.",
+      "C. La clave privada de la autoridad certificadora que emitió el certificado.",
+      "D. Una clave simétrica nueva que se genera a partir del texto cifrado."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-168-Pregunta: ¿Qué efecto tiene `-x509` en el comando `openssl req -x509 -newkey rsa:2048 ...` utilizado para crear la CA?",
+    "opciones": [
+      "A. Solicita que OpenSSL genere únicamente una CSR pendiente de firma.",
+      "B. Exporta el certificado existente a un contenedor PKCS#12.",
+      "C. Calcula el hash del certificado y lo almacena en un fichero separado.",
+      "D. Indica que se genere un certificado X.509 autofirmado en lugar de una CSR ordinaria."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "SegSisSw-T2-169-Pregunta: En `openssl req -x509 -newkey rsa:2048 -keyout ca.key -days 3650 -out ca.crt`, ¿qué contiene `ca.key`?",
+    "opciones": [
+      "A. La solicitud de certificado que debe enviarse a otra CA.",
+      "B. La clave privada generada para la autoridad certificadora.",
+      "C. El certificado público autofirmado que se instala en los navegadores.",
+      "D. El número de serie asignado al siguiente certificado emitido."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-170-Pregunta: ¿Qué función desempeña `-days 3650` al crear el certificado autofirmado de la CA?",
+    "opciones": [
+      "A. Establece el tamaño de la clave RSA en 3650 bits.",
+      "B. Limita a 3650 el número de certificados que podrá emitir la CA.",
+      "C. Fija en 3650 días el período de validez del certificado generado.",
+      "D. Define el número de iteraciones de PBKDF2 para proteger la clave privada."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SegSisSw-T2-171-Pregunta: Para firmar una CSR con una CA ya creada, ¿qué archivos y opciones aparecen en el comando `openssl x509 -req` de los apuntes?",
+    "opciones": [
+      "A. `-CA ca.crt` y `-CAkey ca.key`, junto con `-in` para indicar la CSR.",
+      "B. `-pubin publica.key` y `-encrypt` para cifrar la solicitud.",
+      "C. `-pass file:key.txt` y `-aes-256-cbc` para proteger el certificado.",
+      "D. `-signkey client.key` y `-x509` para crear una CA nueva."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-172-Pregunta: En el comando de firma de una CSR, ¿para qué se utiliza `-CAcreateserial`?",
+    "opciones": [
+      "A. Para crear una nueva clave privada RSA para cada cliente.",
+      "B. Para generar un archivo PKCS#12 con el certificado firmado.",
+      "C. Para convertir el certificado de la CA en una lista CRL.",
+      "D. Para crear automáticamente el archivo de número de serie utilizado al emitir el certificado."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "SegSisSw-T2-173-Pregunta: ¿Qué diferencia describe correctamente la firma de una CSR por una CA y la autofirma de un certificado?",
+    "opciones": [
+      "A. En ambos casos firma siempre una CA externa reconocida por el navegador.",
+      "B. En la firma por CA se utiliza la clave privada de la CA; en la autofirma se utiliza la clave privada asociada al propio certificado.",
+      "C. La autofirma utiliza una clave simétrica y la firma por CA utiliza una función hash sin claves.",
+      "D. La firma por CA no genera un certificado X.509, mientras que la autofirma sí."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-174-Pregunta: En el procedimiento de creación de un certificado de cliente, ¿cuál es el orden general indicado en los apuntes?",
+    "opciones": [
+      "A. Crear primero el `.p12`, extraer después la CSR y finalmente generar la clave pública.",
+      "B. Firmar una clave privada, convertirla a hash y añadirla al almacén del navegador.",
+      "C. Generar `client.key`, crear `client.csr` y obtener `client.crt` firmado por la CA.",
+      "D. Crear `client.crt` autofirmado, borrar la clave privada y solicitar después una CA."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SegSisSw-T2-175-Pregunta: ¿Por qué se exportan `client.crt` y `client.key` a un archivo PKCS#12?",
+    "opciones": [
+      "A. Porque el formato `.p12` reúne el certificado y su clave privada, y puede incluir el certificado de la CA para facilitar su importación.",
+      "B. Porque transforma el certificado X.509 en una clave simétrica compatible con AES.",
+      "C. Porque elimina la clave privada y conserva únicamente los datos públicos del titular.",
+      "D. Porque convierte la CSR en un fichero de texto que cualquier navegador puede editar."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-176-Pregunta: En `openssl pkcs12 -export -in client.crt -inkey client.key -certfile ca.crt -out client.p12`, ¿qué aporta `-certfile ca.crt`?",
+    "opciones": [
+      "A. Indica qué clave privada debe utilizarse para firmar de nuevo el certificado del cliente.",
+      "B. Selecciona el certificado del servidor que cifra el archivo PKCS#12.",
+      "C. Especifica la CSR original a partir de la que se emitió el certificado.",
+      "D. Incluye en el contenedor el certificado de la CA que firmó el certificado del cliente."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "SegSisSw-T2-177-Pregunta: Durante la exportación a PKCS#12, ¿qué protección adicional solicita OpenSSL según los apuntes?",
+    "opciones": [
+      "A. Una dirección IP desde la que se permitirá importar el certificado.",
+      "B. Una contraseña que será necesaria al importar el contenedor en el navegador u otro sistema.",
+      "C. La clave pública de cada servidor al que se conectará el cliente.",
+      "D. Un número de serie que sustituye al identificador del certificado X.509."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-178-Pregunta: ¿Qué comando de los apuntes permite comprobar el certificado del cliente frente al certificado de la CA?",
+    "opciones": [
+      "A. `openssl dgst -md5 client.crt`.",
+      "B. `openssl enc -d -aes-256-cbc -in client.crt`.",
+      "C. `openssl verify -CAfile ca.crt client.crt`.",
+      "D. `openssl genrsa -out client.crt 2048`."
+    ],
+    "solucion": "C"
+  },
+  {
+    "cuestion": "SegSisSw-T2-179-Pregunta: En el escenario de autenticación de clientes descrito en el PDF, ¿qué condición se pretende imponer al acceso a la página web?",
+    "opciones": [
+      "A. Que el navegador presente un certificado de cliente emitido por la CA de confianza configurada por el servidor.",
+      "B. Que el usuario conozca la contraseña de la clave privada del servidor.",
+      "C. Que todas las peticiones se realicen desde una dirección IP previamente fijada.",
+      "D. Que el cliente instale únicamente el certificado público del servidor, sin clave propia."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "SegSisSw-T2-180-Pregunta: ¿Qué conjunto de archivos aparece entre los entregables del ejercicio de autenticación de clientes?",
+    "opciones": [
+      "A. `server.key`, `server.csr`, `server.log`, `client.exe` y `root.txt`.",
+      "B. `ca.crt`, `client.key`, `client.csr`, `client.crt` y `client.p12`.",
+      "C. `mensaje.txt`, `mensaje.hsh`, `key_enc`, `key_des.txt` y `server.conf`.",
+      "D. `ca.p12`, `client.pem`, `client.zip`, `client.hash` y `revoked.txt`."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "SegSisSw-T2-181-Pregunta: ¿Qué representa el archivo `client.csr` dentro del proceso de emisión del certificado de cliente?",
+    "opciones": [
+      "A. El contenedor final que incorpora el certificado y la clave privada del navegador.",
+      "B. El certificado de la CA que se importa como raíz de confianza.",
+      "C. La lista de certificados revocados publicada por la autoridad.",
+      "D. La solicitud que contiene los datos del cliente y que la CA debe firmar para emitir el certificado."
+    ],
+    "solucion": "D"
+  },
+  {
+    "cuestion": "SegSisSw-T2-182-Pregunta: ¿Qué afirmación sobre el certificado autofirmado de la CA creada en el ejercicio es correcta?",
+    "opciones": [
+      "A. Su autofirma hace que todos los navegadores lo consideren automáticamente una CA pública de confianza.",
+      "B. No contiene una clave pública, ya que solo almacena la clave privada de la CA.",
+      "C. Permite construir una CA propia para el ejercicio, pero su confianza debe configurarse explícitamente en los clientes.",
+      "D. Es equivalente a una CSR y no puede utilizarse para firmar certificados de cliente."
     ],
     "solucion": "C"
   }
