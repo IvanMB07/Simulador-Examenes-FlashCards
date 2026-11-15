@@ -103,3 +103,24 @@ test('la interfaz de CalSisSw conserva la función que inicia las sesiones y sus
   const missing = [...new Set(selectors.filter(id => !ids.has(id)))];
   assert.deepEqual(missing, []);
 });
+
+
+test('la nueva interfaz agrupa perfil y sincronización y ubica el contador en temas', () => {
+  const html = readFileSync(new URL('../simulador-CalSisSw/index.html', import.meta.url), 'utf8');
+  const script = readFileSync(new URL('../simulador-CalSisSw/script.js', import.meta.url), 'utf8');
+  const css = readFileSync(new URL('../simulador-CalSisSw/styles.css', import.meta.url), 'utf8');
+
+  assert.doesNotMatch(html, /href="\.\.\/index\.html" class="back"/);
+  assert.doesNotMatch(html, /question-bank-summary|account-disclosure/);
+  assert.match(html, /class="profile-sync-panel"/);
+  assert.match(html, /class="profile-sync-grid"/);
+  assert.ok(html.indexOf('id="questionBankCount"') > html.indexOf('id="topicSettings"'));
+  assert.match(html, /class="topic-order-setting"/);
+  assert.match(html, /class="results-top-actions"/);
+  assert.equal((html.match(/id="retryExam"/g) || []).length, 1);
+  assert.equal((html.match(/id="finishMenu"/g) || []).length, 1);
+  assert.match(html, /Nuevo test/);
+  assert.match(script, /className='option-number'/);
+  assert.match(css, /\.profile-sync-grid/);
+  assert.match(css, /\.results-top-actions/);
+});
