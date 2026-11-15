@@ -1,71 +1,262 @@
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#10151d"><meta name="description" content="Simulador de Calidad de Sistemas Software">
-<link rel="manifest" href="./manifest.webmanifest"><link rel="icon" type="image/svg+xml" href="./icon.svg"><link rel="apple-touch-icon" href="./icon.svg"><link rel="stylesheet" href="./styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#120d0b">
+<meta name="description" content="Simulador de estudio: practica, examínate y consulta tu evolución.">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" type="image/svg+xml" href="./icon.svg">
+<link rel="apple-touch-icon" href="./icon.svg">
+<link rel="stylesheet" href="./styles.css">
 <title>Simulador · CalSisSw</title>
 </head>
 <body>
-<main class="shell">
-<header class="top"><a href="../index.html" class="back">← Simuladores</a><span class="eyebrow">ESTUDIO · CALIDAD DEL SOFTWARE</span><h1>Calidad de Sistemas Software</h1><p>Practica, examínate y consulta tu evolución.</p></header>
-<section id="menu" class="panel">
-<div class="row"><div><h2>Tu espacio de estudio</h2><p>Perfil: <strong id="profileName">Usuario principal</strong></p></div><span id="questionBankCount" class="muted">Cargando preguntas…</span></div>
-<div class="profile-controls"><label for="profileSelect">Perfil</label><select id="profileSelect"><option value="default">Usuario principal</option></select><button id="addProfile" class="secondary">Nuevo perfil</button><button id="removeProfile" class="secondary">Eliminar perfil</button></div>
-<section id="topicSettings" class="topic-settings">
-  <div class="row"><div><h3>Temas de práctica</h3><p class="note">Selecciona los temas que quieres trabajar. Las preguntas se reparten de forma equilibrada.</p></div></div>
-  <div id="topicFilters" class="topic-filters"></div>
-  <p id="topicDistribution" class="topic-distribution" aria-live="polite"></p>
-  <label class="setting-row" for="orderByTopic"><input id="orderByTopic" type="checkbox"><span><strong>Ordenar por temas</strong><small>Presenta primero las preguntas de un tema y después las del siguiente.</small></span></label>
-</section>
-<div class="resume" id="resumePanel" hidden><div><strong>Hay una sesión guardada</strong><p id="resumeText"></p></div><button id="resumeButton">Reanudar</button><button id="discardButton" class="secondary">Descartar</button></div>
-<section class="cloud-box" aria-labelledby="cloudTitle">
-  <div class="row"><h3 id="cloudTitle">Sincronización entre dispositivos</h3><span id="cloudState" class="cloud-state">Local</span></div>
-  <p id="cloudStatusMessage" class="cloud-message" role="status" aria-live="polite">Los datos se guardan en este dispositivo. Configura Firebase para sincronizarlos.</p>
-  <div id="cloudAuthControls" class="cloud-controls" hidden>
-    <label for="cloudEmail">Correo electrónico</label>
-    <input id="cloudEmail" type="email" autocomplete="email" placeholder="tu correo electrónico">
-    <label for="cloudPassword">Contraseña</label>
-    <input id="cloudPassword" type="password" autocomplete="current-password" placeholder="Mínimo 6 caracteres">
-    <div class="toolbar">
-      <button id="cloudLogin">Iniciar sesión</button>
-      <button id="cloudRegister" class="secondary">Crear cuenta</button>
-      <button id="cloudReset" class="secondary">Recuperar contraseña</button>
+<div class="app-layout">
+  <aside class="sidebar" aria-label="Navegación principal">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span class="brand-name">Simulador de<br><strong>estudio</strong></span>
+    </a>
+    <nav class="sidebar-nav">
+      <button type="button" class="nav-link active" data-view="menu">
+        <span class="nav-icon" aria-hidden="true">⌂</span><span>Inicio</span>
+      </button>
+      <button type="button" class="nav-link" data-view="history">
+        <span class="nav-icon" aria-hidden="true">▥</span><span>Estadísticas</span>
+      </button>
+      <button type="button" class="nav-link" data-scroll="profileControls">
+        <span class="nav-icon" aria-hidden="true">♙</span><span>Perfiles</span>
+      </button>
+      <button type="button" class="nav-link" data-scroll="questionBankSummary">
+        <span class="nav-icon" aria-hidden="true">▤</span><span>Banco de preguntas</span>
+      </button>
+      <button type="button" class="nav-link" data-scroll="studySettings">
+        <span class="nav-icon" aria-hidden="true">⚙</span><span>Ajustes</span>
+      </button>
+    </nav>
+    <div class="sidebar-foot">
+      <span class="sidebar-foot-dot"></span>
+      <span>Progreso guardado por perfil</span>
     </div>
-  </div>
-  <div id="cloudSignedControls" class="cloud-controls" hidden>
-    <p>Cuenta: <strong id="cloudAccount"></strong></p>
-    <div class="toolbar">
-      <button id="cloudSyncNow">Sincronizar ahora</button>
-      <button id="cloudLogout" class="secondary">Cerrar sesión</button>
-    </div>
-  </div>
-  <p id="cloudSetupHint" class="note">La sincronización se activa al configurar el proyecto Firebase y las reglas de Firestore del repositorio.</p>
-</section>
-<div class="stats"><div><span>Sesiones guardadas</span><strong id="historyCount">0</strong></div><div><span>Preguntas falladas</span><strong id="failedCount">0</strong></div><div><span>Calificación</span><strong>+1 / −0,5 / 0</strong></div></div>
-<div class="mode-grid"><article><span class="tag">MODO 01</span><h3>Práctica</h3><p>Preguntas aleatorias, avance libre y corrección al terminar.</p><button id="startPractice">Empezar práctica</button></article><article><span class="tag">MODO 02</span><h3>Examen</h3><p>20 preguntas · 75 minutos · puntuación directa.</p><button id="startExam">Empezar examen</button></article><article><span class="tag">MODO 03</span><h3>Test de fallos</h3><p>Repasa preguntas respondidas incorrectamente o en blanco.</p><button id="startFailures" class="secondary" disabled>Repasar fallos</button></article></div>
-<div class="toolbar"><button id="openHistory" class="secondary">Ver historial</button><button id="clearFailures" class="secondary">Limpiar fallos</button><button id="exportFailures" class="secondary">Exportar fallos JSON</button><button id="importFailures" class="secondary">Importar fallos JSON</button><input id="failureFile" type="file" accept="application/json,.json" hidden></div>
-<div class="toolbar"><button id="exportBackup" class="secondary">Exportar copia completa</button><button id="importBackup" class="secondary">Importar copia completa</button><input id="backupFile" type="file" accept="application/json,.json" hidden></div>
-<p class="note">Los datos se guardan primero en este dispositivo. Al iniciar sesión con Firebase, se sincronizan también entre tus dispositivos.</p>
-</section>
-<section id="exam" class="panel" hidden>
-<div class="exam-head"><span id="examMode"></span><span id="questionCount">Pregunta 1</span><span>Tiempo: <strong id="timer">0:00</strong></span></div>
-<div class="progress"><div id="progress" role="progressbar" aria-label="Progreso de la sesión" aria-valuemin="1" aria-valuemax="20" aria-valuenow="1"></div></div>
-<div id="questionText" class="question-text" tabindex="-1"></div><div id="options" class="options" role="group" aria-label="Opciones de respuesta"></div><p id="feedback" class="feedback" role="status" aria-live="polite" hidden></p>
-<section id="examSettings" class="exam-settings" hidden>
-  <label class="setting-row" for="autoAdvanceExam"><input id="autoAdvanceExam" type="checkbox"><span><strong>Avance automático</strong><small>Pasa a la siguiente pregunta al responder.</small></span></label>
-</section>
-<p id="finishConfirmToast" class="finish-confirm-toast" role="status" aria-live="polite" hidden></p>
-<div class="exam-actions"><button id="previous" class="secondary">Anterior</button><button id="next">Siguiente</button><button id="finish" class="danger">Finalizar</button></div>
-<p class="note keyboard-help">Teclas: ← / → para navegar, ↑ / ↓ para cambiar de opción, 1–4 o Espacio para responder, Enter para terminar.</p>
-</section>
-<section id="results" class="panel" hidden>
-<span class="eyebrow">SESIÓN FINALIZADA</span><h2>Resultado</h2><strong id="score" class="score">0 puntos</strong>
-<div class="stats"><div><span>Correctas</span><strong id="correct">0</strong></div><div><span>Incorrectas</span><strong id="incorrect">0</strong></div><div><span>En blanco</span><strong id="blank">0</strong></div><div><span>Duración</span><strong id="duration">0:00</strong></div></div>
-<h3>Preguntas que debes revisar</h3><div id="errors" class="errors"></div><div class="toolbar"><button id="retryExam">Repetir examen</button><button id="finishMenu" class="secondary">Volver al menú</button></div>
-</section>
-<section id="history" class="panel" hidden><div class="row"><h2>Historial de sesiones</h2><button id="historyBack" class="secondary">Volver</button></div><div id="historyChart" class="chart" role="img" aria-label="Gráfico de puntuaciones recientes"></div><div id="historyRows" class="history-list"></div><button id="exportHistory" class="secondary">Exportar historial JSON</button></section>
-<footer>Simulador de CalSisSw · Datos locales por perfil</footer>
-</main>
-<script type="module" src="./script.js"></script><script>if("serviceWorker" in navigator && location.protocol==="https:") navigator.serviceWorker.register("../sw.js",{scope:"../"}).catch(console.error);</script>
-</body></html>
+  </aside>
+
+  <main class="shell">
+    <header class="top">
+      <a href="../index.html" class="back"><span aria-hidden="true">←</span> Simuladores</a>
+      <div class="top-heading">
+        <span class="eyebrow">ENTORNO DE ESTUDIO</span>
+        <h1>Calidad de Sistemas Software</h1>
+        <p>Practica, examínate y consulta tu evolución.</p>
+      </div>
+    </header>
+
+    <section id="menu" class="page panel">
+      <div class="home-heading">
+        <div>
+          <span class="section-kicker">TU ESPACIO DE ESTUDIO</span>
+          <h2>¿Qué quieres trabajar hoy?</h2>
+        </div>
+        <div class="question-bank-summary" id="questionBankSummary">
+          <span class="summary-icon" aria-hidden="true">▤</span>
+          <span><small>Banco de preguntas</small><strong id="questionBankCount">Cargando preguntas…</strong></span>
+        </div>
+      </div>
+
+      <div class="mode-heading"><span class="mode-heading-icon" aria-hidden="true">▱</span><h3>Elige un modo</h3></div>
+      <div class="mode-grid">
+        <article class="mode-card mode-practice">
+          <div class="mode-icon" aria-hidden="true">◎</div>
+          <div class="mode-copy"><span class="mode-label">MODO 01</span><h3>Práctica</h3><p>Preguntas aleatorias con feedback inmediato.</p></div>
+          <button id="startPractice" class="mode-action" type="button"><span>Empezar práctica</span><span aria-hidden="true">›</span></button>
+        </article>
+        <article class="mode-card mode-exam">
+          <div class="mode-icon" aria-hidden="true">⌑</div>
+          <div class="mode-copy"><span class="mode-label">MODO 02</span><h3>Examen</h3><p>20 preguntas · 75 minutos · puntuación directa.</p></div>
+          <button id="startExam" class="mode-action" type="button"><span>Empezar examen</span><span aria-hidden="true">›</span></button>
+        </article>
+        <article class="mode-card mode-failures">
+          <div class="mode-icon" aria-hidden="true">↶</div>
+          <div class="mode-copy"><span class="mode-label">MODO 03</span><h3>Test de fallos</h3><p>Repasa las preguntas que has respondido mal o has dejado en blanco.</p></div>
+          <button id="startFailures" class="mode-action" type="button" disabled><span>Repasar fallos</span><span aria-hidden="true">›</span></button>
+        </article>
+      </div>
+
+      <div class="home-settings-grid">
+        <section class="profile-card" id="profileControls" aria-labelledby="profileHeading">
+          <div class="subsection-heading"><span class="subsection-icon" aria-hidden="true">♙</span><h3 id="profileHeading">Perfil de usuario</h3></div>
+          <div class="profile-controls">
+            <label class="visually-hidden" for="profileSelect">Perfil activo</label>
+            <select id="profileSelect"><option value="default">Usuario principal</option></select>
+            <button id="addProfile" class="icon-button" type="button" aria-label="Crear perfil" title="Crear perfil">＋</button>
+            <button id="removeProfile" class="icon-button" type="button" aria-label="Eliminar perfil" title="Eliminar perfil">−</button>
+          </div>
+        </section>
+
+        <section id="topicSettings" class="topic-settings" aria-labelledby="topicsHeading">
+          <div class="subsection-heading">
+            <span class="subsection-icon" aria-hidden="true">▱</span>
+            <h3 id="topicsHeading">Seleccionar temas <small>(solo práctica)</small></h3>
+          </div>
+          <div id="topicFilters" class="topic-filters"></div>
+          <p id="topicDistribution" class="topic-distribution" aria-live="polite"></p>
+          <label class="setting-row" for="orderByTopic">
+            <input id="orderByTopic" type="checkbox">
+            <span><strong>Ordenar por temas</strong><small>Presenta juntas las preguntas de cada tema.</small></span>
+          </label>
+        </section>
+      </div>
+
+      <section class="advanced-card" id="studySettings" aria-label="Opciones avanzadas">
+        <details>
+          <summary><span class="subsection-icon" aria-hidden="true">⚙</span><strong>Opciones avanzadas</strong><span class="disclosure-chevron" aria-hidden="true">⌄</span></summary>
+          <div class="advanced-content">
+            <p class="note">Ajusta el comportamiento de las sesiones de estudio.</p>
+            <div class="setting-row">
+              <span><strong>Avance automático en examen</strong><small>Pasa a la siguiente pregunta al seleccionar una respuesta.</small></span>
+              <label class="switch" for="autoAdvanceHome"><input id="autoAdvanceHome" type="checkbox"><span aria-hidden="true"></span></label>
+            </div>
+            <p class="note">Puedes activar también esta opción durante un examen.</p>
+          </div>
+        </details>
+      </section>
+
+      <div class="resume" id="resumePanel" hidden>
+        <div><strong>Hay una sesión guardada</strong><p id="resumeText"></p></div>
+        <button id="resumeButton" type="button">Reanudar</button>
+        <button id="discardButton" class="secondary" type="button">Descartar</button>
+      </div>
+
+      <section class="stats" aria-label="Resumen del progreso">
+        <div><span>Sesiones guardadas</span><strong id="historyCount">0</strong></div>
+        <div><span>Preguntas falladas</span><strong id="failedCount">0</strong></div>
+        <div><span>Puntuación</span><strong>+1 / −0,5 / 0</strong></div>
+      </section>
+
+      <details class="account-disclosure" id="accountSettings">
+        <summary><span class="subsection-icon" aria-hidden="true">☁</span><strong>Cuenta y sincronización</strong><span id="cloudState" class="cloud-state">Local</span></summary>
+        <section class="cloud-box" aria-labelledby="cloudTitle">
+          <h3 id="cloudTitle">Sincronización entre dispositivos</h3>
+          <p id="cloudStatusMessage" class="cloud-message" role="status" aria-live="polite">Los datos se guardan en este dispositivo. Configura Firebase para sincronizarlos.</p>
+          <div id="cloudAuthControls" class="cloud-controls" hidden>
+            <label for="cloudEmail">Correo electrónico</label>
+            <input id="cloudEmail" type="email" autocomplete="email" placeholder="tu correo electrónico">
+            <label for="cloudPassword">Contraseña</label>
+            <input id="cloudPassword" type="password" autocomplete="current-password" placeholder="Mínimo 6 caracteres">
+            <div class="toolbar">
+              <button id="cloudLogin" type="button">Iniciar sesión</button>
+              <button id="cloudRegister" class="secondary" type="button">Crear cuenta</button>
+              <button id="cloudReset" class="secondary" type="button">Recuperar contraseña</button>
+            </div>
+          </div>
+          <div id="cloudSignedControls" class="cloud-controls" hidden>
+            <p>Cuenta: <strong id="cloudAccount"></strong></p>
+            <div class="toolbar">
+              <button id="cloudSyncNow" type="button">Sincronizar ahora</button>
+              <button id="cloudLogout" class="secondary" type="button">Cerrar sesión</button>
+            </div>
+          </div>
+          <p id="cloudSetupHint" class="note">La sincronización se activa al configurar el proyecto Firebase y las reglas de Firestore del repositorio.</p>
+        </section>
+      </details>
+
+      <section class="data-tools" aria-label="Gestión de datos">
+        <div class="toolbar">
+          <button id="openHistory" class="secondary" type="button">Ver historial</button>
+          <button id="clearFailures" class="secondary" type="button">Limpiar fallos</button>
+          <button id="exportFailures" class="secondary" type="button">Exportar fallos</button>
+          <button id="importFailures" class="secondary" type="button">Importar fallos</button>
+          <input id="failureFile" type="file" accept="application/json,.json" hidden>
+        </div>
+        <div class="toolbar secondary-tools">
+          <button id="exportBackup" class="secondary" type="button">Exportar copia completa</button>
+          <button id="importBackup" class="secondary" type="button">Importar copia completa</button>
+          <input id="backupFile" type="file" accept="application/json,.json" hidden>
+        </div>
+      </section>
+    </section>
+
+    <section id="exam" class="page exam-page panel" hidden>
+      <div class="exam-mobile-header">
+        <button id="leaveExam" class="back-button" type="button"><span aria-hidden="true">←</span> Salir</button>
+        <span id="examModePill" class="mode-pill">Práctica</span>
+        <span class="exam-mobile-spacer"></span>
+      </div>
+      <div class="exam-head">
+        <span id="examMode" class="exam-mode-label"></span>
+        <span id="questionCount">Pregunta 1</span>
+        <span class="timer-pill">◷ <strong id="timer">0:00</strong></span>
+      </div>
+      <div class="progress-track"><div class="progress"><div id="progress" role="progressbar" aria-label="Progreso de la sesión" aria-valuemin="1" aria-valuemax="20" aria-valuenow="1"></div></div><span id="progressPercent">0%</span></div>
+      <div class="question-card">
+        <span id="questionIdentifier" class="question-id" hidden></span>
+        <div id="questionText" class="question-text" tabindex="-1"></div>
+      </div>
+      <div id="options" class="options" role="group" aria-label="Opciones de respuesta"></div>
+      <p id="feedback" class="feedback" role="status" aria-live="polite" hidden></p>
+      <section id="examSettings" class="exam-settings" hidden>
+        <label class="setting-row" for="autoAdvanceExam">
+          <span><strong>Avance automático</strong><small>Pasa a la siguiente pregunta al responder.</small></span>
+          <span class="switch"><input id="autoAdvanceExam" type="checkbox"><span aria-hidden="true"></span></span>
+        </label>
+      </section>
+      <p id="finishConfirmToast" class="finish-confirm-toast" role="status" aria-live="polite" hidden></p>
+      <div class="exam-actions">
+        <button id="previous" class="secondary" type="button">← Anterior</button>
+        <button id="next" type="button">Siguiente →</button>
+        <button id="finish" class="danger" type="button">Finalizar</button>
+      </div>
+      <p class="note keyboard-help">Teclas: ← / → para navegar, ↑ / ↓ para cambiar de opción, 1–4 o Espacio para responder, Enter para terminar.</p>
+    </section>
+
+    <section id="results" class="page results-page panel" hidden>
+      <div class="result-hero">
+        <span id="resultMode" class="mode-pill mode-pill-exam">Sesión</span>
+        <div class="result-symbol" aria-hidden="true">✦</div>
+        <span class="section-kicker">SESIÓN COMPLETADA</span>
+        <h2>Este es tu resultado</h2>
+        <p>Has terminado la sesión. Revisa tus respuestas y sigue mejorando.</p>
+        <strong id="score" class="score">0 puntos</strong>
+      </div>
+      <div class="stats result-stats">
+        <div><span class="metric-icon metric-correct" aria-hidden="true">✓</span><strong id="correct">0</strong><small>Correctas</small></div>
+        <div><span class="metric-icon metric-wrong" aria-hidden="true">×</span><strong id="incorrect">0</strong><small>Incorrectas</small></div>
+        <div><span class="metric-icon metric-blank" aria-hidden="true">−</span><strong id="blank">0</strong><small>Sin responder</small></div>
+        <div><span class="metric-icon metric-duration" aria-hidden="true">◷</span><strong id="duration">0:00</strong><small>Duración</small></div>
+      </div>
+      <div class="review-heading"><span class="subsection-icon" aria-hidden="true">☷</span><h3>Revisión de preguntas</h3><span id="reviewSummary" class="muted"></span></div>
+      <div class="review-filters" id="reviewFilterBar" role="group" aria-label="Filtrar preguntas revisadas">
+        <button type="button" data-review-filter="all" aria-pressed="true">Todas</button>
+        <button type="button" data-review-filter="correct" aria-pressed="false">Correctas</button>
+        <button type="button" data-review-filter="incorrect" aria-pressed="false">Incorrectas</button>
+        <button type="button" data-review-filter="blank" aria-pressed="false">Sin responder</button>
+      </div>
+      <div id="reviewQuestions" class="review-questions"></div>
+      <div id="errors" class="errors" hidden></div>
+      <div class="toolbar result-actions">
+        <button id="retryExam" type="button">↻ Repetir sesión</button>
+        <button id="finishMenu" class="secondary" type="button">⌂ Volver al inicio</button>
+      </div>
+    </section>
+
+    <section id="history" class="page history-page panel" hidden>
+      <div class="page-title-row"><div><span class="section-kicker">TU EVOLUCIÓN</span><h2>Historial de sesiones</h2></div><button id="historyBack" class="secondary" type="button">Volver</button></div>
+      <div id="historyChart" class="chart" role="img" aria-label="Gráfico de puntuaciones recientes"></div>
+      <div id="historyRows" class="history-list"></div>
+      <button id="exportHistory" class="secondary" type="button">Exportar historial JSON</button>
+    </section>
+
+    <footer class="app-footer">Simulador de estudio · Progreso local y sincronizado</footer>
+  </main>
+
+  <nav class="mobile-nav" aria-label="Navegación inferior">
+    <button type="button" class="mobile-nav-link active" data-view="menu"><span aria-hidden="true">⌂</span><small>Inicio</small></button>
+    <button type="button" class="mobile-nav-link" data-view="history"><span aria-hidden="true">▥</span><small>Historial</small></button>
+    <button type="button" class="mobile-nav-link" data-scroll="profileControls"><span aria-hidden="true">♙</span><small>Perfiles</small></button>
+    <button type="button" class="mobile-nav-link" data-scroll="studySettings"><span aria-hidden="true">⚙</span><small>Ajustes</small></button>
+  </nav>
+</div>
+<script type="module" src="./script.js"></script>
+<script>if("serviceWorker" in navigator && location.protocol==="https:") navigator.serviceWorker.register("../sw.js",{scope:"../"}).catch(console.error);</script>
+</body>
+</html>
