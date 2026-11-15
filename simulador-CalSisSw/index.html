@@ -21,7 +21,7 @@
 <section id="exam" class="panel" hidden>
 <div class="exam-head"><span id="examMode"></span><span id="questionCount">Pregunta 1</span><span>Tiempo: <strong id="timer">0:00</strong></span></div>
 <div class="progress"><div id="progress" role="progressbar" aria-label="Progreso de la sesión" aria-valuemin="1" aria-valuemax="20" aria-valuenow="1"></div></div>
-<h2 id="questionText" tabindex="-1"></h2><div id="options" class="options" role="group" aria-label="Opciones de respuesta"></div>
+<h2 id="questionText" tabindex="-1"></h2><div id="options" class="options" role="group" aria-label="Opciones de respuesta"></div><p id="feedback" class="feedback" role="status" aria-live="polite" hidden></p>
 <div class="exam-actions"><button id="previous" class="secondary">Anterior</button><button id="next">Siguiente</button><button id="finish" class="danger">Finalizar</button></div>
 <p class="note">Teclas: ← / → para navegar y 1–4 para responder.</p>
 </section>
@@ -33,5 +33,5 @@
 <section id="history" class="panel" hidden><div class="row"><h2>Historial de sesiones</h2><button id="historyBack" class="secondary">Volver</button></div><div id="historyChart" class="chart" role="img" aria-label="Gráfico de puntuaciones recientes"></div><div id="historyRows" class="history-list"></div><button id="exportHistory" class="secondary">Exportar historial JSON</button></section>
 <footer>Simulador de CalSisSw · Datos locales por perfil</footer>
 </main>
-<script type="module" src="./script.js"></script><script>if("serviceWorker" in navigator && location.protocol==="https:") navigator.serviceWorker.register("./sw.js").catch(console.error);</script>
+<script type="module" src="./script.js"></script><script>if("serviceWorker" in navigator && location.protocol==="https:") navigator.serviceWorker.register("../sw.js",{scope:"../"}).catch(console.error);</script>
 </body></html>
