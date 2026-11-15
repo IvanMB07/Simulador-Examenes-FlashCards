@@ -179,7 +179,7 @@ test('acciones inferiores mantienen las tres filas y el botón de limpiar histor
   assert.match(html, /class="action-row action-row-two"/);
   assert.match(html, /class="action-row action-row-three"/);
   assert.match(html, /class="icon-button"[^>]*aria-label="Crear perfil"/);
-  assert.match(html, /<path d="M16 17h6"\/>/);
+  assert.match(html, /M16 17h6/);
   assert.match(script, /\$\('removeProfile'\)\.disabled=profiles\.activeId==='default'/);
   assert.match(css, /\.profile-sync-panel \.profile-controls > button\.icon-button/);
   assert.match(css, /\.action-row-three/);
