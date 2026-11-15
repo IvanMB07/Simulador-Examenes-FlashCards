@@ -41,11 +41,16 @@ test('separa historiales por perfil', () => {
 
 test('guarda respuestas, historial y preguntas falladas', () => {
   let completed;
-  const engine=new ExamEngine({config,questions,profileManager:profiles,history,sessionStore:sessions,failedQuestions:failures,onChange:(_state,done)=>{if(done)completed=done;}});
+  let currentState;
+  const engine=new ExamEngine({config,questions,profileManager:profiles,history,sessionStore:sessions,failedQuestions:failures,onChange:(nextState,done)=>{currentState=nextState;if(done)completed=done;}});
   engine.start('practice');
-  engine.answer(0);
+  const first=currentState.questions[0];
+  const firstCorrect=first.opciones.findIndex(option=>option.trim().startsWith(first.solucion+'.'));
+  engine.answer(firstCorrect);
   engine.move(1);
-  engine.answer(0);
+  const second=currentState.questions[1];
+  const secondCorrect=second.opciones.findIndex(option=>option.trim().startsWith(second.solucion+'.'));
+  engine.answer(secondCorrect===0?1:0);
   const saved=sessions.get();
   assert.equal(saved.answers[0],0);
   assert.equal(saved.answers[1],0);
