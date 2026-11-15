@@ -194,16 +194,31 @@ export class FirebaseSyncProvider {
     if (tasks.length) await Promise.all(tasks);
   }
 
+  async deleteRemoteProfile(profileId, deletedAtMs = Date.now()) {
+    const root = ['users', this.user.uid, 'profiles', profileId, 'simulators', this.simulatorId];
+    for (const name of ['examSessions', 'failedQuestions']) {
+      const snapshot = await getDocs(this.collectionAt([...root, name]));
+      await Promise.all(snapshot.docs.map(item => deleteDoc(item.ref)));
+    }
+    const activePath = [...root, 'activeSessions', 'current'];
+    await deleteDoc(this.documentAt(activePath)).catch(() => {});
+    await setDoc(this.documentAt(['users', this.user.uid, 'profiles', profileId]), {
+      id: profileId, deletedAtMs, updatedAtMs: Date.now()
+    }, { merge: true });
+  }
+
   async syncProfiles() {
     const local = this.profileManager.data;
     const remoteSnapshot = await getDocs(this.collectionAt(['users', this.user.uid, 'profiles']));
     const merged = { ...(local.profiles || {}) };
+    const deleted = new Set(local.deletedProfiles || []);
 
     remoteSnapshot.forEach(snapshot => {
       const data = snapshot.data();
       if (data.deletedAtMs) {
+        deleted.add(snapshot.id);
         delete merged[snapshot.id];
-      } else {
+      } else if (!deleted.has(snapshot.id)) {
         merged[snapshot.id] = {
           id: snapshot.id,
           name: data.name || merged[snapshot.id]?.name || 'Perfil',
@@ -212,15 +227,22 @@ export class FirebaseSyncProvider {
       }
     });
 
-    if (!merged.default) merged.default = { id: 'default', name: 'Usuario principal', createdAt: new Date().toISOString() };
+    deleted.forEach(id => delete merged[id]);
+    if (!merged.default && !deleted.has('default')) merged.default = { id: 'default', name: 'Usuario principal', createdAt: new Date().toISOString() };
     this.profileManager.data.profiles = merged;
+    this.profileManager.data.deletedProfiles = [...deleted];
     if (!merged[this.profileManager.data.active]) this.profileManager.data.active = 'default';
 
     this.applyingRemote = true;
     try { this.profileManager.save(); } finally { this.applyingRemote = false; }
 
-    const profiles = Object.values(merged);
-    await Promise.all(profiles.map(profile => setDoc(
+    for (const profileId of deleted) {
+      const localTombstone = (local.deletedProfiles || []).includes(profileId);
+      const remoteData = remoteSnapshot.docs.find(item => item.id === profileId)?.data();
+      if (localTombstone && !remoteData?.deletedAtMs) await this.deleteRemoteProfile(profileId);
+    }
+
+    await Promise.all(Object.values(merged).map(profile => setDoc(
       this.documentAt(['users', this.user.uid, 'profiles', profile.id]),
       { id: profile.id, name: profile.name, createdAt: profile.createdAt, updatedAtMs: Date.now() },
       { merge: true }
@@ -313,7 +335,12 @@ export class FirebaseSyncProvider {
   async pushLocalChange(detail) {
     if (!this.user) return;
     if (detail.name === 'profiles' && detail.profile === 'global') {
-      const profiles = detail.value?.profiles || {};
+      const registry = detail.value || {};
+      for (const profileId of registry.deletedProfiles || []) {
+        const existing = await getDoc(this.documentAt(['users', this.user.uid, 'profiles', profileId]));
+        if (!existing.exists() || !existing.data().deletedAtMs) await this.deleteRemoteProfile(profileId);
+      }
+      const profiles = registry.profiles || {};
       await Promise.all(Object.values(profiles).map(profile => setDoc(
         this.documentAt(['users', this.user.uid, 'profiles', profile.id]),
         { id: profile.id, name: profile.name, createdAt: profile.createdAt, updatedAtMs: Date.now() },
@@ -387,14 +414,16 @@ export class FirebaseSyncProvider {
 
     this.subscriptions.push(onSnapshot(this.collectionAt(['users', this.user.uid, 'profiles']), snapshot => {
       const merged = { ...this.profileManager.data.profiles };
+      const deleted = new Set(this.profileManager.data.deletedProfiles || []);
       snapshot.forEach(item => {
         const data = item.data();
-        if (data.deletedAtMs) delete merged[item.id];
-        else merged[item.id] = { id: item.id, name: data.name || 'Perfil', createdAt: data.createdAt || new Date().toISOString() };
+        if (data.deletedAtMs) { deleted.add(item.id); delete merged[item.id]; }
+        else if (!deleted.has(item.id)) merged[item.id] = { id: item.id, name: data.name || 'Perfil', createdAt: data.createdAt || new Date().toISOString() };
       });
       this.applyingRemote = true;
       try {
         this.profileManager.data.profiles = merged;
+        this.profileManager.data.deletedProfiles = [...deleted];
         if (!merged[this.profileManager.data.active]) this.profileManager.data.active = 'default';
         this.profileManager.save();
       } finally { this.applyingRemote = false; }
