@@ -4,6 +4,7 @@ import { isFirebaseConfigured } from '../common/firebase/firebase-config.js';
 const CONFIG = {
   id: 'DBBDD',
   title: 'Desarrollo de Bases de Datos',
+  questionUrl: './preguntas.json',
   examQuestionCount: 25,
   practiceQuestionCount: 25,
   examDurationMinutes: 75,
