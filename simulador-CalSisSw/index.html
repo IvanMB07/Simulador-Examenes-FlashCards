@@ -12,6 +12,12 @@
 <section id="menu" class="panel">
 <div class="row"><div><h2>Tu espacio de estudio</h2><p>Perfil: <strong id="profileName">Usuario principal</strong></p></div><span id="questionBankCount" class="muted">Cargando preguntas…</span></div>
 <div class="profile-controls"><label for="profileSelect">Perfil</label><select id="profileSelect"><option value="default">Usuario principal</option></select><button id="addProfile" class="secondary">Nuevo perfil</button><button id="removeProfile" class="secondary">Eliminar perfil</button></div>
+<section id="topicSettings" class="topic-settings">
+  <div class="row"><div><h3>Temas de práctica</h3><p class="note">Selecciona los temas que quieres trabajar. Las preguntas se reparten de forma equilibrada.</p></div></div>
+  <div id="topicFilters" class="topic-filters"></div>
+  <p id="topicDistribution" class="topic-distribution" aria-live="polite"></p>
+  <label class="setting-row" for="orderByTopic"><input id="orderByTopic" type="checkbox"><span><strong>Ordenar por temas</strong><small>Presenta primero las preguntas de un tema y después las del siguiente.</small></span></label>
+</section>
 <div class="resume" id="resumePanel" hidden><div><strong>Hay una sesión guardada</strong><p id="resumeText"></p></div><button id="resumeButton">Reanudar</button><button id="discardButton" class="secondary">Descartar</button></div>
 <section class="cloud-box" aria-labelledby="cloudTitle">
   <div class="row"><h3 id="cloudTitle">Sincronización entre dispositivos</h3><span id="cloudState" class="cloud-state">Local</span></div>
@@ -38,15 +44,20 @@
 </section>
 <div class="stats"><div><span>Sesiones guardadas</span><strong id="historyCount">0</strong></div><div><span>Preguntas falladas</span><strong id="failedCount">0</strong></div><div><span>Calificación</span><strong>+1 / −0,5 / 0</strong></div></div>
 <div class="mode-grid"><article><span class="tag">MODO 01</span><h3>Práctica</h3><p>Preguntas aleatorias, avance libre y corrección al terminar.</p><button id="startPractice">Empezar práctica</button></article><article><span class="tag">MODO 02</span><h3>Examen</h3><p>20 preguntas · 75 minutos · puntuación directa.</p><button id="startExam">Empezar examen</button></article><article><span class="tag">MODO 03</span><h3>Test de fallos</h3><p>Repasa preguntas respondidas incorrectamente o en blanco.</p><button id="startFailures" class="secondary" disabled>Repasar fallos</button></article></div>
-<div class="toolbar"><button id="openHistory" class="secondary">Ver historial</button><button id="clearFailures" class="secondary">Limpiar fallos</button><button id="exportBackup" class="secondary">Exportar copia</button><button id="importBackup" class="secondary">Importar copia</button><input id="backupFile" type="file" accept="application/json" hidden></div>
+<div class="toolbar"><button id="openHistory" class="secondary">Ver historial</button><button id="clearFailures" class="secondary">Limpiar fallos</button><button id="exportFailures" class="secondary">Exportar fallos JSON</button><button id="importFailures" class="secondary">Importar fallos JSON</button><input id="failureFile" type="file" accept="application/json,.json" hidden></div>
+<div class="toolbar"><button id="exportBackup" class="secondary">Exportar copia completa</button><button id="importBackup" class="secondary">Importar copia completa</button><input id="backupFile" type="file" accept="application/json,.json" hidden></div>
 <p class="note">Los datos se guardan primero en este dispositivo. Al iniciar sesión con Firebase, se sincronizan también entre tus dispositivos.</p>
 </section>
 <section id="exam" class="panel" hidden>
 <div class="exam-head"><span id="examMode"></span><span id="questionCount">Pregunta 1</span><span>Tiempo: <strong id="timer">0:00</strong></span></div>
 <div class="progress"><div id="progress" role="progressbar" aria-label="Progreso de la sesión" aria-valuemin="1" aria-valuemax="20" aria-valuenow="1"></div></div>
-<h2 id="questionText" tabindex="-1"></h2><div id="options" class="options" role="group" aria-label="Opciones de respuesta"></div><p id="feedback" class="feedback" role="status" aria-live="polite" hidden></p>
+<div id="questionText" class="question-text" tabindex="-1"></div><div id="options" class="options" role="group" aria-label="Opciones de respuesta"></div><p id="feedback" class="feedback" role="status" aria-live="polite" hidden></p>
+<section id="examSettings" class="exam-settings" hidden>
+  <label class="setting-row" for="autoAdvanceExam"><input id="autoAdvanceExam" type="checkbox"><span><strong>Avance automático</strong><small>Pasa a la siguiente pregunta al responder.</small></span></label>
+</section>
+<p id="finishConfirmToast" class="finish-confirm-toast" role="status" aria-live="polite" hidden></p>
 <div class="exam-actions"><button id="previous" class="secondary">Anterior</button><button id="next">Siguiente</button><button id="finish" class="danger">Finalizar</button></div>
-<p class="note">Teclas: ← / → para navegar y 1–4 para responder.</p>
+<p class="note keyboard-help">Teclas: ← / → para navegar, ↑ / ↓ para cambiar de opción, 1–4 o Espacio para responder, Enter para terminar.</p>
 </section>
 <section id="results" class="panel" hidden>
 <span class="eyebrow">SESIÓN FINALIZADA</span><h2>Resultado</h2><strong id="score" class="score">0 puntos</strong>
