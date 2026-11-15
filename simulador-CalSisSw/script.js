@@ -29,7 +29,7 @@ function updateCloudStatus(status) {
   const state=$('cloudState');
   const email=status.email||null;
   message.textContent=status.message;
-  state.textContent=status.state==='connected'?'Sincronizado':status.state==='syncing'?'Sincronizando':status.state==='error'?'Error':status.state==='signed-out'?'Sin sesión':status.state==='unconfigured'?'Solo local':'Conectando';
+  state.textContent=status.state==='connected'?'Sincronizado':status.state==='syncing'?'Sincronizando':status.state==='error'?'Error':status.state==='conflict'?'Conflicto':status.state==='signed-out'?'Sin sesión':status.state==='unconfigured'?'Solo local':'Conectando';
   state.dataset.state=status.state;
   $('cloudAuthControls').hidden=Boolean(email)||status.state==='unconfigured';
   $('cloudSignedControls').hidden=!email;
