@@ -519,7 +519,7 @@ export class FirebaseSyncProvider {
       if (stableStringify(local) !== stableStringify(merged)) this.applyRemote('exam-history', profileId, merged);
       const retainedIds = new Set(merged.map(item => item.id));
       const stale = snapshot.docs.filter(item => { const record = item.data().record; return !record || !retainedIds.has(record.id); });
-      if (stale.length) this.enqueue(() => Promise.all(stale.map(item => deleteDoc(item.ref)) );
+      if (stale.length) this.enqueue(() => Promise.all(stale.map(item => deleteDoc(item.ref))));
     }, error => this.status('error', 'No se pudo actualizar el historial: ' + this.errorMessage(error))));
 
     this.subscriptions.push(onSnapshot(this.collectionAt(paths.failures), snapshot => {
