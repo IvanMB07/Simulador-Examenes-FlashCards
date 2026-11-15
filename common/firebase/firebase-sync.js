@@ -303,7 +303,8 @@ export class FirebaseSyncProvider {
     const local = this.storage.read('exam-history', profileId, []);
     const remoteSnapshot = await getDocs(this.collectionAt(path));
     const remote = remoteSnapshot.docs.map(snapshot => snapshot.data().record).filter(Boolean);
-    const merged = mergeRecords(local, remote, item => item.id, item => dateNumber(item.finishedAt));
+    const merged = mergeRecords(local, remote, item => item.id, item => dateNumber(item.finishedAt))
+      .sort((a, b) => dateNumber(b.finishedAt) - dateNumber(a.finishedAt)).slice(0, 500);
     if (stableStringify(local) !== stableStringify(merged)) {
       this.applyingRemote = true;
       try { this.storage.write('exam-history', merged, profileId); } finally { this.applyingRemote = false; }
