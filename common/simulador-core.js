@@ -36,6 +36,7 @@ export class ProfileManager {
     this.storage = storage;
     this.data = storage.read('profiles', 'global', { active: 'default', profiles: { default: { id: 'default', name: 'Usuario principal', createdAt: new Date().toISOString() } } });
     if (!this.data.profiles.default) this.data.profiles.default = { id:'default', name:'Usuario principal', createdAt:new Date().toISOString() };
+    if (!Array.isArray(this.data.deletedProfiles)) this.data.deletedProfiles = [];
   }
   save() { this.storage.write('profiles', this.data, 'global'); }
   get activeId() { return this.data.active || 'default'; }
@@ -46,12 +47,15 @@ export class ProfileManager {
     const clean = String(name || '').trim();
     if (!clean) throw new Error('Indica un nombre de perfil.');
     const id = `profile-${crypto.randomUUID()}`;
+    this.data.deletedProfiles = (this.data.deletedProfiles || []).filter(deletedId => deletedId !== id);
     this.data.profiles[id] = { id, name: clean, createdAt: new Date().toISOString() };
     this.data.active = id; this.save(); return id;
   }
   removeActive() {
     if (this.activeId === 'default') throw new Error('El perfil principal no se puede eliminar.');
-    const id = this.activeId; delete this.data.profiles[id]; this.data.active = 'default'; this.save();
+    const id = this.activeId; delete this.data.profiles[id];
+    this.data.deletedProfiles = [...new Set([...(this.data.deletedProfiles || []), id])];
+    this.data.active = 'default'; this.save();
     return id;
   }
 }
