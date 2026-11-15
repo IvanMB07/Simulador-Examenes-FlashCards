@@ -372,6 +372,14 @@ export class FirebaseSyncProvider {
       this.applyingRemote = true;
       try { this.storage.write('failed-questions', merged, profileId); } finally { this.applyingRemote = false; }
     }
+    const retainedKeys = new Set(merged.map(item => item.id || item.cuestion));
+    await Promise.all(remoteSnapshot.docs
+      .filter(snapshot => snapshot.id !== '__meta')
+      .filter(snapshot => {
+        const record = snapshot.data().record;
+        return !record || !retainedKeys.has(record.id || record.cuestion);
+      })
+      .map(snapshot => deleteDoc(snapshot.ref)));
     await this.setRecords(path, merged, async item => await firestoreId(item.id || item.cuestion));
   }
 
