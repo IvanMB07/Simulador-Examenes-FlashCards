@@ -46,31 +46,49 @@ No usar el nombre visible como identidad ni generar direcciones de correo artifi
 
 ## Backends
 
-### A. Cloudflare Pages Functions + D1
+### A. Firebase Authentication + Cloud Firestore — opción recomendada para la primera sincronización
 
-Es la recomendación principal si priorizamos coste bajo y control. Pages Functions permite ejecutar lógica de servidor en Cloudflare y acceder a D1 mediante bindings. D1 es SQL gestionado. Para autenticación puede integrarse Better Auth con una base compatible; requiere implementar y probar correctamente las rutas, sesiones y controles de acceso.
+Es la opción más directa si el objetivo prioritario es que la app funcione offline y sincronice automáticamente cuando vuelva la conexión. El SDK web de Firestore mantiene una caché local y sincroniza los cambios pendientes al recuperar red. En web hay que activar expresamente la persistencia offline; si dos dispositivos modifican el mismo documento, la política habitual es last-write-wins.
 
-Según las cuotas oficiales consultadas, Workers Free incluye 100.000 requests/día; D1 Free incluye 5 millones de filas leídas/día, 100.000 escritas/día y 5 GB de almacenamiento. Al alcanzar los límites diarios, las consultas pueden fallar hasta el siguiente periodo o hasta ampliar el plan.
+Para limitar conflictos, no se debe guardar todo el progreso en un único documento. Cada examen finalizado debe ser un documento independiente con un ID estable; el estado de una sesión activa debe tener su propio documento; y el progreso SRS debe separarse por pregunta. Así, dos dispositivos pueden crear sesiones distintas sin sobrescribirse.
 
-### B. Firebase Authentication + Cloud Firestore
+Cuotas publicadas del nivel gratuito Spark para Cloud Firestore: 1 GiB de datos, 50.000 lecturas/día, 20.000 escrituras/día, 20.000 eliminaciones/día y 10 GiB/mes de transferencia. Al superar una cuota gratuita, el producto puede quedar bloqueado durante el resto del periodo hasta el siguiente reinicio o hasta cambiar de plan. Para uso personal y de estudio estas cuotas parecen holgadas, pero deben monitorizarse.
 
-Es la opción con menor complejidad de sincronización cliente. Firebase gestiona autenticación; Firestore Security Rules restringe el acceso por usuario. El SDK web permite persistencia offline y sincroniza cambios al recuperar conexión. Para escrituras concurrentes sobre el mismo documento usa last-write-wins. Es conveniente diseñar documentos pequeños para evitar colisiones. El plan Spark ofrece cuotas sin coste, pero hay límites gratuitos y facturación en el plan Blaze.
+Ventajas: autenticación gestionada, SDK cliente, caché offline y sincronización automática sin construir un servidor propio. Inconvenientes: modelo documental, reglas de seguridad que hay que probar, dependencia de Google y comportamiento last-write-wins si dos dispositivos modifican el mismo documento simultáneamente.
+
+### B. Cloudflare Workers/Pages Functions + D1 + autenticación
+
+Es la opción que ofrece más control y un modelo SQL. Pages Functions puede utilizar D1 mediante bindings. Se puede mantener GitHub Pages y consumir un Worker API independiente por HTTPS; eso exige CORS y gestionar el token de sesión. O se puede mover el frontend a Cloudflare Pages y alojar las rutas API como Functions en el mismo proyecto, lo que evita CORS entre app y API.
+
+Better Auth dispone de integración con D1, pero sigue siendo necesario configurar las rutas, migraciones, sesiones, secretos y autorización. Hay un detalle importante de coste/rendimiento: Workers Free permite 100.000 peticiones al día, pero limita cada petición a 10 ms de CPU. Las operaciones de autenticación y hashing de contraseñas deben probarse con la versión exacta de Better Auth y con el plan real; hubo un informe de consumo de CPU excesivo en una versión anterior de Better Auth en Cloudflare Workers.
+
+D1 Free incluye 5 millones de filas leídas/día, 100.000 filas escritas/día y 5 GB de almacenamiento total. Si se supera la cuota diaria de D1, las consultas dejan de ejecutarse hasta el reinicio o hasta ampliar el plan.
+
+Ventajas: SQL, control del esquema, coste de infraestructura bajo y despliegue integrado con el frontend si se usa Cloudflare Pages. Inconvenientes: hay que desarrollar el protocolo de sincronización local/remoto, la cola de operaciones, los cursores, los conflictos y la autenticación. No ofrece por sí solo el comportamiento offline/sync gestionado de Firestore.
 
 ### C. Supabase
 
-Sigue siendo técnicamente válido. Su plan Free incluye PostgreSQL, Auth y Realtime; la página de precios publica 500 MB de base de datos, 50.000 MAU y 2 millones de mensajes Realtime. Los proyectos Free pueden pausarse tras una semana de inactividad.
+Sigue siendo técnicamente válido y ofrece PostgreSQL, Auth y Realtime. El plan Free publica 500 MB de base de datos, 50.000 usuarios activos mensuales y 2 millones de mensajes Realtime. Los proyectos Free con poca actividad pueden pausarse tras siete días.
 
-El código actual de SegSisSw crea cuentas con correo sintético `@cuenta.simulador.invalid`, requiere desactivar confirmación por correo, intercepta escrituras globales de localStorage y replica una instantánea JSON completa con lógica manual de revisiones y fusiones. Esto concentra responsabilidades en el navegador y dificulta separar fallos de autenticación, RLS, Realtime y conflictos.
+En el código actual de SegSisSw, la tabla `study_sync` guarda una instantánea JSONB completa por usuario, con número de revisión y lógica de fusión de conflictos. El cliente intercepta métodos de `Storage.prototype` para detectar escrituras locales y la identidad se forma con un correo sintético `@cuenta.simulador.invalid`. La confirmación de email debe estar desactivada y no existe recuperación convencional de contraseña. La clave del archivo de configuración es una publishable key, diseñada para estar en el cliente; no es una `service_role` y no debe confundirse con una clave secreta.
 
-No se puede determinar por qué falló tu instancia sin el error exacto de consola/respuesta y el estado del proyecto. Antes de descartar Supabase habría que comprobar confirmación de email, URL y publishable key, políticas RLS, publicación Realtime y si el proyecto está pausado.
+El SQL incluido habilita RLS y filtra por `auth.uid() = user_id`, además de añadir la tabla a Realtime. No he encontrado en los archivos una prueba E2E que demuestre que la sincronización ha funcionado con dos dispositivos: el documento de revisión del propio ZIP indica que no se verificó una sincronización real contra Supabase. Por eso no puedo atribuir el fallo a una única causa sin consultar los errores de consola/red y el estado del proyecto.
+
+Antes de descartar Supabase conviene comprobar: que el proyecto no esté pausado; que la confirmación de email esté desactivada; que URL y publishable key correspondan al mismo proyecto; que la tabla y sus políticas RLS existan; que Realtime esté suscrito correctamente; y qué respuesta HTTP devuelve Auth o `study_sync`.
+
+## Recomendación
+
+Para la primera versión con sincronización automática, probaría **Firebase Authentication + Firestore**: permite mantener GitHub Pages y reduce mucho el código de sincronización que tendríamos que mantener. Mantendría el core independiente del proveedor para que, si más adelante se necesita SQL o lógica de servidor propia, podamos implementar un proveedor Cloudflare D1 sin reescribir el simulador.
+
+Si el objetivo principal pasa a ser controlar toda la infraestructura en SQL y aprovechar Cloudflare, entonces escogería Workers + D1, pero solo después de probar el consumo de CPU del flujo de autenticación y construir el SyncProvider correctamente. No usaría otra vez un único JSON global por usuario como contrato de persistencia.
 
 ## Plan de evolución
 
-1. Completar core y pruebas en CalSisSw.
+1. Completar el core y pruebas de CalSisSw.
 2. Evolucionar almacenamiento local de localStorage a IndexedDB.
-3. Diseñar SyncProvider con cola/outbox y cursor de cambios.
-4. Implementar backend Cloudflare Pages Functions + D1 y autenticación recuperable.
-5. Probar dos navegadores/dispositivos, offline, colisión simultánea, cierre de sesión, recuperación y reanudación.
+3. Implementar Firebase Authentication + Firestore mediante un proveedor independiente.
+4. Diseñar reglas de seguridad y el esquema documental por usuario, perfil, simulador, sesión y pregunta.
+5. Probar dos dispositivos, offline, colisiones, recuperación de cuenta y reanudación.
 6. Migrar el resto de simuladores al core una vez validado el contrato.
 
 ## Alcance de esta rama
@@ -93,6 +111,10 @@ La alternativa con menos piezas operativas es mover el frontend a Cloudflare Pag
 - Cloudflare D1, cuotas y precios: https://developers.cloudflare.com/d1/platform/pricing/
 - Better Auth en Cloudflare Workers: https://better-auth.com/docs/guides/cloudflare
 - Better Auth 1.5 y soporte D1: https://better-auth.com/blog/1-5
+- Límites de CPU de Cloudflare Workers: https://developers.cloudflare.com/workers/platform/limits/
+- Informe de CPU en autenticación Better Auth/Workers: https://github.com/better-auth/better-auth/issues/8860
+- Cuotas de Firestore: https://firebase.google.com/docs/firestore/quotas
+- Planes y límites Spark de Firebase: https://firebase.google.com/docs/projects/billing/firebase-pricing-plans
 - Firestore offline persistence: https://firebase.google.com/docs/firestore/manage-data/enable-offline
 - Supabase precios y límites del plan Free: https://supabase.com/pricing
 - Supabase pausa de proyectos Free: https://supabase.com/docs/guides/platform/free-project-pausing
