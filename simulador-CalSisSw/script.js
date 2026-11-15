@@ -1,4 +1,5 @@
 import { StorageAdapter, ProfileManager, ExamHistory, SessionStore, FailedQuestionStore, ExamEngine } from '../common/simulador-core.js';
+import { isFirebaseConfigured } from '../common/firebase/firebase-config.js';
 
 const CONFIG = {
   id: 'CalSisSw',
@@ -20,8 +21,52 @@ let questions = [];
 let engine = null;
 let state = null;
 let lastResult = null;
+let cloudSync = null;
 
 function show(id) { ['menu','exam','results','history'].forEach(view=>$(view).hidden=view!==id); }
+function updateCloudStatus(status) {
+  const message=$('cloudStatusMessage');
+  const state=$('cloudState');
+  const email=status.email||null;
+  message.textContent=status.message;
+  state.textContent=status.state==='connected'?'Sincronizado':status.state==='syncing'?'Sincronizando':status.state==='error'?'Error':status.state==='signed-out'?'Sin sesión':status.state==='unconfigured'?'Solo local':'Conectando';
+  state.dataset.state=status.state;
+  $('cloudAuthControls').hidden=Boolean(email)||status.state==='unconfigured';
+  $('cloudSignedControls').hidden=!email;
+  $('cloudSetupHint').hidden=status.state!=='unconfigured';
+  $('cloudAccount').textContent=email||'';
+}
+function currentCloudCredentials() {
+  return {email:$('cloudEmail').value.trim(),password:$('cloudPassword').value};
+}
+function showCloudError(error) {
+  updateCloudStatus({state:'error',message:cloudSync?.errorMessage(error)||error.message||'No se pudo completar la operación.'});
+}
+async function initializeCloudSync() {
+  if(!isFirebaseConfigured()) {
+    updateCloudStatus({state:'unconfigured',message:'La aplicación funciona en modo local. Para sincronizar entre dispositivos, completa common/firebase/firebase-config.js y configura Firestore.'});
+    return;
+  }
+  updateCloudStatus({state:'syncing',message:'Conectando con Firebase…'});
+  try {
+    const { FirebaseSyncProvider } = await import('../common/firebase/firebase-sync.js');
+    cloudSync=new FirebaseSyncProvider({
+      storage,profileManager:profiles,simulatorId:CONFIG.id,
+      onStatus:updateCloudStatus,
+      onDataApplied:()=>{
+        history=new ExamHistory(storage,()=>profiles.activeId,CONFIG.id);
+        sessions=new SessionStore(storage,()=>profiles.activeId,CONFIG.id);
+        failures=new FailedQuestionStore(storage,()=>profiles.activeId);
+        renderHome();
+      }
+    });
+    await cloudSync.initialize();
+  } catch(error) {
+    console.error('No se pudo cargar el módulo Firebase:',error);
+    updateCloudStatus({state:'error',message:'No se pudo cargar Firebase. Comprueba la conexión: '+error.message});
+  }
+}
+
 function fmtDuration(ms) { const sec=Math.floor(ms/1000); return `${Math.floor(sec/60)}:${String(sec%60).padStart(2,'0')}`; }
 function renderProfiles() {
   const select=$('profileSelect'); select.replaceChildren();
@@ -123,9 +168,35 @@ async function init(){
   }catch(error){$('questionBankCount').textContent=`No se pudo cargar preguntas.json: ${error.message}`;return;}
   history=new ExamHistory(storage,()=>profiles.activeId,CONFIG.id);sessions=new SessionStore(storage,()=>profiles.activeId,CONFIG.id);
   renderHome();
+  await initializeCloudSync();
   $('resumeButton').addEventListener('click',()=>{const saved=sessions.get();if(saved)start(saved.mode,saved);});
   $('discardButton').addEventListener('click',()=>{sessions.clear();renderHome();});
 }
+
+$('cloudRegister').addEventListener('click',async()=>{
+  const {email,password}=currentCloudCredentials();
+  try { await cloudSync.register(email,password); $('cloudPassword').value=''; }
+  catch(error){showCloudError(error);}
+});
+$('cloudLogin').addEventListener('click',async()=>{
+  const {email,password}=currentCloudCredentials();
+  try { await cloudSync.login(email,password); $('cloudPassword').value=''; }
+  catch(error){showCloudError(error);}
+});
+$('cloudReset').addEventListener('click',async()=>{
+  const {email}=currentCloudCredentials();
+  try { await cloudSync.resetPassword(email); updateCloudStatus({state:'signed-out',message:'Hemos solicitado el correo de recuperación. Revisa tu bandeja de entrada.'}); }
+  catch(error){showCloudError(error);}
+});
+$('cloudLogout').addEventListener('click',async()=>{
+  try { await cloudSync.logout(); }
+  catch(error){showCloudError(error);}
+});
+$('cloudSyncNow').addEventListener('click',async()=>{
+  try { await cloudSync.syncNow(); }
+  catch(error){showCloudError(error);}
+});
+
 $('startPractice').addEventListener('click',()=>start('practice'));
 $('startFailures').addEventListener('click',()=>start('failures'));
 $('clearFailures').addEventListener('click',()=>{if(failures.list().length&&confirm('¿Limpiar las preguntas falladas de este perfil?')){failures.clear();renderHome();}});
@@ -133,9 +204,9 @@ $('startExam').addEventListener('click',()=>start('exam'));
 $('previous').addEventListener('click',()=>engine.move(-1));
 $('next').addEventListener('click',()=>engine.move(1));
 $('finish').addEventListener('click',()=>{if(confirm('¿Finalizar esta sesión?'))engine.finish();});
-$('profileSelect').addEventListener('change',e=>{if(engine)engine.dispose();profiles.setActive(e.target.value);history=new ExamHistory(storage,()=>profiles.activeId,CONFIG.id);sessions=new SessionStore(storage,()=>profiles.activeId,CONFIG.id);failures=new FailedQuestionStore(storage,()=>profiles.activeId);renderHome();show('menu');});
-$('addProfile').addEventListener('click',()=>{const name=prompt('Nombre del perfil');if(!name)return;try{profiles.create(name);history=new ExamHistory(storage,()=>profiles.activeId,CONFIG.id);sessions=new SessionStore(storage,()=>profiles.activeId,CONFIG.id);failures=new FailedQuestionStore(storage,()=>profiles.activeId);renderHome();}catch(e){alert(e.message);}});
-$('removeProfile').addEventListener('click',()=>{if(profiles.activeId==='default')return; if(confirm('¿Eliminar este perfil y sus datos locales?')){const id=profiles.removeActive();['exam-history','active-session','failed-questions'].forEach(key=>storage.remove(key,id));history=new ExamHistory(storage,()=>profiles.activeId,CONFIG.id);sessions=new SessionStore(storage,()=>profiles.activeId,CONFIG.id);failures=new FailedQuestionStore(storage,()=>profiles.activeId);renderHome();}});
+$('profileSelect').addEventListener('change',e=>{if(engine)engine.dispose();profiles.setActive(e.target.value);cloudSync?.setActiveProfile();history=new ExamHistory(storage,()=>profiles.activeId,CONFIG.id);sessions=new SessionStore(storage,()=>profiles.activeId,CONFIG.id);failures=new FailedQuestionStore(storage,()=>profiles.activeId);renderHome();show('menu');});
+$('addProfile').addEventListener('click',()=>{const name=prompt('Nombre del perfil');if(!name)return;try{profiles.create(name);cloudSync?.setActiveProfile();history=new ExamHistory(storage,()=>profiles.activeId,CONFIG.id);sessions=new SessionStore(storage,()=>profiles.activeId,CONFIG.id);failures=new FailedQuestionStore(storage,()=>profiles.activeId);renderHome();}catch(e){alert(e.message);}});
+$('removeProfile').addEventListener('click',()=>{if(profiles.activeId==='default')return; if(confirm('¿Eliminar este perfil y sus datos locales?')){const id=profiles.removeActive();cloudSync?.setActiveProfile();['exam-history','active-session','failed-questions'].forEach(key=>storage.remove(key,id));history=new ExamHistory(storage,()=>profiles.activeId,CONFIG.id);sessions=new SessionStore(storage,()=>profiles.activeId,CONFIG.id);failures=new FailedQuestionStore(storage,()=>profiles.activeId);renderHome();}});
 $('openHistory').addEventListener('click',()=>{renderHistory();show('history');});
 $('backMenu')?.addEventListener('click',()=>{renderHome();show('menu');});
 $('historyBack').addEventListener('click',()=>show('menu'));
