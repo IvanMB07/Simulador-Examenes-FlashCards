@@ -197,8 +197,8 @@ test('SegSisSw usa el core común, conserva las preguntas y aplica su fórmula h
   assert.match(script, /examQuestionCount: 20/);
   assert.match(script, /examDurationMinutes: 75/);
   assert.match(script, /scoreFormula:/);
-  assert.match(script, /common\\/firebase\\/firebase-sync\\.js/);
-  assert.doesNotMatch(html, /cloud-sync\\.js|cloud-config\\.js/);
+  assert.ok(script.includes('../common/firebase/firebase-sync.js'));
+  assert.ok(!html.includes('cloud-sync.js') && !html.includes('cloud-config.js'));
 
   const answers = Object.fromEntries(questions.slice(0, 20).map((question, index) => {
     const correct = question.opciones.findIndex(option =>
