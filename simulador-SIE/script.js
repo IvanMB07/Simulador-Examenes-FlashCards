@@ -1,1573 +1,587 @@
-// TODAS LAS PREGUNTAS (cargadas desde JSON)
-let PREGUNTAS_COMPLETAS = [];
+import { StorageAdapter, ProfileManager, ExamHistory, SessionStore, FailedQuestionStore, ExamEngine, QuestionHistoryStore, extractTopic, getAvailableTopics } from '../common/simulador-core.js';
+import { isFirebaseConfigured } from '../common/firebase/firebase-config.js';
 
-// URL de respaldo del archivo JSON en GitHub (RAW)
-const URL_PREGUNTAS = 'https://raw.githubusercontent.com/IvanMB07/Simulador-Examenes-FlashCards/main/Estudio/simulador-SIE/preguntas.json';
-
-async function fetchConTimeout(url, timeoutMs = 12000) {
-    const controller = new AbortController();
-    const timer = setTimeout(() => controller.abort(), timeoutMs);
-    try {
-        return await fetch(url, { cache: 'no-store', signal: controller.signal });
-    } finally {
-        clearTimeout(timer);
-    }
-}
-
-// Función para cargar las preguntas (primero local, luego respaldo remoto)
-async function cargarPreguntasDesdeJSON() {
-    const fuentes = [
-        { nombre: 'local', url: './preguntas.json' },
-        { nombre: 'remota', url: URL_PREGUNTAS }
-    ];
-
-    try {
-        for (const fuente of fuentes) {
-            try {
-                console.log(`🔄 Cargando preguntas desde ${fuente.nombre}...`);
-                const response = await fetchConTimeout(fuente.url);
-
-                if (!response.ok) {
-                    throw new Error(`Error HTTP: ${response.status}`);
-                }
-
-                const data = await response.json();
-                if (!Array.isArray(data)) {
-                    throw new Error('Formato JSON inválido (se esperaba un array)');
-                }
-
-                PREGUNTAS_COMPLETAS = data;
-                console.log(`✅ ${PREGUNTAS_COMPLETAS.length} preguntas cargadas desde ${fuente.nombre}`);
-                return true;
-            } catch (errorFuente) {
-                console.warn(`⚠️ Fallo cargando desde ${fuente.nombre}:`, errorFuente.message || errorFuente);
-            }
-        }
-
-        throw new Error('No se pudo cargar preguntas ni en local ni en remoto');
-    } catch (error) {
-        console.error('❌ Error al cargar preguntas:', error);
-        alert('Error al cargar las preguntas. Revisa conexión y recarga la página.');
-        return false;
-    }
-}
-
-// Configuración del modo examen
-// Formato oficial: 20 preguntas, 75 minutos
-const TOTAL_PREGUNTAS_EXAMEN = 20;
-const TIEMPO_EXAMEN_MINUTOS = 75;
-const PARCIALES_EXAMEN = {
-    parcial1: [1, 2],
-    parcial2: [3, 4, 5],
+const CONFIG = {
+  id: 'SIE',
+  title: 'Sistemas de Información Empresarial',
+  examQuestionCount: 20,
+  practiceQuestionCount: 25,
+  examDurationMinutes: 75,
+  scoring: { correct: 1, incorrect: 0, blank: 0 },
+  scoreFormula: ({ correct, questionCount }) =>
+    questionCount > 2
+      ? Math.max(0, Math.min(10,
+        (10 / (questionCount - 2)) * (correct - 2)))
+      : 0
 };
 
-// Sistema de almacenamiento de preguntas falladas
-class GestorFallos {
-    constructor() {
-        this.cargarFallos();
-    }
-
-    cargarFallos() {
-        try {
-            const data = localStorage.getItem(this.getStorageKey());
-            this.fallos = data ? JSON.parse(data) : [];
-        } catch (e) {
-            this.fallos = [];
-        }
-    }
-
-    guardarFallos() {
-        try {
-            localStorage.setItem(this.getStorageKey(), JSON.stringify(this.fallos));
-        } catch (e) {
-            console.error('Error al guardar fallos:', e);
-        }
-    }
-
-    getStorageKey() {
-        const perfilActual = (typeof configuracion !== 'undefined' && configuracion.get('perfilActual')) || 'default';
-        return `preguntasFalladas:perfil:${perfilActual}`;
-    }
-
-    cambiarUsuario() {
-        this.cargarFallos();
-    }
-
-    agregarFallo(pregunta, respuestaUsuario, respuestaCorrecta) {
-        // Evitar duplicados
-        const existe = this.fallos.some(f => f.cuestion === pregunta.cuestion);
-        if (!existe) {
-            this.fallos.push({
-                ...pregunta,
-                respuestaUsuario,
-                respuestaCorrecta,
-                fecha: new Date().toISOString()
-            });
-            this.guardarFallos();
-
-            // Actualizar estadísticas del perfil si la función existe
-            if (typeof actualizarEstadisticasPerfil === 'function') {
-                actualizarEstadisticasPerfil();
-            }
-        }
-    }
-
-    obtenerFallos() {
-        return this.fallos;
-    }
-
-    limpiarFallos() {
-        this.fallos = [];
-        this.guardarFallos();
-    }
-
-    contarFallos() {
-        return this.fallos.length;
-    }
+const $ = id => document.getElementById(id);
+const storage = new StorageAdapter(`estudio:${CONFIG.id}`);
+const profiles = new ProfileManager(storage);
+let history = new ExamHistory(storage, () => profiles.activeId, CONFIG.id);
+let sessions = new SessionStore(storage, () => profiles.activeId, CONFIG.id);
+let failures = new FailedQuestionStore(storage, () => profiles.activeId);
+const questionHistory = new QuestionHistoryStore(storage, () => profiles.activeId, 150);
+let questions = [];
+let engine = null;
+let state = null;
+let lastResult = null;
+let cloudSync = null;
+let keyboardOptionIndex = 0;
+let finishConfirmationAt = 0;
+let finishToastTimer = null;
+let activeReviewFilter = 'all';
+const DEFAULT_PREFERENCES = { selectedTopics: [], orderByTopic: false, autoAdvanceExam: false };
+function readPreferences() {
+  return { ...DEFAULT_PREFERENCES, ...storage.read('preferences', profiles.activeId, {}) };
 }
-
-const gestorFallos = new GestorFallos();
-
-// Sistema de historial de preguntas recientes
-class GestorHistorial {
-    constructor() {
-        this.maxHistorial = 150; // Guardar las últimas 150 preguntas vistas
-        this.cargarHistorial();
-    }
-
-    cargarHistorial() {
-        try {
-            const data = localStorage.getItem(this.getStorageKey());
-            this.historial = data ? JSON.parse(data) : [];
-        } catch (e) {
-            this.historial = [];
-        }
-    }
-
-    guardarHistorial() {
-        try {
-            localStorage.setItem(this.getStorageKey(), JSON.stringify(this.historial));
-        } catch (e) {
-            console.error('Error al guardar historial:', e);
-        }
-    }
-
-    getStorageKey() {
-        const perfilActual = (typeof configuracion !== 'undefined' && configuracion.get('perfilActual')) || 'default';
-        return `historialPreguntas:perfil:${perfilActual}`;
-    }
-
-    cambiarUsuario() {
-        this.cargarHistorial();
-    }
-
-    registrarPreguntas(preguntas) {
-        // Agregar nuevas preguntas al historial
-        const cuestiones = preguntas.map(p => p.cuestion);
-        this.historial.push(...cuestiones);
-
-        // Mantener solo las últimas N preguntas
-        if (this.historial.length > this.maxHistorial) {
-            this.historial = this.historial.slice(-this.maxHistorial);
-        }
-
-        this.guardarHistorial();
-    }
-
-    estáEnHistorial(pregunta) {
-        return this.historial.includes(pregunta.cuestion);
-    }
-
-    obtenerPrioridad(pregunta) {
-        // Retorna un valor de prioridad (0 = más reciente, mayor = más antigua)
-        const indice = this.historial.lastIndexOf(pregunta.cuestion);
-        if (indice === -1) return Infinity; // No está en historial = máxima prioridad
-        return this.historial.length - indice; // Cuanto mayor, más tiempo sin ver
-    }
-
-    limpiarHistorial() {
-        this.historial = [];
-        this.guardarHistorial();
-    }
+function savePreferences(patch) {
+  storage.write('preferences', { ...readPreferences(), ...patch }, profiles.activeId);
 }
-
-const gestorHistorial = new GestorHistorial();
-
-// Sistema de configuración
-class ConfiguracionApp {
-    constructor() {
-        this.cargarConfig();
-    }
-
-    cargarConfig() {
-        try {
-            const data = localStorage.getItem('configApp');
-            this.config = data ? JSON.parse(data) : {
-                ordenarPorTema: false,
-                temasSeleccionados: [1, 2, 3, 4, 5],
-                parcialExamen: 'parcial1',
-                perfilActual: 'default',
-                perfiles: {}
-            };
-            // Asegurar que existan las nuevas propiedades
-            if (!this.config.perfilActual) this.config.perfilActual = 'default';
-            if (!this.config.perfiles) this.config.perfiles = {};
-            if (!this.config.parcialExamen) this.config.parcialExamen = 'parcial1';
-        } catch (e) {
-            this.config = {
-                ordenarPorTema: false,
-                temasSeleccionados: [1, 2, 3, 4, 5],
-                parcialExamen: 'parcial1',
-                perfilActual: 'default',
-                perfiles: {}
-            };
-        }
-    }
-
-    guardarConfig() {
-        try {
-            localStorage.setItem('configApp', JSON.stringify(this.config));
-        } catch (e) {
-            console.error('Error al guardar configuración:', e);
-        }
-    }
-
-    get(clave) {
-        return this.config[clave];
-    }
-
-    set(clave, valor) {
-        this.config[clave] = valor;
-        this.guardarConfig();
-    }
-
-    toggle(clave) {
-        this.config[clave] = !this.config[clave];
-        this.guardarConfig();
-        return this.config[clave];
-    }
-}
-
-const configuracion = new ConfiguracionApp();
-
-class SimuladorExamen {
-    constructor(modo) {
-        this.modo = modo;
-        this.preguntas = [];
-        this.preguntaActual = 0;
-        this.respuestas = {};
-        this.sinResponder = new Set();
-        this.tiempoInicio = Date.now();
-        this.tiempoLimiteMs = this.modo === 'examen' ? TIEMPO_EXAMEN_MINUTOS * 60 * 1000 : null;
-        this.timerId = null;
-        this.bloqueadoPorTiempo = false;
-        this.erroresDelTest = [];
-        this.keyboardHandler = null;
-        this.opcionEnfocada = 0;
-        this.focoActivo = false;
-        this.inicializar();
-    }
-
-    inicializar() {
-        this.detenerTiempo();
-        this.bloqueadoPorTiempo = false;
-        this.erroresDelTest = [];
-
-        // Registrar preguntas del test anterior en el historial (si había)
-        if (this.preguntas && this.preguntas.length > 0) {
-            gestorHistorial.registrarPreguntas(this.preguntas);
-        }
-
-        if (this.modo === 'examen') {
-            this.preguntas = this.seleccionarPreguntasExamen();
-            if (!this.preguntas || this.preguntas.length < TOTAL_PREGUNTAS_EXAMEN) {
-                alert('No hay suficientes preguntas para generar este parcial de examen.');
-                this.reiniciar();
-                return;
-            }
-        } else if (this.modo === 'fallos') {
-            this.preguntas = gestorFallos.obtenerFallos();
-            if (this.preguntas.length === 0) {
-                alert('No hay preguntas falladas guardadas');
-                this.reiniciar();
-                return;
-            }
-        } else {
-            const ordenarPorTema = configuracion.get('ordenarPorTema');
-            const temasParcial = this.obtenerTemasExamen();
-            const temasSeleccionados = configuracion.get('temasSeleccionados') || [...temasParcial];
-            const temasAplicables = temasSeleccionados.filter(tema => temasParcial.includes(tema));
-            const temasPractica = temasAplicables.length > 0 ? temasAplicables : [...temasParcial];
-
-            this.preguntas = this.seleccionarPreguntasPractica(temasPractica, ordenarPorTema);
-            if (!this.preguntas || this.preguntas.length === 0) {
-                alert('No hay preguntas disponibles para el parcial seleccionado.');
-                this.reiniciar();
-                return;
-            }
-        }
-        this.respuestas = {};
-        this.sinResponder = new Set();
-        this.preguntaActual = 0;
-        this.tiempoInicio = Date.now();
-        this.mostrarPregunta();
-        this.iniciarTiempo();
-        this.iniciarNavegacionTeclado();
-    }
-
-    iniciarNavegacionTeclado() {
-        if (this.keyboardHandler) {
-            document.removeEventListener('keydown', this.keyboardHandler);
-        }
-
-        this.keyboardHandler = (e) => {
-            if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
-                return;
-            }
-
-            switch (e.key) {
-                case 'ArrowLeft':
-                    e.preventDefault();
-                    this.anterior();
-                    break;
-                case 'ArrowRight':
-                    e.preventDefault();
-                    if (this.preguntaActual >= this.preguntas.length - 1) {
-                        this.terminar();
-                    } else {
-                        this.siguiente();
-                    }
-                    break;
-                case 'ArrowUp':
-                    e.preventDefault();
-                    this.moverFocoOpcion(-1);
-                    break;
-                case 'ArrowDown':
-                    e.preventDefault();
-                    this.moverFocoOpcion(1);
-                    break;
-                case ' ':
-                case 'Spacebar':
-                    e.preventDefault();
-                    this.seleccionarOpcion(this.opcionEnfocada);
-                    break;
-                case '1':
-                    e.preventDefault();
-                    this.seleccionarOpcion(0);
-                    break;
-                case '2':
-                    e.preventDefault();
-                    this.seleccionarOpcion(1);
-                    break;
-                case '3':
-                    e.preventDefault();
-                    this.seleccionarOpcion(2);
-                    break;
-                case '4':
-                    e.preventDefault();
-                    this.seleccionarOpcion(3);
-                    break;
-                case 'Enter':
-                    e.preventDefault();
-                    this.terminar();
-                    break;
-            }
-        };
-
-        document.addEventListener('keydown', this.keyboardHandler);
-    }
-
-    moverFocoOpcion(direccion) {
-        const pregunta = this.preguntas[this.preguntaActual];
-        if (!pregunta) return;
-
-        const totalOpciones = pregunta.opciones.length;
-        this.opcionEnfocada = (this.opcionEnfocada + direccion + totalOpciones) % totalOpciones;
-        this.focoActivo = true;
-        this.actualizarFocoVisual();
-    }
-
-    actualizarFocoVisual() {
-        const botones = document.querySelectorAll('#opcionesContenedor .opcion');
-        botones.forEach((boton, indice) => {
-            if (this.focoActivo && indice === this.opcionEnfocada) {
-                boton.classList.add('enfocada');
-                boton.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            } else {
-                boton.classList.remove('enfocada');
-            }
-        });
-    }
-
-    seleccionarOpcion(indice) {
-        const pregunta = this.preguntas[this.preguntaActual];
-        if (!pregunta || indice >= pregunta.opciones.length) {
-            return;
-        }
-
-        const yaRespondida = this.respuestas.hasOwnProperty(this.preguntaActual);
-        if (this.modo === 'practica' && yaRespondida) {
-            return;
-        }
-
-        this.opcionEnfocada = indice;
-        this.responderPregunta(indice);
-    }
-
-    seleccionarPreguntasPractica(temasSeleccionados, ordenarPorTema = false) {
-        const pool = PREGUNTAS_COMPLETAS.filter(p => !this.esGaitero(p));
-        const totalPreguntas = 25;
-        const poolTemasSeleccionados = pool.filter(p => temasSeleccionados.includes(this.extraerTema(p)));
-
-        const grupos = new Map();
-        for (const pregunta of pool) {
-            const tema = this.extraerTema(pregunta);
-            if (tema === null) continue;
-            if (!grupos.has(tema)) grupos.set(tema, []);
-            grupos.get(tema).push(pregunta);
-        }
-
-        const numTemas = temasSeleccionados.length;
-        const preguntasPorTema = Math.floor(totalPreguntas / numTemas);
-        const preguntasExtras = totalPreguntas % numTemas;
-
-        const seleccion = [];
-
-        if (ordenarPorTema) {
-            temasSeleccionados.forEach((tema, index) => {
-                const preguntasTema = grupos.get(tema) || [];
-                const cantidad = preguntasPorTema + (index < preguntasExtras ? 1 : 0);
-                const preguntasMezcladas = this.barajar(preguntasTema);
-                seleccion.push(...preguntasMezcladas.slice(0, cantidad));
-            });
-        } else {
-            const preguntasPorTemaTemporal = [];
-            temasSeleccionados.forEach((tema, index) => {
-                const preguntasTema = grupos.get(tema) || [];
-                const cantidad = preguntasPorTema + (index < preguntasExtras ? 1 : 0);
-                const preguntasMezcladas = this.barajar(preguntasTema);
-                preguntasPorTemaTemporal.push(...preguntasMezcladas.slice(0, cantidad));
-            });
-            seleccion.push(...this.barajar(preguntasPorTemaTemporal));
-        }
-
-        const seleccionNormalizada = this.normalizarSeleccionConDependencias(
-            seleccion,
-            totalPreguntas,
-            poolTemasSeleccionados
-        );
-
-        if (ordenarPorTema) {
-            return seleccionNormalizada;
-        }
-
-        return this.barajarRespetandoDependencias(seleccionNormalizada);
-    }
-
-    seleccionarPreguntas(cantidad, ordenarPorTema = false) {
-        return this.seleccionarPreguntasPractica([1, 2, 3, 4, 5], ordenarPorTema);
-    }
-
-    shuffleConSemilla(array, seed) {
-        const copia = [...array];
-        let random = this.seededRandom(seed);
-
-        for (let i = copia.length - 1; i > 0; i--) {
-            const j = Math.floor(random() * (i + 1));
-            [copia[i], copia[j]] = [copia[j], copia[i]];
-        }
-        return copia;
-    }
-
-    seededRandom(seed) {
-        let estado = seed;
-        return function () {
-            estado = (estado * 9301 + 49297) % 233280;
-            return estado / 233280;
-        };
-    }
-
-    esGaitero(pregunta) {
-        return /gaitero/i.test(pregunta.cuestion);
-    }
-
-    obtenerGrupoDependencia(pregunta) {
-        if (!pregunta || !pregunta.grupoDependencia) return null;
-        return pregunta.mantenerJuntas === false ? null : String(pregunta.grupoDependencia);
-    }
-
-    ordenarPreguntasDeGrupo(preguntas) {
-        return [...preguntas].sort((a, b) => {
-            const baseA = a.preguntaBaseDependencia === true ? 1 : 0;
-            const baseB = b.preguntaBaseDependencia === true ? 1 : 0;
-            if (baseA !== baseB) return baseB - baseA;
-
-            const ordenA = Number.isFinite(a.ordenGrupo) ? a.ordenGrupo : Number.MAX_SAFE_INTEGER;
-            const ordenB = Number.isFinite(b.ordenGrupo) ? b.ordenGrupo : Number.MAX_SAFE_INTEGER;
-            if (ordenA !== ordenB) return ordenA - ordenB;
-            return a.cuestion.localeCompare(b.cuestion, 'es');
-        });
-    }
-
-    construirMapaGrupos(pool) {
-        const grupos = new Map();
-        for (const pregunta of pool) {
-            const grupo = this.obtenerGrupoDependencia(pregunta);
-            if (!grupo) continue;
-            if (!grupos.has(grupo)) grupos.set(grupo, []);
-            grupos.get(grupo).push(pregunta);
-        }
-        for (const [id, preguntas] of grupos.entries()) {
-            grupos.set(id, this.ordenarPreguntasDeGrupo(preguntas));
-        }
-        return grupos;
-    }
-
-    compactarDependenciasEnOrden(lista) {
-        const resultado = [];
-        const gruposAñadidos = new Set();
-        const preguntasAñadidas = new Set();
-
-        for (const pregunta of lista) {
-            const clave = pregunta.cuestion;
-            if (preguntasAñadidas.has(clave)) continue;
-
-            const grupo = this.obtenerGrupoDependencia(pregunta);
-            if (!grupo) {
-                resultado.push(pregunta);
-                preguntasAñadidas.add(clave);
-                continue;
-            }
-
-            if (gruposAñadidos.has(grupo)) continue;
-
-            gruposAñadidos.add(grupo);
-            const bloque = this.ordenarPreguntasDeGrupo(
-                lista.filter(p => this.obtenerGrupoDependencia(p) === grupo)
-            );
-
-            for (const item of bloque) {
-                const itemClave = item.cuestion;
-                if (preguntasAñadidas.has(itemClave)) continue;
-                resultado.push(item);
-                preguntasAñadidas.add(itemClave);
-            }
-        }
-
-        return resultado;
-    }
-
-    normalizarSeleccionConDependencias(seleccionInicial, totalObjetivo, poolBase) {
-        const mapaGrupos = this.construirMapaGrupos(poolBase);
-        const seleccionOrdenada = this.compactarDependenciasEnOrden(seleccionInicial);
-
-        const preguntasSeleccionadas = new Set(seleccionOrdenada.map(p => p.cuestion));
-        const gruposRequeridos = new Set();
-
-        for (const pregunta of seleccionOrdenada) {
-            const grupo = this.obtenerGrupoDependencia(pregunta);
-            if (grupo) gruposRequeridos.add(grupo);
-        }
-
-        const resultado = [];
-        const resultadoSet = new Set();
-
-        const añadirPregunta = (pregunta) => {
-            if (!pregunta) return;
-            if (resultadoSet.has(pregunta.cuestion)) return;
-            resultado.push(pregunta);
-            resultadoSet.add(pregunta.cuestion);
-        };
-
-        const añadirGrupoCompleto = (grupoId) => {
-            const preguntasGrupo = mapaGrupos.get(grupoId) || [];
-            for (const pregunta of preguntasGrupo) {
-                añadirPregunta(pregunta);
-            }
-        };
-
-        for (const pregunta of seleccionOrdenada) {
-            const grupo = this.obtenerGrupoDependencia(pregunta);
-            if (grupo) {
-                añadirGrupoCompleto(grupo);
-            } else {
-                añadirPregunta(pregunta);
-            }
-        }
-
-        if (resultado.length > totalObjetivo) {
-            const clavesProtegidas = new Set();
-            for (const grupo of gruposRequeridos) {
-                for (const pregunta of mapaGrupos.get(grupo) || []) {
-                    clavesProtegidas.add(pregunta.cuestion);
-                }
-            }
-
-            for (let i = resultado.length - 1; i >= 0 && resultado.length > totalObjetivo; i--) {
-                const pregunta = resultado[i];
-                if (clavesProtegidas.has(pregunta.cuestion)) continue;
-                resultadoSet.delete(pregunta.cuestion);
-                resultado.splice(i, 1);
-            }
-        }
-
-        if (resultado.length < totalObjetivo) {
-            const disponibles = this.barajar(poolBase.filter(p => !resultadoSet.has(p.cuestion)));
-
-            for (const candidata of disponibles) {
-                if (resultado.length >= totalObjetivo) break;
-
-                const grupo = this.obtenerGrupoDependencia(candidata);
-                if (!grupo) {
-                    añadirPregunta(candidata);
-                    continue;
-                }
-
-                const preguntasGrupo = mapaGrupos.get(grupo) || [];
-                const faltantesGrupo = preguntasGrupo.filter(p => !resultadoSet.has(p.cuestion));
-                if (faltantesGrupo.length === 0) continue;
-                if (resultado.length + faltantesGrupo.length > totalObjetivo) continue;
-
-                for (const pregunta of faltantesGrupo) {
-                    añadirPregunta(pregunta);
-                }
-            }
-        }
-
-        return this.compactarDependenciasEnOrden(resultado).slice(0, totalObjetivo);
-    }
-
-    barajarRespetandoDependencias(array) {
-        const compactadas = this.compactarDependenciasEnOrden(array);
-        const bloques = [];
-        const gruposAñadidos = new Set();
-
-        for (const pregunta of compactadas) {
-            const grupo = this.obtenerGrupoDependencia(pregunta);
-            if (!grupo) {
-                bloques.push([pregunta]);
-                continue;
-            }
-
-            if (gruposAñadidos.has(grupo)) continue;
-            gruposAñadidos.add(grupo);
-            bloques.push(compactadas.filter(p => this.obtenerGrupoDependencia(p) === grupo));
-        }
-
-        return this.barajar(bloques).flat();
-    }
-
-    extraerTema(pregunta) {
-        const match = pregunta.cuestion.match(/T([1-5])-/i);
-        if (match && match[1]) {
-            return parseInt(match[1]);
-        }
-        return null;
-    }
-
-    esPreguntaConTabla(pregunta) {
-        return typeof pregunta?.cuestion === 'string' && /\n[^\n]*\|[^\n]*/.test(pregunta.cuestion);
-    }
-
-    esTablaTema3(pregunta) {
-        return this.extraerTema(pregunta) === 3 && this.esPreguntaConTabla(pregunta);
-    }
-
-    esPracticaTema4(pregunta) {
-        if (this.extraerTema(pregunta) !== 4 || typeof pregunta?.cuestion !== 'string') {
-            return false;
-        }
-
-        const texto = pregunta.cuestion.toLowerCase();
-        const tieneNumeros = /\d/.test(texto);
-        const patronesPracticos = [
-            'calcula', 'cálculo', 'indice', 'índice', 'variación', 'valor ganado',
-            'cpi', 'spi', 'ev', 'ac', 'pv', 'eac', 'bac'
-        ];
-
-        return tieneNumeros || patronesPracticos.some(patron => texto.includes(patron));
-    }
-
-    obtenerTemasExamen() {
-        const parcial = configuracion.get('parcialExamen') || 'parcial1';
-        return PARCIALES_EXAMEN[parcial] || PARCIALES_EXAMEN.parcial1;
-    }
-
-    seleccionarTema3ConUnaTabla(preguntasTema3, cantidad) {
-        if (cantidad <= 0) return [];
-
-        const tablas = preguntasTema3.filter(p => this.esTablaTema3(p));
-        const sinTabla = preguntasTema3.filter(p => !this.esTablaTema3(p));
-
-        let seleccion = [];
-        let grupoDependenciaPermitido = null;
-
-        if (tablas.length > 0) {
-            const tablasConGrupo = tablas.filter(p => this.obtenerGrupoDependencia(p));
-            const candidatasTabla = tablasConGrupo.length > 0 ? tablasConGrupo : tablas;
-            const tablaElegida = this.sample(candidatasTabla, 1)[0];
-            seleccion.push(tablaElegida);
-            grupoDependenciaPermitido = this.obtenerGrupoDependencia(tablaElegida);
-        }
-
-        const sinTablaPermitidas = sinTabla.filter(p => {
-            const grupo = this.obtenerGrupoDependencia(p);
-            if (!grupo) return true;
-            return grupoDependenciaPermitido != null && grupo === grupoDependenciaPermitido;
-        });
-
-        const faltan = Math.max(0, cantidad - seleccion.length);
-        seleccion.push(...this.sample(sinTablaPermitidas, faltan));
-
-        return seleccion.slice(0, cantidad);
-    }
-
-    seleccionarTema4ConUnaPractica(preguntasTema4, cantidad) {
-        if (cantidad <= 0) return [];
-
-        const practicas = preguntasTema4.filter(p => this.esPracticaTema4(p));
-        const noPracticas = preguntasTema4.filter(p => !this.esPracticaTema4(p));
-
-        const seleccion = [];
-        if (practicas.length > 0) {
-            seleccion.push(this.sample(practicas, 1)[0]);
-        }
-
-        const restantes = [...noPracticas, ...practicas.filter(p => !seleccion.some(s => s.cuestion === p.cuestion))];
-        const faltan = Math.max(0, cantidad - seleccion.length);
-        seleccion.push(...this.sample(restantes, faltan));
-
-        return seleccion.slice(0, cantidad);
-    }
-
-    barajar(array) {
-        const copia = [...array];
-        for (let i = copia.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [copia[i], copia[j]] = [copia[j], copia[i]];
-        }
-        return copia;
-    }
-
-    sample(array, n) {
-        if (array.length <= n) {
-            return this.barajar(array);
-        }
-
-        const noVistas = [];
-        const vistasAntiguas = [];
-        const vistasRecientes = [];
-
-        const umbralReciente = 50;
-
-        for (const pregunta of array) {
-            const prioridad = gestorHistorial.obtenerPrioridad(pregunta);
-
-            if (prioridad === Infinity) {
-                noVistas.push(pregunta);
-            } else if (prioridad > umbralReciente) {
-                vistasAntiguas.push(pregunta);
-            } else {
-                vistasRecientes.push(pregunta);
-            }
-        }
-
-        const seleccion = [];
-
-        const deNoVistas = Math.min(noVistas.length, n);
-        seleccion.push(...this.barajar(noVistas).slice(0, deNoVistas));
-
-        if (seleccion.length < n && vistasAntiguas.length > 0) {
-            const faltan = n - seleccion.length;
-            const deAntiguas = Math.min(vistasAntiguas.length, faltan);
-            seleccion.push(...this.barajar(vistasAntiguas).slice(0, deAntiguas));
-        }
-
-        if (seleccion.length < n && vistasRecientes.length > 0) {
-            const faltan = n - seleccion.length;
-            vistasRecientes.sort((a, b) =>
-                gestorHistorial.obtenerPrioridad(b) - gestorHistorial.obtenerPrioridad(a)
-            );
-            seleccion.push(...vistasRecientes.slice(0, faltan));
-        }
-
-        return this.barajar(seleccion).slice(0, n);
-    }
-
-    seleccionarPreguntasExamen() {
-        const pool = PREGUNTAS_COMPLETAS.filter(p => !this.esGaitero(p));
-        const temasExamen = this.obtenerTemasExamen();
-        const poolParcial = pool.filter(p => temasExamen.includes(this.extraerTema(p)));
-
-        if (poolParcial.length < TOTAL_PREGUNTAS_EXAMEN) {
-            return [];
-        }
-
-        const grupos = new Map();
-        for (const pregunta of poolParcial) {
-            const tema = this.extraerTema(pregunta);
-            if (tema === null) continue;
-            if (!grupos.has(tema)) grupos.set(tema, []);
-            grupos.get(tema).push(pregunta);
-        }
-
-        const seleccion = [];
-        const seleccionSet = new Set();
-
-        const preguntasPorTemaBase = Math.floor(TOTAL_PREGUNTAS_EXAMEN / temasExamen.length);
-        const extras = TOTAL_PREGUNTAS_EXAMEN % temasExamen.length;
-
-        temasExamen.forEach((tema, indiceTema) => {
-            const preguntasTema = grupos.get(tema) ?? [];
-            const cuotaTema = preguntasPorTemaBase + (indiceTema < extras ? 1 : 0);
-
-            let elegidas = [];
-            elegidas = this.sample(preguntasTema, cuotaTema);
-
-            for (const p of elegidas) {
-                seleccion.push(p);
-                seleccionSet.add(p.cuestion);
-            }
-        });
-
-        if (seleccion.length < TOTAL_PREGUNTAS_EXAMEN) {
-            const restantes = poolParcial.filter(p => {
-                if (seleccionSet.has(p.cuestion)) return false;
-                return true;
-            });
-            const faltan = TOTAL_PREGUNTAS_EXAMEN - seleccion.length;
-            seleccion.push(...this.sample(restantes, faltan));
-        }
-
-        const seleccionNormalizada = this.normalizarSeleccionConDependencias(
-            seleccion,
-            TOTAL_PREGUNTAS_EXAMEN,
-            poolParcial.length > 0 ? poolParcial : pool
-        );
-
-        const final = this.barajarRespetandoDependencias(seleccionNormalizada).slice(0, TOTAL_PREGUNTAS_EXAMEN);
-        return final;
-    }
-
-    mostrarPregunta() {
-        const pregunta = this.preguntas[this.preguntaActual];
-
-        this.opcionEnfocada = 0;
-        this.focoActivo = false;
-
-        if (this.modo === 'examen') {
-            const bloque = Math.floor(this.preguntaActual / 10) + 1;
-            const totalBloques = Math.ceil(this.preguntas.length / 10);
-            const enBloque = (this.preguntaActual % 10) + 1;
-            const indicadorNoResponder = !this.respuestas.hasOwnProperty(this.preguntaActual) ? ' ⭕' : '';
-            document.getElementById('preguntaNumero').textContent =
-                `Bloque ${bloque}/${totalBloques} — Pregunta ${enBloque}/10 (global ${this.preguntaActual + 1}/${this.preguntas.length})${indicadorNoResponder}`;
-        } else {
-            document.getElementById('preguntaNumero').textContent =
-                `Pregunta ${this.preguntaActual + 1} de ${this.preguntas.length}`;
-        }
-        const preguntaTextoEl = document.getElementById('preguntaTexto');
-        this.renderizarPreguntaTexto(preguntaTextoEl, pregunta.cuestion);
-
-        const contenedor = document.getElementById('opcionesContenedor');
-        contenedor.innerHTML = '';
-
-        const yaRespondida = this.respuestas.hasOwnProperty(this.preguntaActual);
-
-        pregunta.opciones.forEach((opcion, indice) => {
-            const boton = document.createElement('button');
-            boton.className = 'opcion';
-
-            const numeroTecla = document.createElement('span');
-            numeroTecla.style.cssText = 'display: inline-block; background: #3a3a3a; padding: 2px 6px; border-radius: 3px; margin-right: 8px; font-size: 11px; color: #00d4ff;';
-            numeroTecla.textContent = (indice + 1);
-
-            const textoOpcion = document.createElement('span');
-            textoOpcion.textContent = opcion;
-
-            boton.appendChild(numeroTecla);
-            boton.appendChild(textoOpcion);
-
-            if (this.respuestas[this.preguntaActual] === indice) {
-                boton.classList.add('seleccionada');
-            }
-
-            if (this.modo === 'practica' && yaRespondida) {
-                boton.disabled = true;
-                boton.style.cursor = 'not-allowed';
-                boton.style.opacity = '0.8';
-            } else {
-                boton.onclick = () => this.responderPregunta(indice);
-            }
-
-            contenedor.appendChild(boton);
-        });
-
-        const btnAnterior = document.getElementById('btnAnterior');
-        const btnSiguiente = document.getElementById('btnSiguiente');
-
-        if (this.modo === 'examen') {
-            btnAnterior.classList.remove('oculto');
-            btnAnterior.disabled = this.preguntaActual === 0;
-        } else {
-            btnAnterior.classList.remove('oculto');
-            btnAnterior.disabled = this.preguntaActual === 0;
-        }
-
-        btnSiguiente.disabled = this.preguntaActual >= this.preguntas.length - 1;
-
-        const progreso = ((this.preguntaActual + 1) / this.preguntas.length) * 100;
-        document.getElementById('progresoBarra').style.width = progreso + '%';
-        document.getElementById('numeroPregunta').textContent = this.preguntaActual + 1;
-        const totalPreguntasActual = document.getElementById('totalPreguntasActual');
-        if (totalPreguntasActual) totalPreguntasActual.textContent = this.preguntas.length;
-
-        if (this.modo === 'practica' && this.respuestas.hasOwnProperty(this.preguntaActual)) {
-            this.aplicarFeedback();
-        }
-    }
-
-    renderizarPreguntaTexto(contenedor, texto) {
-        const lineas = texto.split('\n');
-        const indiceCabecera = lineas.findIndex(linea => linea.includes('|'));
-
-        if (indiceCabecera < 0) {
-            contenedor.classList.remove('pregunta-texto-tabla');
-            contenedor.innerHTML = '';
-            contenedor.textContent = texto;
-            return;
-        }
-
-        const filas = lineas
-            .slice(indiceCabecera)
-            .filter(linea => linea.includes('|'))
-            .map(linea => linea.split('|').map(celda => celda.trim()));
-
-        if (filas.length < 2) {
-            contenedor.classList.remove('pregunta-texto-tabla');
-            contenedor.innerHTML = '';
-            contenedor.textContent = texto;
-            return;
-        }
-
-        const introTexto = lineas.slice(0, indiceCabecera).join('\n').trim();
-
-        contenedor.classList.add('pregunta-texto-tabla');
-        contenedor.innerHTML = '';
-
-        if (introTexto) {
-            const intro = document.createElement('div');
-            intro.className = 'pregunta-tabla-intro';
-            intro.textContent = introTexto;
-            contenedor.appendChild(intro);
-        }
-
-        const wrap = document.createElement('div');
-        wrap.className = 'pregunta-tabla-wrap';
-
-        const table = document.createElement('table');
-        table.className = 'pregunta-tabla';
-
-        const thead = document.createElement('thead');
-        const trHead = document.createElement('tr');
-        filas[0].forEach(textoCelda => {
-            const th = document.createElement('th');
-            th.textContent = textoCelda;
-            trHead.appendChild(th);
-        });
-        thead.appendChild(trHead);
-
-        const tbody = document.createElement('tbody');
-        filas.slice(1).forEach(fila => {
-            const tr = document.createElement('tr');
-            fila.forEach(textoCelda => {
-                const td = document.createElement('td');
-                td.textContent = textoCelda;
-                tr.appendChild(td);
-            });
-            tbody.appendChild(tr);
-        });
-
-        table.appendChild(thead);
-        table.appendChild(tbody);
-        wrap.appendChild(table);
-        contenedor.appendChild(wrap);
-    }
-
-    obtenerIndiceCorrecto(pregunta) {
-        const objetivo = `${pregunta.solucion}.`;
-        return pregunta.opciones.findIndex(op => op.trim().startsWith(objetivo) || op.trim().charAt(0) === pregunta.solucion);
-    }
-
-    aplicarFeedback() {
-        const pregunta = this.preguntas[this.preguntaActual];
-        const correcto = this.obtenerIndiceCorrecto(pregunta);
-        const elegido = this.respuestas[this.preguntaActual];
-
-        const botones = document.querySelectorAll('#opcionesContenedor .opcion');
-        botones.forEach((boton, indice) => {
-            boton.classList.remove('correcta', 'incorrecta');
-            if (indice === correcto) {
-                boton.classList.add('correcta');
-            }
-            if (indice === elegido && elegido !== correcto) {
-                boton.classList.add('incorrecta');
-            }
-        });
-    }
-
-    responderPregunta(indice) {
-        if (this.modo === 'practica') {
-            this.respuestas[this.preguntaActual] = indice;
-        } else {
-            if (this.respuestas[this.preguntaActual] === indice) {
-                delete this.respuestas[this.preguntaActual];
-            } else {
-                this.respuestas[this.preguntaActual] = indice;
-            }
-        }
-        this.mostrarPregunta();
-    }
-
-    siguiente() {
-        if (this.preguntaActual < this.preguntas.length - 1) {
-            this.preguntaActual++;
-            this.mostrarPregunta();
-        }
-    }
-
-    anterior() {
-        if (this.preguntaActual > 0) {
-            this.preguntaActual--;
-            this.mostrarPregunta();
-        }
-    }
-
-    terminar() {
-        if (this.bloqueadoPorTiempo) {
-            this.mostrarResultados();
-            return;
-        }
-        const contestadas = Object.keys(this.respuestas).length;
-        const sinResponder = this.preguntas.length - contestadas;
-
-        const mensaje = sinResponder > 0
-            ? `¿Seguro que quieres terminar el examen?\n\nTe quedan ${sinResponder} preguntas sin responder.`
-            : '¿Seguro que quieres terminar el examen?';
-
-        if (!confirm(mensaje)) {
-            return;
-        }
-
-        this.mostrarResultados();
-    }
-
-    mostrarResultados() {
-        let correctas = 0;
-        this.erroresDelTest = [];
-
-        this.preguntas.forEach((pregunta, indice) => {
-            if (this.respuestas.hasOwnProperty(indice)) {
-                const indiceRespuesta = this.respuestas[indice];
-                const respuestaUsuario = pregunta.opciones[indiceRespuesta].charAt(0);
-                const esCorrecta = respuestaUsuario === pregunta.solucion;
-
-                if (esCorrecta) {
-                    correctas++;
-                } else {
-                    const indiceCorrecto = this.obtenerIndiceCorrecto(pregunta);
-                    this.erroresDelTest.push({
-                        pregunta: pregunta.cuestion,
-                        respuestaUsuario: pregunta.opciones[indiceRespuesta],
-                        respuestaCorrecta: pregunta.opciones[indiceCorrecto]
-                    });
-
-                    gestorFallos.agregarFallo(
-                        pregunta,
-                        pregunta.opciones[indiceRespuesta],
-                        pregunta.opciones[indiceCorrecto]
-                    );
-                }
-            } else {
-                const indiceCorrecto = this.obtenerIndiceCorrecto(pregunta);
-                gestorFallos.agregarFallo(
-                    pregunta,
-                    '(No respondida)',
-                    pregunta.opciones[indiceCorrecto]
-                );
-            }
-        });
-
-        const respondidas = Object.keys(this.respuestas).length;
-        const incorrectas = respondidas - correctas;
-        const sinResponder = this.preguntas.length - respondidas;
-
-        const npv = this.preguntas.length;
-        const nc = correctas;
-        const puntuacionFinal = npv > 2
-            ? Math.max(0, Math.min(10, (10 / (npv - 2)) * (nc - 2)))
-            : 0;
-
-        document.getElementById('respuestasCorrectas').textContent = correctas;
-        document.getElementById('respuestasIncorrectas').textContent = incorrectas;
-        document.getElementById('sinResponder').textContent = sinResponder;
-        document.getElementById('puntuacionFinal').textContent = puntuacionFinal.toFixed(2) + '/10';
-
-        this.mostrarDetalleErrores();
-
-        document.getElementById('examen').classList.add('oculto');
-        document.getElementById('resultados').classList.remove('oculto');
-    }
-
-    mostrarDetalleErrores() {
-        const contenedor = document.getElementById('erroresDetalle');
-
-        const preguntasNoRespondidas = [];
-        this.preguntas.forEach((pregunta, indice) => {
-            if (!this.respuestas.hasOwnProperty(indice)) {
-                preguntasNoRespondidas.push({
-                    pregunta: pregunta.cuestion,
-                    indice: indice
-                });
-            }
-        });
-
-        if (this.erroresDelTest.length === 0 && preguntasNoRespondidas.length === 0) {
-            contenedor.classList.add('oculto');
-            return;
-        }
-
-        contenedor.classList.remove('oculto');
-        let html = '';
-
-        if (this.erroresDelTest.length > 0) {
-            html += '<h3 style="color: #ef4444; margin-bottom: 15px;">📋 Preguntas Falladas</h3>';
-            this.erroresDelTest.forEach((error, index) => {
-                html += `
-                    <div class="error-item">
-                        <div class="error-pregunta">${index + 1}. ${error.pregunta}</div>
-                        <div class="error-respuesta respuesta-tu">
-                            ❌ Tu respuesta: ${error.respuestaUsuario}
-                        </div>
-                        <div class="error-respuesta respuesta-correcta">
-                            ✓ Respuesta correcta: ${error.respuestaCorrecta}
-                        </div>
-                    </div>
-                `;
-            });
-        }
-
-        if (preguntasNoRespondidas.length > 0) {
-            if (this.erroresDelTest.length > 0) {
-                html += '<hr style="border: none; border-top: 1px solid #3a3a3a; margin: 20px 0;">';
-            }
-            html += '<h3 style="color: #8b5cf6; margin-bottom: 15px; margin-top: 20px;">⭕ Preguntas No Respondidas</h3>';
-            html += '<div style="font-size: 12px; color: #888; margin-bottom: 15px;">Se han agregado al test de fallos para que las repases</div>';
-
-            preguntasNoRespondidas.forEach((item, index) => {
-                const respuestaCorrecta = this.preguntas[item.indice].opciones[this.obtenerIndiceCorrecto(this.preguntas[item.indice])];
-                html += `
-                    <div class="error-item" style="border-left-color: #8b5cf6;">
-                        <div class="error-pregunta">⭕ ${index + 1}. ${item.pregunta}</div>
-                        <div class="error-respuesta respuesta-correcta">
-                            ✓ Respuesta correcta: ${respuestaCorrecta}
-                        </div>
-                    </div>
-                `;
-            });
-        }
-
-        contenedor.innerHTML = html;
-    }
-
-    reiniciar() {
-        this.detenerTiempo();
-        if (this.keyboardHandler) {
-            document.removeEventListener('keydown', this.keyboardHandler);
-            this.keyboardHandler = null;
-        }
-        document.getElementById('resultados').classList.add('oculto');
-        document.getElementById('examen').classList.add('oculto');
-        document.getElementById('seleccionModo').classList.remove('oculto');
-        document.getElementById('modoActual').textContent = '-';
-        actualizarContadorFallos();
-    }
-
-    iniciarTiempo() {
-        this.detenerTiempo();
-        this.timerId = setInterval(() => {
-            const ahora = Date.now();
-            const transcurridoMs = ahora - this.tiempoInicio;
-
-            if (this.modo === 'examen' && this.tiempoLimiteMs != null) {
-                const restanteMs = Math.max(0, this.tiempoLimiteMs - transcurridoMs);
-                const restanteSec = Math.floor(restanteMs / 1000);
-                const minutos = Math.floor(restanteSec / 60);
-                const segundos = restanteSec % 60;
-                document.getElementById('tiempoTranscurrido').textContent =
-                    `Tiempo restante: ${minutos}:${segundos.toString().padStart(2, '0')}`;
-
-                if (restanteMs <= 0 && !this.bloqueadoPorTiempo) {
-                    this.bloqueadoPorTiempo = true;
-                    this.detenerTiempo();
-                    alert('Se acabó el tiempo. El examen se finalizará automáticamente.');
-                    this.mostrarResultados();
-                }
-                return;
-            }
-
-            const tiempoTranscurrido = Math.floor(transcurridoMs / 1000);
-            const minutos = Math.floor(tiempoTranscurrido / 60);
-            const segundos = tiempoTranscurrido % 60;
-            document.getElementById('tiempoTranscurrido').textContent =
-                `Tiempo: ${minutos}:${segundos.toString().padStart(2, '0')}`;
-        }, 1000);
-    }
-
-    detenerTiempo() {
-        if (this.timerId != null) {
-            clearInterval(this.timerId);
-            this.timerId = null;
-        }
-    }
-}
-
-let app;
-
-function mostrarTotalPreguntas() {
-    const totalElement = document.getElementById('totalPreguntasInfo');
-    if (totalElement && PREGUNTAS_COMPLETAS.length > 0) {
-        totalElement.textContent = `Base: ${PREGUNTAS_COMPLETAS.length} ✓`;
-    }
-}
-
-function actualizarContadorFallos() {
-    const contador = gestorFallos.contarFallos();
-    document.getElementById('contadorFallos').textContent = contador;
-    document.getElementById('badgeFallos').textContent = contador;
-
-    const btnTestFallos = document.getElementById('btnTestFallos');
-    const btnLimpiarFallos = document.getElementById('btnLimpiarFallos');
-
-    if (contador > 0) {
-        btnTestFallos.disabled = false;
-        if (btnLimpiarFallos) btnLimpiarFallos.disabled = false;
-    } else {
-        btnTestFallos.disabled = true;
-        if (btnLimpiarFallos) btnLimpiarFallos.disabled = true;
-    }
-}
-
-function limpiarFallos() {
-    if (gestorFallos.contarFallos() === 0) {
-        return;
-    }
-
-    if (confirm('¿Estás seguro de que quieres eliminar todas las preguntas falladas guardadas?')) {
-        gestorFallos.limpiarFallos();
-        actualizarContadorFallos();
-        alert('Preguntas falladas eliminadas correctamente');
-    }
-}
-
-function actualizarConfigUI() {
-    const ordenarPorTema = configuracion.get('ordenarPorTema');
-    const toggle = document.getElementById('toggleOrdenTema');
-
-    if (ordenarPorTema) {
-        toggle.classList.add('active');
-    } else {
-        toggle.classList.remove('active');
-    }
-}
-
-function toggleConfig(clave) {
-    const nuevoValor = configuracion.toggle(clave);
-    actualizarConfigUI();
-}
-
-function exportarFallos() {
-    try {
-        const perfilActual = configuracion.get('perfilActual') || 'default';
-        const perfiles = configuracion.get('perfiles') || {};
-        const nombrePerfil = perfilActual === 'default' ? 'Principal' : (perfiles[perfilActual]?.nombre || perfilActual);
-
-        const datosExportar = {
-            perfil: perfilActual,
-            nombrePerfil: nombrePerfil,
-            fallos: gestorFallos.obtenerFallos(),
-            fecha: new Date().toISOString()
-        };
-
-        const datos = JSON.stringify(datosExportar, null, 2);
-        const blob = new Blob([datos], { type: 'application/json' });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = `fallos_${nombrePerfil}_${Date.now()}.json`;
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        URL.revokeObjectURL(url);
-        alert(`Fallos exportados correctamente (Perfil: ${nombrePerfil})`);
-    } catch (e) {
-        alert('No se pudo exportar los fallos');
-    }
-}
-
-function importarFallosDesdeArchivo(event) {
-    const file = event?.target?.files?.[0];
-    if (!file) return;
-    const reader = new FileReader();
-    reader.onload = () => {
-        try {
-            const datos = JSON.parse(reader.result);
-
-            if (datos.fallos && Array.isArray(datos.fallos)) {
-                const mensaje = `¿Importar ${datos.fallos.length} fallos del perfil "${datos.nombrePerfil || 'Desconocido'}"?\n\nEsto reemplazará los fallos actuales del perfil activo.`;
-                if (!confirm(mensaje)) return;
-
-                gestorFallos.fallos = datos.fallos;
-                gestorFallos.guardarFallos();
-                actualizarContadorFallos();
-                alert('Fallos importados correctamente');
-            }
-            else if (Array.isArray(datos)) {
-                if (!confirm(`¿Importar ${datos.length} fallos?\nEsto reemplazará los fallos actuales del perfil activo.`)) return;
-
-                gestorFallos.fallos = datos;
-                gestorFallos.guardarFallos();
-                actualizarContadorFallos();
-                alert('Fallos importados correctamente');
-            }
-            else {
-                throw new Error('Formato inválido');
-            }
-        } catch (e) {
-            alert('Error al importar JSON de fallos: ' + e.message);
-        }
-    };
-    reader.readAsText(file);
-}
-
-function toggleTema(numeroTema) {
-    let temasSeleccionados = configuracion.get('temasSeleccionados') || [1, 2, 3, 4, 5];
-
-    if (temasSeleccionados.includes(numeroTema)) {
-        temasSeleccionados = temasSeleccionados.filter(t => t !== numeroTema);
-        if (temasSeleccionados.length === 0) {
-            alert('Debes seleccionar al menos un tema');
-            const checkbox = document.querySelector(`input[type="checkbox"][value="${numeroTema}"]`);
-            if (checkbox) checkbox.checked = true;
-            return;
-        }
-    } else {
-        temasSeleccionados.push(numeroTema);
-        temasSeleccionados.sort((a, b) => a - b);
-    }
-
-    configuracion.set('temasSeleccionados', temasSeleccionados);
-    actualizarDistribucion();
-}
-
-function actualizarDistribucion() {
-    const temasSeleccionados = configuracion.get('temasSeleccionados') || [1, 2, 3, 4, 5];
-    const totalPreguntas = 25;
-    const numTemas = temasSeleccionados.length;
-    const preguntasPorTema = Math.floor(totalPreguntas / numTemas);
-    const preguntasExtras = totalPreguntas % numTemas;
-
-    let texto = `📊 Distribución: `;
-    const distribucionPorTema = [];
-
-    temasSeleccionados.forEach((tema, index) => {
-        const cantidad = preguntasPorTema + (index < preguntasExtras ? 1 : 0);
-        distribucionPorTema.push(`Tema ${tema}: ${cantidad}`);
+function topicDistribution(topics) {
+  const available = new Map(topics.map(topic => [topic, questions.filter(question => extractTopic(question) === topic).length]));
+  const quotas = new Map(topics.map(topic => [topic, 0]));
+  let remaining = CONFIG.practiceQuestionCount;
+  let active = topics.filter(topic => (available.get(topic) || 0) > 0);
+  while (remaining > 0 && active.length) {
+    const base = Math.floor(remaining / active.length);
+    const extra = remaining % active.length;
+    let assigned = 0;
+    active.forEach((topic, index) => {
+      const room = (available.get(topic) || 0) - (quotas.get(topic) || 0);
+      const amount = Math.min(room, base + (index < extra ? 1 : 0));
+      if (amount > 0) { quotas.set(topic, (quotas.get(topic) || 0) + amount); assigned += amount; }
     });
-
-    texto += distribucionPorTema.join(' | ');
-
-    const infoDiv = document.getElementById('infoDistribucion');
-    if (infoDiv) {
-        infoDiv.textContent = texto;
-    }
+    if (!assigned) break;
+    remaining -= assigned;
+    active = active.filter(topic => (quotas.get(topic) || 0) < (available.get(topic) || 0));
+  }
+  return quotas;
 }
-
-function cambiarParcialExamen() {
-    const select = document.getElementById('parcialExamenSelect');
-    if (!select) return;
-    configuracion.set('parcialExamen', select.value);
-    actualizarTemasUI();
-}
-
-function actualizarParcialExamenUI() {
-    const select = document.getElementById('parcialExamenSelect');
-    if (!select) return;
-    select.value = configuracion.get('parcialExamen') || 'parcial1';
-}
-
-function actualizarTemasUI() {
-    const parcial = configuracion.get('parcialExamen') || 'parcial1';
-    const temasParcial = PARCIALES_EXAMEN[parcial] || PARCIALES_EXAMEN.parcial1;
-    const temasSeleccionados = configuracion.get('temasSeleccionados') || [...temasParcial];
-    let temasCompatibles = temasSeleccionados.filter(tema => temasParcial.includes(tema));
-
-    if (temasCompatibles.length === 0) {
-        temasCompatibles = [...temasParcial];
-        configuracion.set('temasSeleccionados', temasCompatibles);
-    }
-
-    for (let i = 1; i <= 5; i++) {
-        const checkbox = document.querySelector(`input[type="checkbox"][value="${i}"]`);
-        if (checkbox) {
-            const permitido = temasParcial.includes(i);
-            checkbox.disabled = !permitido;
-            checkbox.checked = permitido && temasCompatibles.includes(i);
-
-            const etiqueta = checkbox.closest('.tema-checkbox');
-            if (etiqueta) {
-                etiqueta.style.opacity = permitido ? '1' : '0.45';
-            }
-        }
-    }
-
-    actualizarDistribucion();
-}
-
-function iniciarModo(modo) {
-    if (app && app.detenerTiempo) {
-        app.detenerTiempo();
-    }
-
-    document.getElementById('seleccionModo').classList.add('oculto');
-    document.getElementById('resultados').classList.add('oculto');
-    document.getElementById('examen').classList.remove('oculto');
-
-    let textoModo = 'Práctica';
-    if (modo === 'examen') textoModo = 'Examen';
-    else if (modo === 'fallos') textoModo = 'Test de Fallos';
-
-    document.getElementById('modoActual').textContent = textoModo;
-
-    app = new SimuladorExamen(modo);
-}
-
-function cargarPerfiles() {
-    const select = document.getElementById('perfilSelect');
-    if (!select) return;
-
-    const perfilActual = configuracion.get('perfilActual') || 'default';
-    const perfiles = configuracion.get('perfiles') || {};
-
-    select.innerHTML = '<option value="default">Usuario Principal</option>';
-
-    Object.keys(perfiles).forEach(id => {
-        if (id !== 'default') {
-            const option = document.createElement('option');
-            option.value = id;
-            option.textContent = perfiles[id].nombre || id;
-            select.appendChild(option);
-        }
+function renderTopicSettings() {
+  const section = $('topicSettings'), container = $('topicFilters'), distribution = $('topicDistribution');
+  if (!section || !container || !distribution) return;
+  const topics = getAvailableTopics(questions);
+  if (!topics.length) {
+    section.hidden = false; container.replaceChildren();
+    distribution.textContent = 'El banco todavía no contiene preguntas con un tema identificable.';
+    $('orderByTopic').checked = false; $('orderByTopic').disabled = true;
+    return;
+  }
+  section.hidden = false;
+  const preferences = readPreferences();
+  let selected = (Array.isArray(preferences.selectedTopics) ? preferences.selectedTopics : []).filter(topic => topics.includes(Number(topic))).map(Number);
+  if (!selected.length) { selected = [...topics]; savePreferences({ selectedTopics: selected }); }
+  container.replaceChildren();
+  topics.forEach(topic => {
+    const label = document.createElement('label'); label.className = 'topic-option';
+    const input = document.createElement('input'); input.type = 'checkbox';
+    input.value = String(topic); input.checked = selected.includes(topic);
+    input.addEventListener('change', () => {
+      const next = [...container.querySelectorAll('input:checked')].map(item => Number(item.value)).filter(Number.isInteger);
+      if (!next.length) { input.checked = true; distribution.textContent = 'Debes mantener seleccionado al menos un tema.'; return; }
+      savePreferences({ selectedTopics: next }); renderTopicSettings();
     });
+    const text = document.createElement('span');
+    text.textContent = 'Tema ' + topic + ' (' + questions.filter(question => extractTopic(question) === topic).length + ')';
+    label.append(input, text); container.append(label);
+  });
+  const quotas = topicDistribution(selected);
+  distribution.textContent = 'Distribución prevista de ' + CONFIG.practiceQuestionCount + ' preguntas: ' + selected.map(topic => 'Tema ' + topic + ': ' + (quotas.get(topic) || 0)).join(' · ');
+  $('orderByTopic').checked = preferences.orderByTopic === true; $('orderByTopic').disabled = false;
+}
+function renderQuestionText(container, text) {
+  const value = String(text || '');
+  const lines = value.split(/\r?\n/);
+  const firstTableLine = lines.findIndex(line => line.includes('|'));
+  const rows = firstTableLine < 0 ? [] : lines.slice(firstTableLine).filter(line => line.includes('|'))
+    .map(line => line.split('|').map(cell => cell.trim()))
+    .filter(cells => cells.length > 1 && !cells.every(cell => /^:?-{2,}:?$/.test(cell)));
+  if (rows.length < 2) { container.replaceChildren(); container.classList.remove('question-text-table'); container.textContent = value; return; }
+  container.replaceChildren(); container.classList.add('question-text-table');
+  const intro = lines.slice(0, firstTableLine).join('\n').trim();
+  if (intro) { const paragraph = document.createElement('p'); paragraph.className = 'question-table-intro'; paragraph.textContent = intro; container.append(paragraph); }
+  const wrapper = document.createElement('div'); wrapper.className = 'question-table-wrap';
+  wrapper.setAttribute('role', 'region');
+  wrapper.setAttribute('aria-label', 'Tabla de datos de la pregunta. Desliza horizontalmente para ver todas las columnas.');
+  wrapper.tabIndex = 0;
+  const table = document.createElement('table'); table.className = 'question-table';
+  const head = document.createElement('thead'), headRow = document.createElement('tr');
+  rows[0].forEach(value => { const cell = document.createElement('th'); cell.scope = 'col'; cell.textContent = value; headRow.append(cell); });
+  head.append(headRow);
+  const body = document.createElement('tbody');
+  rows.slice(1).forEach(row => { const tr = document.createElement('tr'); row.forEach(value => { const cell = document.createElement('td'); cell.textContent = value; tr.append(cell); }); body.append(tr); });
+  table.append(head, body); wrapper.append(table); container.append(wrapper);
+}
+function moveKeyboardOption(direction) {
+  const buttons = [...$('options').querySelectorAll('.option')]; if (!buttons.length) return;
+  keyboardOptionIndex = (keyboardOptionIndex + direction + buttons.length) % buttons.length;
+  buttons.forEach((button, index) => button.classList.toggle('keyboard-focus', index === keyboardOptionIndex));
+  buttons[keyboardOptionIndex].focus({ preventScroll: true }); buttons[keyboardOptionIndex].scrollIntoView({ block: 'nearest' });
+}
+function requestFinish() {
+  if (!engine || !state) return;
+  const unanswered = state.questions.length - Object.keys(state.answers || {}).length;
+  const touch = (typeof window.matchMedia === 'function' && window.matchMedia('(pointer: coarse)').matches) || /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent || '');
+  if (!touch) { if (confirm(unanswered > 0 ? '¿Finalizar la sesión? Te quedan ' + unanswered + ' preguntas sin responder.' : '¿Finalizar la sesión?')) engine.finish(); return; }
+  const now = Date.now();
+  if (finishConfirmationAt && now - finishConfirmationAt <= 3500) {
+    finishConfirmationAt = 0; clearTimeout(finishToastTimer); $('finishConfirmToast').hidden = true; engine.finish(); return;
+  }
+  finishConfirmationAt = now;
+  $('finishConfirmToast').textContent = (unanswered > 0 ? 'Quedan ' + unanswered + ' sin responder. ' : '') + 'Pulsa «Finalizar» otra vez en los próximos 3,5 segundos para confirmar.';
+  $('finishConfirmToast').hidden = false; clearTimeout(finishToastTimer);
+  finishToastTimer = setTimeout(() => { finishConfirmationAt = 0; $('finishConfirmToast').hidden = true; }, 3500);
+}
 
-    select.value = perfilActual;
+function show(id) {
+  ['menu', 'exam', 'results', 'history'].forEach(view => $(view).hidden = view !== id);
+  document.body.dataset.view = id;
+  document.querySelectorAll('[data-view]').forEach(button => {
+    button.classList.toggle('active', button.dataset.view === id);
+  });
+}
+function navigateToView(view, targetId = null) {
+  if (engine && state) {
+    if (!confirm('La sesión actual se guardará para que puedas continuar después. ¿Quieres volver a la navegación?')) return;
+    engine.dispose();
+    engine = null;
+    state = null;
+  }
+  if (view === 'history') {
+    renderHistory();
+    show('history');
+  } else {
+    renderHome();
+    show('menu');
+  }
+  if (targetId) {
+    setTimeout(() => $(targetId)?.scrollIntoView({ behavior: 'smooth', block: 'center' }), 40);
+  }
+}
+function updateCloudStatus(status) {
+  const message = $('cloudStatusMessage');
+  const state = $('cloudState');
+  const email = status.email || null;
+  message.textContent = status.message;
+  state.textContent = status.state === 'connected' ? 'Sincronizado' : status.state === 'syncing' ? 'Sincronizando' : status.state === 'error' ? 'Error' : status.state === 'conflict' ? 'Conflicto' : status.state === 'signed-out' ? 'Sin sesión' : status.state === 'unconfigured' ? 'Solo local' : 'Conectando';
+  state.dataset.state = status.state;
+  $('cloudAuthControls').hidden = Boolean(email) || status.state === 'unconfigured' || !cloudSync;
+  $('cloudSignedControls').hidden = !email;
+  $('cloudSetupHint').hidden = status.state !== 'unconfigured';
+  $('cloudAccount').textContent = email || '';
+}
+function currentCloudCredentials() {
+  return { email: $('cloudEmail').value.trim(), password: $('cloudPassword').value };
+}
+function showCloudError(error) {
+  updateCloudStatus({ state: 'error', email: cloudSync?.user?.email || null, message: cloudSync?.errorMessage(error) || error.message || 'No se pudo completar la operación.' });
+}
+async function initializeCloudSync() {
+  if (!isFirebaseConfigured()) {
+    updateCloudStatus({ state: 'unconfigured', message: 'La aplicación funciona en modo local. Para sincronizar entre dispositivos, completa common/firebase/firebase-config.js y configura Firestore.' });
+    return;
+  }
+  updateCloudStatus({ state: 'syncing', message: 'Conectando con Firebase…' });
+  try {
+    const { FirebaseSyncProvider } = await import('../common/firebase/firebase-sync.js');
+    cloudSync = new FirebaseSyncProvider({
+      storage, profileManager: profiles, simulatorId: CONFIG.id,
+      onStatus: updateCloudStatus,
+      onDataApplied: () => {
+        history = new ExamHistory(storage, () => profiles.activeId, CONFIG.id);
+        sessions = new SessionStore(storage, () => profiles.activeId, CONFIG.id);
+        failures = new FailedQuestionStore(storage, () => profiles.activeId);
+        renderHome();
+      }
+    });
+    await cloudSync.initialize();
+  } catch (error) {
+    console.error('No se pudo cargar el módulo Firebase:', error);
+    updateCloudStatus({ state: 'error', message: 'No se pudo cargar Firebase. Comprueba la conexión: ' + error.message });
+  }
+}
 
-    const btnEliminar = document.getElementById('btnEliminar');
-    if (btnEliminar) {
-        btnEliminar.disabled = perfilActual === 'default';
-        btnEliminar.style.opacity = perfilActual === 'default' ? '0.5' : '1';
+function fmtDuration(ms) { const sec = Math.floor(ms / 1000); return `${Math.floor(sec / 60)}:${String(sec % 60).padStart(2, '0')}`; }
+function renderProfiles() {
+  const select = $('profileSelect'); select.replaceChildren();
+  profiles.list().forEach(profile => { const option = document.createElement('option'); option.value = profile.id; option.textContent = profile.name; select.append(option); });
+  select.value = profiles.activeId;
+}
+function renderHome() {
+  renderProfiles();
+  $('profileName').textContent = profiles.active.name;
+  $('removeProfile').disabled = profiles.activeId === 'default';
+  const historyCount = history.list().length;
+  const failedCount = failures.list().length;
+  $('historyCount').textContent = historyCount;
+  $('failedCount').textContent = failedCount;
+  $('startFailures').disabled = failedCount === 0;
+  $('clearFailures').disabled = failedCount === 0;
+  $('clearHistory').disabled = historyCount === 0;
+  renderTopicSettings();
+  $('autoAdvanceHome').checked = readPreferences().autoAdvanceExam === true;
+  const saved = sessions.get();
+  $('resumePanel').hidden = !saved;
+  if (saved) $('resumeText').textContent = `${saved.mode === 'exam' ? 'Examen' : saved.mode === 'failures' ? 'Test de fallos' : 'Práctica'} · ${Object.keys(saved.answers || {}).length}/${saved.questions.length} respondidas`;
+}
+function update(stateValue, finished = null) {
+  state = stateValue;
+  if (finished) { lastResult = finished; renderResults(finished); renderHome(); show('results'); return; }
+  if (!state) return;
+  show('exam');
+  const q = state.questions[state.current];
+  $('questionCount').textContent = `Pregunta ${state.current + 1} de ${state.questions.length}`;
+  const questionId = q.id ?? q.codigo ?? '';
+  $('questionIdentifier').hidden = !questionId;
+  $('questionIdentifier').textContent = questionId ? String(questionId) : '';
+  renderQuestionText($('questionText'), q.cuestion);
+  keyboardOptionIndex = 0;
+  $('progressPercent').textContent = Math.round(((state.current + 1) / state.questions.length) * 100) + '%';
+  $('examModePill').textContent = state.mode === 'exam' ? 'Examen' : state.mode === 'failures' ? 'Test de fallos' : 'Práctica';
+  $('examModePill').classList.toggle('mode-pill-exam', state.mode === 'exam');
+  $('timer').textContent = state.mode === 'exam' ? 'Restante: ' + fmtDuration(engine.remaining()) : 'Transcurrido: ' + fmtDuration(engine.elapsed());
+  $('progress').style.width = `${((state.current + 1) / state.questions.length) * 100}%`;
+  $('progress').setAttribute('aria-valuenow', String(state.current + 1));
+  $('progress').setAttribute('aria-valuemax', String(state.questions.length));
+  const options = $('options'); options.replaceChildren();
+  q.opciones.forEach((text, index) => {
+    const button = document.createElement('button'); button.className = 'option'; button.type = 'button';
+    const number = document.createElement('span');
+    number.className = 'option-number';
+    number.textContent = String(index + 1);
+    const copy = document.createElement('span');
+    copy.className = 'option-copy';
+    copy.textContent = String(text);
+    button.append(number, copy);
+    button.setAttribute('aria-pressed', String(state.answers[state.current] === index));
+    const answered = Object.prototype.hasOwnProperty.call(state.answers, state.current);
+    const selected = state.answers[state.current];
+    const correctIndex = q.opciones.findIndex(option => option.trim().charAt(0).toUpperCase() === String(q.solucion).trim().charAt(0).toUpperCase());
+    if (selected === index) {
+      button.classList.add('selected');
+      const mark = document.createElement('span'); mark.className = 'option-mark'; mark.textContent = '✓'; button.append(mark);
     }
-}
-
-function crearNuevoPerfil() {
-    const nombre = prompt('Nombre del nuevo perfil:');
-    if (!nombre || !nombre.trim()) return;
-
-    const id = 'perfil_' + Date.now();
-    const perfiles = configuracion.get('perfiles') || {};
-
-    perfiles[id] = {
-        nombre: nombre.trim(),
-        fallos: [],
-        fechaCreacion: new Date().toISOString()
-    };
-
-    configuracion.set('perfiles', perfiles);
-    configuracion.set('perfilActual', id);
-
-    gestorFallos.cambiarUsuario();
-    gestorHistorial.cambiarUsuario();
-    cargarPerfiles();
-}
-
-function cambiarPerfil() {
-    const select = document.getElementById('perfilSelect');
-    if (!select) return;
-    configuracion.set('perfilActual', select.value);
-    gestorFallos.cambiarUsuario();
-    gestorHistorial.cambiarUsuario();
-    cargarPerfiles();
-}
-
-function eliminarPerfilActual() {
-    const perfilActual = configuracion.get('perfilActual');
-    if (perfilActual === 'default') return;
-
-    if (!confirm('¿Estás seguro de que quieres eliminar este perfil?')) return;
-
-    const perfiles = configuracion.get('perfiles') || {};
-    delete perfiles[perfilActual];
-    configuracion.set('perfiles', perfiles);
-    configuracion.set('perfilActual', 'default');
-
-    gestorFallos.cambiarUsuario();
-    gestorHistorial.cambiarUsuario();
-    cargarPerfiles();
-    alert('Perfil eliminado correctamente');
-}
-
-function actualizarEstadisticasPerfil() {
-    const perfilActual = configuracion.get('perfilActual') || 'default';
-    const perfiles = configuracion.get('perfiles') || {};
-    const perfilData = perfiles[perfilActual];
-    const statsDiv = document.getElementById('perfilStats');
-
-    if (!statsDiv) return;
-
-    let texto = '';
-    if (perfilActual === 'default') {
-        texto = '👤 Usuario Principal';
-    } else if (perfilData) {
-        texto = `👤 ${perfilData.nombre}`;
-        if (perfilData.fechaCreacion) {
-            const fecha = new Date(perfilData.fechaCreacion).toLocaleDateString();
-            texto += ` | Creado: ${fecha}`;
-        }
+    if (state.mode === 'practice' && answered) {
+      button.disabled = true;
+      if (index === correctIndex) button.classList.add('correct');
+      if (index === selected && selected !== correctIndex) button.classList.add('incorrect');
     }
-
-    statsDiv.textContent = texto;
+    button.addEventListener('click', () => engine.answer(index)); options.append(button);
+  });
+  const feedback = $('feedback');
+  const alreadyAnswered = Object.prototype.hasOwnProperty.call(state.answers, state.current);
+  if (state.mode === 'practice' && alreadyAnswered) {
+    const selected = state.answers[state.current];
+    const correctIndex = q.opciones.findIndex(option => option.trim().charAt(0).toUpperCase() === String(q.solucion).trim().charAt(0).toUpperCase());
+    feedback.hidden = false;
+    feedback.textContent = selected === correctIndex ? 'Respuesta correcta.' : `Respuesta incorrecta. La correcta es: ${q.opciones[correctIndex] || q.solucion}`;
+    feedback.dataset.kind = selected === correctIndex ? 'success' : 'error';
+  } else { feedback.hidden = true; feedback.textContent = ''; }
+  $('previous').disabled = state.current === 0; $('next').disabled = state.current === state.questions.length - 1;
+  $('examSettings').hidden = state.mode !== 'exam';
+  $('autoAdvanceExam').checked = readPreferences().autoAdvanceExam === true;
+  $('examMode').textContent = state.mode === 'exam' ? 'Examen' : state.mode === 'failures' ? 'Test de fallos' : 'Práctica';
+  $('finish').textContent = state.mode === 'exam' ? 'Finalizar examen' : 'Finalizar sesión';
+}
+function start(mode, restored = null) {
+  if (engine) engine.dispose();
+  if (mode === 'exam' && questions.length < CONFIG.examQuestionCount) {
+    alert('El examen requiere ' + CONFIG.examQuestionCount + ' preguntas. Actualmente hay ' + questions.length + '.');
+    return;
+  }
+  if (mode === 'failures' && failures.list().length === 0) {
+    alert('Todavía no tienes preguntas falladas para repasar.');
+    return;
+  }
+  engine = new ExamEngine({
+    config: CONFIG,
+    questions,
+    profileManager: profiles,
+    history,
+    sessionStore: sessions,
+    failedQuestions: failures,
+    questionHistory,
+    preferencesProvider: readPreferences,
+    onChange: update
+  });
+  try {
+    engine.start(mode, restored);
+  } catch (error) {
+    engine.dispose();
+    engine = null;
+    alert(error.message || 'No se pudo iniciar la sesión.');
+  }
 }
 
-window.addEventListener('DOMContentLoaded', async () => {
-    const cargaExitosa = await cargarPreguntasDesdeJSON();
+function renderReviewQuestions(result = lastResult, filter = activeReviewFilter) {
+  const container = $('reviewQuestions');
+  container.replaceChildren();
+  const questions = result?.questions || [];
+  const answers = result?.answers || {};
+  const rows = questions.map((question, index) => {
+    const hasAnswer = Object.prototype.hasOwnProperty.call(answers, index) && answers[index] !== null;
+    const selected = hasAnswer ? answers[index] : null;
+    const correctIndex = question.opciones.findIndex(option => option.trim().charAt(0).toUpperCase() === String(question.solucion).trim().charAt(0).toUpperCase());
+    const status = !hasAnswer ? 'blank' : selected === correctIndex ? 'correct' : 'incorrect';
+    return { question, index, selected, correctIndex, status };
+  });
+  const counts = {
+    all: rows.length,
+    correct: rows.filter(row => row.status === 'correct').length,
+    incorrect: rows.filter(row => row.status === 'incorrect').length,
+    blank: rows.filter(row => row.status === 'blank').length
+  };
+  $('reviewSummary').textContent = rows.length + ' preguntas';
+  document.querySelectorAll('[data-review-filter]').forEach(button => {
+    const key = button.dataset.reviewFilter;
+    const label = key === 'all' ? 'Todas' : key === 'correct' ? 'Correctas' : key === 'incorrect' ? 'Incorrectas' : 'Sin responder';
+    button.textContent = label + ' (' + (counts[key] ?? 0) + ')';
+    button.setAttribute('aria-pressed', String(key === filter));
+  });
+  const visible = filter === 'all' ? rows : rows.filter(row => row.status === filter);
+  if (!visible.length) {
+    const empty = document.createElement('p');
+    empty.className = 'note';
+    empty.textContent = 'No hay preguntas en esta categoría.';
+    container.append(empty);
+    return;
+  }
+  visible.forEach(({ question, index, selected, correctIndex, status }) => {
+    const details = document.createElement('details');
+    details.className = 'review-question';
+    details.dataset.status = status;
+    const summary = document.createElement('summary');
+    const stateIcon = document.createElement('span');
+    stateIcon.className = 'review-state';
+    stateIcon.textContent = status === 'correct' ? '✓' : status === 'incorrect' ? '×' : '−';
+    const title = document.createElement('span');
+    title.className = 'review-title';
+    const identifier = question.id ?? question.codigo ?? ('Pregunta ' + (index + 1));
+    title.textContent = (index + 1) + '. ' + String(identifier);
+    const chevron = document.createElement('span');
+    chevron.className = 'review-chevron';
+    chevron.textContent = '⌄';
+    summary.append(stateIcon, title, chevron);
+    const body = document.createElement('div');
+    body.className = 'review-body';
+    const prompt = document.createElement('p');
+    prompt.className = 'review-prompt';
+    prompt.textContent = question.cuestion;
+    const selectedText = selected === null ? 'Sin responder' : (question.opciones[selected] ?? 'Sin responder');
+    const correctText = question.opciones[correctIndex] ?? String(question.solucion ?? '');
+    const answer = document.createElement('p');
+    answer.className = 'review-answer';
+    const answerStrong = document.createElement('strong');
+    answerStrong.textContent = 'Tu respuesta: ';
+    answer.append(answerStrong, document.createTextNode(selectedText));
+    const correct = document.createElement('p');
+    correct.className = 'review-answer review-correct-answer';
+    const correctStrong = document.createElement('strong');
+    correctStrong.textContent = 'Respuesta correcta: ';
+    correct.append(correctStrong, document.createTextNode(correctText));
+    body.append(prompt, answer, correct);
+    details.append(summary, body);
+    container.append(details);
+  });
+}
+function renderResults(result) {
+  const r = result.result;
+  $('score').textContent = `${r.score.toFixed(2)} / 10`;
+  $('correct').textContent = r.correct;
+  $('incorrect').textContent = r.incorrect;
+  $('blank').textContent = r.blank;
+  $('duration').textContent = fmtDuration(result.durationMs);
+  $('resultMode').textContent = result.mode === 'exam' ? 'Examen' : result.mode === 'failures' ? 'Test de fallos' : 'Práctica';
+  $('resultMode').classList.toggle('mode-pill-exam', result.mode === 'exam');
+  $('resultMode').classList.toggle('mode-pill-failures', result.mode === 'failures');
+  activeReviewFilter = 'all';
+  renderReviewQuestions(result, activeReviewFilter);
+}
 
-    if (!cargaExitosa) {
-        console.error('No se pudieron cargar las preguntas');
-        return;
-    }
+function renderHistory() {
+  const rows = history.list(); const container = $('historyRows'); container.replaceChildren();
+  if (!rows.length) { container.textContent = 'Todavía no hay exámenes guardados.'; return; }
+  rows.forEach(row => {
+    const item = document.createElement('article'); item.className = 'history-item';
+    const title = document.createElement('strong'); title.textContent = `${row.mode === 'exam' ? 'Examen' : row.mode === 'failures' ? 'Test de fallos' : 'Práctica'} · ${new Date(row.finishedAt).toLocaleString()}`;
+    const detail = document.createElement('p'); detail.textContent = `${row.correct} correctas · ${row.incorrect} incorrectas · ${row.blank} en blanco · ${row.score.toFixed(2)} / 10 · ${fmtDuration(row.durationMs)}`;
+    const replay = document.createElement('button'); replay.type = 'button'; replay.textContent = 'Repetir sesión'; replay.addEventListener('click', () => {
+      const replayQuestions = (row.questionIds || []).map(id => questions.find(question => (question.id ?? question.cuestion) === id)).filter(Boolean);
+      const restored = replayQuestions.length ? { id: crypto.randomUUID(), mode: row.mode, questions: replayQuestions, answers: {}, current: 0, startedAt: Date.now(), lastResumedAt: Date.now(), elapsedMs: 0 } : null;
+      start(row.mode === 'exam' ? 'exam' : row.mode === 'failures' ? 'failures' : 'practice', restored);
+    });
+    item.append(title, detail, replay); container.append(item);
+  });
+  const maxAbs = rows.length ? Math.max(1, ...rows.map(row => Math.abs(row.score))) : 1;
+  $('historyChart').replaceChildren();
+  rows.slice(0, 10).reverse().forEach(row => { const bar = document.createElement('div'); bar.className = row.score < 0 ? 'chart-bar negative' : 'chart-bar'; bar.style.height = `${Math.max(4, Math.abs(row.score) / maxAbs * 100)}%`; bar.title = `${new Date(row.finishedAt).toLocaleDateString()}: ${row.score.toFixed(2)} / 10`; $('historyChart').append(bar); });
+}
+async function init() {
+  try {
+    const response = await fetch(CONFIG.questionUrl, { cache: 'no-store' }); if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    questions = await response.json(); if (!Array.isArray(questions)) throw new Error('El banco debe ser un array JSON.');
+    $('questionBankCount').textContent = `${questions.length} ${questions.length === 1 ? 'pregunta disponible' : 'preguntas disponibles'}`;
+  } catch (error) { $('questionBankCount').textContent = `No se pudo cargar preguntas.json: ${error.message}`; return; }
+  history = new ExamHistory(storage, () => profiles.activeId, CONFIG.id); sessions = new SessionStore(storage, () => profiles.activeId, CONFIG.id);
+  renderHome();
+  await initializeCloudSync();
+  $('resumeButton').addEventListener('click', () => { const saved = sessions.get(); if (saved) start(saved.mode, saved); });
+  $('discardButton').addEventListener('click', () => { sessions.clear(); renderHome(); });
+}
 
-    document.getElementById('examen').classList.add('oculto');
-    document.getElementById('resultados').classList.add('oculto');
-    document.getElementById('seleccionModo').classList.remove('oculto');
-    document.getElementById('modoActual').textContent = '-';
-    document.getElementById('tiempoTranscurrido').textContent = 'Tiempo: 0:00';
-    const totalPreguntasActual = document.getElementById('totalPreguntasActual');
-    if (totalPreguntasActual) totalPreguntasActual.textContent = '25';
-
-    mostrarTotalPreguntas();
-    cargarPerfiles();
-    actualizarContadorFallos();
-    actualizarConfigUI();
-    actualizarParcialExamenUI();
-    actualizarTemasUI();
+$('cloudRegister').addEventListener('click', async () => {
+  const { email, password } = currentCloudCredentials();
+  try { await cloudSync.register(email, password); $('cloudPassword').value = ''; }
+  catch (error) { showCloudError(error); }
 });
+$('cloudLogin').addEventListener('click', async () => {
+  const { email, password } = currentCloudCredentials();
+  try { await cloudSync.login(email, password); $('cloudPassword').value = ''; }
+  catch (error) { showCloudError(error); }
+});
+$('cloudReset').addEventListener('click', async () => {
+  const { email } = currentCloudCredentials();
+  try { await cloudSync.resetPassword(email); updateCloudStatus({ state: 'signed-out', message: 'Hemos solicitado el correo de recuperación. Revisa tu bandeja de entrada.' }); }
+  catch (error) { showCloudError(error); }
+});
+$('cloudLogout').addEventListener('click', async () => {
+  try { await cloudSync.logout(); }
+  catch (error) { showCloudError(error); }
+});
+$('cloudSyncNow').addEventListener('click', async () => {
+  try { await cloudSync.syncNow(); }
+  catch (error) { showCloudError(error); }
+});
+
+$('startPractice').addEventListener('click', () => start('practice'));
+$('startFailures').addEventListener('click', () => start('failures'));
+$('clearHistory').addEventListener('click', () => {
+  const count = history.list().length;
+  if (!count) return;
+  const message = '¿Limpiar las ' + count + ' sesiones del historial del perfil «' + profiles.active.name + '»? Se conservarán los fallos, los perfiles y cualquier sesión en curso.';
+  if (confirm(message)) {
+    history.clear();
+    renderHome();
+  }
+});
+$('clearFailures').addEventListener('click', () => { if (failures.list().length && confirm('¿Limpiar las preguntas falladas de este perfil?')) { failures.clear(); renderHome(); } });
+$('startExam').addEventListener('click', () => start('exam'));
+$('previous').addEventListener('click', () => engine.move(-1));
+$('next').addEventListener('click', () => engine.move(1));
+$('finish').addEventListener('click', requestFinish);
+$('orderByTopic').addEventListener('change', event => savePreferences({ orderByTopic: event.target.checked }));
+$('autoAdvanceExam').addEventListener('change', event => {
+  savePreferences({ autoAdvanceExam: event.target.checked });
+  $('autoAdvanceHome').checked = event.target.checked;
+});
+$('autoAdvanceHome').addEventListener('change', event => {
+  savePreferences({ autoAdvanceExam: event.target.checked });
+});
+$('exportFailures').addEventListener('click', () => {
+  const payload = { schemaVersion: 1, simulatorId: CONFIG.id, profile: profiles.active, failures: failures.list(), exportedAt: new Date().toISOString() };
+  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href = url; a.download = 'segsissw-fallos.json'; a.click(); URL.revokeObjectURL(url);
+});
+$('importFailures').addEventListener('click', () => $('failureFile').click());
+$('failureFile').addEventListener('change', async event => {
+  const file = event.target.files?.[0]; if (!file) return;
+  try {
+    const payload = JSON.parse(await file.text());
+    const source = Array.isArray(payload) ? payload : (Array.isArray(payload.failures) ? payload.failures : Array.isArray(payload.fallos) ? payload.fallos : null);
+    if (!source) throw new Error('El JSON no contiene una lista de fallos reconocible.');
+    const normalized = source.map(item => {
+      const question = item?.question && typeof item.question === 'object' ? item.question : item;
+      if (!question || typeof question.cuestion !== 'string' || !Array.isArray(question.opciones) || typeof question.solucion !== 'string') return null;
+      return { ...question, lastFailedAt: question.lastFailedAt || question.fecha || new Date().toISOString(), selectedAnswer: question.selectedAnswer ?? question.respuestaUsuario ?? null };
+    }).filter(Boolean);
+    if (!normalized.length) throw new Error('El archivo no contiene preguntas falladas válidas.');
+    if (!confirm('Se importarán ' + normalized.length + ' preguntas falladas en el perfil «' + profiles.active.name + '». ¿Continuar?')) return;
+    const unique = new Map(normalized.map(item => [item.id || item.cuestion, item]));
+    storage.write('failed-questions', [...unique.values()], profiles.activeId);
+    failures = new FailedQuestionStore(storage, () => profiles.activeId);
+    renderHome(); alert('Preguntas falladas importadas correctamente.');
+  } catch (error) { alert('No se pudo importar el archivo: ' + error.message); }
+  finally { event.target.value = ''; }
+});
+$('profileSelect').addEventListener('change', e => { if (engine) engine.dispose(); profiles.setActive(e.target.value); cloudSync?.setActiveProfile(); history = new ExamHistory(storage, () => profiles.activeId, CONFIG.id); sessions = new SessionStore(storage, () => profiles.activeId, CONFIG.id); failures = new FailedQuestionStore(storage, () => profiles.activeId); renderHome(); show('menu'); });
+$('addProfile').addEventListener('click', () => { const name = prompt('Nombre del perfil'); if (!name) return; try { profiles.create(name); cloudSync?.setActiveProfile(); history = new ExamHistory(storage, () => profiles.activeId, CONFIG.id); sessions = new SessionStore(storage, () => profiles.activeId, CONFIG.id); failures = new FailedQuestionStore(storage, () => profiles.activeId); renderHome(); } catch (e) { alert(e.message); } });
+$('removeProfile').addEventListener('click', () => { if (profiles.activeId === 'default') return; if (confirm('¿Eliminar este perfil y sus datos locales?')) { const id = profiles.removeActive(); cloudSync?.setActiveProfile();['exam-history', 'active-session', 'failed-questions', 'preferences', 'question-history'].forEach(key => storage.remove(key, id)); history = new ExamHistory(storage, () => profiles.activeId, CONFIG.id); sessions = new SessionStore(storage, () => profiles.activeId, CONFIG.id); failures = new FailedQuestionStore(storage, () => profiles.activeId); renderHome(); } });
+$('openHistory').addEventListener('click', () => { renderHistory(); show('history'); });
+$('historyBack').addEventListener('click', () => navigateToView('menu'));
+$('leaveExam').addEventListener('click', () => navigateToView('menu'));
+document.querySelectorAll('[data-view]').forEach(button => {
+  button.addEventListener('click', () => navigateToView(button.dataset.view));
+});
+document.querySelectorAll('[data-scroll]').forEach(button => {
+  button.addEventListener('click', () => navigateToView('menu', button.dataset.scroll));
+});
+$('reviewFilterBar').addEventListener('click', event => {
+  const button = event.target.closest('[data-review-filter]');
+  if (!button) return;
+  activeReviewFilter = button.dataset.reviewFilter;
+  renderReviewQuestions(lastResult, activeReviewFilter);
+});
+$('exportHistory').addEventListener('click', () => history.export());
+$('exportBackup').addEventListener('click', () => {
+  const payload = { schemaVersion: 1, simulatorId: CONFIG.id, profile: profiles.active, history: history.list(), failures: failures.list(), session: sessions.get(), preferences: readPreferences(), questionHistory: questionHistory.list(), exportedAt: new Date().toISOString() };
+  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' }); const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href = url; a.download = 'segsissw-backup.json'; a.click(); URL.revokeObjectURL(url);
+});
+$('importBackup').addEventListener('click', () => $('backupFile').click());
+$('backupFile').addEventListener('change', async e => {
+  const file = e.target.files?.[0]; if (!file) return;
+  try {
+    const payload = JSON.parse(await file.text());
+    if (payload.schemaVersion !== 1 || payload.simulatorId !== CONFIG.id) throw new Error('La copia no pertenece a esta versión de SegSisSw.');
+    const sourceName = String(payload.profile?.name || '').trim();
+    let target = sourceName ? profiles.list().find(profile => profile.name.trim().toLocaleLowerCase() === sourceName.toLocaleLowerCase()) : profiles.active;
+    if (!target && sourceName) { profiles.create(sourceName); target = profiles.active; }
+    if (target && target.id !== profiles.activeId) profiles.setActive(target.id);
+    const profileId = target?.id || profiles.activeId;
+    if (Array.isArray(payload.history)) {
+      const existing = storage.read('exam-history', profileId, []);
+      const merged = new Map([...existing, ...payload.history].map(item => [item.id || `${item.mode}:${item.finishedAt}`, item]));
+      storage.write('exam-history', [...merged.values()], profileId);
+    }
+    if (Array.isArray(payload.failures)) {
+      const existing = storage.read('failed-questions', profileId, []);
+      const merged = new Map([...existing, ...payload.failures].map(item => [item.id || item.cuestion, item]));
+      storage.write('failed-questions', [...merged.values()], profileId);
+    }
+    if (payload.preferences && typeof payload.preferences === 'object') storage.write('preferences', { ...DEFAULT_PREFERENCES, ...payload.preferences }, profileId);
+    if (Array.isArray(payload.questionHistory)) questionHistory.replace(payload.questionHistory);
+    if (payload.session) {
+      const existing = storage.read('active-session', profileId, null);
+      const incomingDate = Date.parse(payload.session.savedAt || '') || 0;
+      const existingDate = Date.parse(existing?.savedAt || '') || 0;
+      if (!existing || incomingDate >= existingDate) storage.write('active-session', payload.session, profileId);
+    }
+    history = new ExamHistory(storage, () => profiles.activeId, CONFIG.id);
+    sessions = new SessionStore(storage, () => profiles.activeId, CONFIG.id);
+    failures = new FailedQuestionStore(storage, () => profiles.activeId);
+    renderHome(); alert('Copia importada en el perfil correspondiente.');
+  } catch (err) { alert(`No se pudo importar: ${err.message}`); }
+  e.target.value = '';
+});
+$('retryExam').addEventListener('click', () => start(lastResult?.mode || 'exam'));
+$('finishMenu').addEventListener('click', () => navigateToView('menu'));
+window.addEventListener('beforeunload', () => engine?.dispose());
+document.addEventListener('keydown', e => {
+  if (!state || $('exam').hidden) return;
+  if (e.target.matches('input,textarea,select')) return;
+  if (e.target.closest('button') && !e.target.closest('.option')) return;
+  if (e.key === 'ArrowLeft') { e.preventDefault(); engine.move(-1); }
+  else if (e.key === 'ArrowRight') { e.preventDefault(); engine.move(1); }
+  else if (e.key === 'ArrowUp') { e.preventDefault(); moveKeyboardOption(-1); }
+  else if (e.key === 'ArrowDown') { e.preventDefault(); moveKeyboardOption(1); }
+  else if (['1', '2', '3', '4'].includes(e.key)) { e.preventDefault(); engine.answer(Number(e.key) - 1); }
+  else if (e.key === ' ' || e.key === 'Spacebar') {
+    if (e.target.closest('.option')) return;
+    e.preventDefault(); engine.answer(keyboardOptionIndex);
+  }
+  else if (e.key === 'Enter') {
+    if (e.target.closest('.option')) return;
+    e.preventDefault(); requestFinish();
+  }
+});
+init();
