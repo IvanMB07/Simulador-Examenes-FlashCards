@@ -80,8 +80,12 @@
           <div class="profile-controls">
             <label class="visually-hidden" for="profileSelect">Perfil activo</label>
             <select id="profileSelect"><option value="default">Usuario principal</option></select>
-            <button id="addProfile" class="icon-button" type="button" aria-label="Crear perfil" title="Crear perfil">＋</button>
-            <button id="removeProfile" class="icon-button" type="button" aria-label="Eliminar perfil" title="Eliminar perfil">−</button>
+            <button id="addProfile" class="icon-button" type="button" aria-label="Crear perfil" title="Crear perfil">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+            </button>
+            <button id="removeProfile" class="icon-button" type="button" aria-label="Eliminar perfil" title="Eliminar perfil">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M20 8v6M17 11h6"/></svg>
+            </button>
           </div>
         </section>
 
@@ -150,14 +154,17 @@
 
 
       <section class="data-tools" aria-label="Gestión de datos">
-        <div class="toolbar">
+        <div class="action-row action-row-two">
           <button id="openHistory" class="secondary" type="button">Ver historial</button>
+          <button id="clearHistory" class="secondary" type="button">Limpiar historial</button>
+        </div>
+        <div class="action-row action-row-three">
           <button id="clearFailures" class="secondary" type="button">Limpiar fallos</button>
           <button id="exportFailures" class="secondary" type="button">Exportar fallos</button>
           <button id="importFailures" class="secondary" type="button">Importar fallos</button>
           <input id="failureFile" type="file" accept="application/json,.json" hidden>
         </div>
-        <div class="toolbar secondary-tools">
+        <div class="action-row action-row-two">
           <button id="exportBackup" class="secondary" type="button">Exportar copia completa</button>
           <button id="importBackup" class="secondary" type="button">Importar copia completa</button>
           <input id="backupFile" type="file" accept="application/json,.json" hidden>
