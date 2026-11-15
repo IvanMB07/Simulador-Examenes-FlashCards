@@ -27,8 +27,6 @@ self.addEventListener('fetch',event=>{
   const request=event.request;
   if(request.method!=='GET')return;
   const url=new URL(request.url);
-
-  // Cachea el SDK modular de Firebase tras una carga online.
   if(url.origin==='https://www.gstatic.com'&&url.pathname.startsWith(FIREBASE_SDK)){
     event.respondWith(fetch(request).then(response=>{
       if(response.ok)caches.open(CACHE).then(cache=>cache.put(request,response.clone()));
@@ -36,7 +34,6 @@ self.addEventListener('fetch',event=>{
     }).catch(()=>caches.match(request)));
     return;
   }
-
   if(url.origin!==self.location.origin)return;
   const inApp=APP_PATHS.some(path=>url.pathname.startsWith(path));
   const inCommon=url.pathname.startsWith(CORE_PATH);
