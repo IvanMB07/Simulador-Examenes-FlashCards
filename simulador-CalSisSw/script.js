@@ -239,12 +239,13 @@ function update(stateValue, finished=null) {
   const options=$('options'); options.replaceChildren();
   q.opciones.forEach((text,index)=>{
     const button=document.createElement('button'); button.className='option'; button.type='button';
-    const optionMatch=String(text).match(/^([A-D])(?:[.)])?\s*/i);
-    if(optionMatch){
-      const letter=document.createElement('span');letter.className='option-letter';letter.textContent=optionMatch[1].toUpperCase();
-      const copy=document.createElement('span');copy.className='option-copy';copy.textContent=String(text).slice(optionMatch[0].length);
-      button.append(letter,copy);
-    } else button.textContent=text;
+    const number=document.createElement('span');
+    number.className='option-number';
+    number.textContent=String(index+1);
+    const copy=document.createElement('span');
+    copy.className='option-copy';
+    copy.textContent=String(text);
+    button.append(number,copy);
     button.setAttribute('aria-pressed',String(state.answers[state.current]===index));
     const answered=Object.prototype.hasOwnProperty.call(state.answers,state.current);
     const selected=state.answers[state.current];
@@ -412,7 +413,7 @@ async function init(){
   try{
     const response=await fetch(CONFIG.questionUrl,{cache:'no-store'}); if(!response.ok)throw new Error(`HTTP ${response.status}`);
     questions=await response.json(); if(!Array.isArray(questions))throw new Error('El banco debe ser un array JSON.');
-    $('questionBankCount').textContent=`${questions.length} preguntas cargadas`;
+    $('questionBankCount').textContent=`${questions.length} ${questions.length===1?'pregunta disponible':'preguntas disponibles'}`;
   }catch(error){$('questionBankCount').textContent=`No se pudo cargar preguntas.json: ${error.message}`;return;}
   history=new ExamHistory(storage,()=>profiles.activeId,CONFIG.id);sessions=new SessionStore(storage,()=>profiles.activeId,CONFIG.id);
   renderHome();
