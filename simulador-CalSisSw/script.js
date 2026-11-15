@@ -137,11 +137,43 @@ $('backMenu')?.addEventListener('click',()=>{renderHome();show('menu');});
 $('historyBack').addEventListener('click',()=>show('menu'));
 $('exportHistory').addEventListener('click',()=>history.export());
 $('exportBackup').addEventListener('click',()=>{
- const payload={schemaVersion:1,simulatorId:CONFIG.id,profile:profiles.active,profiles:profiles.data,history:history.list(),failures:failures.list(),session:sessions.get(),exportedAt:new Date().toISOString()};
+ const payload={schemaVersion:1,simulatorId:CONFIG.id,profile:profiles.active,history:history.list(),failures:failures.list(),session:sessions.get(),exportedAt:new Date().toISOString()};
  const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='calsissw-backup.json';a.click();URL.revokeObjectURL(url);
 });
 $('importBackup').addEventListener('click',()=>$('backupFile').click());
-$('backupFile').addEventListener('change',async e=>{const file=e.target.files?.[0];if(!file)return;try{const payload=JSON.parse(await file.text());if(payload.simulatorId!==CONFIG.id)throw new Error('La copia no pertenece a CalSisSw.');if(Array.isArray(payload.history))storage.write('exam-history',payload.history,profiles.activeId);if(Array.isArray(payload.failures))storage.write('failed-questions',payload.failures,profiles.activeId);if(payload.session)storage.write('active-session',payload.session,profiles.activeId);renderHome();alert('Copia importada.');}catch(err){alert(`No se pudo importar: ${err.message}`);}e.target.value='';});
+$('backupFile').addEventListener('change',async e=>{
+  const file=e.target.files?.[0];if(!file)return;
+  try{
+    const payload=JSON.parse(await file.text());
+    if(payload.schemaVersion!==1||payload.simulatorId!==CONFIG.id)throw new Error('La copia no pertenece a esta versión de CalSisSw.');
+    const sourceName=String(payload.profile?.name||'').trim();
+    let target=sourceName?profiles.list().find(profile=>profile.name.trim().toLocaleLowerCase()===sourceName.toLocaleLowerCase()):profiles.active;
+    if(!target&&sourceName){profiles.create(sourceName);target=profiles.active;}
+    if(target&&target.id!==profiles.activeId)profiles.setActive(target.id);
+    const profileId=target?.id||profiles.activeId;
+    if(Array.isArray(payload.history)){
+      const existing=storage.read('exam-history',profileId,[]);
+      const merged=new Map([...existing,...payload.history].map(item=>[item.id||`${item.mode}:${item.finishedAt}`,item]));
+      storage.write('exam-history',[...merged.values()],profileId);
+    }
+    if(Array.isArray(payload.failures)){
+      const existing=storage.read('failed-questions',profileId,[]);
+      const merged=new Map([...existing,...payload.failures].map(item=>[item.id||item.cuestion,item]));
+      storage.write('failed-questions',[...merged.values()],profileId);
+    }
+    if(payload.session){
+      const existing=storage.read('active-session',profileId,null);
+      const incomingDate=Date.parse(payload.session.savedAt||'')||0;
+      const existingDate=Date.parse(existing?.savedAt||'')||0;
+      if(!existing||incomingDate>=existingDate)storage.write('active-session',payload.session,profileId);
+    }
+    history=new ExamHistory(storage,()=>profiles.activeId,CONFIG.id);
+    sessions=new SessionStore(storage,()=>profiles.activeId,CONFIG.id);
+    failures=new FailedQuestionStore(storage,()=>profiles.activeId);
+    renderHome();alert('Copia importada en el perfil correspondiente.');
+  }catch(err){alert(`No se pudo importar: ${err.message}`);}
+  e.target.value='';
+});
 $('retryExam').addEventListener('click',()=>start(lastResult?.mode||'exam'));
 $('finishMenu').addEventListener('click',()=>{renderHome();show('menu');});
 window.addEventListener('beforeunload',()=>engine?.dispose());
