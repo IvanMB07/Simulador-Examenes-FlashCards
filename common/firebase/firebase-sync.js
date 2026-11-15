@@ -71,6 +71,8 @@ export class FirebaseSyncProvider {
     this.lastLowPrioritySync = new Map();
     this.initialSyncPromise = Promise.resolve();
     this.storageListener = event => this.handleLocalChange(event);
+    this.pageHideListener = () => this.flushPendingChanges();
+    this.visibilityListener = () => { if (document.visibilityState === 'hidden') this.flushPendingChanges(); };
   }
 
   status(state, message, user = this.user) {
@@ -97,6 +99,8 @@ export class FirebaseSyncProvider {
       }
 
       window.addEventListener('simulador:storage-change', this.storageListener);
+      window.addEventListener('pagehide', this.pageHideListener);
+      document.addEventListener('visibilitychange', this.visibilityListener);
       this.authUnsubscribe = onAuthStateChanged(this.auth, user => {
         this.user = user;
         if (!user) {
@@ -160,6 +164,7 @@ export class FirebaseSyncProvider {
       'auth/user-disabled': 'Esta cuenta está deshabilitada.',
       'auth/too-many-requests': 'Demasiados intentos. Espera un momento y vuelve a intentarlo.',
       'auth/network-request-failed': 'No hay conexión con Firebase.',
+      'auth/operation-not-allowed': 'Activa el proveedor Correo electrónico/contraseña en Firebase Authentication.',
       'permission-denied': 'Firestore ha rechazado la operación. Revisa las reglas de seguridad.',
       'failed-precondition': 'Firestore necesita que revises la configuración o un índice.',
       'unavailable': 'Firebase no está disponible en este momento.'
@@ -318,18 +323,24 @@ export class FirebaseSyncProvider {
     const detail = event.detail || {};
     if (!this.user || this.applyingRemote || detail.namespace !== this.storage.namespace) return;
     const key = detail.name + ':' + detail.profile;
+    const now = Date.now();
     if (detail.syncPriority === 'low') {
-      const now = Date.now();
       if (now - (this.lastLowPrioritySync.get(key) || 0) < 30000) return;
+      this.lastLowPrioritySync.set(key, now);
+    } else if (detail.name === 'active-session') {
       this.lastLowPrioritySync.set(key, now);
     }
     this.pendingChanges.set(key, detail);
     clearTimeout(this.flushTimer);
-    this.flushTimer = setTimeout(() => {
-      const changes = [...this.pendingChanges.values()];
-      this.pendingChanges.clear();
-      changes.forEach(change => this.enqueue(() => this.pushLocalChange(change)));
-    }, 1200);
+    this.flushTimer = setTimeout(() => this.flushPendingChanges(), 500);
+  }
+
+  flushPendingChanges() {
+    clearTimeout(this.flushTimer);
+    this.flushTimer = null;
+    const changes = [...this.pendingChanges.values()];
+    this.pendingChanges.clear();
+    changes.forEach(change => this.enqueue(() => this.pushLocalChange(change)));
   }
 
   async pushLocalChange(detail) {
@@ -417,7 +428,15 @@ export class FirebaseSyncProvider {
       const deleted = new Set(this.profileManager.data.deletedProfiles || []);
       snapshot.forEach(item => {
         const data = item.data();
-        if (data.deletedAtMs) { deleted.add(item.id); delete merged[item.id]; }
+        if (data.deletedAtMs) {
+          deleted.add(item.id); delete merged[item.id];
+          this.applyingRemote = true;
+          try {
+            this.storage.remove('exam-history', item.id);
+            this.storage.remove('failed-questions', item.id);
+            this.storage.remove('active-session', item.id);
+          } finally { this.applyingRemote = false; }
+        }
         else if (!deleted.has(item.id)) merged[item.id] = { id: item.id, name: data.name || 'Perfil', createdAt: data.createdAt || new Date().toISOString() };
       });
       this.applyingRemote = true;
@@ -449,5 +468,7 @@ export class FirebaseSyncProvider {
     this.stopSubscriptions();
     if (this.authUnsubscribe) this.authUnsubscribe();
     window.removeEventListener('simulador:storage-change', this.storageListener);
+    window.removeEventListener('pagehide', this.pageHideListener);
+    document.removeEventListener('visibilitychange', this.visibilityListener);
   }
 }
