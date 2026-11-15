@@ -275,6 +275,36 @@ function update(stateValue, finished=null) {
   $('examMode').textContent=state.mode==='exam'?'Examen':state.mode==='failures'?'Test de fallos':'Práctica';
   $('finish').textContent=state.mode==='exam'?'Finalizar examen':'Finalizar sesión';
 }
+function start(mode,restored=null){
+  if(engine)engine.dispose();
+  if(mode==='exam'&&questions.length<CONFIG.examQuestionCount){
+    alert('El examen requiere '+CONFIG.examQuestionCount+' preguntas. Actualmente hay '+questions.length+'.');
+    return;
+  }
+  if(mode==='failures'&&failures.list().length===0){
+    alert('Todavía no tienes preguntas falladas para repasar.');
+    return;
+  }
+  engine=new ExamEngine({
+    config:CONFIG,
+    questions,
+    profileManager:profiles,
+    history,
+    sessionStore:sessions,
+    failedQuestions:failures,
+    questionHistory,
+    preferencesProvider:readPreferences,
+    onChange:update
+  });
+  try {
+    engine.start(mode,restored);
+  } catch(error) {
+    engine.dispose();
+    engine=null;
+    alert(error.message||'No se pudo iniciar la sesión.');
+  }
+}
+
 function renderReviewQuestions(result=lastResult,filter=activeReviewFilter) {
   const container=$('reviewQuestions');
   container.replaceChildren();
