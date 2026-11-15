@@ -31,7 +31,7 @@ function updateCloudStatus(status) {
   message.textContent=status.message;
   state.textContent=status.state==='connected'?'Sincronizado':status.state==='syncing'?'Sincronizando':status.state==='error'?'Error':status.state==='conflict'?'Conflicto':status.state==='signed-out'?'Sin sesión':status.state==='unconfigured'?'Solo local':'Conectando';
   state.dataset.state=status.state;
-  $('cloudAuthControls').hidden=Boolean(email)||status.state==='unconfigured';
+  $('cloudAuthControls').hidden=Boolean(email)||status.state==='unconfigured'||!cloudSync;
   $('cloudSignedControls').hidden=!email;
   $('cloudSetupHint').hidden=status.state!=='unconfigured';
   $('cloudAccount').textContent=email||'';
@@ -40,7 +40,7 @@ function currentCloudCredentials() {
   return {email:$('cloudEmail').value.trim(),password:$('cloudPassword').value};
 }
 function showCloudError(error) {
-  updateCloudStatus({state:'error',message:cloudSync?.errorMessage(error)||error.message||'No se pudo completar la operación.'});
+  updateCloudStatus({state:'error',email:cloudSync?.user?.email||null,message:cloudSync?.errorMessage(error)||error.message||'No se pudo completar la operación.'});
 }
 async function initializeCloudSync() {
   if(!isFirebaseConfigured()) {
