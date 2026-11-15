@@ -1,12 +1,11 @@
 // Firebase Web config. Estos valores identifican el proyecto y son públicos.
-// La seguridad de los datos depende de Authentication y firestore.rules, no de ocultar este archivo.
 export const firebaseConfig = {
-  apiKey: "",
-  authDomain: "",
-  projectId: "",
-  appId: "",
-  messagingSenderId: "",
-  storageBucket: ""
+  apiKey: "AIzaSyDIB7ijiuVHMMjRzzz4rWy8DUbe423QRkk",
+  authDomain: "simuladoresestudio.firebaseapp.com",
+  projectId: "simuladoresestudio",
+  appId: "1:110694865226:web:19c8e1674b568e4cc9c9b3",
+  messagingSenderId: "110694865226",
+  storageBucket: "simuladoresestudio.firebasestorage.app"
 };
 
 export function isFirebaseConfigured() {
