@@ -9,3 +9,5 @@
 .cloud-message{color:#b7c4d1;margin:10px 0}.cloud-controls label{display:block;margin:10px 0 5px;color:#aab7c6}
 .cloud-controls input{width:100%;min-height:44px;padding:10px 12px;border:1px solid #405165;border-radius:9px;background:#111a24;color:#e8edf4;font:inherit}
 .cloud-controls input:focus-visible{outline:3px solid #f3c969;outline-offset:2px}
+
+.cloud-state[data-state='conflict']{color:#f2d28c}
