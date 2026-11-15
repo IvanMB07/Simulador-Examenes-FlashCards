@@ -251,6 +251,35 @@ export class FirebaseSyncProvider {
     if (tasks.length) await Promise.all(tasks);
   }
 
+  async syncRecordDiff(path, currentRows, previousRows, keyOf) {
+    const current = new Map((currentRows || []).map(item => [keyOf(item), item]).filter(([key]) => Boolean(key)));
+    const previous = new Map((previousRows || []).map(item => [keyOf(item), item]).filter(([key]) => Boolean(key)));
+    const target = this.collectionAt(path);
+    const tasks = [];
+
+    for (const [key, row] of current) {
+      if (previous.has(key) && stableStringify(previous.get(key)) === stableStringify(row)) continue;
+      const id = await firestoreId(key);
+      tasks.push(setDoc(doc(target, id), { record: clean(row), updatedAtMs: Date.now() }, { merge: true }));
+      if (tasks.length >= 15) {
+        await Promise.all(tasks);
+        tasks.length = 0;
+      }
+    }
+
+    for (const key of previous.keys()) {
+      if (current.has(key)) continue;
+      const id = await firestoreId(key);
+      tasks.push(deleteDoc(doc(target, id)));
+      if (tasks.length >= 15) {
+        await Promise.all(tasks);
+        tasks.length = 0;
+      }
+    }
+
+    if (tasks.length) await Promise.all(tasks);
+  }
+
   async deleteRemoteProfile(profileId, deletedAtMs = Date.now()) {
     const root = ['users', this.user.uid, 'profiles', profileId, 'simulators', this.simulatorId];
     for (const name of ['examSessions', 'failedQuestions']) {
@@ -317,6 +346,13 @@ export class FirebaseSyncProvider {
       this.applyingRemote = true;
       try { this.storage.write('exam-history', merged, profileId); } finally { this.applyingRemote = false; }
     }
+    const retainedIds = new Set(merged.map(item => item.id));
+    await Promise.all(remoteSnapshot.docs
+      .filter(snapshot => {
+        const record = snapshot.data().record;
+        return !record || !retainedIds.has(record.id);
+      })
+      .map(snapshot => deleteDoc(snapshot.ref)));
     await this.setRecords(path, merged, async item => await firestoreId(item.id));
   }
 
@@ -438,16 +474,16 @@ export class FirebaseSyncProvider {
     const profileId = detail.profile;
     const paths = this.paths(profileId);
     if (detail.name === 'exam-history') {
-      await this.setRecords(paths.history, detail.value || [], async item => await firestoreId(item.id));
+      await this.syncRecordDiff(paths.history, detail.value || [], detail.previous || [], item => item.id);
     } else if (detail.name === 'failed-questions') {
       const records = detail.value || [];
-      if (!records.length) {
+      if (!records.length && (detail.previous || []).length) {
         const clearTime = Date.now();
         await setDoc(doc(this.collectionAt(paths.failures), '__meta'), { clearedAtMs: clearTime, updatedAtMs: clearTime }, { merge: true });
         const existing = await getDocs(this.collectionAt(paths.failures));
         await Promise.all(existing.docs.filter(snapshot => snapshot.id !== '__meta').map(snapshot => deleteDoc(snapshot.ref)));
-      } else {
-        await this.setRecords(paths.failures, records, async item => await firestoreId(item.id || item.cuestion));
+      } else if (records.length) {
+        await this.syncRecordDiff(paths.failures, records, detail.previous || [], item => item.id || item.cuestion);
       }
     } else if (detail.name === 'active-session') {
       if (detail.removed) {
@@ -478,8 +514,12 @@ export class FirebaseSyncProvider {
     this.subscriptions.push(onSnapshot(this.collectionAt(paths.history), snapshot => {
       const remote = snapshot.docs.map(item => item.data().record).filter(Boolean);
       const local = this.storage.read('exam-history', profileId, []);
-      const merged = mergeRecords(local, remote, item => item.id, item => dateNumber(item.finishedAt));
+      const merged = mergeRecords(local, remote, item => item.id, item => dateNumber(item.finishedAt))
+        .sort((a, b) => dateNumber(b.finishedAt) - dateNumber(a.finishedAt)).slice(0, 500);
       if (stableStringify(local) !== stableStringify(merged)) this.applyRemote('exam-history', profileId, merged);
+      const retainedIds = new Set(merged.map(item => item.id));
+      const stale = snapshot.docs.filter(item => { const record = item.data().record; return !record || !retainedIds.has(record.id); });
+      if (stale.length) this.enqueue(() => Promise.all(stale.map(item => deleteDoc(item.ref)) );
     }, error => this.status('error', 'No se pudo actualizar el historial: ' + this.errorMessage(error))));
 
     this.subscriptions.push(onSnapshot(this.collectionAt(paths.failures), snapshot => {
