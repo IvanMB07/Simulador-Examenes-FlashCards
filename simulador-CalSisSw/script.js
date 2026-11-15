@@ -208,7 +208,6 @@ $('profileSelect').addEventListener('change',e=>{if(engine)engine.dispose();prof
 $('addProfile').addEventListener('click',()=>{const name=prompt('Nombre del perfil');if(!name)return;try{profiles.create(name);cloudSync?.setActiveProfile();history=new ExamHistory(storage,()=>profiles.activeId,CONFIG.id);sessions=new SessionStore(storage,()=>profiles.activeId,CONFIG.id);failures=new FailedQuestionStore(storage,()=>profiles.activeId);renderHome();}catch(e){alert(e.message);}});
 $('removeProfile').addEventListener('click',()=>{if(profiles.activeId==='default')return; if(confirm('¿Eliminar este perfil y sus datos locales?')){const id=profiles.removeActive();cloudSync?.setActiveProfile();['exam-history','active-session','failed-questions'].forEach(key=>storage.remove(key,id));history=new ExamHistory(storage,()=>profiles.activeId,CONFIG.id);sessions=new SessionStore(storage,()=>profiles.activeId,CONFIG.id);failures=new FailedQuestionStore(storage,()=>profiles.activeId);renderHome();}});
 $('openHistory').addEventListener('click',()=>{renderHistory();show('history');});
-$('backMenu')?.addEventListener('click',()=>{renderHome();show('menu');});
 $('historyBack').addEventListener('click',()=>show('menu'));
 $('exportHistory').addEventListener('click',()=>history.export());
 $('exportBackup').addEventListener('click',()=>{
