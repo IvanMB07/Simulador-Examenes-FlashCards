@@ -128,7 +128,9 @@ El proveedor independiente está en `common/firebase/firebase-sync.js`; no se im
 
 La inicialización solicita `persistentLocalCache` con `persistentMultipleTabManager`, para que Firestore use IndexedDB y comparta la caché entre pestañas compatibles. <Cite refs={["turn857793search1","turn857793search7"]}/>
 
-Los datos se organizan por UID y perfil:
+Los datos locales también se particionan por UID: el primer inicio de sesión mueve el almacenamiento local anterior al espacio de la cuenta; después cada cuenta utiliza un namespace independiente. Esto evita mezclar perfiles de dos cuentas en el mismo navegador.
+
+Los datos remotos se organizan por UID y perfil:
 - `users/{uid}/profiles/{profileId}`
 - `.../simulators/{simulatorId}/examSessions/{sessionId}`
 - `.../simulators/{simulatorId}/failedQuestions/{questionIdHash}`
