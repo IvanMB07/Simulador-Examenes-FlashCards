@@ -1,1 +1,712 @@
-[]
+[
+    {
+        "cuestion": "CalSisSw-T1-01-Pregunta: Según Joseph M. Juran, ¿cuál de las siguientes afirmaciones resume mejor su definición estandarizada de la calidad?",
+        "opciones": [
+            "A. Conformidad respecto a los requisitos.",
+            "B. Adecuación al uso.",
+            "C. La pérdida que un producto causa a la sociedad tras su envío.",
+            "D. Ausencia de defectos en el proceso de fabricación."
+        ],
+        "solucion": "B"
+    },
+    {
+        "cuestion": "CalSisSw-T1-02-Pregunta: Según la visión de Genichi Taguchi, ¿cómo se define el concepto de calidad de un producto?",
+        "opciones": [
+            "A. Como la adecuación al uso definida exclusivamente por el cliente.",
+            "B. Como la conformidad estricta respecto a los requisitos técnicos especificados.",
+            "C. Como la pérdida que un producto causa a la sociedad después de ser entregado, distinta a su función intrínseca.",
+            "D. Como el grado en el que un conjunto de características cumple con los requisitos de la norma ISO 9001."
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "CalSisSw-T1-03-Pregunta: ¿Qué autor de la historia de la calidad argumentaba que el término 'calidad' es a menudo malentendido como lujo o brillantez, y propuso definirlo estrictamente como la 'conformidad con los requisitos'?",
+        "opciones": [
+            "A. Philip B. Crosby",
+            "B. Joseph M. Juran",
+            "C. W. Edwards Deming",
+            "D. Kaoru Ishikawa"
+        ],
+        "solucion": "A"
+    },
+    {
+        "cuestion": "CalSisSw-T1-04-Pregunta: En el ámbito de la gestión de la calidad definida por ISO 9000, ¿qué término se utiliza para describir las acciones orientadas a 'proporcionar confianza' en que el producto cumplirá los requisitos de calidad?",
+        "opciones": [
+            "A. Planificación de la calidad.",
+            "B. Control de la calidad.",
+            "C. Aseguramiento de la calidad.",
+            "D. Auditoría de certificación."
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "CalSisSw-T1-05-Pregunta: El ciclo de mejora continua utilizado como base en los sistemas de gestión de calidad (ISO 9001) se denomina Ciclo PDCA. ¿Qué significan sus siglas?",
+        "opciones": [
+            "A. Programar, Desarrollar, Controlar, Analizar.",
+            "B. Planificar, Hacer, Verificar, Actuar (Plan, Do, Check, Act).",
+            "C. Prevenir, Detectar, Corregir, Archivar.",
+            "D. Proponer, Diseñar, Codificar, Asegurar."
+        ],
+        "solucion": "B"
+    },
+    {
+        "cuestion": "CalSisSw-T1-06-Pregunta: ¿Cómo se denomina a la parte de la gestión de la calidad que está orientada a establecer los objetivos de la calidad y a la especificación de los procesos operativos necesarios para lograrlos?",
+        "opciones": [
+            "A. Control de la calidad.",
+            "B. Aseguramiento de la calidad.",
+            "C. Mejora de la calidad.",
+            "D. Planificación de la calidad."
+        ],
+        "solucion": "D"
+    },
+    {
+        "cuestion": "CalSisSw-T1-07-Pregunta: Dentro del modelo de costes de la calidad, ¿en qué categoría se clasificarían las auditorías de calidad y las certificaciones?",
+        "opciones": [
+            "A. Costes de prevención.",
+            "B. Costes de evaluación.",
+            "C. Costes de fallos internos.",
+            "D. Costes de fallos externos."
+        ],
+        "solucion": "B"
+    },
+    {
+        "cuestion": "CalSisSw-T2-01-Pregunta: ¿Qué herramienta de calidad se fundamenta en la regla del 80-20 para separar los problemas 'pocos vitales' de los 'muchos triviales'?",
+        "opciones": [
+            "A. El Diagrama de Ishikawa.",
+            "B. El Diagrama de Pareto.",
+            "C. El Gráfico de Control.",
+            "D. El Diagrama de Dispersión."
+        ],
+        "solucion": "B"
+    },
+    {
+        "cuestion": "CalSisSw-T2-02-Pregunta: Si en un proyecto de software surge un defecto recurrente y el equipo necesita identificar gráficamente todas las posibles causas raíz organizándolas por categorías (Método, Maquinaria, Personal, Material, etc.), ¿qué herramienta deberían utilizar?",
+        "opciones": [
+            "A. Diagrama de Dispersión.",
+            "B. Histograma.",
+            "C. Diagrama Causa-Efecto (Ishikawa).",
+            "D. Gráfico de Control."
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "CalSisSw-T2-03-Pregunta: ¿Qué herramienta estadística se utilizaría para analizar gráficamente si existe algún tipo de correlación (positiva, negativa o nula) entre dos variables, como por ejemplo la experiencia en años de un programador y el número de defectos que introduce?",
+        "opciones": [
+            "A. Diagrama de Dispersión.",
+            "B. Diagrama de Afinidad.",
+            "C. Mapa Conceptual.",
+            "D. Histograma."
+        ],
+        "solucion": "A"
+    },
+    {
+        "cuestion": "CalSisSw-T2-04-Pregunta: Si un inspector de calidad de software necesita un formulario estructurado para ir anotando en tiempo real con 'marcas' o 'palitos' cada vez que ocurre un defecto específico durante las pruebas, ¿qué herramienta utilizará?",
+        "opciones": [
+            "A. Histograma.",
+            "B. Diagrama de Pareto.",
+            "C. Diagrama de afinidad.",
+            "D. Hoja de chequeo."
+        ],
+        "solucion": "D"
+    },
+    {
+        "cuestion": "CalSisSw-T2-05-Pregunta: En la aplicación de la herramienta de Benchmarking, ¿qué se lleva a cabo durante la fase de 'Adaptar'?",
+        "opciones": [
+            "A. Formar al equipo multidisciplinar que liderará el estudio.",
+            "B. Identificar a los competidores más relevantes del mercado.",
+            "C. Desarrollar objetivos para los procesos e implementar planes de acción para cerrar la brecha con las mejores prácticas descubiertas.",
+            "D. Calcular el coste de la calidad y los fallos internos de la empresa."
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "CalSisSw-T2-06-Pregunta: Cuando un equipo necesita analizar la relación existente entre dos conjuntos de factores (por ejemplo, relacionar las funciones requeridas del sistema frente a los requisitos técnicos) y marcar la intersección como relación Fuerte, Media o Débil, ¿qué herramienta debe utilizar?",
+        "opciones": [
+            "A. Histograma.",
+            "B. Diagrama de Afinidad.",
+            "C. Diagrama de Matriz.",
+            "D. Diagrama de Árbol."
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "CalSisSw-T3-01-Pregunta: El principio de 'Enfoque basado en hechos para la toma de decisiones' de la familia de normas ISO 9000 implica que la organización debe:",
+        "opciones": [
+            "A. Tomar decisiones estratégicas basándose en la intuición y experiencia del líder.",
+            "B. Tomar decisiones basándose en el análisis de datos y de la información real.",
+            "C. Tomar decisiones copiando las mejores prácticas de la competencia (Benchmarking).",
+            "D. Eliminar cualquier proceso que no genere un beneficio económico directo."
+        ],
+        "solucion": "B"
+    },
+    {
+        "cuestion": "CalSisSw-T3-02-Pregunta: En la estructura del modelo europeo de excelencia EFQM, ¿en qué bloque principal se clasifica el 'Liderazgo'?",
+        "opciones": [
+            "A. En el bloque de Resultados.",
+            "B. En el bloque de Innovación y Aprendizaje.",
+            "C. En el bloque de Estrategia.",
+            "D. En el bloque de Facilitadores (Agentes)."
+        ],
+        "solucion": "D"
+    },
+    {
+        "cuestion": "CalSisSw-T3-03-Pregunta: Dentro del ecosistema de certificaciones ISO para el gobierno y gestión de Tecnologías de la Información, ¿qué estándar internacional establece específicamente los requisitos para los Sistemas de Gestión de Servicios TI (ITSM)?",
+        "opciones": [
+            "A. ISO/IEC 15504",
+            "B. ISO/IEC 20000-1",
+            "C. ISO/IEC 27001",
+            "D. ISO 22301"
+        ],
+        "solucion": "B"
+    },
+    {
+        "cuestion": "CalSisSw-T4-01-Pregunta: En la gestión de proyectos de sistemas de información, ¿qué consecuencia directa tiene la acumulación continuada de 'Deuda Técnica'?",
+        "opciones": [
+            "A. Reduce el coste de mantenimiento a largo plazo.",
+            "B. Mejora la calidad del diseño arquitectónico del software.",
+            "C. Aumenta el coste de mantenimiento y eleva la probabilidad de errores futuros.",
+            "D. Permite alcanzar el Nivel 5 en modelos de madurez como CMMI."
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "CalSisSw-T4-02-Pregunta: En ingeniería del software, el conocimiento que reside en la mente de las personas, basado en su experiencia y que es muy difícil de articular o poner por escrito, se denomina:",
+        "opciones": [
+            "A. Conocimiento Explícito.",
+            "B. Conocimiento Tácito.",
+            "C. Conocimiento Documentado.",
+            "D. Conocimiento Dinámico."
+        ],
+        "solucion": "B"
+    },
+    {
+        "cuestion": "CalSisSw-T4-03-Pregunta: En la gestión y calidad de sistemas de información, ¿cuál es la definición más precisa y completa de la figura del 'Stakeholder'?",
+        "opciones": [
+            "A. Exclusivamente el cliente que aporta el presupuesto para el proyecto.",
+            "B. Cualquier parte interesada que pueda afectar o verse afectada por el desarrollo o resultado del proyecto.",
+            "C. El equipo técnico de programadores y analistas.",
+            "D. El jefe de proyecto encargado de la gestión de riesgos."
+        ],
+        "solucion": "B"
+    },
+    {
+        "cuestion": "CalSisSw-T4-04-Pregunta: ¿Cuál es la diferencia fundamental entre realizar una 'Auditoría' y llevar a cabo una 'Revisión por Pares' (Peer Review)?",
+        "opciones": [
+            "A. Son sinónimos en la norma ISO 9001.",
+            "B. La revisión por pares la realiza el cliente, y la auditoría los programadores.",
+            "C. La auditoría busca verificar el cumplimiento normativo (compliance) y la revisión por pares busca encontrar defectos técnicos en el producto.",
+            "D. La auditoría se aplica a metodologías ágiles y la revisión por pares a modelos en cascada."
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "CalSisSw-T5-01-Pregunta: Según el modelo de calidad del producto software definido en la norma ISO/IEC 25010, ¿qué característica principal engloba subcaracterísticas como la confidencialidad, la integridad y el no repudio?",
+        "opciones": [
+            "A. Usabilidad.",
+            "B. Fiabilidad.",
+            "C. Seguridad.",
+            "D. Mantenibilidad."
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "CalSisSw-T5-02-Pregunta: Según el modelo de calidad de producto de la norma ISO/IEC 25010, ¿qué característica principal evalúa atributos como la capacidad de aprendizaje, la operabilidad y la estética de la interfaz de usuario?",
+        "opciones": [
+            "A. Adecuación Funcional.",
+            "B. Mantenibilidad.",
+            "C. Eficiencia de desempeño.",
+            "D. Usabilidad."
+        ],
+        "solucion": "D"
+    },
+    {
+        "cuestion": "CalSisSw-T5-03-Pregunta: ¿Cuál es el estándar de la familia SQuaRE que define específicamente el proceso y las fases para llevar a cabo la evaluación de la calidad del producto software?",
+        "opciones": [
+            "A. ISO/IEC 25010",
+            "B. ISO/IEC 25020",
+            "C. ISO/IEC 25040",
+            "D. ISO/IEC 25030"
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "CalSisSw-T5-04-Pregunta: Según el modelo de calidad del producto software ISO/IEC 25010, ¿qué característica principal se encarga de evaluar el esfuerzo necesario para localizar errores, probar cambios o modificar el sistema en el futuro?",
+        "opciones": [
+            "A. Mantenibilidad.",
+            "B. Portabilidad.",
+            "C. Fiabilidad.",
+            "D. Adecuación Funcional."
+        ],
+        "solucion": "A"
+    },
+    {
+        "cuestion": "CalSisSw-T5-05-Pregunta: Un sistema informático hospitalario sufre un corte temporal en su base de datos externa, pero el software es capaz de guardar los datos en local y seguir operando sin bloquearse. Según ISO 25010, ¿qué característica de calidad destaca en este escenario?",
+        "opciones": [
+            "A. Eficiencia de desempeño.",
+            "B. Fiabilidad.",
+            "C. Seguridad.",
+            "D. Compatibilidad."
+        ],
+        "solucion": "B"
+    },
+    {
+        "cuestion": "CalSisSw-T5-06-Pregunta: Cuando hablamos de calidad, ¿a qué se refiere exactamente el concepto de 'Calidad en Uso' medido por la familia ISO 25000?",
+        "opciones": [
+            "A. Al cumplimiento estricto de las métricas de código, como la complejidad ciclomática.",
+            "B. Al grado en que el código fuente es comprensible para los nuevos desarrolladores.",
+            "C. Al grado en que usuarios específicos logran objetivos con efectividad, eficiencia y satisfacción en su entorno real.",
+            "D. Al número de defectos críticos detectados en el laboratorio de pruebas (AQC Lab)."
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "CalSisSw-T5-07-Pregunta: Según el modelo ISO 25010, ¿qué característica principal evalúa si el software proporciona un conjunto apropiado de funciones para cubrir las tareas y objetivos especificados por el cliente?",
+        "opciones": [
+            "A. Fiabilidad.",
+            "B. Usabilidad.",
+            "C. Adecuación Funcional.",
+            "D. Eficiencia de desempeño."
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "CalSisSw-T5-08-Pregunta: En el modelo de Calidad en Uso de ISO 25010, ¿cuál es la diferencia principal entre las características de 'Efectividad' y 'Eficiencia'?",
+        "opciones": [
+            "A. La Efectividad mide si el usuario logra alcanzar su objetivo con exactitud, y la Eficiencia mide la cantidad de recursos (tiempo, esfuerzo) que tuvo que invertir para lograrlo.",
+            "B. Son sinónimos exactos dentro de la norma SQuaRE.",
+            "C. La Efectividad evalúa el coste del desarrollo y la Eficiencia el número de defectos críticos en producción.",
+            "D. La Efectividad se mide sobre el código fuente (interna) y la Eficiencia sobre la interfaz de usuario (externa)."
+        ],
+        "solucion": "A"
+    },
+    {
+        "cuestion": "CalSisSw-T5-09-Pregunta: Dentro de la característica de Seguridad del producto (ISO 25010), ¿qué subcaracterística garantiza que se pueda demostrar legal o técnicamente que una acción o evento ha tenido lugar, impidiendo que el autor lo niegue a posteriori?",
+        "opciones": [
+            "A. Confidencialidad.",
+            "B. Integridad.",
+            "C. No repudio.",
+            "D. Autenticidad."
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "CalSisSw-T5-10-Pregunta: En la norma ISO 25010, ¿qué subcaracterística de calidad mide el grado en que dos o más sistemas pueden intercambiar información y utilizar mutuamente la información intercambiada?",
+        "opciones": [
+            "A. Interoperabilidad.",
+            "B. Adaptabilidad.",
+            "C. Modularidad.",
+            "D. Coexistencia."
+        ],
+        "solucion": "A"
+    },
+    {
+        "cuestion": "CalSisSw-T5-11-Pregunta: Según el estándar ISO 25040, ¿cuál es el primer paso obligatorio antes de comenzar a ejecutar cualquier evaluación sobre la calidad de un producto software?",
+        "opciones": [
+            "A. Diseñar la evaluación.",
+            "B. Ejecutar las métricas automatizadas (ej: SonarQube).",
+            "C. Establecer los requisitos de la evaluación (propósito, alcance y rigor).",
+            "D. Emitir el informe de no conformidades."
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "CalSisSw-T6-01-Pregunta: En CMMI V2.0, ¿qué caracteriza a las organizaciones que logran operar en los Niveles 4 (Gestionado Cuantitativamente) y 5 (En optimización)?",
+        "opciones": [
+            "A. La adopción de metodologías 100% ágiles sin documentación.",
+            "B. El uso intensivo de la estadística y técnicas cuantitativas para predecir, gestionar y optimizar el desempeño.",
+            "C. La dependencia exclusiva del 'heroísmo' individual de sus programadores.",
+            "D. La definición de estándares organizacionales y la adaptación de procesos a cada proyecto."
+        ],
+        "solucion": "B"
+    },
+    {
+        "cuestion": "CalSisSw-T6-02-Pregunta: En la norma ISO/IEC 33000, un proceso alcanza el Nivel de Capacidad 2 (Gestionado) cuando, además de alcanzar sus resultados básicos, se cumple que:",
+        "opciones": [
+            "A. Está completamente integrado con metodologías ágiles.",
+            "B. Utiliza técnicas estadísticas avanzadas para predecir sus fallos.",
+            "C. Su realización se planifica, se monitoriza, se ajusta y sus productos de trabajo están controlados adecuadamente.",
+            "D. Se estandariza a nivel de toda la corporación global."
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "CalSisSw-T6-03-Pregunta: Al buscar el Nivel 3 de madurez (Establecido), ¿cuál es el rasgo diferenciador del proceso respecto a los niveles inferiores?",
+        "opciones": [
+            "A. Se basa en un 'proceso estándar' de la organización, que se adapta a cada proyecto mediante guías de ajuste, en lugar de ser un proceso ad-hoc por proyecto.",
+            "B. El proceso ya no requiere planificación porque está completamente automatizado.",
+            "C. Se garantiza que el software generado está libre de cualquier defecto.",
+            "D. El equipo directivo deja de intervenir en la supervisión técnica."
+        ],
+        "solucion": "A"
+    },
+    {
+        "cuestion": "CalSisSw-T6-04-Pregunta: En CMMI V2.0, ¿qué área de práctica tiene como objetivo específico verificar objetivamente y habilitar la mejora continua de la calidad de los procesos que realiza el equipo?",
+        "opciones": [
+            "A. Gestión de Riesgos y Oportunidades (RSK).",
+            "B. Aseguramiento de Calidad de Procesos (PQA).",
+            "C. Solución Técnica (TS).",
+            "D. Monitorización y Control (MC)."
+        ],
+        "solucion": "B"
+    },
+    {
+        "cuestion": "CalSisSw-T6-05-Pregunta: En la norma ISO 33000, ¿qué hito distingue a una organización que ha alcanzado el Nivel 5 (Innovado) de una que se encuentra en el Nivel 4 (Predecible)?",
+        "opciones": [
+            "A. El proceso se gestiona utilizando límites estadísticos de control.",
+            "B. El proceso se adapta a cada proyecto a partir del estándar de la organización.",
+            "C. El proceso cambia y mejora continuamente basándose en la investigación de enfoques innovadores y la comprensión cuantitativa de las causas comunes de variación.",
+            "D. Se eliminan por completo todas las inspecciones manuales de código."
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "CalSisSw-T6-06-Pregunta: En la estructura de CMMI V2.0, las Áreas de Práctica (PAs) se agrupan en grandes categorías. ¿A qué categoría pertenecen áreas como Estimación (EST) y Planificación (PLAN)?",
+        "opciones": [
+            "A. Hacer (Doing).",
+            "B. Gestionar (Managing).",
+            "C. Habilitar (Enabling).",
+            "D. Mejorar (Improving)."
+        ],
+        "solucion": "B"
+    },
+    {
+        "cuestion": "CalSisSw-T6-07-Pregunta: ¿Qué cambio estructural clave introduce la versión CMMI V2.0 respecto a las antiguas 'Áreas de Proceso' de las versiones anteriores?",
+        "opciones": [
+            "A. Las elimina por completo a favor de un listado único de tareas.",
+            "B. Las reestructura y las pasa a denominar 'Áreas de Práctica' (Practice Areas).",
+            "C. Las divide exclusivamente en procesos técnicos y procesos de acuerdo.",
+            "D. Las reemplaza por los 12 principios del Manifiesto Ágil."
+        ],
+        "solucion": "B"
+    },
+    {
+        "cuestion": "CalSisSw-T6-08-Pregunta: ¿Qué constelación o variante del modelo CMMI está diseñada específicamente para mejorar los procesos relacionados con la entrega, gestión y establecimiento de servicios, en lugar del desarrollo de software desde cero?",
+        "opciones": [
+            "A. CMMI-ACQ.",
+            "B. CMMI-SVC.",
+            "C. CMMI-DEV.",
+            "D. ISO/IEC 15504"
+        ],
+        "solucion": "B"
+    },
+    {
+        "cuestion": "CalSisSw-T6-09-Pregunta: Si una organización o administración pública necesita un marco de trabajo para mejorar los procesos involucrados en la contratación, externalización (outsourcing) y adquisición de software a terceros, ¿qué variante de CMMI debe aplicar?",
+        "opciones": [
+            "A. CMMI-SVC.",
+            "B. CMMI-DEV.",
+            "C. CMMI-ACQ.",
+            "D. SPEM."
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "CalSisSw-T6-10-Pregunta: Según los grupos de prácticas de CMMI V2.0, ¿qué caracteriza a las organizaciones que logran consolidar el Nivel 2 en un área de práctica?",
+        "opciones": [
+            "A. Utilizan un enfoque incompleto y caótico para abordar el propósito del área.",
+            "B. Emplean un conjunto simple pero completo de prácticas que satisfacen el propósito del área sin requerir aún el uso de activos organizacionales estándar.",
+            "C. Utilizan técnicas cuantitativas y estadísticas para optimizar el rendimiento.",
+            "D. Utilizan de forma obligatoria activos organizacionales y directrices formales de adaptación (tailoring)."
+        ],
+        "solucion": "B"
+    },
+    {
+        "cuestion": "CalSisSw-T6-11-Pregunta: Selecciona la secuencia correcta de los cinco niveles de madurez clásicos del modelo CMMI para desarrollo (CMMI-DEV v1.3/CMM tradicional):",
+        "opciones": [
+            "A. Básico, Repetible, Establecido, Gestionado y Optimizado.",
+            "B. Inicial, Gestionado, Definido, Gestionado cuantitativamente y En Optimización.",
+            "C. Inicial, Repetible, Gestionado y Optimizado.",
+            "D. Incompleto, Básico, Establecido, Predecible e Innovado."
+        ],
+        "solucion": "B"
+    },
+    {
+        "cuestion": "CalSisSw-T7-01-Pregunta: ¿Cuál es el rasgo más distintivo del Modelo en Espiral formulado por Boehm respecto al modelo en cascada tradicional?",
+        "opciones": [
+            "A. La inclusión explícita del análisis de riesgos en cada ciclo antes de avanzar al desarrollo.",
+            "B. La prohibición de utilizar prototipos rápidos.",
+            "C. Su orientación exclusiva al desarrollo con lenguajes orientados a objetos.",
+            "D. La eliminación de las pruebas de integración."
+        ],
+        "solucion": "A"
+    },
+    {
+        "cuestion": "CalSisSw-T7-02-Pregunta: Según los valores fundamentales del Manifiesto Ágil, ¿qué elemento tiene mayor prioridad frente al 'seguimiento rígido de un plan preestablecido'?",
+        "opciones": [
+            "A. La respuesta ante el cambio.",
+            "B. La documentación exhaustiva del sistema.",
+            "C. La negociación contractual con el cliente.",
+            "D. El uso de herramientas y procesos estrictos."
+        ],
+        "solucion": "A"
+    },
+    {
+        "cuestion": "CalSisSw-T7-03-Pregunta: En el marco de trabajo Scrum, ¿dónde se almacena la lista priorizada de todos los requisitos, funcionalidades y mejoras que deben desarrollarse para el producto completo?",
+        "opciones": [
+            "A. En el Sprint Backlog.",
+            "B. En el Product Backlog.",
+            "C. En el Documento de Especificación de Requisitos (SRS).",
+            "D. En el Burndown Chart."
+        ],
+        "solucion": "B"
+    },
+    {
+        "cuestion": "CalSisSw-T7-04-Pregunta: En un ciclo de desarrollo con Scrum, si el equipo analiza el gráfico 'Burndown' a mitad del Sprint y la línea real de esfuerzo restante está considerablemente por encima de la línea ideal planificada, ¿qué lectura debe hacerse?",
+        "opciones": [
+            "A. Que el equipo va adelantado y terminará el trabajo antes de tiempo.",
+            "B. Que el equipo lleva retraso y hay más trabajo pendiente del previsto para esa fecha.",
+            "C. Que la calidad del código es deficiente y debe refactorizarse.",
+            "D. Que el cliente ha añadido nuevos requisitos al Product Backlog."
+        ],
+        "solucion": "B"
+    },
+    {
+        "cuestion": "CalSisSw-T7-05-Pregunta: ¿Cuál es la principal ventaja que aporta utilizar un ciclo de vida Incremental frente al modelo tradicional en Cascada puro?",
+        "opciones": [
+            "A. Elimina la necesidad de realizar pruebas de validación e integración.",
+            "B. Requiere mucha menos documentación inicial, abaratando el coste total.",
+            "C. Permite la entrega temprana de partes funcionales del sistema, aportando valor al cliente antes de acabar el proyecto entero.",
+            "D. Garantiza matemáticamente que el software no tendrá defectos en producción."
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "CalSisSw-T7-06-Pregunta: ¿Cuál es el objetivo principal del estándar ISO/IEC 12207?",
+        "opciones": [
+            "A. Definir la estructura semántica de los lenguajes orientados a objetos.",
+            "B. Establecer los requisitos físicos para la seguridad en centros de datos.",
+            "C. Establecer un marco de referencia común que categoriza todos los Procesos del Ciclo de Vida del Software (acuerdo, organizacionales, gestión, técnicos).",
+            "D. Sustituir a las metodologías ágiles en el desarrollo de microservicios."
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "CalSisSw-T7-07-Pregunta: Tomando como referencia la norma ISO/IEC 12207, ¿a qué gran grupo pertenecen procesos como la Planificación del Proyecto, la Evaluación y Control, y la Gestión de Riesgos?",
+        "opciones": [
+            "A. Procesos de Acuerdo.",
+            "B. Procesos Técnicos.",
+            "C. Procesos Organizacionales de Proyecto.",
+            "D. Procesos de Gestión Técnica."
+        ],
+        "solucion": "D"
+    },
+    {
+        "cuestion": "CalSisSw-T7-08-Pregunta: En el marco de trabajo Scrum, el Sprint es la iteración base de desarrollo. Según la teoría estándar ágil, ¿cuál es la duración máxima recomendada para un Sprint para mantener el ciclo de retroalimentación?",
+        "opciones": [
+            "A. 24 horas.",
+            "B. 30 días (o 4 semanas).",
+            "C. 3 meses (o un trimestre fiscal).",
+            "D. Depende del tamaño del proyecto, no hay límite."
+        ],
+        "solucion": "B"
+    },
+    {
+        "cuestion": "CalSisSw-T7-09-Pregunta: Según las definiciones clásicas en la calidad del software, ¿qué pregunta fundamental responde el proceso de 'Validación'?",
+        "opciones": [
+            "A. ¿Estamos construyendo el producto correctamente?",
+            "B. ¿El código compila sin errores de sintaxis?",
+            "C. ¿Estamos construyendo el producto correcto?",
+            "D. ¿El sistema cumple con el presupuesto y el calendario?"
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "CalSisSw-T7-10-Pregunta: En las estrategias de reutilización de software, ¿cómo se denomina al proceso que se encarga específicamente de analizar un ámbito de negocio para crear arquitecturas y componentes reutilizables aplicables a una familia entera de aplicaciones?",
+        "opciones": [
+            "A. Ingeniería de Requisitos.",
+            "B. Ingeniería de Producto.",
+            "C. Ingeniería de Sistemas.",
+            "D. Ingeniería de Dominio."
+        ],
+        "solucion": "D"
+    },
+    {
+        "cuestion": "CalSisSw-T7-11-Pregunta: ¿Qué modelo de ciclo de vida del software, formulado para mitigar la incertidumbre, está estrechamente relacionado con el uso de 'prototipos descartables' para clarificar requisitos antes de construir el sistema final?",
+        "opciones": [
+            "A. Modelo en Cascada puro.",
+            "B. Modelo en Espiral.",
+            "C. Metodología Scrum.",
+            "D. Modelo de Síntesis Automática (L4G)."
+        ],
+        "solucion": "B"
+    },
+    {
+        "cuestion": "CalSisSw-T7-12-Pregunta: En el contexto de los modelos de procesos y la ingeniería del software, ¿para qué sirve fundamentalmente SPEM (Software Process Engineering Metamodel)?",
+        "opciones": [
+            "A. Para describir proyectos software (planificación de tareas y recursos).",
+            "B. Para describir productos software (código fuente y arquitecturas).",
+            "C. Para describir procesos software.",
+            "D. Para auditar la seguridad de las bases de datos en producción."
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "CalSisSw-T7-13-Pregunta: En el metamodelo SPEM, ¿qué elemento es el encargado de definir las responsabilidades y las habilidades necesarias para ejecutar una tarea?",
+        "opciones": [
+            "A. Producto de Trabajo (Work Product).",
+            "B. Tarea (Task).",
+            "C. Rol (Role).",
+            "D. Fase (Phase)."
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "CalSisSw-T7-14-Pregunta: Según el paradigma de la ingeniería del software, el proceso software general se divide fundamentalmente en dos grandes subprocesos interrelacionados. ¿Cuáles son?",
+        "opciones": [
+            "A. Procesos de análisis y procesos de codificación.",
+            "B. Procesos iterativos y procesos ágiles.",
+            "C. Procesos funcionales y procesos organizacionales.",
+            "D. Procesos de producción (construcción) y procesos de gestión (planificación y control)."
+        ],
+        "solucion": "D"
+    },
+    {
+        "cuestion": "CalSisSw-T8-01-Pregunta: ¿Cuál es el propósito central del proyecto y marco metodológico COMPETISOFT?",
+        "opciones": [
+            "A. Proveer un lenguaje unificado de modelado para arquitecturas de hardware complejas.",
+            "B. Sustituir a los estándares ISO en la gran industria del software aeroespacial.",
+            "C. Fomentar la competitividad de las Pequeñas y Medianas Empresas (PyMEs) iberoamericanas de software mediante una mejora de procesos adaptada a sus necesidades.",
+            "D. Automatizar el desarrollo de código fuente a partir de diagramas UML."
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "CalSisSw-T8-02-Pregunta: Al realizar una auditoría bajo modelos como ISO 33000 o MMIS, ¿cómo se catalogan aquellos artefactos (ej: actas de reunión, correos) que demuestran que una actividad se realizó, aunque no sean el producto principal de dicha actividad?",
+        "opciones": [
+            "A. Evidencias directas.",
+            "B. Evidencias indirectas.",
+            "C. Afirmaciones.",
+            "D. Metas cuantitativas."
+        ],
+        "solucion": "B"
+    },
+    {
+        "cuestion": "CalSisSw-T8-03-Pregunta: En el estándar de evaluación de procesos ISO/IEC 33000, los atributos de proceso (AP) evalúan su cumplimiento mediante una escala de calificación específica. ¿Cuál es?",
+        "opciones": [
+            "A. Una puntuación cuantitativa del 1 al 10.",
+            "B. Un formato binario simple (Cumple / No Cumple).",
+            "C. La escala N-P-L-F (No alcanzado, Parcialmente, Ampliamente, Totalmente alcanzado).",
+            "D. Una evaluación en porcentaje (0% a 100%)."
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "CalSisSw-T8-04-Pregunta: En la evaluación de madurez organizacional bajo MMIS o ISO 33000, ¿qué condición matemática y estructural es indispensable para que una empresa certifique formalmente el Nivel 2 de Madurez?",
+        "opciones": [
+            "A. Que un solo proyecto de la empresa alcance el Nivel 2 en todos sus procesos.",
+            "B. Que se alcance, como mínimo, el nivel de capacidad requerido en TODOS y cada uno de los procesos asociados por el modelo a ese nivel de madurez.",
+            "C. Que la organización utilice metodologías ágiles y DevOps en todos sus departamentos.",
+            "D. Que la suma total de las puntuaciones de capacidad dé una media igual a 2, aunque algunos procesos estén en nivel 0."
+        ],
+        "solucion": "B"
+    },
+    {
+        "cuestion": "CalSisSw-T8-05-Pregunta: Dentro de la arquitectura de la norma ISO 33000, los Atributos de Proceso (AP) se desglosan en requisitos más pequeños y evaluables. ¿Qué nombre reciben estas prácticas detalladas que el auditor debe comprobar?",
+        "opciones": [
+            "A. Resultados de Proceso (RP).",
+            "B. Metas Cuantitativas.",
+            "C. Componentes de Atributo de Proceso (CAP).",
+            "D. Prácticas Genéricas (GP)."
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "CalSisSw-T8-06-Pregunta: Un auditor de ISO 33000 detecta que en un proyecto existen evidencias directas de que se realizó una actividad, pero tras investigar, no encuentra ninguna evidencia indirecta ni logra obtener afirmaciones (en entrevistas) que respalden dicha evidencia. ¿Cuál debe ser su calificación?",
+        "opciones": [
+            "A. Observación (O).",
+            "B. No conformidad menor (NM).",
+            "C. No conformidad mayor (NC).",
+            "D. Punto Fuerte (F)."
+        ],
+        "solucion": "B"
+    },
+    {
+        "cuestion": "CalSisSw-T8-07-Pregunta: En una evaluación bajo la norma ISO 33000 o modelos derivados, la empresa auditada debe seleccionar una muestra representativa de los proyectos en curso. ¿Qué característica indispensable debe tener un 'Proyecto Objetivo' en esta muestra?",
+        "opciones": [
+            "A. Debe aportar evidencias de haber utilizado metodologías ágiles como Scrum.",
+            "B. Debe aportar evidencia objetiva de todos y cada uno de los procesos que se van a evaluar en el alcance de la auditoría.",
+            "C. Solo necesita aportar evidencias de los procesos de codificación y pruebas.",
+            "D. Debe ser el proyecto con mayor presupuesto de la organización."
+        ],
+        "solucion": "B"
+    },
+    {
+        "cuestion": "CalSisSw-T8-08-Pregunta: Dentro del marco de evaluación de procesos ISO/IEC 33000, ¿qué se requiere para alcanzar el Nivel de Capacidad 1 (Realizado)?",
+        "opciones": [
+            "A. Que el proceso esté institucionalizado y gestionado cuantitativamente.",
+            "B. Que el proceso alcance sus resultados definidos (RPs).",
+            "C. Que el proceso innove y cambie dinámicamente frente a las tecnologías.",
+            "D. Que el proceso disponga de un proceso estándar de la organización."
+        ],
+        "solucion": "B"
+    },
+    {
+        "cuestion": "CalSisSw-T8-09-Pregunta: En la norma ISO/IEC 33000, ¿qué diferencia fundamental existe entre evaluar la 'Capacidad' y evaluar la 'Madurez'?",
+        "opciones": [
+            "A. La capacidad se mide del 1 al 10, y la madurez utiliza la escala N-P-L-F.",
+            "B. La capacidad se evalúa a nivel de un proceso individual, mientras que la madurez evalúa a toda la organización (o un conjunto predefinido de procesos).",
+            "C. La capacidad solo aplica a metodologías ágiles, y la madurez a ciclos en cascada.",
+            "D. Son exactamente el mismo concepto; los términos se usan como sinónimos."
+        ],
+        "solucion": "B"
+    },
+    {
+        "cuestion": "CalSisSw-T9-01-Pregunta: En la planificación de proyectos bajo metodologías ágiles (como Scrum), ¿qué métrica suele emplearse para predecir el ritmo de trabajo y la cantidad de Puntos de Historia que el equipo asume en futuras iteraciones?",
+        "opciones": [
+            "A. Velocidad (Velocity).",
+            "B. Líneas de Código (LOC).",
+            "C. Deuda Técnica.",
+            "D. Complejidad Ciclomática."
+        ],
+        "solucion": "A"
+    },
+    {
+        "cuestion": "CalSisSw-T9-02-Pregunta: En la disciplina conocida como Ingeniería del Software Empírica (ESE), ¿en qué elemento fundamental se basa?",
+        "opciones": [
+            "A. En la opinión de los desarrolladores con mayor experiencia (Gurús).",
+            "B. En las modas dictadas por las grandes empresas de tecnología.",
+            "C. En la rigurosa experimentación, recolección de evidencias y estudios de caso.",
+            "D. En el uso exclusivo de metodologías ágiles en todo tipo de proyectos."
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "CalSisSw-T9-03-Pregunta: En la metodología Practical Software Measurement (PSM), las necesidades de información se dividen en diferentes categorías. ¿Cuál de las siguientes es una categoría reconocida por PSM?",
+        "opciones": [
+            "A. Complejidad ciclomática orientada a objetos.",
+            "B. Tolerancia a fallos de hardware.",
+            "C. Tamaño y estabilidad del producto.",
+            "D. Impacto ambiental de los centros de datos."
+        ],
+        "solucion": "C"
+    },
+    {
+        "cuestion": "CalSisSw-T9-04-Pregunta: ¿A qué tipo de evaluación de sistemas se enfocan los conjuntos de métricas conocidos como MOOSE (de Chidamber y Kemerer) y MOOD (de Brito e Abreu)?",
+        "opciones": [
+            "A. A medir la complejidad de las bases de datos relacionales puras.",
+            "B. A evaluar el diseño y la arquitectura interna de sistemas orientados a objetos.",
+            "C. A medir la eficiencia energética de los servidores web.",
+            "D. A registrar la velocidad y progreso del equipo en metodologías ágiles."
+        ],
+        "solucion": "B"
+    },
+    {
+        "cuestion": "CalSisSw-T9-05-Pregunta: En la medición de calidad en contextos específicos, ¿qué modelo está orientado de forma particular a evaluar la calidad de los sitios y portales de Internet combinando características técnicas y de usabilidad?",
+        "opciones": [
+            "A. WQM (Web Quality Model).",
+            "B. SPEM.",
+            "C. CMMI-SVC.",
+            "D. Método GQM."
+        ],
+        "solucion": "A"
+    },
+    {
+        "cuestion": "CalSisSw-T9-06-Pregunta: En la teoría de la medición del software, la 'Complejidad Ciclomática' de McCabe es una métrica utilizada fundamentalmente para medir:",
+        "opciones": [
+            "A. El tamaño del sistema en líneas de código (LOC).",
+            "B. El esfuerzo estimado en meses-hombre (productividad).",
+            "C. El número de caminos linealmente independientes a través de la estructura de control de un programa.",
+            "D. El número de clases hijo que heredan de una clase padre."
+        ],
+        "solucion": "C"
+    }
+]
