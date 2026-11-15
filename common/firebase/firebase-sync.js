@@ -53,6 +53,7 @@ async function firestoreId(value) {
 export class FirebaseSyncProvider {
   constructor({ storage, profileManager, simulatorId, onStatus = () => {}, onDataApplied = () => {} }) {
     this.storage = storage;
+    this.baseNamespace = storage.namespace;
     this.profileManager = profileManager;
     this.simulatorId = simulatorId;
     this.onStatus = onStatus;
@@ -105,9 +106,12 @@ export class FirebaseSyncProvider {
         this.user = user;
         if (!user) {
           this.stopSubscriptions();
-          this.status('signed-out', 'No has iniciado sesión. El progreso se guarda localmente.', null);
+          const lastUid = localStorage.getItem(this.baseNamespace + ':cloud-owner');
+          if (lastUid && this.bindAccountNamespace(lastUid, false)) this.onDataApplied();
+          this.status('signed-out', 'No has iniciado sesión. El progreso local se conserva en este dispositivo.', null);
           return;
         }
+        if (this.bindAccountNamespace(user.uid, true)) this.onDataApplied();
         this.status('syncing', 'Cuenta conectada. Preparando la sincronización…', user);
         this.initialSyncPromise = this.syncAll()
           .then(() => {
@@ -127,6 +131,45 @@ export class FirebaseSyncProvider {
       this.status('error', 'No se pudo inicializar Firebase: ' + this.errorMessage(error), null);
       return false;
     }
+  }
+
+  bindAccountNamespace(uid, migrateLocalData = false) {
+    const targetNamespace = this.baseNamespace + ':user:' + uid;
+    if (this.storage.namespace === targetNamespace) return false;
+
+    const basePrefix = this.baseNamespace + ':';
+    const targetPrefix = targetNamespace + ':';
+    const ownerKey = this.baseNamespace + ':cloud-owner';
+    const baseKeys = [];
+    const targetHasData = Object.keys(localStorage).some(key => key.startsWith(targetPrefix));
+
+    for (let index = 0; index < localStorage.length; index++) {
+      const key = localStorage.key(index);
+      if (key && key.startsWith(basePrefix) && key !== ownerKey) baseKeys.push(key);
+    }
+
+    if (migrateLocalData && !targetHasData && baseKeys.length) {
+      baseKeys.forEach(key => {
+        const destination = targetPrefix + key.slice(basePrefix.length);
+        if (localStorage.getItem(destination) === null) localStorage.setItem(destination, localStorage.getItem(key));
+        localStorage.removeItem(key);
+      });
+    }
+
+    this.storage.namespace = targetNamespace;
+    localStorage.setItem(ownerKey, uid);
+    this.profileManager.data = this.storage.read('profiles', 'global', {
+      active: 'default',
+      profiles: { default: { id: 'default', name: 'Usuario principal', createdAt: new Date().toISOString() } },
+      deletedProfiles: []
+    });
+    if (!this.profileManager.data.profiles?.default) {
+      this.profileManager.data.profiles ||= {};
+      this.profileManager.data.profiles.default = { id: 'default', name: 'Usuario principal', createdAt: new Date().toISOString() };
+    }
+    if (!Array.isArray(this.profileManager.data.deletedProfiles)) this.profileManager.data.deletedProfiles = [];
+    this.profileManager.save();
+    return true;
   }
 
   async register(email, password) {
