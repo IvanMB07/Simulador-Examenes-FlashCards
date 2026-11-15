@@ -2,9 +2,9 @@ const CACHE='study-calsissw-v3';
 const BASE=self.registration.scope;
 const APP=new URL('./simulador-CalSisSw/',BASE).pathname;
 const CORE=new URL('./common/simulador-core.js',BASE).pathname;
-const SHELL=[APP,APP+'index.html',APP+'styles.css',APP+'script.js',APP+'preguntas.json',APP+'manifest.webmanifest',APP+'sw.js',CORE];
+const SHELL=[APP,APP+'index.html',APP+'styles.css',APP+'script.js',APP+'preguntas.json',APP+'manifest.webmanifest',CORE];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(SHELL)).then(()=>self.skipWaiting())));
-self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim())));
+self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith('study-calsissw-')&&key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',event=>{
  const request=event.request;if(request.method!=='GET')return;
  const url=new URL(request.url);if(url.origin!==self.location.origin)return;
