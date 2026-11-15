@@ -13,10 +13,33 @@
 <div class="row"><div><h2>Tu espacio de estudio</h2><p>Perfil: <strong id="profileName">Usuario principal</strong></p></div><span id="questionBankCount" class="muted">Cargando preguntas…</span></div>
 <div class="profile-controls"><label for="profileSelect">Perfil</label><select id="profileSelect"><option value="default">Usuario principal</option></select><button id="addProfile" class="secondary">Nuevo perfil</button><button id="removeProfile" class="secondary">Eliminar perfil</button></div>
 <div class="resume" id="resumePanel" hidden><div><strong>Hay una sesión guardada</strong><p id="resumeText"></p></div><button id="resumeButton">Reanudar</button><button id="discardButton" class="secondary">Descartar</button></div>
+<section class="cloud-box" aria-labelledby="cloudTitle">
+  <div class="row"><h3 id="cloudTitle">Sincronización entre dispositivos</h3><span id="cloudState" class="cloud-state">Local</span></div>
+  <p id="cloudStatusMessage" class="cloud-message" role="status" aria-live="polite">Los datos se guardan en este dispositivo. Configura Firebase para sincronizarlos.</p>
+  <div id="cloudAuthControls" class="cloud-controls" hidden>
+    <label for="cloudEmail">Correo electrónico</label>
+    <input id="cloudEmail" type="email" autocomplete="email" placeholder="tu correo electrónico">
+    <label for="cloudPassword">Contraseña</label>
+    <input id="cloudPassword" type="password" autocomplete="current-password" placeholder="Mínimo 6 caracteres">
+    <div class="toolbar">
+      <button id="cloudLogin">Iniciar sesión</button>
+      <button id="cloudRegister" class="secondary">Crear cuenta</button>
+      <button id="cloudReset" class="secondary">Recuperar contraseña</button>
+    </div>
+  </div>
+  <div id="cloudSignedControls" class="cloud-controls" hidden>
+    <p>Cuenta: <strong id="cloudAccount"></strong></p>
+    <div class="toolbar">
+      <button id="cloudSyncNow">Sincronizar ahora</button>
+      <button id="cloudLogout" class="secondary">Cerrar sesión</button>
+    </div>
+  </div>
+  <p id="cloudSetupHint" class="note">La sincronización se activa al configurar el proyecto Firebase y las reglas de Firestore del repositorio.</p>
+</section>
 <div class="stats"><div><span>Sesiones guardadas</span><strong id="historyCount">0</strong></div><div><span>Preguntas falladas</span><strong id="failedCount">0</strong></div><div><span>Calificación</span><strong>+1 / −0,5 / 0</strong></div></div>
 <div class="mode-grid"><article><span class="tag">MODO 01</span><h3>Práctica</h3><p>Preguntas aleatorias, avance libre y corrección al terminar.</p><button id="startPractice">Empezar práctica</button></article><article><span class="tag">MODO 02</span><h3>Examen</h3><p>20 preguntas · 75 minutos · puntuación directa.</p><button id="startExam">Empezar examen</button></article><article><span class="tag">MODO 03</span><h3>Test de fallos</h3><p>Repasa preguntas respondidas incorrectamente o en blanco.</p><button id="startFailures" class="secondary" disabled>Repasar fallos</button></article></div>
 <div class="toolbar"><button id="openHistory" class="secondary">Ver historial</button><button id="clearFailures" class="secondary">Limpiar fallos</button><button id="exportBackup" class="secondary">Exportar copia</button><button id="importBackup" class="secondary">Importar copia</button><input id="backupFile" type="file" accept="application/json" hidden></div>
-<p class="note">Los datos se guardan en este dispositivo y navegador. Para transferirlos a otro dispositivo utiliza la copia de seguridad JSON.</p>
+<p class="note">Los datos se guardan primero en este dispositivo. Al iniciar sesión con Firebase, se sincronizan también entre tus dispositivos.</p>
 </section>
 <section id="exam" class="panel" hidden>
 <div class="exam-head"><span id="examMode"></span><span id="questionCount">Pregunta 1</span><span>Tiempo: <strong id="timer">0:00</strong></span></div>
