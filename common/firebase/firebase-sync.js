@@ -269,11 +269,17 @@ export class FirebaseSyncProvider {
 
   async syncFailures(profileId) {
     const path = this.paths(profileId).failures;
-    const local = this.storage.read('failed-questions', profileId, []);
+    const localAll = this.storage.read('failed-questions', profileId, []);
     const remoteSnapshot = await getDocs(this.collectionAt(path));
-    const remote = remoteSnapshot.docs.map(snapshot => snapshot.data().record).filter(Boolean);
+    const meta = remoteSnapshot.docs.find(snapshot => snapshot.id === '__meta')?.data();
+    const clearedAt = Number(meta?.clearedAtMs) || 0;
+    const local = localAll.filter(item => dateNumber(item.lastFailedAt) >= clearedAt);
+    const remote = remoteSnapshot.docs
+      .filter(snapshot => snapshot.id !== '__meta')
+      .map(snapshot => snapshot.data().record).filter(Boolean)
+      .filter(item => dateNumber(item.lastFailedAt) >= clearedAt);
     const merged = mergeRecords(local, remote, item => item.id || item.cuestion, item => dateNumber(item.lastFailedAt));
-    if (stableStringify(local) !== stableStringify(merged)) {
+    if (stableStringify(localAll) !== stableStringify(merged)) {
       this.applyingRemote = true;
       try { this.storage.write('failed-questions', merged, profileId); } finally { this.applyingRemote = false; }
     }
@@ -368,8 +374,10 @@ export class FirebaseSyncProvider {
     } else if (detail.name === 'failed-questions') {
       const records = detail.value || [];
       if (!records.length) {
+        const clearTime = Date.now();
+        await setDoc(doc(this.collectionAt(paths.failures), '__meta'), { clearedAtMs: clearTime, updatedAtMs: clearTime }, { merge: true });
         const existing = await getDocs(this.collectionAt(paths.failures));
-        await Promise.all(existing.docs.map(snapshot => deleteDoc(snapshot.ref)));
+        await Promise.all(existing.docs.filter(snapshot => snapshot.id !== '__meta').map(snapshot => deleteDoc(snapshot.ref)));
       } else {
         await this.setRecords(paths.failures, records, async item => await firestoreId(item.id || item.cuestion));
       }
@@ -410,16 +418,35 @@ export class FirebaseSyncProvider {
     }, error => this.status('error', 'No se pudo actualizar el historial: ' + this.errorMessage(error))));
 
     this.subscriptions.push(onSnapshot(this.collectionAt(paths.failures), snapshot => {
-      const remote = snapshot.docs.map(item => item.data().record).filter(Boolean);
-      const local = this.storage.read('failed-questions', profileId, []);
+      const meta = snapshot.docs.find(item => item.id === '__meta')?.data();
+      const clearedAt = Number(meta?.clearedAtMs) || 0;
+      const remote = snapshot.docs
+        .filter(item => item.id !== '__meta')
+        .map(item => item.data().record).filter(Boolean)
+        .filter(item => dateNumber(item.lastFailedAt) >= clearedAt);
+      const localAll = this.storage.read('failed-questions', profileId, []);
+      const local = localAll.filter(item => dateNumber(item.lastFailedAt) >= clearedAt);
       const merged = mergeRecords(local, remote, item => item.id || item.cuestion, item => dateNumber(item.lastFailedAt));
-      if (stableStringify(local) !== stableStringify(merged)) this.applyRemote('failed-questions', profileId, merged);
+      if (stableStringify(localAll) !== stableStringify(merged)) this.applyRemote('failed-questions', profileId, merged);
     }, error => this.status('error', 'No se pudieron actualizar los fallos: ' + this.errorMessage(error))));
 
+    let activeSnapshotInitialized = false;
+    let lastRemoteActiveId = null;
     this.subscriptions.push(onSnapshot(this.documentAt(paths.active), snapshot => {
-      if (!snapshot.exists()) return;
-      const remote = snapshot.data().record;
       const local = this.storage.read('active-session', profileId, null);
+      if (!snapshot.exists()) {
+        if (activeSnapshotInitialized && lastRemoteActiveId && local?.id === lastRemoteActiveId) {
+          this.applyingRemote = true;
+          try { this.storage.remove('active-session', profileId); } finally { this.applyingRemote = false; }
+          this.onDataApplied();
+        }
+        activeSnapshotInitialized = true;
+        lastRemoteActiveId = null;
+        return;
+      }
+      const remote = snapshot.data().record;
+      lastRemoteActiveId = remote?.id || null;
+      activeSnapshotInitialized = true;
       if (remote && dateNumber(remote.savedAt) > dateNumber(local?.savedAt)) this.applyRemote('active-session', profileId, remote);
     }, error => this.status('error', 'No se pudo actualizar la sesión: ' + this.errorMessage(error))));
 
