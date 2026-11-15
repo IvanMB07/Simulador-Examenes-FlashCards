@@ -26,6 +26,7 @@ let cloudSync = null;
 let keyboardOptionIndex = 0;
 let finishConfirmationAt = 0;
 let finishToastTimer = null;
+let activeReviewFilter = 'all';
 const DEFAULT_PREFERENCES = { selectedTopics: [], orderByTopic: false, autoAdvanceExam: false };
 function readPreferences() {
   return { ...DEFAULT_PREFERENCES, ...storage.read('preferences',profiles.activeId,{}) };
@@ -129,7 +130,31 @@ function requestFinish() {
   finishToastTimer=setTimeout(()=>{finishConfirmationAt=0;$('finishConfirmToast').hidden=true;},3500);
 }
 
-function show(id) { ['menu','exam','results','history'].forEach(view=>$(view).hidden=view!==id); }
+function show(id) {
+  ['menu','exam','results','history'].forEach(view=>$(view).hidden=view!==id);
+  document.body.dataset.view=id;
+  document.querySelectorAll('[data-view]').forEach(button=>{
+    button.classList.toggle('active',button.dataset.view===id);
+  });
+}
+function navigateToView(view,targetId=null) {
+  if (engine&&state) {
+    if (!confirm('La sesión actual se guardará para que puedas continuar después. ¿Quieres volver a la navegación?')) return;
+    engine.dispose();
+    engine=null;
+    state=null;
+  }
+  if (view==='history') {
+    renderHistory();
+    show('history');
+  } else {
+    renderHome();
+    show('menu');
+  }
+  if (targetId) {
+    setTimeout(()=>$(targetId)?.scrollIntoView({behavior:'smooth',block:'center'}),40);
+  }
+}
 function updateCloudStatus(status) {
   const message=$('cloudStatusMessage');
   const state=$('cloudState');
@@ -187,6 +212,7 @@ function renderHome() {
   $('startFailures').disabled=failures.list().length===0;
   $('clearFailures').disabled=failures.list().length===0;
   renderTopicSettings();
+  $('autoAdvanceHome').checked=readPreferences().autoAdvanceExam===true;
   const saved=sessions.get();
   $('resumePanel').hidden=!saved;
   if(saved) $('resumeText').textContent=`${saved.mode==='exam'?'Examen':saved.mode==='failures'?'Test de fallos':'Práctica'} · ${Object.keys(saved.answers||{}).length}/${saved.questions.length} respondidas`;
@@ -198,8 +224,14 @@ function update(stateValue, finished=null) {
   show('exam');
   const q=state.questions[state.current];
   $('questionCount').textContent=`Pregunta ${state.current+1} de ${state.questions.length}`;
+  const questionId=q.id??q.codigo??'';
+  $('questionIdentifier').hidden=!questionId;
+  $('questionIdentifier').textContent=questionId?String(questionId):'';
   renderQuestionText($('questionText'),q.cuestion);
   keyboardOptionIndex=0;
+  $('progressPercent').textContent=Math.round(((state.current+1)/state.questions.length)*100)+'%';
+  $('examModePill').textContent=state.mode==='exam'?'Examen':state.mode==='failures'?'Test de fallos':'Práctica';
+  $('examModePill').classList.toggle('mode-pill-exam',state.mode==='exam');
   $('timer').textContent=state.mode==='exam' ? 'Restante: '+fmtDuration(engine.remaining()) : 'Transcurrido: '+fmtDuration(engine.elapsed());
   $('progress').style.width=`${((state.current+1)/state.questions.length)*100}%`;
   $('progress').setAttribute('aria-valuenow',String(state.current+1));
@@ -207,11 +239,20 @@ function update(stateValue, finished=null) {
   const options=$('options'); options.replaceChildren();
   q.opciones.forEach((text,index)=>{
     const button=document.createElement('button'); button.className='option'; button.type='button';
-    button.textContent=text; button.setAttribute('aria-pressed',String(state.answers[state.current]===index));
+    const optionMatch=String(text).match(/^([A-D])(?:[.)])?\s*/i);
+    if(optionMatch){
+      const letter=document.createElement('span');letter.className='option-letter';letter.textContent=optionMatch[1].toUpperCase();
+      const copy=document.createElement('span');copy.className='option-copy';copy.textContent=String(text).slice(optionMatch[0].length);
+      button.append(letter,copy);
+    } else button.textContent=text;
+    button.setAttribute('aria-pressed',String(state.answers[state.current]===index));
     const answered=Object.prototype.hasOwnProperty.call(state.answers,state.current);
     const selected=state.answers[state.current];
     const correctIndex=q.opciones.findIndex(option=>option.trim().charAt(0).toUpperCase()===String(q.solucion).trim().charAt(0).toUpperCase());
-    if(selected===index)button.classList.add('selected');
+    if(selected===index){
+      button.classList.add('selected');
+      const mark=document.createElement('span');mark.className='option-mark';mark.textContent='✓';button.append(mark);
+    }
     if(state.mode==='practice'&&answered){
       button.disabled=true;
       if(index===correctIndex)button.classList.add('correct');
@@ -231,27 +272,94 @@ function update(stateValue, finished=null) {
   $('previous').disabled=state.current===0; $('next').disabled=state.current===state.questions.length-1;
   $('examSettings').hidden=state.mode!=='exam';
   $('autoAdvanceExam').checked=readPreferences().autoAdvanceExam===true;
-  $('examMode').textContent=state.mode==='exam'?'Examen':state.mode==='failures'?'Repaso de fallos':'Práctica';
+  $('examMode').textContent=state.mode==='exam'?'Examen':state.mode==='failures'?'Test de fallos':'Práctica';
   $('finish').textContent=state.mode==='exam'?'Finalizar examen':'Finalizar sesión';
+}
+function renderReviewQuestions(result=lastResult,filter=activeReviewFilter) {
+  const container=$('reviewQuestions');
+  container.replaceChildren();
+  const questions=result?.questions||[];
+  const answers=result?.answers||{};
+  const rows=questions.map((question,index)=>{
+    const hasAnswer=Object.prototype.hasOwnProperty.call(answers,index)&&answers[index]!==null;
+    const selected=hasAnswer?answers[index]:null;
+    const correctIndex=question.opciones.findIndex(option=>option.trim().charAt(0).toUpperCase()===String(question.solucion).trim().charAt(0).toUpperCase());
+    const status=!hasAnswer?'blank':selected===correctIndex?'correct':'incorrect';
+    return {question,index,selected,correctIndex,status};
+  });
+  const counts={
+    all:rows.length,
+    correct:rows.filter(row=>row.status==='correct').length,
+    incorrect:rows.filter(row=>row.status==='incorrect').length,
+    blank:rows.filter(row=>row.status==='blank').length
+  };
+  $('reviewSummary').textContent=rows.length+' preguntas';
+  document.querySelectorAll('[data-review-filter]').forEach(button=>{
+    const key=button.dataset.reviewFilter;
+    const label=key==='all'?'Todas':key==='correct'?'Correctas':key==='incorrect'?'Incorrectas':'Sin responder';
+    button.textContent=label+' ('+(counts[key]??0)+')';
+    button.setAttribute('aria-pressed',String(key===filter));
+  });
+  const visible=filter==='all'?rows:rows.filter(row=>row.status===filter);
+  if(!visible.length){
+    const empty=document.createElement('p');
+    empty.className='note';
+    empty.textContent='No hay preguntas en esta categoría.';
+    container.append(empty);
+    return;
+  }
+  visible.forEach(({question,index,selected,correctIndex,status})=>{
+    const details=document.createElement('details');
+    details.className='review-question';
+    details.dataset.status=status;
+    const summary=document.createElement('summary');
+    const stateIcon=document.createElement('span');
+    stateIcon.className='review-state';
+    stateIcon.textContent=status==='correct'?'✓':status==='incorrect'?'×':'−';
+    const title=document.createElement('span');
+    title.className='review-title';
+    const identifier=question.id??question.codigo??('Pregunta '+(index+1));
+    title.textContent=(index+1)+'. '+String(identifier);
+    const chevron=document.createElement('span');
+    chevron.className='review-chevron';
+    chevron.textContent='⌄';
+    summary.append(stateIcon,title,chevron);
+    const body=document.createElement('div');
+    body.className='review-body';
+    const prompt=document.createElement('p');
+    prompt.className='review-prompt';
+    prompt.textContent=question.cuestion;
+    const selectedText=selected===null?'Sin responder':(question.opciones[selected]??'Sin responder');
+    const correctText=question.opciones[correctIndex]??String(question.solucion??'');
+    const answer=document.createElement('p');
+    answer.className='review-answer';
+    const answerStrong=document.createElement('strong');
+    answerStrong.textContent='Tu respuesta: ';
+    answer.append(answerStrong,document.createTextNode(selectedText));
+    const correct=document.createElement('p');
+    correct.className='review-answer review-correct-answer';
+    const correctStrong=document.createElement('strong');
+    correctStrong.textContent='Respuesta correcta: ';
+    correct.append(correctStrong,document.createTextNode(correctText));
+    body.append(prompt,answer,correct);
+    details.append(summary,body);
+    container.append(details);
+  });
 }
 function renderResults(result) {
   const r=result.result;
-  $('score').textContent=`${r.score.toFixed(2)} puntos`;
-  $('correct').textContent=r.correct; $('incorrect').textContent=r.incorrect; $('blank').textContent=r.blank;
+  $('score').textContent=\`\${r.score.toFixed(2)} puntos\`;
+  $('correct').textContent=r.correct;
+  $('incorrect').textContent=r.incorrect;
+  $('blank').textContent=r.blank;
   $('duration').textContent=fmtDuration(result.durationMs);
-  const list=$('errors'); list.replaceChildren();
-  r.errors.forEach((error,i)=>{const item=document.createElement('article');item.className='error';
-    const title=document.createElement('h3');title.textContent=`${i+1}. ${error.question}`;
-    const detail=document.createElement('p');detail.textContent=`Tu respuesta: ${error.selected??'En blanco'} · Correcta: ${error.correct}`;
-    item.append(title,detail);list.append(item);});
+  $('resultMode').textContent=result.mode==='exam'?'Examen':result.mode==='failures'?'Test de fallos':'Práctica';
+  $('resultMode').classList.toggle('mode-pill-exam',result.mode==='exam');
+  $('resultMode').classList.toggle('mode-pill-failures',result.mode==='failures');
+  activeReviewFilter='all';
+  renderReviewQuestions(result,activeReviewFilter);
 }
-function start(mode,restored=null){
-  if(engine)engine.dispose();
-  if(mode==='exam'&&questions.length<CONFIG.examQuestionCount){alert('El examen requiere '+CONFIG.examQuestionCount+' preguntas.');return;}
-  engine=new ExamEngine({config:CONFIG,questions,profileManager:profiles,history,sessionStore:sessions,failedQuestions:failures,questionHistory,preferencesProvider:readPreferences,onChange:update});
-  try { engine.start(mode,restored); }
-  catch(error) { engine.dispose(); engine=null; alert(error.message||'No se pudo iniciar la sesión.'); }
-}
+
 function renderHistory(){
   const rows=history.list(); const container=$('historyRows'); container.replaceChildren();
   if(!rows.length){container.textContent='Todavía no hay exámenes guardados.';return;}
@@ -315,7 +423,13 @@ $('previous').addEventListener('click',()=>engine.move(-1));
 $('next').addEventListener('click',()=>engine.move(1));
 $('finish').addEventListener('click',requestFinish);
 $('orderByTopic').addEventListener('change',event=>savePreferences({orderByTopic:event.target.checked}));
-$('autoAdvanceExam').addEventListener('change',event=>savePreferences({autoAdvanceExam:event.target.checked}));
+$('autoAdvanceExam').addEventListener('change',event=>{
+  savePreferences({autoAdvanceExam:event.target.checked});
+  $('autoAdvanceHome').checked=event.target.checked;
+});
+$('autoAdvanceHome').addEventListener('change',event=>{
+  savePreferences({autoAdvanceExam:event.target.checked});
+});
 $('exportFailures').addEventListener('click',()=>{
  const payload={schemaVersion:1,simulatorId:CONFIG.id,profile:profiles.active,failures:failures.list(),exportedAt:new Date().toISOString()};
  const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'});
@@ -346,7 +460,20 @@ $('profileSelect').addEventListener('change',e=>{if(engine)engine.dispose();prof
 $('addProfile').addEventListener('click',()=>{const name=prompt('Nombre del perfil');if(!name)return;try{profiles.create(name);cloudSync?.setActiveProfile();history=new ExamHistory(storage,()=>profiles.activeId,CONFIG.id);sessions=new SessionStore(storage,()=>profiles.activeId,CONFIG.id);failures=new FailedQuestionStore(storage,()=>profiles.activeId);renderHome();}catch(e){alert(e.message);}});
 $('removeProfile').addEventListener('click',()=>{if(profiles.activeId==='default')return; if(confirm('¿Eliminar este perfil y sus datos locales?')){const id=profiles.removeActive();cloudSync?.setActiveProfile();['exam-history','active-session','failed-questions','preferences','question-history'].forEach(key=>storage.remove(key,id));history=new ExamHistory(storage,()=>profiles.activeId,CONFIG.id);sessions=new SessionStore(storage,()=>profiles.activeId,CONFIG.id);failures=new FailedQuestionStore(storage,()=>profiles.activeId);renderHome();}});
 $('openHistory').addEventListener('click',()=>{renderHistory();show('history');});
-$('historyBack').addEventListener('click',()=>show('menu'));
+$('historyBack').addEventListener('click',()=>navigateToView('menu'));
+$('leaveExam').addEventListener('click',()=>navigateToView('menu'));
+document.querySelectorAll('[data-view]').forEach(button=>{
+  button.addEventListener('click',()=>navigateToView(button.dataset.view));
+});
+document.querySelectorAll('[data-scroll]').forEach(button=>{
+  button.addEventListener('click',()=>navigateToView('menu',button.dataset.scroll));
+});
+$('reviewFilterBar').addEventListener('click',event=>{
+  const button=event.target.closest('[data-review-filter]');
+  if(!button)return;
+  activeReviewFilter=button.dataset.reviewFilter;
+  renderReviewQuestions(lastResult,activeReviewFilter);
+});
 $('exportHistory').addEventListener('click',()=>history.export());
 $('exportBackup').addEventListener('click',()=>{
  const payload={schemaVersion:1,simulatorId:CONFIG.id,profile:profiles.active,history:history.list(),failures:failures.list(),session:sessions.get(),preferences:readPreferences(),questionHistory:questionHistory.list(),exportedAt:new Date().toISOString()};
@@ -389,7 +516,7 @@ $('backupFile').addEventListener('change',async e=>{
   e.target.value='';
 });
 $('retryExam').addEventListener('click',()=>start(lastResult?.mode||'exam'));
-$('finishMenu').addEventListener('click',()=>{renderHome();show('menu');});
+$('finishMenu').addEventListener('click',()=>navigateToView('menu'));
 window.addEventListener('beforeunload',()=>engine?.dispose());
 document.addEventListener('keydown',e=>{
  if(!state||$('exam').hidden)return;
