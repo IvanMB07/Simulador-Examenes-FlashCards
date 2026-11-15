@@ -13,6 +13,8 @@ jobs:
         with:
           node-version: 22
       - run: node --check common/simulador-core.js
+      - run: node --check common/firebase/firebase-config.js
+      - run: node --check common/firebase/firebase-sync.js
       - run: node --check simulador-CalSisSw/script.js
       - run: node --check sw.js
       - run: npm test
