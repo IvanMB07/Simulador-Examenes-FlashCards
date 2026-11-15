@@ -77,7 +77,11 @@ El botón **Sincronizar ahora** permite solicitar una sincronización manual. En
 
 El banco `preguntas.json` no se sube a Firestore: sigue versionado con el código del simulador.
 
-## 7. Consideraciones de sincronización
+## 7. Datos locales separados por cuenta
+
+Al iniciar sesión por primera vez, los datos locales existentes se migran al espacio local asociado al UID de esa cuenta. Después, cada cuenta mantiene un espacio local independiente dentro del mismo navegador. Cerrar sesión conserva esos datos locales, pero detiene la sincronización. Al volver a iniciar sesión se recupera el espacio de la cuenta correspondiente.
+
+## 8. Consideraciones de sincronización
 
 - Firestore mantiene una caché IndexedDB persistente en navegadores compatibles y sincroniza escrituras pendientes cuando vuelve la conexión. El SDK utiliza persistencia multi-pestaña.
 - El historial se guarda como documentos individuales, no como una única instantánea JSON por cuenta.
