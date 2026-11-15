@@ -75,6 +75,8 @@ export class FirebaseSyncProvider {
     this.storageListener = event => this.handleLocalChange(event);
     this.pageHideListener = () => this.flushPendingChanges();
     this.visibilityListener = () => { if (document.visibilityState === 'hidden') this.flushPendingChanges(); };
+    this.onlineListener = () => { if (this.user) this.syncNow().catch(error => this.status('error', 'No se pudo recuperar la sincronización: ' + this.errorMessage(error))); };
+    this.syncingNow = null;
   }
 
   status(state, message, user = this.user) {
@@ -102,6 +104,7 @@ export class FirebaseSyncProvider {
 
       window.addEventListener('simulador:storage-change', this.storageListener);
       window.addEventListener('pagehide', this.pageHideListener);
+      window.addEventListener('online', this.onlineListener);
       document.addEventListener('visibilitychange', this.visibilityListener);
       this.authUnsubscribe = onAuthStateChanged(this.auth, user => {
         this.user = user;
@@ -114,6 +117,7 @@ export class FirebaseSyncProvider {
         }
         if (this.bindAccountNamespace(user.uid, true)) this.onDataApplied();
         this.status('syncing', 'Cuenta conectada. Preparando la sincronización…', user);
+        this.subscribeCurrentProfile();
         this.initialSyncPromise = this.syncAll()
           .then(() => {
             this.subscribeCurrentProfile();
@@ -339,7 +343,9 @@ export class FirebaseSyncProvider {
     const path = this.paths(profileId).active;
     const local = this.storage.read('active-session', profileId, null);
     const remoteSnapshot = await getDoc(this.documentAt(path));
-    const remote = remoteSnapshot.exists() ? remoteSnapshot.data().record : null;
+    const remoteData = remoteSnapshot.exists() ? remoteSnapshot.data() : null;
+    const remoteDeletedAt = Number(remoteData?.deletedAtMs) || 0;
+    const remote = remoteDeletedAt ? null : remoteData?.record || null;
     const localTime = dateNumber(local?.savedAt);
     const remoteTime = dateNumber(remote?.savedAt);
     if (local && remote && local.id !== remote.id) {
@@ -348,12 +354,19 @@ export class FirebaseSyncProvider {
       return;
     }
     this.conflictMessage = null;
+    if (remoteDeletedAt && remoteDeletedAt >= localTime) {
+      if (local) {
+        this.applyingRemote = true;
+        try { this.storage.remove('active-session', profileId); } finally { this.applyingRemote = false; }
+      }
+      return;
+    }
     const selected = remote && remoteTime > localTime ? remote : local;
     if (selected && stableStringify(selected) !== stableStringify(local)) {
       this.applyingRemote = true;
       try { this.storage.write('active-session', selected, profileId); } finally { this.applyingRemote = false; }
     }
-    if (selected) await setDoc(this.documentAt(path), { record: clean(selected), updatedAtMs: Date.now() }, { merge: true });
+    if (selected) await setDoc(this.documentAt(path), { record: clean(selected), deletedAtMs: null, updatedAtMs: Date.now() }, { merge: true });
     else if (!local && remoteSnapshot.exists()) {
       // No se borra una sesión remota solo porque este dispositivo todavía no tenga copia local.
     }
@@ -391,7 +404,7 @@ export class FirebaseSyncProvider {
     } else if (detail.name === 'active-session') {
       this.lastLowPrioritySync.set(key, now);
     }
-    this.pendingChanges.set(key, detail);
+    this.pendingChanges.set(key, { ...detail, syncUid: this.user.uid });
     clearTimeout(this.flushTimer);
     this.flushTimer = setTimeout(() => this.flushPendingChanges(), 500);
   }
@@ -405,7 +418,7 @@ export class FirebaseSyncProvider {
   }
 
   async pushLocalChange(detail) {
-    if (!this.user) return;
+    if (!this.user || detail.syncUid !== this.user.uid) return;
     if (detail.name === 'profiles' && detail.profile === 'global') {
       const registry = detail.value || {};
       for (const profileId of registry.deletedProfiles || []) {
@@ -438,12 +451,9 @@ export class FirebaseSyncProvider {
       }
     } else if (detail.name === 'active-session') {
       if (detail.removed) {
-        // La sesión activa es compartida por perfil. Solo se elimina si coincide con la sesión borrada localmente.
-        const remote = await getDoc(this.documentAt(paths.active));
-        const remoteId = remote.exists() ? remote.data().record?.id : null;
-        if (remoteId && remoteId === detail.previous?.id) await deleteDoc(this.documentAt(paths.active));
+        await setDoc(this.documentAt(paths.active), { record: null, deletedAtMs: Date.now(), updatedAtMs: Date.now() }, { merge: true });
       } else if (detail.value) {
-        await setDoc(this.documentAt(paths.active), { record: clean(detail.value), updatedAtMs: Date.now() }, { merge: true });
+        await setDoc(this.documentAt(paths.active), { record: clean(detail.value), deletedAtMs: null, updatedAtMs: Date.now() }, { merge: true });
       }
     }
   }
@@ -490,17 +500,26 @@ export class FirebaseSyncProvider {
     this.subscriptions.push(onSnapshot(this.documentAt(paths.active), snapshot => {
       const local = this.storage.read('active-session', profileId, null);
       if (!snapshot.exists()) {
-        if (activeSnapshotInitialized && lastRemoteActiveId && local?.id === lastRemoteActiveId) {
+        this.conflictMessage = null;
+        activeSnapshotInitialized = true;
+        lastRemoteActiveId = null;
+        return;
+      }
+      const remoteData = snapshot.data();
+      if (remoteData.deletedAtMs) {
+        if (local && dateNumber(local.savedAt) <= Number(remoteData.deletedAtMs)) {
           this.applyingRemote = true;
           try { this.storage.remove('active-session', profileId); } finally { this.applyingRemote = false; }
           this.onDataApplied();
+        } else if (local && dateNumber(local.savedAt) > Number(remoteData.deletedAtMs)) {
+          this.enqueue(() => setDoc(this.documentAt(paths.active), { record: clean(local), deletedAtMs: null, updatedAtMs: Date.now() }, { merge: true }));
         }
         this.conflictMessage = null;
         activeSnapshotInitialized = true;
         lastRemoteActiveId = null;
         return;
       }
-      const remote = snapshot.data().record;
+      const remote = remoteData.record;
       lastRemoteActiveId = remote?.id || null;
       activeSnapshotInitialized = true;
       if (remote && local && remote.id !== local.id) {
@@ -546,11 +565,16 @@ export class FirebaseSyncProvider {
 
   async syncNow() {
     if (!this.user) throw new Error('Inicia sesión para sincronizar.');
+    if (this.syncingNow) return this.syncingNow;
     this.status('syncing', 'Sincronizando datos…');
-    await this.syncAll();
-    this.subscribeCurrentProfile();
-    this.status(this.conflictMessage ? 'conflict' : 'connected', this.conflictMessage || 'Sincronización completada.');
-    this.onDataApplied();
+    this.syncingNow = this.syncAll()
+      .then(() => {
+        this.subscribeCurrentProfile();
+        this.status(this.conflictMessage ? 'conflict' : 'connected', this.conflictMessage || 'Sincronización completada.');
+        this.onDataApplied();
+      })
+      .finally(() => { this.syncingNow = null; });
+    return this.syncingNow;
   }
 
   destroy() {
@@ -559,6 +583,7 @@ export class FirebaseSyncProvider {
     if (this.authUnsubscribe) this.authUnsubscribe();
     window.removeEventListener('simulador:storage-change', this.storageListener);
     window.removeEventListener('pagehide', this.pageHideListener);
+    window.removeEventListener('online', this.onlineListener);
     document.removeEventListener('visibilitychange', this.visibilityListener);
   }
 }
