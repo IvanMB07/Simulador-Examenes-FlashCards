@@ -869,3 +869,12 @@ button.danger{background:linear-gradient(110deg,#ff896c,#db4c50)!important;color
     font-size:.69rem!important;
   }
 }
+
+
+/* No se utiliza navegación fija inferior en móvil: la navegación queda en el contenido. */
+.mobile-nav{display:none!important}
+@media(max-width:820px){
+  .shell{padding-bottom:30px!important}
+  body[data-view="exam"] .shell,
+  body[data-view="results"] .shell{padding-bottom:16px!important}
+}
