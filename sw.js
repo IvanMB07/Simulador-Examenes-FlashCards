@@ -1,4 +1,4 @@
-const CACHE='study-calsissw-v4';
+const CACHE='study-calsissw-v5';
 const BASE=self.registration.scope;
 const APP=new URL('./simulador-CalSisSw/',BASE).pathname;
 const CORE=new URL('./common/simulador-core.js',BASE).pathname;
