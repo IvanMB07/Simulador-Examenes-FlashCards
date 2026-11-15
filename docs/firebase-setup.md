@@ -62,9 +62,11 @@ Después, confirma ese cambio en la rama `simualdor-CalSisSw` y publícala en Gi
 
 1. Abre el simulador desde `http://localhost:8000/simulador-CalSisSw/` o desde la URL de GitHub Pages.
 2. En la sección **Sincronización entre dispositivos**, crea una cuenta con tu correo y una contraseña de al menos 6 caracteres.
-3. Cierra sesión e inicia sesión para verificar la persistencia de la cuenta.
+3. Crea un perfil adicional desde el selector de perfiles y espera a que aparezca el estado de sincronización completada.
 4. Abre el simulador en otro navegador/dispositivo e inicia sesión con la misma cuenta.
-5. Comprueba que aparecen los mismos perfiles, historial y preguntas falladas. Para generar sesiones de examen necesitarás que el banco tenga suficientes preguntas; de momento `preguntas.json` se mantiene vacío por decisión del proyecto.
+5. Comprueba que aparece el perfil adicional. Esto permite validar autenticación, perfiles y sincronización básica sin añadir preguntas al banco.
+
+Para probar historial, preguntas falladas y reanudación entre dispositivos tendremos que añadir primero preguntas reales a `preguntas.json` y generar sesiones. El archivo sigue vacío de momento por decisión del proyecto.
 
 El botón **Sincronizar ahora** permite solicitar una sincronización manual. En funcionamiento normal, los cambios locales se guardan primero y el SDK los envía cuando hay conexión.
 
