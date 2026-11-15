@@ -124,3 +124,61 @@ test('la nueva interfaz agrupa perfil y sincronización y ubica el contador en t
   assert.match(css, /\.profile-sync-grid/);
   assert.match(css, /\.results-top-actions/);
 });
+
+
+test('limpiar historial solo elimina las sesiones del perfil activo y conserva los fallos', () => {
+  history.add({
+    id:'session-default',
+    mode:'practice',
+    finishedAt:'2026-11-15T18:00:00.000Z',
+    correct:1,
+    incorrect:0,
+    blank:0,
+    score:1,
+    durationMs:1000,
+    questionIds:[topicQuestions[0].id]
+  });
+
+  profiles.create('Perfil secundario');
+  history.add({
+    id:'session-secondary',
+    mode:'exam',
+    finishedAt:'2026-11-15T19:00:00.000Z',
+    correct:0,
+    incorrect:1,
+    blank:0,
+    score:-0.5,
+    durationMs:2000,
+    questionIds:[topicQuestions[1].id]
+  });
+  failures.add([{question:topicQuestions[2],selectedAnswer:'B. Incorrecta'}]);
+
+  history.clear();
+
+  assert.equal(history.list().length,0);
+  assert.equal(failures.list().length,1);
+
+  profiles.setActive('default');
+  assert.equal(history.list().length,1);
+  assert.equal(history.list()[0].id,'session-default');
+});
+
+test('acciones inferiores mantienen las tres filas y el botón de limpiar historial', () => {
+  const html = readFileSync(new URL('../simulador-CalSisSw/index.html', import.meta.url), 'utf8');
+  const script = readFileSync(new URL('../simulador-CalSisSw/script.js', import.meta.url), 'utf8');
+  const css = readFileSync(new URL('../simulador-CalSisSw/styles.css', import.meta.url), 'utf8');
+
+  assert.match(html, /id="clearHistory"/);
+  assert.match(script, /\$\('clearHistory'\)\.addEventListener\('click'/);
+  assert.match(script, /history\.clear\(\)/);
+  assert.match(script, /\$\('clearHistory'\)\.disabled=historyCount===0/);
+  const actionIds = ['openHistory','clearHistory','clearFailures','exportFailures','importFailures','exportBackup','importBackup'];
+  const positions = actionIds.map(id => html.indexOf('id="'+id+'"'));
+  assert.ok(positions.every(position => position >= 0));
+  assert.deepEqual(positions,[...positions].sort((a,b)=>a-b));
+  assert.match(html, /class="action-row action-row-two"/);
+  assert.match(html, /class="action-row action-row-three"/);
+  assert.match(html, /class="icon-button"[^>]*aria-label="Crear perfil"/);
+  assert.match(css, /\.profile-sync-panel \.profile-controls > button\.icon-button/);
+  assert.match(css, /\.action-row-three/);
+});
