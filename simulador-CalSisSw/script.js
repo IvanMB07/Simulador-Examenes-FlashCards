@@ -348,7 +348,7 @@ function renderReviewQuestions(result=lastResult,filter=activeReviewFilter) {
 }
 function renderResults(result) {
   const r=result.result;
-  $('score').textContent=\`\${r.score.toFixed(2)} puntos\`;
+  $('score').textContent=`${r.score.toFixed(2)} puntos`;
   $('correct').textContent=r.correct;
   $('incorrect').textContent=r.incorrect;
   $('blank').textContent=r.blank;
