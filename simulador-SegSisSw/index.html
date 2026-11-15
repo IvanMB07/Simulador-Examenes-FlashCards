@@ -250,6 +250,19 @@
 v>
 </div>
 <script type="module" src="./script.js"></script>
-<script>if("serviceWorker" in navigator && location.protocol==="https:") navigator.serviceWorker.register("../sw.js",{scope:"../"}).catch(console.error);</script>
+<script>
+if ("serviceWorker" in navigator && location.protocol === "https:") {
+  const legacyScope = new URL("./", location.href).href;
+  navigator.serviceWorker.getRegistrations().then(async registrations => {
+    const legacy = registrations.filter(registration => registration.scope === legacyScope);
+    if (legacy.length) {
+      await Promise.all(legacy.map(registration => registration.unregister()));
+      location.reload();
+      return;
+    }
+    await navigator.serviceWorker.register("../sw.js", { scope: "../" });
+  }).catch(console.error);
+}
+</script>
 </body>
 </html>
