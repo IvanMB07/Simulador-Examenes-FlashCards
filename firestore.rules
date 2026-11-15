@@ -1,0 +1,25 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isOwner(userId) {
+      return request.auth != null && request.auth.uid == userId;
+    }
+
+    match /users/{userId}/profiles/{profileId} {
+      allow read, create, update, delete: if isOwner(userId);
+
+      match /simulators/{simulatorId}/examSessions/{sessionId} {
+        allow read, create, update, delete: if isOwner(userId);
+      }
+
+      match /simulators/{simulatorId}/failedQuestions/{questionId} {
+        allow read, create, update, delete: if isOwner(userId);
+      }
+
+      match /simulators/{simulatorId}/activeSessions/{sessionId} {
+        allow read, create, update, delete: if isOwner(userId);
+      }
+    }
+  }
+}

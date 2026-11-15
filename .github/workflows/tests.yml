@@ -1,0 +1,20 @@
+name: Tests
+on:
+  push:
+    branches: [main, simualdor-CalSisSw]
+  pull_request:
+    branches: [main]
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node --check common/simulador-core.js
+      - run: node --check common/firebase/firebase-config.js
+      - run: node --check common/firebase/firebase-sync.js
+      - run: node --check simulador-CalSisSw/script.js
+      - run: node --check sw.js
+      - run: npm test
