@@ -400,7 +400,13 @@ document.addEventListener('keydown',e=>{
  else if(e.key==='ArrowUp'){e.preventDefault();moveKeyboardOption(-1);}
  else if(e.key==='ArrowDown'){e.preventDefault();moveKeyboardOption(1);}
  else if(['1','2','3','4'].includes(e.key)){e.preventDefault();engine.answer(Number(e.key)-1);}
- else if(e.key===' '||e.key==='Spacebar'){e.preventDefault();engine.answer(keyboardOptionIndex);}
- else if(e.key==='Enter'){e.preventDefault();requestFinish();}
+ else if(e.key===' '||e.key==='Spacebar'){
+   if(e.target.closest('.option'))return;
+   e.preventDefault();engine.answer(keyboardOptionIndex);
+ }
+ else if(e.key==='Enter'){
+   if(e.target.closest('.option'))return;
+   e.preventDefault();requestFinish();
+ }
 });
 init();
