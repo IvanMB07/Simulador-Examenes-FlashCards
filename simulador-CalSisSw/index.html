@@ -16,7 +16,6 @@
 
   <main class="shell">
     <header class="top">
-      <a href="../index.html" class="back"><span aria-hidden="true">←</span> Simuladores</a>
       <div class="top-heading">
         <span class="eyebrow">ENTORNO DE ESTUDIO</span>
         <h1>Calidad de Sistemas Software</h1>
@@ -31,10 +30,6 @@
           <h2>¿Qué quieres trabajar hoy?</h2>
         </div>
         <div class="home-heading-actions">
-          <div class="question-bank-summary" id="questionBankSummary">
-            <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4.5h14v15H5z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
-            <span><small>Banco de preguntas</small><strong id="questionBankCount">Cargando preguntas…</strong></span>
-          </div>
           <button type="button" class="history-shortcut" data-view="history">Ver estadísticas <span aria-hidden="true">↗</span></button>
         </div>
       </div>
@@ -58,9 +53,28 @@
         </article>
       </div>
 
-      <div class="home-settings-grid">
+      <section id="topicSettings" class="topic-settings topic-settings-wide" aria-labelledby="topicsHeading">
+        <div class="topic-settings-heading">
+          <div class="subsection-heading">
+            <svg class="subsection-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg>
+            <h3 id="topicsHeading">Seleccionar temas <small>(solo práctica)</small></h3>
+          </div>
+          <strong id="questionBankCount" class="topic-question-count">Cargando preguntas…</strong>
+        </div>
+        <div id="topicFilters" class="topic-filters"></div>
+        <p id="topicDistribution" class="topic-distribution" aria-live="polite"></p>
+        <label class="setting-row topic-order-setting" for="orderByTopic">
+          <span><strong>Ordenar por temas</strong><small>Presenta juntas las preguntas de cada tema.</small></span>
+          <span class="switch"><input id="orderByTopic" type="checkbox"><span aria-hidden="true"></span></span>
+        </label>
+      </section>
+
+      <div class="home-settings-grid account-profile-grid">
         <section class="profile-card" id="profileControls" aria-labelledby="profileHeading">
-          <div class="subsection-heading"><svg class="subsection-svg" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M4.5 20c.8-4 3.3-6 7.5-6s6.7 2 7.5 6"/></svg><h3 id="profileHeading">Perfil de usuario</h3></div>
+          <div class="subsection-heading">
+            <svg class="subsection-svg" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M4.5 20c.8-4 3.3-6 7.5-6s6.7 2 7.5 6"/></svg>
+            <h3 id="profileHeading">Perfil de usuario</h3>
+          </div>
           <p class="active-profile-label">Perfil activo: <strong id="profileName">Usuario principal</strong></p>
           <div class="profile-controls">
             <label class="visually-hidden" for="profileSelect">Perfil activo</label>
@@ -70,17 +84,39 @@
           </div>
         </section>
 
-        <section id="topicSettings" class="topic-settings" aria-labelledby="topicsHeading">
-          <div class="subsection-heading">
-            <svg class="subsection-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg>
-            <h3 id="topicsHeading">Seleccionar temas <small>(solo práctica)</small></h3>
+        <section class="account-card" id="accountSettings" aria-labelledby="accountHeading">
+          <div class="account-card-heading">
+            <div class="subsection-heading">
+              <svg class="subsection-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18h12a4 4 0 0 0 .5-8 6.5 6.5 0 0 0-12-1.5A4.7 4.7 0 0 0 6 18Z"/></svg>
+              <h3 id="accountHeading">Cuenta y sincronización</h3>
+            </div>
+            <span id="cloudState" class="cloud-state">Local</span>
           </div>
-          <div id="topicFilters" class="topic-filters"></div>
-          <p id="topicDistribution" class="topic-distribution" aria-live="polite"></p>
-          <label class="setting-row" for="orderByTopic">
-            <input id="orderByTopic" type="checkbox">
-            <span><strong>Ordenar por temas</strong><small>Presenta juntas las preguntas de cada tema.</small></span>
-          </label>
+          <section class="cloud-box" aria-labelledby="cloudTitle">
+            <h3 id="cloudTitle">Sincronización entre dispositivos</h3>
+            <p id="cloudStatusMessage" class="cloud-message" role="status" aria-live="polite">Los datos se guardan en este dispositivo. Configura Firebase para sincronizarlos.</p>
+            <div id="cloudAuthControls" class="cloud-controls" hidden>
+              <div class="cloud-auth-fields">
+                <label for="cloudEmail">Correo electrónico</label>
+                <input id="cloudEmail" type="email" autocomplete="email" placeholder="tu correo electrónico">
+                <label for="cloudPassword">Contraseña</label>
+                <input id="cloudPassword" type="password" autocomplete="current-password" placeholder="Mínimo 6 caracteres">
+              </div>
+              <div class="toolbar">
+                <button id="cloudLogin" type="button">Iniciar sesión</button>
+                <button id="cloudRegister" class="secondary" type="button">Crear cuenta</button>
+                <button id="cloudReset" class="secondary" type="button">Recuperar contraseña</button>
+              </div>
+            </div>
+            <div id="cloudSignedControls" class="cloud-controls" hidden>
+              <p class="cloud-account-line">Cuenta: <strong id="cloudAccount"></strong></p>
+              <div class="toolbar">
+                <button id="cloudSyncNow" type="button">Sincronizar ahora</button>
+                <button id="cloudLogout" class="secondary" type="button">Cerrar sesión</button>
+              </div>
+            </div>
+            <p id="cloudSetupHint" class="note">La sincronización se activa al configurar el proyecto Firebase y las reglas de Firestore del repositorio.</p>
+          </section>
         </section>
       </div>
 
@@ -110,32 +146,6 @@
         <div><span>Puntuación</span><strong>+1 / −0,5 / 0</strong></div>
       </section>
 
-      <details class="account-disclosure" id="accountSettings">
-        <summary><svg class="subsection-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18h12a4 4 0 0 0 .5-8 6.5 6.5 0 0 0-12-1.5A4.7 4.7 0 0 0 6 18Z"/></svg><strong>Cuenta y sincronización</strong><span id="cloudState" class="cloud-state">Local</span></summary>
-        <section class="cloud-box" aria-labelledby="cloudTitle">
-          <h3 id="cloudTitle">Sincronización entre dispositivos</h3>
-          <p id="cloudStatusMessage" class="cloud-message" role="status" aria-live="polite">Los datos se guardan en este dispositivo. Configura Firebase para sincronizarlos.</p>
-          <div id="cloudAuthControls" class="cloud-controls" hidden>
-            <label for="cloudEmail">Correo electrónico</label>
-            <input id="cloudEmail" type="email" autocomplete="email" placeholder="tu correo electrónico">
-            <label for="cloudPassword">Contraseña</label>
-            <input id="cloudPassword" type="password" autocomplete="current-password" placeholder="Mínimo 6 caracteres">
-            <div class="toolbar">
-              <button id="cloudLogin" type="button">Iniciar sesión</button>
-              <button id="cloudRegister" class="secondary" type="button">Crear cuenta</button>
-              <button id="cloudReset" class="secondary" type="button">Recuperar contraseña</button>
-            </div>
-          </div>
-          <div id="cloudSignedControls" class="cloud-controls" hidden>
-            <p>Cuenta: <strong id="cloudAccount"></strong></p>
-            <div class="toolbar">
-              <button id="cloudSyncNow" type="button">Sincronizar ahora</button>
-              <button id="cloudLogout" class="secondary" type="button">Cerrar sesión</button>
-            </div>
-          </div>
-          <p id="cloudSetupHint" class="note">La sincronización se activa al configurar el proyecto Firebase y las reglas de Firestore del repositorio.</p>
-        </section>
-      </details>
 
       <section class="data-tools" aria-label="Gestión de datos">
         <div class="toolbar">
@@ -187,6 +197,10 @@
     </section>
 
     <section id="results" class="page results-page panel" hidden>
+      <div class="results-top-actions">
+        <button id="retryExam" class="new-test-button" type="button">＋ Nuevo test</button>
+        <button id="finishMenu" class="return-home-button secondary" type="button">⌂ Volver al inicio</button>
+      </div>
       <div class="result-hero">
         <span id="resultMode" class="mode-pill mode-pill-exam">Sesión</span>
         <div class="result-symbol" aria-hidden="true">✦</div>
@@ -210,10 +224,6 @@
       </div>
       <div id="reviewQuestions" class="review-questions"></div>
       <div id="errors" class="errors" hidden></div>
-      <div class="toolbar result-actions">
-        <button id="retryExam" type="button">↻ Repetir sesión</button>
-        <button id="finishMenu" class="secondary" type="button">⌂ Volver al inicio</button>
-      </div>
     </section>
 
     <section id="history" class="page history-page panel" hidden>
