@@ -1,7 +1,7 @@
 name: Tests
 on:
   push:
-    branches: [main, simualdor-CalSisSw]
+    branches: [main, simualdor-CalSisSw, simulador-SegSisSw]
   pull_request:
     branches: [main]
 jobs:
@@ -16,5 +16,6 @@ jobs:
       - run: node --check common/firebase/firebase-config.js
       - run: node --check common/firebase/firebase-sync.js
       - run: node --check simulador-CalSisSw/script.js
+      - run: node --check simulador-SegSisSw/script.js
       - run: node --check sw.js
       - run: npm test
