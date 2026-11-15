@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs';
 import { webcrypto } from 'node:crypto';
 import {
   StorageAdapter, ProfileManager, ExamHistory, SessionStore, FailedQuestionStore,
-  ExamEngine, QuestionHistoryStore, extractTopic, getAvailableTopics, distributeQuestionsByTopic
+  ExamEngine, QuestionHistoryStore, extractTopic, getAvailableTopics, distributeQuestionsByTopic, grade
 } from '../common/simulador-core.js';
 
 globalThis.crypto ??= webcrypto;
@@ -183,4 +183,33 @@ test('acciones inferiores mantienen las tres filas y el botón de limpiar histor
   assert.match(script, /\$\('removeProfile'\)\.disabled=profiles\.activeId==='default'/);
   assert.match(css, /\.profile-sync-panel \.profile-controls > button\.icon-button/);
   assert.match(css, /\.action-row-three/);
+});
+
+
+test('SegSisSw usa el core común, conserva las preguntas y aplica su fórmula histórica sobre 10', () => {
+  const questions = JSON.parse(readFileSync(new URL('../simulador-SegSisSw/preguntas.json', import.meta.url), 'utf8'));
+  const script = readFileSync(new URL('../simulador-SegSisSw/script.js', import.meta.url), 'utf8');
+  const html = readFileSync(new URL('../simulador-SegSisSw/index.html', import.meta.url), 'utf8');
+  assert.equal(questions.length, 355);
+  assert.deepEqual(getAvailableTopics(questions), [1, 2]);
+  assert.match(script, /id: 'SegSisSw'/);
+  assert.match(script, /practiceQuestionCount: 25/);
+  assert.match(script, /examQuestionCount: 20/);
+  assert.match(script, /examDurationMinutes: 75/);
+  assert.match(script, /scoreFormula:/);
+  assert.match(script, /common\\/firebase\\/firebase-sync\\.js/);
+  assert.doesNotMatch(html, /cloud-sync\\.js|cloud-config\\.js/);
+
+  const answers = Object.fromEntries(questions.slice(0, 20).map((question, index) => {
+    const correct = question.opciones.findIndex(option =>
+      option.trim().charAt(0).toUpperCase() === question.solucion.trim().charAt(0).toUpperCase()
+    );
+    assert.notEqual(correct, -1);
+    return [index, correct];
+  }));
+  const formula = ({ correct, questionCount }) => questionCount > 2
+    ? Math.max(0, Math.min(10, (10 / (questionCount - 2)) * (correct - 2)))
+    : 0;
+  assert.equal(grade(questions.slice(0, 20), answers, {correct:1,incorrect:0,blank:0}, formula).score, 10);
+  assert.equal(grade(questions.slice(0, 20), {0:answers[0],1:answers[1]}, {correct:1,incorrect:0,blank:0}, formula).score, 0);
 });
