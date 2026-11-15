@@ -58,6 +58,7 @@ test('guarda respuestas, historial y preguntas falladas', () => {
   engine.finish();
   assert.equal(completed.result.score,0.5);
   assert.equal(history.list().length,1);
+  assert.equal(history.list()[0].questionIds.length,3);
   assert.equal(failures.list().length,2);
   assert.equal(sessions.get(),null);
 });
