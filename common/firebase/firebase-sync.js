@@ -70,6 +70,7 @@ export class FirebaseSyncProvider {
     this.pendingChanges = new Map();
     this.flushTimer = null;
     this.lastLowPrioritySync = new Map();
+    this.conflictMessage = null;
     this.initialSyncPromise = Promise.resolve();
     this.storageListener = event => this.handleLocalChange(event);
     this.pageHideListener = () => this.flushPendingChanges();
@@ -116,7 +117,7 @@ export class FirebaseSyncProvider {
         this.initialSyncPromise = this.syncAll()
           .then(() => {
             this.subscribeCurrentProfile();
-            this.status('connected', 'Cuenta conectada. Sincronización activa.', user);
+            this.status(this.conflictMessage ? 'conflict' : 'connected', this.conflictMessage || 'Cuenta conectada. Sincronización activa.', user);
             this.onDataApplied();
           })
           .catch(error => {
@@ -337,7 +338,8 @@ export class FirebaseSyncProvider {
     const localTime = dateNumber(local?.savedAt);
     const remoteTime = dateNumber(remote?.savedAt);
     if (local && remote && local.id !== remote.id) {
-      this.status('conflict', 'Hay dos sesiones activas distintas para este perfil. Se conserva la sesión local; no las abras simultáneamente en dos dispositivos.');
+      this.conflictMessage = 'Hay dos sesiones activas distintas para este perfil. Se conserva la sesión local; no las abras simultáneamente en dos dispositivos.';
+      this.status('conflict', this.conflictMessage);
       return;
     }
     const selected = remote && remoteTime > localTime ? remote : local;
@@ -495,7 +497,8 @@ export class FirebaseSyncProvider {
       lastRemoteActiveId = remote?.id || null;
       activeSnapshotInitialized = true;
       if (remote && local && remote.id !== local.id) {
-        this.status('conflict', 'Hay otra sesión activa en este perfil desde otro dispositivo. Se conserva la sesión local para no mezclar respuestas.');
+        this.conflictMessage = 'Hay otra sesión activa en este perfil desde otro dispositivo. Se conserva la sesión local para no mezclar respuestas.';
+        this.status('conflict', this.conflictMessage);
         return;
       }
       if (remote && dateNumber(remote.savedAt) > dateNumber(local?.savedAt)) this.applyRemote('active-session', profileId, remote);
@@ -529,6 +532,7 @@ export class FirebaseSyncProvider {
   }
 
   setActiveProfile() {
+    this.conflictMessage = null;
     if (this.user) this.subscribeCurrentProfile();
   }
 
@@ -537,7 +541,7 @@ export class FirebaseSyncProvider {
     this.status('syncing', 'Sincronizando datos…');
     await this.syncAll();
     this.subscribeCurrentProfile();
-    this.status('connected', 'Sincronización completada.');
+    this.status(this.conflictMessage ? 'conflict' : 'connected', this.conflictMessage || 'Sincronización completada.');
     this.onDataApplied();
   }
 
