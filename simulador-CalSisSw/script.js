@@ -207,10 +207,13 @@ function renderProfiles() {
 function renderHome() {
   renderProfiles();
   $('profileName').textContent=profiles.active.name;
-  $('historyCount').textContent=history.list().length;
-  $('failedCount').textContent=failures.list().length;
-  $('startFailures').disabled=failures.list().length===0;
-  $('clearFailures').disabled=failures.list().length===0;
+  const historyCount=history.list().length;
+  const failedCount=failures.list().length;
+  $('historyCount').textContent=historyCount;
+  $('failedCount').textContent=failedCount;
+  $('startFailures').disabled=failedCount===0;
+  $('clearFailures').disabled=failedCount===0;
+  $('clearHistory').disabled=historyCount===0;
   renderTopicSettings();
   $('autoAdvanceHome').checked=readPreferences().autoAdvanceExam===true;
   const saved=sessions.get();
@@ -448,6 +451,15 @@ $('cloudSyncNow').addEventListener('click',async()=>{
 
 $('startPractice').addEventListener('click',()=>start('practice'));
 $('startFailures').addEventListener('click',()=>start('failures'));
+$('clearHistory').addEventListener('click',()=>{
+  const count=history.list().length;
+  if(!count)return;
+  const message='¿Limpiar las '+count+' sesiones del historial del perfil «'+profiles.active.name+'»? Se conservarán los fallos, los perfiles y cualquier sesión en curso.';
+  if(confirm(message)){
+    history.clear();
+    renderHome();
+  }
+});
 $('clearFailures').addEventListener('click',()=>{if(failures.list().length&&confirm('¿Limpiar las preguntas falladas de este perfil?')){failures.clear();renderHome();}});
 $('startExam').addEventListener('click',()=>start('exam'));
 $('previous').addEventListener('click',()=>engine.move(-1));
