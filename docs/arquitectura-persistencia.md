@@ -93,7 +93,7 @@ Si el objetivo principal pasa a ser controlar toda la infraestructura en SQL y a
 
 ## Alcance de esta rama
 
-CalSisSw incorpora el core común inicial, perfiles locales, historial, exportación/importación, sesiones recuperables, modo de fallos, PWA básica y pruebas unitarias. La sincronización automática cloud, SRS avanzado y editor de preguntas quedan para fases posteriores.
+CalSisSw incorpora el core común inicial, perfiles locales, historial, exportación/importación, sesiones recuperables, modo de fallos, PWA, Firebase Authentication + Firestore, reglas de seguridad y pruebas unitarias. El proyecto Firebase debe crearse y configurarse mediante [docs/firebase-setup.md](firebase-setup.md). La sincronización real entre dispositivos queda pendiente de esa configuración y de una prueba de extremo a extremo.
 
 
 ## Topología de despliegue
@@ -120,3 +120,22 @@ La alternativa con menos piezas operativas es mover el frontend a Cloudflare Pag
 - Supabase pausa de proyectos Free: https://supabase.com/docs/guides/platform/free-project-pausing
 
 Las cuotas y precios pueden cambiar; se deben volver a comprobar antes de desplegar.
+
+
+## Implementación Firebase en CalSisSw
+
+El proveedor independiente está en `common/firebase/firebase-sync.js`; no se importa desde el core. Utiliza el SDK modular de Firebase 13.3.0 mediante módulos ESM del CDN oficial, fijado a una versión concreta para evitar cambios inesperados. Firebase recomienda la API modular y documenta el uso de módulos browser desde gstatic para proyectos ESM sin bundler. <Cite refs={["turn171593search1"]}/>
+
+La inicialización solicita `persistentLocalCache` con `persistentMultipleTabManager`, para que Firestore use IndexedDB y comparta la caché entre pestañas compatibles. <Cite refs={["turn857793search1","turn857793search7"]}/>
+
+Los datos se organizan por UID y perfil:
+- `users/{uid}/profiles/{profileId}`
+- `.../simulators/{simulatorId}/examSessions/{sessionId}`
+- `.../simulators/{simulatorId}/failedQuestions/{questionIdHash}`
+- `.../simulators/{simulatorId}/activeSessions/current`
+
+Las reglas de `firestore.rules` conceden acceso únicamente si `request.auth.uid` coincide con el UID del propietario. Firebase recomienda restringir acceso por propietario y aplicar reglas explícitas también a las subcolecciones. <Cite refs={["turn171593search0","turn857793search3","turn171593search5"]}/>
+
+La sesión activa es un documento único por perfil y simulador. Si dos dispositivos escriben concurrentemente sobre la misma sesión activa, Firestore aplica última escritura; el proveedor no intenta fusionar respuestas simultáneas de una misma pregunta. Esta restricción debe conservarse en las pruebas de dos dispositivos.
+
+La configuración real de Firebase no está incluida: `common/firebase/firebase-config.js` se deja como plantilla vacía. Consulta `docs/firebase-setup.md`.
