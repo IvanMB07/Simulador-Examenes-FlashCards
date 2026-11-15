@@ -19,6 +19,7 @@ let failures = new FailedQuestionStore(storage,()=>profiles.activeId);
 let questions = [];
 let engine = null;
 let state = null;
+let lastResult = null;
 
 function show(id) { ['menu','exam','results','history'].forEach(view=>$(view).hidden=view!==id); }
 function fmtDuration(ms) { const sec=Math.floor(ms/1000); return `${Math.floor(sec/60)}:${String(sec%60).padStart(2,'0')}`; }
@@ -36,11 +37,11 @@ function renderHome() {
   $('clearFailures').disabled=failures.list().length===0;
   const saved=sessions.get();
   $('resumePanel').hidden=!saved;
-  if(saved) $('resumeText').textContent=`${saved.mode==='exam'?'Examen':'Práctica'} · ${Object.keys(saved.answers||{}).length}/${saved.questions.length} respondidas`;
+  if(saved) $('resumeText').textContent=`${saved.mode==='exam'?'Examen':saved.mode==='failures'?'Test de fallos':'Práctica'} · ${Object.keys(saved.answers||{}).length}/${saved.questions.length} respondidas`;
 }
 function update(stateValue, finished=null) {
   state=stateValue;
-  if(finished){renderResults(finished);show('results');return;}
+  if(finished){lastResult=finished;renderResults(finished);show('results');return;}
   if(!state)return;
   show('exam');
   const q=state.questions[state.current];
@@ -70,7 +71,13 @@ function renderResults(result) {
     const detail=document.createElement('p');detail.textContent=`Tu respuesta: ${error.selected??'En blanco'} · Correcta: ${error.correct}`;
     item.append(title,detail);list.append(item);});
 }
-function start(mode,restored=null){if(engine)engine.dispose();if(mode==='exam'&&questions.length<CONFIG.examQuestionCount){alert('El examen requiere '+CONFIG.examQuestionCount+' preguntas.');return;}engine=new ExamEngine({config:CONFIG,questions,profileManager:profiles,history,sessions,onChange:update});engine.start(mode,restored);}
+function start(mode,restored=null){
+  if(engine)engine.dispose();
+  if(mode==='exam'&&questions.length<CONFIG.examQuestionCount){alert('El examen requiere '+CONFIG.examQuestionCount+' preguntas.');return;}
+  engine=new ExamEngine({config:CONFIG,questions,profileManager:profiles,history,sessionStore:sessions,failedQuestions:failures,onChange:update});
+  try { engine.start(mode,restored); }
+  catch(error) { engine.dispose(); engine=null; alert(error.message||'No se pudo iniciar la sesión.'); }
+}
 function renderHistory(){
   const rows=history.list(); const container=$('historyRows'); container.replaceChildren();
   if(!rows.length){container.textContent='Todavía no hay exámenes guardados.';return;}
@@ -105,7 +112,7 @@ $('next').addEventListener('click',()=>engine.move(1));
 $('finish').addEventListener('click',()=>{if(confirm('¿Finalizar esta sesión?'))engine.finish();});
 $('profileSelect').addEventListener('change',e=>{if(engine)engine.dispose();profiles.setActive(e.target.value);history=new ExamHistory(storage,()=>profiles.activeId,CONFIG.id);sessions=new SessionStore(storage,()=>profiles.activeId,CONFIG.id);failures=new FailedQuestionStore(storage,()=>profiles.activeId);renderHome();show('menu');});
 $('addProfile').addEventListener('click',()=>{const name=prompt('Nombre del perfil');if(!name)return;try{profiles.create(name);history=new ExamHistory(storage,()=>profiles.activeId,CONFIG.id);sessions=new SessionStore(storage,()=>profiles.activeId,CONFIG.id);failures=new FailedQuestionStore(storage,()=>profiles.activeId);renderHome();}catch(e){alert(e.message);}});
-$('removeProfile').addEventListener('click',()=>{if(profiles.activeId==='default')return; if(confirm('¿Eliminar este perfil y sus datos locales?')){const id=profiles.removeActive();['exam-history','active-session','failed-questions'].forEach(key=>storage.remove(key,id));history=new ExamHistory(storage,()=>profiles.activeId,CONFIG.id);sessions=new SessionStore(storage,()=>profiles.activeId,CONFIG.id);renderHome();}});
+$('removeProfile').addEventListener('click',()=>{if(profiles.activeId==='default')return; if(confirm('¿Eliminar este perfil y sus datos locales?')){const id=profiles.removeActive();['exam-history','active-session','failed-questions'].forEach(key=>storage.remove(key,id));history=new ExamHistory(storage,()=>profiles.activeId,CONFIG.id);sessions=new SessionStore(storage,()=>profiles.activeId,CONFIG.id);failures=new FailedQuestionStore(storage,()=>profiles.activeId);renderHome();}});
 $('openHistory').addEventListener('click',()=>{renderHistory();show('history');});
 $('backMenu')?.addEventListener('click',()=>{renderHome();show('menu');});
 $('historyBack').addEventListener('click',()=>show('menu'));
