@@ -6,7 +6,8 @@ const APP_NAMES = [
   'simulador-API',
   'simulador-DBBDD',
   'simulador-REQ',
-  'simulador-SIE'
+  'simulador-SIE',
+  'simulador-ISO-2',
 ];
 const APP_PATHS = APP_NAMES.map(name => new URL('./' + name + '/', BASE).pathname);
 const CORE_PATH = new URL('./common/', BASE).pathname;
