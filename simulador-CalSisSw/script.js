@@ -104,12 +104,12 @@ function renderHistory(){
     const item=document.createElement('article');item.className='history-item';
     const title=document.createElement('strong');title.textContent=`${row.mode==='exam'?'Examen':row.mode==='failures'?'Test de fallos':'Práctica'} · ${new Date(row.finishedAt).toLocaleString()}`;
     const detail=document.createElement('p');detail.textContent=`${row.correct} correctas · ${row.incorrect} incorrectas · ${row.blank} en blanco · ${row.score.toFixed(2)} puntos · ${fmtDuration(row.durationMs)}`;
-    const replay=document.createElement('button');replay.type='button';replay.textContent='Repetir examen';replay.addEventListener('click',()=>start(row.mode==='exam'?'exam':row.mode==='failures'?'failures':'practice'));
+    const replay=document.createElement('button');replay.type='button';replay.textContent='Repetir sesión';replay.addEventListener('click',()=>start(row.mode==='exam'?'exam':row.mode==='failures'?'failures':'practice'));
     item.append(title,detail,replay);container.append(item);
   });
-  const max=rows.length?Math.max(...rows.map(x=>x.score),1):1;
+  const maxAbs=rows.length?Math.max(1,...rows.map(row=>Math.abs(row.score))):1;
   $('historyChart').replaceChildren();
-  rows.slice(0,10).reverse().forEach(row=>{const bar=document.createElement('div');bar.className='chart-bar';bar.style.height=`${Math.max(4,row.score/max*100)}%`;bar.title=`${new Date(row.finishedAt).toLocaleDateString()}: ${row.score.toFixed(2)}`;$('historyChart').append(bar);});
+  rows.slice(0,10).reverse().forEach(row=>{const bar=document.createElement('div');bar.className=row.score<0?'chart-bar negative':'chart-bar';bar.style.height=`${Math.max(4,Math.abs(row.score)/maxAbs*100)}%`;bar.title=`${new Date(row.finishedAt).toLocaleDateString()}: ${row.score.toFixed(2)} puntos`;$('historyChart').append(bar);});
 }
 async function init(){
   try{
