@@ -1,4 +1,4 @@
-const CACHE = 'study-simulators-v6';
+const CACHE = 'study-simulators-v7';
 const BASE = self.registration.scope;
 const APP_NAMES = [
   'simulador-CalSisSw',
@@ -11,12 +11,14 @@ const APP_NAMES = [
 ];
 const APP_PATHS = APP_NAMES.map(name => new URL('./' + name + '/', BASE).pathname);
 const CORE_PATH = new URL('./common/', BASE).pathname;
+const API_SELECTOR_PATH = new URL('./simulador-API/api-question-selection.js', BASE).pathname;
 const FIREBASE_SDK = '/firebasejs/13.3.0/';
 const SHELL = [
   ...APP_PATHS.flatMap(APP => [
     APP, APP + 'index.html', APP + 'styles.css', APP + 'script.js', APP + 'preguntas.json',
     APP + 'manifest.webmanifest', APP + 'icon.svg'
   ]),
+  API_SELECTOR_PATH,
   CORE_PATH + 'simulador-core.js',
   CORE_PATH + 'firebase/firebase-config.js',
   CORE_PATH + 'firebase/firebase-sync.js'
