@@ -41,7 +41,7 @@ function renderHome() {
 }
 function update(stateValue, finished=null) {
   state=stateValue;
-  if(finished){lastResult=finished;renderResults(finished);show('results');return;}
+  if(finished){lastResult=finished;renderResults(finished);renderHome();show('results');return;}
   if(!state)return;
   show('exam');
   const q=state.questions[state.current];
@@ -50,15 +50,34 @@ function update(stateValue, finished=null) {
   $('timer').textContent=state.mode==='exam' ? 'Restante: '+fmtDuration(engine.remaining()) : 'Transcurrido: '+fmtDuration(engine.elapsed());
   $('progress').style.width=`${((state.current+1)/state.questions.length)*100}%`;
   $('progress').setAttribute('aria-valuenow',String(state.current+1));
+  $('progress').setAttribute('aria-valuemax',String(state.questions.length));
   const options=$('options'); options.replaceChildren();
   q.opciones.forEach((text,index)=>{
     const button=document.createElement('button'); button.className='option'; button.type='button';
     button.textContent=text; button.setAttribute('aria-pressed',String(state.answers[state.current]===index));
-    if(state.answers[state.current]===index)button.classList.add('selected');
+    const answered=Object.prototype.hasOwnProperty.call(state.answers,state.current);
+    const selected=state.answers[state.current];
+    const correctIndex=q.opciones.findIndex(option=>option.trim().charAt(0).toUpperCase()===String(q.solucion).trim().charAt(0).toUpperCase());
+    if(selected===index)button.classList.add('selected');
+    if(state.mode!=='exam'&&answered){
+      button.disabled=true;
+      if(index===correctIndex)button.classList.add('correct');
+      if(index===selected&&selected!==correctIndex)button.classList.add('incorrect');
+    }
     button.addEventListener('click',()=>engine.answer(index)); options.append(button);
   });
+  const feedback=$('feedback');
+  const alreadyAnswered=Object.prototype.hasOwnProperty.call(state.answers,state.current);
+  if(state.mode!=='exam'&&alreadyAnswered){
+    const selected=state.answers[state.current];
+    const correctIndex=q.opciones.findIndex(option=>option.trim().charAt(0).toUpperCase()===String(q.solucion).trim().charAt(0).toUpperCase());
+    feedback.hidden=false;
+    feedback.textContent=selected===correctIndex?'Respuesta correcta.':`Respuesta incorrecta. La correcta es: ${q.opciones[correctIndex]||q.solucion}`;
+    feedback.dataset.kind=selected===correctIndex?'success':'error';
+  } else { feedback.hidden=true; feedback.textContent=''; }
   $('previous').disabled=state.current===0; $('next').disabled=state.current===state.questions.length-1;
-  $('finish').textContent=state.mode==='exam'?'Finalizar examen':'Finalizar práctica';
+  $('examMode').textContent=state.mode==='exam'?'Examen':state.mode==='failures'?'Repaso de fallos':'Práctica';
+  $('finish').textContent=state.mode==='exam'?'Finalizar examen':'Finalizar sesión';
 }
 function renderResults(result) {
   const r=result.result;
