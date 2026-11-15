@@ -6,11 +6,29 @@ export class StorageAdapter {
     try { const raw = localStorage.getItem(this.key(name, profile)); return raw === null ? fallback : JSON.parse(raw); }
     catch { return fallback; }
   }
-  write(name, value, profile = 'default') {
-    try { localStorage.setItem(this.key(name, profile), JSON.stringify(value)); return true; }
-    catch (error) { console.error('No se pudo guardar en el dispositivo:', error); return false; }
+  notify(name, profile, value, previous, removed, syncPriority = 'high') {
+    if (typeof window === 'undefined' || typeof CustomEvent === 'undefined') return;
+    window.dispatchEvent(new CustomEvent('simulador:storage-change', {
+      detail: { namespace: this.namespace, name, profile, value, previous, removed, syncPriority }
+    }));
   }
-  remove(name, profile = 'default') { localStorage.removeItem(this.key(name, profile)); }
+  write(name, value, profile = 'default', metadata = {}) {
+    try {
+      const key = this.key(name, profile);
+      const previousRaw = localStorage.getItem(key);
+      localStorage.setItem(key, JSON.stringify(value));
+      this.notify(name, profile, value, previousRaw === null ? null : JSON.parse(previousRaw), false, metadata.syncPriority || 'high');
+      return true;
+    } catch (error) { console.error('No se pudo guardar en el dispositivo:', error); return false; }
+  }
+  remove(name, profile = 'default', metadata = {}) {
+    const key = this.key(name, profile);
+    const previousRaw = localStorage.getItem(key);
+    localStorage.removeItem(key);
+    let previous = null;
+    try { previous = previousRaw === null ? null : JSON.parse(previousRaw); } catch {}
+    this.notify(name, profile, null, previous, true, metadata.syncPriority || 'high');
+  }
 }
 
 export class ProfileManager {
@@ -58,7 +76,7 @@ export class ExamHistory {
 export class SessionStore {
   constructor(storage, profileProvider, simulatorId) { this.storage=storage; this.profileProvider=profileProvider; this.simulatorId=simulatorId; }
   get() { return this.storage.read('active-session', this.profileProvider(), null); }
-  save(session) { this.storage.write('active-session', {...session, simulatorId:this.simulatorId, profileId:this.profileProvider(), savedAt:new Date().toISOString()}, this.profileProvider()); }
+  save(session, syncPriority = 'high') { this.storage.write('active-session', {...session, simulatorId:this.simulatorId, profileId:this.profileProvider(), savedAt:new Date().toISOString()}, this.profileProvider(), {syncPriority}); }
   clear() { this.storage.remove('active-session', this.profileProvider()); }
 }
 
@@ -130,16 +148,16 @@ export class ExamEngine {
     return Math.max(0,Number(this.state.elapsedMs||0)+(Date.now()-this.state.lastResumedAt));
   }
   remaining() { return this.state?.mode==='exam'?Math.max(0,this.config.examDurationMinutes*60*1000-this.elapsed()):null; }
-  persist() {
+  persist(syncPriority = 'high') {
     if(!this.state)return;
-    this.state.elapsedMs=this.elapsed(); this.state.lastResumedAt=Date.now(); this.sessions.save(this.state);
+    this.state.elapsedMs=this.elapsed(); this.state.lastResumedAt=Date.now(); this.sessions.save(this.state, syncPriority);
   }
   startClock() {
     clearInterval(this.tick);
     this.tick=setInterval(()=>{
       if(!this.state)return;
       if(this.state.mode==='exam'&&this.remaining()<=0){this.finish(true);return;}
-      this.persist(); this.onChange(this.state);
+      this.persist('low'); this.onChange(this.state);
     },1000);
   }
   finish(timeExpired=false) {
