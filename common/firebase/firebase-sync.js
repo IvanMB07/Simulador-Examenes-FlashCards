@@ -336,6 +336,10 @@ export class FirebaseSyncProvider {
     const remote = remoteSnapshot.exists() ? remoteSnapshot.data().record : null;
     const localTime = dateNumber(local?.savedAt);
     const remoteTime = dateNumber(remote?.savedAt);
+    if (local && remote && local.id !== remote.id) {
+      this.status('conflict', 'Hay dos sesiones activas distintas para este perfil. Se conserva la sesión local; no las abras simultáneamente en dos dispositivos.');
+      return;
+    }
     const selected = remote && remoteTime > localTime ? remote : local;
     if (selected && stableStringify(selected) !== stableStringify(local)) {
       this.applyingRemote = true;
@@ -490,6 +494,10 @@ export class FirebaseSyncProvider {
       const remote = snapshot.data().record;
       lastRemoteActiveId = remote?.id || null;
       activeSnapshotInitialized = true;
+      if (remote && local && remote.id !== local.id) {
+        this.status('conflict', 'Hay otra sesión activa en este perfil desde otro dispositivo. Se conserva la sesión local para no mezclar respuestas.');
+        return;
+      }
       if (remote && dateNumber(remote.savedAt) > dateNumber(local?.savedAt)) this.applyRemote('active-session', profileId, remote);
     }, error => this.status('error', 'No se pudo actualizar la sesión: ' + this.errorMessage(error))));
 
