@@ -50,10 +50,11 @@ test('guarda respuestas, historial y preguntas falladas', () => {
   engine.move(1);
   const second=currentState.questions[1];
   const secondCorrect=second.opciones.findIndex(option=>option.trim().startsWith(second.solucion+'.'));
-  engine.answer(secondCorrect===0?1:0);
+  const secondWrong=secondCorrect===0?1:0;
+  engine.answer(secondWrong);
   const saved=sessions.get();
-  assert.equal(saved.answers[0],0);
-  assert.equal(saved.answers[1],0);
+  assert.equal(saved.answers[0],firstCorrect);
+  assert.equal(saved.answers[1],secondWrong);
   engine.finish();
   assert.equal(completed.result.score,0.5);
   assert.equal(history.list().length,1);
