@@ -7,7 +7,16 @@ self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(c
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith('study-calsissw-')&&key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',event=>{
  const request=event.request;if(request.method!=='GET')return;
- const url=new URL(request.url);if(url.origin!==self.location.origin)return;
+ const url=new URL(request.url);
+ // Cachea el SDK modular de Firebase tras una carga online.
+ if(url.origin==='https://www.gstatic.com'&&url.pathname.startsWith('/firebasejs/13.3.0/')){
+  event.respondWith(fetch(request).then(response=>{
+   if(response.ok)caches.open(CACHE).then(cache=>cache.put(request,response.clone()));
+   return response;
+  }).catch(()=>caches.match(request)));
+  return;
+ }
+ if(url.origin!==self.location.origin)return;
  if(!url.pathname.startsWith(APP)&&url.pathname!==CORE)return;
  event.respondWith(fetch(request).then(response=>{if(response.ok)caches.open(CACHE).then(cache=>cache.put(request,response.clone()));return response;}).catch(()=>caches.match(request)));
 });
