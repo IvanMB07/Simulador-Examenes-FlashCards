@@ -142,7 +142,11 @@ export class FirebaseSyncProvider {
     const targetPrefix = targetNamespace + ':';
     const ownerKey = this.baseNamespace + ':cloud-owner';
     const baseKeys = [];
-    const targetHasData = Object.keys(localStorage).some(key => key.startsWith(targetPrefix));
+    let targetHasData = false;
+    for (let index = 0; index < localStorage.length; index++) {
+      const key = localStorage.key(index);
+      if (key && key.startsWith(targetPrefix)) { targetHasData = true; break; }
+    }
 
     for (let index = 0; index < localStorage.length; index++) {
       const key = localStorage.key(index);
