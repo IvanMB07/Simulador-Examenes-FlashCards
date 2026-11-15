@@ -149,7 +149,7 @@ export class ExamEngine {
     const result=grade(this.state.questions,this.state.answers,this.config.scoring);
     const failed=result.errors.map(error=>({...error,question:this.state.questions[error.index],selectedAnswer:error.selected}));
     if(this.failedQuestions)this.failedQuestions.add(failed);
-    this.history.add({id:this.state.id,mode:this.state.mode,startedAt:new Date(this.state.startedAt).toISOString(),finishedAt:new Date().toISOString(),durationMs,timeExpired,...result,questionCount:this.state.questions.length,errors:result.errors});
+    this.history.add({id:this.state.id,mode:this.state.mode,startedAt:new Date(this.state.startedAt).toISOString(),finishedAt:new Date().toISOString(),durationMs,timeExpired,...result,questionCount:this.state.questions.length,questionIds:this.state.questions.map(question=>question.id??question.cuestion),errors:result.errors});
     this.sessions.clear();
     const finished={...this.state,result,durationMs,timeExpired}; this.state=null; this.onChange(null,finished); return finished;
   }
