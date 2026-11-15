@@ -105,6 +105,127 @@ export function shuffle(items) {
   return copy;
 }
 
+export function extractTopic(question) {
+  const explicit = question?.topic ?? question?.tema ?? question?.topicNumber;
+  if (explicit !== undefined && explicit !== null && String(explicit).trim() !== '') {
+    const direct = String(explicit).trim().match(/^(?:tema\s*|t\s*)?(\d{1,2})$/i);
+    if (direct) return Number(direct[1]);
+  }
+  for (const source of [question?.id, question?.cuestion]) {
+    if (typeof source !== 'string') continue;
+    const match = source.match(/\b(?:tema\s*|t)(\d{1,2})(?=$|[\s._:-])/i);
+    if (match) return Number(match[1]);
+  }
+  return null;
+}
+
+export function getAvailableTopics(questions) {
+  return [...new Set((questions || []).map(extractTopic).filter(topic => Number.isInteger(topic) && topic > 0))]
+    .sort((a, b) => a - b);
+}
+
+function questionKey(question) {
+  return String(question?.id ?? question?.cuestion ?? '');
+}
+
+function preferUnseenQuestions(pool, count, questionHistory) {
+  const unseen = [];
+  const older = [];
+  const recent = [];
+  for (const question of shuffle(pool)) {
+    const priority = questionHistory?.priority(question) ?? Infinity;
+    if (priority === Infinity) unseen.push(question);
+    else if (priority > 50) older.push(question);
+    else recent.push({ question, priority });
+  }
+  const selected = unseen.slice(0, count);
+  if (selected.length < count) selected.push(...older.slice(0, count - selected.length));
+  if (selected.length < count) {
+    recent.sort((a, b) => b.priority - a.priority);
+    selected.push(...recent.slice(0, count - selected.length).map(item => item.question));
+  }
+  return selected.slice(0, count);
+}
+
+export function distributeQuestionsByTopic(questions, topics, count, questionHistory = null, options = {}) {
+  const pool = Array.isArray(questions) ? questions : [];
+  const topicList = [...new Set((topics || []).map(Number).filter(topic => Number.isInteger(topic) && topic > 0))];
+  const eligible = topicList.length ? pool.filter(question => topicList.includes(extractTopic(question))) : pool;
+  if (!eligible.length) return preferUnseenQuestions(pool, Math.max(0, Math.min(Number(count) || 0, pool.length)), questionHistory);
+  const target = Math.max(0, Math.min(Number(count) || 0, eligible.length));
+  if (!target) return [];
+
+  if (!topicList.length) return preferUnseenQuestions(eligible, target, questionHistory);
+  const buckets = new Map(topicList.map(topic => [topic, eligible.filter(question => extractTopic(question) === topic)]));
+  const selectedByTopic = new Map(topicList.map(topic => [topic, []]));
+  const used = new Set();
+  let remainingTopics = topicList.filter(topic => buckets.get(topic).length > 0);
+
+  while (used.size < target && remainingTopics.length) {
+    const slots = target - used.size;
+    const base = Math.floor(slots / remainingTopics.length);
+    const extra = slots % remainingTopics.length;
+    let addedThisRound = 0;
+    remainingTopics.forEach((topic, index) => {
+      const quota = base + (index < extra ? 1 : 0);
+      if (!quota) return;
+      const available = buckets.get(topic).filter(question => !used.has(questionKey(question)));
+      const picked = preferUnseenQuestions(available, Math.min(quota, available.length), questionHistory);
+      picked.forEach(question => {
+        const key = questionKey(question);
+        if (!key || used.has(key)) return;
+        used.add(key);
+        selectedByTopic.get(topic).push(question);
+        addedThisRound++;
+      });
+    });
+    if (!addedThisRound) break;
+    remainingTopics = remainingTopics.filter(topic => selectedByTopic.get(topic).length < buckets.get(topic).length);
+  }
+
+  const ordered = topicList.flatMap(topic => selectedByTopic.get(topic));
+  return options.preserveTopicOrder ? ordered.slice(0, target) : shuffle(ordered).slice(0, target);
+}
+
+export class QuestionHistoryStore {
+  constructor(storage, profileProvider, maxEntries = 150) {
+    this.storage = storage;
+    this.profileProvider = profileProvider;
+    this.maxEntries = maxEntries;
+  }
+  list() {
+    const rows = this.storage.read('question-history', this.profileProvider(), []);
+    return Array.isArray(rows) ? rows.filter(item => item && typeof item.key === 'string') : [];
+  }
+  priority(question) {
+    const key = questionKey(question);
+    const rows = this.list();
+    for (let index = rows.length - 1; index >= 0; index--) {
+      if (rows[index].key === key) return rows.length - index;
+    }
+    return Infinity;
+  }
+  record(questions) {
+    const rows = this.list();
+    for (const question of questions || []) {
+      const key = questionKey(question);
+      if (!key) continue;
+      for (let index = rows.length - 1; index >= 0; index--) {
+        if (rows[index].key === key) rows.splice(index, 1);
+      }
+      rows.push({ key, topic: extractTopic(question), seenAt: new Date().toISOString() });
+    }
+    this.storage.write('question-history', rows.slice(-this.maxEntries), this.profileProvider());
+  }
+  replace(rows) {
+    const valid = (Array.isArray(rows) ? rows : []).filter(item => item && typeof item.key === 'string');
+    this.storage.write('question-history', valid.slice(-this.maxEntries), this.profileProvider());
+  }
+  clear() {
+    this.storage.write('question-history', [], this.profileProvider());
+  }
+}
+
 export function grade(questions, answers, scoring) {
   let correct=0, incorrect=0, blank=0;
   const errors=[];
@@ -121,15 +242,23 @@ export function grade(questions, answers, scoring) {
 }
 
 export class ExamEngine {
-  constructor({config,questions,profileManager,history,sessionStore,failedQuestions,onChange}) {
+  constructor({config,questions,profileManager,history,sessionStore,failedQuestions,questionHistory=null,preferencesProvider=()=>({}),onChange}) {
     this.config=config; this.questions=questions; this.profiles=profileManager; this.history=history;
-    this.sessions=sessionStore; this.failedQuestions=failedQuestions; this.onChange=onChange;
+    this.sessions=sessionStore; this.failedQuestions=failedQuestions; this.questionHistory=questionHistory;
+    this.preferencesProvider=preferencesProvider; this.onChange=onChange;
     this.state=null; this.tick=null;
   }
   start(mode='practice',restored=null) {
     const count=mode==='exam'?this.config.examQuestionCount:this.config.practiceQuestionCount;
     const source=mode==='failures'?this.failedQuestions.list():this.questions;
-    const chosen=restored?.questions||shuffle(source).slice(0,Math.min(count,source.length));
+    const preferences=this.preferencesProvider()||{};
+    const topicList=mode==='practice'&&Array.isArray(preferences.selectedTopics)
+      ? preferences.selectedTopics : getAvailableTopics(source);
+    const chosen=restored?.questions||(mode==='failures'
+      ? shuffle(source).slice(0,Math.min(count,source.length))
+      : distributeQuestionsByTopic(source,topicList,count,this.questionHistory,{
+          preserveTopicOrder:mode==='practice'&&preferences.orderByTopic===true
+        }));
     if(!chosen.length) throw new Error(mode==='failures'?'Todavía no tienes preguntas falladas.':'El banco de preguntas está vacío.');
     this.state=restored
       ? {...restored,startedAt:restored.startedAt||Date.now(),lastResumedAt:Date.now(),elapsedMs:Math.max(0,Number(restored.elapsedMs)||0)}
@@ -140,7 +269,12 @@ export class ExamEngine {
   }
   answer(index) {
     if(!this.state||!Number.isInteger(index)||index<0||index>=this.state.questions[this.state.current].opciones.length)return;
-    this.state.answers[this.state.current]=index; this.persist(); this.onChange(this.state);
+    if(this.state.mode==='practice'&&Object.prototype.hasOwnProperty.call(this.state.answers,this.state.current))return;
+    this.state.answers[this.state.current]=index;
+    if(this.state.mode==='exam'&&this.preferencesProvider()?.autoAdvanceExam===true&&this.state.current<this.state.questions.length-1) {
+      this.state.current++;
+    }
+    this.persist(); this.onChange(this.state);
   }
   move(delta) {
     if(!this.state)return;
@@ -172,6 +306,7 @@ export class ExamEngine {
     const failed=result.errors.map(error=>({...error,question:this.state.questions[error.index],selectedAnswer:error.selected}));
     if(this.failedQuestions)this.failedQuestions.add(failed);
     this.history.add({id:this.state.id,mode:this.state.mode,startedAt:new Date(this.state.startedAt).toISOString(),finishedAt:new Date().toISOString(),durationMs,timeExpired,...result,questionCount:this.state.questions.length,questionIds:this.state.questions.map(question=>question.id??question.cuestion),errors:result.errors});
+    this.questionHistory?.record(this.state.questions);
     this.sessions.clear();
     const finished={...this.state,result,durationMs,timeExpired}; this.state=null; this.onChange(null,finished); return finished;
   }
