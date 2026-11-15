@@ -1,5 +1,6 @@
 import test, { beforeEach } from 'node:test';
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 import { webcrypto } from 'node:crypto';
 import {
   StorageAdapter, ProfileManager, ExamHistory, SessionStore, FailedQuestionStore,
@@ -87,4 +88,18 @@ test('las preguntas falladas permiten cambiar la respuesta antes de finalizar', 
   engine.answer(1);
   assert.equal(state.answers[0],1);
   engine.finish();
+});
+
+
+test('la interfaz de CalSisSw conserva la función que inicia las sesiones y sus selectores', () => {
+  const script = readFileSync(new URL('../simulador-CalSisSw/script.js', import.meta.url), 'utf8');
+  const html = readFileSync(new URL('../simulador-CalSisSw/index.html', import.meta.url), 'utf8');
+  assert.match(script, /function start\s*\(\s*mode\s*,\s*restored\s*=\s*null\s*\)/);
+  assert.match(script, /\$\('startPractice'\)\.addEventListener/);
+  assert.match(script, /\$\('startExam'\)\.addEventListener/);
+  assert.match(script, /\$\('startFailures'\)\.addEventListener/);
+  const ids = new Set([...html.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]));
+  const selectors = [...script.matchAll(/\$\('([^']+)'\)/g)].map(match => match[1]);
+  const missing = [...new Set(selectors.filter(id => !ids.has(id)))];
+  assert.deepEqual(missing, []);
 });
