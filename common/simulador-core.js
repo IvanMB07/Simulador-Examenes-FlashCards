@@ -267,9 +267,11 @@ export class ExamEngine {
       ? preferences.selectedTopics : getAvailableTopics(source);
     const chosen=restored?.questions||(mode==='failures'
       ? shuffle(source).slice(0,Math.min(count,source.length))
-      : distributeQuestionsByTopic(source,topicList,count,this.questionHistory,{
-          preserveTopicOrder:mode==='practice'&&preferences.orderByTopic===true
-        }));
+      : typeof this.config.selectQuestions==='function'
+        ? this.config.selectQuestions({mode,questions:source,count,preferences,questionHistory:this.questionHistory})
+        : distributeQuestionsByTopic(source,topicList,count,this.questionHistory,{
+            preserveTopicOrder:mode==='practice'&&preferences.orderByTopic===true
+          }));
     if(!chosen.length) throw new Error(mode==='failures'?'Todavía no tienes preguntas falladas.':'El banco de preguntas está vacío.');
     this.state=restored
       ? {...restored,startedAt:restored.startedAt||Date.now(),lastResumedAt:Date.now(),elapsedMs:Math.max(0,Number(restored.elapsedMs)||0)}
