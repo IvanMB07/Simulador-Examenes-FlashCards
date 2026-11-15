@@ -76,3 +76,25 @@ No se puede determinar por qué falló tu instancia sin el error exacto de conso
 ## Alcance de esta rama
 
 CalSisSw incorpora el core común inicial, perfiles locales, historial, exportación/importación, sesiones recuperables, modo de fallos, PWA básica y pruebas unitarias. La sincronización automática cloud, SRS avanzado y editor de preguntas quedan para fases posteriores.
+
+
+## Topología de despliegue
+
+GitHub Pages puede seguir alojando el frontend estático y llamar a un Worker API independiente mediante HTTPS. En ese escenario hay que configurar CORS, enviar el token de sesión en cada petición y mantener los secretos solo en el entorno del Worker.
+
+La alternativa con menos piezas operativas es mover el frontend a Cloudflare Pages y alojar las rutas API como Pages Functions en el mismo proyecto, usando D1 mediante bindings. Esto evita CORS entre frontend y API. No es obligatorio hacer ese cambio para tener backend: GitHub Pages + Worker API + D1 también es viable.
+
+## Referencias oficiales consultadas
+
+- GitHub Pages y sus límites de alojamiento estático: https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site
+- Cloudflare Pages Functions y bindings: https://developers.cloudflare.com/pages/functions/bindings/
+- Cloudflare Pages Functions, cuotas: https://developers.cloudflare.com/pages/functions/pricing/
+- Cloudflare Workers, límites y precios: https://developers.cloudflare.com/workers/platform/pricing/
+- Cloudflare D1, cuotas y precios: https://developers.cloudflare.com/d1/platform/pricing/
+- Better Auth en Cloudflare Workers: https://better-auth.com/docs/guides/cloudflare
+- Better Auth 1.5 y soporte D1: https://better-auth.com/blog/1-5
+- Firestore offline persistence: https://firebase.google.com/docs/firestore/manage-data/enable-offline
+- Supabase precios y límites del plan Free: https://supabase.com/pricing
+- Supabase pausa de proyectos Free: https://supabase.com/docs/guides/platform/free-project-pausing
+
+Las cuotas y precios pueden cambiar; se deben volver a comprobar antes de desplegar.
