@@ -115,7 +115,7 @@ test('la nueva interfaz agrupa perfil y sincronización y ubica el contador en t
   assert.match(html, /class="profile-sync-panel"/);
   assert.match(html, /class="profile-sync-grid"/);
   assert.ok(html.indexOf('id="questionBankCount"') > html.indexOf('id="topicSettings"'));
-  assert.match(html, /class="topic-order-setting"/);
+  assert.match(html, /class="[^"]*\\btopic-order-setting\\b/);
   assert.match(html, /class="results-top-actions"/);
   assert.equal((html.match(/id="retryExam"/g) || []).length, 1);
   assert.equal((html.match(/id="finishMenu"/g) || []).length, 1);
