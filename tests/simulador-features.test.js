@@ -1,0 +1,90 @@
+import test, { beforeEach } from 'node:test';
+import assert from 'node:assert/strict';
+import { webcrypto } from 'node:crypto';
+import {
+  StorageAdapter, ProfileManager, ExamHistory, SessionStore, FailedQuestionStore,
+  ExamEngine, QuestionHistoryStore, extractTopic, getAvailableTopics, distributeQuestionsByTopic
+} from '../common/simulador-core.js';
+
+globalThis.crypto ??= webcrypto;
+class MemoryStorage {
+  constructor() { this.values = new Map(); }
+  getItem(key) { return this.values.has(key) ? this.values.get(key) : null; }
+  setItem(key, value) { this.values.set(key, String(value)); }
+  removeItem(key) { this.values.delete(key); }
+}
+let storage, profiles, history, sessions, failures, questionHistory;
+const topicQuestions = [
+  ...Array.from({length:6},(_,i)=>({id:'T1-'+(i+1),cuestion:'T1-Pregunta '+(i+1),opciones:['A. Correcta','B. Incorrecta'],solucion:'A'})),
+  ...Array.from({length:6},(_,i)=>({id:'T2-'+(i+1),cuestion:'T2-Pregunta '+(i+1),opciones:['A. Correcta','B. Incorrecta'],solucion:'A'})),
+  ...Array.from({length:6},(_,i)=>({id:'T3-'+(i+1),cuestion:'T3-Pregunta '+(i+1),opciones:['A. Correcta','B. Incorrecta'],solucion:'A'}))
+];
+const config = {examQuestionCount:3,practiceQuestionCount:6,examDurationMinutes:75,scoring:{correct:1,incorrect:-0.5,blank:0}};
+
+beforeEach(() => {
+  globalThis.localStorage = new MemoryStorage();
+  storage = new StorageAdapter('test');
+  profiles = new ProfileManager(storage);
+  history = new ExamHistory(storage,()=>profiles.activeId,'CalSisSw');
+  sessions = new SessionStore(storage,()=>profiles.activeId,'CalSisSw');
+  failures = new FailedQuestionStore(storage,()=>profiles.activeId);
+  questionHistory = new QuestionHistoryStore(storage,()=>profiles.activeId,150);
+});
+
+test('detecta temas desde el identificador o el texto de la pregunta', () => {
+  assert.equal(extractTopic({id:'CSW-T3-014',cuestion:'Pregunta de ejemplo'}),3);
+  assert.equal(extractTopic({cuestion:'Tema 2: conceptos básicos'}),2);
+  assert.deepEqual(getAvailableTopics(topicQuestions),[1,2,3]);
+});
+
+test('distribuye preguntas proporcionalmente entre temas seleccionados', () => {
+  const selected=distributeQuestionsByTopic(topicQuestions,[1,3],6,questionHistory,{preserveTopicOrder:true});
+  assert.equal(selected.length,6);
+  assert.deepEqual(selected.map(extractTopic),[1,1,1,3,3,3]);
+  assert.equal(new Set(selected.map(item=>item.id)).size,6);
+});
+
+test('respeta el límite de preguntas existentes en los temas seleccionados', () => {
+  const selected=distributeQuestionsByTopic(topicQuestions,[1],20,questionHistory,{preserveTopicOrder:true});
+  assert.equal(selected.length,6);
+  assert.ok(selected.every(item=>extractTopic(item)===1));
+});
+
+test('prioriza preguntas no vistas y mantiene historial separado por perfil', () => {
+  questionHistory.record(topicQuestions.slice(0,2));
+  assert.equal(questionHistory.priority(topicQuestions[0]),2);
+  assert.equal(questionHistory.priority(topicQuestions[2]),Infinity);
+  profiles.create('Segundo');
+  assert.equal(questionHistory.priority(topicQuestions[0]),Infinity);
+  questionHistory.record(topicQuestions.slice(0,4));
+  assert.equal(questionHistory.list().length,4);
+});
+
+test('el avance automático solo se aplica al modo examen', () => {
+  let state;
+  const engine=new ExamEngine({
+    config,questions:topicQuestions,profileManager:profiles,history,sessionStore:sessions,
+    failedQuestions:failures,questionHistory,preferencesProvider:()=>({autoAdvanceExam:true}),
+    onChange:value=>{state=value;}
+  });
+  engine.start('exam');
+  engine.answer(0);
+  assert.equal(state.current,1);
+  assert.equal(state.answers[0],0);
+  engine.finish();
+});
+
+test('las preguntas falladas permiten cambiar la respuesta antes de finalizar', () => {
+  failures.add([{question:topicQuestions[0],selectedAnswer:'B. Incorrecta'}]);
+  let state;
+  const engine=new ExamEngine({
+    config,questions:topicQuestions,profileManager:profiles,history,sessionStore:sessions,
+    failedQuestions:failures,questionHistory,preferencesProvider:()=>({}),
+    onChange:value=>{state=value;}
+  });
+  engine.start('failures');
+  engine.answer(0);
+  engine.answer(1);
+  assert.equal(state.answers[0],1);
+  engine.finish();
+});
