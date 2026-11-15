@@ -4,6 +4,7 @@ import { isFirebaseConfigured } from '../common/firebase/firebase-config.js';
 const CONFIG = {
   id: 'SIE',
   title: 'Sistemas de Información Empresarial',
+  questionUrl: './preguntas.json',
   examQuestionCount: 20,
   practiceQuestionCount: 25,
   examDurationMinutes: 75,
