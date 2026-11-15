@@ -1,37 +1,47 @@
-# Simulador universal · primera implementación CalSisSw
+# Simuladores de estudio · core común y CalSisSw
 
-Esta rama introduce el primer simulador sobre `common/simulador-core.js` y el adaptador `simulador-CalSisSw/`.
+Esta rama inicia la evolución hacia un modelo común de simuladores. La primera integración completa es **Calidad de Sistemas Software (CalSisSw)**.
 
-## Uso local
+## CalSisSw
 
-Servir el repositorio mediante un servidor HTTP (GitHub Pages funciona también) y abrir `simulador-CalSisSw/`.
+- Modo práctica con feedback inmediato.
+- Examen de 20 preguntas y 75 minutos.
+- Test de preguntas falladas.
+- Puntuación directa: correcta +1, incorrecta −0,5, en blanco 0.
+- Perfiles locales independientes.
+- Historial por perfil con fecha, modalidad, aciertos, errores, blancas, puntuación, duración y detalle de fallos.
+- Gráfico de resultados recientes y exportación JSON.
+- Reanudación de sesiones tras recargar o cerrar el navegador.
+- Temporizador de examen basado en tiempo real transcurrido.
+- Diseño responsive, navegación por teclado, mensajes accesibles y PWA con caché offline del simulador y el core.
+- Exportación e importación de copia de seguridad del perfil.
 
-## Banco de preguntas
+El banco `simulador-CalSisSw/preguntas.json` se deja vacío (`[]`) para añadir el contenido de la asignatura posteriormente.
 
-`simulador-CalSisSw/preguntas.json` está deliberadamente vacío (`[]`). Formato previsto:
+## Core común
 
-```json
-[
-  {
-    "id": "CalSisSw-T1-001",
-    "tema": 1,
-    "cuestion": "Enunciado",
-    "opciones": ["A. Opción A", "B. Opción B", "C. Opción C", "D. Opción D"],
-    "solucion": "A"
-  }
-]
+`common/simulador-core.js` concentra las funciones independientes de cada asignatura: persistencia local, perfiles, historial, sesiones, preguntas falladas, selección aleatoria y evaluación. Cada simulador mantiene su configuración y su interfaz.
+
+## Uso y pruebas
+
+Servir el repositorio por HTTP/HTTPS y abrir `simulador-CalSisSw/`. GitHub Pages puede seguir sirviendo la parte estática.
+
+```bash
+npm test
 ```
 
-## Puntuación
+La rama incluye GitHub Actions para ejecutar las pruebas del core.
 
-Correcta: +1; incorrecta: −0,5; en blanco: 0. La nota mostrada es puntuación directa, no normalizada a 10.
+## Persistencia entre dispositivos
 
-## Persistencia
+En esta fase la persistencia automática es **local al navegador/dispositivo**. La exportación/importación JSON permite mover los datos manualmente. La sincronización automática entre dispositivos necesita un backend autenticado; GitHub Pages por sí solo no ejecuta código de servidor.
 
-Los perfiles, las sesiones inacabadas y el historial se guardan en el navegador. La copia JSON permite migrar los datos manualmente. La sincronización automática entre dispositivos requiere un backend con autenticación y políticas de acceso; no es una capacidad de GitHub Pages por sí sola.
+La arquitectura y la comparación de proveedores están en [docs/arquitectura-persistencia.md](docs/arquitectura-persistencia.md).
 
-## Próximos pasos
+## Fuera de esta primera fase
 
-- Implementar un proveedor cloud autenticado detrás del adaptador de persistencia.
-- Completar la integración de service worker y pruebas automatizadas.
-- Incorporar SRS, editor de preguntas y CI en fases posteriores.
+- Sincronización cloud automática.
+- Migración de los simuladores existentes al core.
+- Repetición espaciada (SRS) configurable.
+- Editor/importador visual de preguntas.
+- Internacionalización.
