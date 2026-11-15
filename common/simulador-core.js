@@ -232,7 +232,7 @@ export class QuestionHistoryStore {
   }
 }
 
-export function grade(questions, answers, scoring) {
+export function grade(questions, answers, scoring, scoreFormula = null) {
   let correct=0, incorrect=0, blank=0;
   const errors=[];
   questions.forEach((q,index)=>{
@@ -244,7 +244,12 @@ export function grade(questions, answers, scoring) {
       else { incorrect++; errors.push({index, questionId:q.id ?? null, question:q.cuestion, selected:q.opciones[answer], correct:q.opciones.find(o=>o.trim().charAt(0).toUpperCase()===String(q.solucion).trim().charAt(0).toUpperCase()) ?? q.solucion}); }
     }
   });
-  return {correct, incorrect, blank, score:correct*scoring.correct + incorrect*scoring.incorrect + blank*scoring.blank, errors};
+  const weightedScore=correct*scoring.correct + incorrect*scoring.incorrect + blank*scoring.blank;
+  const formulaScore=typeof scoreFormula==='function'
+    ? Number(scoreFormula({correct,incorrect,blank,questionCount:questions.length}))
+    : weightedScore;
+  const score=Number.isFinite(formulaScore)?formulaScore:weightedScore;
+  return {correct, incorrect, blank, score, errors};
 }
 
 export class ExamEngine {
@@ -308,7 +313,7 @@ export class ExamEngine {
     if(!this.state)return null;
     const durationMs=this.elapsed(); this.state.elapsedMs=durationMs;
     clearInterval(this.tick); this.tick=null;
-    const result=grade(this.state.questions,this.state.answers,this.config.scoring);
+    const result=grade(this.state.questions,this.state.answers,this.config.scoring,this.config.scoreFormula);
     const failed=result.errors.map(error=>({...error,question:this.state.questions[error.index],selectedAnswer:error.selected}));
     if(this.failedQuestions)this.failedQuestions.add(failed);
     this.history.add({id:this.state.id,mode:this.state.mode,startedAt:new Date(this.state.startedAt).toISOString(),finishedAt:new Date().toISOString(),durationMs,timeExpired,...result,questionCount:this.state.questions.length,questionIds:this.state.questions.map(question=>question.id??question.cuestion),errors:result.errors});
