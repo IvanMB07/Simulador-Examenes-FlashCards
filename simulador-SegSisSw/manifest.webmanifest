@@ -1,12 +1,19 @@
 {
-  "name": "Simulador SegSisSw",
+  "name": "Simulador de Seguridad de Sistemas Software",
   "short_name": "SegSisSw",
-  "description": "Simulador de exámenes de Seguridad de Sistemas Software",
+  "description": "Simulador de estudio y exámenes de Seguridad de Sistemas Software",
   "lang": "es",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#0b1020",
-  "theme_color": "#0b1020",
-  "icons": []
+  "background_color": "#120d0b",
+  "theme_color": "#120d0b",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
 }
