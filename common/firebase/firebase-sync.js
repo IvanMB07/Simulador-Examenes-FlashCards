@@ -343,6 +343,7 @@ export class FirebaseSyncProvider {
       this.status('conflict', this.conflictMessage);
       return;
     }
+    this.conflictMessage = null;
     const selected = remote && remoteTime > localTime ? remote : local;
     if (selected && stableStringify(selected) !== stableStringify(local)) {
       this.applyingRemote = true;
@@ -490,6 +491,7 @@ export class FirebaseSyncProvider {
           try { this.storage.remove('active-session', profileId); } finally { this.applyingRemote = false; }
           this.onDataApplied();
         }
+        this.conflictMessage = null;
         activeSnapshotInitialized = true;
         lastRemoteActiveId = null;
         return;
@@ -502,6 +504,7 @@ export class FirebaseSyncProvider {
         this.status('conflict', this.conflictMessage);
         return;
       }
+      this.conflictMessage = null;
       if (remote && dateNumber(remote.savedAt) > dateNumber(local?.savedAt)) this.applyRemote('active-session', profileId, remote);
     }, error => this.status('error', 'No se pudo actualizar la sesión: ' + this.errorMessage(error))));
 
