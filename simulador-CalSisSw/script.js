@@ -104,7 +104,11 @@ function renderHistory(){
     const item=document.createElement('article');item.className='history-item';
     const title=document.createElement('strong');title.textContent=`${row.mode==='exam'?'Examen':row.mode==='failures'?'Test de fallos':'Práctica'} · ${new Date(row.finishedAt).toLocaleString()}`;
     const detail=document.createElement('p');detail.textContent=`${row.correct} correctas · ${row.incorrect} incorrectas · ${row.blank} en blanco · ${row.score.toFixed(2)} puntos · ${fmtDuration(row.durationMs)}`;
-    const replay=document.createElement('button');replay.type='button';replay.textContent='Repetir sesión';replay.addEventListener('click',()=>start(row.mode==='exam'?'exam':row.mode==='failures'?'failures':'practice'));
+    const replay=document.createElement('button');replay.type='button';replay.textContent='Repetir sesión';replay.addEventListener('click',()=>{
+      const replayQuestions=(row.questionIds||[]).map(id=>questions.find(question=>(question.id??question.cuestion)===id)).filter(Boolean);
+      const restored=replayQuestions.length?{id:crypto.randomUUID(),mode:row.mode,questions:replayQuestions,answers:{},current:0,startedAt:Date.now(),lastResumedAt:Date.now(),elapsedMs:0}:null;
+      start(row.mode==='exam'?'exam':row.mode==='failures'?'failures':'practice',restored);
+    });
     item.append(title,detail,replay);container.append(item);
   });
   const maxAbs=rows.length?Math.max(1,...rows.map(row=>Math.abs(row.score))):1;
