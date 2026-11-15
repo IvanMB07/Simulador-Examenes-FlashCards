@@ -13,33 +13,6 @@
 </head>
 <body>
 <div class="app-layout">
-  <aside class="sidebar" aria-label="Navegación principal">
-    <a class="brand" href="../index.html">
-      <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
-      <span class="brand-name">Simulador de<br><strong>estudio</strong></span>
-    </a>
-    <nav class="sidebar-nav">
-      <button type="button" class="nav-link active" data-view="menu">
-        <span class="nav-icon" aria-hidden="true">⌂</span><span>Inicio</span>
-      </button>
-      <button type="button" class="nav-link" data-view="history">
-        <span class="nav-icon" aria-hidden="true">▥</span><span>Estadísticas</span>
-      </button>
-      <button type="button" class="nav-link" data-scroll="profileControls">
-        <span class="nav-icon" aria-hidden="true">♙</span><span>Perfiles</span>
-      </button>
-      <button type="button" class="nav-link" data-scroll="questionBankSummary">
-        <span class="nav-icon" aria-hidden="true">▤</span><span>Banco de preguntas</span>
-      </button>
-      <button type="button" class="nav-link" data-scroll="studySettings">
-        <span class="nav-icon" aria-hidden="true">⚙</span><span>Ajustes</span>
-      </button>
-    </nav>
-    <div class="sidebar-foot">
-      <span class="sidebar-foot-dot"></span>
-      <span>Progreso guardado por perfil</span>
-    </div>
-  </aside>
 
   <main class="shell">
     <header class="top">
@@ -57,26 +30,29 @@
           <span class="section-kicker">TU ESPACIO DE ESTUDIO</span>
           <h2>¿Qué quieres trabajar hoy?</h2>
         </div>
-        <div class="question-bank-summary" id="questionBankSummary">
-          <span class="summary-icon" aria-hidden="true">▤</span>
-          <span><small>Banco de preguntas</small><strong id="questionBankCount">Cargando preguntas…</strong></span>
+        <div class="home-heading-actions">
+          <div class="question-bank-summary" id="questionBankSummary">
+            <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4.5h14v15H5z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+            <span><small>Banco de preguntas</small><strong id="questionBankCount">Cargando preguntas…</strong></span>
+          </div>
+          <button type="button" class="history-shortcut" data-view="history">Ver estadísticas <span aria-hidden="true">↗</span></button>
         </div>
       </div>
 
-      <div class="mode-heading"><span class="mode-heading-icon" aria-hidden="true">▱</span><h3>Elige un modo</h3></div>
+      <div class="mode-heading"><svg class="subsection-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6 12 2l8 4-8 4-8-4Z"/><path d="m4 12 8 4 8-4M4 18l8 4 8-4"/></svg><h3>Elige un modo</h3></div>
       <div class="mode-grid">
         <article class="mode-card mode-practice">
-          <div class="mode-icon" aria-hidden="true">◎</div>
+          <div class="mode-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="17"/><circle cx="24" cy="24" r="10"/><circle cx="24" cy="24" r="3"/><path d="m31 17 8-8"/></svg></div>
           <div class="mode-copy"><span class="mode-label">MODO 01</span><h3>Práctica</h3><p>Preguntas aleatorias con feedback inmediato.</p></div>
           <button id="startPractice" class="mode-action" type="button"><span>Empezar práctica</span><span aria-hidden="true">›</span></button>
         </article>
         <article class="mode-card mode-exam">
-          <div class="mode-icon" aria-hidden="true">⌑</div>
+          <div class="mode-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="m5 17 19-10 19 10-19 10L5 17Z"/><path d="M12 22v12c7 6 17 6 24 0V22M24 27v13"/></svg></div>
           <div class="mode-copy"><span class="mode-label">MODO 02</span><h3>Examen</h3><p>20 preguntas · 75 minutos · puntuación directa.</p></div>
           <button id="startExam" class="mode-action" type="button"><span>Empezar examen</span><span aria-hidden="true">›</span></button>
         </article>
         <article class="mode-card mode-failures">
-          <div class="mode-icon" aria-hidden="true">↶</div>
+          <div class="mode-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M9 20a16 16 0 1 1 2 14"/><path d="M9 10v11h11"/></svg></div>
           <div class="mode-copy"><span class="mode-label">MODO 03</span><h3>Test de fallos</h3><p>Repasa las preguntas que has respondido mal o has dejado en blanco.</p></div>
           <button id="startFailures" class="mode-action" type="button" disabled><span>Repasar fallos</span><span aria-hidden="true">›</span></button>
         </article>
@@ -84,7 +60,7 @@
 
       <div class="home-settings-grid">
         <section class="profile-card" id="profileControls" aria-labelledby="profileHeading">
-          <div class="subsection-heading"><span class="subsection-icon" aria-hidden="true">♙</span><h3 id="profileHeading">Perfil de usuario</h3></div>
+          <div class="subsection-heading"><svg class="subsection-svg" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M4.5 20c.8-4 3.3-6 7.5-6s6.7 2 7.5 6"/></svg><h3 id="profileHeading">Perfil de usuario</h3></div>
           <p class="active-profile-label">Perfil activo: <strong id="profileName">Usuario principal</strong></p>
           <div class="profile-controls">
             <label class="visually-hidden" for="profileSelect">Perfil activo</label>
@@ -96,7 +72,7 @@
 
         <section id="topicSettings" class="topic-settings" aria-labelledby="topicsHeading">
           <div class="subsection-heading">
-            <span class="subsection-icon" aria-hidden="true">▱</span>
+            <svg class="subsection-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg>
             <h3 id="topicsHeading">Seleccionar temas <small>(solo práctica)</small></h3>
           </div>
           <div id="topicFilters" class="topic-filters"></div>
@@ -110,7 +86,7 @@
 
       <section class="advanced-card" id="studySettings" aria-label="Opciones avanzadas">
         <details>
-          <summary><span class="subsection-icon" aria-hidden="true">⚙</span><strong>Opciones avanzadas</strong><span class="disclosure-chevron" aria-hidden="true">⌄</span></summary>
+          <summary><svg class="subsection-svg" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19 13.5a7 7 0 0 0 0-3l2-1.5-2-3.5-2.4 1a7 7 0 0 0-2.6-1.5L13.5 3h-4L9 5a7 7 0 0 0-2.6 1.5L4 5.5 2 9l2 1.5a7 7 0 0 0 0 3L2 15l2 3.5 2.4-1A7 7 0 0 0 9 19l.5 2h4l.5-2a7 7 0 0 0 2.6-1.5l2.4 1L21 15z"/></svg><strong>Opciones avanzadas</strong><span class="disclosure-chevron" aria-hidden="true">⌄</span></summary>
           <div class="advanced-content">
             <p class="note">Ajusta el comportamiento de las sesiones de estudio.</p>
             <div class="setting-row">
@@ -135,7 +111,7 @@
       </section>
 
       <details class="account-disclosure" id="accountSettings">
-        <summary><span class="subsection-icon" aria-hidden="true">☁</span><strong>Cuenta y sincronización</strong><span id="cloudState" class="cloud-state">Local</span></summary>
+        <summary><svg class="subsection-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18h12a4 4 0 0 0 .5-8 6.5 6.5 0 0 0-12-1.5A4.7 4.7 0 0 0 6 18Z"/></svg><strong>Cuenta y sincronización</strong><span id="cloudState" class="cloud-state">Local</span></summary>
         <section class="cloud-box" aria-labelledby="cloudTitle">
           <h3 id="cloudTitle">Sincronización entre dispositivos</h3>
           <p id="cloudStatusMessage" class="cloud-message" role="status" aria-live="polite">Los datos se guardan en este dispositivo. Configura Firebase para sincronizarlos.</p>
@@ -251,10 +227,10 @@
   </main>
 
   <nav class="mobile-nav" aria-label="Navegación inferior">
-    <button type="button" class="mobile-nav-link active" data-view="menu"><span aria-hidden="true">⌂</span><small>Inicio</small></button>
-    <button type="button" class="mobile-nav-link" data-view="history"><span aria-hidden="true">▥</span><small>Historial</small></button>
-    <button type="button" class="mobile-nav-link" data-scroll="profileControls"><span aria-hidden="true">♙</span><small>Perfiles</small></button>
-    <button type="button" class="mobile-nav-link" data-scroll="studySettings"><span aria-hidden="true">⚙</span><small>Ajustes</small></button>
+    <button type="button" class="mobile-nav-link active" data-view="menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 11 9-8 9 8v9h-6v-6H9v6H3z"/></svg><small>Inicio</small></button>
+    <button type="button" class="mobile-nav-link" data-view="history"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5M10 19V9M16 19V3M22 19H2"/></svg><small>Historial</small></button>
+    <button type="button" class="mobile-nav-link" data-scroll="profileControls"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M4.5 21c.8-4 3.3-6 7.5-6s6.7 2 7.5 6"/></svg><small>Perfiles</small></button>
+    <button type="button" class="mobile-nav-link" data-scroll="studySettings"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19 13.5a7 7 0 0 0 0-3l2-1.5-2-3.5-2.4 1a7 7 0 0 0-2.6-1.5L13.5 3h-4L9 5a7 7 0 0 0-2.6 1.5L4 5.5 2 9l2 1.5a7 7 0 0 0 0 3L2 15l2 3.5 2.4-1A7 7 0 0 0 9 19l.5 2h4l.5-2a7 7 0 0 0 2.6-1.5l2.4 1L21 15z"/></svg><small>Ajustes</small></button>
   </nav>
 </div>
 <script type="module" src="./script.js"></script>
