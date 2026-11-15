@@ -1,4 +1,4 @@
-import { StorageAdapter, ProfileManager, ExamHistory, SessionStore, ExamEngine } from '../common/simulador-core.js';
+import { StorageAdapter, ProfileManager, ExamHistory, SessionStore, FailedQuestionStore, ExamEngine } from '../common/simulador-core.js';
 
 const CONFIG = {
   id: 'CalSisSw',
@@ -15,6 +15,7 @@ const storage = new StorageAdapter(`estudio:${CONFIG.id}`);
 const profiles = new ProfileManager(storage);
 let history = new ExamHistory(storage,()=>profiles.activeId,CONFIG.id);
 let sessions = new SessionStore(storage,()=>profiles.activeId,CONFIG.id);
+let failures = new FailedQuestionStore(storage,()=>profiles.activeId);
 let questions = [];
 let engine = null;
 let state = null;
@@ -30,7 +31,9 @@ function renderHome() {
   renderProfiles();
   $('profileName').textContent=profiles.active.name;
   $('historyCount').textContent=history.list().length;
-  $('failedCount').textContent=storage.read('failed-questions',profiles.activeId,[]).length;
+  $('failedCount').textContent=failures.list().length;
+  $('startFailures').disabled=failures.list().length===0;
+  $('clearFailures').disabled=failures.list().length===0;
   const saved=sessions.get();
   $('resumePanel').hidden=!saved;
   if(saved) $('resumeText').textContent=`${saved.mode==='exam'?'Examen':'Práctica'} · ${Object.keys(saved.answers||{}).length}/${saved.questions.length} respondidas`;
@@ -43,7 +46,7 @@ function update(stateValue, finished=null) {
   const q=state.questions[state.current];
   $('questionCount').textContent=`Pregunta ${state.current+1} de ${state.questions.length}`;
   $('questionText').textContent=q.cuestion;
-  $('timer').textContent=fmtDuration(state.elapsedMs + Math.max(0,Date.now()-state.startedAt));
+  $('timer').textContent=state.mode==='exam' ? 'Restante: '+fmtDuration(engine.remaining()) : 'Transcurrido: '+fmtDuration(engine.elapsed());
   $('progress').style.width=`${((state.current+1)/state.questions.length)*100}%`;
   $('progress').setAttribute('aria-valuenow',String(state.current+1));
   const options=$('options'); options.replaceChildren();
@@ -67,15 +70,15 @@ function renderResults(result) {
     const detail=document.createElement('p');detail.textContent=`Tu respuesta: ${error.selected??'En blanco'} · Correcta: ${error.correct}`;
     item.append(title,detail);list.append(item);});
 }
-function start(mode,restored=null){if(engine)engine.dispose();engine=new ExamEngine({config:CONFIG,questions,profileManager:profiles,history,sessions,onChange:update});engine.start(mode,restored);}
+function start(mode,restored=null){if(engine)engine.dispose();if(mode==='exam'&&questions.length<CONFIG.examQuestionCount){alert('El examen requiere '+CONFIG.examQuestionCount+' preguntas.');return;}engine=new ExamEngine({config:CONFIG,questions,profileManager:profiles,history,sessions,onChange:update});engine.start(mode,restored);}
 function renderHistory(){
   const rows=history.list(); const container=$('historyRows'); container.replaceChildren();
   if(!rows.length){container.textContent='Todavía no hay exámenes guardados.';return;}
   rows.forEach(row=>{
     const item=document.createElement('article');item.className='history-item';
-    const title=document.createElement('strong');title.textContent=`${row.mode==='exam'?'Examen':'Práctica'} · ${new Date(row.finishedAt).toLocaleString()}`;
+    const title=document.createElement('strong');title.textContent=`${row.mode==='exam'?'Examen':row.mode==='failures'?'Test de fallos':'Práctica'} · ${new Date(row.finishedAt).toLocaleString()}`;
     const detail=document.createElement('p');detail.textContent=`${row.correct} correctas · ${row.incorrect} incorrectas · ${row.blank} en blanco · ${row.score.toFixed(2)} puntos · ${fmtDuration(row.durationMs)}`;
-    const replay=document.createElement('button');replay.type='button';replay.textContent='Repetir examen';replay.addEventListener('click',()=>start(row.mode==='exam'?'exam':'practice'));
+    const replay=document.createElement('button');replay.type='button';replay.textContent='Repetir examen';replay.addEventListener('click',()=>start(row.mode==='exam'?'exam':row.mode==='failures'?'failures':'practice'));
     item.append(title,detail,replay);container.append(item);
   });
   const max=rows.length?Math.max(...rows.map(x=>x.score),1):1;
@@ -94,24 +97,26 @@ async function init(){
   $('discardButton').addEventListener('click',()=>{sessions.clear();renderHome();});
 }
 $('startPractice').addEventListener('click',()=>start('practice'));
+$('startFailures').addEventListener('click',()=>start('failures'));
+$('clearFailures').addEventListener('click',()=>{if(failures.list().length&&confirm('¿Limpiar las preguntas falladas de este perfil?')){failures.clear();renderHome();}});
 $('startExam').addEventListener('click',()=>start('exam'));
 $('previous').addEventListener('click',()=>engine.move(-1));
 $('next').addEventListener('click',()=>engine.move(1));
 $('finish').addEventListener('click',()=>{if(confirm('¿Finalizar esta sesión?'))engine.finish();});
-$('profileSelect').addEventListener('change',e=>{if(engine)engine.dispose();profiles.setActive(e.target.value);history=new ExamHistory(storage,()=>profiles.activeId,CONFIG.id);sessions=new SessionStore(storage,()=>profiles.activeId,CONFIG.id);renderHome();show('menu');});
-$('addProfile').addEventListener('click',()=>{const name=prompt('Nombre del perfil');if(!name)return;try{profiles.create(name);history=new ExamHistory(storage,()=>profiles.activeId,CONFIG.id);sessions=new SessionStore(storage,()=>profiles.activeId,CONFIG.id);renderHome();}catch(e){alert(e.message);}});
+$('profileSelect').addEventListener('change',e=>{if(engine)engine.dispose();profiles.setActive(e.target.value);history=new ExamHistory(storage,()=>profiles.activeId,CONFIG.id);sessions=new SessionStore(storage,()=>profiles.activeId,CONFIG.id);failures=new FailedQuestionStore(storage,()=>profiles.activeId);renderHome();show('menu');});
+$('addProfile').addEventListener('click',()=>{const name=prompt('Nombre del perfil');if(!name)return;try{profiles.create(name);history=new ExamHistory(storage,()=>profiles.activeId,CONFIG.id);sessions=new SessionStore(storage,()=>profiles.activeId,CONFIG.id);failures=new FailedQuestionStore(storage,()=>profiles.activeId);renderHome();}catch(e){alert(e.message);}});
 $('removeProfile').addEventListener('click',()=>{if(profiles.activeId==='default')return; if(confirm('¿Eliminar este perfil y sus datos locales?')){const id=profiles.removeActive();['exam-history','active-session','failed-questions'].forEach(key=>storage.remove(key,id));history=new ExamHistory(storage,()=>profiles.activeId,CONFIG.id);sessions=new SessionStore(storage,()=>profiles.activeId,CONFIG.id);renderHome();}});
 $('openHistory').addEventListener('click',()=>{renderHistory();show('history');});
-$('backMenu').addEventListener('click',()=>{renderHome();show('menu');});
+$('backMenu')?.addEventListener('click',()=>{renderHome();show('menu');});
 $('historyBack').addEventListener('click',()=>show('menu'));
 $('exportHistory').addEventListener('click',()=>history.export());
 $('exportBackup').addEventListener('click',()=>{
- const payload={schemaVersion:1,simulatorId:CONFIG.id,profile:profiles.active,profiles:profiles.data,history:history.list(),session:sessions.get(),exportedAt:new Date().toISOString()};
+ const payload={schemaVersion:1,simulatorId:CONFIG.id,profile:profiles.active,profiles:profiles.data,history:history.list(),failures:failures.list(),session:sessions.get(),exportedAt:new Date().toISOString()};
  const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='calsissw-backup.json';a.click();URL.revokeObjectURL(url);
 });
 $('importBackup').addEventListener('click',()=>$('backupFile').click());
-$('backupFile').addEventListener('change',async e=>{const file=e.target.files?.[0];if(!file)return;try{const payload=JSON.parse(await file.text());if(payload.simulatorId!==CONFIG.id)throw new Error('La copia no pertenece a CalSisSw.');if(Array.isArray(payload.history))storage.write('exam-history',payload.history,profiles.activeId);if(payload.session)storage.write('active-session',payload.session,profiles.activeId);renderHome();alert('Copia importada.');}catch(err){alert(`No se pudo importar: ${err.message}`);}e.target.value='';});
-$('retryExam').addEventListener('click',()=>start('exam'));
+$('backupFile').addEventListener('change',async e=>{const file=e.target.files?.[0];if(!file)return;try{const payload=JSON.parse(await file.text());if(payload.simulatorId!==CONFIG.id)throw new Error('La copia no pertenece a CalSisSw.');if(Array.isArray(payload.history))storage.write('exam-history',payload.history,profiles.activeId);if(Array.isArray(payload.failures))storage.write('failed-questions',payload.failures,profiles.activeId);if(payload.session)storage.write('active-session',payload.session,profiles.activeId);renderHome();alert('Copia importada.');}catch(err){alert(`No se pudo importar: ${err.message}`);}e.target.value='';});
+$('retryExam').addEventListener('click',()=>start(lastResult?.mode||'exam'));
 $('finishMenu').addEventListener('click',()=>{renderHome();show('menu');});
 window.addEventListener('beforeunload',()=>engine?.dispose());
 document.addEventListener('keydown',e=>{if(!state||$('exam').hidden)return;if(e.target.matches('input,textarea,button'))return;
