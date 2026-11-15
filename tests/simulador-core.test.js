@@ -90,3 +90,33 @@ test('temporizador de examen utiliza tiempo de pared al reanudar', () => {
   assert.ok(resumed.remaining() <= 70*60*1000);
   resumed.finish();
 });
+
+test('registra perfiles eliminados para propagar el borrado', () => {
+  const profileId=profiles.create('Perfil temporal');
+  assert.equal(profiles.activeId,profileId);
+  profiles.removeActive();
+  assert.equal(profiles.data.profiles[profileId],undefined);
+  assert.ok(profiles.data.deletedProfiles.includes(profileId));
+  assert.equal(profiles.activeId,'default');
+});
+
+test('StorageAdapter emite cambios locales con prioridad de sincronizacion', () => {
+  const originalWindow=globalThis.window;
+  const originalCustomEvent=globalThis.CustomEvent;
+  let emitted=null;
+  globalThis.CustomEvent=class {
+    constructor(type,init) { this.type=type; this.detail=init.detail; }
+  };
+  globalThis.window={dispatchEvent(event) { emitted=event; }};
+  try {
+    storage.write('active-session',{id:'session-1'},'default',{syncPriority:'low'});
+    assert.equal(emitted.type,'simulador:storage-change');
+    assert.equal(emitted.detail.namespace,'test');
+    assert.equal(emitted.detail.name,'active-session');
+    assert.equal(emitted.detail.syncPriority,'low');
+    assert.equal(emitted.detail.value.id,'session-1');
+  } finally {
+    if(originalWindow===undefined) delete globalThis.window; else globalThis.window=originalWindow;
+    if(originalCustomEvent===undefined) delete globalThis.CustomEvent; else globalThis.CustomEvent=originalCustomEvent;
+  }
+});
