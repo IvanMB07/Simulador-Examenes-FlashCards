@@ -70,7 +70,13 @@ export class ExamHistory {
     rows.unshift({ ...session, simulatorId: this.simulatorId });
     this.storage.write('exam-history', rows.slice(0, 500), this.profileProvider());
   }
-  clear() { this.storage.write('exam-history', [], this.profileProvider()); }
+  clear() {
+    const profileId = this.profileProvider();
+    // El marcador local evita que una suscripción remota vuelva a restaurar
+    // sesiones antiguas mientras se propaga el borrado a Firestore.
+    this.storage.write('exam-history-cleared-at', Date.now(), profileId);
+    this.storage.write('exam-history', [], profileId);
+  }
   export() {
     const blob = new Blob([JSON.stringify({schemaVersion:1, simulatorId:this.simulatorId, profileId:this.profileProvider(), exportedAt:new Date().toISOString(), sessions:this.list()},null,2)], {type:'application/json'});
     const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href=url; a.download=`historial-${this.simulatorId}.json`; a.click(); URL.revokeObjectURL(url);
