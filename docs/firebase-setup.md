@@ -1,102 +1,105 @@
-# Configurar Firebase para CalSisSw
+# Firebase: configuración y verificación
 
-Esta integración utiliza Firebase Authentication con correo/contraseña y Cloud Firestore. El proyecto web puede seguir desplegándose en GitHub Pages.
+Los siete simuladores principales integran el proveedor común de sincronización situado en `common/firebase/`. Utiliza Firebase Authentication para identificar la cuenta y Cloud Firestore para sincronizar datos de estudio.
 
-## 1. Crear el proyecto Firebase
+La aplicación sigue siendo estática y puede servirse desde GitHub Pages. Si Firebase no está disponible o no hay una sesión iniciada, el progreso continúa guardándose localmente.
 
-1. Abre https://console.firebase.google.com/
-2. Crea un proyecto nuevo.
-3. En el proyecto, añade una aplicación web desde Configuración del proyecto > General > Tus aplicaciones (icono `</>`).
-4. Copia el objeto de configuración web que muestra Firebase. No uses credenciales de Admin SDK ni archivos de cuenta de servicio.
+## Estado de la configuración del repositorio
 
-La configuración web contiene identificadores públicos del proyecto. No son contraseñas. El acceso a los datos se controla mediante Authentication y las reglas de Firestore.
+El archivo `common/firebase/firebase-config.js` ya contiene la configuración web del proyecto Firebase utilizado por el repositorio. No es necesario sustituirla para utilizar la configuración actual.
 
-## 2. Activar autenticación
+Los valores de configuración web (por ejemplo, API key, identificador de proyecto y app ID) identifican el proyecto y se entregan al navegador. No son credenciales de Admin SDK. No añadas claves privadas, archivos de cuenta de servicio ni secretos de servidor al frontend.
 
-1. Abre Authentication > Sign-in method.
-2. Activa **Correo electrónico/contraseña**.
-3. Guarda los cambios.
-4. En Authentication > Settings > Authorized domains, confirma que aparecen:
-   - `localhost` para pruebas locales.
-   - `ivanmb07.github.io` para GitHub Pages.
+Si en el futuro se utiliza otro proyecto Firebase, actualiza ese archivo con los valores de la aplicación web correspondiente y verifica que las reglas publicadas pertenecen al mismo proyecto.
 
-Cada usuario tendrá una cuenta Firebase propia. No se derivan correos ficticios del nombre del perfil.
+## 1. Servicios necesarios
 
-## 3. Crear Firestore
+En Firebase Console, comprueba el proyecto asociado a la configuración del repositorio:
 
-1. Abre Firestore Database.
-2. Crea la base de datos en modo producción.
-3. Selecciona una ubicación y termina el asistente.
-4. En la pestaña Rules, pega el contenido completo de `firestore.rules` y publícalo.
+1. En **Authentication → Sign-in method**, habilita el proveedor **Correo electrónico/contraseña**.
+2. En **Authentication → Settings → Authorized domains**, incluye el dominio desde el que se sirve la aplicación.
+   - Para desarrollo local: `localhost`.
+   - Para GitHub Pages: el dominio de publicación que corresponda a este repositorio.
+3. En **Firestore Database**, comprueba que la base de datos está creada y disponible.
 
-También puedes publicar las reglas desde la raíz del repositorio con Firebase CLI:
+Los nombres y la ubicación exacta de las opciones de Firebase Console pueden cambiar con el tiempo.
+
+## 2. Reglas de Firestore
+
+El repositorio incluye las reglas en `firestore.rules` y la referencia de despliegue en `firebase.json`.
+
+Las reglas limitan las operaciones a la cuenta autenticada cuyo UID coincide con el UID propietario de la ruta. No publiques reglas abiertas de prueba que permitan leer o escribir datos de cualquier usuario.
+
+Para publicar las reglas con Firebase CLI:
 
 ```bash
 npm install -g firebase-tools
 firebase login
-firebase deploy --only firestore:rules --project TU_PROJECT_ID
+firebase deploy --only firestore:rules
 ```
 
-El `firebase.json` del repositorio ya apunta a `firestore.rules`. No actives reglas de prueba que permitan lectura/escritura pública.
+Ejecuta el despliegue desde la raíz del repositorio y comprueba que Firebase CLI está apuntando al proyecto correcto antes de publicar.
 
-## 4. Introducir la configuración web en el repositorio
+## 3. Probar un simulador
 
-Abre `common/firebase/firebase-config.js` y sustituye los valores vacíos por los de tu aplicación web Firebase:
+1. Sirve el repositorio por HTTP o abre la versión publicada.
+2. Entra en cualquiera de los siete simuladores basados en el core.
+3. Localiza el apartado de sincronización entre dispositivos.
+4. Registra una cuenta de prueba o inicia sesión.
+5. Comprueba que el estado de sincronización cambia a conectado/sincronizado.
+6. Crea un perfil adicional o genera progreso de prueba.
+7. Abre el mismo simulador en otro navegador o dispositivo e inicia sesión con la misma cuenta.
+8. Comprueba que los datos compatibles aparecen en el segundo entorno.
 
-```js
-export const firebaseConfig = {
-  apiKey: "TU_API_KEY",
-  authDomain: "TU_PROJECT_ID.firebaseapp.com",
-  projectId: "TU_PROJECT_ID",
-  appId: "TU_APP_ID",
-  messagingSenderId: "TU_MESSAGING_SENDER_ID",
-  storageBucket: "TU_PROJECT_ID.firebasestorage.app"
-};
-```
+Haz la primera prueba con datos no importantes. No utilices como única verificación que la interfaz muestre una cuenta conectada: comprueba también que los datos aparecen en el otro navegador.
 
-Copia exactamente los valores que entrega Firebase; el ejemplo no sustituye la configuración real. El archivo se sirve al navegador y sus valores no son secretos. No añadas nunca una clave Admin SDK o una clave privada al frontend.
+## 4. Datos que gestiona el proveedor
 
-Después, confirma ese cambio en la rama `simualdor-CalSisSw` y publícala en GitHub Pages cuando quieras hacer la prueba desde fuera de localhost.
+La implementación actual contempla la sincronización de:
 
-## 5. Probar la sincronización
+- Perfiles de estudio.
+- Historial de sesiones.
+- Preguntas falladas.
+- Sesión activa para continuar una actividad.
 
-1. Abre el simulador desde `http://localhost:8000/simulador-CalSisSw/` o desde la URL de GitHub Pages.
-2. En la sección **Sincronización entre dispositivos**, crea una cuenta con tu correo y una contraseña de al menos 6 caracteres.
-3. Crea un perfil adicional desde el selector de perfiles y espera a que aparezca el estado de sincronización completada.
-4. Abre el simulador en otro navegador/dispositivo e inicia sesión con la misma cuenta.
-5. Comprueba que aparece el perfil adicional. Esto permite validar autenticación, perfiles y sincronización básica sin añadir preguntas al banco.
+El banco de preguntas (`preguntas.json`) se distribuye con el código del repositorio; no se trata como información personal de la cuenta.
 
-Para probar historial, preguntas falladas y reanudación entre dispositivos tendremos que añadir primero preguntas reales a `preguntas.json` y generar sesiones. El archivo sigue vacío de momento por decisión del proyecto.
+La organización remota se realiza bajo el UID de Firebase y separa los datos por perfil y simulador. Las reglas de `firestore.rules` aplican la comprobación de propiedad a las rutas contempladas por la aplicación.
 
-El botón **Sincronizar ahora** permite solicitar una sincronización manual. En funcionamiento normal, los cambios locales se guardan primero y el SDK los envía cuando hay conexión.
+## 5. Comportamiento local y offline
 
-## 6. Qué se sincroniza
+- Las acciones se guardan primero en el almacenamiento local del navegador.
+- Firestore utiliza caché local persistente en navegadores compatibles.
+- Cuando se recupera la conexión, el SDK puede sincronizar las escrituras pendientes.
+- Cerrar sesión detiene la sincronización, pero no equivale a borrar el progreso local.
+- Los datos locales se separan por cuenta en el navegador.
 
-- Perfiles.
-- Historial de exámenes/prácticas, con sus preguntas, resultados, fechas y errores.
-- Preguntas falladas por perfil.
-- Sesión activa para poder reanudarla en otro dispositivo.
+La persistencia web de Firestore depende de IndexedDB y de las capacidades del navegador. En navegadores privados o entornos restringidos puede no estar disponible; la aplicación dispone del almacenamiento local propio como base de trabajo.
 
-El banco `preguntas.json` no se sube a Firestore: sigue versionado con el código del simulador.
+## 6. Sesiones activas y uso simultáneo
 
-## 7. Datos locales separados por cuenta
+La sesión activa de un perfil y simulador se representa mediante un documento compartido. Si dos dispositivos modifican simultáneamente esa misma sesión, puede prevalecer la última escritura. Por tanto, utiliza una única sesión activa por perfil y simulador cuando trabajes desde varios dispositivos.
 
-Al iniciar sesión por primera vez, los datos locales existentes se migran al espacio local asociado al UID de esa cuenta. Después, cada cuenta mantiene un espacio local independiente dentro del mismo navegador. Cerrar sesión conserva esos datos locales, pero detiene la sincronización. Al volver a iniciar sesión se recupera el espacio de la cuenta correspondiente.
+El historial de sesiones finalizadas y las preguntas falladas tienen identificadores propios y se sincronizan por separado.
 
-## 8. Consideraciones de sincronización
+## 7. Diagnóstico
 
-- Firestore mantiene una caché IndexedDB persistente en navegadores compatibles y sincroniza escrituras pendientes cuando vuelve la conexión. El SDK utiliza persistencia multi-pestaña.
-- El historial se guarda como documentos individuales, no como una única instantánea JSON por cuenta.
-- La sesión activa actual de un perfil utiliza un documento compartido. Si se responde simultáneamente a la misma sesión desde dos dispositivos, Firestore aplica su política de última escritura; utiliza una sola sesión por perfil a la vez.
-- Los datos siguen disponibles localmente aunque el usuario cierre sesión. Cerrar sesión detiene la sincronización, no elimina el progreso local.
-- El borrado de perfil se propaga como tombstone y limpia las colecciones de CalSisSw de ese perfil.
-- La caché local de Firestore es persistente en el navegador; en dispositivos compartidos, cierra sesión al terminar y evita guardar credenciales en perfiles de navegador que no controles.
+Si el estado no llega a sincronizado, comprueba:
+
+- Que el navegador tiene conexión.
+- Que el dominio actual está autorizado en Firebase Authentication.
+- Que el proveedor de correo/contraseña está habilitado.
+- Que la configuración web del archivo `common/firebase/firebase-config.js` corresponde al proyecto esperado.
+- Que Firestore está creado y las reglas de `firestore.rules` se han publicado en ese mismo proyecto.
+- Que la consola del navegador no muestra errores de autenticación, permisos o carga de módulos desde `www.gstatic.com`.
+
+No publiques capturas que expongan datos personales de cuentas, tokens o información de sesión.
 
 ## Referencias oficiales
 
-- Firebase Web setup: https://firebase.google.com/docs/web/setup
-- Firebase Authentication para web: https://firebase.google.com/docs/auth/web/start
-- Firestore offline persistence: https://firebase.google.com/docs/firestore/manage-data/enable-offline
-- Firestore Security Rules: https://firebase.google.com/docs/firestore/security/rules-conditions
+- [Añadir Firebase a una aplicación web](https://firebase.google.com/docs/web/setup)
+- [Autenticación con correo y contraseña en web](https://firebase.google.com/docs/auth/web/password-auth)
+- [Persistencia offline de Cloud Firestore](https://firebase.google.com/docs/firestore/manage-data/enable-offline)
+- [Reglas de seguridad de Cloud Firestore](https://firebase.google.com/docs/firestore/security/get-started)
 
-La integración del repositorio no puede completar la creación del proyecto Firebase ni conocer sus credenciales. Esa parte debe realizarse desde tu Firebase Console.
+Esta guía describe la configuración del repositorio; la disponibilidad real del proyecto, sus cuotas y el estado de sus servicios deben comprobarse en Firebase Console.
