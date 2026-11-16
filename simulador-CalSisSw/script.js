@@ -80,7 +80,13 @@ function renderTopicSettings() {
   section.hidden=false;
   const preferences=readPreferences();
   let selected=(Array.isArray(preferences.selectedTopics)?preferences.selectedTopics:[]).filter(topic=>topics.includes(Number(topic))).map(Number);
-  if (!selected.length) { selected=[...topics]; savePreferences({selectedTopics:selected}); }
+  if (!selected.length) { selected=[topics[0]]; savePreferences({selectedTopics:selected}); }
+  const allSelected=topics.every(topic=>selected.includes(topic));
+  const toggleAllButton=$('toggleAllTopics');
+  if(toggleAllButton){
+    toggleAllButton.textContent=allSelected?'Dejar solo Tema '+topics[0]:'Marcar todos';
+    toggleAllButton.setAttribute('aria-label',allSelected?'Dejar únicamente el tema '+topics[0]+' activo':'Marcar todos los temas como activos');
+  }
   container.replaceChildren();
   topics.forEach(topic=>{
     const label=document.createElement('label'); label.className='topic-option';
@@ -88,7 +94,13 @@ function renderTopicSettings() {
     input.value=String(topic); input.checked=selected.includes(topic);
     input.addEventListener('change',()=>{
       const next=[...container.querySelectorAll('input:checked')].map(item=>Number(item.value)).filter(Number.isInteger);
-      if (!next.length) { input.checked=true; distribution.textContent='Debes mantener seleccionado al menos un tema.'; return; }
+      if (!next.length) {
+        const defaultTopic=topics[0];
+        savePreferences({selectedTopics:[defaultTopic]});
+        distribution.textContent='Debe quedar al menos un tema activo. Se ha mantenido el Tema '+defaultTopic+'.';
+        renderTopicSettings();
+        return;
+      }
       savePreferences({selectedTopics:next}); renderTopicSettings();
     });
     const text=document.createElement('span');
@@ -482,6 +494,14 @@ $('startExam').addEventListener('click',()=>start('exam'));
 $('previous').addEventListener('click',()=>engine.move(-1));
 $('next').addEventListener('click',()=>engine.move(1));
 $('finish').addEventListener('click',requestFinish);
+$('toggleAllTopics').addEventListener('click',()=>{
+  const available=getAvailableTopics(questions);
+  if(!available.length)return;
+  const current=(Array.isArray(readPreferences().selectedTopics)?readPreferences().selectedTopics:[]).filter(topic=>available.includes(Number(topic))).map(Number);
+  const allSelected=available.every(topic=>current.includes(topic));
+  savePreferences({selectedTopics:allSelected?[available[0]]:available});
+  renderTopicSettings();
+});
 $('orderByTopic').addEventListener('change',event=>savePreferences({orderByTopic:event.target.checked}));
 $('shuffleAnswers').addEventListener('change',event=>savePreferences({shuffleAnswers:event.target.checked}));
 $('autoAdvanceExam').addEventListener('change',event=>{
