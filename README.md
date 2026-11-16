@@ -119,7 +119,7 @@ Los workflows de GitHub Actions también realizan comprobaciones sintácticas de
 
 ## Herramientas auxiliares
 
-En [`_herramientas/`]( _herramientas/README.md ) se encuentra el rebalanceador universal de respuestas para bancos JSON. Permite analizar y equilibrar las respuestas correctas A/B/C/D, renumerar identificadores por tema y crear copias de seguridad.
+En [`_herramientas/`](_herramientas/README.md) se encuentra el rebalanceador universal de respuestas para bancos JSON. Permite analizar y equilibrar las respuestas correctas A/B/C/D, renumerar identificadores por tema y crear copias de seguridad.
 
 ## Estructura de los bancos de preguntas
 
