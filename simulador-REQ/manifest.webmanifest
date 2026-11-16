@@ -1,0 +1,19 @@
+{
+  "name": "Simulador de Ingeniería de Requisitos",
+  "short_name": "REQ",
+  "description": "Practica Ingeniería de Requisitos, realiza exámenes y consulta tu evolución.",
+  "lang": "es",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#10151d",
+  "theme_color": "#10151d",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,213 +1,257 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Simulador de Examen - Ingeniería de Requisitos</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#120d0b">
+<meta name="description" content="Simulador de estudio: practica, examínate y consulta tu evolución.">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" type="image/svg+xml" href="./icon.svg">
+<link rel="apple-touch-icon" href="./icon.svg">
+<link rel="stylesheet" href="./styles.css">
+<title>Simulador · REQ</title>
 </head>
-
 <body>
-    <div class="contenedor">
-        <div class="encabezado">
-            <h1>Simulador de Ingeniería de Requisitos</h1>
-            <div class="timer">
-                <span class="contador">Pregunta: <strong id="numeroPregunta">1</strong>/<strong
-                        id="totalPreguntasActual">25</strong></span>
-                <span class="contador" id="tiempoTranscurrido">Tiempo: 0s</span>
-                <span class="modo-pill">Modo: <strong id="modoActual">-</strong></span>
-            </div>
-            <div style="text-align: right; font-size: 11px; color: #666; margin-top: 8px; font-family: monospace;"
-                id="totalPreguntasInfo"></div>
-            <div class="progreso">
-                <div class="progreso-barra" id="progresoBarra"></div>
-            </div>
+<div class="app-layout">
+
+  <main class="shell">
+    <header class="top">
+      <div class="top-heading">
+        <span class="eyebrow">ENTORNO DE ESTUDIO</span>
+        <h1>Ingeniería de Requisitos</h1>
+        <p>Practica, examínate y consulta tu evolución.</p>
+      </div>
+    </header>
+
+    <section id="menu" class="page panel">
+      <div class="home-heading">
+        <div>
+          <span class="section-kicker">TU ESPACIO DE ESTUDIO</span>
+          <h2>¿Qué quieres trabajar hoy?</h2>
         </div>
-
-        <div id="seleccionModo">
-            <div class="resultados">
-                <div class="titulo-resultados">Elige modo</div>
-                <div class="mensaje-resultado">
-                    <strong>Práctica</strong>: 25 preguntas de los temas seleccionados, feedback instantáneo y puedes
-                    volver atrás.<br>
-                    <strong>Examen</strong>: 30 preguntas, 60 minutos, estilo oficial, admite múltiples respuestas
-                    correctas y fallos restan 1/3.<br>
-                    <strong>Test de Fallos</strong>: Repasa únicamente las preguntas que has fallado anteriormente.
-                </div>
-
-                <!-- Selector de perfil de usuario -->
-                <div class="perfil-selector">
-                    <div class="perfil-selector-title">👤 Perfil de Usuario</div>
-                    <div class="perfil-selector-content">
-                        <select id="perfilSelect" class="perfil-select" onchange="cambiarPerfil()">
-                            <option value="default">Usuario Principal</option>
-                        </select>
-                        <button class="btn-perfil" onclick="crearNuevoPerfil()">+ Nuevo</button>
-                        <button class="btn-perfil danger" onclick="eliminarPerfilActual()"
-                            id="btnEliminar">Eliminar</button>
-                    </div>
-                    <div class="perfil-stats" id="perfilStats">
-                        Cargando estadísticas...
-                    </div>
-                </div>
-
-                <div class="config-section">
-                    <div class="config-title">📚 Seleccionar Temas (solo Modo Práctica)</div>
-                    <div class="config-description" style="margin-bottom: 10px; color: #888;">
-                        25 preguntas distribuidas proporcionalmente entre los temas seleccionados
-                    </div>
-                    <div id="infoDistribucion"
-                        style="margin-bottom: 15px; padding: 10px; background: #1a1a1a; border-radius: 6px; font-size: 13px; color: #00d4ff;">
-                    </div>
-                    <div
-                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; max-width: 100%; overflow: hidden;">
-                        <label class="tema-checkbox">
-                            <input type="checkbox" value="1" checked onchange="toggleTema(1)">
-                            <span>Tema 1</span>
-                        </label>
-                        <label class="tema-checkbox">
-                            <input type="checkbox" value="2" checked onchange="toggleTema(2)">
-                            <span>Tema 2</span>
-                        </label>
-                        <label class="tema-checkbox">
-                            <input type="checkbox" value="3" checked onchange="toggleTema(3)">
-                            <span>Tema 3</span>
-                        </label>
-                        <label class="tema-checkbox">
-                            <input type="checkbox" value="4" checked onchange="toggleTema(4)">
-                            <span>Tema 4</span>
-                        </label>
-                        <label class="tema-checkbox">
-                            <input type="checkbox" value="5" checked onchange="toggleTema(5)">
-                            <span>Tema 5</span>
-                        </label>
-                        <label class="tema-checkbox">
-                            <input type="checkbox" value="6" checked onchange="toggleTema(6)">
-                            <span>Tema 6</span>
-                        </label>
-                    </div>
-                    <div class="config-option" style="margin-top: 15px;">
-                        <div>
-                            <div class="config-label">Ordenar por temas</div>
-                            <div class="config-description">Las preguntas se agrupan por tema secuencialmente</div>
-                        </div>
-                        <div class="toggle-switch" id="toggleOrdenTema" onclick="toggleConfig('ordenarPorTema')">
-                            <div class="toggle-slider"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="config-section">
-                    <div class="config-title">🧾 Parcial de Examen</div>
-                    <div class="config-description" style="margin-bottom: 10px; color: #888;">
-                        Limita temas en Modo Examen y Modo Práctica
-                    </div>
-                    <select id="parcialExamenSelect" class="perfil-select" onchange="cambiarParcialExamen()"
-                        style="width:100%;">
-                        <option value="parcial1">Parcial 1 (T1-T5)</option>
-                        <option value="parcial2">Último parcial (T6)</option>
-                    </select>
-                </div>
-
-                <div class="config-section">
-                    <div class="stat" id="statFallos">
-                        <div class="stat-label">Preguntas falladas guardadas</div>
-                        <div class="stat-valor" id="contadorFallos">0</div>
-                    </div>
-                    <div class="config-option" style="margin-top: 10px;">
-                        <div style="flex: 1;">
-                            <div class="config-label">Importar / Exportar fallos</div>
-                            <div class="config-description">Sincroniza fallos entre móvil y PC en JSON</div>
-                            <div
-                                style="margin-top: 8px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
-                                <input id="importFallosFile" type="file" accept="application/json"
-                                    style="color:#e0e0e0;" onchange="importarFallosDesdeArchivo(event)">
-                                <button class="btn-anterior" onclick="exportarFallos()">Exportar JSON</button>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="btn-anterior" id="btnLimpiarFallos" onclick="limpiarFallos()"
-                        style="width: 100%; margin-top: 10px;">
-                        🗑️ Limpiar preguntas falladas
-                    </button>
-                </div>
-
-                <div class="botones">
-                    <button class="btn-reiniciar" onclick="iniciarModo('practica')">Modo práctica</button>
-                    <button class="btn-terminar" onclick="iniciarModo('examen')">Modo examen</button>
-                    <button class="btn-test-fallos" id="btnTestFallos" onclick="iniciarModo('fallos')" disabled>Test de
-                        Fallos <span class="badge-fallos" id="badgeFallos">0</span></button>
-                </div>
-            </div>
+        <div class="home-heading-actions">
+          <button type="button" class="history-shortcut" data-view="history">Ver estadísticas <span aria-hidden="true">↗</span></button>
         </div>
+      </div>
 
-        <div id="examen" class="oculto">
-            <div class="pregunta-contenedor">
-                <div class="pregunta-numero" id="preguntaNumero"></div>
-                <div class="pregunta-texto" id="preguntaTexto"></div>
-                <div class="opciones" id="opcionesContenedor"></div>
-            </div>
+      <div class="mode-heading"><svg class="subsection-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6 12 2l8 4-8 4-8-4Z"/><path d="m4 12 8 4 8-4M4 18l8 4 8-4"/></svg><h3>Elige un modo</h3></div>
+      <div class="mode-grid">
+        <article class="mode-card mode-practice">
+          <div class="mode-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="17"/><circle cx="24" cy="24" r="10"/><circle cx="24" cy="24" r="3"/><path d="m31 17 8-8"/></svg></div>
+          <div class="mode-copy"><span class="mode-label">MODO 01</span><h3>Práctica</h3><p>Preguntas aleatorias con feedback inmediato.</p></div>
+          <button id="startPractice" class="mode-action" type="button"><span>Empezar práctica</span><span aria-hidden="true">›</span></button>
+        </article>
+        <article class="mode-card mode-exam">
+          <div class="mode-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="m5 17 19-10 19 10-19 10L5 17Z"/><path d="M12 22v12c7 6 17 6 24 0V22M24 27v13"/></svg></div>
+          <div class="mode-copy"><span class="mode-label">MODO 02</span><h3>Examen</h3><p>30 preguntas · 60 minutos · puntuación directa.</p></div>
+          <button id="startExam" class="mode-action" type="button"><span>Empezar examen</span><span aria-hidden="true">›</span></button>
+        </article>
+        <article class="mode-card mode-failures">
+          <div class="mode-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M9 20a16 16 0 1 1 2 14"/><path d="M9 10v11h11"/></svg></div>
+          <div class="mode-copy"><span class="mode-label">MODO 03</span><h3>Test de fallos</h3><p>Repasa las preguntas que has respondido mal o has dejado en blanco.</p></div>
+          <button id="startFailures" class="mode-action" type="button" disabled><span>Repasar fallos</span><span aria-hidden="true">›</span></button>
+        </article>
+      </div>
 
-            <div class="atajos-teclado">
-                ⌨️ <strong>Atajos:</strong>
-                <span class="tecla">←</span> <span class="tecla">→</span> Navegar preguntas |
-                <span class="tecla">↑</span> <span class="tecla">↓</span> Navegar opciones |
-                <span class="tecla">Espacio</span> o <span class="tecla">1-4</span> Seleccionar |
-                <span class="tecla">Enter</span> Terminar
-            </div>
-
-            <div class="config-option config-option-examen">
-                <div>
-                    <div class="config-label">Avance automático</div>
-                    <div class="config-description">Solo en respuesta única (en múltiples sigue siendo manual)</div>
-                </div>
-                <div class="toggle-switch" id="toggleAutoAvanceExamen" onclick="toggleConfig('autoAvanceExamen')">
-                    <div class="toggle-slider"></div>
-                </div>
-            </div>
-
-            <div class="botones">
-                <button class="btn-anterior" id="btnAnterior" onclick="app.anterior()">← Anterior</button>
-                <button class="btn-siguiente" id="btnSiguiente" onclick="app.siguiente()">Siguiente →</button>
-                <button class="btn-siguiente oculto" id="btnComprobarPractica"
-                    onclick="app.comprobarRespuestaPractica()">Comprobar</button>
-                <button class="btn-terminar" onclick="app.terminar()">Terminar Examen</button>
-            </div>
+      <section id="topicSettings" class="topic-settings topic-settings-wide" aria-labelledby="topicsHeading">
+        <div class="topic-settings-heading">
+          <div class="subsection-heading">
+            <svg class="subsection-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg>
+            <h3 id="topicsHeading">Seleccionar temas <small>(solo práctica)</small></h3>
+          </div>
+          <strong id="questionBankCount" class="topic-question-count">Cargando preguntas…</strong>
         </div>
+        <div id="topicFilters" class="topic-filters"></div>
+        <p id="topicDistribution" class="topic-distribution" aria-live="polite"></p>
+        <label class="setting-row topic-order-setting" for="orderByTopic">
+          <span><strong>Ordenar por temas</strong><small>Presenta juntas las preguntas de cada tema.</small></span>
+          <span class="switch"><input id="orderByTopic" type="checkbox"><span aria-hidden="true"></span></span>
+        </label>
+      </section>
 
-        <div id="resultados" class="oculto">
-            <div class="resultados">
-                <div class="titulo-resultados">Examen Completado</div>
-                <div class="mensaje-resultado">Tu puntuación final es:</div>
-                <div class="puntuacion" id="puntuacionFinal">0/10</div>
+      <section class="profile-sync-panel" aria-label="Perfil y sincronización">
+        <div class="profile-sync-grid">
+        <section class="profile-card" id="profileControls" aria-labelledby="profileHeading">
+          <div class="subsection-heading">
+            <svg class="subsection-svg" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M4.5 20c.8-4 3.3-6 7.5-6s6.7 2 7.5 6"/></svg>
+            <h3 id="profileHeading">Perfil de usuario</h3>
+          </div>
+          <p class="active-profile-label">Perfil activo: <strong id="profileName">Usuario principal</strong></p>
+          <div class="profile-controls">
+            <label class="visually-hidden" for="profileSelect">Perfil activo</label>
+            <select id="profileSelect"><option value="default">Usuario principal</option></select>
+            <button id="addProfile" class="icon-button" type="button" aria-label="Crear perfil" title="Crear perfil">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+              <span>Crear perfil</span>
+            </button>
+            <button id="removeProfile" class="icon-button" type="button" aria-label="Eliminar perfil" title="Eliminar perfil">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.8 2.8-5.7 6.5-5.7 2 0 3.5.5 4.6 1.6M16 17h6"/></svg>
+              <span>Eliminar perfil</span>
+            </button>
+          </div>
+        </section>
 
-                <div class="estadisticas">
-                    <div class="stat">
-                        <div class="stat-label">Correctas</div>
-                        <div class="stat-valor" id="respuestasCorrectas">0</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-label">Incorrectas</div>
-                        <div class="stat-valor" id="respuestasIncorrectas">0</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-label">Sin responder</div>
-                        <div class="stat-valor" id="sinResponder">0</div>
-                    </div>
-                </div>
-
-                <div id="erroresDetalle" class="errores-detalle oculto"></div>
-
-                <div class="acciones-resultados">
-                    <button class="btn-siguiente" onclick="iniciarModo('examen')">Hacer otro examen</button>
-                    <button class="btn-reiniciar" onclick="app.reiniciar()">Volver al menú principal</button>
-                </div>
+        <section class="account-card" id="accountSettings" aria-labelledby="accountHeading">
+          <div class="account-card-heading">
+            <div class="subsection-heading">
+              <svg class="subsection-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18h12a4 4 0 0 0 .5-8 6.5 6.5 0 0 0-12-1.5A4.7 4.7 0 0 0 6 18Z"/></svg>
+              <h3 id="accountHeading">Cuenta y sincronización</h3>
             </div>
+            <span id="cloudState" class="cloud-state">Local</span>
+          </div>
+          <section class="cloud-box" aria-labelledby="cloudTitle">
+            <h3 id="cloudTitle">Sincronización entre dispositivos</h3>
+            <p id="cloudStatusMessage" class="cloud-message" role="status" aria-live="polite">Los datos se guardan en este dispositivo. Configura Firebase para sincronizarlos.</p>
+            <div id="cloudAuthControls" class="cloud-controls" hidden>
+              <div class="cloud-auth-fields">
+                <label for="cloudEmail">Correo electrónico</label>
+                <input id="cloudEmail" type="email" autocomplete="email" placeholder="tu correo electrónico">
+                <label for="cloudPassword">Contraseña</label>
+                <input id="cloudPassword" type="password" autocomplete="current-password" placeholder="Mínimo 6 caracteres">
+              </div>
+              <div class="toolbar">
+                <button id="cloudLogin" type="button">Iniciar sesión</button>
+                <button id="cloudRegister" class="secondary" type="button">Crear cuenta</button>
+                <button id="cloudReset" class="secondary" type="button">Recuperar contraseña</button>
+              </div>
+            </div>
+            <div id="cloudSignedControls" class="cloud-controls" hidden>
+              <p class="cloud-account-line">Cuenta: <strong id="cloudAccount"></strong></p>
+              <div class="toolbar">
+                <button id="cloudSyncNow" type="button">Sincronizar ahora</button>
+                <button id="cloudLogout" class="secondary" type="button">Cerrar sesión</button>
+              </div>
+            </div>
+            <p id="cloudSetupHint" class="note">La sincronización se activa al configurar el proyecto Firebase y las reglas de Firestore del repositorio.</p>
+          </section>
+        </section>
         </div>
-    </div>
+      </section>
 
-    <script src="script.js"></script>
+      <section class="advanced-card" id="studySettings" aria-label="Opciones avanzadas">
+        <details>
+          <summary><svg class="subsection-svg" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19 13.5a7 7 0 0 0 0-3l2-1.5-2-3.5-2.4 1a7 7 0 0 0-2.6-1.5L13.5 3h-4L9 5a7 7 0 0 0-2.6 1.5L4 5.5 2 9l2 1.5a7 7 0 0 0 0 3L2 15l2 3.5 2.4-1A7 7 0 0 0 9 19l.5 2h4l.5-2a7 7 0 0 0 2.6-1.5l2.4 1L21 15z"/></svg><strong>Opciones avanzadas</strong><span class="disclosure-chevron" aria-hidden="true">⌄</span></summary>
+          <div class="advanced-content">
+            <p class="note">Ajusta el comportamiento de las sesiones de estudio.</p>
+            <div class="setting-row">
+              <span><strong>Avance automático en examen</strong><small>Pasa a la siguiente pregunta al seleccionar una respuesta.</small></span>
+              <label class="switch" for="autoAdvanceHome"><input id="autoAdvanceHome" type="checkbox"><span aria-hidden="true"></span></label>
+            </div>
+            <p class="note">Puedes activar también esta opción durante un examen.</p>
+          </div>
+        </details>
+      </section>
+
+      <div class="resume" id="resumePanel" hidden>
+        <div><strong>Hay una sesión guardada</strong><p id="resumeText"></p></div>
+        <button id="resumeButton" type="button">Reanudar</button>
+        <button id="discardButton" class="secondary" type="button">Descartar</button>
+      </div>
+
+      <section class="stats" aria-label="Resumen del progreso">
+        <div><span>Sesiones guardadas</span><strong id="historyCount">0</strong></div>
+        <div><span>Preguntas falladas</span><strong id="failedCount">0</strong></div>
+        <div><span>Puntuación</span><strong>+1 / −0,5 / 0</strong></div>
+      </section>
+
+
+      <section class="data-tools" aria-label="Gestión de datos">
+        <div class="action-row action-row-two">
+          <button id="openHistory" class="secondary" type="button">Ver historial</button>
+          <button id="clearHistory" class="secondary" type="button">Limpiar historial</button>
+        </div>
+        <div class="action-row action-row-three">
+          <button id="clearFailures" class="secondary" type="button">Limpiar fallos</button>
+          <button id="exportFailures" class="secondary" type="button">Exportar fallos</button>
+          <button id="importFailures" class="secondary" type="button">Importar fallos</button>
+          <input id="failureFile" type="file" accept="application/json,.json" hidden>
+        </div>
+        <div class="action-row action-row-two">
+          <button id="exportBackup" class="secondary" type="button">Exportar copia completa</button>
+          <button id="importBackup" class="secondary" type="button">Importar copia completa</button>
+          <input id="backupFile" type="file" accept="application/json,.json" hidden>
+        </div>
+      </section>
+    </section>
+
+    <section id="exam" class="page exam-page panel" hidden>
+      <div class="exam-mobile-header">
+        <button id="leaveExam" class="back-button" type="button"><span aria-hidden="true">←</span> Salir</button>
+        <span id="examModePill" class="mode-pill">Práctica</span>
+        <span class="exam-mobile-spacer"></span>
+      </div>
+      <div class="exam-head">
+        <span id="examMode" class="exam-mode-label"></span>
+        <span id="questionCount">Pregunta 1</span>
+        <span class="timer-pill">◷ <strong id="timer">0:00</strong></span>
+      </div>
+      <div class="progress-track"><div class="progress"><div id="progress" role="progressbar" aria-label="Progreso de la sesión" aria-valuemin="1" aria-valuemax="20" aria-valuenow="1"></div></div><span id="progressPercent">0%</span></div>
+      <div class="question-card">
+        <span id="questionIdentifier" class="question-id" hidden></span>
+        <div id="questionText" class="question-text" tabindex="-1"></div>
+      </div>
+      <p id="multiAnswerHint" class="multi-answer-hint" hidden></p>
+      <div id="options" class="options" role="group" aria-label="Opciones de respuesta"></div>
+      <button id="confirmMultiAnswer" class="primary-button multi-confirm" type="button" hidden disabled>Comprobar respuesta</button>
+      <p id="feedback class="feedback" role="status" aria-live="polite" hidden></p>
+      <section id="examSettings" class="exam-settings" hidden>
+        <label class="setting-row" for="autoAdvanceExam">
+          <span><strong>Avance automático</strong><small>Pasa a la siguiente pregunta al responder.</small></span>
+          <span class="switch"><input id="autoAdvanceExam" type="checkbox"><span aria-hidden="true"></span></span>
+        </label>
+      </section>
+      <p id="finishConfirmToast" class="finish-confirm-toast" role="status" aria-live="polite" hidden></p>
+      <div class="exam-actions">
+        <button id="previous" class="secondary" type="button">← Anterior</button>
+        <button id="next" type="button">Siguiente →</button>
+        <button id="finish" class="danger" type="button">Finalizar</button>
+      </div>
+      <p class="note keyboard-help">Teclas: ← / → para navegar, ↑ / ↓ para cambiar de opción, 1–4 para seleccionar y Enter para comprobar o finalizar.</p>
+    </section>
+
+    <section id="results" class="page results-page panel" hidden>
+      <div class="results-top-actions">
+        <button id="retryExam" class="new-test-button" type="button">＋ Nuevo test</button>
+        <button id="finishMenu" class="return-home-button secondary" type="button">⌂ Volver al inicio</button>
+      </div>
+      <div class="result-hero">
+        <span id="resultMode" class="mode-pill mode-pill-exam">Sesión</span>
+        <div class="result-symbol" aria-hidden="true">✦</div>
+        <span class="section-kicker">SESIÓN COMPLETADA</span>
+        <h2>Este es tu resultado</h2>
+        <p>Has terminado la sesión. Revisa tus respuestas y sigue mejorando.</p>
+        <strong id="score" class="score">0 puntos</strong>
+      </div>
+      <div class="stats result-stats">
+        <div><span class="metric-icon metric-correct" aria-hidden="true">✓</span><strong id="correct">0</strong><small>Correctas</small></div>
+        <div><span class="metric-icon metric-wrong" aria-hidden="true">×</span><strong id="incorrect">0</strong><small>Incorrectas</small></div>
+        <div><span class="metric-icon metric-blank" aria-hidden="true">−</span><strong id="blank">0</strong><small>Sin responder</small></div>
+        <div><span class="metric-icon metric-duration" aria-hidden="true">◷</span><strong id="duration">0:00</strong><small>Duración</small></div>
+      </div>
+      <div class="review-heading"><span class="subsection-icon" aria-hidden="true">☷</span><h3>Revisión de preguntas</h3><span id="reviewSummary" class="muted"></span></div>
+      <div class="review-filters" id="reviewFilterBar" role="group" aria-label="Filtrar preguntas revisadas">
+        <button type="button" data-review-filter="all" aria-pressed="true">Todas</button>
+        <button type="button" data-review-filter="correct" aria-pressed="false">Correctas</button>
+        <button type="button" data-review-filter="incorrect" aria-pressed="false">Incorrectas</button>
+        <button type="button" data-review-filter="blank" aria-pressed="false">Sin responder</button>
+      </div>
+      <div id="reviewQuestions" class="review-questions"></div>
+      <div id="errors" class="errors" hidden></div>
+    </section>
+
+    <section id="history" class="page history-page panel" hidden>
+      <div class="page-title-row"><div><span class="section-kicker">TU EVOLUCIÓN</span><h2>Historial de sesiones</h2></div><button id="historyBack" class="secondary" type="button">Volver</button></div>
+      <div id="historyChart" class="chart" role="img" aria-label="Gráfico de puntuaciones recientes"></div>
+      <div id="historyRows" class="history-list"></div>
+      <button id="exportHistory" class="secondary" type="button">Exportar historial JSON</button>
+    </section>
+
+    <footer class="app-footer">Simulador de estudio · Progreso local y sincronizado</footer>
+  </main>
+
+v>
+</div>
+<script type="module" src="./script.js"></script>
+<script>if("serviceWorker" in navigator && location.protocol==="https:") navigator.serviceWorker.register("../sw.js",{scope:"../"}).catch(console.error);</script>
 </body>
-
 </html>

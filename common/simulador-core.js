@@ -232,16 +232,36 @@ export class QuestionHistoryStore {
   }
 }
 
+export function correctOptionIndices(question) {
+  const solution = String(question?.solucion ?? '').toUpperCase().replace(/[^A-D]/g, '');
+  return [...new Set(solution.split('').map(letter => letter.charCodeAt(0) - 65))]
+    .filter(index => index >= 0 && index < (question?.opciones?.length || 0))
+    .sort((a, b) => a - b);
+}
+
+export function isMultipleAnswerQuestion(question) {
+  return correctOptionIndices(question).length > 1;
+}
+
 export function grade(questions, answers, scoring, scoreFormula = null) {
   let correct=0, incorrect=0, blank=0;
   const errors=[];
   questions.forEach((q,index)=>{
-    const answer = Object.prototype.hasOwnProperty.call(answers,index) ? answers[index] : null;
-    if (answer === null) { blank++; errors.push({index, questionId:q.id ?? null, question:q.cuestion, selected:null, correct:q.opciones.find(o=>o.trim().charAt(0).toUpperCase()===String(q.solucion).trim().charAt(0).toUpperCase()) ?? q.solucion}); }
-    else {
-      const key = q.opciones[answer]?.trim().charAt(0).toUpperCase();
-      if (key === String(q.solucion).trim().charAt(0).toUpperCase()) correct++;
-      else { incorrect++; errors.push({index, questionId:q.id ?? null, question:q.cuestion, selected:q.opciones[answer], correct:q.opciones.find(o=>o.trim().charAt(0).toUpperCase()===String(q.solucion).trim().charAt(0).toUpperCase()) ?? q.solucion}); }
+    const raw = Object.prototype.hasOwnProperty.call(answers,index) ? answers[index] : null;
+    const selected = Array.isArray(raw) ? [...new Set(raw)].sort((a,b)=>a-b) : raw === null ? [] : [raw];
+    const expected = correctOptionIndices(q);
+    const isBlank = selected.length === 0;
+    const isCorrect = !isBlank && selected.length === expected.length
+      && selected.every((value,position)=>value === expected[position]);
+    const optionText = values => values.map(value=>q.opciones[value]).filter(Boolean).join(' · ');
+    if (isBlank) {
+      blank++;
+      errors.push({index,questionId:q.id??null,question:q.cuestion,selected:null,correct:optionText(expected)||String(q.solucion??'')});
+    } else if (isCorrect) {
+      correct++;
+    } else {
+      incorrect++;
+      errors.push({index,questionId:q.id??null,question:q.cuestion,selected:optionText(selected),correct:optionText(expected)||String(q.solucion??'')});
     }
   });
   const weightedScore=correct*scoring.correct + incorrect*scoring.incorrect + blank*scoring.blank;
@@ -249,7 +269,7 @@ export function grade(questions, answers, scoring, scoreFormula = null) {
     ? Number(scoreFormula({correct,incorrect,blank,questionCount:questions.length}))
     : weightedScore;
   const score=Number.isFinite(formulaScore)?formulaScore:weightedScore;
-  return {correct, incorrect, blank, score, errors};
+  return {correct,incorrect,blank,score,errors};
 }
 
 export class ExamEngine {
@@ -274,19 +294,43 @@ export class ExamEngine {
           }));
     if(!chosen.length) throw new Error(mode==='failures'?'Todavía no tienes preguntas falladas.':'El banco de preguntas está vacío.');
     this.state=restored
-      ? {...restored,startedAt:restored.startedAt||Date.now(),lastResumedAt:Date.now(),elapsedMs:Math.max(0,Number(restored.elapsedMs)||0)}
-      : {id:crypto.randomUUID(),mode,questions:chosen,answers:{},current:0,startedAt:Date.now(),lastResumedAt:Date.now(),elapsedMs:0};
+      ? {...restored,confirmedAnswers:Array.isArray(restored.confirmedAnswers)?restored.confirmedAnswers:[],startedAt:restored.startedAt||Date.now(),lastResumedAt:Date.now(),elapsedMs:Math.max(0,Number(restored.elapsedMs)||0)}
+      : {id:crypto.randomUUID(),mode,questions:chosen,answers:{},confirmedAnswers:[],current:0,startedAt:Date.now(),lastResumedAt:Date.now(),elapsedMs:0};
     this.sessions.save(this.state); this.onChange(this.state);
     if(this.state.mode==='exam'&&this.remaining()<=0){this.finish(true);return;}
     this.startClock();
   }
   answer(index) {
     if(!this.state||!Number.isInteger(index)||index<0||index>=this.state.questions[this.state.current].opciones.length)return;
-    if(this.state.mode==='practice'&&Object.prototype.hasOwnProperty.call(this.state.answers,this.state.current))return;
-    this.state.answers[this.state.current]=index;
-    if(this.state.mode==='exam'&&this.preferencesProvider()?.autoAdvanceExam===true&&this.state.current<this.state.questions.length-1) {
+    const current=this.state.current;
+    const question=this.state.questions[current];
+    const multiple=isMultipleAnswerQuestion(question);
+    const confirmed=this.state.confirmedAnswers||[];
+    if(this.state.mode==='practice'&&confirmed.includes(current))return;
+    if(multiple) {
+      const selected=Array.isArray(this.state.answers[current])?[...this.state.answers[current]]:[];
+      const position=selected.indexOf(index);
+      if(position>=0)selected.splice(position,1);else selected.push(index);
+      this.state.answers[current]=selected.sort((a,b)=>a-b);
+    } else {
+      this.state.answers[current]=index;
+      if(this.state.mode==='practice') {
+        this.state.confirmedAnswers=[...new Set([...confirmed,current])];
+      }
+    }
+    if(!multiple&&this.state.mode==='exam'&&this.preferencesProvider()?.autoAdvanceExam===true&&this.state.current<this.state.questions.length-1) {
       this.state.current++;
     }
+    this.persist(); this.onChange(this.state);
+  }
+  confirmAnswer() {
+    if(!this.state||this.state.mode!=='practice')return;
+    const current=this.state.current;
+    const question=this.state.questions[current];
+    if(!isMultipleAnswerQuestion(question))return;
+    const selected=this.state.answers[current];
+    if(!Array.isArray(selected)||selected.length===0)return;
+    this.state.confirmedAnswers=[...new Set([...(this.state.confirmedAnswers||[]),current])];
     this.persist(); this.onChange(this.state);
   }
   move(delta) {
