@@ -213,3 +213,19 @@ test('SegSisSw usa el core común, conserva las preguntas y aplica su fórmula h
   assert.equal(grade(questions.slice(0, 20), answers, {correct:1,incorrect:0,blank:0}, formula).score, 10);
   assert.equal(grade(questions.slice(0, 20), {0:answers[0],1:answers[1]}, {correct:1,incorrect:0,blank:0}, formula).score, 0);
 });
+
+
+test('CalSisSw agrupa las tres preferencias en el menú y mantiene visibles perfil y sincronización', () => {
+  const html = readFileSync(new URL('../simulador-CalSisSw/index.html', import.meta.url), 'utf8');
+  const script = readFileSync(new URL('../simulador-CalSisSw/script.js', import.meta.url), 'utf8');
+  assert.match(html, /id="orderByTopic"/);
+  assert.match(html, /id="shuffleAnswers"/);
+  assert.match(html, /id="autoAdvanceHome"/);
+  assert.match(html, /Modo turbo/);
+  assert.doesNotMatch(html, /id="studySettings"/);
+  assert.match(html, /id="profileControls"/);
+  assert.match(html, /id="accountSettings"/);
+  assert.match(script, /shuffleAnswers/);
+  assert.match(script, /transformQuestion:/);
+  assert.match(script, /correctOptionIndices/);
+});

@@ -293,9 +293,12 @@ export class ExamEngine {
             preserveTopicOrder:mode==='practice'&&preferences.orderByTopic===true
           }));
     if(!chosen.length) throw new Error(mode==='failures'?'Todavía no tienes preguntas falladas.':'El banco de preguntas está vacío.');
+    const sessionQuestions=restored?.questions||(typeof this.config.transformQuestion==='function'
+      ? chosen.map(question=>this.config.transformQuestion(question,{preferences,mode}))
+      : chosen);
     this.state=restored
       ? {...restored,confirmedAnswers:Array.isArray(restored.confirmedAnswers)?restored.confirmedAnswers:[],startedAt:restored.startedAt||Date.now(),lastResumedAt:Date.now(),elapsedMs:Math.max(0,Number(restored.elapsedMs)||0)}
-      : {id:crypto.randomUUID(),mode,questions:chosen,answers:{},confirmedAnswers:[],current:0,startedAt:Date.now(),lastResumedAt:Date.now(),elapsedMs:0};
+      : {id:crypto.randomUUID(),mode,questions:sessionQuestions,answers:{},confirmedAnswers:[],current:0,startedAt:Date.now(),lastResumedAt:Date.now(),elapsedMs:0};
     this.sessions.save(this.state); this.onChange(this.state);
     if(this.state.mode==='exam'&&this.remaining()<=0){this.finish(true);return;}
     this.startClock();

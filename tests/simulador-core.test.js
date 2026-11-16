@@ -148,3 +148,29 @@ test('permite seleccionar y deseleccionar opciones múltiples y confirmar en pr�
   assert.deepEqual(state.answers[0],[0,2]);
   engine.finish();
 });
+
+
+test('aplica transformaciones de preguntas al crear una sesión y conserva el orden al reanudar', () => {
+  let state;
+  const transformedQuestion={...questions[0],opciones:['A. Incorrecta','B. Correcta'],solucion:'B'};
+  const engine=new ExamEngine({
+    config:{...config,transformQuestion:question=>({...question,...transformedQuestion})},
+    questions:[questions[0]],
+    profileManager:profiles,history,sessionStore:sessions,failedQuestions:failures,
+    onChange:value=>{state=value;}
+  });
+  engine.start('practice');
+  assert.deepEqual(state.questions[0].opciones,transformedQuestion.opciones);
+  assert.equal(state.questions[0].solucion,'B');
+  const saved=sessions.get();
+  engine.dispose();
+  const resumed=new ExamEngine({
+    config:{...config,transformQuestion:()=>{throw new Error('No debe transformar una sesión restaurada');}},
+    questions:[questions[0]],
+    profileManager:profiles,history,sessionStore:sessions,failedQuestions:failures,
+    onChange:value=>{state=value;}
+  });
+  resumed.start(saved.mode,saved);
+  assert.deepEqual(state.questions[0].opciones,transformedQuestion.opciones);
+  resumed.finish();
+});
