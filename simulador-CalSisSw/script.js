@@ -84,8 +84,9 @@ function renderTopicSettings() {
   const allSelected=topics.every(topic=>selected.includes(topic));
   const toggleAllButton=$('toggleAllTopics');
   if(toggleAllButton){
-    toggleAllButton.textContent=allSelected?'Dejar solo Tema '+topics[0]:'Marcar todos';
+    toggleAllButton.textContent=allSelected?'Solo Tema '+topics[0]:'Marcar todos';
     toggleAllButton.setAttribute('aria-label',allSelected?'Dejar únicamente el tema '+topics[0]+' activo':'Marcar todos los temas como activos');
+    toggleAllButton.disabled=topics.length===0;
   }
   container.replaceChildren();
   topics.forEach(topic=>{
@@ -494,15 +495,15 @@ $('startExam').addEventListener('click',()=>start('exam'));
 $('previous').addEventListener('click',()=>engine.move(-1));
 $('next').addEventListener('click',()=>engine.move(1));
 $('finish').addEventListener('click',requestFinish);
-$('toggleAllTopics').addEventListener('click',event=>{
-  event.preventDefault();
-  const available=getAvailableTopics(questions);
+$('toggleAllTopics').addEventListener('click',()=>{
+  const checkboxes=[...$('topicFilters').querySelectorAll('input[type="checkbox"]')];
+  const available=checkboxes.map(input=>Number(input.value)).filter(Number.isInteger);
   if(!available.length)return;
-  const current=[...$('topicFilters').querySelectorAll('input[type="checkbox"]')]
-    .filter(input=>input.checked).map(input=>Number(input.value)).filter(Number.isInteger);
-  const allSelected=available.every(topic=>current.includes(topic));
+  const checked=checkboxes.filter(input=>input.checked).map(input=>Number(input.value));
+  const allSelected=available.every(topic=>checked.includes(topic));
   const next=allSelected?[available[0]]:available;
   savePreferences({selectedTopics:next});
+  checkboxes.forEach(input=>{input.checked=next.includes(Number(input.value));});
   renderTopicSettings();
 });
 $('orderByTopic').addEventListener('change',event=>savePreferences({orderByTopic:event.target.checked}));
