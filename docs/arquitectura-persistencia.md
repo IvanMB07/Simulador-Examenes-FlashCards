@@ -1,143 +1,139 @@
 # Arquitectura de persistencia y sincronización
 
-## Decisión
+## Objetivo
 
-Mantener la aplicación estática en GitHub Pages es compatible con una arquitectura local-first. Pages sirve HTML, CSS y JavaScript; no ejecuta lógica de servidor ni proporciona base de datos propia. La aplicación sí puede consumir una API HTTPS externa.
+Los simuladores principales utilizan una arquitectura local-first: la lógica de estudio funciona en el navegador y guarda el progreso en el dispositivo. La sincronización remota es una capa adicional y no forma parte del motor de examen.
 
-La regla de producto será: guardar primero en el dispositivo y sincronizar después. Ningún fallo de red o autenticación debe bloquear una sesión de estudio.
+El repositorio ya incorpora una implementación con Firebase Authentication y Cloud Firestore. Este documento describe esa implementación, sus límites y los criterios para futuras evoluciones.
 
-## Capas
+## Arquitectura actual
 
-1. **Interfaz por asignatura**: pantallas, textos y controles.
-2. **Configuración**: identificador, banco de preguntas, número de preguntas, duración, temas y puntuación.
-3. **Core común**: motor, selección, evaluación, perfiles, fallos, historial y sesión activa.
-4. **Persistencia local**: adaptador local. Esta versión usa localStorage; IndexedDB es la evolución recomendada si aumenta el volumen.
-5. **SyncProvider**: cola de cambios, envío, lectura de cambios remotos y resolución de conflictos.
-6. **Backend**: autenticación, autorización, validación y base de datos.
+```text
+Interfaz del simulador
+        │
+        ▼
+Configuración de asignatura
+        │
+        ▼
+common/simulador-core.js
+  ├── ExamEngine
+  ├── ProfileManager
+  ├── ExamHistory
+  ├── SessionStore
+  ├── FailedQuestionStore
+  ├── QuestionHistoryStore
+  └── StorageAdapter
+        │
+        ├── localStorage
+        │
+        └── evento simulador:storage-change
+                       │
+                       ▼
+          common/firebase/firebase-sync.js
+                       │
+             Firebase Authentication
+                       │
+                       ▼
+                Cloud Firestore
+```
 
-El core no debe importar SDK de Supabase, Firebase ni Cloudflare. El proveedor remoto debe ser una capa independiente.
+### 1. Interfaz y configuración
 
-## Modelo remoto propuesto
+Cada simulador conserva su HTML, CSS, banco de preguntas y configuración. La configuración determina el identificador del simulador, el número de preguntas, la duración, el sistema de puntuación y las reglas específicas de selección.
 
-Evitar replicar el localStorage completo en una única fila JSON. Es sencillo al principio, pero obliga a resolver conflictos sobre un documento grande y puede sobrescribir modificaciones independientes.
+El core no debe contener reglas particulares de una asignatura. Por ejemplo, los ámbitos de parcial y las agrupaciones de preguntas dependientes de API se resuelven en su módulo de selección propio.
 
-Separar al menos:
-- users: identidad de autenticación.
-- profiles: perfiles de estudio asociados a la cuenta.
-- simulator_settings: ajustes por perfil y simulador.
-- exam_sessions: fecha, modo, duración, aciertos, errores, blancas, nota y errores.
-- active_sessions: estado serializado de una sesión inacabada.
-- question_progress: estado SRS por pregunta (intervalo, facilidad, próximo repaso, aciertos y fallos).
+### 2. Core compartido
 
-Cada registro sincronizable debe incluir id, user_id, profile_id, simulator_id y updated_at. Para borrados se recomienda deleted_at. Las sesiones finalizadas deberían ser inmutables; una sesión activa editada en dos dispositivos necesita versión/lease y aviso de conflicto.
+`common/simulador-core.js` proporciona los stores y el motor descritos en [common/README.md](../common/README.md). El core no importa el SDK de Firebase ni realiza peticiones de red.
 
-## Flujo de sincronización
+### 3. Almacenamiento local
 
-1. Guardar localmente al realizar cada acción.
-2. Marcar los registros como pendientes.
-3. Enviar cambios cuando haya red y usuario autenticado.
-4. Validar en servidor la propiedad del perfil y del registro.
-5. Descargar cambios posteriores al último cursor sincronizado.
-6. Aplicar cambios remotos sin volver a encolarlos.
-7. Fusionar por entidad; no reemplazar el estado completo.
-8. Reintentar con espera incremental cuando se recupere la conexión.
+`StorageAdapter` utiliza `localStorage` y separa las claves por namespace, tipo de dato y perfil. Los cambios generan el evento `simulador:storage-change`, que permite a un proveedor externo observar las escrituras.
 
-No usar el nombre visible como identidad ni generar direcciones de correo artificiales a partir de él. La cuenta debe tener un identificador estable y método de recuperación.
+El almacenamiento local sigue siendo la base de funcionamiento. Si el usuario no ha iniciado sesión o Firebase no está configurado, las funciones locales continúan disponibles.
 
-## Backends
+### 4. Proveedor Firebase
 
-### A. Firebase Authentication + Cloud Firestore — opción recomendada para la primera sincronización
+`common/firebase/firebase-sync.js` implementa `FirebaseSyncProvider`. Este módulo:
 
-Es la opción más directa si el objetivo prioritario es que la app funcione offline y sincronice automáticamente cuando vuelva la conexión. El SDK web de Firestore mantiene una caché local y sincroniza los cambios pendientes al recuperar red. En web hay que activar expresamente la persistencia offline; si dos dispositivos modifican el mismo documento, la política habitual es last-write-wins.
+- Inicializa Firebase Authentication y Cloud Firestore.
+- Gestiona el estado de autenticación.
+- Asocia el espacio local a la cuenta autenticada.
+- Observa los cambios locales emitidos por el core.
+- Sincroniza perfiles y datos de estudio compatibles.
+- Mantiene suscripciones a los cambios remotos.
+- Solicita sincronización al recuperar conectividad y al abandonar/ocultar la página.
 
-Para limitar conflictos, no se debe guardar todo el progreso en un único documento. Cada examen finalizado debe ser un documento independiente con un ID estable; el estado de una sesión activa debe tener su propio documento; y el progreso SRS debe separarse por pregunta. Así, dos dispositivos pueden crear sesiones distintas sin sobrescribirse.
+La inicialización de Firestore solicita caché local persistente con gestor multi-pestaña. Si el navegador no permite esa configuración, el código utiliza la instancia de Firestore disponible como alternativa.
 
-Cuotas publicadas del nivel gratuito Spark para Cloud Firestore: 1 GiB de datos, 50.000 lecturas/día, 20.000 escrituras/día, 20.000 eliminaciones/día y 10 GiB/mes de transferencia. Al superar una cuota gratuita, el producto puede quedar bloqueado durante el resto del periodo hasta el siguiente reinicio o hasta cambiar de plan. Para uso personal y de estudio estas cuotas parecen holgadas, pero deben monitorizarse.
+## Identidad y aislamiento de datos
 
-Ventajas: autenticación gestionada, SDK cliente, caché offline y sincronización automática sin construir un servidor propio. Inconvenientes: modelo documental, reglas de seguridad que hay que probar, dependencia de Google y comportamiento last-write-wins si dos dispositivos modifican el mismo documento simultáneamente.
+La identidad de sincronización es el UID proporcionado por Firebase Authentication, no el nombre visible del perfil ni el correo electrónico.
 
-### B. Cloudflare Workers/Pages Functions + D1 + autenticación
+Los datos locales se particionan por namespace de simulador y por cuenta. Dentro de cada simulador, los stores aíslan los datos por perfil. Esta separación evita mezclar el progreso de cuentas distintas en un mismo navegador.
 
-Es la opción que ofrece más control y un modelo SQL. Pages Functions puede utilizar D1 mediante bindings. Se puede mantener GitHub Pages y consumir un Worker API independiente por HTTPS; eso exige CORS y gestionar el token de sesión. O se puede mover el frontend a Cloudflare Pages y alojar las rutas API como Functions en el mismo proyecto, lo que evita CORS entre app y API.
+El banco de preguntas se mantiene en los archivos del repositorio y no se sincroniza como contenido personal de la cuenta.
 
-Better Auth dispone de integración con D1, pero sigue siendo necesario configurar las rutas, migraciones, sesiones, secretos y autorización. Hay un detalle importante de coste/rendimiento: Workers Free permite 100.000 peticiones al día, pero limita cada petición a 10 ms de CPU. Las operaciones de autenticación y hashing de contraseñas deben probarse con la versión exacta de Better Auth y con el plan real; hubo un informe de consumo de CPU excesivo en una versión anterior de Better Auth en Cloudflare Workers.
+## Modelo remoto
 
-D1 Free incluye 5 millones de filas leídas/día, 100.000 filas escritas/día y 5 GB de almacenamiento total. Si se supera la cuota diaria de D1, las consultas dejan de ejecutarse hasta el reinicio o hasta ampliar el plan.
+Las reglas de Firestore se encuentran en `firestore.rules`. La implementación utiliza rutas bajo el usuario autenticado y separa los datos por perfil y simulador. Las colecciones contempladas por las reglas incluyen:
 
-Ventajas: SQL, control del esquema, coste de infraestructura bajo y despliegue integrado con el frontend si se usa Cloudflare Pages. Inconvenientes: hay que desarrollar el protocolo de sincronización local/remoto, la cola de operaciones, los cursores, los conflictos y la autenticación. No ofrece por sí solo el comportamiento offline/sync gestionado de Firestore.
+- Perfiles.
+- Sesiones de examen finalizadas.
+- Preguntas falladas.
+- Sesiones activas.
 
-### C. Supabase
+Las reglas verifican que el UID autenticado coincida con el propietario de la ruta. Las reglas deben desplegarse en el proyecto correcto y probarse con usuarios distintos; la configuración del cliente por sí sola no concede autorización.
 
-Sigue siendo técnicamente válido y ofrece PostgreSQL, Auth y Realtime. El plan Free publica 500 MB de base de datos, 50.000 usuarios activos mensuales y 2 millones de mensajes Realtime. Los proyectos Free con poca actividad pueden pausarse tras siete días.
+## Consistencia y conflictos
 
-En el código actual de SegSisSw, la tabla `study_sync` guarda una instantánea JSONB completa por usuario, con número de revisión y lógica de fusión de conflictos. El cliente intercepta métodos de `Storage.prototype` para detectar escrituras locales y la identidad se forma con un correo sintético `@cuenta.simulador.invalid`. La confirmación de email debe estar desactivada y no existe recuperación convencional de contraseña. La clave del archivo de configuración es una publishable key, diseñada para estar en el cliente; no es una `service_role` y no debe confundirse con una clave secreta.
+Firestore sincroniza documentos y utiliza su política de resolución de escrituras concurrentes. La sesión activa de un perfil y simulador es un documento compartido; dos dispositivos que escriban simultáneamente sobre esa misma sesión pueden sobrescribirse según el orden de llegada de las escrituras.
 
-El SQL incluido habilita RLS y filtra por `auth.uid() = user_id`, además de añadir la tabla a Realtime. No he encontrado en los archivos una prueba E2E que demuestre que la sincronización ha funcionado con dos dispositivos: el documento de revisión del propio ZIP indica que no se verificó una sincronización real contra Supabase. Por eso no puedo atribuir el fallo a una única causa sin consultar los errores de consola/red y el estado del proyecto.
+Por tanto:
 
-Antes de descartar Supabase conviene comprobar: que el proyecto no esté pausado; que la confirmación de email esté desactivada; que URL y publishable key correspondan al mismo proyecto; que la tabla y sus políticas RLS existan; que Realtime esté suscrito correctamente; y qué respuesta HTTP devuelve Auth o `study_sync`.
+- Utiliza una sola sesión activa por perfil y simulador cuando alternes entre dispositivos.
+- No asumas que una sesión activa permite edición colaborativa simultánea.
+- Comprueba el estado de sincronización antes de cerrar el navegador si hay cambios pendientes.
+- Las sesiones finalizadas se registran en el historial como elementos separados.
 
-## Recomendación
+La sincronización no sustituye a una estrategia de concurrencia transaccional para edición simultánea. Si el producto necesitara ese escenario, habría que introducir versiones, control optimista de concurrencia o un mecanismo de lease.
 
-Para la primera versión con sincronización automática, probaría **Firebase Authentication + Firestore**: permite mantener GitHub Pages y reduce mucho el código de sincronización que tendríamos que mantener. Mantendría el core independiente del proveedor para que, si más adelante se necesita SQL o lógica de servidor propia, podamos implementar un proveedor Cloudflare D1 sin reescribir el simulador.
+## Seguridad y privacidad
 
-Si el objetivo principal pasa a ser controlar toda la infraestructura en SQL y aprovechar Cloudflare, entonces escogería Workers + D1, pero solo después de probar el consumo de CPU del flujo de autenticación y construir el SyncProvider correctamente. No usaría otra vez un único JSON global por usuario como contrato de persistencia.
+- No incluyas credenciales privadas de Admin SDK en archivos servidos al navegador.
+- Mantén las reglas de Firestore restringidas al propietario autenticado.
+- No utilices reglas abiertas de prueba en producción.
+- Cierra sesión en dispositivos compartidos.
+- No registres contraseñas, tokens ni datos sensibles en logs.
+- Verifica las reglas con cuentas distintas antes de dar por validado el aislamiento entre usuarios.
 
-## Plan de evolución
+La configuración web de Firebase se distribuye al cliente y no sustituye las reglas de seguridad. Consulta [docs/firebase-setup.md](firebase-setup.md).
 
-1. Completar el core y pruebas de CalSisSw.
-2. Evolucionar almacenamiento local de localStorage a IndexedDB.
-3. Implementar Firebase Authentication + Firestore mediante un proveedor independiente.
-4. Diseñar reglas de seguridad y el esquema documental por usuario, perfil, simulador, sesión y pregunta.
-5. Probar dos dispositivos, offline, colisiones, recuperación de cuenta y reanudación.
-6. Migrar el resto de simuladores al core una vez validado el contrato.
+## Pruebas y validación
 
-## Alcance de esta rama
+Las pruebas automatizadas de `npm test` cubren la lógica del core y parte de la integración estática de las interfaces. No equivalen a una prueba de extremo a extremo contra Firebase.
 
-CalSisSw incorpora el core común inicial, perfiles locales, historial, exportación/importación, sesiones recuperables, modo de fallos, PWA, Firebase Authentication + Firestore, reglas de seguridad y pruebas unitarias. El proyecto Firebase debe crearse y configurarse mediante [docs/firebase-setup.md](firebase-setup.md). La sincronización real entre dispositivos queda pendiente de esa configuración y de una prueba de extremo a extremo.
+Para validar la sincronización real se necesita:
 
+1. Un proyecto Firebase accesible.
+2. Authentication y Firestore habilitados.
+3. Las reglas publicadas.
+4. Dos navegadores o dispositivos con la misma cuenta.
+5. Pruebas de creación y actualización de perfiles, historial, fallos y sesiones.
+6. Pruebas de pérdida y recuperación de conexión.
+7. Pruebas con cuentas diferentes para comprobar el aislamiento.
 
-## Topología de despliegue
+No se debe afirmar que la sincronización remota está validada únicamente porque las pruebas unitarias locales pasen.
 
-GitHub Pages puede seguir alojando el frontend estático y llamar a un Worker API independiente mediante HTTPS. En ese escenario hay que configurar CORS, enviar el token de sesión en cada petición y mantener los secretos solo en el entorno del Worker.
+## Evolución posible
 
-La alternativa con menos piezas operativas es mover el frontend a Cloudflare Pages y alojar las rutas API como Pages Functions en el mismo proyecto, usando D1 mediante bindings. Esto evita CORS entre frontend y API. No es obligatorio hacer ese cambio para tener backend: GitHub Pages + Worker API + D1 también es viable.
+### IndexedDB como almacenamiento principal
 
-## Referencias oficiales consultadas
+El adaptador actual utiliza `localStorage`. IndexedDB podría ser adecuado si el volumen de datos aumenta o se necesitan transacciones y consultas locales más complejas. La migración debe conservar los datos existentes y probarse con perfiles y simuladores ya utilizados.
 
-- GitHub Pages y sus límites de alojamiento estático: https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site
-- Cloudflare Pages Functions y bindings: https://developers.cloudflare.com/pages/functions/bindings/
-- Cloudflare Pages Functions, cuotas: https://developers.cloudflare.com/pages/functions/pricing/
-- Cloudflare Workers, límites y precios: https://developers.cloudflare.com/workers/platform/pricing/
-- Cloudflare D1, cuotas y precios: https://developers.cloudflare.com/d1/platform/pricing/
-- Better Auth en Cloudflare Workers: https://better-auth.com/docs/guides/cloudflare
-- Better Auth 1.5 y soporte D1: https://better-auth.com/blog/1-5
-- Límites de CPU de Cloudflare Workers: https://developers.cloudflare.com/workers/platform/limits/
-- Informe de CPU en autenticación Better Auth/Workers: https://github.com/better-auth/better-auth/issues/8860
-- Cuotas de Firestore: https://firebase.google.com/docs/firestore/quotas
-- Planes y límites Spark de Firebase: https://firebase.google.com/docs/projects/billing/firebase-pricing-plans
-- Firestore offline persistence: https://firebase.google.com/docs/firestore/manage-data/enable-offline
-- Supabase precios y límites del plan Free: https://supabase.com/pricing
-- Supabase pausa de proyectos Free: https://supabase.com/docs/guides/platform/free-project-pausing
+### Otros proveedores
 
-Las cuotas y precios pueden cambiar; se deben volver a comprobar antes de desplegar.
+El core debe seguir desacoplado del proveedor remoto. Si en el futuro se adopta otro backend, debe implementarse un adaptador independiente que respete el contrato de eventos y datos, sin introducir dependencias del proveedor dentro de `simulador-core.js`.
 
-
-## Implementación Firebase en CalSisSw
-
-El proveedor independiente está en `common/firebase/firebase-sync.js`; no se importa desde el core. Utiliza el SDK modular de Firebase 13.3.0 mediante módulos ESM del CDN oficial, fijado a una versión concreta para evitar cambios inesperados. Firebase recomienda la API modular y documenta el uso de módulos browser desde gstatic para proyectos ESM sin bundler. <Cite refs={["turn171593search1"]}/>
-
-La inicialización solicita `persistentLocalCache` con `persistentMultipleTabManager`, para que Firestore use IndexedDB y comparta la caché entre pestañas compatibles. <Cite refs={["turn857793search1","turn857793search7"]}/>
-
-Los datos locales también se particionan por UID: el primer inicio de sesión mueve el almacenamiento local anterior al espacio de la cuenta; después cada cuenta utiliza un namespace independiente. Esto evita mezclar perfiles de dos cuentas en el mismo navegador.
-
-Los datos remotos se organizan por UID y perfil:
-- `users/{uid}/profiles/{profileId}`
-- `.../simulators/{simulatorId}/examSessions/{sessionId}`
-- `.../simulators/{simulatorId}/failedQuestions/{questionIdHash}`
-- `.../simulators/{simulatorId}/activeSessions/current`
-
-Las reglas de `firestore.rules` conceden acceso únicamente si `request.auth.uid` coincide con el UID del propietario. Firebase recomienda restringir acceso por propietario y aplicar reglas explícitas también a las subcolecciones. <Cite refs={["turn171593search0","turn857793search3","turn171593search5"]}/>
-
-La sesión activa es un documento único por perfil y simulador. Si dos dispositivos escriben concurrentemente sobre la misma sesión activa, Firestore aplica última escritura; el proveedor no intenta fusionar respuestas simultáneas de una misma pregunta. Esta restricción debe conservarse en las pruebas de dos dispositivos.
-
-La configuración real de Firebase no está incluida: `common/firebase/firebase-config.js` se deja como plantilla vacía. Consulta `docs/firebase-setup.md`.
+La sustitución de Firebase por otro backend no está implementada actualmente.
