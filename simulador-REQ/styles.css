@@ -886,3 +886,14 @@ button.danger{background:linear-gradient(110deg,#ff896c,#db4c50)!important;color
 .option.selected{border-color:var(--amber-bright)}
 .option.correct{border-color:var(--green);background:rgba(112,213,154,.1)}
 .option.incorrect{border-color:var(--red);background:rgba(255,108,120,.1)}
+
+/* Acción secundaria compacta junto al título de selección de temas */
+.topic-settings-heading{display:flex;flex-direction:column;align-items:stretch;gap:8px;margin-bottom:11px}
+.topic-heading-title-row{display:flex;align-items:center;justify-content:space-between;gap:10px;min-width:0}
+.topic-heading-title-row .subsection-heading{margin:0;min-width:0}
+.topic-heading-title-row .subsection-heading h3{min-width:0}
+.topic-toggle-all{display:inline-flex!important;align-items:center;justify-content:center;flex:0 0 auto!important;width:auto!important;min-width:0!important;height:30px!important;min-height:30px!important;max-height:30px!important;margin:0!important;padding:4px 9px!important;border:1px solid rgba(164,113,79,.32)!important;border-radius:7px!important;background:transparent!important;color:var(--muted)!important;box-shadow:none!important;font-size:.72rem!important;font-weight:600!important;line-height:1!important;white-space:nowrap!important}
+.topic-toggle-all:hover:not(:disabled){border-color:rgba(255,163,62,.48)!important;background:rgba(255,153,28,.06)!important;color:var(--text)!important}
+.topic-question-count{align-self:flex-start}
+@media(max-width:820px){.topic-settings-heading{flex-direction:column!important;align-items:stretch!important;gap:8px!important}.topic-heading-title-row{flex-direction:row!important;align-items:center!important;gap:8px!important}.topic-heading-title-row .subsection-heading{flex:1 1 auto;min-width:0}.topic-heading-title-row .subsection-heading h3{font-size:.93rem}.topic-toggle-all{width:auto!important;min-width:0!important;min-height:29px!important;height:29px!important;padding:4px 7px!important;font-size:.68rem!important}.topic-question-count{align-self:flex-start}}
+@media(max-width:390px){.topic-heading-title-row .subsection-heading h3{font-size:.86rem}.topic-toggle-all{font-size:.65rem!important;padding:4px 6px!important}}
