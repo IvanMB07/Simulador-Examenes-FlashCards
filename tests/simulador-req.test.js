@@ -9,7 +9,7 @@ test('el banco REQ contiene 575 preguntas distribuidas en cinco temas', () => {
   assert.equal(questions.length, 575);
   const counts = new Map();
   questions.forEach(question => {
-    const match = question.cuestion.match(/REQ-T(\\d+)-/);
+    const match = question.cuestion.match(/REQ-T(\d+)-/);
     assert.ok(match, 'Cada pregunta debe identificar su tema');
     counts.set(Number(match[1]), (counts.get(Number(match[1])) || 0) + 1);
   });
@@ -33,13 +33,13 @@ test('se identifican las 124 preguntas de respuesta múltiple', () => {
 test('la interfaz REQ conecta el botón de comprobación múltiple y todos los selectores', () => {
   const html = readFileSync(new URL('../simulador-REQ/index.html', import.meta.url), 'utf8');
   const script = readFileSync(new URL('../simulador-REQ/script.js', import.meta.url), 'utf8');
-  const ids = new Set([...html.matchAll(/\\bid="([^"]+)"/g)].map(match => match[1]));
-  const selectors = [...script.matchAll(/\\$\\('([^']+)'\\)/g)].map(match => match[1]);
+  const ids = new Set([...html.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]));
+  const selectors = [...script.matchAll(/\$\('([^']+)'\)/g)].map(match => match[1]);
   assert.deepEqual([...new Set(selectors.filter(id => !ids.has(id)))], []);
   assert.match(html, /id="confirmMultiAnswer"/);
-  assert.match(script, /\\$\\('confirmMultiAnswer'\\)\\.addEventListener/);
+  assert.match(script, /\$\('confirmMultiAnswer'\)\.addEventListener/);
   assert.match(script, /examQuestionCount: 30/);
   assert.match(script, /practiceQuestionCount: 25/);
   assert.match(script, /examDurationMinutes: 60/);
-  assert.match(script, /incorrect: -1 \\/ 3/);
+  assert.match(script, /incorrect: -1 \/ 3/);
 });
