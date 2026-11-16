@@ -49,7 +49,7 @@ Reconoce identificadores con una estructura similar a:
 CODIGO-TEMA-NUMERO-Pregunta: ...
 ```
 
-Renueva la numeración dentro de cada tema y conserva el resto del identificador. Solo afecta a los identificadores que coinciden con el patrón admitido por la herramienta.
+Renumera las preguntas dentro de cada tema y conserva el resto del identificador. Solo afecta a los identificadores que coinciden con el patrón admitido por la herramienta.
 
 **3. Procesar archivos o carpetas**
 
