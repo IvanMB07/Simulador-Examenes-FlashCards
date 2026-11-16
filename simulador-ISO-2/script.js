@@ -1,4 +1,4 @@
-import { StorageAdapter, ProfileManager, ExamHistory, SessionStore, FailedQuestionStore, ExamEngine, QuestionHistoryStore, extractTopic, getAvailableTopics } from '../common/simulador-core.js';
+import { StorageAdapter, ProfileManager, ExamHistory, SessionStore, FailedQuestionStore, ExamEngine, QuestionHistoryStore, extractTopic, getAvailableTopics, shuffle, correctOptionIndices } from '../common/simulador-core.js';
 import { isFirebaseConfigured } from '../common/firebase/firebase-config.js';
 
 const CONFIG = {
@@ -22,6 +22,19 @@ const CONFIG = {
         ((correct - incorrect / 3) / answered) * 10
       ))
       : 0;
+  },
+  transformQuestion: (question,{preferences}) => {
+    if (preferences.shuffleAnswers !== true) return question;
+    const originalCorrect = correctOptionIndices(question);
+    const shuffledIndexes = shuffle(question.opciones.map((_,index)=>index));
+    const newIndexByOldIndex = new Map(shuffledIndexes.map((oldIndex,newIndex)=>[oldIndex,newIndex]));
+    const options = shuffledIndexes.map((oldIndex,newIndex)=>{
+      const text = String(question.opciones[oldIndex]).replace(/^\s*[A-D]\s*[.)-]\s*/i,'');
+      return String.fromCharCode(65+newIndex)+'. '+text;
+    });
+    const solution = originalCorrect.map(index=>newIndexByOldIndex.get(index)).sort((a,b)=>a-b)
+      .map(index=>String.fromCharCode(65+index)).join('');
+    return {...question,opciones:options,solucion:solution};
   }
 };
 
@@ -44,6 +57,7 @@ let activeReviewFilter = 'all';
 const DEFAULT_PREFERENCES = {
   selectedTopics: [1, 2, 3, 4, 5],
   orderByTopic: false,
+  shuffleAnswers: false,
   autoAdvanceExam: false
 }; function readPreferences() {
   return { ...DEFAULT_PREFERENCES, ...storage.read('preferences', profiles.activeId, {}) };
@@ -234,6 +248,7 @@ function renderHome() {
   $('clearHistory').disabled = historyCount === 0;
   renderTopicSettings();
   $('autoAdvanceHome').checked = readPreferences().autoAdvanceExam === true;
+  $('shuffleAnswers').checked = readPreferences().shuffleAnswers === true;
   const saved = sessions.get();
   $('resumePanel').hidden = !saved;
   if (saved) $('resumeText').textContent = `${saved.mode === 'exam' ? 'Examen' : saved.mode === 'failures' ? 'Test de fallos' : 'Práctica'} · ${Object.keys(saved.answers || {}).length}/${saved.questions.length} respondidas`;
@@ -484,6 +499,7 @@ $('previous').addEventListener('click', () => engine.move(-1));
 $('next').addEventListener('click', () => engine.move(1));
 $('finish').addEventListener('click', requestFinish);
 $('orderByTopic').addEventListener('change', event => savePreferences({ orderByTopic: event.target.checked }));
+$('shuffleAnswers').addEventListener('change', event => savePreferences({ shuffleAnswers: event.target.checked }));
 $('autoAdvanceExam').addEventListener('change', event => {
   savePreferences({ autoAdvanceExam: event.target.checked });
   $('autoAdvanceHome').checked = event.target.checked;

@@ -34,6 +34,12 @@
         </div>
       </div>
 
+      <div class="resume" id="resumePanel" hidden>
+        <div><strong>Hay una sesión guardada</strong><p id="resumeText"></p></div>
+        <button id="resumeButton" type="button">Reanudar</button>
+        <button id="discardButton" class="secondary" type="button">Descartar</button>
+      </div>
+
       <div class="mode-heading"><svg class="subsection-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6 12 2l8 4-8 4-8-4Z"/><path d="m4 12 8 4 8-4M4 18l8 4 8-4"/></svg><h3>Elige un modo</h3></div>
       <div class="mode-grid">
         <article class="mode-card mode-practice">
@@ -67,6 +73,8 @@
           <span><strong>Ordenar por temas</strong><small>Presenta juntas las preguntas de cada tema.</small></span>
           <span class="switch"><input id="orderByTopic" type="checkbox"><span aria-hidden="true"></span></span>
         </label>
+        <label class="setting-row topic-order-setting" for="shuffleAnswers"><span><strong>Barajar respuestas</strong><small>Cambia el orden de las opciones en cada sesión.</small></span><span class="switch"><input id="shuffleAnswers" type="checkbox"><span aria-hidden="true"></span></span></label>
+        <label class="setting-row topic-order-setting" for="autoAdvanceHome"><span><strong>Modo turbo</strong><small>Avanza automáticamente al responder durante el examen.</small></span><span class="switch"><input id="autoAdvanceHome" type="checkbox"><span aria-hidden="true"></span></span></label>
       </section>
 
       <section class="profile-sync-panel" aria-label="Perfil y sincronización">
@@ -127,26 +135,6 @@
         </section>
         </div>
       </section>
-
-      <section class="advanced-card" id="studySettings" aria-label="Opciones avanzadas">
-        <details>
-          <summary><svg class="subsection-svg" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19 13.5a7 7 0 0 0 0-3l2-1.5-2-3.5-2.4 1a7 7 0 0 0-2.6-1.5L13.5 3h-4L9 5a7 7 0 0 0-2.6 1.5L4 5.5 2 9l2 1.5a7 7 0 0 0 0 3L2 15l2 3.5 2.4-1A7 7 0 0 0 9 19l.5 2h4l.5-2a7 7 0 0 0 2.6-1.5l2.4 1L21 15z"/></svg><strong>Opciones avanzadas</strong><span class="disclosure-chevron" aria-hidden="true">⌄</span></summary>
-          <div class="advanced-content">
-            <p class="note">Ajusta el comportamiento de las sesiones de estudio.</p>
-            <div class="setting-row">
-              <span><strong>Avance automático en examen</strong><small>Pasa a la siguiente pregunta al seleccionar una respuesta.</small></span>
-              <label class="switch" for="autoAdvanceHome"><input id="autoAdvanceHome" type="checkbox"><span aria-hidden="true"></span></label>
-            </div>
-            <p class="note">Puedes activar también esta opción durante un examen.</p>
-          </div>
-        </details>
-      </section>
-
-      <div class="resume" id="resumePanel" hidden>
-        <div><strong>Hay una sesión guardada</strong><p id="resumeText"></p></div>
-        <button id="resumeButton" type="button">Reanudar</button>
-        <button id="discardButton" class="secondary" type="button">Descartar</button>
-      </div>
 
       <section class="stats" aria-label="Resumen del progreso">
         <div><span>Sesiones guardadas</span><strong id="historyCount">0</strong></div>
