@@ -1,7 +1,7 @@
 {
-  "name": "Simulador de Administración de Proyectos Informáticos",
+  "name": "Simulador de Aspectos Profesionales de la Informática",
   "short_name": "API",
-  "description": "Simulador de estudio y exámenes de Administración de Proyectos Informáticos",
+  "description": "Simulador de estudio y exámenes de Aspectos Profesionales de la Informática",
   "lang": "es",
   "start_url": "./",
   "scope": "./",
