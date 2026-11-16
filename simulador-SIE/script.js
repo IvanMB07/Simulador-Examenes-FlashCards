@@ -85,7 +85,10 @@ function renderTopicSettings() {
   section.hidden = false;
   const preferences = readPreferences();
   let selected = (Array.isArray(preferences.selectedTopics) ? preferences.selectedTopics : []).filter(topic => topics.includes(Number(topic))).map(Number);
-  if (!selected.length) { selected = [...topics]; savePreferences({ selectedTopics: selected }); }
+  if (!selected.length) { selected=[topics[0]]; savePreferences({selectedTopics:selected}); }
+  const allSelected=topics.every(topic=>selected.includes(topic));
+  const toggleAllButton=$('toggleAllTopics');
+  if(toggleAllButton){toggleAllButton.textContent=allSelected?'Solo Tema '+topics[0]:'Marcar todos';toggleAllButton.setAttribute('aria-label',allSelected?'Dejar únicamente el tema '+topics[0]+' activo':'Marcar todos los temas como activos');toggleAllButton.disabled=topics.length===0;}
   container.replaceChildren();
   topics.forEach(topic => {
     const label = document.createElement('label'); label.className = 'topic-option';
@@ -93,7 +96,7 @@ function renderTopicSettings() {
     input.value = String(topic); input.checked = selected.includes(topic);
     input.addEventListener('change', () => {
       const next = [...container.querySelectorAll('input:checked')].map(item => Number(item.value)).filter(Number.isInteger);
-      if (!next.length) { input.checked = true; distribution.textContent = 'Debes mantener seleccionado al menos un tema.'; return; }
+      if (!next.length) { const defaultTopic=topics[0]; savePreferences({selectedTopics:[defaultTopic]}); distribution.textContent='Debe quedar al menos un tema activo. Se ha mantenido el Tema '+defaultTopic+'.'; renderTopicSettings(); return; }
       savePreferences({ selectedTopics: next }); renderTopicSettings();
     });
     const text = document.createElement('span');
@@ -484,7 +487,13 @@ $('clearFailures').addEventListener('click', () => { if (failures.list().length 
 $('startExam').addEventListener('click', () => start('exam'));
 $('previous').addEventListener('click', () => engine.move(-1));
 $('next').addEventListener('click', () => engine.move(1));
-$('finish').addEventListener('click', requestFinish);
+$('finish').addEventListener('click',requestFinish);
+$('toggleAllTopics').addEventListener('click',()=>{
+ const boxes=[...$('topicFilters').querySelectorAll('input[type="checkbox"]')], available=boxes.map(x=>Number(x.value)).filter(Number.isInteger);
+ if(!available.length)return;
+ const checked=boxes.filter(x=>x.checked).map(x=>Number(x.value)), all=available.every(x=>checked.includes(x)), next=all?[available[0]]:available;
+ savePreferences({selectedTopics:next}); boxes.forEach(x=>{x.checked=next.includes(Number(x.value));}); renderTopicSettings();
+});
 $('orderByTopic').addEventListener('change', event => savePreferences({ orderByTopic: event.target.checked }));
 $('shuffleAnswers').addEventListener('change', event => savePreferences({ shuffleAnswers: event.target.checked }));
 $('autoAdvanceExam').addEventListener('change', event => {
