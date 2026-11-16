@@ -23,7 +23,90 @@
           <h1>Sistemas de Información Empresarial</h1>
           <p>Practica, examínate y consulta tu evolución.</p>
         </div>
-      </header>
+            <details class="profile-menu">
+        <summary class="profile-menu-trigger" aria-label="Abrir perfil y sincronización" title="Perfil y sincronización">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M4.5 20c.8-4 3.3-6 7.5-6s6.7 2 7.5 6"/></svg>
+          <span>Perfil</span>
+        </summary>
+        <div class="profile-menu-content">
+          <section class="profile-sync-panel" aria-label="Perfil y sincronización">
+                    <div class="profile-sync-grid">
+                      <section class="profile-card" id="profileControls" aria-labelledby="profileHeading">
+                        <div class="subsection-heading">
+                          <svg class="subsection-svg" viewBox="0 0 24 24" aria-hidden="true">
+                            <circle cx="12" cy="8" r="3.5" />
+                            <path d="M4.5 20c.8-4 3.3-6 7.5-6s6.7 2 7.5 6" />
+                          </svg>
+                          <h3 id="profileHeading">Perfil de usuario</h3>
+                        </div>
+                        <p class="active-profile-label">Perfil activo: <strong id="profileName">Usuario principal</strong></p>
+                        <div class="profile-controls">
+                          <label class="visually-hidden" for="profileSelect">Perfil activo</label>
+                          <select id="profileSelect">
+                            <option value="default">Usuario principal</option>
+                          </select>
+                          <button id="addProfile" class="icon-button" type="button" aria-label="Crear perfil"
+                            title="Crear perfil">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                              <path d="M12 5v14M5 12h14" />
+                            </svg>
+                            <span>Crear perfil</span>
+                          </button>
+                          <button id="removeProfile" class="icon-button" type="button" aria-label="Eliminar perfil"
+                            title="Eliminar perfil">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                              <circle cx="9" cy="8" r="3.5" />
+                              <path d="M2.5 20c.6-3.8 2.8-5.7 6.5-5.7 2 0 3.5.5 4.6 1.6M16 17h6" />
+                            </svg>
+                            <span>Eliminar perfil</span>
+                          </button>
+                        </div>
+                      </section>
+          
+                      <section class="account-card" id="accountSettings" aria-labelledby="accountHeading">
+                        <div class="account-card-heading">
+                          <div class="subsection-heading">
+                            <svg class="subsection-svg" viewBox="0 0 24 24" aria-hidden="true">
+                              <path d="M6 18h12a4 4 0 0 0 .5-8 6.5 6.5 0 0 0-12-1.5A4.7 4.7 0 0 0 6 18Z" />
+                            </svg>
+                            <h3 id="accountHeading">Cuenta y sincronización</h3>
+                          </div>
+                          <span id="cloudState" class="cloud-state">Local</span>
+                        </div>
+                        <section class="cloud-box" aria-labelledby="cloudTitle">
+                          <h3 id="cloudTitle">Sincronización entre dispositivos</h3>
+                          <p id="cloudStatusMessage" class="cloud-message" role="status" aria-live="polite">Los datos se guardan
+                            en este dispositivo. Configura Firebase para sincronizarlos.</p>
+                          <div id="cloudAuthControls" class="cloud-controls" hidden>
+                            <div class="cloud-auth-fields">
+                              <label for="cloudEmail">Correo electrónico</label>
+                              <input id="cloudEmail" type="email" autocomplete="email" placeholder="tu correo electrónico">
+                              <label for="cloudPassword">Contraseña</label>
+                              <input id="cloudPassword" type="password" autocomplete="current-password"
+                                placeholder="Mínimo 6 caracteres">
+                            </div>
+                            <div class="toolbar">
+                              <button id="cloudLogin" type="button">Iniciar sesión</button>
+                              <button id="cloudRegister" class="secondary" type="button">Crear cuenta</button>
+                              <button id="cloudReset" class="secondary" type="button">Recuperar contraseña</button>
+                            </div>
+                          </div>
+                          <div id="cloudSignedControls" class="cloud-controls" hidden>
+                            <p class="cloud-account-line">Cuenta: <strong id="cloudAccount"></strong></p>
+                            <div class="toolbar">
+                              <button id="cloudSyncNow" type="button">Sincronizar ahora</button>
+                              <button id="cloudLogout" class="secondary" type="button">Cerrar sesión</button>
+                            </div>
+                          </div>
+                          <p id="cloudSetupHint" class="note">La sincronización se activa al configurar el proyecto Firebase y las
+                            reglas de Firestore del repositorio.</p>
+                        </section>
+                      </section>
+                    </div>
+                  </section>
+        </div>
+      </details>
+</header>
 
       <section id="menu" class="page panel">
         <div class="home-heading">
@@ -110,81 +193,7 @@
         <label class="setting-row topic-order-setting" for="autoAdvanceHome"><span><strong>Modo turbo</strong><small>Avanza automáticamente al responder durante el examen.</small></span><span class="switch"><input id="autoAdvanceHome" type="checkbox"><span aria-hidden="true"></span></span></label>
         </section>
 
-        <section class="profile-sync-panel" aria-label="Perfil y sincronización">
-          <div class="profile-sync-grid">
-            <section class="profile-card" id="profileControls" aria-labelledby="profileHeading">
-              <div class="subsection-heading">
-                <svg class="subsection-svg" viewBox="0 0 24 24" aria-hidden="true">
-                  <circle cx="12" cy="8" r="3.5" />
-                  <path d="M4.5 20c.8-4 3.3-6 7.5-6s6.7 2 7.5 6" />
-                </svg>
-                <h3 id="profileHeading">Perfil de usuario</h3>
-              </div>
-              <p class="active-profile-label">Perfil activo: <strong id="profileName">Usuario principal</strong></p>
-              <div class="profile-controls">
-                <label class="visually-hidden" for="profileSelect">Perfil activo</label>
-                <select id="profileSelect">
-                  <option value="default">Usuario principal</option>
-                </select>
-                <button id="addProfile" class="icon-button" type="button" aria-label="Crear perfil"
-                  title="Crear perfil">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M12 5v14M5 12h14" />
-                  </svg>
-                  <span>Crear perfil</span>
-                </button>
-                <button id="removeProfile" class="icon-button" type="button" aria-label="Eliminar perfil"
-                  title="Eliminar perfil">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <circle cx="9" cy="8" r="3.5" />
-                    <path d="M2.5 20c.6-3.8 2.8-5.7 6.5-5.7 2 0 3.5.5 4.6 1.6M16 17h6" />
-                  </svg>
-                  <span>Eliminar perfil</span>
-                </button>
-              </div>
-            </section>
-
-            <section class="account-card" id="accountSettings" aria-labelledby="accountHeading">
-              <div class="account-card-heading">
-                <div class="subsection-heading">
-                  <svg class="subsection-svg" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M6 18h12a4 4 0 0 0 .5-8 6.5 6.5 0 0 0-12-1.5A4.7 4.7 0 0 0 6 18Z" />
-                  </svg>
-                  <h3 id="accountHeading">Cuenta y sincronización</h3>
-                </div>
-                <span id="cloudState" class="cloud-state">Local</span>
-              </div>
-              <section class="cloud-box" aria-labelledby="cloudTitle">
-                <h3 id="cloudTitle">Sincronización entre dispositivos</h3>
-                <p id="cloudStatusMessage" class="cloud-message" role="status" aria-live="polite">Los datos se guardan
-                  en este dispositivo. Configura Firebase para sincronizarlos.</p>
-                <div id="cloudAuthControls" class="cloud-controls" hidden>
-                  <div class="cloud-auth-fields">
-                    <label for="cloudEmail">Correo electrónico</label>
-                    <input id="cloudEmail" type="email" autocomplete="email" placeholder="tu correo electrónico">
-                    <label for="cloudPassword">Contraseña</label>
-                    <input id="cloudPassword" type="password" autocomplete="current-password"
-                      placeholder="Mínimo 6 caracteres">
-                  </div>
-                  <div class="toolbar">
-                    <button id="cloudLogin" type="button">Iniciar sesión</button>
-                    <button id="cloudRegister" class="secondary" type="button">Crear cuenta</button>
-                    <button id="cloudReset" class="secondary" type="button">Recuperar contraseña</button>
-                  </div>
-                </div>
-                <div id="cloudSignedControls" class="cloud-controls" hidden>
-                  <p class="cloud-account-line">Cuenta: <strong id="cloudAccount"></strong></p>
-                  <div class="toolbar">
-                    <button id="cloudSyncNow" type="button">Sincronizar ahora</button>
-                    <button id="cloudLogout" class="secondary" type="button">Cerrar sesión</button>
-                  </div>
-                </div>
-                <p id="cloudSetupHint" class="note">La sincronización se activa al configurar el proyecto Firebase y las
-                  reglas de Firestore del repositorio.</p>
-              </section>
-            </section>
-          </div>
-        </section>
+        
 
         <section class="stats" aria-label="Resumen del progreso">
           <div><span>Sesiones guardadas</span><strong id="historyCount">0</strong></div>
