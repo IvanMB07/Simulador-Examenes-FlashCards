@@ -1003,13 +1003,18 @@ button.danger{background:linear-gradient(110deg,#ff896c,#db4c50)!important;color
 }
 
 
-/* Acción compacta para activar o desactivar todos los temas */
-.topic-filter-actions{display:flex;justify-content:flex-end;margin:0 0 8px}
+/* Acción secundaria integrada en el encabezado de selección de temas */
+.topic-settings-heading{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.topic-heading-main{display:flex;align-items:center;justify-content:space-between;gap:14px;min-width:0;flex:1 1 auto}
 .topic-toggle-all{
-  min-height:34px!important;padding:6px 11px!important;
-  border:1px solid rgba(255,163,62,.34)!important;border-radius:9px!important;
-  background:rgba(255,153,28,.07)!important;color:var(--amber-bright)!important;
-  font-size:.78rem!important;font-weight:700!important
+  flex:0 0 auto;min-height:32px!important;padding:5px 9px!important;
+  border:1px solid rgba(164,113,79,.32)!important;border-radius:8px!important;
+  background:transparent!important;color:var(--muted)!important;
+  font-size:.74rem!important;font-weight:600!important;box-shadow:none!important
 }
-.topic-toggle-all:hover:not(:disabled){background:rgba(255,153,28,.15)!important;border-color:var(--amber)!important}
-@media(max-width:820px){.topic-filter-actions{margin:0 0 7px}.topic-toggle-all{min-height:36px!important}}
+.topic-toggle-all:hover:not(:disabled){border-color:rgba(255,163,62,.48)!important;background:rgba(255,153,28,.06)!important;color:var(--text)!important}
+@media(max-width:820px){
+  .topic-settings-heading{align-items:flex-start;gap:9px}
+  .topic-heading-main{align-items:flex-start;flex-direction:column;gap:7px}
+  .topic-toggle-all{min-height:31px!important;padding:5px 8px!important;font-size:.71rem!important}
+}

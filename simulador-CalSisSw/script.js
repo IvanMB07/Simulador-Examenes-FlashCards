@@ -494,12 +494,15 @@ $('startExam').addEventListener('click',()=>start('exam'));
 $('previous').addEventListener('click',()=>engine.move(-1));
 $('next').addEventListener('click',()=>engine.move(1));
 $('finish').addEventListener('click',requestFinish);
-$('toggleAllTopics').addEventListener('click',()=>{
+$('toggleAllTopics').addEventListener('click',event=>{
+  event.preventDefault();
   const available=getAvailableTopics(questions);
   if(!available.length)return;
-  const current=(Array.isArray(readPreferences().selectedTopics)?readPreferences().selectedTopics:[]).filter(topic=>available.includes(Number(topic))).map(Number);
+  const current=[...$('topicFilters').querySelectorAll('input[type="checkbox"]')]
+    .filter(input=>input.checked).map(input=>Number(input.value)).filter(Number.isInteger);
   const allSelected=available.every(topic=>current.includes(topic));
-  savePreferences({selectedTopics:allSelected?[available[0]]:available});
+  const next=allSelected?[available[0]]:available;
+  savePreferences({selectedTopics:next});
   renderTopicSettings();
 });
 $('orderByTopic').addEventListener('change',event=>savePreferences({orderByTopic:event.target.checked}));
