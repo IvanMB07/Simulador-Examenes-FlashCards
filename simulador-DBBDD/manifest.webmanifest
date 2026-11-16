@@ -1,7 +1,7 @@
 {
-  "name": "Simulador de Seguridad de Sistemas Software",
-  "short_name": "SegSisSw",
-  "description": "Simulador de estudio y exámenes de Seguridad de Sistemas Software",
+  "name": "Simulador de Desarrollo de Bases de Datos",
+  "short_name": "DBBDD",
+  "description": "Simulador de estudio y exámenes de Desarrollo de Bases de Datos",
   "lang": "es",
   "start_url": "./",
   "scope": "./",

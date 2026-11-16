@@ -1,7 +1,7 @@
 {
-  "name": "Simulador de Seguridad de Sistemas Software",
-  "short_name": "SegSisSw",
-  "description": "Simulador de estudio y exámenes de Seguridad de Sistemas Software",
+  "name": "Simulador de Ingenieria de Software II",
+  "short_name": "ISO-2",
+  "description": "Simulador de estudio y exámenes de Ingenieria de Software II",
   "lang": "es",
   "start_url": "./",
   "scope": "./",

@@ -1,7 +1,7 @@
 {
-  "name": "Simulador de Seguridad de Sistemas Software",
-  "short_name": "SegSisSw",
-  "description": "Simulador de estudio y exámenes de Seguridad de Sistemas Software",
+  "name": "Simulador de Sistemas de Información Empresarial",
+  "short_name": "SIE",
+  "description": "Simulador de estudio y exámenes de Sistemas de Información Empresarial",
   "lang": "es",
   "start_url": "./",
   "scope": "./",
