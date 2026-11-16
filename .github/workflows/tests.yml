@@ -1,7 +1,7 @@
 name: Tests
 on:
   push:
-    branches: [main, simualdor-CalSisSw, simulador-SegSisSw, simulador-API]
+    branches: [main, simualdor-CalSisSw, simulador-SegSisSw, simulador-API, simulador-REQ]
   pull_request:
     branches: [main]
 jobs:

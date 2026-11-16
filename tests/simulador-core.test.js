@@ -120,3 +120,31 @@ test('StorageAdapter emite cambios locales con prioridad de sincronizacion', () 
     if(originalCustomEvent===undefined) delete globalThis.CustomEvent; else globalThis.CustomEvent=originalCustomEvent;
   }
 });
+
+
+test('corrige respuestas múltiples solo cuando coinciden todas las opciones correctas', () => {
+  const multi=[
+    {id:'m1',cuestion:'Pregunta múltiple',opciones:['A. Una','B. Dos','C. Tres','D. Cuatro'],solucion:'AC'},
+    {id:'m2',cuestion:'Pregunta múltiple 2',opciones:['A. Una','B. Dos','C. Tres','D. Cuatro'],solucion:'BCD'}
+  ];
+  const exact=grade(multi,{0:[2,0],1:[1,2,3]},{correct:1,incorrect:-1/3,blank:0},({correct,incorrect,questionCount})=>((correct-incorrect/3)/questionCount)*10);
+  assert.deepEqual([exact.correct,exact.incorrect,exact.blank,exact.score],[2,0,0,10]);
+  const partial=grade(multi,{0:[0],1:[1,2,3]},{correct:1,incorrect:-1/3,blank:0});
+  assert.deepEqual([partial.correct,partial.incorrect,partial.blank],[1,1,0]);
+  assert.equal(partial.errors[0].correct,'A. Una · C. Tres');
+});
+
+test('permite seleccionar y deseleccionar opciones múltiples y confirmar en práctica', () => {
+  let state;
+  const multiQuestions=[{id:'m1',cuestion:'Pregunta múltiple',opciones:['A. Una','B. Dos','C. Tres'],solucion:'AC'}];
+  const engine=new ExamEngine({config:{...config,examQuestionCount:1,practiceQuestionCount:1},questions:multiQuestions,profileManager:profiles,history,sessionStore:sessions,failedQuestions:failures,onChange:value=>{state=value;}});
+  engine.start('practice');
+  engine.answer(0);engine.answer(1);engine.answer(1);engine.answer(2);
+  assert.deepEqual(state.answers[0],[0,2]);
+  assert.deepEqual(state.confirmedAnswers,[]);
+  engine.confirmAnswer();
+  assert.deepEqual(state.confirmedAnswers,[0]);
+  engine.answer(1);
+  assert.deepEqual(state.answers[0],[0,2]);
+  engine.finish();
+});
