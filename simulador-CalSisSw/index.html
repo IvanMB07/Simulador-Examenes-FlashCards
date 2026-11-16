@@ -21,70 +21,13 @@
         <h1>Calidad de Sistemas Software</h1>
         <p>Practica, examínate y consulta tu evolución.</p>
       </div>
-    </header>
 
-    <section id="menu" class="page panel">
-      <div class="home-heading">
-        <div>
-          <span class="section-kicker">TU ESPACIO DE ESTUDIO</span>
-          <h2>¿Qué quieres trabajar hoy?</h2>
-        </div>
-        <div class="home-heading-actions">
-          <button type="button" class="history-shortcut" data-view="history">Ver estadísticas <span aria-hidden="true">↗</span></button>
-        </div>
-      </div>
-
-      <div class="resume" id="resumePanel" hidden>
-        <div><strong>Hay una sesión guardada</strong><p id="resumeText"></p></div>
-        <button id="resumeButton" type="button">Reanudar</button>
-        <button id="discardButton" class="secondary" type="button">Descartar</button>
-      </div>
-
-
-      <div class="mode-heading"><svg class="subsection-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6 12 2l8 4-8 4-8-4Z"/><path d="m4 12 8 4 8-4M4 18l8 4 8-4"/></svg><h3>Elige un modo</h3></div>
-      <div class="mode-grid">
-        <article class="mode-card mode-practice">
-          <div class="mode-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="17"/><circle cx="24" cy="24" r="10"/><circle cx="24" cy="24" r="3"/><path d="m31 17 8-8"/></svg></div>
-          <div class="mode-copy"><span class="mode-label">MODO 01</span><h3>Práctica</h3><p>Preguntas aleatorias con feedback inmediato.</p></div>
-          <button id="startPractice" class="mode-action" type="button"><span>Empezar práctica</span><span aria-hidden="true">›</span></button>
-        </article>
-        <article class="mode-card mode-exam">
-          <div class="mode-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="m5 17 19-10 19 10-19 10L5 17Z"/><path d="M12 22v12c7 6 17 6 24 0V22M24 27v13"/></svg></div>
-          <div class="mode-copy"><span class="mode-label">MODO 02</span><h3>Examen</h3><p>20 preguntas · 75 minutos · puntuación directa.</p></div>
-          <button id="startExam" class="mode-action" type="button"><span>Empezar examen</span><span aria-hidden="true">›</span></button>
-        </article>
-        <article class="mode-card mode-failures">
-          <div class="mode-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M9 20a16 16 0 1 1 2 14"/><path d="M9 10v11h11"/></svg></div>
-          <div class="mode-copy"><span class="mode-label">MODO 03</span><h3>Test de fallos</h3><p>Repasa las preguntas que has respondido mal o has dejado en blanco.</p></div>
-          <button id="startFailures" class="mode-action" type="button" disabled><span>Repasar fallos</span><span aria-hidden="true">›</span></button>
-        </article>
-      </div>
-
-      <section id="topicSettings" class="topic-settings topic-settings-wide" aria-labelledby="topicsHeading">
-        <div class="topic-settings-heading">
-          <div class="subsection-heading">
-            <svg class="subsection-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg>
-            <h3 id="topicsHeading">Seleccionar temas <small>(solo práctica)</small></h3>
-          </div>
-          <strong id="questionBankCount" class="topic-question-count">Cargando preguntas…</strong>
-        </div>
-        <div id="topicFilters" class="topic-filters"></div>
-        <p id="topicDistribution" class="topic-distribution" aria-live="polite"></p>
-        <label class="setting-row topic-order-setting" for="orderByTopic">
-          <span><strong>Ordenador por temas</strong><small>Agrupa las preguntas según el tema seleccionado.</small></span>
-          <span class="switch"><input id="orderByTopic" type="checkbox"><span aria-hidden="true"></span></span>
-        </label>
-        <label class="setting-row topic-order-setting" for="shuffleAnswers">
-          <span><strong>Barajar respuestas</strong><small>Cambia el orden de las opciones en cada sesión.</small></span>
-          <span class="switch"><input id="shuffleAnswers" type="checkbox"><span aria-hidden="true"></span></span>
-        </label>
-        <label class="setting-row topic-order-setting" for="autoAdvanceHome">
-          <span><strong>Modo turbo</strong><small>Avanza automáticamente al responder durante el examen.</small></span>
-          <span class="switch"><input id="autoAdvanceHome" type="checkbox"><span aria-hidden="true"></span></span>
-        </label>
-      </section>
-
-      <section class="profile-sync-panel" aria-label="Perfil y sincronización">
+      <details class="profile-menu">
+        <summary class="profile-menu-trigger" aria-label="Abrir perfil y sincronización">
+          <span class="profile-menu-avatar" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M4.5 20c.8-4 3.3-6 7.5-6s6.7 2 7.5 6"/></svg></span>
+          <span class="profile-menu-label">Perfil</span><span class="profile-menu-chevron" aria-hidden="true">⌄</span>
+        </summary>
+        <div class="profile-menu-content"><section class="profile-sync-panel" aria-label="Perfil y sincronización">
         <div class="profile-sync-grid">
         <section class="profile-card" id="profileControls" aria-labelledby="profileHeading">
           <div class="subsection-heading">
@@ -141,14 +84,67 @@
           </section>
         </section>
         </div>
-      </section>
+      </section></div>
+      </details>
+    </header>
 
-      <section class="stats" aria-label="Resumen del progreso">
-        <div><span>Sesiones guardadas</span><strong id="historyCount">0</strong></div>
-        <div><span>Preguntas falladas</span><strong id="failedCount">0</strong></div>
-        <div><span>Puntuación</span><strong>+1 / −0,5 / 0</strong></div>
-      </section>
+    <section id="menu" class="page panel">
+      <div class="home-heading">
+        <div>
+          <span class="section-kicker">TU ESPACIO DE ESTUDIO</span>
+          <h2>¿Qué quieres trabajar hoy?</h2>
+        </div>
+      </div>
 
+      <div class="resume" id="resumePanel" hidden>
+        <div><strong>Hay una sesión guardada</strong><p id="resumeText"></p></div>
+        <button id="resumeButton" type="button">Reanudar</button>
+        <button id="discardButton" class="secondary" type="button">Descartar</button>
+      </div>
+
+
+      <div class="mode-heading"><svg class="subsection-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6 12 2l8 4-8 4-8-4Z"/><path d="m4 12 8 4 8-4M4 18l8 4 8-4"/></svg><h3>Elige un modo</h3></div>
+      <div class="mode-grid">
+        <article class="mode-card mode-practice">
+          <div class="mode-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="17"/><circle cx="24" cy="24" r="10"/><circle cx="24" cy="24" r="3"/><path d="m31 17 8-8"/></svg></div>
+          <div class="mode-copy"><span class="mode-label">MODO 01</span><h3>Práctica</h3><p>Preguntas aleatorias con feedback inmediato.</p></div>
+          <button id="startPractice" class="mode-action" type="button"><span>Empezar práctica</span><span aria-hidden="true">›</span></button>
+        </article>
+        <article class="mode-card mode-exam">
+          <div class="mode-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="m5 17 19-10 19 10-19 10L5 17Z"/><path d="M12 22v12c7 6 17 6 24 0V22M24 27v13"/></svg></div>
+          <div class="mode-copy"><span class="mode-label">MODO 02</span><h3>Examen</h3><p>20 preguntas · 75 minutos · puntuación directa.</p></div>
+          <button id="startExam" class="mode-action" type="button"><span>Empezar examen</span><span aria-hidden="true">›</span></button>
+        </article>
+        <article class="mode-card mode-failures">
+          <div class="mode-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M9 20a16 16 0 1 1 2 14"/><path d="M9 10v11h11"/></svg></div>
+          <div class="mode-copy"><span class="mode-label">MODO 03</span><h3>Test de fallos</h3><p>Repasa las preguntas que has respondido mal o has dejado en blanco.</p></div>
+          <button id="startFailures" class="mode-action" type="button" disabled><span>Repasar fallos</span><span aria-hidden="true">›</span></button>
+        </article>
+      </div>
+
+      <section id="topicSettings" class="topic-settings topic-settings-wide" aria-labelledby="topicsHeading">
+        <div class="topic-settings-heading">
+          <div class="subsection-heading">
+            <svg class="subsection-svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg>
+            <h3 id="topicsHeading">Seleccionar temas <small>(solo práctica)</small></h3>
+          </div>
+          <strong id="questionBankCount" class="topic-question-count">Cargando preguntas…</strong>
+        </div>
+        <div id="topicFilters" class="topic-filters"></div>
+        <p id="topicDistribution" class="topic-distribution" aria-live="polite"></p>
+        <label class="setting-row topic-order-setting" for="orderByTopic">
+          <span><strong>Ordenador por temas</strong><small>Agrupa las preguntas según el tema seleccionado.</small></span>
+          <span class="switch"><input id="orderByTopic" type="checkbox"><span aria-hidden="true"></span></span>
+        </label>
+        <label class="setting-row topic-order-setting" for="shuffleAnswers">
+          <span><strong>Barajar respuestas</strong><small>Cambia el orden de las opciones en cada sesión.</small></span>
+          <span class="switch"><input id="shuffleAnswers" type="checkbox"><span aria-hidden="true"></span></span>
+        </label>
+        <label class="setting-row topic-order-setting" for="autoAdvanceHome">
+          <span><strong>Modo turbo</strong><small>Avanza automáticamente al responder durante el examen.</small></span>
+          <span class="switch"><input id="autoAdvanceHome" type="checkbox"><span aria-hidden="true"></span></span>
+        </label>
+      </section>
 
       <section class="data-tools" aria-label="Gestión de datos">
         <div class="action-row action-row-two">

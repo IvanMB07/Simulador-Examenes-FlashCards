@@ -225,8 +225,6 @@ function renderHome() {
   $('removeProfile').disabled=profiles.activeId==='default';
   const historyCount=history.list().length;
   const failedCount=failures.list().length;
-  $('historyCount').textContent=historyCount;
-  $('failedCount').textContent=failedCount;
   $('startFailures').disabled=failedCount===0;
   $('clearFailures').disabled=failedCount===0;
   $('clearHistory').disabled=historyCount===0;
