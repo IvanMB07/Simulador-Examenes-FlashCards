@@ -1,711 +1,21 @@
 [
   {
-    "cuestion": "CalSisSw-T1-01-Pregunta: Según Joseph M. Juran, ¿cuál de las siguientes afirmaciones resume mejor su definición estandarizada de la calidad?",
+    "cuestion": "CalSisSw-T4-01-Pregunta: En la disciplina conocida como Ingeniería del Software Empírica (ESE), ¿en qué elemento fundamental se basa?",
     "opciones": [
-      "A. Conformidad respecto a los requisitos.",
-      "B. Adecuación al uso.",
-      "C. La pérdida que un producto causa a la sociedad tras su envío.",
-      "D. Ausencia de defectos en el proceso de fabricación."
+      "A. En la aplicación de normas sin observar los resultados de su uso.",
+      "B. En la experimentación, la recogida sistemática de datos y el análisis de evidencias empíricas.",
+      "C. En la opinión individual de los desarrolladores con más experiencia.",
+      "D. En la deducción teórica sin contrastación con proyectos reales."
     ],
     "solucion": "B"
-  },
-  {
-    "cuestion": "CalSisSw-T1-02-Pregunta: Según la visión de Genichi Taguchi, ¿cómo se define el concepto de calidad de un producto?",
-    "opciones": [
-      "A. Como la adecuación al uso definida exclusivamente por el cliente.",
-      "B. Como la conformidad estricta respecto a los requisitos técnicos especificados.",
-      "C. Como la pérdida que un producto causa a la sociedad después de ser entregado, distinta a su función intrínseca.",
-      "D. Como el grado en el que un conjunto de características cumple con los requisitos de la norma ISO 9001."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "CalSisSw-T1-03-Pregunta: ¿Qué autor de la historia de la calidad argumentaba que el término 'calidad' es a menudo malentendido como lujo o brillantez, y propuso definirlo estrictamente como la 'conformidad con los requisitos'?",
-    "opciones": [
-      "A. Philip B. Crosby",
-      "B. Joseph M. Juran",
-      "C. W. Edwards Deming",
-      "D. Kaoru Ishikawa"
-    ],
-    "solucion": "A"
-  },
-  {
-    "cuestion": "CalSisSw-T1-04-Pregunta: En el ámbito de la gestión de la calidad definida por ISO 9000, ¿qué término se utiliza para describir las acciones orientadas a 'proporcionar confianza' en que el producto cumplirá los requisitos de calidad?",
-    "opciones": [
-      "A. Planificación de la calidad.",
-      "B. Control de la calidad.",
-      "C. Aseguramiento de la calidad.",
-      "D. Auditoría de certificación."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "CalSisSw-T3-05-Pregunta: El ciclo de mejora continua utilizado como base en los sistemas de gestión de calidad (ISO 9001) se denomina Ciclo PDCA. ¿Qué significan sus siglas?",
-    "opciones": [
-      "A. Programar, Desarrollar, Controlar, Analizar.",
-      "B. Planificar, Hacer, Verificar, Actuar (Plan, Do, Check, Act).",
-      "C. Prevenir, Detectar, Corregir, Archivar.",
-      "D. Proponer, Diseñar, Codificar, Asegurar."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "CalSisSw-T1-06-Pregunta: ¿Cómo se denomina a la parte de la gestión de la calidad que está orientada a establecer los objetivos de la calidad y a la especificación de los procesos operativos necesarios para lograrlos?",
-    "opciones": [
-      "A. Control de la calidad.",
-      "B. Aseguramiento de la calidad.",
-      "C. Mejora de la calidad.",
-      "D. Planificación de la calidad."
-    ],
-    "solucion": "D"
-  },
-  {
-    "cuestion": "CalSisSw-T2-07-Pregunta: Dentro del modelo de costes de la calidad, ¿en qué categoría se clasificarían las auditorías de calidad y las certificaciones?",
-    "opciones": [
-      "A. Costes de prevención.",
-      "B. Costes de evaluación.",
-      "C. Costes de fallos internos.",
-      "D. Costes de fallos externos."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "CalSisSw-T2-01-Pregunta: ¿Qué herramienta de calidad se fundamenta en la regla del 80-20 para separar los problemas 'pocos vitales' de los 'muchos triviales'?",
-    "opciones": [
-      "A. El Diagrama de Ishikawa.",
-      "B. El Diagrama de Pareto.",
-      "C. El Gráfico de Control.",
-      "D. El Diagrama de Dispersión."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "CalSisSw-T2-02-Pregunta: Si en un proyecto de software surge un defecto recurrente y el equipo necesita identificar gráficamente todas las posibles causas raíz organizándolas por categorías (Método, Maquinaria, Personal, Material, etc.), ¿qué herramienta deberían utilizar?",
-    "opciones": [
-      "A. Diagrama de Dispersión.",
-      "B. Histograma.",
-      "C. Diagrama Causa-Efecto (Ishikawa).",
-      "D. Gráfico de Control."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "CalSisSw-T2-03-Pregunta: ¿Qué herramienta estadística se utilizaría para analizar gráficamente si existe algún tipo de correlación (positiva, negativa o nula) entre dos variables, como por ejemplo la experiencia en años de un programador y el número de defectos que introduce?",
-    "opciones": [
-      "A. Diagrama de Dispersión.",
-      "B. Diagrama de Afinidad.",
-      "C. Mapa Conceptual.",
-      "D. Histograma."
-    ],
-    "solucion": "A"
-  },
-  {
-    "cuestion": "CalSisSw-T2-04-Pregunta: Si un inspector de calidad de software necesita un formulario estructurado para ir anotando en tiempo real con 'marcas' o 'palitos' cada vez que ocurre un defecto específico durante las pruebas, ¿qué herramienta utilizará?",
-    "opciones": [
-      "A. Histograma.",
-      "B. Diagrama de Pareto.",
-      "C. Diagrama de afinidad.",
-      "D. Hoja de chequeo."
-    ],
-    "solucion": "D"
-  },
-  {
-    "cuestion": "CalSisSw-T2-05-Pregunta: En la aplicación de la herramienta de Benchmarking, ¿qué se lleva a cabo durante la fase de 'Adaptar'?",
-    "opciones": [
-      "A. Formar al equipo multidisciplinar que liderará el estudio.",
-      "B. Identificar a los competidores más relevantes del mercado.",
-      "C. Desarrollar objetivos para los procesos e implementar planes de acción para cerrar la brecha con las mejores prácticas descubiertas.",
-      "D. Calcular el coste de la calidad y los fallos internos de la empresa."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "CalSisSw-T2-06-Pregunta: Cuando un equipo necesita analizar la relación existente entre dos conjuntos de factores (por ejemplo, relacionar las funciones requeridas del sistema frente a los requisitos técnicos) y marcar la intersección como relación Fuerte, Media o Débil, ¿qué herramienta debe utilizar?",
-    "opciones": [
-      "A. Histograma.",
-      "B. Diagrama de Afinidad.",
-      "C. Diagrama de Matriz.",
-      "D. Diagrama de Árbol."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "CalSisSw-T3-01-Pregunta: El principio de 'Enfoque basado en hechos para la toma de decisiones' de la familia de normas ISO 9000 implica que la organización debe:",
-    "opciones": [
-      "A. Tomar decisiones estratégicas basándose en la intuición y experiencia del líder.",
-      "B. Tomar decisiones basándose en el análisis de datos y de la información real.",
-      "C. Tomar decisiones copiando las mejores prácticas de la competencia (Benchmarking).",
-      "D. Eliminar cualquier proceso que no genere un beneficio económico directo."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "CalSisSw-T3-02-Pregunta: En la estructura del modelo europeo de excelencia EFQM, ¿en qué bloque principal se clasifica el 'Liderazgo'?",
-    "opciones": [
-      "A. En el bloque de Resultados.",
-      "B. En el bloque de Innovación y Aprendizaje.",
-      "C. En el bloque de Estrategia.",
-      "D. En el bloque de Facilitadores (Agentes)."
-    ],
-    "solucion": "D"
-  },
-  {
-    "cuestion": "CalSisSw-T3-03-Pregunta: Dentro del ecosistema de certificaciones ISO para el gobierno y gestión de Tecnologías de la Información, ¿qué estándar internacional establece específicamente los requisitos para los Sistemas de Gestión de Servicios TI (ITSM)?",
-    "opciones": [
-      "A. ISO/IEC 15504",
-      "B. ISO/IEC 20000-1",
-      "C. ISO/IEC 27001",
-      "D. ISO 22301"
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "CalSisSw-T4-01-Pregunta: En la gestión de proyectos de sistemas de información, ¿qué consecuencia directa tiene la acumulación continuada de 'Deuda Técnica'?",
-    "opciones": [
-      "A. Reduce el coste de mantenimiento a largo plazo.",
-      "B. Mejora la calidad del diseño arquitectónico del software.",
-      "C. Aumenta el coste de mantenimiento y eleva la probabilidad de errores futuros.",
-      "D. Permite alcanzar el Nivel 5 en modelos de madurez como CMMI."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "CalSisSw-T4-02-Pregunta: En ingeniería del software, el conocimiento que reside en la mente de las personas, basado en su experiencia y que es muy difícil de articular o poner por escrito, se denomina:",
-    "opciones": [
-      "A. Conocimiento Explícito.",
-      "B. Conocimiento Tácito.",
-      "C. Conocimiento Documentado.",
-      "D. Conocimiento Dinámico."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "CalSisSw-T4-03-Pregunta: En la gestión y calidad de sistemas de información, ¿cuál es la definición más precisa y completa de la figura del 'Stakeholder'?",
-    "opciones": [
-      "A. Exclusivamente el cliente que aporta el presupuesto para el proyecto.",
-      "B. Cualquier parte interesada que pueda afectar o verse afectada por el desarrollo o resultado del proyecto.",
-      "C. El equipo técnico de programadores y analistas.",
-      "D. El jefe de proyecto encargado de la gestión de riesgos."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "CalSisSw-T5-01-Pregunta: Según el modelo de calidad del producto software definido en la norma ISO/IEC 25010, ¿qué característica principal engloba subcaracterísticas como la confidencialidad, la integridad y el no repudio?",
-    "opciones": [
-      "A. Usabilidad.",
-      "B. Fiabilidad.",
-      "C. Seguridad.",
-      "D. Mantenibilidad."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "CalSisSw-T5-02-Pregunta: Según el modelo de calidad de producto de la norma ISO/IEC 25010, ¿qué característica principal evalúa atributos como la capacidad de aprendizaje, la operabilidad y la estética de la interfaz de usuario?",
-    "opciones": [
-      "A. Adecuación Funcional.",
-      "B. Mantenibilidad.",
-      "C. Eficiencia de desempeño.",
-      "D. Usabilidad."
-    ],
-    "solucion": "D"
-  },
-  {
-    "cuestion": "CalSisSw-T5-03-Pregunta: ¿Cuál es el estándar de la familia SQuaRE que define específicamente el proceso y las fases para llevar a cabo la evaluación de la calidad del producto software?",
-    "opciones": [
-      "A. ISO/IEC 25010",
-      "B. ISO/IEC 25020",
-      "C. ISO/IEC 25040",
-      "D. ISO/IEC 25030"
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "CalSisSw-T5-04-Pregunta: Según el modelo de calidad del producto software ISO/IEC 25010, ¿qué característica principal se encarga de evaluar el esfuerzo necesario para localizar errores, probar cambios o modificar el sistema en el futuro?",
-    "opciones": [
-      "A. Mantenibilidad.",
-      "B. Portabilidad.",
-      "C. Fiabilidad.",
-      "D. Adecuación Funcional."
-    ],
-    "solucion": "A"
-  },
-  {
-    "cuestion": "CalSisSw-T5-05-Pregunta: Un sistema informático hospitalario sufre un corte temporal en su base de datos externa, pero el software es capaz de guardar los datos en local y seguir operando sin bloquearse. Según ISO 25010, ¿qué característica de calidad destaca en este escenario?",
-    "opciones": [
-      "A. Eficiencia de desempeño.",
-      "B. Fiabilidad.",
-      "C. Seguridad.",
-      "D. Compatibilidad."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "CalSisSw-T5-06-Pregunta: Cuando hablamos de calidad, ¿a qué se refiere exactamente el concepto de 'Calidad en Uso' medido por la familia ISO 25000?",
-    "opciones": [
-      "A. Al cumplimiento estricto de las métricas de código, como la complejidad ciclomática.",
-      "B. Al grado en que el código fuente es comprensible para los nuevos desarrolladores.",
-      "C. Al grado en que usuarios específicos logran objetivos con efectividad, eficiencia y satisfacción en su entorno real.",
-      "D. Al número de defectos críticos detectados en el laboratorio de pruebas (AQC Lab)."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "CalSisSw-T5-07-Pregunta: Según el modelo ISO 25010, ¿qué característica principal evalúa si el software proporciona un conjunto apropiado de funciones para cubrir las tareas y objetivos especificados por el cliente?",
-    "opciones": [
-      "A. Fiabilidad.",
-      "B. Usabilidad.",
-      "C. Adecuación Funcional.",
-      "D. Eficiencia de desempeño."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "CalSisSw-T5-08-Pregunta: En el modelo de Calidad en Uso de ISO 25010, ¿cuál es la diferencia principal entre las características de 'Efectividad' y 'Eficiencia'?",
-    "opciones": [
-      "A. La Efectividad mide si el usuario logra alcanzar su objetivo con exactitud, y la Eficiencia mide la cantidad de recursos (tiempo, esfuerzo) que tuvo que invertir para lograrlo.",
-      "B. Son sinónimos exactos dentro de la norma SQuaRE.",
-      "C. La Efectividad evalúa el coste del desarrollo y la Eficiencia el número de defectos críticos en producción.",
-      "D. La Efectividad se mide sobre el código fuente (interna) y la Eficiencia sobre la interfaz de usuario (externa)."
-    ],
-    "solucion": "A"
-  },
-  {
-    "cuestion": "CalSisSw-T5-09-Pregunta: Dentro de la característica de Seguridad del producto (ISO 25010), ¿qué subcaracterística garantiza que se pueda demostrar legal o técnicamente que una acción o evento ha tenido lugar, impidiendo que el autor lo niegue a posteriori?",
-    "opciones": [
-      "A. Confidencialidad.",
-      "B. Integridad.",
-      "C. No repudio.",
-      "D. Autenticidad."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "CalSisSw-T5-10-Pregunta: En la norma ISO 25010, ¿qué subcaracterística de calidad mide el grado en que dos o más sistemas pueden intercambiar información y utilizar mutuamente la información intercambiada?",
-    "opciones": [
-      "A. Interoperabilidad.",
-      "B. Adaptabilidad.",
-      "C. Modularidad.",
-      "D. Coexistencia."
-    ],
-    "solucion": "A"
-  },
-  {
-    "cuestion": "CalSisSw-T5-11-Pregunta: Según el estándar ISO 25040, ¿cuál es el primer paso obligatorio antes de comenzar a ejecutar cualquier evaluación sobre la calidad de un producto software?",
-    "opciones": [
-      "A. Diseñar la evaluación.",
-      "B. Ejecutar las métricas automatizadas (ej: SonarQube).",
-      "C. Establecer los requisitos de la evaluación (propósito, alcance y rigor).",
-      "D. Emitir el informe de no conformidades."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "CalSisSw-T8-01-Pregunta: En CMMI V2.0, ¿qué caracteriza a las organizaciones que logran operar en los Niveles 4 (Gestionado Cuantitativamente) y 5 (En optimización)?",
-    "opciones": [
-      "A. La adopción de metodologías 100% ágiles sin documentación.",
-      "B. El uso intensivo de la estadística y técnicas cuantitativas para predecir, gestionar y optimizar el desempeño.",
-      "C. La dependencia exclusiva del 'heroísmo' individual de sus programadores.",
-      "D. La definición de estándares organizacionales y la adaptación de procesos a cada proyecto."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "CalSisSw-T6-02-Pregunta: En la norma ISO/IEC 33000, un proceso alcanza el Nivel de Capacidad 2 (Gestionado) cuando, además de alcanzar sus resultados básicos, se cumple que:",
-    "opciones": [
-      "A. Está completamente integrado con metodologías ágiles.",
-      "B. Utiliza técnicas estadísticas avanzadas para predecir sus fallos.",
-      "C. Su realización se planifica, se monitoriza, se ajusta y sus productos de trabajo están controlados adecuadamente.",
-      "D. El proceso se estandariza a nivel de toda la corporación global."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "CalSisSw-T6-03-Pregunta: Al buscar el Nivel 3 de madurez (Establecido), ¿cuál es el rasgo diferenciador del proceso respecto a los niveles inferiores?",
-    "opciones": [
-      "A. Se basa en un 'proceso estándar' de la organización, que se adapta a cada proyecto mediante guías de ajuste, en lugar de ser un proceso ad-hoc por proyecto.",
-      "B. El proceso ya no requiere planificación porque está completamente automatizado.",
-      "C. Se garantiza que el software generado está libre de cualquier defecto.",
-      "D. El equipo directivo deja de intervenir en la supervisión técnica."
-    ],
-    "solucion": "A"
-  },
-  {
-    "cuestion": "CalSisSw-T8-04-Pregunta: En CMMI V2.0, ¿qué área de práctica tiene como objetivo específico verificar objetivamente y habilitar la mejora continua de la calidad de los procesos que realiza el equipo?",
-    "opciones": [
-      "A. Gestión de Riesgos y Oportunidades (RSK).",
-      "B. Aseguramiento de Calidad de Procesos (PQA).",
-      "C. Solución Técnica (TS).",
-      "D. Monitorización y Control (MC)."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "CalSisSw-T6-05-Pregunta: En la norma ISO 33000, ¿qué hito distingue a una organización que ha alcanzado el Nivel 5 (Innovado) de una que se encuentra en el Nivel 4 (Predecible)?",
-    "opciones": [
-      "A. El proceso se gestiona utilizando límites estadísticos de control.",
-      "B. El proceso se adapta a cada proyecto a partir del estándar de la organización.",
-      "C. El proceso cambia y mejora continuamente basándose en la investigación de enfoques innovadores y la comprensión cuantitativa de las causas comunes de variación.",
-      "D. Se eliminan por completo todas las inspecciones manuales de código."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "CalSisSw-T8-06-Pregunta: En la estructura de CMMI V2.0, las Áreas de Práctica (PAs) se agrupan en grandes categorías. ¿A qué categoría pertenecen áreas como Estimación (EST) y Planificación (PLAN)?",
-    "opciones": [
-      "A. Hacer (Doing).",
-      "B. Gestionar (Managing).",
-      "C. Habilitar (Enabling).",
-      "D. Mejorar (Improving)."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "CalSisSw-T8-07-Pregunta: ¿Qué cambio estructural clave introduce la versión CMMI V2.0 respecto a las antiguas 'Áreas de Proceso' de las versiones anteriores?",
-    "opciones": [
-      "A. Las elimina por completo a favor de un listado único de tareas.",
-      "B. Las reestructura y las pasa a denominar 'Áreas de Práctica' (Practice Areas).",
-      "C. Las divide exclusivamente en procesos técnicos y procesos de acuerdo.",
-      "D. Las reemplaza por los 12 principios del Manifiesto Ágil."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "CalSisSw-T8-08-Pregunta: ¿Qué constelación o variante del modelo CMMI está diseñada específicamente para mejorar los procesos relacionados con la entrega, gestión y establecimiento de servicios, en lugar del desarrollo de software desde cero?",
-    "opciones": [
-      "A. CMMI-ACQ.",
-      "B. CMMI-SVC.",
-      "C. CMMI-DEV.",
-      "D. ISO/IEC 15504."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "CalSisSw-T8-09-Pregunta: Si una organización o administración pública necesita un marco de trabajo para mejorar los procesos involucrados en la contratación, externalización (outsourcing) y adquisición de software a terceros, ¿qué variante de CMMI debe aplicar?",
-    "opciones": [
-      "A. CMMI-SVC.",
-      "B. CMMI-DEV.",
-      "C. CMMI-ACQ.",
-      "D. SPEM."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "CalSisSw-T8-10-Pregunta: Según los grupos de prácticas de CMMI V2.0, ¿qué caracteriza a las organizaciones que logran consolidar el Nivel 2 en un área de práctica?",
-    "opciones": [
-      "A. Utilizan un enfoque incompleto y caótico para abordar el propósito del área.",
-      "B. Emplean un conjunto simple pero completo de prácticas que satisfacen el propósito del área sin requerir aún el uso de activos organizacionales estándar.",
-      "C. Utilizan técnicas cuantitativas y estadísticas para optimizar el rendimiento.",
-      "D. Utilizan de forma obligatoria activos organizacionales y directrices formales de adaptación (tailoring)."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "CalSisSw-T8-11-Pregunta: Selecciona la secuencia correcta de los cinco niveles de madurez clásicos del modelo CMMI para desarrollo (CMMI-DEV v1.3/CMM tradicional):",
-    "opciones": [
-      "A. Básico, Repetible, Establecido, Gestionado y Optimizado.",
-      "B. Inicial, Gestionado, Definido, Gestionado cuantitativamente y En Optimización.",
-      "C. Inicial, Repetible, Gestionado y Optimizado.",
-      "D. Incompleto, Básico, Establecido, Predecible e Innovado."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "CalSisSw-T7-01-Pregunta: ¿Cuál es el rasgo más distintivo del Modelo en Espiral formulado por Boehm respecto al modelo en cascada tradicional?",
-    "opciones": [
-      "A. La inclusión explícita del análisis de riesgos en cada ciclo antes de avanzar al desarrollo.",
-      "B. La prohibición de utilizar prototipos rápidos.",
-      "C. Su orientación exclusiva al desarrollo con lenguajes orientados a objetos.",
-      "D. La eliminación de las pruebas de integración."
-    ],
-    "solucion": "A"
-  },
-  {
-    "cuestion": "CalSisSw-T7-02-Pregunta: Según los valores fundamentales del Manifiesto Ágil, ¿qué elemento tiene mayor prioridad frente al 'seguimiento rígido de un plan preestablecido'?",
-    "opciones": [
-      "A. La respuesta ante el cambio.",
-      "B. La documentación exhaustiva del sistema.",
-      "C. La negociación contractual con el cliente.",
-      "D. El uso de herramientas y procesos estrictos."
-    ],
-    "solucion": "A"
-  },
-  {
-    "cuestion": "CalSisSw-T7-03-Pregunta: En el marco de trabajo Scrum, ¿dónde se almacena la lista priorizada de todos los requisitos, funcionalidades y mejoras que deben desarrollarse para el producto completo?",
-    "opciones": [
-      "A. En el Sprint Backlog.",
-      "B. En el Product Backlog.",
-      "C. En el Documento de Especificación de Requisitos (SRS).",
-      "D. En el Burndown Chart."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "CalSisSw-T7-04-Pregunta: En un ciclo de desarrollo con Scrum, si el equipo analiza el gráfico 'Burndown' a mitad del Sprint y la línea real de esfuerzo restante está considerablemente por encima de la línea ideal planificada, ¿qué lectura debe hacerse?",
-    "opciones": [
-      "A. Que el equipo va adelantado y terminará el trabajo antes de tiempo.",
-      "B. Que el equipo lleva retraso y hay más trabajo pendiente del previsto para esa fecha.",
-      "C. Que la calidad del código es deficiente y debe refactorizarse.",
-      "D. Que el cliente ha añadido nuevos requisitos al Product Backlog."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "CalSisSw-T7-05-Pregunta: ¿Cuál es la principal ventaja que aporta utilizar un ciclo de vida Incremental frente al modelo tradicional en Cascada puro?",
-    "opciones": [
-      "A. Elimina la necesidad de realizar pruebas de validación e integración.",
-      "B. Requiere mucha menos documentación inicial, abaratando el coste total.",
-      "C. Permite la entrega temprana de partes funcionales del sistema, aportando valor al cliente antes de acabar el proyecto entero.",
-      "D. Garantiza matemáticamente que el software no tendrá defectos en producción."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "CalSisSw-T7-06-Pregunta: ¿Cuál es el objetivo principal del estándar ISO/IEC 12207?",
-    "opciones": [
-      "A. Definir la estructura semántica de los lenguajes orientados a objetos.",
-      "B. Establecer los requisitos físicos para la seguridad en centros de datos.",
-      "C. Establecer un marco de referencia común que categoriza todos los Procesos del Ciclo de Vida del Software (acuerdo, organizacionales, gestión, técnicos).",
-      "D. Sustituir a las metodologías ágiles en el desarrollo de microservicios."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "CalSisSw-T7-07-Pregunta: Tomando como referencia la norma ISO/IEC 12207, ¿a qué gran grupo pertenecen procesos como la Planificación del Proyecto, la Evaluación y Control, y la Gestión de Riesgos?",
-    "opciones": [
-      "A. Procesos de Acuerdo.",
-      "B. Procesos Técnicos.",
-      "C. Procesos Organizacionales de Proyecto.",
-      "D. Procesos de Gestión Técnica."
-    ],
-    "solucion": "D"
-  },
-  {
-    "cuestion": "CalSisSw-T7-08-Pregunta: En el marco de trabajo Scrum, el Sprint es la iteración base de desarrollo. Según la teoría estándar ágil, ¿cuál es la duración máxima recomendada para un Sprint para mantener el ciclo de retroalimentación?",
-    "opciones": [
-      "A. 24 horas.",
-      "B. 30 días (o 4 semanas).",
-      "C. 3 meses (o un trimestre fiscal).",
-      "D. Depende del tamaño del proyecto, no hay límite."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "CalSisSw-T7-09-Pregunta: Según las definiciones clásicas en la calidad del software, ¿qué pregunta fundamental responde el proceso de 'Validación'?",
-    "opciones": [
-      "A. ¿Estamos construyendo el producto correctamente?",
-      "B. ¿El código compila sin errores de sintaxis?",
-      "C. ¿Estamos construyendo el producto correcto?",
-      "D. ¿El sistema cumple con el presupuesto y el calendario?"
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "CalSisSw-T7-10-Pregunta: En las estrategias de reutilización de software, ¿cómo se denomina al proceso que se encarga específicamente de analizar un ámbito de negocio para crear arquitecturas y componentes reutilizables aplicables a una familia entera de aplicaciones?",
-    "opciones": [
-      "A. Ingeniería de Requisitos.",
-      "B. Ingeniería de Producto.",
-      "C. Ingeniería de Sistemas.",
-      "D. Ingeniería de Dominio."
-    ],
-    "solucion": "D"
-  },
-  {
-    "cuestion": "CalSisSw-T7-11-Pregunta: ¿Qué modelo de ciclo de vida del software, formulado para mitigar la incertidumbre, está estrechamente relacionado con el uso de 'prototipos descartables' para clarificar requisitos antes de construir el sistema final?",
-    "opciones": [
-      "A. Modelo en Cascada puro.",
-      "B. Modelo en Espiral.",
-      "C. Metodología Scrum.",
-      "D. Modelo de Síntesis Automática (L4G)."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "CalSisSw-T6-12-Pregunta: En el contexto de los modelos de procesos y la ingeniería del software, ¿para qué sirve fundamentalmente SPEM (Software Process Engineering Metamodel)?",
-    "opciones": [
-      "A. Para describir proyectos software (planificación de tareas y recursos).",
-      "B. Para describir productos software (código fuente y arquitecturas).",
-      "C. Para describir procesos software.",
-      "D. Para auditar la seguridad de las bases de datos en producción."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "CalSisSw-T6-13-Pregunta: En el metamodelo SPEM, ¿qué elemento es el encargado de definir las responsabilidades y las habilidades necesarias para ejecutar una tarea?",
-    "opciones": [
-      "A. Producto de Trabajo (Work Product).",
-      "B. Tarea (Task).",
-      "C. Rol (Role).",
-      "D. Fase (Phase)."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "CalSisSw-T7-14-Pregunta: Según el paradigma de la ingeniería del software, el proceso software general se divide fundamentalmente en dos grandes subprocesos interrelacionados. ¿Cuáles son?",
-    "opciones": [
-      "A. Procesos de análisis y procesos de codificación.",
-      "B. Procesos iterativos y procesos ágiles.",
-      "C. Procesos funcionales y procesos organizacionales.",
-      "D. Procesos de producción (construcción) y procesos de gestión (planificación y control)."
-    ],
-    "solucion": "D"
-  },
-  {
-    "cuestion": "CalSisSw-T8-01-Pregunta: ¿Cuál es el propósito central del proyecto y marco metodológico COMPETISOFT?",
-    "opciones": [
-      "A. Proveer un lenguaje unificado de modelado para arquitecturas de hardware complejas.",
-      "B. Sustituir a los estándares ISO en la gran industria del software aeroespacial.",
-      "C. Fomentar la competitividad de las Pequeñas y Medianas Empresas (PyMEs) iberoamericanas de software mediante una mejora de procesos adaptada a sus necesidades.",
-      "D. Automatizar el desarrollo de código fuente a partir de diagramas UML."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "CalSisSw-T8-02-Pregunta: Al realizar una auditoría bajo modelos como ISO 33000 o MMIS, ¿cómo se catalogan aquellos artefactos (ej: actas de reunión, correos) que demuestran que una actividad se realizó, aunque no sean el producto principal de dicha actividad?",
-    "opciones": [
-      "A. Evidencias directas.",
-      "B. Evidencias indirectas.",
-      "C. Afirmaciones.",
-      "D. Metas cuantitativas."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "CalSisSw-T8-03-Pregunta: En el estándar de evaluación de procesos ISO/IEC 33000, los atributos de proceso (AP) evalúan su cumplimiento mediante una escala de calificación específica. ¿Cuál es?",
-    "opciones": [
-      "A. Una puntuación cuantitativa del 1 al 10.",
-      "B. Un formato binario simple (Cumple / No Cumple).",
-      "C. La escala N-P-L-F (No alcanzado, Parcialmente, Ampliamente, Totalmente alcanzado).",
-      "D. Una evaluación en porcentaje (0% a 100%)."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "CalSisSw-T8-04-Pregunta: En la evaluación de madurez organizacional bajo MMIS o ISO 33000, ¿qué condición matemática y estructural es indispensable para que una empresa certifique formalmente el Nivel 2 de Madurez?",
-    "opciones": [
-      "A. Que un solo proyecto de la empresa alcance el Nivel 2 en todos sus procesos.",
-      "B. Que se alcance, como mínimo, el nivel de capacidad requerido en TODOS y cada uno de los procesos asociados por el modelo a ese nivel de madurez.",
-      "C. Que la organización utilice metodologías ágiles y DevOps en todos sus departamentos.",
-      "D. Que la suma total de las puntuaciones de capacidad dé una media igual a 2, aunque algunos procesos estén en nivel 0."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "CalSisSw-T8-05-Pregunta: Dentro de la arquitectura de la norma ISO 33000, los Atributos de Proceso (AP) se desglosan en requisitos más pequeños y evaluables. ¿Qué nombre reciben estas prácticas detalladas que el auditor debe comprobar?",
-    "opciones": [
-      "A. Resultados de Proceso (RP).",
-      "B. Metas Cuantitativas.",
-      "C. Componentes de Atributo de Proceso (CAP).",
-      "D. Prácticas Genéricas (GP)."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "CalSisSw-T8-06-Pregunta: Un auditor de ISO 33000 detecta que en un proyecto existen evidencias directas de que se realizó una actividad, pero tras investigar, no encuentra ninguna evidencia indirecta ni logra obtener afirmaciones (en entrevistas) que respalden dicha evidencia. ¿Cuál debe ser su calificación?",
-    "opciones": [
-      "A. Observación (O).",
-      "B. No conformidad menor (NM).",
-      "C. No conformidad mayor (NC).",
-      "D. Punto Fuerte (F)."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "CalSisSw-T8-07-Pregunta: En una evaluación bajo la norma ISO 33000 o modelos derivados, la empresa auditada debe seleccionar una muestra representativa de los proyectos en curso. ¿Qué característica indispensable debe tener un 'Proyecto Objetivo' en esta muestra?",
-    "opciones": [
-      "A. Debe aportar evidencias de haber utilizado metodologías ágiles como Scrum.",
-      "B. Debe aportar evidencia objetiva de todos y cada uno de los procesos que se van a evaluar en el alcance de la auditoría.",
-      "C. Solo necesita aportar evidencias de los procesos de codificación y pruebas.",
-      "D. Debe ser el proyecto con mayor presupuesto de la organización."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "CalSisSw-T8-08-Pregunta: Dentro del marco de evaluación de procesos ISO/IEC 33000, ¿qué se requiere para alcanzar el Nivel de Capacidad 1 (Realizado)?",
-    "opciones": [
-      "A. Que el proceso esté institucionalizado y gestionado cuantitativamente.",
-      "B. Que el proceso alcance sus resultados definidos (RPs).",
-      "C. Que el proceso innove y cambie dinámicamente frente a las tecnologías.",
-      "D. Que el proceso disponga de un proceso estándar de la organización."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "CalSisSw-T8-09-Pregunta: En la norma ISO/IEC 33000, ¿qué diferencia fundamental existe entre evaluar la 'Capacidad' y evaluar la 'Madurez'?",
-    "opciones": [
-      "A. La capacidad se mide del 1 al 10, y la madurez utiliza la escala N-P-L-F.",
-      "B. La capacidad se evalúa a nivel de un proceso individual, mientras que la madurez evalúa a toda la organización (o un conjunto predefinido de procesos).",
-      "C. La capacidad solo aplica a metodologías ágiles, y la madurez a ciclos en cascada.",
-      "D. Son exactamente el mismo concepto; los términos se usan como sinónimos."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "CalSisSw-T9-01-Pregunta: En la planificación de proyectos bajo metodologías ágiles (como Scrum), ¿qué métrica suele emplearse para predecir el ritmo de trabajo y la cantidad de Puntos de Historia que el equipo asume en futuras iteraciones?",
-    "opciones": [
-      "A. Velocidad (Velocity).",
-      "B. Líneas de Código (LOC).",
-      "C. Deuda Técnica.",
-      "D. Complejidad Ciclomática."
-    ],
-    "solucion": "A"
-  },
-  {
-    "cuestion": "CalSisSw-T9-02-Pregunta: En la disciplina conocida como Ingeniería del Software Empírica (ESE), ¿en qué elemento fundamental se basa?",
-    "opciones": [
-      "A. Seguir e implementar modas tecnológicas o metodológicas de forma masiva e impulsiva sin disponer de evidencias empíricas sobre su eficacia real.",
-      "B. En la rigurosa experimentación, recolección de evidencias y estudios de caso.",
-      "C. Indica que estudios que recopilan, evalúan y sintetizan toda la evidencia de estudios primarios existentes sobre una pregunta de investigación.",
-      "D. El número de caminos linealmente independientes a través de la estructura de control de un programa."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "CalSisSw-T9-03-Pregunta: En la metodología Practical Software Measurement (PSM), las necesidades de información se dividen en diferentes categorías. ¿Cuál de las siguientes es una categoría reconocida por PSM?",
-    "opciones": [
-      "A. Complejidad ciclomática orientada a objetos.",
-      "B. Tolerancia a fallos de hardware.",
-      "C. Tamaño y estabilidad del producto.",
-      "D. Impacto ambiental de los centros de datos."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "CalSisSw-T9-04-Pregunta: ¿A qué tipo de evaluación de sistemas se enfocan los conjuntos de métricas conocidos como MOOSE (de Chidamber y Kemerer) y MOOD (de Brito e Abreu)?",
-    "opciones": [
-      "A. A medir la complejidad de las bases de datos relacionales puras.",
-      "B. A evaluar el diseño y la arquitectura interna de sistemas orientados a objetos.",
-      "C. A medir la eficiencia energética de los servidores web.",
-      "D. A registrar la velocidad y progreso del equipo en metodologías ágiles."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "CalSisSw-T9-05-Pregunta: En la medición de calidad en contextos específicos, ¿qué modelo está orientado de forma particular a evaluar la calidad de los sitios y portales de Internet combinando características técnicas y de usabilidad?",
-    "opciones": [
-      "A. WQM (Web Quality Model).",
-      "B. SPEM.",
-      "C. CMMI-SVC.",
-      "D. Método GQM."
-    ],
-    "solucion": "A"
-  },
-  {
-    "cuestion": "CalSisSw-T9-06-Pregunta: En la teoría de la medición del software, la 'Complejidad Ciclomática' de McCabe es una métrica utilizada fundamentalmente para medir:",
-    "opciones": [
-      "A. El tamaño del sistema en líneas de código (LOC).",
-      "B. El esfuerzo estimado en meses-hombre (productividad).",
-      "C. El número de caminos linealmente independientes a través de la estructura de control de un programa.",
-      "D. El número de clases hijo que heredan de una clase padre."
-    ],
-    "solucion": "C"
   },
   {
     "cuestion": "CalSisSw-T1-01-Pregunta: Según Joseph M. Juran, ¿cuál es la definición estandarizada y sintética del concepto de calidad?",
     "opciones": [
-      "A. La totalidad de características y aspectos de un producto o servicio para satisfacer una necesidad dada (adecuación al uso).",
-      "B. Como la pérdida que un producto causa a la sociedad después de ser entregado, distinta a su función intrínseca.",
-      "C. Adecuación al uso (fitness for use).",
-      "D. Multidimensional, sujeto a restricciones y basado en compromisos aceptables."
+      "A. La conformidad con los requisitos establecidos.",
+      "B. La pérdida que el producto causa a la sociedad tras su entrega.",
+      "C. La adecuación al uso (fitness for use).",
+      "D. La mejora continua de los procesos y del liderazgo."
     ],
     "solucion": "C"
   },
@@ -880,7 +190,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T3-19-Pregunta: El ciclo de mejora continua PDCA es un pilar esencial en la gestión de la calidad. Sus siglas significan:",
+    "cuestion": "CalSisSw-T3-01-Pregunta: El ciclo de mejora continua PDCA es un pilar esencial en la gestión de la calidad. Sus siglas significan:",
     "opciones": [
       "A. Planificar, Hacer, Verificar, Actuar (Plan, Do, Check, Act).",
       "B. Control de la calidad (Quality Control).",
@@ -890,7 +200,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T3-20-Pregunta: En la fase 'P' (Planificar) del ciclo PDCA aplicado a un proceso, la organización debe:",
+    "cuestion": "CalSisSw-T3-02-Pregunta: En la fase 'P' (Planificar) del ciclo PDCA aplicado a un proceso, la organización debe:",
     "opciones": [
       "A. Tomar acciones para mejorar continuamente el desempeño de los procesos basándose en los resultados verificados.",
       "B. Establecer los objetivos y procesos necesarios para conseguir los resultados de acuerdo con los requisitos.",
@@ -900,7 +210,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "CalSisSw-T3-21-Pregunta: En la fase 'D' (Hacer / Do) del ciclo PDCA, la tarea principal consiste en:",
+    "cuestion": "CalSisSw-T3-03-Pregunta: En la fase 'D' (Hacer / Do) del ciclo PDCA, la tarea principal consiste en:",
     "opciones": [
       "A. Tomar acciones para mejorar continuamente el desempeño de los procesos basándose en los resultados verificados.",
       "B. Establecer los objetivos y procesos necesarios para conseguir los resultados de acuerdo con los requisitos.",
@@ -910,7 +220,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T3-22-Pregunta: En la fase 'C' (Verificar / Check) del ciclo PDCA, se lleva a cabo:",
+    "cuestion": "CalSisSw-T3-04-Pregunta: En la fase 'C' (Verificar / Check) del ciclo PDCA, se lleva a cabo:",
     "opciones": [
       "A. Planificar, Hacer, Verificar, Actuar (Plan, Do, Check, Act).",
       "B. Implementar y ejecutar los procesos tal y como se han planificado.",
@@ -920,7 +230,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T3-23-Pregunta: En la fase 'A' (Actuar / Act) del ciclo PDCA, la organización debe:",
+    "cuestion": "CalSisSw-T3-05-Pregunta: En la fase 'A' (Actuar / Act) del ciclo PDCA, la organización debe:",
     "opciones": [
       "A. Tomar acciones para mejorar continuamente el desempeño de los procesos basándose en los resultados verificados.",
       "B. El seguimiento y la medición de los procesos y productos respecto a las políticas y objetivos, informando de los resultados.",
@@ -930,77 +240,77 @@
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T2-24-Pregunta: Dentro de la clasificación clásica de los costes de la calidad, ¿qué son los 'Costes de Prevención'?",
+    "cuestion": "CalSisSw-T2-01-Pregunta: Dentro de la clasificación clásica de los costes de la calidad, ¿qué son los 'Costes de Prevención'?",
     "opciones": [
-      "A. Costes derivados de inspecciones, auditorías y pruebas para evaluar el producto.",
-      "B. Inversiones realizadas para evitar y prevenir defectos antes de que ocurran (ej. formación, planificación, revisión de requisitos).",
-      "C. Costes de corregir defectos detectados antes de entregar el producto.",
-      "D. Costes de atender defectos descubiertos por el cliente después de la entrega."
+      "A. Costes de evaluación: inspecciones, mediciones y auditorías.",
+      "B. Inversiones para evitar defectos antes de que ocurran, como formación y revisión de requisitos.",
+      "C. Costes de fallos internos: reprocesos y correcciones antes de la entrega.",
+      "D. Costes de fallos externos: garantías y reparaciones tras la entrega."
     ],
     "solucion": "B"
   },
   {
-    "cuestion": "CalSisSw-T2-25-Pregunta: ¿En qué categoría de costes de la calidad se clasifican las auditorías de calidad, las inspecciones y los ensayos de laboratorio?",
+    "cuestion": "CalSisSw-T2-02-Pregunta: ¿En qué categoría de costes de la calidad se clasifican las auditorías de calidad, las inspecciones y los ensayos de laboratorio?",
     "opciones": [
-      "A. Inversiones realizadas para evitar y prevenir defectos antes de que ocurran (ej. formación, planificación, revisión de requisitos).",
-      "B. Aumentar los costes de prevención reduce drásticamente los costes de fallos y el coste total de la calidad.",
-      "C. Costes de evaluación (o apreciación).",
-      "D. la gestión económica de la calidad."
+      "A. Costes de prevención.",
+      "B. Costes de fallos internos.",
+      "C. Costes de evaluación.",
+      "D. Costes de fallos externos."
     ],
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T1-26-Pregunta: Los 'Costes de Fallos Internos' son aquellos que se producen cuando:",
+    "cuestion": "CalSisSw-T2-03-Pregunta: Los 'Costes de Fallos Internos' son aquellos que se producen cuando:",
     "opciones": [
-      "A. Ocurrir cuando el defecto es descubierto por el usuario o cliente final tras la entrega (ej. garantías, penalizaciones, pérdida de reputación).",
-      "B. Inversiones realizadas para evitar y prevenir defectos antes de que ocurran (ej. formación, planificación, revisión de requisitos).",
-      "C. la gestión económica de la calidad.",
-      "D. El defecto se detecta dentro de la organización antes de que el producto sea entregado al cliente (ej. reescritura de código, re-pruebas)."
+      "A. El defecto se detecta después de que el cliente recibe el producto.",
+      "B. Se realizan actividades planificadas para evitar defectos.",
+      "C. Se inspecciona el producto para evaluar si cumple los requisitos.",
+      "D. El defecto se detecta antes de la entrega y la organización debe corregirlo."
     ],
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T1-27-Pregunta: Los 'Costes de Fallos Externos' se caracterizan por:",
+    "cuestion": "CalSisSw-T2-04-Pregunta: Los 'Costes de Fallos Externos' se caracterizan por:",
     "opciones": [
-      "A. Ocurrir cuando el defecto es descubierto por el usuario o cliente final tras la entrega (ej. garantías, penalizaciones, pérdida de reputación).",
-      "B. la gestión económica de la calidad.",
-      "C. Inversiones realizadas para evitar y prevenir defectos antes de que ocurran (ej. formación, planificación, revisión de requisitos).",
-      "D. El defecto se detecta dentro de la organización antes de que el producto sea entregado al cliente (ej. reescritura de código, re-pruebas)."
+      "A. El defecto llega al cliente y se generan garantías, reparaciones o reclamaciones.",
+      "B. Se detecta un defecto durante las pruebas internas.",
+      "C. Se imparte formación para reducir errores.",
+      "D. Se realizan inspecciones para evaluar la conformidad."
     ],
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T2-28-Pregunta: Según la evolución del concepto de costes de calidad, la tendencia moderna sostiene que:",
+    "cuestion": "CalSisSw-T2-05-Pregunta: Según la evolución del concepto de costes de calidad, la tendencia moderna sostiene que:",
     "opciones": [
-      "A. la gestión económica de la calidad.",
-      "B. Aumentar los costes de prevención reduce drásticamente los costes de fallos y el coste total de la calidad.",
-      "C. Costes de evaluación.",
-      "D. Adecuación al uso (fitness for use)."
+      "A. Los costes de prevención deben reducirse al mínimo, aunque aumenten los defectos.",
+      "B. Aumentar la inversión en prevención puede reducir los fallos y el coste total de la calidad.",
+      "C. Los costes de evaluación sustituyen por completo a los costes de prevención.",
+      "D. Los fallos externos no deben incluirse en el coste de la calidad."
     ],
     "solucion": "B"
   },
   {
-    "cuestion": "CalSisSw-T1-29-Pregunta: ¿Cuál de los siguientes es un ejemplo directo de un Coste de Prevención en ingeniería del software?",
+    "cuestion": "CalSisSw-T2-06-Pregunta: ¿Cuál de los siguientes es un ejemplo directo de un Coste de Prevención en ingeniería del software?",
     "opciones": [
-      "A. Inversiones realizadas para evitar y prevenir defectos antes de que ocurran (ej. formación, planificación, revisión de requisitos).",
-      "B. El coste de desechar y rehacer un módulo de software defectuoso antes del pase a producción.",
-      "C. Formar a los desarrolladores en buenas prácticas de código limpio y realizar análisis de riesgos.",
-      "D. la gestión económica de la calidad."
+      "A. Reparar un defecto comunicado por el cliente.",
+      "B. Repetir pruebas tras detectar un fallo interno.",
+      "C. Formar al equipo y revisar requisitos para evitar defectos.",
+      "D. Inspeccionar el producto terminado para detectar fallos."
     ],
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T1-30-Pregunta: ¿Cuál de los siguientes es un ejemplo de Coste de Fallo Interno?",
+    "cuestion": "CalSisSw-T2-07-Pregunta: ¿Cuál de los siguientes es un ejemplo de Coste de Fallo Interno?",
     "opciones": [
-      "A. establecer objetivos de calidad y especificar procesos necesarios.",
-      "B. Formar a los desarrolladores en buenas prácticas de código limpio y realizar análisis de riesgos.",
-      "C. Shewhart.",
-      "D. El coste de desechar y rehacer un módulo de software defectuoso antes del pase a producción."
+      "A. Planificar objetivos y procesos de calidad.",
+      "B. Formar a los desarrolladores para reducir errores.",
+      "C. Reparar un defecto después de que el producto llegue al cliente.",
+      "D. Rehacer un módulo defectuoso antes de la entrega."
     ],
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T3-91-Pregunta: Dentro del ciclo clásico de mejora continua PDCA (Planificar, Hacer, Verificar, Actuar), ¿qué tarea corresponde a la fase 'Verificar' (Check)?",
+    "cuestion": "CalSisSw-T3-06-Pregunta: Dentro del ciclo clásico de mejora continua PDCA (Planificar, Hacer, Verificar, Actuar), ¿qué tarea corresponde a la fase 'Verificar' (Check)?",
     "opciones": [
       "A. Establecer los objetivos y procesos necesarios para conseguir los resultados previstos.",
       "B. Implementar y ejecutar los procesos siguiendo la planificación establecida.",
@@ -1010,7 +320,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T2-01-Pregunta: ¿Qué herramienta básica de calidad se fundamenta en la regla del 80-20 para separar los 'pocos vitales' de los 'muchos triviales'?",
+    "cuestion": "CalSisSw-T2-08-Pregunta: ¿Qué herramienta básica de calidad se fundamenta en la regla del 80-20 para separar los 'pocos vitales' de los 'muchos triviales'?",
     "opciones": [
       "A. El Diagrama de Pareto.",
       "B. Hoja de chequeo.",
@@ -1020,7 +330,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T2-02-Pregunta: Si un equipo de calidad necesita analizar las causas raíz de un problema agrupándolas en categorías como Método, Material, Maquinaria, Mano de obra y Medio ambiente (5 M), debe usar:",
+    "cuestion": "CalSisSw-T2-09-Pregunta: Si un equipo de calidad necesita analizar las causas raíz de un problema agrupándolas en categorías como Método, Material, Maquinaria, Mano de obra y Medio ambiente (5 M), debe usar:",
     "opciones": [
       "A. Hoja de chequeo.",
       "B. Diagrama Causa-Efecto (Ishikawa / Espina de pescado).",
@@ -1030,7 +340,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "CalSisSw-T2-03-Pregunta: ¿Qué herramienta estadística permite evaluar la relación o correlación gráfica entre dos variables cuantitativas (ej. horas de formación vs. número de errores)?",
+    "cuestion": "CalSisSw-T2-10-Pregunta: ¿Qué herramienta estadística permite evaluar la relación o correlación gráfica entre dos variables cuantitativas (ej. horas de formación vs. número de errores)?",
     "opciones": [
       "A. El Diagrama de Pareto.",
       "B. Diagrama de Afinidad (Método KJ).",
@@ -1040,7 +350,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T2-04-Pregunta: Un formulario estructurado que se utiliza para registrar la frecuencia de ocurrencia de eventos o defectos en tiempo real se denomina:",
+    "cuestion": "CalSisSw-T2-11-Pregunta: Un formulario estructurado que se utiliza para registrar la frecuencia de ocurrencia de eventos o defectos en tiempo real se denomina:",
     "opciones": [
       "A. Diagrama de Dispersión.",
       "B. Descomponer sistemáticamente un objetivo general en subobjetivos y acciones detalladas (estructura jerárquica).",
@@ -1050,7 +360,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T2-05-Pregunta: El Histograma es una representación gráfica de barras que sirve para:",
+    "cuestion": "CalSisSw-T2-12-Pregunta: El Histograma es una representación gráfica de barras que sirve para:",
     "opciones": [
       "A. Mostrar la distribución de frecuencias de un conjunto de datos continuos o cuantitativos.",
       "B. Determinar si un proceso se encuentra en estado de control estadístico o si existen causas especiales de variación.",
@@ -1060,17 +370,17 @@
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T2-06-Pregunta: Los Gráficos de Control se utilizan en el control estadístico de procesos para:",
+    "cuestion": "CalSisSw-T2-13-Pregunta: Los Gráficos de Control se utilizan en el control estadístico de procesos para:",
     "opciones": [
-      "A. Descomponer sistemáticamente un objetivo general en subobjetivos y acciones detalladas (estructura jerárquica).",
-      "B. Determinar si un proceso se encuentra en estado de control estadístico o si existen causas especiales de variación.",
-      "C. Su propósito principal es identificar variaciones por causas asignables o especiales en el proceso.",
-      "D. Desarrollar objetivos para los procesos e implementar planes de acción concretos para cerrar la brecha con las mejores prácticas identificadas."
+      "A. Representar la distribución de frecuencias de una variable.",
+      "B. Comprobar si la variación del proceso se mantiene dentro de límites de control.",
+      "C. Identificar la relación de correlación entre dos variables.",
+      "D. Ordenar las causas de un problema según su frecuencia."
     ],
     "solucion": "B"
   },
   {
-    "cuestion": "CalSisSw-T2-07-Pregunta: ¿Qué herramienta de gestión y planificación permite agrupar un gran número de ideas o datos desordenados en categorías basadas en sus relaciones naturales?",
+    "cuestion": "CalSisSw-T2-14-Pregunta: ¿Qué herramienta de gestión y planificación permite agrupar un gran número de ideas o datos desordenados en categorías basadas en sus relaciones naturales?",
     "opciones": [
       "A. Diagrama Causa-Efecto (Ishikawa).",
       "B. Diagrama de Dispersión (Scatter Plot).",
@@ -1080,7 +390,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T2-08-Pregunta: El Diagrama de Árbol se utiliza principalmente para:",
+    "cuestion": "CalSisSw-T2-15-Pregunta: El Diagrama de Árbol se utiliza principalmente para:",
     "opciones": [
       "A. Determinar si un proceso se encuentra en estado de control estadístico o si existen causas especiales de variación.",
       "B. Hoja de chequeo (Check sheet).",
@@ -1090,7 +400,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T2-09-Pregunta: En la aplicación de un Diagrama de Matriz, el objetivo clave es:",
+    "cuestion": "CalSisSw-T2-16-Pregunta: En la aplicación de un Diagrama de Matriz, el objetivo clave es:",
     "opciones": [
       "A. Representar las relaciones y el grado de conexión (fuerte, media, débil) entre dos o más conjuntos de factores o requisitos.",
       "B. Hoja de chequeo.",
@@ -1100,177 +410,97 @@
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T2-10-Pregunta: La técnica FMEA / AMFE (Análisis de Modos de Fallo y sus Efectos) es una herramienta de diseño y prevención que busca:",
+    "cuestion": "CalSisSw-T2-17-Pregunta: La técnica FMEA / AMFE (Análisis de Modos de Fallo y sus Efectos) es una herramienta de diseño y prevención que busca:",
     "opciones": [
-      "A. Diagrama de Afinidad (Método KJ).",
-      "B. Identificar preventivamente los modos de fallo potenciales de un sistema, evaluar sus efectos y priorizar acciones correctivas según su Índice de Prioridad de Riesgo (NPR).",
-      "C. Diagrama de Dispersión (Scatter Plot).",
-      "D. El Diagrama de Pareto."
+      "A. Agrupar opiniones de usuarios en categorías.",
+      "B. Analizar de forma inductiva cómo los modos de fallo de un componente pueden afectar al sistema.",
+      "C. Representar la distribución estadística de los defectos observados.",
+      "D. Comparar el rendimiento de la organización con el de otras empresas."
     ],
     "solucion": "B"
   },
   {
-    "cuestion": "CalSisSw-T2-11-Pregunta: En el proceso de Benchmarking, la fase de 'Adaptar' implica:",
+    "cuestion": "CalSisSw-T2-18-Pregunta: En el proceso de Benchmarking, la fase de 'Adaptar' implica:",
     "opciones": [
-      "A. Determinar si un proceso se encuentra en estado de control estadístico o si existen causas especiales de variación.",
-      "B. Establecer claramente los objetivos de la encuesta y evaluar/validar el cuestionario antes de su aplicación masiva.",
-      "C. Desarrollar objetivos para los procesos e implementar planes de acción concretos para cerrar la brecha con las mejores prácticas identificadas.",
-      "D. Planificar, Analizar, Integrar y Adaptar (Acción)."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "CalSisSw-T2-12-Pregunta: ¿Cuáles son las 4 fases principales del proceso de Benchmarking?",
-    "opciones": [
-      "A. Su propósito principal es Método, Material, Maquinaria, Mano de obra, Medio ambiente.",
-      "B. Desarrollar objetivos para los procesos e implementar planes de acción concretos para cerrar la brecha con las mejores prácticas identificadas.",
-      "C. Desarrollar objetivos para los procesos e implementar planes de acción para cerrar la brecha con las mejores prácticas descubiertas.",
-      "D. Planificar, Analizar, Integrar y Adaptar (Acción)."
+      "A. Planificar el estudio y definir sus objetivos.",
+      "B. Recopilar datos sobre el proceso de referencia.",
+      "C. Analizar las diferencias entre el rendimiento y las prácticas.",
+      "D. Desarrollar objetivos y planes de acción, implantarlos y monitorizarlos."
     ],
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T2-13-Pregunta: En el diseño de Encuestas de Satisfacción del Cliente, una regla fundamental metodológica es:",
+    "cuestion": "CalSisSw-T2-19-Pregunta: ¿Cuáles son las 4 fases principales del proceso de Benchmarking?",
     "opciones": [
-      "A. Establecer claramente los objetivos de la encuesta y evaluar/validar el cuestionario antes de su aplicación masiva.",
-      "B. El Diagrama de Pareto.",
-      "C. Mostrar la distribución de frecuencias de un conjunto de datos continuos o cuantitativos.",
-      "D. Identificar preventivamente los modos de fallo potenciales de un sistema, evaluar sus efectos y priorizar acciones correctivas según su Índice de Prioridad de Riesgo (NPR)."
+      "A. Planificar, recopilar datos, analizar y adaptar.",
+      "B. Definir, medir, analizar y controlar.",
+      "C. Planificar, diseñar, verificar y certificar.",
+      "D. Identificar, priorizar, ejecutar y cerrar."
     ],
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T3-01-Pregunta: Dentro de la familia de normas ISO 9000, ¿cuál es la ÚNICA norma que contiene requisitos exigibles y es certificable?",
+    "cuestion": "CalSisSw-T2-20-Pregunta: En el diseño de Encuestas de Satisfacción del Cliente, una regla fundamental metodológica es:",
     "opciones": [
-      "A. Se caracteriza por que es la única certificable de la familia ISO 9000.",
-      "B. ISO 10006",
-      "C. UNE-EN ISO 9001",
-      "D. Se caracteriza por que proporciona orientación para el éxito sostenido más allá de los requisitos de ISO 9001."
+      "A. Definir los objetivos, diseñar y validar el cuestionario antes de recoger datos.",
+      "B. Recoger respuestas antes de definir qué se quiere medir.",
+      "C. Utilizar exclusivamente preguntas abiertas y evitar el análisis cuantitativo.",
+      "D. Modificar las respuestas para que coincidan con los objetivos de calidad."
+    ],
+    "solucion": "A"
+  },
+  {
+    "cuestion": "CalSisSw-T3-07-Pregunta: Dentro de la familia de normas ISO 9000, ¿cuál es la ÚNICA norma que contiene requisitos exigibles y es certificable?",
+    "opciones": [
+      "A. ISO 9000, fundamentos y vocabulario.",
+      "B. ISO 9004, orientación para el éxito sostenido.",
+      "C. ISO 9001, requisitos certificables del sistema de gestión de calidad.",
+      "D. Modelo EFQM, marco de excelencia organizativa."
     ],
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T3-02-Pregunta: ¿Cuál es el propósito fundamental de la norma UNE-EN ISO 9000?",
+    "cuestion": "CalSisSw-T3-08-Pregunta: ¿Cuál es el propósito fundamental de la norma UNE-EN ISO 9000?",
     "opciones": [
-      "A. La gestión para el éxito sostenido de una organización y la mejora continua del desempeño (no certificable).",
-      "B. Directrices para la gestión de la configuración.",
-      "C. UNE-EN ISO 9001",
-      "D. Establecer los fundamentos, el marco conceptual y el vocabulario de la gestión de la calidad."
+      "A. ISO 9001: requisitos de un sistema de gestión de calidad.",
+      "B. ISO 9004: orientación para el éxito sostenido.",
+      "C. Modelo EFQM: marco de excelencia.",
+      "D. ISO 9000: fundamentos, principios y vocabulario de gestión de calidad."
     ],
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T3-03-Pregunta: La norma UNE-EN ISO 9004 se enfoca principalmente en:",
+    "cuestion": "CalSisSw-T3-09-Pregunta: La norma UNE-EN ISO 9004 se enfoca principalmente en:",
     "opciones": [
-      "A. La gestión para el éxito sostenido de una organización y la mejora continua del desempeño (no certificable).",
-      "B. Directrices para la gestión de la configuración.",
-      "C. Se caracteriza por que proporciona orientación para el éxito sostenido más allá de los requisitos de ISO 9001.",
-      "D. Establecer los fundamentos, el marco conceptual y el vocabulario de la gestión de la calidad."
+      "A. ISO 9004: orientación para el éxito sostenido y la mejora del desempeño.",
+      "B. ISO 9001: requisitos certificables de un sistema de gestión de calidad.",
+      "C. ISO 9000: fundamentos y vocabulario.",
+      "D. Modelo EFQM: marco de excelencia organizativa."
     ],
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T3-04-Pregunta: ¿Qué norma proporciona directrices metodológicas transversales para la auditoría de sistemas de gestión de la calidad y de gestión ambiental?",
+    "cuestion": "CalSisSw-T3-10-Pregunta: Entre los 7 Principios de Gestión de la Calidad de la ISO 9000, el principio de 'Toma de decisiones basada en la evidencia' establece que:",
     "opciones": [
-      "A. ISO/IEC 27001",
-      "B. ISO 19011",
-      "C. ISO/IEC 20000-1",
-      "D. ISO 10006"
+      "A. Enfoque al cliente: comprender las necesidades y expectativas de quienes reciben el producto o servicio.",
+      "B. Enfoque basado en hechos: analizar datos e información objetiva antes de decidir.",
+      "C. Enfoque basado en procesos: gestionar actividades relacionadas como procesos.",
+      "D. Mejora: aumentar el desempeño mediante cambios y aprendizaje continuos."
     ],
     "solucion": "B"
-  },
-  {
-    "cuestion": "CalSisSw-T3-05-Pregunta: ¿Cuál es la guía internacional específica que adapta los requisitos de ISO 9001 al desarrollo, suministro y mantenimiento de software?",
-    "opciones": [
-      "A. ISO/IEC 20000-1",
-      "B. Se caracteriza por que proporciona orientación para aplicar ISO 9001 al desarrollo y soporte de software.",
-      "C. ISO/IEC 90003",
-      "D. ISO/IEC 27001"
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "CalSisSw-T3-06-Pregunta: Entre los 7 Principios de Gestión de la Calidad de la ISO 9000, el principio de 'Toma de decisiones basada en la evidencia' establece que:",
-    "opciones": [
-      "A. ISO 10006",
-      "B. ISO 19011",
-      "C. Se caracteriza por que gestionar las actividades interrelacionadas como un sistema coherente para optimizar resultados.",
-      "D. Las decisiones estratégicas deben fundamentarse en el análisis y la evaluación de datos e información objetiva."
-    ],
-    "solucion": "D"
-  },
-  {
-    "cuestion": "CalSisSw-T3-07-Pregunta: En la estructura del Modelo de Excelencia EFQM, los componentes se dividen tradicionalmente en dos grandes bloques:",
-    "opciones": [
-      "A. Agentes Facilitadores (Enablers) y Resultados.",
-      "B. La gestión para el éxito sostenido de una organización y la mejora continua del desempeño (no certificable).",
-      "C. Las decisiones estratégicas deben fundamentarse en el análisis y la evaluación de datos e información objetiva.",
-      "D. En el bloque de Facilitadores (Agentes)."
-    ],
-    "solucion": "A"
-  },
-  {
-    "cuestion": "CalSisSw-T3-08-Pregunta: ¿Qué estándar internacional especifica los requisitos para un Sistema de Gestión de Servicios de Tecnologías de la Información (ITSM)?",
-    "opciones": [
-      "A. ISO 19011",
-      "B. ISO/IEC 20000-1",
-      "C. ISO/IEC 27001",
-      "D. ISO/IEC 90003"
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "CalSisSw-T3-09-Pregunta: El estándar internacional dedicado a los requisitos para los Sistemas de Gestión de la Seguridad de la Información (SGSI) es:",
-    "opciones": [
-      "A. ISO/IEC 20000-1",
-      "B. ISO 19011",
-      "C. ISO/IEC 27001",
-      "D. Sistemas de Gestión de la Continuidad del Negocio."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "CalSisSw-T3-10-Pregunta: La norma ISO 22301 establece los requisitos para:",
-    "opciones": [
-      "A. ISO/IEC 20000-1",
-      "B. ISO/IEC 27001",
-      "C. Directrices para la gestión de la configuración.",
-      "D. Sistemas de Gestión de la Continuidad del Negocio."
-    ],
-    "solucion": "D"
   },
   {
     "cuestion": "CalSisSw-T3-11-Pregunta: En la norma ISO 9001, el apartado 8 'Operación' contempla actividades clave como:",
     "opciones": [
-      "A. La planificación y control operacional, diseño y desarrollo de productos/servicios y control de salidas no conformes.",
-      "B. Se caracteriza por que proporciona orientación para el éxito sostenido más allá de los requisitos de ISO 9001.",
-      "C. Sistemas de Gestión de la Continuidad del Negocio.",
-      "D. Se caracteriza por que es la única certificable de la familia ISO 9000."
+      "A. Contexto de la organización: contexto, partes interesadas y alcance del sistema.",
+      "B. Liderazgo: compromiso, política y responsabilidades.",
+      "C. Evaluación del desempeño: seguimiento, medición, auditoría interna y revisión por la dirección.",
+      "D. Operación: planificación y control operacional, diseño y desarrollo y control de salidas no conformes."
     ],
-    "solucion": "A"
+    "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T3-12-Pregunta: ¿Qué norma de apoyo de la serie ISO 10000 ofrece directrices para la gestión de la calidad en proyectos?",
-    "opciones": [
-      "A. Se caracteriza por que proporciona orientación para el éxito sostenido más allá de los requisitos de ISO 9001.",
-      "B. ISO 10006",
-      "C. ISO 19011",
-      "D. Se caracteriza por que es la única certificable de la familia ISO 9000."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "CalSisSw-T3-13-Pregunta: La norma ISO 10007 de la serie de apoyo a ISO 9000 se centra específicamente en:",
-    "opciones": [
-      "A. ISO 10006",
-      "B. UNE-EN ISO 9001",
-      "C. Directrices para la gestión de la configuración.",
-      "D. Establecer los fundamentos, el marco conceptual y el vocabulario de la gestión de la calidad."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "CalSisSw-T3-91-Pregunta: En la metodología de mejora de procesos Six Sigma, ¿a qué fases corresponden las siglas DMAIC?",
+    "cuestion": "CalSisSw-T3-12-Pregunta: En la metodología de mejora de procesos Six Sigma, ¿a qué fases corresponden las siglas DMAIC?",
     "opciones": [
       "A. Definir, Medir, Analizar, Mejorar y Controlar.",
       "B. Diseñar, Modelar, Analizar, Implementar y Comprobar.",
@@ -1280,7 +510,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T4-01-Pregunta: En la taxonomía de proyectos fracasados de software, el proyecto 'de padre desconocido' se caracteriza por:",
+    "cuestion": "CalSisSw-T4-02-Pregunta: En la taxonomía de proyectos fracasados de software, el proyecto 'de padre desconocido' se caracteriza por:",
     "opciones": [
       "A. Carecer de un jefe o liderazgo claramente definido.",
       "B. Intentar acumular el mayor número de tecnologías posibles sin verificar su compatibilidad e integración.",
@@ -1290,7 +520,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T4-02-Pregunta: El proyecto fracasado denominado 'gaudiniano' sufre de:",
+    "cuestion": "CalSisSw-T4-03-Pregunta: El proyecto fracasado denominado 'gaudiniano' sufre de:",
     "opciones": [
       "A. Intentar acumular el mayor número de tecnologías posibles sin verificar su compatibilidad e integración.",
       "B. Pretender abarcar más de lo que puede asumir y no finalizarse nunca.",
@@ -1300,7 +530,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "CalSisSw-T4-03-Pregunta: En las taxonomías de proyectos fracasados, el proyecto 'zoológico' destaca por:",
+    "cuestion": "CalSisSw-T4-04-Pregunta: En las taxonomías de proyectos fracasados, el proyecto 'zoológico' destaca por:",
     "opciones": [
       "A. Absorbe y consume recursos financieros de forma continua sin llegar a culminar jamás.",
       "B. Carecer de un jefe o liderazgo claramente definido.",
@@ -1310,7 +540,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T4-04-Pregunta: El proyecto denominado 'el hermano más listo' se produce cuando:",
+    "cuestion": "CalSisSw-T4-05-Pregunta: El proyecto denominado 'el hermano más listo' se produce cuando:",
     "opciones": [
       "A. Pretender abarcar más de lo que puede asumir y no finalizarse nunca.",
       "B. Consiste en generar un exceso de burocracia y supervisión que hace perder la operatividad.",
@@ -1320,7 +550,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T4-05-Pregunta: En la taxonomía de proyectos fracasados, el proyecto de 'agujero negro' se define como aquel que:",
+    "cuestion": "CalSisSw-T4-06-Pregunta: En la taxonomía de proyectos fracasados, el proyecto de 'agujero negro' se define como aquel que:",
     "opciones": [
       "A. Absorbe y consume recursos financieros de forma continua sin llegar a culminar jamás.",
       "B. Consiste en comenzar con gran entusiasmo y visibilidad pero terminar cayendo en el olvido.",
@@ -1330,37 +560,37 @@
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T4-09-Pregunta: En Gestión del Conocimiento (KM), el conocimiento que reside en la mente de las personas, basado en la experiencia y difícil de articular o escribir, se llama:",
+    "cuestion": "CalSisSw-T4-07-Pregunta: En Gestión del Conocimiento (KM), el conocimiento que reside en la mente de las personas, basado en la experiencia y difícil de articular o escribir, se llama:",
     "opciones": [
-      "A. Conocimiento Tácito.",
-      "B. Consiste en crear la capacidad y activos organizacionales para reaprovechar el conocimiento existente.",
-      "C. Capturar, representar y mantener registros de las razones e intenciones tras las decisiones de diseño tomadas por el equipo.",
-      "D. Consiste en generar un exceso de burocracia y supervisión que hace perder la operatividad."
-    ],
-    "solucion": "A"
-  },
-  {
-    "cuestion": "CalSisSw-T4-10-Pregunta: El conocimiento que está articulado, codificado y registrado en documentos, manuales o bases de datos se denomina:",
-    "opciones": [
-      "A. Consiste en generar un exceso de burocracia y supervisión que hace perder la operatividad.",
-      "B. Conocimiento Explícito.",
-      "C. Capturar, representar y mantener registros de las razones e intenciones tras las decisiones de diseño tomadas por el equipo.",
-      "D. Consiste en crear la capacidad y activos organizacionales para reaprovechar el conocimiento existente."
+      "A. Conocimiento explícito: está codificado y documentado.",
+      "B. Conocimiento tácito: reside en la experiencia personal y es difícil de formalizar.",
+      "C. Conocimiento archivado: se conserva exclusivamente en bases de datos.",
+      "D. Conocimiento normativo: procede de estándares y procedimientos oficiales."
     ],
     "solucion": "B"
   },
   {
-    "cuestion": "CalSisSw-T4-11-Pregunta: El método 'Design Rationale' en la Gestión del Conocimiento se utiliza para:",
+    "cuestion": "CalSisSw-T4-08-Pregunta: El conocimiento que está articulado, codificado y registrado en documentos, manuales o bases de datos se denomina:",
     "opciones": [
-      "A. Conocimiento Tácito.",
-      "B. Consiste en crear la capacidad y activos organizacionales para reaprovechar el conocimiento existente.",
-      "C. Capturar, representar y mantener registros de las razones e intenciones tras las decisiones de diseño tomadas por el equipo.",
-      "D. Consiste en generar un exceso de burocracia y supervisión que hace perder la operatividad."
+      "A. Conocimiento tácito: reside en la experiencia individual.",
+      "B. Conocimiento explícito: está codificado y puede almacenarse en documentos o bases de datos.",
+      "C. Conocimiento informal: solo se transmite oralmente.",
+      "D. Conocimiento intuitivo: no puede expresarse mediante símbolos."
+    ],
+    "solucion": "B"
+  },
+  {
+    "cuestion": "CalSisSw-T4-09-Pregunta: El método 'Design Rationale' en la Gestión del Conocimiento se utiliza para:",
+    "opciones": [
+      "A. Una técnica para almacenar y reutilizar métricas de rendimiento.",
+      "B. Un proceso para empaquetar experiencias de proyectos en una base corporativa.",
+      "C. Un método para registrar las decisiones de diseño y las razones que las justifican.",
+      "D. Un método para medir la calidad del producto durante su uso."
     ],
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T4-12-Pregunta: El Paradigma de Mejora de la Calidad (QIP - Quality Improvement Paradigm) y la Factoría de Experiencia fueron formulados por:",
+    "cuestion": "CalSisSw-T4-10-Pregunta: El Paradigma de Mejora de la Calidad (QIP - Quality Improvement Paradigm) y la Factoría de Experiencia fueron formulados por:",
     "opciones": [
       "A. Separa el desarrollo de proyectos de la recopilación, análisis y empaquetamiento de experiencias para su posterior reutilización.",
       "B. Consiste en querer avanzar demasiado rápido saltándose fases fundamentales (querer correr antes de andar).",
@@ -1370,24 +600,14 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T4-13-Pregunta: La 'Factoría de Experiencia' es una infraestructura organizativa cuya misión principal es:",
+    "cuestion": "CalSisSw-T4-11-Pregunta: La 'Factoría de Experiencia' es una infraestructura organizativa cuya misión principal es:",
     "opciones": [
-      "A. Separa el desarrollo de proyectos de la recopilación, análisis y empaquetamiento de experiencias para su posterior reutilización.",
-      "B. Consiste en el software de seguridad no debe sustituir completamente a los enclavamientos de hardware e investigaciones rigurosas ante fallos.",
-      "C. Basili y Caldiera (1995).",
-      "D. Conocimiento Tácito."
+      "A. Separar el trabajo diario de los proyectos del análisis, empaquetado y almacenamiento de experiencias reutilizables.",
+      "B. Asignar al equipo de desarrollo todas las tareas de gestión y medición corporativa.",
+      "C. Sustituir los procesos de producción por un repositorio de código fuente.",
+      "D. Realizar auditorías externas para certificar cada producto software."
     ],
     "solucion": "A"
-  },
-  {
-    "cuestion": "CalSisSw-T4-91-Pregunta: ¿En qué elemento fundamental se basa la disciplina conocida como Ingeniería del Software Empírica (ESE)?",
-    "opciones": [
-      "A. En la aplicación de estándares y normas para establecer procedimientos comunes de desarrollo.",
-      "B. En la experiencia individual de los desarrolladores como principal criterio para tomar decisiones.",
-      "C. En la obtención y análisis sistemático de evidencias empíricas mediante métodos como experimentos, encuestas y estudios de casos.",
-      "D. En la utilización de modelos teóricos para predecir el comportamiento del software sin realizar observaciones."
-    ],
-    "solucion": "C"
   },
   {
     "cuestion": "CalSisSw-T5-01-Pregunta: La familia de normas internacionales que regula la calidad del producto software (SQuaRE) corresponde a la serie:",
@@ -1410,12 +630,12 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T5-03-Pregunta: En la norma ISO/IEC 25010, ¿cuál de las siguientes es una característica principal del Modelo de Calidad del Producto Software?",
+    "cuestion": "CalSisSw-T5-03-Pregunta: ¿Cuál de las siguientes NO pertenece a las características del modelo de calidad del producto de ISO/IEC 25010?",
     "opciones": [
-      "A. Adecuación Funcional (Functional Suitability).",
-      "B. Mantenibilidad.",
-      "C. Seguridad.",
-      "D. Usabilidad."
+      "A. Satisfacción, característica del modelo de calidad en uso.",
+      "B. Ausencia de riesgo, característica del modelo de calidad en uso.",
+      "C. Cobertura de contexto, característica del modelo de calidad en uso.",
+      "D. Efectividad, característica del modelo de calidad en uso."
     ],
     "solucion": "A"
   },
@@ -1502,20 +722,20 @@
   {
     "cuestion": "CalSisSw-T5-12-Pregunta: La norma de la serie SQuaRE que define el proceso de evaluación de la calidad del producto software (sus 5 pasos) es:",
     "opciones": [
-      "A. Adecuación Funcional (Functional Suitability).",
-      "B. ISO/IEC 25040",
-      "C. AQC Lab (Aqclab).",
-      "D. 1. Establecer requisitos de evaluación, 2. Diseñar la evaluación, 3. Planificar la evaluación, 4. Ejecutar la evaluación, 5. Concluir la evaluación."
+      "A. ISO/IEC 25010: modelo de calidad del producto y calidad en uso.",
+      "B. ISO/IEC 25040: proceso de evaluación de la calidad del producto.",
+      "C. ISO/IEC 25020: marco de medición de la calidad.",
+      "D. ISO/IEC 25030: requisitos de calidad."
     ],
     "solucion": "B"
   },
   {
     "cuestion": "CalSisSw-T5-13-Pregunta: Las 5 actividades del proceso de evaluación del producto software según ISO/IEC 25040 son, en orden:",
     "opciones": [
-      "A. ISO/IEC 25040",
-      "B. Define definir el proceso de evaluación de la calidad del producto software estructurado en 5 pasos.",
-      "C. 1. Establecer requisitos de evaluación, 2. Diseñar la evaluación, 3. Planificar la evaluación, 4. Ejecutar la evaluación, 5. Concluir la evaluación.",
-      "D. Adecuación Funcional (Functional Suitability)."
+      "A. Establecer requisitos, ejecutar, diseñar, concluir y certificar.",
+      "B. Planificar, medir, analizar, corregir y auditar.",
+      "C. Establecer requisitos, especificar la evaluación, diseñar la evaluación, ejecutar y concluir.",
+      "D. Definir alcance, desarrollar, probar, desplegar y mantener."
     ],
     "solucion": "C"
   },
@@ -1532,32 +752,32 @@
   {
     "cuestion": "CalSisSw-T6-01-Pregunta: Un proceso software se define fundamentalmente como:",
     "opciones": [
-      "A. Un conjunto estructurado de actividades, métodos, prácticas y transformaciones que se utilizan para desarrollar y mantener el software y sus productos asociados.",
-      "B. Se refiere a que representa un elemento de información o artefacto producido, modificado o utilizado por una tarea (documento, código, modelo).",
-      "C. Se refiere a que reducir drásticamente el coste de corrección respecto a encontrarlos en fases tardías de pruebas o producción.",
-      "D. Se refiere a que una mala práctica en el código que no es un bug inmediato pero dificulta la mantenibilidad y legibilidad futura."
+      "A. Un conjunto estructurado de actividades, métodos, prácticas y transformaciones para desarrollar y mantener software y sus productos de trabajo.",
+      "B. Una secuencia fija de fases que no puede adaptarse al proyecto.",
+      "C. El conjunto de herramientas utilizadas exclusivamente para programar.",
+      "D. La especificación de los requisitos funcionales de un producto."
     ],
     "solucion": "A"
   },
   {
     "cuestion": "CalSisSw-T6-02-Pregunta: En el análisis de procesos software, las cuatro perspectivas clásicas descritas por Curtis et al. son:",
     "opciones": [
-      "A. Se refiere a que representa qué actividades y tareas se llevan a cabo y qué flujos de datos conectan las tareas.",
-      "B. Funcional, Comportamental (o de comportamiento), Organizacional e Informacional.",
-      "C. Los de producción se enfocan en la construcción técnica del producto, mientras que los de gestión se enfocan en la planificación, control y gestión de recursos.",
-      "D. Se refiere a que muestra cuándo y bajo qué condiciones de tiempo o eventos se ejecutan las actividades."
+      "A. Planificación, ejecución, control y mejora.",
+      "B. Funcional, comportamental, organizacional e informacional.",
+      "C. Producción, gestión, soporte y mantenimiento.",
+      "D. Requisitos, diseño, implementación y pruebas."
     ],
     "solucion": "B"
   },
   {
     "cuestion": "CalSisSw-T6-03-Pregunta: En la clasificación de procesos software, los 'Procesos de Producción' (o técnicos) se diferencian de los 'Procesos de Gestión' en que:",
     "opciones": [
-      "A. Funcional, Comportamental (o de comportamiento), Organizacional e Informacional.",
-      "B. Se refiere a que muestra cuándo y bajo qué condiciones de tiempo o eventos se ejecutan las actividades.",
-      "C. Los de producción se enfocan en la construcción técnica del producto, mientras que los de gestión se enfocan en la planificación, control y gestión de recursos.",
-      "D. CMMI-SVC."
+      "A. Los procesos de producción construyen y mantienen el producto; los de gestión planifican y controlan los recursos.",
+      "B. Los procesos de producción se ocupan de los contratos; los de gestión, de la adquisición.",
+      "C. Los procesos de producción definen la estructura organizativa; los de gestión, los productos de trabajo.",
+      "D. Ambos grupos describen únicamente actividades de codificación."
     ],
-    "solucion": "C"
+    "solucion": "A"
   },
   {
     "cuestion": "CalSisSw-T6-04-Pregunta: SPEM 2.0 (Software Process Engineering Metamodel) es un estándar creado por el OMG cuyo propósito principal es:",
@@ -1570,17 +790,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T6-05-Pregunta: En el marco de SPEM 2.0, el concepto de 'Method Content' (Contenido de Método) se diferencia de 'Process' en que:",
-    "opciones": [
-      "A. El Method Content define 'qué' se hace (roles, tareas, productos de trabajo), mientras que Process define 'cómo y cuándo' se aplica en un ciclo de vida específico.",
-      "B. La definición de un conjunto de habilidades, competencias y responsabilidades asociadas a un individuo o equipo.",
-      "C. Se refiere a que representa un elemento de información o artefacto producido, modificado o utilizado por una tarea (documento, código, modelo).",
-      "D. Proporcionar un metamodelo para definir, modelar y estructurar procesos de ingeniería del software y sus componentes."
-    ],
-    "solucion": "A"
-  },
-  {
-    "cuestion": "CalSisSw-T6-06-Pregunta: En la iconografía y conceptos de SPEM 2.0, un 'Role' (Rol) representa:",
+    "cuestion": "CalSisSw-T6-05-Pregunta: En la iconografía y conceptos de SPEM 2.0, un 'Role' (Rol) representa:",
     "opciones": [
       "A. El Method Content define 'qué' se hace (roles, tareas, productos de trabajo), mientras que Process define 'cómo y cuándo' se aplica en un ciclo de vida específico.",
       "B. La definición de un conjunto de habilidades, competencias y responsabilidades asociadas a un individuo o equipo.",
@@ -1592,40 +802,40 @@
   {
     "cuestion": "CalSisSw-T7-01-Pregunta: El estándar internacional ISO/IEC 12207 establece un marco de referencia común para los procesos del ciclo de vida del software, clasificándolos en 4 grandes categorías:",
     "opciones": [
-      "A. Se define como maximizar el valor del producto y gestionar eficientemente el Product Backlog.",
-      "B. Se define como las actividades del comprador para obtener un producto o servicio software que satisfaga sus necesidades.",
-      "C. Procesos de Acuerdo, Procesos Organizacionales de Proyecto, Procesos de Gestión Técnica y Procesos Técnicos.",
-      "D. Se define como las actividades del proveedor para entregar un producto o servicio software al comprador según el contrato."
+      "A. Procesos de gestión de negocio, de desarrollo, de mantenimiento y de soporte.",
+      "B. Procesos de acuerdo, organizacionales de proyecto, de gestión técnica y técnicos.",
+      "C. Procesos de requisitos, diseño, codificación y pruebas.",
+      "D. Procesos de planificación, ejecución, medición y mejora."
     ],
-    "solucion": "C"
+    "solucion": "B"
   },
   {
     "cuestion": "CalSisSw-T7-02-Pregunta: En la norma ISO/IEC 12207, los 'Procesos de Acuerdo' comprenden específicamente:",
     "opciones": [
-      "A. Definición de requisitos, Análisis, Diseño, Implementación, Integración, Verificación, Validación, Transición, Operación y Mantenimiento.",
-      "B. Establecer un marco de referencia común que categoriza todos los Procesos del Ciclo de Vida del Software (acuerdo, organizacionales, gestión, técnicos).",
-      "C. Procesos de Gestión Técnica.",
-      "D. El Proceso de Adquisición y el Proceso de Suministro."
+      "A. Los procesos de definición de requisitos, diseño, implementación y pruebas.",
+      "B. Los procesos de gestión de recursos humanos y de infraestructura.",
+      "C. Los procesos de planificación, evaluación y control del proyecto.",
+      "D. Los procesos de adquisición y suministro."
     ],
     "solucion": "D"
   },
   {
     "cuestion": "CalSisSw-T7-03-Pregunta: ¿A qué categoría de ISO/IEC 12207 pertenecen procesos como la Gestión del Conocimiento, Gestión de Recursos Humanos y Gestión de la Cartera de Proyectos?",
     "opciones": [
-      "A. Procesos Organizacionales de Proyecto.",
-      "B. Definición de requisitos, Análisis, Diseño, Implementación, Integración, Verificación, Validación, Transición, Operación y Mantenimiento.",
-      "C. Procesos de Gestión Técnica.",
-      "D. El Proceso de Adquisición y el Proceso de Suministro."
+      "A. Procesos de acuerdo.",
+      "B. Procesos técnicos.",
+      "C. Procesos organizacionales de proyecto.",
+      "D. Procesos de gestión técnica."
     ],
-    "solucion": "A"
+    "solucion": "C"
   },
   {
     "cuestion": "CalSisSw-T7-04-Pregunta: En ISO/IEC 12207, los 'Procesos Técnicos' abarcan actividades como:",
     "opciones": [
-      "A. Establecer un marco de referencia común que categoriza todos los Procesos del Ciclo de Vida del Software (acuerdo, organizacionales, gestión, técnicos).",
-      "B. Definición de requisitos, Análisis, Diseño, Implementación, Integración, Verificación, Validación, Transición, Operación y Mantenimiento.",
-      "C. El Proceso de Adquisición y el Proceso de Suministro.",
-      "D. Procesos de Acuerdo, Procesos Organizacionales de Proyecto, Procesos de Gestión Técnica y Procesos Técnicos."
+      "A. Adquisición y suministro.",
+      "B. Definición de requisitos, análisis, diseño, implementación, integración, verificación, validación, transición, operación y mantenimiento.",
+      "C. Gestión de recursos humanos y de la cartera de proyectos.",
+      "D. Planificación, evaluación y control del proyecto."
     ],
     "solucion": "B"
   },
@@ -1680,27 +890,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T7-10-Pregunta: En Scrum, la reunión diaria de sincronización del equipo de desarrollo (Daily Scrum) tiene una duración máxima recomendada de:",
-    "opciones": [
-      "A. 30 días (o 4 semanas).",
-      "B. Se define como entre 1 y 4 semanas (máximo 30 días).",
-      "C. Que el equipo lleva retraso y hay más trabajo pendiente del previsto para esa fecha.",
-      "D. 15 minutos."
-    ],
-    "solucion": "D"
-  },
-  {
-    "cuestion": "CalSisSw-T7-11-Pregunta: El gráfico 'Burndown Chart' en Scrum se utiliza para:",
-    "opciones": [
-      "A. Mostrar visualmente la cantidad de trabajo pendiente o esfuerzo restante a lo largo del tiempo dentro del Sprint.",
-      "B. Se define como maximizar el valor del producto y gestionar eficientemente el Product Backlog.",
-      "C. 15 minutos.",
-      "D. Que el equipo lleva retraso y hay más trabajo pendiente del previsto para esa fecha."
-    ],
-    "solucion": "A"
-  },
-  {
-    "cuestion": "CalSisSw-T7-12-Pregunta: Es una indicación explícita para examen sobre Scrum recordar que:",
+    "cuestion": "CalSisSw-T7-10-Pregunta: Es una indicación explícita para examen sobre Scrum recordar que:",
     "opciones": [
       "A. Mostrar visualmente la cantidad de trabajo pendiente o esfuerzo restante a lo largo del tiempo dentro del Sprint.",
       "B. Scrum no es una metodología de desarrollo de software, sino un marco o metodología de GESTIÓN de proyectos.",
@@ -1710,22 +900,12 @@
     "solucion": "B"
   },
   {
-    "cuestion": "CalSisSw-T7-13-Pregunta: En las estrategias de reutilización de software, la 'Ingeniería de Dominio' se encarga de:",
-    "opciones": [
-      "A. Ingeniería de Dominio.",
-      "B. Procesos de producción (construcción) y procesos de gestión (planificación y control).",
-      "C. Analizar el dominio de negocio para descubrir, estructurar y construir componentes y arquitecturas reutilizables para una familia de sistemas.",
-      "D. Para describir procesos software."
-    ],
-    "solucion": "C"
-  },
-  {
     "cuestion": "CalSisSw-T8-01-Pregunta: En CMMI V2.0, los 5 niveles de madurez organizacional ordenados del 1 al 5 son:",
     "opciones": [
-      "A. 1 Inicial, 2 Gestionado, 3 Definido, 4 Gestionado Cuantitativamente, 5 En Optimización.",
-      "B. Que se alcance, como mínimo, el nivel de capacidad requerido en TODOS y cada uno de los procesos asociados por el modelo a ese nivel de madurez.",
-      "C. Aseguramiento de Calidad de Procesos (Process Quality Assurance).",
-      "D. Proceso Realizado (alcanza sus resultados definidos)."
+      "A. Inicial, Gestionado, Definido, Gestionado cuantitativamente y En optimización.",
+      "B. Inicial, Repetible, Cuantitativo, Optimizado y Certificado.",
+      "C. Gestionado, Inicial, Definido, Optimizado y Cuantitativo.",
+      "D. Básico, Repetible, Establecido, Predecible y Certificado."
     ],
     "solucion": "A"
   },
@@ -1752,9 +932,9 @@
   {
     "cuestion": "CalSisSw-T8-04-Pregunta: El método de evaluación oficial estandarizado para auditar e identificar el nivel de madurez bajo el marco CMMI se denomina:",
     "opciones": [
-      "A. Consiste en que la organización dispone de procesos estándar que se adaptan a los proyectos mediante guías de ajuste.",
-      "B. Que se alcance, como mínimo, el nivel de capacidad requerido en TODOS y cada uno de los procesos asociados por el modelo a ese nivel de madurez.",
-      "C. Consiste en que los proyectos planifican, realizan, miden y controlan sus procesos según sus planes.",
+      "A. IDEAL (Initiating, Diagnosing, Establishing, Acting, Learning).",
+      "B. ISO/IEC 33002.",
+      "C. COMPETISOFT.",
       "D. SCAMPI (Standard CMMI Appraisal Method for Process Improvement)."
     ],
     "solucion": "D"
@@ -1762,10 +942,10 @@
   {
     "cuestion": "CalSisSw-T8-05-Pregunta: Las 3 fases principales de la metodología de evaluación SCAMPI son:",
     "opciones": [
-      "A. 1. Planificación y preparación de la evaluación, 2. Realización de la evaluación, 3. Informe de resultados.",
-      "B. SCAMPI (Standard CMMI Appraisal Method for Process Improvement).",
-      "C. Que el proceso alcance sus resultados definidos (RPs).",
-      "D. ISO/IEC 15504 (SPICE)."
+      "A. Planificación y preparación, realización de la evaluación e informe de resultados.",
+      "B. Diagnóstico, formulación y mejora.",
+      "C. Establecimiento de objetivos, medición y control estadístico.",
+      "D. Definición de procesos, evaluación de productos y certificación."
     ],
     "solucion": "A"
   },
@@ -1830,46 +1010,6 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T8-12-Pregunta: En ISO/IEC 33000, los niveles de capacidad de proceso se evalúan del 0 al 5. El Nivel 1 corresponde a:",
-    "opciones": [
-      "A. La escala N-P-L-F (No alcanzado, Parcialmente, Ampliamente, Totalmente alcanzado).",
-      "B. 1 Inicial, 2 Gestionado, 3 Definido, 4 Gestionado Cuantitativamente, 5 En Optimización.",
-      "C. Componentes de Atributo de Proceso (CAP).",
-      "D. Proceso Realizado (alcanza sus resultados definidos)."
-    ],
-    "solucion": "D"
-  },
-  {
-    "cuestion": "CalSisSw-T8-13-Pregunta: En la escala de calificación N-P-L-F de la norma ISO/IEC 33000, la letra 'L' significa:",
-    "opciones": [
-      "A. Largely achieved (Ampliamente alcanzado: del 50% al 85% de cumplimiento).",
-      "B. La capacidad se evalúa a nivel de un proceso individual, mientras que la madurez evalúa a toda la organización (o un conjunto predefinido de procesos).",
-      "C. La escala N-P-L-F (No alcanzado, Parcialmente, Ampliamente, Totalmente alcanzado).",
-      "D. N (0-15%), P (15-50%), L (50-85%), F (85-100%)."
-    ],
-    "solucion": "A"
-  },
-  {
-    "cuestion": "CalSisSw-T8-14-Pregunta: En la escala N-P-L-F de ISO 33000, los rangos porcentuales son:",
-    "opciones": [
-      "A. La escala N-P-L-F (No alcanzado, Parcialmente, Ampliamente, Totalmente alcanzado).",
-      "B. N (0-15%), P (15-50%), L (50-85%), F (85-100%).",
-      "C. Largely achieved (Ampliamente alcanzado: del 50% al 85% de cumplimiento).",
-      "D. Proceso Realizado (alcanza sus resultados definidos)."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "CalSisSw-T8-91-Pregunta: En el Nivel de Capacidad 3 (Establecido) de la norma ISO/IEC 33000, ¿qué exige el Atributo de Proceso 3.1 (Definición del proceso)?",
-    "opciones": [
-      "A. Que el proceso consiga sus resultados básicos mediante una planificación adecuada.",
-      "B. Que el proceso se defina tomando como referencia el estándar organizativo y se adapte mediante guías de tailoring.",
-      "C. Que los productos de trabajo generados se sometan a un control de versiones formal.",
-      "D. Que el proceso utilice modelos estadísticos para predecir su comportamiento futuro."
-    ],
-    "solucion": "B"
-  },
-  {
     "cuestion": "CalSisSw-T9-01-Pregunta: El paradigma Goal Question Metric (GQM), desarrollado por Basili y Rombach, propone una estructura de medición de 3 niveles:",
     "opciones": [
       "A. 1. Planificación, 2. Definición, 3. Recopilación de datos, 4. Interpretación.",
@@ -1882,12 +1022,12 @@
   {
     "cuestion": "CalSisSw-T9-02-Pregunta: En la plantilla de definición de metas de GQM, los 5 elementos fundamentales para caracterizar un objetivo de medición son:",
     "opciones": [
-      "A. El número de claves ajenas (Foreign Keys) que posee una tabla T.",
-      "B. Proporcionar representaciones gráficas o modelos cuantitativos que ayudan a responder las preguntas de forma visual para la toma de decisiones.",
-      "C. 1. Planificación, 2. Definición, 3. Recopilación de datos, 4. Interpretación.",
-      "D. Objeto de estudio, Propósito, Enfoque de calidad, Perspectiva y Contexto."
+      "A. Producto, proceso, proyecto, proveedor y cliente.",
+      "B. Objetivo, indicador, métrica, herramienta y presupuesto.",
+      "C. Objeto de estudio, propósito, enfoque de calidad, perspectiva y contexto.",
+      "D. Planificación, definición, recopilación de datos e interpretación."
     ],
-    "solucion": "D"
+    "solucion": "C"
   },
   {
     "cuestion": "CalSisSw-T9-03-Pregunta: Las 4 fases principales para la implantación de un programa de medición basado en GQM son:",
@@ -1900,17 +1040,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T9-04-Pregunta: En la evolución de GQM a GQ(I)M (Goal Question Indicator Metric), la inclusión explícita del nivel de 'Indicadores' busca:",
-    "opciones": [
-      "A. Objeto de estudio, Propósito, Enfoque de calidad, Perspectiva y Contexto.",
-      "B. Proporcionar representaciones gráficas o modelos cuantitativos que ayudan a responder las preguntas de forma visual para la toma de decisiones.",
-      "C. 1. Planificación, 2. Definición, 3. Recopilación de datos, 4. Interpretación.",
-      "D. Nivel Conceptual (Goal / Objetivo), Nivel Operativo (Question / Pregunta) y Nivel Cuantitativo (Metric / Métrica)."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "CalSisSw-T9-05-Pregunta: La metodología Practical Software Measurement (PSM) categoriza las necesidades de información de medición en 7 áreas clave, entre las que se incluyen:",
+    "cuestion": "CalSisSw-T9-04-Pregunta: La metodología Practical Software Measurement (PSM) categoriza las necesidades de información de medición en 7 áreas clave, entre las que se incluyen:",
     "opciones": [
       "A. Indica que permiten clasificar y determinar qué operaciones matemáticas y estadísticas son válidas sobre los datos recolectados.",
       "B. Indica que un modelo de calidad específico enfocado a evaluar portales y sitios web combinando dimensiones técnicas y de usabilidad.",
@@ -1920,67 +1050,27 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T9-06-Pregunta: En la medición de la estructura de código fuente, la Complejidad Ciclomática de McCabe $V(G)$ sirve para medir:",
+    "cuestion": "CalSisSw-T9-05-Pregunta: En el conjunto de métricas para programación orientada a objetos MOOSE (Chidamber y Kemerer), la métrica 'WMC' (Weighted Methods per Class) mide:",
     "opciones": [
-      "A. WQM (Web Quality Model).",
-      "B. Nivel Conceptual (Goal / Objetivo), Nivel Operativo (Question / Pregunta) y Nivel Cuantitativo (Metric / Métrica).",
-      "C. Objeto de estudio, Propósito, Enfoque de calidad, Perspectiva y Contexto.",
-      "D. El número de caminos linealmente independientes a través del grafo de flujo de control de un programa."
-    ],
-    "solucion": "D"
-  },
-  {
-    "cuestion": "CalSisSw-T9-07-Pregunta: En el conjunto de métricas para programación orientada a objetos MOOSE (Chidamber y Kemerer), la métrica 'WMC' (Weighted Methods per Class) mide:",
-    "opciones": [
-      "A. La suma de las complejidades de todos los métodos definidos en una clase.",
-      "B. La profundidad del árbol referencial de claves ajenas desde la tabla T hacia otras tablas referenciadas.",
-      "C. El número de claves ajenas (Foreign Keys) que posee una tabla T.",
-      "D. Indica que el número de métodos que pueden ser ejecutados potencialmente en respuesta a un mensaje enviado a un objeto de esa clase."
+      "A. La suma de las complejidades de los métodos de una clase.",
+      "B. La profundidad máxima de la jerarquía de herencia.",
+      "C. El número de clases que heredan directamente de una clase.",
+      "D. El número de métodos que pueden responder a un mensaje enviado a un objeto."
     ],
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T9-08-Pregunta: En el conjunto de métricas MOOSE (Chidamber y Kemerer), la métrica 'DIT' (Depth of Inheritance Tree) indica:",
+    "cuestion": "CalSisSw-T9-06-Pregunta: En el conjunto de métricas MOOSE (Chidamber y Kemerer), la métrica 'DIT' (Depth of Inheritance Tree) indica:",
     "opciones": [
-      "A. El número de claves ajenas (Foreign Keys) que posee una tabla T.",
-      "B. La longitud máxima del camino desde la raíz de la jerarquía de herencia hasta la clase evaluada.",
-      "C. La suma de las complejidades de todos los métodos definidos en una clase.",
-      "D. La profundidad del árbol referencial de claves ajenas desde la tabla T hacia otras tablas referenciadas."
+      "A. El número de métodos definidos en una clase.",
+      "B. La longitud máxima del camino desde la raíz de la jerarquía hasta la clase.",
+      "C. El número de clases que heredan directamente de una clase.",
+      "D. El número de métodos que pueden responder a un mensaje."
     ],
     "solucion": "B"
   },
   {
-    "cuestion": "CalSisSw-T9-09-Pregunta: En las métricas de mantenibilidad para esquemas de bases de datos relacionales, la métrica 'NA(T)' representa:",
-    "opciones": [
-      "A. El número de claves ajenas (Foreign Keys) que posee una tabla T.",
-      "B. La suma de las complejidades de todos los métodos definidos en una clase.",
-      "C. El número de atributos de una tabla T.",
-      "D. La profundidad del árbol referencial de claves ajenas desde la tabla T hacia otras tablas referenciadas."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "CalSisSw-T9-10-Pregunta: En métricas de bases de datos relacionales, la métrica 'NFK(T)' se define como:",
-    "opciones": [
-      "A. El número de atributos de una tabla T.",
-      "B. La profundidad del árbol referencial de claves ajenas desde la tabla T hacia otras tablas referenciadas.",
-      "C. La longitud máxima del camino desde la raíz de la jerarquía de herencia hasta la clase evaluada.",
-      "D. El número de claves ajenas (Foreign Keys) que posee una tabla T."
-    ],
-    "solucion": "D"
-  },
-  {
-    "cuestion": "CalSisSw-T9-11-Pregunta: En métricas de bases de datos relacionales, la métrica 'DRT(T)' (Depth of Referential Tree) mide:",
-    "opciones": [
-      "A. La profundidad del árbol referencial de claves ajenas desde la tabla T hacia otras tablas referenciadas.",
-      "B. El número de claves ajenas (Foreign Keys) que posee una tabla T.",
-      "C. El número de atributos de una tabla T.",
-      "D. La suma de las complejidades de todos los métodos definidos en una clase."
-    ],
-    "solucion": "A"
-  },
-  {
-    "cuestion": "CalSisSw-T9-13-Pregunta: La Ingeniería del Software Empírica (ESE) y la Ingeniería del Software Basada en Evidencias (EBSE) buscan:",
+    "cuestion": "CalSisSw-T4-12-Pregunta: La Ingeniería del Software Empírica (ESE) y la Ingeniería del Software Basada en Evidencias (EBSE) buscan:",
     "opciones": [
       "A. El número de caminos linealmente independientes a través de la estructura de control de un programa.",
       "B. Indica que estudios que recopilan, evalúan y sintetizan toda la evidencia de estudios primarios existentes sobre una pregunta de investigación.",
@@ -2730,7 +1820,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T1-31-Pregunta: ¿Qué dificultad destaca Shewhart al abordar la calidad desde una perspectiva subjetiva?",
+    "cuestion": "CalSisSw-T1-19-Pregunta: ¿Qué dificultad destaca Shewhart al abordar la calidad desde una perspectiva subjetiva?",
     "opciones": [
       "A. Depende únicamente del número de defectos.",
       "B. Es una característica exclusivamente económica.",
@@ -2740,7 +1830,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T1-32-Pregunta: ¿Qué propone Shewhart para tratar la dificultad de medir la calidad subjetiva?",
+    "cuestion": "CalSisSw-T1-20-Pregunta: ¿Qué propone Shewhart para tratar la dificultad de medir la calidad subjetiva?",
     "opciones": [
       "A. Sustituir las mediciones por encuestas de satisfacción.",
       "B. Traducir las necesidades subjetivas en características físicas medibles.",
@@ -2750,7 +1840,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "CalSisSw-T1-33-Pregunta: ¿Qué relación establece Deming entre la calidad y el trabajo de los empleados?",
+    "cuestion": "CalSisSw-T1-21-Pregunta: ¿Qué relación establece Deming entre la calidad y el trabajo de los empleados?",
     "opciones": [
       "A. La calidad permite que los trabajadores se sientan orgullosos de su trabajo.",
       "B. La calidad se consigue eliminando la participación de los trabajadores.",
@@ -2760,7 +1850,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T1-34-Pregunta: ¿Qué alcance tiene la definición de calidad de Feigenbaum?",
+    "cuestion": "CalSisSw-T1-22-Pregunta: ¿Qué alcance tiene la definición de calidad de Feigenbaum?",
     "opciones": [
       "A. Se centra únicamente en la percepción estética del usuario.",
       "B. Integra características de marketing, ingeniería, fabricación y mantenimiento.",
@@ -2770,7 +1860,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "CalSisSw-T1-35-Pregunta: ¿Qué significa la orientación al consumidor defendida por Ishikawa?",
+    "cuestion": "CalSisSw-T1-23-Pregunta: ¿Qué significa la orientación al consumidor defendida por Ishikawa?",
     "opciones": [
       "A. Priorizar las decisiones internas del fabricante.",
       "B. Conocer y anticipar lo que el cliente va a necesitar.",
@@ -2780,7 +1870,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "CalSisSw-T1-36-Pregunta: Según Taguchi, ¿qué indica una mayor calidad desde el punto de vista de la sociedad?",
+    "cuestion": "CalSisSw-T1-24-Pregunta: Según Taguchi, ¿qué indica una mayor calidad desde el punto de vista de la sociedad?",
     "opciones": [
       "A. Que el producto cumple únicamente las especificaciones internas.",
       "B. Que el producto causa una menor pérdida a la sociedad tras su entrega.",
@@ -2790,7 +1880,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "CalSisSw-T1-37-Pregunta: ¿Qué tienen en común las definiciones de calidad de EOQ e ISO 9000?",
+    "cuestion": "CalSisSw-T1-25-Pregunta: ¿Qué tienen en común las definiciones de calidad de EOQ e ISO 9000?",
     "opciones": [
       "A. Consideran que la calidad solo puede medirse mediante costes.",
       "B. Definen la calidad como ausencia absoluta de variabilidad.",
@@ -2800,7 +1890,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T1-38-Pregunta: ¿Cuál de las siguientes afirmaciones refleja que la calidad no es un concepto absoluto según Gillies?",
+    "cuestion": "CalSisSw-T1-26-Pregunta: ¿Cuál de las siguientes afirmaciones refleja que la calidad no es un concepto absoluto según Gillies?",
     "opciones": [
       "A. La calidad depende únicamente de una norma internacional.",
       "B. La valoración de la calidad puede variar según quién la evalúe.",
@@ -2810,7 +1900,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "CalSisSw-T1-39-Pregunta: ¿Qué implica que la calidad esté sujeta a restricciones?",
+    "cuestion": "CalSisSw-T1-27-Pregunta: ¿Qué implica que la calidad esté sujeta a restricciones?",
     "opciones": [
       "A. Que las restricciones dejan de existir al certificar el producto.",
       "B. Que solo se pueden evaluar características funcionales.",
@@ -2820,7 +1910,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T1-40-Pregunta: ¿Qué significa que la calidad sea multidimensional?",
+    "cuestion": "CalSisSw-T1-28-Pregunta: ¿Qué significa que la calidad sea multidimensional?",
     "opciones": [
       "A. Que todas sus dimensiones son independientes entre sí.",
       "B. Que comprende distintas dimensiones, como funcionalidad, oportunidad y coste.",
@@ -2830,7 +1920,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "CalSisSw-T1-41-Pregunta: En las vistas de Garvin, ¿qué caracteriza a la perspectiva trascendental?",
+    "cuestion": "CalSisSw-T1-29-Pregunta: En las vistas de Garvin, ¿qué caracteriza a la perspectiva trascendental?",
     "opciones": [
       "A. La define según el propósito concreto del usuario.",
       "B. La reduce a la relación entre precio y prestaciones.",
@@ -2840,7 +1930,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T1-42-Pregunta: ¿Qué perspectiva de Garvin asocia la calidad con la adecuación al propósito del usuario?",
+    "cuestion": "CalSisSw-T1-30-Pregunta: ¿Qué perspectiva de Garvin asocia la calidad con la adecuación al propósito del usuario?",
     "opciones": [
       "A. La perspectiva basada en el usuario.",
       "B. La perspectiva trascendental.",
@@ -2850,7 +1940,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T1-43-Pregunta: ¿Qué perspectiva de Garvin considera especialmente el cumplimiento estricto de las especificaciones de fabricación?",
+    "cuestion": "CalSisSw-T1-31-Pregunta: ¿Qué perspectiva de Garvin considera especialmente el cumplimiento estricto de las especificaciones de fabricación?",
     "opciones": [
       "A. La perspectiva basada en el fabricante.",
       "B. La perspectiva trascendental.",
@@ -2860,7 +1950,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T1-44-Pregunta: ¿Qué diferencia general existe entre calidad programada y calidad realizada?",
+    "cuestion": "CalSisSw-T1-32-Pregunta: ¿Qué diferencia general existe entre calidad programada y calidad realizada?",
     "opciones": [
       "A. La programada se mide tras la entrega; la realizada antes del diseño.",
       "B. La programada se especifica; la realizada es la que finalmente se implementa.",
@@ -2870,7 +1960,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "CalSisSw-T1-45-Pregunta: Si el software implementado cumple lo especificado, pero no satisface lo que realmente necesitaba el usuario, ¿qué desajuste existe?",
+    "cuestion": "CalSisSw-T1-33-Pregunta: Si el software implementado cumple lo especificado, pero no satisface lo que realmente necesitaba el usuario, ¿qué desajuste existe?",
     "opciones": [
       "A. Entre la calidad interna y la calidad externa exclusivamente.",
       "B. Entre la calidad programada y la calidad necesaria.",
@@ -2880,7 +1970,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "CalSisSw-T1-46-Pregunta: ¿Qué representa la calidad necesaria en el desarrollo de un sistema?",
+    "cuestion": "CalSisSw-T1-34-Pregunta: ¿Qué representa la calidad necesaria en el desarrollo de un sistema?",
     "opciones": [
       "A. La calidad que el equipo ha conseguido implementar.",
       "B. La calidad que determina exclusivamente el proveedor.",
@@ -2890,7 +1980,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T1-47-Pregunta: ¿Cuál es el objetivo principal de la mejora continua en la visión de Deming?",
+    "cuestion": "CalSisSw-T1-35-Pregunta: ¿Cuál es el objetivo principal de la mejora continua en la visión de Deming?",
     "opciones": [
       "A. Aumentar la inspección final sin modificar los procesos.",
       "B. Mejorar de forma constante los procesos y el liderazgo.",
@@ -2900,7 +1990,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "CalSisSw-T1-48-Pregunta: ¿Qué relación plantea la visión de Taguchi entre variabilidad y calidad?",
+    "cuestion": "CalSisSw-T1-36-Pregunta: ¿Qué relación plantea la visión de Taguchi entre variabilidad y calidad?",
     "opciones": [
       "A. La variabilidad no afecta a la calidad si se cumplen los requisitos mínimos.",
       "B. Solo importa la variabilidad durante la fase de mantenimiento.",
@@ -2910,7 +2000,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T2-29-Pregunta: ¿Para qué se utiliza principalmente un diagrama de flujo en el análisis de procesos?",
+    "cuestion": "CalSisSw-T2-21-Pregunta: ¿Para qué se utiliza principalmente un diagrama de flujo en el análisis de procesos?",
     "opciones": [
       "A. Para ordenar causas según su frecuencia acumulada.",
       "B. Para mostrar la distribución estadística de una variable.",
@@ -2920,7 +2010,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T2-30-Pregunta: En un diagrama de Ishikawa, ¿qué se coloca normalmente en la cabeza del diagrama?",
+    "cuestion": "CalSisSw-T2-22-Pregunta: En un diagrama de Ishikawa, ¿qué se coloca normalmente en la cabeza del diagrama?",
     "opciones": [
       "A. El objetivo de mejora a largo plazo.",
       "B. La solución que se ha decidido implantar.",
@@ -2930,7 +2020,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T2-31-Pregunta: ¿Cuál es el orden lógico inicial para elaborar un diagrama causa-efecto?",
+    "cuestion": "CalSisSw-T2-23-Pregunta: ¿Cuál es el orden lógico inicial para elaborar un diagrama causa-efecto?",
     "opciones": [
       "A. Definir el efecto, determinar causas y subcausas, revisar sus interacciones y seleccionar las más relevantes.",
       "B. Agrupar ideas, asignar pesos y construir una matriz de relaciones.",
@@ -2940,7 +2030,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T2-32-Pregunta: ¿Qué representa la regla 80/20 asociada al diagrama de Pareto?",
+    "cuestion": "CalSisSw-T2-24-Pregunta: ¿Qué representa la regla 80/20 asociada al diagrama de Pareto?",
     "opciones": [
       "A. El 20 % de los defectos debe ignorarse siempre.",
       "B. Todos los defectos tienen la misma probabilidad de ocurrencia.",
@@ -2950,7 +2040,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T2-33-Pregunta: ¿Qué información permite obtener una hoja de chequeo?",
+    "cuestion": "CalSisSw-T2-25-Pregunta: ¿Qué información permite obtener una hoja de chequeo?",
     "opciones": [
       "A. La predicción automática de defectos futuros.",
       "B. La secuencia temporal completa de un ciclo de vida.",
@@ -2960,7 +2050,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T2-34-Pregunta: ¿Qué debe definirse antes de recoger datos con una hoja de chequeo?",
+    "cuestion": "CalSisSw-T2-26-Pregunta: ¿Qué debe definirse antes de recoger datos con una hoja de chequeo?",
     "opciones": [
       "A. El problema, los datos necesarios y el plan de recogida.",
       "B. La solución final y el presupuesto de implantación.",
@@ -2970,7 +2060,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T2-35-Pregunta: ¿Qué permite comprobar un gráfico o grafo de control?",
+    "cuestion": "CalSisSw-T2-27-Pregunta: ¿Qué permite comprobar un gráfico o grafo de control?",
     "opciones": [
       "A. Qué ideas creativas son más originales.",
       "B. Si un proceso se encuentra en estado de control estadístico.",
@@ -2980,7 +2070,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "CalSisSw-T2-36-Pregunta: ¿Qué elementos deben establecerse para interpretar un gráfico de control?",
+    "cuestion": "CalSisSw-T2-28-Pregunta: ¿Qué elementos deben establecerse para interpretar un gráfico de control?",
     "opciones": [
       "A. Los pesos de cada criterio de decisión.",
       "B. Los objetivos estratégicos y tácticos.",
@@ -2990,7 +2080,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T2-37-Pregunta: ¿Qué representa un histograma?",
+    "cuestion": "CalSisSw-T2-29-Pregunta: ¿Qué representa un histograma?",
     "opciones": [
       "A. La evolución de un proyecto mediante incrementos.",
       "B. La secuencia de actividades de un proceso.",
@@ -3000,7 +2090,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T2-38-Pregunta: ¿Qué característica identifica una distribución truncada en un histograma?",
+    "cuestion": "CalSisSw-T2-30-Pregunta: ¿Qué característica identifica una distribución truncada en un histograma?",
     "opciones": [
       "A. Presenta siempre dos picos de frecuencia.",
       "B. Es necesariamente simétrica y normal.",
@@ -3010,7 +2100,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T2-39-Pregunta: ¿Para qué se utiliza un diagrama de dispersión?",
+    "cuestion": "CalSisSw-T2-31-Pregunta: ¿Para qué se utiliza un diagrama de dispersión?",
     "opciones": [
       "A. Para descomponer un objetivo en medios.",
       "B. Para observar la posible relación entre dos variables.",
@@ -3020,7 +2110,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "CalSisSw-T2-40-Pregunta: ¿Qué busca identificar un diagrama de concentración?",
+    "cuestion": "CalSisSw-T2-32-Pregunta: ¿Qué busca identificar un diagrama de concentración?",
     "opciones": [
       "A. Las fases de un proceso de adquisición.",
       "B. Los puntos o zonas donde se concentran los fallos del producto.",
@@ -3030,7 +2120,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "CalSisSw-T2-41-Pregunta: ¿Cuál es la finalidad de un diagrama de afinidad?",
+    "cuestion": "CalSisSw-T2-33-Pregunta: ¿Cuál es la finalidad de un diagrama de afinidad?",
     "opciones": [
       "A. Agrupar ideas o datos relacionados en conjuntos con significado común.",
       "B. Descomponer una función en módulos de software.",
@@ -3040,7 +2130,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T2-42-Pregunta: ¿Qué permite visualizar un diagrama de matriz?",
+    "cuestion": "CalSisSw-T2-34-Pregunta: ¿Qué permite visualizar un diagrama de matriz?",
     "opciones": [
       "A. La secuencia de actividades de un proceso.",
       "B. La evolución de una variable a lo largo del tiempo.",
@@ -3050,7 +2140,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T2-43-Pregunta: En un diagrama de matriz, ¿qué se analiza en cada intersección?",
+    "cuestion": "CalSisSw-T2-35-Pregunta: En un diagrama de matriz, ¿qué se analiza en cada intersección?",
     "opciones": [
       "A. El grado de relación entre los elementos correspondientes.",
       "B. La frecuencia acumulada de defectos.",
@@ -3060,7 +2150,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T2-44-Pregunta: ¿Qué finalidad tiene un diagrama de árbol?",
+    "cuestion": "CalSisSw-T2-36-Pregunta: ¿Qué finalidad tiene un diagrama de árbol?",
     "opciones": [
       "A. Descomponer un objetivo en medios o acciones necesarias para alcanzarlo.",
       "B. Comparar dos variables mediante puntos.",
@@ -3070,7 +2160,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T2-45-Pregunta: ¿Qué persigue un diagrama de proceso de decisiones?",
+    "cuestion": "CalSisSw-T2-37-Pregunta: ¿Qué persigue un diagrama de proceso de decisiones?",
     "opciones": [
       "A. Ordenar las causas por frecuencia descendente.",
       "B. Representar exclusivamente las relaciones entre dos factores.",
@@ -3080,7 +2170,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T2-46-Pregunta: ¿Qué regla caracteriza a la tormenta de ideas durante la generación inicial?",
+    "cuestion": "CalSisSw-T2-38-Pregunta: ¿Qué regla caracteriza a la tormenta de ideas durante la generación inicial?",
     "opciones": [
       "A. Solo se aceptan ideas que ya tengan una justificación económica.",
       "B. No se admiten críticas mientras se exponen ideas.",
@@ -3090,7 +2180,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "CalSisSw-T2-47-Pregunta: ¿Qué enfoque aportan los sombreros de pensamiento de Edward de Bono?",
+    "cuestion": "CalSisSw-T2-39-Pregunta: ¿Qué enfoque aportan los sombreros de pensamiento de Edward de Bono?",
     "opciones": [
       "A. Clasificar defectos por su frecuencia.",
       "B. Determinar los límites de control estadístico.",
@@ -3100,7 +2190,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T2-48-Pregunta: ¿Para qué se utiliza el FMEA en las herramientas de diseño?",
+    "cuestion": "CalSisSw-T2-40-Pregunta: ¿Para qué se utiliza el FMEA en las herramientas de diseño?",
     "opciones": [
       "A. Para medir la satisfacción general del cliente mediante encuestas.",
       "B. Para representar gráficamente las fases del proceso.",
@@ -3110,7 +2200,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T3-92-Pregunta: ¿Cuál es la finalidad central de la Gestión de Calidad Total (TQM)?",
+    "cuestion": "CalSisSw-T3-13-Pregunta: ¿Cuál es la finalidad central de la Gestión de Calidad Total (TQM)?",
     "opciones": [
       "A. Integrar la calidad y la mejora continua en la organización.",
       "B. Delegar la calidad exclusivamente en un departamento.",
@@ -3120,7 +2210,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T3-93-Pregunta: ¿Qué representa el ciclo PDCA dentro de la gestión de calidad?",
+    "cuestion": "CalSisSw-T3-14-Pregunta: ¿Qué representa el ciclo PDCA dentro de la gestión de calidad?",
     "opciones": [
       "A. Un ciclo iterativo de planificación, ejecución, comprobación y actuación.",
       "B. Un método de estimación del tamaño del software.",
@@ -3130,17 +2220,17 @@
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T3-94-Pregunta: ¿Qué norma de la familia ISO 9000 establece los fundamentos y el vocabulario de gestión de calidad?",
+    "cuestion": "CalSisSw-T3-15-Pregunta: ¿Qué norma de la familia ISO 9000 establece los fundamentos y el vocabulario de gestión de calidad?",
     "opciones": [
       "A. ISO 9000.",
       "B. ISO 9001.",
-      "C. ISO 19011.",
-      "D. ISO 9004."
+      "C. ISO 9004.",
+      "D. Modelo EFQM."
     ],
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T3-95-Pregunta: ¿Cuál es la característica destacada de ISO 9001 dentro de la familia ISO 9000?",
+    "cuestion": "CalSisSw-T3-16-Pregunta: ¿Cuál es la característica destacada de ISO 9001 dentro de la familia ISO 9000?",
     "opciones": [
       "A. Establece exclusivamente directrices de auditoría.",
       "B. Se centra en la medición de calidad del producto software.",
@@ -3150,7 +2240,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T3-96-Pregunta: ¿Qué propósito tiene ISO 9004?",
+    "cuestion": "CalSisSw-T3-17-Pregunta: ¿Qué propósito tiene ISO 9004?",
     "opciones": [
       "A. Orientar a la organización hacia el éxito sostenido y la mejora del desempeño global.",
       "B. Definir el proceso de evaluación de productos software.",
@@ -3160,27 +2250,17 @@
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T3-97-Pregunta: ¿Qué norma ofrece directrices para auditar sistemas de gestión?",
-    "opciones": [
-      "A. ISO 9001.",
-      "B. ISO 9004.",
-      "C. ISO 19011.",
-      "D. ISO 9000."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "CalSisSw-T3-98-Pregunta: ¿Cuál de las siguientes normas de la familia ISO 9000 es certificable según los apuntes?",
+    "cuestion": "CalSisSw-T3-18-Pregunta: ¿Cuál de las siguientes normas de la familia ISO 9000 es certificable según los apuntes?",
     "opciones": [
       "A. ISO 9000.",
       "B. ISO 9004.",
-      "C. ISO 19011.",
+      "C. Modelo EFQM.",
       "D. ISO 9001."
     ],
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T3-99-Pregunta: ¿Qué principio de gestión de calidad pone en el centro las necesidades y expectativas de quienes reciben el producto o servicio?",
+    "cuestion": "CalSisSw-T3-19-Pregunta: ¿Qué principio de gestión de calidad pone en el centro las necesidades y expectativas de quienes reciben el producto o servicio?",
     "opciones": [
       "A. Relaciones mutuamente beneficiosas con proveedores.",
       "B. Enfoque basado en hechos.",
@@ -3190,7 +2270,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T3-100-Pregunta: ¿Qué implica el principio de enfoque basado en procesos?",
+    "cuestion": "CalSisSw-T3-20-Pregunta: ¿Qué implica el principio de enfoque basado en procesos?",
     "opciones": [
       "A. Centrarse solo en los resultados financieros.",
       "B. Gestionar las actividades y sus interacciones como procesos relacionados.",
@@ -3200,7 +2280,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "CalSisSw-T3-101-Pregunta: ¿Qué principio de ISO 9000 requiere utilizar datos y análisis para tomar decisiones?",
+    "cuestion": "CalSisSw-T3-21-Pregunta: ¿Qué principio de ISO 9000 requiere utilizar datos y análisis para tomar decisiones?",
     "opciones": [
       "A. Enfoque basado en hechos para la toma de decisiones.",
       "B. Relaciones con proveedores.",
@@ -3210,7 +2290,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T3-102-Pregunta: ¿Qué papel desempeña la alta dirección en los principios de gestión de calidad?",
+    "cuestion": "CalSisSw-T3-22-Pregunta: ¿Qué papel desempeña la alta dirección en los principios de gestión de calidad?",
     "opciones": [
       "A. Ejercer liderazgo y promover la participación del personal.",
       "B. Realizar personalmente todas las inspecciones técnicas.",
@@ -3220,7 +2300,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T3-103-Pregunta: ¿Qué persigue el principio de relaciones mutuamente beneficiosas con los proveedores?",
+    "cuestion": "CalSisSw-T3-23-Pregunta: ¿Qué persigue el principio de relaciones mutuamente beneficiosas con los proveedores?",
     "opciones": [
       "A. Favorecer relaciones que aporten valor a ambas partes.",
       "B. Reducir toda comunicación con los proveedores.",
@@ -3230,7 +2310,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T3-104-Pregunta: ¿Qué significa el enfoque de sistema para la gestión?",
+    "cuestion": "CalSisSw-T3-24-Pregunta: ¿Qué significa el enfoque de sistema para la gestión?",
     "opciones": [
       "A. Evaluar cada proceso sin considerar sus dependencias.",
       "B. Centrar el sistema exclusivamente en la estructura organizativa.",
@@ -3240,7 +2320,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T3-105-Pregunta: ¿Qué enfoque caracteriza a Six Sigma en la mejora de procesos?",
+    "cuestion": "CalSisSw-T3-25-Pregunta: ¿Qué enfoque caracteriza a Six Sigma en la mejora de procesos?",
     "opciones": [
       "A. Aplicar únicamente inspección visual al producto final.",
       "B. Reducir la variabilidad y los defectos mediante un método estructurado y basado en datos.",
@@ -3250,7 +2330,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "CalSisSw-T3-106-Pregunta: ¿Qué significan las fases DMAIC de Six Sigma?",
+    "cuestion": "CalSisSw-T3-26-Pregunta: ¿Qué significan las fases DMAIC de Six Sigma?",
     "opciones": [
       "A. Definir, Modificar, Aprobar, Implantar y Cerrar.",
       "B. Detectar, Mantener, Asegurar, Inspeccionar y Corregir.",
@@ -3260,7 +2340,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T3-107-Pregunta: ¿En qué fase de DMAIC se investigan las causas de los problemas detectados?",
+    "cuestion": "CalSisSw-T3-27-Pregunta: ¿En qué fase de DMAIC se investigan las causas de los problemas detectados?",
     "opciones": [
       "A. Controlar.",
       "B. Medir.",
@@ -3270,7 +2350,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T3-108-Pregunta: ¿En qué fase de DMAIC se comprueba que las mejoras implantadas se mantienen?",
+    "cuestion": "CalSisSw-T3-28-Pregunta: ¿En qué fase de DMAIC se comprueba que las mejoras implantadas se mantienen?",
     "opciones": [
       "A. Analizar.",
       "B. Medir.",
@@ -3280,7 +2360,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T3-109-Pregunta: ¿Qué papel desempeña el benchmarking dentro de la mejora de calidad?",
+    "cuestion": "CalSisSw-T3-29-Pregunta: ¿Qué papel desempeña el benchmarking dentro de la mejora de calidad?",
     "opciones": [
       "A. Permite comparar prácticas o resultados con referencias para identificar oportunidades de mejora.",
       "B. Identifica exclusivamente defectos de código.",
@@ -3290,17 +2370,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T3-110-Pregunta: ¿Qué relación tiene el empowerment con la gestión de calidad total?",
-    "opciones": [
-      "A. Concentra todas las decisiones en la dirección.",
-      "B. Favorece la implicación y capacidad de actuación del personal.",
-      "C. Limita la participación a las auditorías externas.",
-      "D. Elimina la responsabilidad de los equipos."
-    ],
-    "solucion": "B"
-  },
-  {
-    "cuestion": "CalSisSw-T3-111-Pregunta: ¿Por qué la toma de decisiones basada en hechos es importante en TQM?",
+    "cuestion": "CalSisSw-T3-30-Pregunta: ¿Por qué la toma de decisiones basada en hechos es importante en TQM?",
     "opciones": [
       "A. Porque evita tener que establecer objetivos.",
       "B. Porque garantiza que todos los procesos tengan idénticos resultados.",
@@ -3310,7 +2380,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T4-92-Pregunta: En la taxonomía de proyectos fracasados, ¿qué caracteriza al proyecto de «padre desconocido»?",
+    "cuestion": "CalSisSw-T4-13-Pregunta: En la taxonomía de proyectos fracasados, ¿qué caracteriza al proyecto de «padre desconocido»?",
     "opciones": [
       "A. Acumula tecnologías incompatibles.",
       "B. Tiene un presupuesto excesivo.",
@@ -3320,7 +2390,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T4-93-Pregunta: ¿Qué describe el proyecto «gaudiniano» dentro de la taxonomía de fracasos?",
+    "cuestion": "CalSisSw-T4-14-Pregunta: ¿Qué describe el proyecto «gaudiniano» dentro de la taxonomía de fracasos?",
     "opciones": [
       "A. Genera un exceso de burocracia y supervisión.",
       "B. Utiliza tecnologías obsoletas.",
@@ -3330,7 +2400,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T4-94-Pregunta: ¿Qué problema caracteriza al proyecto «zoológico»?",
+    "cuestion": "CalSisSw-T4-15-Pregunta: ¿Qué problema caracteriza al proyecto «zoológico»?",
     "opciones": [
       "A. Incorpora muchas tecnologías sin comprobar previamente su compatibilidad e integración.",
       "B. No dispone de objetivos comunes entre los miembros del equipo.",
@@ -3340,7 +2410,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T4-95-Pregunta: ¿Qué describe el proyecto «gran hermano»?",
+    "cuestion": "CalSisSw-T4-16-Pregunta: ¿Qué describe el proyecto «gran hermano»?",
     "opciones": [
       "A. Un exceso de burocracia, supervisión y tareas accesorias que reduce la operatividad.",
       "B. La incorporación de funcionalidades innecesarias.",
@@ -3350,7 +2420,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T4-96-Pregunta: ¿Qué caracteriza al proyecto «compulsivo»?",
+    "cuestion": "CalSisSw-T4-17-Pregunta: ¿Qué caracteriza al proyecto «compulsivo»?",
     "opciones": [
       "A. Mantener desacuerdos continuos entre los miembros del equipo.",
       "B. Acumular tecnologías incompatibles.",
@@ -3360,7 +2430,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T4-97-Pregunta: ¿Qué representa el proyecto «la máquina del tiempo»?",
+    "cuestion": "CalSisSw-T4-18-Pregunta: ¿Qué representa el proyecto «la máquina del tiempo»?",
     "opciones": [
       "A. La falta de continuidad tras un inicio entusiasta.",
       "B. El uso de demasiadas tecnologías nuevas.",
@@ -3370,7 +2440,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T4-98-Pregunta: Según la clasificación de McConnell, ¿qué tipo de error es añadir personal a un proyecto retrasado?",
+    "cuestion": "CalSisSw-T4-19-Pregunta: Según la clasificación de McConnell, ¿qué tipo de error es añadir personal a un proyecto retrasado?",
     "opciones": [
       "A. Un error relacionado con el producto.",
       "B. Un error relacionado con los requisitos legales.",
@@ -3380,7 +2450,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T4-99-Pregunta: Según McConnell, ¿a qué categoría pertenece un calendario excesivamente optimista?",
+    "cuestion": "CalSisSw-T4-20-Pregunta: Según McConnell, ¿a qué categoría pertenece un calendario excesivamente optimista?",
     "opciones": [
       "A. Errores relacionados con el proceso.",
       "B. Errores relacionados con el producto.",
@@ -3390,7 +2460,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T4-100-Pregunta: ¿Cómo clasifica McConnell el crecimiento descontrolado del alcance (feature creep)?",
+    "cuestion": "CalSisSw-T4-21-Pregunta: ¿Cómo clasifica McConnell el crecimiento descontrolado del alcance (feature creep)?",
     "opciones": [
       "A. Como un error relacionado con las personas.",
       "B. Como un error relacionado con la infraestructura.",
@@ -3400,7 +2470,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T4-101-Pregunta: ¿Qué categoría de errores de McConnell incluye cambiar de herramientas a mitad del proyecto sin una justificación adecuada?",
+    "cuestion": "CalSisSw-T4-22-Pregunta: ¿Qué categoría de errores de McConnell incluye cambiar de herramientas a mitad del proyecto sin una justificación adecuada?",
     "opciones": [
       "A. Errores relacionados con el producto.",
       "B. Errores relacionados con las personas.",
@@ -3410,7 +2480,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T4-102-Pregunta: En un mercado con pocos consumidores y pocos proveedores, ¿qué factor señala el tema como decisivo?",
+    "cuestion": "CalSisSw-T4-23-Pregunta: En un mercado con pocos consumidores y pocos proveedores, ¿qué factor señala el tema como decisivo?",
     "opciones": [
       "A. La rapidez de salida al mercado.",
       "B. La capacidad técnica y de infraestructura para responder.",
@@ -3420,7 +2490,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "CalSisSw-T4-103-Pregunta: En un mercado con muchos consumidores y pocos proveedores, ¿qué factor resulta clave?",
+    "cuestion": "CalSisSw-T4-24-Pregunta: En un mercado con muchos consumidores y pocos proveedores, ¿qué factor resulta clave?",
     "opciones": [
       "A. La disponibilidad de pocos perfiles técnicos.",
       "B. La calidad como diferenciación en un mercado saturado.",
@@ -3430,7 +2500,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T4-104-Pregunta: En un mercado con pocos consumidores y muchos proveedores, ¿qué factor estratégico destaca?",
+    "cuestion": "CalSisSw-T4-25-Pregunta: En un mercado con pocos consumidores y muchos proveedores, ¿qué factor estratégico destaca?",
     "opciones": [
       "A. El time to market, porque la demanda supera a la oferta.",
       "B. La calidad, porque existe una saturación de demanda.",
@@ -3440,7 +2510,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T4-105-Pregunta: En un mercado con muchos consumidores y muchos proveedores, ¿qué factor permite diferenciarse especialmente?",
+    "cuestion": "CalSisSw-T4-26-Pregunta: En un mercado con muchos consumidores y muchos proveedores, ¿qué factor permite diferenciarse especialmente?",
     "opciones": [
       "A. La reducción del tiempo de salida como único criterio.",
       "B. La capacidad de encontrar un proveedor.",
@@ -3450,7 +2520,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T4-106-Pregunta: Según Wilkin y Castleman, ¿qué tres componentes influyen en la percepción de calidad de un SI?",
+    "cuestion": "CalSisSw-T4-27-Pregunta: Según Wilkin y Castleman, ¿qué tres componentes influyen en la percepción de calidad de un SI?",
     "opciones": [
       "A. Calidad interna, calidad externa y calidad del código.",
       "B. Calidad del software, calidad del hardware y calidad del proveedor.",
@@ -3460,7 +2530,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T4-107-Pregunta: En el modelo de Wilkin y Castleman, ¿con qué se relaciona principalmente la calidad del sistema?",
+    "cuestion": "CalSisSw-T4-28-Pregunta: En el modelo de Wilkin y Castleman, ¿con qué se relaciona principalmente la calidad del sistema?",
     "opciones": [
       "A. Con el rendimiento y los aspectos técnicos del sistema.",
       "B. Con la precisión de los datos exclusivamente.",
@@ -3470,7 +2540,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T4-108-Pregunta: En el modelo de Wilkin y Castleman, ¿qué aspecto representa la calidad de la información?",
+    "cuestion": "CalSisSw-T4-29-Pregunta: En el modelo de Wilkin y Castleman, ¿qué aspecto representa la calidad de la información?",
     "opciones": [
       "A. La estructura de los equipos de desarrollo.",
       "B. La precisión y calidad de los datos.",
@@ -3480,7 +2550,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "CalSisSw-T4-109-Pregunta: En el modelo de Wilkin y Castleman, ¿qué incluye la calidad del servicio?",
+    "cuestion": "CalSisSw-T4-30-Pregunta: En el modelo de Wilkin y Castleman, ¿qué incluye la calidad del servicio?",
     "opciones": [
       "A. El soporte y la operación del servicio.",
       "B. El rendimiento técnico del sistema.",
@@ -3490,7 +2560,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T4-110-Pregunta: ¿Qué plantea el modelo de capas integradas de Stylianou y Kumar?",
+    "cuestion": "CalSisSw-T4-31-Pregunta: ¿Qué plantea el modelo de capas integradas de Stylianou y Kumar?",
     "opciones": [
       "A. Que la calidad del SI depende únicamente del software.",
       "B. Que la calidad de la información es independiente de la organización.",
@@ -3500,7 +2570,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T4-111-Pregunta: En el diagrama de cebolla, ¿qué nivel constituye la base más interna?",
+    "cuestion": "CalSisSw-T4-32-Pregunta: En el diagrama de cebolla, ¿qué nivel constituye la base más interna?",
     "opciones": [
       "A. La calidad del software.",
       "B. La calidad de los sistemas informáticos.",
@@ -3510,7 +2580,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T4-112-Pregunta: En el diagrama de cebolla, ¿qué añade la calidad de los sistemas informáticos respecto a la calidad del software?",
+    "cuestion": "CalSisSw-T4-33-Pregunta: En el diagrama de cebolla, ¿qué añade la calidad de los sistemas informáticos respecto a la calidad del software?",
     "opciones": [
       "A. Integra la calidad global de la organización.",
       "B. Añade únicamente la satisfacción de los clientes externos.",
@@ -3520,7 +2590,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T4-113-Pregunta: ¿Qué representa el nivel global del diagrama de cebolla?",
+    "cuestion": "CalSisSw-T4-34-Pregunta: ¿Qué representa el nivel global del diagrama de cebolla?",
     "opciones": [
       "A. La calidad de los datos aislada de los procesos.",
       "B. La calidad de los sistemas informáticos exclusivamente.",
@@ -3530,7 +2600,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T4-114-Pregunta: ¿Qué es la gestión del conocimiento (KM) en una organización software?",
+    "cuestion": "CalSisSw-T4-35-Pregunta: ¿Qué es la gestión del conocimiento (KM) en una organización software?",
     "opciones": [
       "A. La gestión de los requisitos funcionales del producto.",
       "B. La gestión exclusiva de licencias y herramientas de desarrollo.",
@@ -3540,47 +2610,17 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T4-115-Pregunta: ¿Qué problema representa la «experiencia pérdida»?",
+    "cuestion": "CalSisSw-T4-36-Pregunta: ¿Qué es Design Rationale?",
     "opciones": [
-      "A. La organización pierde conocimiento cuando una persona clave se marcha.",
-      "B. Un empleado nuevo tarda en adquirir experiencia por falta de formación.",
-      "C. Un consultor promete algo que no puede entregar por cambios de asignación.",
-      "D. Un equipo vuelve a resolver un problema cuya solución ya estaba documentada."
+      "A. Un mecanismo para capturar y recuperar las razones de las decisiones tomadas durante el desarrollo.",
+      "B. Una técnica de medición de la productividad del equipo.",
+      "C. Un modelo de mejora continua basado en ciclos de evaluación organizativa.",
+      "D. Una infraestructura para analizar y almacenar experiencias de distintos proyectos."
     ],
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T4-116-Pregunta: ¿Qué significa «reinventar la rueda» dentro de los problemas de gestión del conocimiento?",
-    "opciones": [
-      "A. Perder el conocimiento cuando un empleado abandona la empresa.",
-      "B. No identificar los requisitos de los stakeholders.",
-      "C. No disponer de presupuesto para adquirir tecnología.",
-      "D. Repetir trabajo o errores porque no se reutiliza conocimiento que ya existía."
-    ],
-    "solucion": "D"
-  },
-  {
-    "cuestion": "CalSisSw-T4-117-Pregunta: ¿En qué categoría de ISO/IEC 12207 se sitúa la Gestión del Conocimiento?",
-    "opciones": [
-      "A. Procesos técnicos.",
-      "B. Procesos de acuerdo.",
-      "C. Procesos organizacionales de proyecto.",
-      "D. Procesos de gestión técnica."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "CalSisSw-T4-118-Pregunta: ¿Qué es Design Rationale?",
-    "opciones": [
-      "A. Un modelo para evaluar la calidad en uso.",
-      "B. Una técnica para estimar el tamaño del software.",
-      "C. Un método para capturar, representar y mantener las justificaciones de las decisiones de diseño.",
-      "D. Un método para controlar los límites estadísticos de un proceso."
-    ],
-    "solucion": "C"
-  },
-  {
-    "cuestion": "CalSisSw-T4-119-Pregunta: ¿Qué ventaja aporta Design Rationale a un equipo de desarrollo?",
+    "cuestion": "CalSisSw-T4-37-Pregunta: ¿Qué ventaja aporta Design Rationale a un equipo de desarrollo?",
     "opciones": [
       "A. Elimina la necesidad de registrar decisiones.",
       "B. Garantiza que todas las decisiones futuras sean idénticas.",
@@ -3590,7 +2630,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T4-120-Pregunta: ¿Cuáles son los dos bucles de aprendizaje de la Fábrica de Experiencias?",
+    "cuestion": "CalSisSw-T4-38-Pregunta: ¿Cuáles son los dos bucles de aprendizaje de la Fábrica de Experiencias?",
     "opciones": [
       "A. Aprendizaje técnico y aprendizaje financiero.",
       "B. Aprendizaje a nivel de proyecto y aprendizaje corporativo.",
@@ -3600,7 +2640,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "CalSisSw-T4-121-Pregunta: ¿Qué función tiene la Factoría de Experiencia dentro de la organización?",
+    "cuestion": "CalSisSw-T4-39-Pregunta: ¿Qué función tiene la Factoría de Experiencia dentro de la organización?",
     "opciones": [
       "A. Analizar, sintetizar y almacenar la experiencia de los proyectos para reutilizarla.",
       "B. Sustituir al equipo de proyecto en la planificación.",
@@ -3610,7 +2650,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T4-122-Pregunta: ¿Qué diferencia existe entre Project Learning y Corporate Learning?",
+    "cuestion": "CalSisSw-T4-40-Pregunta: ¿Qué diferencia existe entre Project Learning y Corporate Learning?",
     "opciones": [
       "A. El primero almacena conocimiento corporativo; el segundo ejecuta las tareas diarias.",
       "B. El primero aporta feedback al proyecto en curso; el segundo empaqueta conocimiento para la organización.",
@@ -3620,7 +2660,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "CalSisSw-T4-123-Pregunta: ¿Qué tipo de conocimiento resulta más difícil de empaquetar según los apuntes?",
+    "cuestion": "CalSisSw-T4-41-Pregunta: ¿Qué tipo de conocimiento resulta más difícil de empaquetar según los apuntes?",
     "opciones": [
       "A. Los artículos y presentaciones ya publicados.",
       "B. Las políticas y procedimientos escritos.",
@@ -3770,7 +2810,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "CalSisSw-T6-14-Pregunta: ¿Cómo define SEI un proceso software?",
+    "cuestion": "CalSisSw-T6-06-Pregunta: ¿Cómo define SEI un proceso software?",
     "opciones": [
       "A. Como una lista de herramientas de programación.",
       "B. Como un conjunto de requisitos funcionales del producto.",
@@ -3780,7 +2820,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T6-15-Pregunta: ¿Qué dos procesos interrelacionados identifica el tema dentro del proceso software?",
+    "cuestion": "CalSisSw-T6-07-Pregunta: ¿Qué dos procesos interrelacionados identifica el tema dentro del proceso software?",
     "opciones": [
       "A. El proceso de diseño y el proceso de comercialización.",
       "B. El proceso de adquisición y el proceso de suministro.",
@@ -3790,7 +2830,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T6-16-Pregunta: ¿Cuál es la responsabilidad principal del proceso de producción?",
+    "cuestion": "CalSisSw-T6-08-Pregunta: ¿Cuál es la responsabilidad principal del proceso de producción?",
     "opciones": [
       "A. Estimar y controlar los recursos del proyecto.",
       "B. Definir la estrategia comercial de la organización.",
@@ -3800,7 +2840,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T6-17-Pregunta: ¿Cuál es la responsabilidad principal del proceso de gestión?",
+    "cuestion": "CalSisSw-T6-09-Pregunta: ¿Cuál es la responsabilidad principal del proceso de gestión?",
     "opciones": [
       "A. Ejecutar exclusivamente las pruebas de aceptación.",
       "B. Estimar, planificar y controlar los recursos necesarios para realizar la producción.",
@@ -3810,7 +2850,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "CalSisSw-T6-18-Pregunta: ¿Qué elemento relacionado con el proceso software comprende herramientas, infraestructuras y entornos?",
+    "cuestion": "CalSisSw-T6-10-Pregunta: ¿Qué elemento relacionado con el proceso software comprende herramientas, infraestructuras y entornos?",
     "opciones": [
       "A. Los métodos de evaluación de producto.",
       "B. La economía y el marketing.",
@@ -3820,7 +2860,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T6-19-Pregunta: ¿Qué elemento relacionado con el proceso software se ocupa del uso de la tecnología y de la realización de actividades?",
+    "cuestion": "CalSisSw-T6-11-Pregunta: ¿Qué elemento relacionado con el proceso software se ocupa del uso de la tecnología y de la realización de actividades?",
     "opciones": [
       "A. La infraestructura comercial.",
       "B. La economía y el marketing.",
@@ -3830,7 +2870,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T6-20-Pregunta: ¿A qué elemento del proceso software se vinculan los recursos humanos?",
+    "cuestion": "CalSisSw-T6-12-Pregunta: ¿A qué elemento del proceso software se vinculan los recursos humanos?",
     "opciones": [
       "A. A los productos de trabajo.",
       "B. Al comportamiento organizacional.",
@@ -3840,7 +2880,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "CalSisSw-T6-21-Pregunta: ¿Por qué la economía y el marketing se relacionan con el proceso software?",
+    "cuestion": "CalSisSw-T6-13-Pregunta: ¿Por qué la economía y el marketing se relacionan con el proceso software?",
     "opciones": [
       "A. Porque determinan el lenguaje de programación.",
       "B. Porque describen las tareas técnicas de codificación.",
@@ -3850,7 +2890,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T6-22-Pregunta: ¿Qué beneficio aporta el modelado de procesos respecto a la comunicación?",
+    "cuestion": "CalSisSw-T6-14-Pregunta: ¿Qué beneficio aporta el modelado de procesos respecto a la comunicación?",
     "opciones": [
       "A. Facilita el entendimiento y la comunicación sobre cómo se desarrolla el proceso.",
       "B. Garantiza que no existan cambios durante el proyecto.",
@@ -3860,7 +2900,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T6-23-Pregunta: ¿Qué punto de vista de un modelo de procesos representa qué elementos se implementan y los flujos de información?",
+    "cuestion": "CalSisSw-T6-15-Pregunta: ¿Qué punto de vista de un modelo de procesos representa qué elementos se implementan y los flujos de información?",
     "opciones": [
       "A. El punto de vista funcional.",
       "B. El punto de vista organizacional.",
@@ -3870,7 +2910,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T6-24-Pregunta: ¿Qué punto de vista representa cuándo y bajo qué condiciones se implementan los elementos del proceso?",
+    "cuestion": "CalSisSw-T6-16-Pregunta: ¿Qué punto de vista representa cuándo y bajo qué condiciones se implementan los elementos del proceso?",
     "opciones": [
       "A. El punto de vista organizacional.",
       "B. El punto de vista funcional.",
@@ -3880,7 +2920,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T6-25-Pregunta: ¿Qué punto de vista identifica dónde y por qué persona se implementan los elementos del proceso?",
+    "cuestion": "CalSisSw-T6-17-Pregunta: ¿Qué punto de vista identifica dónde y por qué persona se implementan los elementos del proceso?",
     "opciones": [
       "A. El punto de vista comportamental.",
       "B. El punto de vista organizacional.",
@@ -3890,7 +2930,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "CalSisSw-T6-26-Pregunta: ¿Qué punto de vista se centra en las entidades de información manipuladas o generadas por el proceso?",
+    "cuestion": "CalSisSw-T6-18-Pregunta: ¿Qué punto de vista se centra en las entidades de información manipuladas o generadas por el proceso?",
     "opciones": [
       "A. El punto de vista funcional.",
       "B. El punto de vista organizacional.",
@@ -3900,7 +2940,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T6-27-Pregunta: ¿Qué significa SPEM?",
+    "cuestion": "CalSisSw-T6-19-Pregunta: ¿Qué significa SPEM?",
     "opciones": [
       "A. Software Project Estimation Method.",
       "B. System Process Execution Model.",
@@ -3910,7 +2950,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T6-28-Pregunta: ¿Cuál es el propósito principal de SPEM?",
+    "cuestion": "CalSisSw-T6-20-Pregunta: ¿Cuál es el propósito principal de SPEM?",
     "opciones": [
       "A. Definir los requisitos de seguridad de una aplicación.",
       "B. Calcular el esfuerzo de un proyecto mediante métricas.",
@@ -3920,7 +2960,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T6-29-Pregunta: En SPEM, ¿qué elemento responde a la pregunta «quién es responsable de realizar una tarea»?",
+    "cuestion": "CalSisSw-T6-21-Pregunta: En SPEM, ¿qué elemento responde a la pregunta «quién es responsable de realizar una tarea»?",
     "opciones": [
       "A. Rol.",
       "B. Fase.",
@@ -3930,7 +2970,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T6-30-Pregunta: En SPEM, ¿qué elemento describe el trabajo o actividad que debe realizarse?",
+    "cuestion": "CalSisSw-T6-22-Pregunta: En SPEM, ¿qué elemento describe el trabajo o actividad que debe realizarse?",
     "opciones": [
       "A. Proceso de adquisición.",
       "B. Rol.",
@@ -3940,7 +2980,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T6-31-Pregunta: En SPEM, ¿qué se considera un producto de trabajo?",
+    "cuestion": "CalSisSw-T6-23-Pregunta: En SPEM, ¿qué se considera un producto de trabajo?",
     "opciones": [
       "A. La actividad que debe ejecutarse.",
       "B. Un elemento utilizado como entrada o generado como resultado de una tarea.",
@@ -3950,7 +2990,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "CalSisSw-T6-32-Pregunta: ¿Qué ventaja aporta SPEM al reutilizar procesos definidos?",
+    "cuestion": "CalSisSw-T6-24-Pregunta: ¿Qué ventaja aporta SPEM al reutilizar procesos definidos?",
     "opciones": [
       "A. Impide modificar procesos entre proyectos.",
       "B. Obliga a utilizar un único ciclo de vida.",
@@ -3960,7 +3000,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T6-33-Pregunta: ¿Cuál de los siguientes ejemplos corresponde a un rol en SPEM?",
+    "cuestion": "CalSisSw-T6-25-Pregunta: ¿Cuál de los siguientes ejemplos corresponde a un rol en SPEM?",
     "opciones": [
       "A. Diagrama de arquitectura producido.",
       "B. Analista responsable de especificar requisitos.",
@@ -3970,7 +3010,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "CalSisSw-T6-34-Pregunta: ¿Cuál de los siguientes ejemplos corresponde a una tarea en SPEM?",
+    "cuestion": "CalSisSw-T6-26-Pregunta: ¿Cuál de los siguientes ejemplos corresponde a una tarea en SPEM?",
     "opciones": [
       "A. Repositorio de código.",
       "B. Realizar la revisión de requisitos.",
@@ -3980,7 +3020,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "CalSisSw-T6-35-Pregunta: ¿Cuál de los siguientes ejemplos corresponde a un producto de trabajo en SPEM?",
+    "cuestion": "CalSisSw-T6-27-Pregunta: ¿Cuál de los siguientes ejemplos corresponde a un producto de trabajo en SPEM?",
     "opciones": [
       "A. Un documento de diseño generado durante una actividad.",
       "B. El responsable de coordinar el proyecto.",
@@ -3990,7 +3030,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T6-36-Pregunta: ¿Qué beneficio del modelado de procesos está relacionado con comparar alternativas de proceso?",
+    "cuestion": "CalSisSw-T6-28-Pregunta: ¿Qué beneficio del modelado de procesos está relacionado con comparar alternativas de proceso?",
     "opciones": [
       "A. La eliminación de la gestión.",
       "B. La sustitución de los productos de trabajo.",
@@ -4000,7 +3040,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T6-37-Pregunta: ¿Qué beneficio del modelado se relaciona con ejecutar actividades mediante herramientas de soporte?",
+    "cuestion": "CalSisSw-T6-29-Pregunta: ¿Qué beneficio del modelado se relaciona con ejecutar actividades mediante herramientas de soporte?",
     "opciones": [
       "A. La perspectiva organizacional.",
       "B. La provisión de soporte automático a la ejecución.",
@@ -4010,7 +3050,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "CalSisSw-T6-38-Pregunta: ¿Por qué un modelo de proceso debe contener suficiente información?",
+    "cuestion": "CalSisSw-T6-30-Pregunta: ¿Por qué un modelo de proceso debe contener suficiente información?",
     "opciones": [
       "A. Para impedir que se adapte a otros proyectos.",
       "B. Para sustituir todas las actividades de gestión.",
@@ -4020,7 +3060,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T6-39-Pregunta: ¿Qué diferencia existe entre una tarea y un producto de trabajo en SPEM?",
+    "cuestion": "CalSisSw-T6-31-Pregunta: ¿Qué diferencia existe entre una tarea y un producto de trabajo en SPEM?",
     "opciones": [
       "A. La tarea define cuándo y dónde; el producto de trabajo define quién.",
       "B. La tarea es una actividad; el producto de trabajo es un elemento que se usa o se genera.",
@@ -4030,7 +3070,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "CalSisSw-T6-40-Pregunta: ¿Qué relación existe entre rol y tarea en SPEM?",
+    "cuestion": "CalSisSw-T6-32-Pregunta: ¿Qué relación existe entre rol y tarea en SPEM?",
     "opciones": [
       "A. El rol sustituye a los productos de trabajo.",
       "B. La tarea define la competencia del rol, pero no una actividad.",
@@ -4040,7 +3080,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T6-41-Pregunta: ¿Qué elemento de SPEM permite definir responsabilidades y habilidades necesarias para ejecutar el trabajo?",
+    "cuestion": "CalSisSw-T6-33-Pregunta: ¿Qué elemento de SPEM permite definir responsabilidades y habilidades necesarias para ejecutar el trabajo?",
     "opciones": [
       "A. El rol.",
       "B. El producto de trabajo.",
@@ -4050,7 +3090,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T6-42-Pregunta: ¿Qué tipo de soporte puede proporcionar un modelo de procesos a la gestión?",
+    "cuestion": "CalSisSw-T6-34-Pregunta: ¿Qué tipo de soporte puede proporcionar un modelo de procesos a la gestión?",
     "opciones": [
       "A. Garantiza que todos los proyectos tengan la misma duración.",
       "B. Elimina la necesidad de monitorizar el proceso.",
@@ -4060,7 +3100,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T6-43-Pregunta: ¿Cuál es una razón para reutilizar procesos bien definidos?",
+    "cuestion": "CalSisSw-T6-35-Pregunta: ¿Cuál es una razón para reutilizar procesos bien definidos?",
     "opciones": [
       "A. Evitar que los equipos comprendan el proceso.",
       "B. Eliminar la necesidad de gestionar productos de trabajo.",
@@ -4070,7 +3110,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T6-44-Pregunta: ¿Qué relación existe entre proceso software y productos de trabajo?",
+    "cuestion": "CalSisSw-T6-36-Pregunta: ¿Qué relación existe entre proceso software y productos de trabajo?",
     "opciones": [
       "A. Los productos de trabajo son exclusivamente personas.",
       "B. Los productos de trabajo son siempre herramientas externas.",
@@ -4080,7 +3120,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T6-45-Pregunta: ¿Qué aspecto distingue el punto de vista funcional del organizacional?",
+    "cuestion": "CalSisSw-T6-37-Pregunta: ¿Qué aspecto distingue el punto de vista funcional del organizacional?",
     "opciones": [
       "A. El funcional describe qué elementos y flujos se implementan; el organizacional, dónde y por quién.",
       "B. El funcional describe cuándo; el organizacional describe los datos de salida.",
@@ -4090,7 +3130,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T6-46-Pregunta: ¿Qué aspecto distingue el punto de vista comportamental del informativo?",
+    "cuestion": "CalSisSw-T6-38-Pregunta: ¿Qué aspecto distingue el punto de vista comportamental del informativo?",
     "opciones": [
       "A. El comportamental describe herramientas; el informativo describe los costes.",
       "B. El comportamental describe cuándo y bajo qué condiciones; el informativo describe entidades de información y relaciones.",
@@ -4100,7 +3140,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "CalSisSw-T6-47-Pregunta: ¿Qué permite SPEM además de describir un proceso concreto?",
+    "cuestion": "CalSisSw-T6-39-Pregunta: ¿Qué permite SPEM además de describir un proceso concreto?",
     "opciones": [
       "A. Calcular las métricas de productividad del equipo.",
       "B. Determinar los niveles de madurez de la organización.",
@@ -4110,7 +3150,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T6-48-Pregunta: ¿Qué problema pretende resolver una descripción común de procesos como la que ofrece SPEM?",
+    "cuestion": "CalSisSw-T6-40-Pregunta: ¿Qué problema pretende resolver una descripción común de procesos como la que ofrece SPEM?",
     "opciones": [
       "A. La ausencia de lenguajes de programación estandarizados.",
       "B. La inexistencia de modelos de calidad en uso.",
@@ -4120,7 +3160,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T6-49-Pregunta: ¿Cuál de las siguientes afirmaciones es correcta sobre un proceso software?",
+    "cuestion": "CalSisSw-T6-41-Pregunta: ¿Cuál de las siguientes afirmaciones es correcta sobre un proceso software?",
     "opciones": [
       "A. Se limita a la fase de implementación.",
       "B. Solo comprende las actividades de gestión económica.",
@@ -4130,7 +3170,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T7-15-Pregunta: ¿Cuál es la función de ISO/IEC 12207?",
+    "cuestion": "CalSisSw-T7-11-Pregunta: ¿Cuál es la función de ISO/IEC 12207?",
     "opciones": [
       "A. Establecer las métricas de calidad en uso.",
       "B. Definir un modelo de calidad del producto software.",
@@ -4140,7 +3180,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T7-16-Pregunta: ¿A qué categoría de ISO/IEC 12207 pertenece el proceso de adquisición?",
+    "cuestion": "CalSisSw-T7-12-Pregunta: ¿A qué categoría de ISO/IEC 12207 pertenece el proceso de adquisición?",
     "opciones": [
       "A. Procesos de acuerdo.",
       "B. Procesos organizacionales de proyecto.",
@@ -4150,7 +3190,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T7-17-Pregunta: ¿Qué diferencia existe entre adquisición y suministro en ISO/IEC 12207?",
+    "cuestion": "CalSisSw-T7-13-Pregunta: ¿Qué diferencia existe entre adquisición y suministro en ISO/IEC 12207?",
     "opciones": [
       "A. La adquisición desarrolla el producto y el suministro lo mantiene.",
       "B. La adquisición gestiona riesgos y el suministro valida requisitos.",
@@ -4160,7 +3200,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T7-18-Pregunta: ¿A qué categoría pertenece la gestión de recursos humanos dentro de ISO/IEC 12207?",
+    "cuestion": "CalSisSw-T7-14-Pregunta: ¿A qué categoría pertenece la gestión de recursos humanos dentro de ISO/IEC 12207?",
     "opciones": [
       "A. Procesos de acuerdo.",
       "B. Procesos de gestión técnica.",
@@ -4170,7 +3210,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T7-19-Pregunta: ¿A qué categoría pertenecen la planificación y la evaluación y control del proyecto?",
+    "cuestion": "CalSisSw-T7-15-Pregunta: ¿A qué categoría pertenecen la planificación y la evaluación y control del proyecto?",
     "opciones": [
       "A. Procesos técnicos.",
       "B. Procesos organizacionales de proyecto.",
@@ -4180,7 +3220,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T7-20-Pregunta: ¿A qué categoría pertenece la definición de requisitos del sistema o software?",
+    "cuestion": "CalSisSw-T7-16-Pregunta: ¿A qué categoría pertenece la definición de requisitos del sistema o software?",
     "opciones": [
       "A. Procesos de gestión técnica.",
       "B. Procesos de acuerdo.",
@@ -4190,7 +3230,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T7-21-Pregunta: ¿Qué caracteriza al modelo en cascada?",
+    "cuestion": "CalSisSw-T7-17-Pregunta: ¿Qué caracteriza al modelo en cascada?",
     "opciones": [
       "A. Se entrega una versión funcional en cada incremento.",
       "B. Las actividades se solapan de forma continua sin fases definidas.",
@@ -4200,7 +3240,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T7-22-Pregunta: ¿En qué contexto resulta más adecuado el modelo en cascada según los apuntes?",
+    "cuestion": "CalSisSw-T7-18-Pregunta: ¿En qué contexto resulta más adecuado el modelo en cascada según los apuntes?",
     "opciones": [
       "A. Cuando existe gran incertidumbre y riesgos importantes.",
       "B. Cuando se necesita entregar funcionalidades de forma progresiva.",
@@ -4210,7 +3250,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T7-23-Pregunta: ¿Qué caracteriza al modelo incremental?",
+    "cuestion": "CalSisSw-T7-19-Pregunta: ¿Qué caracteriza al modelo incremental?",
     "opciones": [
       "A. Cada ciclo se centra exclusivamente en analizar riesgos.",
       "B. El producto se genera automáticamente a partir de modelos sin entregas.",
@@ -4220,7 +3260,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T7-24-Pregunta: ¿Qué ventaja ofrece el modelo incremental?",
+    "cuestion": "CalSisSw-T7-20-Pregunta: ¿Qué ventaja ofrece el modelo incremental?",
     "opciones": [
       "A. Exige que todos los requisitos estén cerrados antes de empezar.",
       "B. Evita que el cliente revise el producto hasta el final.",
@@ -4230,7 +3270,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T7-25-Pregunta: ¿Cuál es el elemento central del modelo en espiral?",
+    "cuestion": "CalSisSw-T7-21-Pregunta: ¿Cuál es el elemento central del modelo en espiral?",
     "opciones": [
       "A. La identificación y resolución de riesgos en cada ciclo.",
       "B. La reutilización obligatoria de componentes.",
@@ -4240,7 +3280,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T7-26-Pregunta: ¿Qué se realiza en cada ciclo del modelo en espiral?",
+    "cuestion": "CalSisSw-T7-22-Pregunta: ¿Qué se realiza en cada ciclo del modelo en espiral?",
     "opciones": [
       "A. Se establecen objetivos, se estudian alternativas, se analizan riesgos y se desarrolla una versión.",
       "B. Se entrega el producto completo sin verificación.",
@@ -4250,7 +3290,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T7-27-Pregunta: ¿Qué rasgo distingue a los modelos para sistemas orientados a objetos descritos en los apuntes?",
+    "cuestion": "CalSisSw-T7-23-Pregunta: ¿Qué rasgo distingue a los modelos para sistemas orientados a objetos descritos en los apuntes?",
     "opciones": [
       "A. Desarrollo exclusivamente secuencial.",
       "B. Ausencia de reutilización de componentes.",
@@ -4260,7 +3300,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T9-14-Pregunta: ¿Cuál es uno de los tres objetivos fundamentales de la medición del software?",
+    "cuestion": "CalSisSw-T9-07-Pregunta: ¿Cuál es uno de los tres objetivos fundamentales de la medición del software?",
     "opciones": [
       "A. Entender qué ocurre durante el desarrollo y mantenimiento.",
       "B. Sustituir las decisiones del equipo por intuiciones.",
@@ -4270,7 +3310,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T9-15-Pregunta: ¿Qué diferencia existe entre medición y métrica según los apuntes?",
+    "cuestion": "CalSisSw-T9-08-Pregunta: ¿Qué diferencia existe entre medición y métrica según los apuntes?",
     "opciones": [
       "A. Ambos términos se definen como sinónimos exactos.",
       "B. La medición es una herramienta comercial y la métrica un estándar de proceso.",
@@ -4280,7 +3320,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T9-16-Pregunta: ¿Qué permite una escala nominal?",
+    "cuestion": "CalSisSw-T9-09-Pregunta: ¿Qué permite una escala nominal?",
     "opciones": [
       "A. Ordenar valores y comparar sus distancias.",
       "B. Clasificar elementos en categorías sin establecer un orden.",
@@ -4290,7 +3330,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "CalSisSw-T9-17-Pregunta: ¿Qué caracteriza a una escala ordinal?",
+    "cuestion": "CalSisSw-T9-10-Pregunta: ¿Qué caracteriza a una escala ordinal?",
     "opciones": [
       "A. Permite comparar ratios con cero absoluto.",
       "B. Tiene distancias equivalentes y carece de orden.",
@@ -4300,7 +3340,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T9-18-Pregunta: ¿Por qué una escala de intervalo no permite afirmar que un valor es el doble de otro?",
+    "cuestion": "CalSisSw-T9-11-Pregunta: ¿Por qué una escala de intervalo no permite afirmar que un valor es el doble de otro?",
     "opciones": [
       "A. Porque solo admite categorías nominales.",
       "B. Porque no existen distancias entre valores.",
@@ -4310,7 +3350,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T9-19-Pregunta: ¿Qué propiedad distingue a una escala de ratio?",
+    "cuestion": "CalSisSw-T9-12-Pregunta: ¿Qué propiedad distingue a una escala de ratio?",
     "opciones": [
       "A. No admite operaciones aritméticas.",
       "B. Solo clasifica categorías sin orden.",
@@ -4320,7 +3360,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T9-20-Pregunta: ¿Qué caracteriza a una escala absoluta?",
+    "cuestion": "CalSisSw-T9-13-Pregunta: ¿Qué caracteriza a una escala absoluta?",
     "opciones": [
       "A. No dispone de cero absoluto.",
       "B. Solo permite expresar valoraciones subjetivas.",
@@ -4330,7 +3370,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T9-21-Pregunta: ¿Cuál de los siguientes ejemplos corresponde a una escala nominal?",
+    "cuestion": "CalSisSw-T9-14-Pregunta: ¿Cuál de los siguientes ejemplos corresponde a una escala nominal?",
     "opciones": [
       "A. Nivel de satisfacción: bajo, medio o alto.",
       "B. El lenguaje de programación utilizado: Java, Python o C++.",
@@ -4340,7 +3380,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "CalSisSw-T9-22-Pregunta: ¿Cuál de los siguientes ejemplos corresponde a una escala ordinal?",
+    "cuestion": "CalSisSw-T9-15-Pregunta: ¿Cuál de los siguientes ejemplos corresponde a una escala ordinal?",
     "opciones": [
       "A. El lenguaje de programación utilizado.",
       "B. El número de clases de un sistema.",
@@ -4350,7 +3390,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T9-23-Pregunta: ¿Qué estructura propone GQM para definir la medición?",
+    "cuestion": "CalSisSw-T9-16-Pregunta: ¿Qué estructura propone GQM para definir la medición?",
     "opciones": [
       "A. Planificación, ejecución y auditoría.",
       "B. Entrada, transformación y salida.",
@@ -4360,7 +3400,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T9-24-Pregunta: En GQM, ¿qué representa el nivel Goal?",
+    "cuestion": "CalSisSw-T9-17-Pregunta: En GQM, ¿qué representa el nivel Goal?",
     "opciones": [
       "A. El valor numérico recogido.",
       "B. La pregunta concreta que se formula.",
@@ -4370,7 +3410,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T9-25-Pregunta: En GQM, ¿qué función cumple el nivel Question?",
+    "cuestion": "CalSisSw-T9-18-Pregunta: En GQM, ¿qué función cumple el nivel Question?",
     "opciones": [
       "A. Descomponer el objetivo en preguntas que permitan entenderlo o evaluarlo.",
       "B. Generar el informe final sin métricas.",
@@ -4380,7 +3420,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T9-26-Pregunta: En GQM, ¿qué representa el nivel Metric?",
+    "cuestion": "CalSisSw-T9-19-Pregunta: En GQM, ¿qué representa el nivel Metric?",
     "opciones": [
       "A. La medida cuantitativa utilizada para responder las preguntas.",
       "B. El contexto organizativo del proyecto.",
@@ -4390,7 +3430,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T9-27-Pregunta: ¿Qué elementos incluye la plantilla de definición de objetivos GQM según los apuntes?",
+    "cuestion": "CalSisSw-T9-20-Pregunta: ¿Qué elementos incluye la plantilla de definición de objetivos GQM según los apuntes?",
     "opciones": [
       "A. Planificación, diseño, ejecución, pruebas e implantación.",
       "B. Producto, proceso, proyecto, proveedor y cliente.",
@@ -4400,7 +3440,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T9-28-Pregunta: ¿Cuál es la primera fase de implantación de un programa GQM?",
+    "cuestion": "CalSisSw-T9-21-Pregunta: ¿Cuál es la primera fase de implantación de un programa GQM?",
     "opciones": [
       "A. Definición.",
       "B. Planificación.",
@@ -4410,7 +3450,7 @@
     "solucion": "B"
   },
   {
-    "cuestion": "CalSisSw-T9-29-Pregunta: ¿Qué actividad corresponde a la fase de definición de GQM?",
+    "cuestion": "CalSisSw-T9-22-Pregunta: ¿Qué actividad corresponde a la fase de definición de GQM?",
     "opciones": [
       "A. Recoger datos de forma continuada sin un plan.",
       "B. Archivar los resultados de la evaluación.",
@@ -4420,7 +3460,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T9-30-Pregunta: ¿Qué actividad caracteriza a la fase de recopilación de datos de GQM?",
+    "cuestion": "CalSisSw-T9-23-Pregunta: ¿Qué actividad caracteriza a la fase de recopilación de datos de GQM?",
     "opciones": [
       "A. Analizar costes y beneficios del programa.",
       "B. Definir el propósito y la perspectiva de los objetivos.",
@@ -4430,7 +3470,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T9-31-Pregunta: ¿Qué actividad pertenece a la fase de interpretación de GQM?",
+    "cuestion": "CalSisSw-T9-24-Pregunta: ¿Qué actividad pertenece a la fase de interpretación de GQM?",
     "opciones": [
       "A. Seleccionar el equipo GQM.",
       "B. Construir el plan de medición.",
@@ -4440,7 +3480,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T9-32-Pregunta: ¿Qué finalidad tiene GQ(I)M al introducir explícitamente indicadores?",
+    "cuestion": "CalSisSw-T9-25-Pregunta: ¿Qué finalidad tiene GQ(I)M al introducir explícitamente indicadores?",
     "opciones": [
       "A. Eliminar la necesidad de preguntas.",
       "B. Convertir las métricas en actividades de desarrollo.",
@@ -4450,7 +3490,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T9-33-Pregunta: ¿Qué enfoque caracteriza a Practical Software Measurement (PSM)?",
+    "cuestion": "CalSisSw-T9-26-Pregunta: ¿Qué enfoque caracteriza a Practical Software Measurement (PSM)?",
     "opciones": [
       "A. Medir exclusivamente la complejidad del código orientado a objetos.",
       "B. Evaluar únicamente la satisfacción estética del usuario.",
@@ -4460,7 +3500,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T9-34-Pregunta: ¿Cuál de las siguientes es una categoría de necesidades de información de PSM?",
+    "cuestion": "CalSisSw-T9-27-Pregunta: ¿Cuál de las siguientes es una categoría de necesidades de información de PSM?",
     "opciones": [
       "A. Planificación y progreso.",
       "B. Impacto ambiental de los centros de datos.",
@@ -4470,7 +3510,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T9-35-Pregunta: ¿Cuál de las siguientes opciones forma parte de las métricas básicas de proyecto mencionadas en los apuntes?",
+    "cuestion": "CalSisSw-T9-28-Pregunta: ¿Cuál de las siguientes opciones forma parte de las métricas básicas de proyecto mencionadas en los apuntes?",
     "opciones": [
       "A. Número de hijos de una clase.",
       "B. Profundidad del árbol de herencia.",
@@ -4480,7 +3520,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T9-36-Pregunta: ¿Qué expresa la productividad de un proyecto software?",
+    "cuestion": "CalSisSw-T9-29-Pregunta: ¿Qué expresa la productividad de un proyecto software?",
     "opciones": [
       "A. La duración total del mantenimiento sin considerar el trabajo.",
       "B. La cantidad de requisitos rechazados por el cliente.",
@@ -4490,7 +3530,7 @@
     "solucion": "D"
   },
   {
-    "cuestion": "CalSisSw-T9-37-Pregunta: ¿Qué mide la métrica LOC?",
+    "cuestion": "CalSisSw-T9-30-Pregunta: ¿Qué mide la métrica LOC?",
     "opciones": [
       "A. El esfuerzo en personas/mes.",
       "B. La satisfacción del cliente.",
@@ -4500,7 +3540,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T9-38-Pregunta: ¿Qué representa la métrica WMC de la suite MOOSE?",
+    "cuestion": "CalSisSw-T9-31-Pregunta: ¿Qué representa la métrica WMC de la suite MOOSE?",
     "opciones": [
       "A. La profundidad del árbol de herencia.",
       "B. El número de hijos de una clase.",
@@ -4510,7 +3550,7 @@
     "solucion": "C"
   },
   {
-    "cuestion": "CalSisSw-T9-39-Pregunta: ¿Qué representa DIT en las métricas MOOSE?",
+    "cuestion": "CalSisSw-T9-32-Pregunta: ¿Qué representa DIT en las métricas MOOSE?",
     "opciones": [
       "A. La profundidad del árbol de herencia de una clase.",
       "B. La falta de cohesión entre métodos.",
@@ -4520,7 +3560,7 @@
     "solucion": "A"
   },
   {
-    "cuestion": "CalSisSw-T9-40-Pregunta: ¿Qué representa NOC en las métricas MOOSE?",
+    "cuestion": "CalSisSw-T9-33-Pregunta: ¿Qué representa NOC en las métricas MOOSE?",
     "opciones": [
       "A. El acoplamiento entre objetos.",
       "B. La profundidad del árbol de herencia.",
